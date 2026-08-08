@@ -17,11 +17,9 @@ ai-code/
 ├── .github/
 │   └── workflows/
 │       └── deploy.yml         # GitHub Actions automated deployment
-└── nda-generator/             # Sub-Project 1: Mutual NDA Creator
-    ├── frontend/              # React 18 + Vite web app
-    ├── templates/             # Common Paper legal agreement templates (.md)
-    ├── catalog.json           # Legal template index
-    └── README.md              # Project-specific documentation
+├── nda-generator/             # Sub-Project 1: Mutual NDA Creator (React 18 + Vite)
+├── kanban-gemini/             # Sub-Project 2: Kanban Project Management (Next.js 15)
+└── portfolio/                 # Sub-Project 3: Software Engineering Portfolio (Next.js 15)
 ```
 
 ---
@@ -36,12 +34,20 @@ ai-code/
 - All web apps are deployed together to GitHub Pages:
   - Workspace Hub: `https://sshahriar.github.io/ai-code/`
   - Sub-Projects: `https://sshahriar.github.io/ai-code/<project-name>/`
-- When configuring Vite in a sub-project (`<project-name>/frontend/vite.config.js`), always set the base path:
+- **Vite Projects**: Set base path in `vite.config.js`:
   ```js
   export default defineConfig({
     plugins: [react()],
     base: '/ai-code/<project-name>/',
   })
+  ```
+- **Next.js Projects**: Set static export and basePath in `next.config.ts`:
+  ```ts
+  const nextConfig: NextConfig = {
+    output: "export",
+    basePath: "/ai-code/<project-name>",
+    images: { unoptimized: true }
+  };
   ```
 
 ### 3. Registering New Sub-Projects

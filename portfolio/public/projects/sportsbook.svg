@@ -1,0 +1,10 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" fill="none">
+  <rect width="800" height="450" fill="#0B1424"/>
+  <rect x="60" y="80" width="680" height="280" rx="20" fill="#121C2A" stroke="#ffffff18"/>
+  <rect x="90" y="120" width="200" height="200" rx="14" fill="#0F1A2B" stroke="#2997FF55"/>
+  <rect x="320" y="120" width="380" height="40" rx="8" fill="#0071E344"/>
+  <rect x="320" y="180" width="300" height="16" rx="8" fill="#ffffff22"/>
+  <rect x="320" y="210" width="340" height="16" rx="8" fill="#ffffff18"/>
+  <rect x="320" y="260" width="140" height="40" rx="20" fill="#0071E3"/>
+  <text x="80" y="400" fill="#9AA6BD" font-family="Arial,sans-serif" font-size="18">Sportsbook Platform SDK</text>
+</svg>

@@ -1,0 +1,14 @@
+# Root gitignore
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/test-results/
+frontend/playwright-report/
+backend/node_modules/
+backend/dist/
+backend/data/
+*.log
+*.db
+.DS_Store
+.env*.local
+*.env.local
