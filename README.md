@@ -10,6 +10,7 @@ A sleek, lightweight, and responsive Kanban Board application built to help indi
 
 ## ✨ Features
 
+
 - **⚡ Interactive Drag & Drop**: Intuitively drag tasks across custom workflow columns (e.g., *To Do*, *In Progress*, *Done*).
 - **🎨 Custom Categories & Tags**: Color-coded labels and priority tags (Low, Medium, High, Urgent) for instant visual hierarchy.
 - **💾 Local Persistence**: Automatically saves your board state to `localStorage` so your tasks persist across sessions.
