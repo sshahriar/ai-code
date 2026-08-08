@@ -1,6 +1,16 @@
+# Environment & Editor
 .gemini/
+.DS_Store
 *.log
+.env
+.env.local
+
+# Dependencies across monorepo
 node_modules/
+**/node_modules/
+
+# Build outputs & caches
 dist/
-frontend/node_modules/
-frontend/dist/
+**/dist/
+.vite/
+**/.vite/
