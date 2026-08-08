@@ -1,102 +1,82 @@
-# 📋 Simple Kanban App
+# 📜 Prelegal: Mutual NDA Creator & Legal Templates Dataset
 
-A sleek, lightweight, and responsive Kanban Board application built to help individuals and teams organize tasks, boost productivity, and track project workflows seamlessly.
+An open-source legal technology platform for generating, customizing, and exporting standard legal agreements based on Common Paper open standards.
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
+[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-https%3A%2F%2Fsshahriar.github.io%2Fai--code%2F-indigo?style=for-the-badge)](https://sshahriar.github.io/ai-code/)
 ![Status](https://img.shields.io/badge/status-active-success.svg)
+![License](https://img.shields.io/badge/license-CC_BY_4.0-blue.svg)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
+
+---
+
+## 🌐 Live Demo
+
+Visit the live web application hosted on GitHub Pages:  
+👉 **[https://sshahriar.github.io/ai-code/](https://sshahriar.github.io/ai-code/)**
 
 ---
 
 ## ✨ Features
 
-
-- **⚡ Interactive Drag & Drop**: Intuitively drag tasks across custom workflow columns (e.g., *To Do*, *In Progress*, *Done*).
-- **🎨 Custom Categories & Tags**: Color-coded labels and priority tags (Low, Medium, High, Urgent) for instant visual hierarchy.
-- **💾 Local Persistence**: Automatically saves your board state to `localStorage` so your tasks persist across sessions.
-- **🔍 Quick Search & Filter**: Search tasks by title, description, priority, or assigned tags in real-time.
-- **🌙 Dark / Light Mode**: Beautiful modern UI styled with custom CSS supporting dark and light themes.
-- **📱 Fully Responsive**: Optimized for desktop, tablet, and mobile devices.
+- **📄 Interactive Mutual NDA Creator (`frontend/`)**: React-based web application to input agreement parameters, party information, and custom modifications with real-time legal document preview.
+- **⚡ Live Preview & Highlighting**: Dynamic side-by-side or tabbed view rendering Common Paper Cover Page & Standard Terms (Version 1.0) with real-time field highlights.
+- **✨ 1-Click Sample Data Loader**: Instantly populate form fields with sample enterprise and startup company parameters.
+- **📥 Export Options**: Download document as Markdown (`.md`), Plain Text (`.txt`), copy to clipboard, or print / save as PDF.
+- **🌙 Dark & Light Mode**: Modern glassmorphism UI supporting dark and light themes with responsive layouts.
+- **📚 Curated Legal Templates (`templates/`)**: Collection of 12 standard Common Paper legal agreement templates (`Mutual NDA`, `CSA`, `SLA`, `DPA`, `BAA`, `PSA`, `Software License`, `AI Addendum`, etc.) mapped via `catalog.json`.
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: HTML5, Vanilla JavaScript (ES6+)
-- **Styling**: Modern CSS3 (CSS Variables, Flexbox, Grid, Glassmorphism UI)
-- **Icons**: Lucide / FontAwesome
-- **Storage**: Browser `localStorage` (or optional REST API backend integration)
+- **Frontend App**: React 18, Vite, Lucide Icons
+- **Styling**: Modern CSS3 (CSS Variables, Dark/Light Themes, Glassmorphism, Print Media Queries)
+- **Deployment**: GitHub Pages (`gh-pages`)
 
 ---
 
 ## 🚀 Quick Start
 
-### Prerequisites
-- Any modern web browser (Chrome, Firefox, Edge, Safari).
-- *(Optional)* [Node.js](https://nodejs.org/) if running with a local server or building additional features.
+### 1. Clone the Repository
+```bash
+git clone https://github.com/sshahriar/ai-code.git
+cd ai-code
+```
 
-### Installation
-
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/sshahriar/ai-code.git
-   cd ai-code
-   ```
-
-2. **Run locally**:
-   - Open `index.html` directly in your browser, or
-   - Use a lightweight live server:
-     ```bash
-     npx serve .
-     ```
+### 2. Run the React Frontend Locally
+```bash
+cd frontend
+npm install
+npm run dev
+```
+Open **`http://localhost:3000`** in your browser.
 
 ---
 
 ## 📂 Project Structure
 
 ```text
-├── index.html          # Main HTML markup & board layout
-├── css/
-│   └── styles.css      # Design system, themes & animations
-├── js/
-│   ├── app.js          # Core application logic & event listeners
-│   ├── kanban.js       # Board state management & drag-and-drop handler
-│   └── storage.js      # LocalStorage serialization helpers
-└── README.md           # Project documentation
+├── frontend/                  # React + Vite Mutual NDA Creator App
+│   ├── src/
+│   │   ├── components/       # Header, NDAForm, NDAPreview, ExportToolbar
+│   │   ├── App.jsx           # Main state management & export handlers
+│   │   ├── index.css         # Design system & dark/light theme CSS
+│   │   └── main.jsx          # React entrypoint
+│   ├── index.html            # Vite HTML template
+│   ├── package.json          # Dependencies & scripts
+│   └── vite.config.js        # Vite configuration (base: './')
+├── templates/                 # Common Paper Legal Agreement Templates (.md)
+│   ├── Mutual-NDA.md
+│   ├── CSA.md
+│   ├── DPA.md
+│   ├── LICENSE.txt           # CC BY 4.0 License Notice
+│   └── ...
+├── catalog.json              # Index mapping legal agreement titles & descriptions
+└── README.md                 # Project documentation
 ```
 
 ---
 
-## 📖 Usage Guide
+## 📄 License & Attribution
 
-1. **Adding a Task**: Click the `+ Add Task` button in any column, enter the title, description, priority, and click **Save**.
-2. **Moving Tasks**: Click and hold a task card, then drag it to your desired column.
-3. **Editing/Deleting**: Click on any task card to edit its details or remove it.
-4. **Filtering**: Use the top search bar to instantly filter tasks by keywords or priority levels.
-
----
-
-## 🗺️ Roadmap
-
-- [ ] Multi-board support & workspace switcher
-- [ ] User authentication & real-time collaboration via WebSockets
-- [ ] Export board data to JSON / CSV
-- [ ] Integration with GitHub Issues & Webhooks
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! If you have suggestions or improvements:
-
-1. Fork the project repository.
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`).
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`).
-4. Push to the branch (`git push origin feature/AmazingFeature`).
-5. Open a Pull Request.
-
----
-
-## 📄 License
-
-Distributed under the MIT License. See `LICENSE` for more details.
+Legal agreement templates in `templates/` originate from [Common Paper](https://github.com/CommonPaper) and are licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
