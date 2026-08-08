@@ -1,0 +1,10 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" fill="none">
+  <rect width="800" height="450" fill="#0B1424"/>
+  <rect x="100" y="100" width="600" height="220" rx="16" fill="#121C2A" stroke="#ffffff18"/>
+  <rect x="130" y="140" width="120" height="18" rx="9" fill="#0071E3"/>
+  <rect x="130" y="180" width="540" height="10" rx="5" fill="#ffffff28"/>
+  <rect x="130" y="205" width="480" height="10" rx="5" fill="#ffffff1A"/>
+  <rect x="130" y="230" width="500" height="10" rx="5" fill="#ffffff14"/>
+  <rect x="130" y="265" width="90" height="28" rx="8" fill="#2997FF55"/>
+  <text x="80" y="400" fill="#9AA6BD" font-family="Arial,sans-serif" font-size="18">Android Test Automation</text>
+</svg>

@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+:root {
+  --color-accent-yellow: #ecad0a;
+  --color-blue-primary: #209dd7;
+  --color-purple-secondary: #753991;
+  --color-dark-navy: #032147;
+  --color-gray-text: #888888;
+  --bg-main: #f4f7fb;
+  --bg-card: #ffffff;
+  --bg-column: #ebf0f7;
+  --border-light: #e1e8f0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--color-dark-navy);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbars for Kanban columns */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Card hover animation */
+.kanban-card {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  border-left: 3px solid var(--color-accent-yellow);
+}
+
+.kanban-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(3, 33, 71, 0.08), 0 8px 10px -6px rgba(3, 33, 71, 0.04);
+}
+
+.kanban-card.is-dragging {
+  box-shadow: 0 20px 30px -10px rgba(3, 33, 71, 0.18);
+  transform: scale(1.02) rotate(1deg);
+  border-left-color: var(--color-blue-primary);
+}
+
+/* Primary and secondary button styles */
+.btn-primary {
+  background-color: var(--color-purple-secondary);
+  color: #ffffff;
+  transition: all 0.15s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #632d7b;
+  box-shadow: 0 4px 12px rgba(117, 57, 145, 0.25);
+}
+
+.btn-secondary {
+  background-color: var(--color-blue-primary);
+  color: #ffffff;
+  transition: all 0.15s ease-in-out;
+}
+
+.btn-secondary:hover {
+  background-color: #1987ba;
+  box-shadow: 0 4px 12px rgba(32, 157, 215, 0.25);
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 2px solid var(--color-blue-primary);
+  outline-offset: 2px;
+}

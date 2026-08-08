@@ -1,0 +1,7 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" fill="none">
+  <rect width="800" height="450" fill="#0B1424"/>
+  <path d="M400 80 L620 180 L620 300 L400 400 L180 300 L180 180 Z" fill="#121C2A" stroke="#2997FF66" stroke-width="2"/>
+  <path d="M400 140 L540 205 L540 275 L400 340 L260 275 L260 205 Z" fill="#0071E333" stroke="#64B5FF55"/>
+  <circle cx="400" cy="240" r="28" fill="#0071E3"/>
+  <text x="80" y="60" fill="#EEF2F8" font-family="Arial,sans-serif" font-size="24" font-weight="700">ORBIT BCS</text>
+</svg>

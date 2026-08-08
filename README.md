@@ -21,7 +21,8 @@ Explore the live projects directory on GitHub Pages:
 | Project Name | Category | Description | Status | Live Demo |
 | :--- | :--- | :--- | :--- | :--- |
 | 📜 **[nda-generator](./nda-generator/)** | Legal Tech | Interactive Mutual NDA Creator & Legal Templates Dataset based on Common Paper standards | 🟢 Active | [Launch App](https://sshahriar.github.io/ai-code/nda-generator/) |
-| 🤖 *More coming soon...* | AI & DevTools | Next-generation AI agents and legal automation tools | 🚧 Planned | — |
+| 📋 **[kanban-gemini](./kanban-gemini/)** | DevTools | Modern drag-and-drop Kanban project management web application | 🟢 Active | [Launch App](https://sshahriar.github.io/ai-code/kanban-gemini/) |
+| 👤 **[portfolio](./portfolio/)** | Web App | Personal software engineering portfolio with glassmorphism UI & interactive timeline | 🟢 Active | [Launch App](https://sshahriar.github.io/ai-code/portfolio/) |
 
 ---
 
@@ -29,17 +30,16 @@ Explore the live projects directory on GitHub Pages:
 
 ```text
 ai-code/
-├── nda-generator/             # Mutual NDA Creator & Legal Agreement Templates
-│   ├── frontend/             # React 18 + Vite Web Application
-│   ├── templates/            # Common Paper Legal Agreements (.md)
-│   ├── catalog.json          # Legal templates catalog index
-│   └── README.md             # Project-specific documentation
-├── index.html                # Workspace Hub Landing Page (GitHub Pages)
+├── AGENTS.md                  # AI agent guidelines & repository standards
+├── README.md                  # Workspace monorepo index & project directory
+├── index.html                 # Root landing page for GitHub Pages hub
+├── .gitignore                 # Monorepo git ignore rules
 ├── .github/
 │   └── workflows/
-│       └── deploy.yml        # Automated GitHub Pages CI/CD Workflow
-├── README.md                 # Monorepo Workspace Guide
-└── .gitignore                # Global workspace gitignore
+│       └── deploy.yml         # GitHub Actions automated deployment
+├── nda-generator/             # Sub-Project 1: Mutual NDA Creator (React 18 + Vite)
+├── kanban-gemini/             # Sub-Project 2: Kanban Project Management (Next.js 15)
+└── portfolio/                 # Sub-Project 3: Software Engineering Portfolio (Next.js 15)
 ```
 
 ---
