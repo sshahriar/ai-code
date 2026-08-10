@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 13 17 23;
+  --card: 26 26 46;
+}
+
+body {
+  background-color: #0d1117;
+  color: #c9d1d9;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Code', sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbars for data density */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d1117;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a2d3d;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3b3f54;
+}
+
+/* CSS Flash animations for SSE tick price updates */
+@keyframes flashGreen {
+  0% {
+    background-color: rgba(0, 200, 5, 0.4);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+@keyframes flashRed {
+  0% {
+    background-color: rgba(255, 59, 48, 0.4);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+.flash-green {
+  animation: flashGreen 500ms ease-out forwards;
+}
+
+.flash-red {
+  animation: flashRed 500ms ease-out forwards;
+}

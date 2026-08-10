@@ -83,5 +83,5 @@ async def _generate_events(
                     yield f"data: {payload}\n\n"
 
             await asyncio.sleep(interval)
-    except asyncio.CancelledError:
+    except (asyncio.CancelledError, GeneratorExit):
         logger.info("SSE stream cancelled for: %s", client_ip)
