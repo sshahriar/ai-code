@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  finally-app:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    image: finally:latest
+    container_name: finally-app
+    ports:
+      - "8000:8000"
+    environment:
+      - LLM_MOCK=true
+      - FINALLY_DB_PATH=/app/db/test_finally.db
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/health')"]
+      interval: 3s
+      timeout: 5s
+      retries: 10
+
+  playwright-tests:
+    build:
+      context: ..
+      dockerfile: test/Dockerfile.test
+    container_name: playwright-tests
+    depends_on:
+      finally-app:
+        condition: service_healthy
+    environment:
+      - BASE_URL=http://finally-app:8000

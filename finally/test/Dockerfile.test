@@ -1,0 +1,15 @@
+FROM mcr.microsoft.com/playwright:v1.45.0-jammy
+
+WORKDIR /app/test
+
+# Copy dependency definitions
+COPY test/package*.json ./
+
+# Install npm dependencies
+RUN npm install
+
+# Copy test files
+COPY test/ ./
+
+# Default command to run Playwright tests
+CMD ["npx", "playwright", "test"]
