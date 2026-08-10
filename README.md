@@ -23,6 +23,7 @@ Explore the live projects directory on GitHub Pages:
 | 📜 **[nda-generator](./nda-generator/)** | Legal Tech | Interactive Mutual NDA Creator & Legal Templates Dataset based on Common Paper standards | 🟢 Active | [Launch App](https://sshahriar.github.io/ai-code/nda-generator/) |
 | 📋 **[kanban-gemini](./kanban-gemini/)** | DevTools | Modern drag-and-drop Kanban project management web application | 🟢 Active | [Launch App](https://sshahriar.github.io/ai-code/kanban-gemini/) |
 | 👤 **[portfolio](./portfolio/)** | Web App | Personal software engineering portfolio with glassmorphism UI & interactive timeline | 🟢 Active | [Launch App](https://sshahriar.github.io/ai-code/portfolio/) |
+| 📈 **[finally](./finally/)** | FinTech | AI-powered trading workstation with real-time SSE market streaming & LLM copilot | 🟢 Active | - |
 
 ---
 
@@ -39,7 +40,8 @@ ai-code/
 │       └── deploy.yml         # GitHub Actions automated deployment
 ├── nda-generator/             # Sub-Project 1: Mutual NDA Creator (React 18 + Vite)
 ├── kanban-gemini/             # Sub-Project 2: Kanban Project Management (Next.js 15)
-└── portfolio/                 # Sub-Project 3: Software Engineering Portfolio (Next.js 15)
+├── portfolio/                 # Sub-Project 3: Software Engineering Portfolio (Next.js 15)
+└── finally/                   # Sub-Project 4: AI Trading Workstation (FastAPI + Next.js)
 ```
 
 ---
