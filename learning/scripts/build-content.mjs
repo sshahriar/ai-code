@@ -9,6 +9,7 @@ const assetsDir = path.join(root, 'assets')
 const contentDir = path.join(root, 'content')
 const lessonsDir = path.join(contentDir, 'lessons')
 const transcriptsDir = path.join(contentDir, 'transcripts')
+const summariesDir = path.join(contentDir, 'summaries')
 
 function splitSentences(text) {
   return text
@@ -23,6 +24,40 @@ function toParagraphs(sentences, size = 3) {
     paragraphs.push(sentences.slice(i, i + size).join(' '))
   }
   return paragraphs
+}
+
+function buildSummaryMarkdown({ title, dayLabel, weekTitle, transcript }) {
+  const sentences = splitSentences(transcript)
+  const overview = toParagraphs(sentences.slice(0, Math.min(6, sentences.length)), 2)
+  const bodySentences = sentences.slice(Math.min(6, sentences.length), Math.max(sentences.length - 4, 6))
+  const summarySentences = sentences.slice(Math.max(sentences.length - 4, 0))
+  const bodyParagraphs = toParagraphs(bodySentences, 3)
+
+  const takeaways = bodyParagraphs
+    .slice(0, 5)
+    .map((p) => {
+      const short = p.length > 180 ? `${p.slice(0, 177).trim()}...` : p
+      return `- ${short}`
+    })
+
+  const learnBullets = [
+    `Core ideas from **${title}**`,
+    `Practical steps shown in ${weekTitle}, ${dayLabel}`,
+    'How to apply the workflow in your own projects',
+  ]
+
+  let md = `# ${title}\n\n`
+  md += `> Quick summary | ${weekTitle} | ${dayLabel}\n\n`
+  md += `## At a glance\n\n`
+  md += (overview.length ? overview : ['This lesson covers key ideas from the course session.']).map((p) => `${p}\n`).join('\n')
+  md += `\n## Key takeaways\n\n`
+  md += (takeaways.length ? takeaways : learnBullets.map((b) => `- ${b}`)).join('\n')
+  md += `\n\n## You will learn\n\n`
+  md += learnBullets.map((b) => `- ${b}`).join('\n')
+  md += `\n\n## Bottom line\n\n`
+  md += (summarySentences.length ? summarySentences : sentences.slice(0, 2)).join(' ')
+  md += '\n'
+  return md
 }
 
 function buildLessonMarkdown({ title, dayLabel, weekTitle, transcript }) {
@@ -104,6 +139,7 @@ function parseLessonFile(weekFolder, fileName) {
 function main() {
   fs.mkdirSync(lessonsDir, { recursive: true })
   fs.mkdirSync(transcriptsDir, { recursive: true })
+  fs.mkdirSync(summariesDir, { recursive: true })
 
   const weekFolders = fs
     .readdirSync(assetsDir, { withFileTypes: true })
@@ -138,13 +174,16 @@ function main() {
 
       fs.writeFileSync(path.join(transcriptsDir, `${lesson.slug}.txt`), transcript, 'utf8')
 
-      const markdown = buildLessonMarkdown({
+      const lessonMeta = {
         title: lesson.title,
         dayLabel: `Day ${lesson.dayNum}`,
         weekTitle,
         transcript,
-      })
+      }
+      const markdown = buildLessonMarkdown(lessonMeta)
+      const summaryMarkdown = buildSummaryMarkdown(lessonMeta)
       fs.writeFileSync(path.join(lessonsDir, `${lesson.slug}.md`), markdown, 'utf8')
+      fs.writeFileSync(path.join(summariesDir, `${lesson.slug}.md`), summaryMarkdown, 'utf8')
 
       const dayId = `day-${lesson.dayNum}`
       if (!daysMap.has(dayId)) {
@@ -163,6 +202,7 @@ function main() {
         lessonNum: lesson.lessonNum,
         vttPath: relativeVtt,
         contentPath: `content/lessons/${lesson.slug}.md`,
+        summaryPath: `content/summaries/${lesson.slug}.md`,
         transcriptPath: `content/transcripts/${lesson.slug}.txt`,
       }
       daysMap.get(dayId).lessons.push(entry)
@@ -188,7 +228,7 @@ function main() {
   }
 
   fs.writeFileSync(path.join(contentDir, 'manifest.json'), JSON.stringify(manifest, null, 2), 'utf8')
-  console.log(`Built ${flatLessons.length} lessons across ${weeks.length} weeks → content/`)
+  console.log(`Built ${flatLessons.length} lessons + summaries across ${weeks.length} weeks → content/`)
 }
 
 main()

@@ -1,6 +1,6 @@
 {
   "courseTitle": "AI Coder — Agentic Engineering",
-  "generatedAt": "2026-08-12T10:59:44.823Z",
+  "generatedAt": "2026-08-12T11:38:43.655Z",
   "lessonCount": 93,
   "weeks": [
     {
@@ -20,6 +20,7 @@
               "lessonNum": 1,
               "vttPath": "assets/1 - Week 1/1. Day 1 - Welcome to the Course Building a 3D Game with Cursor AI.vtt",
               "contentPath": "content/lessons/01-welcome-to-the-course-building-a-3d-game-with-cursor-ai.md",
+              "summaryPath": "content/summaries/01-welcome-to-the-course-building-a-3d-game-with-cursor-ai.md",
               "transcriptPath": "content/transcripts/01-welcome-to-the-course-building-a-3d-game-with-cursor-ai.txt"
             },
             {
@@ -29,6 +30,7 @@
               "lessonNum": 2,
               "vttPath": "assets/1 - Week 1/2. Day 1 - Building a First-Person Shooter Game with Cursor AI Agent.vtt",
               "contentPath": "content/lessons/02-building-a-first-person-shooter-game-with-cursor-ai-agent.md",
+              "summaryPath": "content/summaries/02-building-a-first-person-shooter-game-with-cursor-ai-agent.md",
               "transcriptPath": "content/transcripts/02-building-a-first-person-shooter-game-with-cursor-ai-agent.txt"
             },
             {
@@ -38,6 +40,7 @@
               "lessonNum": 3,
               "vttPath": "assets/1 - Week 1/3. Day 1 - The Missing Manual for Agentic AI Coding.vtt",
               "contentPath": "content/lessons/03-the-missing-manual-for-agentic-ai-coding.md",
+              "summaryPath": "content/summaries/03-the-missing-manual-for-agentic-ai-coding.md",
               "transcriptPath": "content/transcripts/03-the-missing-manual-for-agentic-ai-coding.txt"
             },
             {
@@ -47,6 +50,7 @@
               "lessonNum": 4,
               "vttPath": "assets/1 - Week 1/4. Day 1 - Meet Your Instructor & the 3-Week AI Coder Course Roadmap.vtt",
               "contentPath": "content/lessons/04-meet-your-instructor-the-3-week-ai-coder-course-roadmap.md",
+              "summaryPath": "content/summaries/04-meet-your-instructor-the-3-week-ai-coder-course-roadmap.md",
               "transcriptPath": "content/transcripts/04-meet-your-instructor-the-3-week-ai-coder-course-roadmap.txt"
             },
             {
@@ -56,6 +60,7 @@
               "lessonNum": 5,
               "vttPath": "assets/1 - Week 1/5. Day 1 - Vibe Coding, Agentic Coders & Coding Agents Like Claude Code.vtt",
               "contentPath": "content/lessons/05-vibe-coding-agentic-coders-coding-agents-like-claude-code.md",
+              "summaryPath": "content/summaries/05-vibe-coding-agentic-coders-coding-agents-like-claude-code.md",
               "transcriptPath": "content/transcripts/05-vibe-coding-agentic-coders-coding-agents-like-claude-code.txt"
             },
             {
@@ -65,6 +70,7 @@
               "lessonNum": 6,
               "vttPath": "assets/1 - Week 1/6. Day 1 - The 8 Stages of AI Coding From ChatGPT to Agent Orchestration.vtt",
               "contentPath": "content/lessons/06-the-8-stages-of-ai-coding-from-chatgpt-to-agent-orchestration.md",
+              "summaryPath": "content/summaries/06-the-8-stages-of-ai-coding-from-chatgpt-to-agent-orchestration.md",
               "transcriptPath": "content/transcripts/06-the-8-stages-of-ai-coding-from-chatgpt-to-agent-orchestration.txt"
             },
             {
@@ -74,6 +80,7 @@
               "lessonNum": 7,
               "vttPath": "assets/1 - Week 1/7. Day 1 - Wrapping Up Your Unique Agentic Coding Journey Ahead.vtt",
               "contentPath": "content/lessons/07-wrapping-up-your-unique-agentic-coding-journey-ahead.md",
+              "summaryPath": "content/summaries/07-wrapping-up-your-unique-agentic-coding-journey-ahead.md",
               "transcriptPath": "content/transcripts/07-wrapping-up-your-unique-agentic-coding-journey-ahead.txt"
             }
           ]
@@ -90,6 +97,7 @@
               "lessonNum": 8,
               "vttPath": "assets/1 - Week 1/8. Day 2 - How LLMs Work Tokens, Memory, and Reasoning Explained.vtt",
               "contentPath": "content/lessons/08-how-llms-work-tokens-memory-and-reasoning-explained.md",
+              "summaryPath": "content/summaries/08-how-llms-work-tokens-memory-and-reasoning-explained.md",
               "transcriptPath": "content/transcripts/08-how-llms-work-tokens-memory-and-reasoning-explained.txt"
             },
             {
@@ -99,6 +107,7 @@
               "lessonNum": 9,
               "vttPath": "assets/1 - Week 1/9. Day 2 - Tools, Loops, and the Definition of AI Agents.vtt",
               "contentPath": "content/lessons/09-tools-loops-and-the-definition-of-ai-agents.md",
+              "summaryPath": "content/summaries/09-tools-loops-and-the-definition-of-ai-agents.md",
               "transcriptPath": "content/transcripts/09-tools-loops-and-the-definition-of-ai-agents.txt"
             },
             {
@@ -108,6 +117,7 @@
               "lessonNum": 10,
               "vttPath": "assets/1 - Week 1/10. Day 2 - Context Engineering System Prompts, Context Windows & agents.md.vtt",
               "contentPath": "content/lessons/10-context-engineering-system-prompts-context-windows-agents-md.md",
+              "summaryPath": "content/summaries/10-context-engineering-system-prompts-context-windows-agents-md.md",
               "transcriptPath": "content/transcripts/10-context-engineering-system-prompts-context-windows-agents-md.txt"
             },
             {
@@ -117,6 +127,7 @@
               "lessonNum": 11,
               "vttPath": "assets/1 - Week 1/11. Day 2 - Mastering agents.md Context Window Strategy for Coding Agents.vtt",
               "contentPath": "content/lessons/11-mastering-agents-md-context-window-strategy-for-coding-agents.md",
+              "summaryPath": "content/summaries/11-mastering-agents-md-context-window-strategy-for-coding-agents.md",
               "transcriptPath": "content/transcripts/11-mastering-agents-md-context-window-strategy-for-coding-agents.txt"
             },
             {
@@ -126,6 +137,7 @@
               "lessonNum": 12,
               "vttPath": "assets/1 - Week 1/12. Day 2 - The Evolution of AI Coding Workflows From YOLO to Ralph Loops.vtt",
               "contentPath": "content/lessons/12-the-evolution-of-ai-coding-workflows-from-yolo-to-ralph-loops.md",
+              "summaryPath": "content/summaries/12-the-evolution-of-ai-coding-workflows-from-yolo-to-ralph-loops.md",
               "transcriptPath": "content/transcripts/12-the-evolution-of-ai-coding-workflows-from-yolo-to-ralph-loops.txt"
             },
             {
@@ -135,6 +147,7 @@
               "lessonNum": 13,
               "vttPath": "assets/1 - Week 1/13. Day 2 - Beyond the Hype Comparing LLMs on Artificial Analysis.vtt",
               "contentPath": "content/lessons/13-beyond-the-hype-comparing-llms-on-artificial-analysis.md",
+              "summaryPath": "content/summaries/13-beyond-the-hype-comparing-llms-on-artificial-analysis.md",
               "transcriptPath": "content/transcripts/13-beyond-the-hype-comparing-llms-on-artificial-analysis.txt"
             }
           ]
@@ -151,6 +164,7 @@
               "lessonNum": 14,
               "vttPath": "assets/1 - Week 1/14. Day 3 - Hands-On with Cursor, Copilot, Codex & Agentic Vibe Coding.vtt",
               "contentPath": "content/lessons/14-hands-on-with-cursor-copilot-codex-agentic-vibe-coding.md",
+              "summaryPath": "content/summaries/14-hands-on-with-cursor-copilot-codex-agentic-vibe-coding.md",
               "transcriptPath": "content/transcripts/14-hands-on-with-cursor-copilot-codex-agentic-vibe-coding.txt"
             },
             {
@@ -160,6 +174,7 @@
               "lessonNum": 15,
               "vttPath": "assets/1 - Week 1/15. Day 3 - Exploring the agents.md File and Cursor Settings for Vibe Coding.vtt",
               "contentPath": "content/lessons/15-exploring-the-agents-md-file-and-cursor-settings-for-vibe-coding.md",
+              "summaryPath": "content/summaries/15-exploring-the-agents-md-file-and-cursor-settings-for-vibe-coding.md",
               "transcriptPath": "content/transcripts/15-exploring-the-agents-md-file-and-cursor-settings-for-vibe-coding.txt"
             },
             {
@@ -169,6 +184,7 @@
               "lessonNum": 16,
               "vttPath": "assets/1 - Week 1/16. Day 3 - Building a Kanban App with the Cursor AI Agent in YOLO Mode.vtt",
               "contentPath": "content/lessons/16-building-a-kanban-app-with-the-cursor-ai-agent-in-yolo-mode.md",
+              "summaryPath": "content/summaries/16-building-a-kanban-app-with-the-cursor-ai-agent-in-yolo-mode.md",
               "transcriptPath": "content/transcripts/16-building-a-kanban-app-with-the-cursor-ai-agent-in-yolo-mode.txt"
             },
             {
@@ -178,6 +194,7 @@
               "lessonNum": 17,
               "vttPath": "assets/1 - Week 1/17. Day 3 - Building a Kanban Board with GitHub Copilot in VS Code.vtt",
               "contentPath": "content/lessons/17-building-a-kanban-board-with-github-copilot-in-vs-code.md",
+              "summaryPath": "content/summaries/17-building-a-kanban-board-with-github-copilot-in-vs-code.md",
               "transcriptPath": "content/transcripts/17-building-a-kanban-board-with-github-copilot-in-vs-code.txt"
             },
             {
@@ -187,6 +204,7 @@
               "lessonNum": 18,
               "vttPath": "assets/1 - Week 1/18. Day 3 - OpenAI Codex VS Code Extension Zero-Shot Kanban App Build.vtt",
               "contentPath": "content/lessons/18-openai-codex-vs-code-extension-zero-shot-kanban-app-build.md",
+              "summaryPath": "content/summaries/18-openai-codex-vs-code-extension-zero-shot-kanban-app-build.md",
               "transcriptPath": "content/transcripts/18-openai-codex-vs-code-extension-zero-shot-kanban-app-build.txt"
             },
             {
@@ -196,6 +214,7 @@
               "lessonNum": 19,
               "vttPath": "assets/1 - Week 1/19. Day 3 - Building a Kanban App with Antigravity IDE and Gemini 3 Pro.vtt",
               "contentPath": "content/lessons/19-building-a-kanban-app-with-antigravity-ide-and-gemini-3-pro.md",
+              "summaryPath": "content/summaries/19-building-a-kanban-app-with-antigravity-ide-and-gemini-3-pro.md",
               "transcriptPath": "content/transcripts/19-building-a-kanban-app-with-antigravity-ide-and-gemini-3-pro.txt"
             },
             {
@@ -205,6 +224,7 @@
               "lessonNum": 20,
               "vttPath": "assets/1 - Week 1/20. Day 3 - Cursor vs Copilot vs Codex vs Antigravity Final Verdict.vtt",
               "contentPath": "content/lessons/20-cursor-vs-copilot-vs-codex-vs-antigravity-final-verdict.md",
+              "summaryPath": "content/summaries/20-cursor-vs-copilot-vs-codex-vs-antigravity-final-verdict.md",
               "transcriptPath": "content/transcripts/20-cursor-vs-copilot-vs-codex-vs-antigravity-final-verdict.txt"
             }
           ]
@@ -221,6 +241,7 @@
               "lessonNum": 21,
               "vttPath": "assets/1 - Week 1/21. Day 4 - YOLO Mode Choosing the Right LLM for Agentic Coding in IDEs.vtt",
               "contentPath": "content/lessons/21-yolo-mode-choosing-the-right-llm-for-agentic-coding-in-ides.md",
+              "summaryPath": "content/summaries/21-yolo-mode-choosing-the-right-llm-for-agentic-coding-in-ides.md",
               "transcriptPath": "content/transcripts/21-yolo-mode-choosing-the-right-llm-for-agentic-coding-in-ides.txt"
             },
             {
@@ -230,6 +251,7 @@
               "lessonNum": 22,
               "vttPath": "assets/1 - Week 1/22. Day 4 - Five Principles for Successful Vibe Coding Be the Boss.vtt",
               "contentPath": "content/lessons/22-five-principles-for-successful-vibe-coding-be-the-boss.md",
+              "summaryPath": "content/summaries/22-five-principles-for-successful-vibe-coding-be-the-boss.md",
               "transcriptPath": "content/transcripts/22-five-principles-for-successful-vibe-coding-be-the-boss.txt"
             },
             {
@@ -239,6 +261,7 @@
               "lessonNum": 23,
               "vttPath": "assets/1 - Week 1/23. Day 4 - Responsible YOLO Coding Setting Up OpenRouter for AI Projects.vtt",
               "contentPath": "content/lessons/23-responsible-yolo-coding-setting-up-openrouter-for-ai-projects.md",
+              "summaryPath": "content/summaries/23-responsible-yolo-coding-setting-up-openrouter-for-ai-projects.md",
               "transcriptPath": "content/transcripts/23-responsible-yolo-coding-setting-up-openrouter-for-ai-projects.txt"
             },
             {
@@ -248,6 +271,7 @@
               "lessonNum": 24,
               "vttPath": "assets/1 - Week 1/24. Day 4 - YOLO Mode Building a Next.js Website with GPT Codex in Cursor.vtt",
               "contentPath": "content/lessons/24-yolo-mode-building-a-next-js-website-with-gpt-codex-in-cursor.md",
+              "summaryPath": "content/summaries/24-yolo-mode-building-a-next-js-website-with-gpt-codex-in-cursor.md",
               "transcriptPath": "content/transcripts/24-yolo-mode-building-a-next-js-website-with-gpt-codex-in-cursor.txt"
             },
             {
@@ -257,6 +281,7 @@
               "lessonNum": 25,
               "vttPath": "assets/1 - Week 1/25. Day 4 - Adding an AI Digital Twin Chat with OpenRouter & Vibe Coding.vtt",
               "contentPath": "content/lessons/25-adding-an-ai-digital-twin-chat-with-openrouter-vibe-coding.md",
+              "summaryPath": "content/summaries/25-adding-an-ai-digital-twin-chat-with-openrouter-vibe-coding.md",
               "transcriptPath": "content/transcripts/25-adding-an-ai-digital-twin-chat-with-openrouter-vibe-coding.txt"
             },
             {
@@ -266,6 +291,7 @@
               "lessonNum": 26,
               "vttPath": "assets/1 - Week 1/26. Day 4 - Tutorials, Code Reviews with Opus, and Cross-Model Collaboration.vtt",
               "contentPath": "content/lessons/26-tutorials-code-reviews-with-opus-and-cross-model-collaboration.md",
+              "summaryPath": "content/summaries/26-tutorials-code-reviews-with-opus-and-cross-model-collaboration.md",
               "transcriptPath": "content/transcripts/26-tutorials-code-reviews-with-opus-and-cross-model-collaboration.txt"
             }
           ]
@@ -282,6 +308,7 @@
               "lessonNum": 27,
               "vttPath": "assets/1 - Week 1/27. Day 5 - Karpathy on Vibe Coding & Rules for Building a Commercial MVP.vtt",
               "contentPath": "content/lessons/27-karpathy-on-vibe-coding-rules-for-building-a-commercial-mvp.md",
+              "summaryPath": "content/summaries/27-karpathy-on-vibe-coding-rules-for-building-a-commercial-mvp.md",
               "transcriptPath": "content/transcripts/27-karpathy-on-vibe-coding-rules-for-building-a-commercial-mvp.txt"
             },
             {
@@ -291,6 +318,7 @@
               "lessonNum": 28,
               "vttPath": "assets/1 - Week 1/28. Day 5 - Web Apps 101 Front-End, Back-End, APIs & Docker Setup.vtt",
               "contentPath": "content/lessons/28-web-apps-101-front-end-back-end-apis-docker-setup.md",
+              "summaryPath": "content/summaries/28-web-apps-101-front-end-back-end-apis-docker-setup.md",
               "transcriptPath": "content/transcripts/28-web-apps-101-front-end-back-end-apis-docker-setup.txt"
             },
             {
@@ -300,6 +328,7 @@
               "lessonNum": 29,
               "vttPath": "assets/1 - Week 1/29. Day 5 - Setting Up a Full-Stack Project with GitHub Copilot & FastAPI.vtt",
               "contentPath": "content/lessons/29-setting-up-a-full-stack-project-with-github-copilot-fastapi.md",
+              "summaryPath": "content/summaries/29-setting-up-a-full-stack-project-with-github-copilot-fastapi.md",
               "transcriptPath": "content/transcripts/29-setting-up-a-full-stack-project-with-github-copilot-fastapi.txt"
             },
             {
@@ -309,6 +338,7 @@
               "lessonNum": 30,
               "vttPath": "assets/1 - Week 1/30. Day 5 - Building Step-by-Step with AI Copilot Planning & Scaffolding.vtt",
               "contentPath": "content/lessons/30-building-step-by-step-with-ai-copilot-planning-scaffolding.md",
+              "summaryPath": "content/summaries/30-building-step-by-step-with-ai-copilot-planning-scaffolding.md",
               "transcriptPath": "content/transcripts/30-building-step-by-step-with-ai-copilot-planning-scaffolding.txt"
             },
             {
@@ -318,6 +348,7 @@
               "lessonNum": 31,
               "vttPath": "assets/1 - Week 1/31. Day 5 - Building a Kanban App with GitHub Copilot, Docker & FastAPI.vtt",
               "contentPath": "content/lessons/31-building-a-kanban-app-with-github-copilot-docker-fastapi.md",
+              "summaryPath": "content/summaries/31-building-a-kanban-app-with-github-copilot-docker-fastapi.md",
               "transcriptPath": "content/transcripts/31-building-a-kanban-app-with-github-copilot-docker-fastapi.txt"
             },
             {
@@ -327,6 +358,7 @@
               "lessonNum": 32,
               "vttPath": "assets/1 - Week 1/32. Day 5 - Building a Kanban App with Codex Debugging Drag and Drop.vtt",
               "contentPath": "content/lessons/32-building-a-kanban-app-with-codex-debugging-drag-and-drop.md",
+              "summaryPath": "content/summaries/32-building-a-kanban-app-with-codex-debugging-drag-and-drop.md",
               "transcriptPath": "content/transcripts/32-building-a-kanban-app-with-codex-debugging-drag-and-drop.txt"
             },
             {
@@ -336,6 +368,7 @@
               "lessonNum": 33,
               "vttPath": "assets/1 - Week 1/33. Day 5 - AI Assistant Kanban App Complete Codex, OpenRouter & Week 1 Wrap.vtt",
               "contentPath": "content/lessons/33-ai-assistant-kanban-app-complete-codex-openrouter-week-1-wrap.md",
+              "summaryPath": "content/summaries/33-ai-assistant-kanban-app-complete-codex-openrouter-week-1-wrap.md",
               "transcriptPath": "content/transcripts/33-ai-assistant-kanban-app-complete-codex-openrouter-week-1-wrap.txt"
             }
           ]
@@ -359,6 +392,7 @@
               "lessonNum": 34,
               "vttPath": "assets/2 - Week 2/34. Day 1 - Welcome to Pro Week From Vibe Coding to Vibe Engineering.vtt",
               "contentPath": "content/lessons/34-welcome-to-pro-week-from-vibe-coding-to-vibe-engineering.md",
+              "summaryPath": "content/summaries/34-welcome-to-pro-week-from-vibe-coding-to-vibe-engineering.md",
               "transcriptPath": "content/transcripts/34-welcome-to-pro-week-from-vibe-coding-to-vibe-engineering.txt"
             },
             {
@@ -368,6 +402,7 @@
               "lessonNum": 35,
               "vttPath": "assets/2 - Week 2/35. Day 1 - The Rise of Claude Code History, Setup & Installation in VS Code.vtt",
               "contentPath": "content/lessons/35-the-rise-of-claude-code-history-setup-installation-in-vs-code.md",
+              "summaryPath": "content/summaries/35-the-rise-of-claude-code-history-setup-installation-in-vs-code.md",
               "transcriptPath": "content/transcripts/35-the-rise-of-claude-code-history-setup-installation-in-vs-code.txt"
             },
             {
@@ -377,6 +412,7 @@
               "lessonNum": 36,
               "vttPath": "assets/2 - Week 2/36. Day 1 - Getting Started with Claude Code CLI Init, Context & Testing.vtt",
               "contentPath": "content/lessons/36-getting-started-with-claude-code-cli-init-context-testing.md",
+              "summaryPath": "content/summaries/36-getting-started-with-claude-code-cli-init-context-testing.md",
               "transcriptPath": "content/transcripts/36-getting-started-with-claude-code-cli-init-context-testing.txt"
             },
             {
@@ -386,6 +422,7 @@
               "lessonNum": 37,
               "vttPath": "assets/2 - Week 2/37. Day 1 - Claude Code Review Fixing Hallucinations & Refactoring Code.vtt",
               "contentPath": "content/lessons/37-claude-code-review-fixing-hallucinations-refactoring-code.md",
+              "summaryPath": "content/summaries/37-claude-code-review-fixing-hallucinations-refactoring-code.md",
               "transcriptPath": "content/transcripts/37-claude-code-review-fixing-hallucinations-refactoring-code.txt"
             },
             {
@@ -395,6 +432,7 @@
               "lessonNum": 38,
               "vttPath": "assets/2 - Week 2/38. Day 1 - OpenCode Use Free Models Like GLM 4.7 as a Claude Code Alternative.vtt",
               "contentPath": "content/lessons/38-opencode-use-free-models-like-glm-4-7-as-a-claude-code-alternative.md",
+              "summaryPath": "content/summaries/38-opencode-use-free-models-like-glm-4-7-as-a-claude-code-alternative.md",
               "transcriptPath": "content/transcripts/38-opencode-use-free-models-like-glm-4-7-as-a-claude-code-alternative.txt"
             },
             {
@@ -404,6 +442,7 @@
               "lessonNum": 39,
               "vttPath": "assets/2 - Week 2/39. Day 1 - AMP Code, OpenCode & Claude Code with OpenRouter and Ollama.vtt",
               "contentPath": "content/lessons/39-amp-code-opencode-claude-code-with-openrouter-and-ollama.md",
+              "summaryPath": "content/summaries/39-amp-code-opencode-claude-code-with-openrouter-and-ollama.md",
               "transcriptPath": "content/transcripts/39-amp-code-opencode-claude-code-with-openrouter-and-ollama.txt"
             }
           ]
@@ -420,6 +459,7 @@
               "lessonNum": 40,
               "vttPath": "assets/2 - Week 2/40. Day 2 - Claude Code Commands, Shortcuts & Configuration Deep Dive.vtt",
               "contentPath": "content/lessons/40-claude-code-commands-shortcuts-configuration-deep-dive.md",
+              "summaryPath": "content/summaries/40-claude-code-commands-shortcuts-configuration-deep-dive.md",
               "transcriptPath": "content/transcripts/40-claude-code-commands-shortcuts-configuration-deep-dive.txt"
             },
             {
@@ -429,6 +469,7 @@
               "lessonNum": 41,
               "vttPath": "assets/2 - Week 2/41. Day 2 - Sessions, Checkpoints & Git Managing Your Claude Code Workflow.vtt",
               "contentPath": "content/lessons/41-sessions-checkpoints-git-managing-your-claude-code-workflow.md",
+              "summaryPath": "content/summaries/41-sessions-checkpoints-git-managing-your-claude-code-workflow.md",
               "transcriptPath": "content/transcripts/41-sessions-checkpoints-git-managing-your-claude-code-workflow.txt"
             },
             {
@@ -438,6 +479,7 @@
               "lessonNum": 42,
               "vttPath": "assets/2 - Week 2/42. Day 2 - Claude Code Checkpoints, Rewind, and YOLO Mode Explained.vtt",
               "contentPath": "content/lessons/42-claude-code-checkpoints-rewind-and-yolo-mode-explained.md",
+              "summaryPath": "content/summaries/42-claude-code-checkpoints-rewind-and-yolo-mode-explained.md",
               "transcriptPath": "content/transcripts/42-claude-code-checkpoints-rewind-and-yolo-mode-explained.txt"
             },
             {
@@ -447,6 +489,7 @@
               "lessonNum": 43,
               "vttPath": "assets/2 - Week 2/43. Day 2 - Claude Code YOLO Mode Bypass Permissions for Autonomous Coding.vtt",
               "contentPath": "content/lessons/43-claude-code-yolo-mode-bypass-permissions-for-autonomous-coding.md",
+              "summaryPath": "content/summaries/43-claude-code-yolo-mode-bypass-permissions-for-autonomous-coding.md",
               "transcriptPath": "content/transcripts/43-claude-code-yolo-mode-bypass-permissions-for-autonomous-coding.txt"
             },
             {
@@ -456,6 +499,7 @@
               "lessonNum": 44,
               "vttPath": "assets/2 - Week 2/44. Day 2 - Ralph Loops in Claude Code Autonomous Agent Coding on Autopilot.vtt",
               "contentPath": "content/lessons/44-ralph-loops-in-claude-code-autonomous-agent-coding-on-autopilot.md",
+              "summaryPath": "content/summaries/44-ralph-loops-in-claude-code-autonomous-agent-coding-on-autopilot.md",
               "transcriptPath": "content/transcripts/44-ralph-loops-in-claude-code-autonomous-agent-coding-on-autopilot.txt"
             }
           ]
@@ -472,6 +516,7 @@
               "lessonNum": 45,
               "vttPath": "assets/2 - Week 2/45. Day 3 - MCP, Skills & Plugins The Big Three Building Blocks of Claude Code.vtt",
               "contentPath": "content/lessons/45-mcp-skills-plugins-the-big-three-building-blocks-of-claude-code.md",
+              "summaryPath": "content/summaries/45-mcp-skills-plugins-the-big-three-building-blocks-of-claude-code.md",
               "transcriptPath": "content/transcripts/45-mcp-skills-plugins-the-big-three-building-blocks-of-claude-code.txt"
             },
             {
@@ -481,6 +526,7 @@
               "lessonNum": 46,
               "vttPath": "assets/2 - Week 2/46. Day 3 - MCP Servers Explained Hosts, Clients, and Discovery for Claude Code.vtt",
               "contentPath": "content/lessons/46-mcp-servers-explained-hosts-clients-and-discovery-for-claude-code.md",
+              "summaryPath": "content/summaries/46-mcp-servers-explained-hosts-clients-and-discovery-for-claude-code.md",
               "transcriptPath": "content/transcripts/46-mcp-servers-explained-hosts-clients-and-discovery-for-claude-code.txt"
             },
             {
@@ -490,6 +536,7 @@
               "lessonNum": 47,
               "vttPath": "assets/2 - Week 2/47. Day 3 - Adding MCP Servers to Claude Code Context7 & Polygon IO.vtt",
               "contentPath": "content/lessons/47-adding-mcp-servers-to-claude-code-context7-polygon-io.md",
+              "summaryPath": "content/summaries/47-adding-mcp-servers-to-claude-code-context7-polygon-io.md",
               "transcriptPath": "content/transcripts/47-adding-mcp-servers-to-claude-code-context7-polygon-io.txt"
             },
             {
@@ -499,6 +546,7 @@
               "lessonNum": 48,
               "vttPath": "assets/2 - Week 2/48. Day 3 - Skills vs MCP Claude Code_s Simpler Way to Add Abilities.vtt",
               "contentPath": "content/lessons/48-skills-vs-mcp-claude-code-s-simpler-way-to-add-abilities.md",
+              "summaryPath": "content/summaries/48-skills-vs-mcp-claude-code-s-simpler-way-to-add-abilities.md",
               "transcriptPath": "content/transcripts/48-skills-vs-mcp-claude-code-s-simpler-way-to-add-abilities.txt"
             },
             {
@@ -508,6 +556,7 @@
               "lessonNum": 49,
               "vttPath": "assets/2 - Week 2/49. Day 3 - Skills Marketplaces Installing Agent Browser in Claude Code.vtt",
               "contentPath": "content/lessons/49-skills-marketplaces-installing-agent-browser-in-claude-code.md",
+              "summaryPath": "content/summaries/49-skills-marketplaces-installing-agent-browser-in-claude-code.md",
               "transcriptPath": "content/transcripts/49-skills-marketplaces-installing-agent-browser-in-claude-code.txt"
             },
             {
@@ -517,6 +566,7 @@
               "lessonNum": 50,
               "vttPath": "assets/2 - Week 2/50. Day 3 - Claude Code Plugins Marketplace, Installation & Best Practices.vtt",
               "contentPath": "content/lessons/50-claude-code-plugins-marketplace-installation-best-practices.md",
+              "summaryPath": "content/summaries/50-claude-code-plugins-marketplace-installation-best-practices.md",
               "transcriptPath": "content/transcripts/50-claude-code-plugins-marketplace-installation-best-practices.txt"
             },
             {
@@ -526,6 +576,7 @@
               "lessonNum": 51,
               "vttPath": "assets/2 - Week 2/51. Day 3 - MCP vs Skills vs Plugins Choosing the Right Claude Code Setup.vtt",
               "contentPath": "content/lessons/51-mcp-vs-skills-vs-plugins-choosing-the-right-claude-code-setup.md",
+              "summaryPath": "content/summaries/51-mcp-vs-skills-vs-plugins-choosing-the-right-claude-code-setup.md",
               "transcriptPath": "content/transcripts/51-mcp-vs-skills-vs-plugins-choosing-the-right-claude-code-setup.txt"
             }
           ]
@@ -542,6 +593,7 @@
               "lessonNum": 52,
               "vttPath": "assets/2 - Week 2/52. Day 4 - Building with Claude Code, Jira, MCP & Plugins Workflow.vtt",
               "contentPath": "content/lessons/52-building-with-claude-code-jira-mcp-plugins-workflow.md",
+              "summaryPath": "content/summaries/52-building-with-claude-code-jira-mcp-plugins-workflow.md",
               "transcriptPath": "content/transcripts/52-building-with-claude-code-jira-mcp-plugins-workflow.txt"
             },
             {
@@ -551,6 +603,7 @@
               "lessonNum": 53,
               "vttPath": "assets/2 - Week 2/53. Day 4 - Connecting Claude Code to Jira MCP Server & GitHub Repository.vtt",
               "contentPath": "content/lessons/53-connecting-claude-code-to-jira-mcp-server-github-repository.md",
+              "summaryPath": "content/summaries/53-connecting-claude-code-to-jira-mcp-server-github-repository.md",
               "transcriptPath": "content/transcripts/53-connecting-claude-code-to-jira-mcp-server-github-repository.txt"
             },
             {
@@ -560,6 +613,7 @@
               "lessonNum": 54,
               "vttPath": "assets/2 - Week 2/54. Day 4 - Setting Up GitHub MCP Server & Featured Dev Plugin in Claude Code.vtt",
               "contentPath": "content/lessons/54-setting-up-github-mcp-server-featured-dev-plugin-in-claude-code.md",
+              "summaryPath": "content/summaries/54-setting-up-github-mcp-server-featured-dev-plugin-in-claude-code.md",
               "transcriptPath": "content/transcripts/54-setting-up-github-mcp-server-featured-dev-plugin-in-claude-code.txt"
             },
             {
@@ -569,6 +623,7 @@
               "lessonNum": 55,
               "vttPath": "assets/2 - Week 2/55. Day 4 - Claude Code Autonomy From Jira Issue to PR via MCP Server.vtt",
               "contentPath": "content/lessons/55-claude-code-autonomy-from-jira-issue-to-pr-via-mcp-server.md",
+              "summaryPath": "content/summaries/55-claude-code-autonomy-from-jira-issue-to-pr-via-mcp-server.md",
               "transcriptPath": "content/transcripts/55-claude-code-autonomy-from-jira-issue-to-pr-via-mcp-server.txt"
             },
             {
@@ -578,6 +633,7 @@
               "lessonNum": 56,
               "vttPath": "assets/2 - Week 2/56. Day 4 - Claude Code Builds a Full Next.js App from a Jira Ticket.vtt",
               "contentPath": "content/lessons/56-claude-code-builds-a-full-next-js-app-from-a-jira-ticket.md",
+              "summaryPath": "content/summaries/56-claude-code-builds-a-full-next-js-app-from-a-jira-ticket.md",
               "transcriptPath": "content/transcripts/56-claude-code-builds-a-full-next-js-app-from-a-jira-ticket.txt"
             },
             {
@@ -587,6 +643,7 @@
               "lessonNum": 57,
               "vttPath": "assets/2 - Week 2/57. Day 4 - Debugging Strategies for Claude Code A Disciplined Approach.vtt",
               "contentPath": "content/lessons/57-debugging-strategies-for-claude-code-a-disciplined-approach.md",
+              "summaryPath": "content/summaries/57-debugging-strategies-for-claude-code-a-disciplined-approach.md",
               "transcriptPath": "content/transcripts/57-debugging-strategies-for-claude-code-a-disciplined-approach.txt"
             }
           ]
@@ -603,6 +660,7 @@
               "lessonNum": 58,
               "vttPath": "assets/2 - Week 2/58. Day 5 - Building a SaaS Platform Claude Code Skills & Claude.md Setup.vtt",
               "contentPath": "content/lessons/58-building-a-saas-platform-claude-code-skills-claude-md-setup.md",
+              "summaryPath": "content/summaries/58-building-a-saas-platform-claude-code-skills-claude-md-setup.md",
               "transcriptPath": "content/transcripts/58-building-a-saas-platform-claude-code-skills-claude-md-setup.txt"
             },
             {
@@ -612,6 +670,7 @@
               "lessonNum": 59,
               "vttPath": "assets/2 - Week 2/59. Day 5 - Writing claude.md and Creating Custom Skills for Cerebras.vtt",
               "contentPath": "content/lessons/59-writing-claude-md-and-creating-custom-skills-for-cerebras.md",
+              "summaryPath": "content/summaries/59-writing-claude-md-and-creating-custom-skills-for-cerebras.md",
               "transcriptPath": "content/transcripts/59-writing-claude-md-and-creating-custom-skills-for-cerebras.txt"
             },
             {
@@ -621,6 +680,7 @@
               "lessonNum": 60,
               "vttPath": "assets/2 - Week 2/60. Day 5 - Setting Up Jira Tickets for Claude Code to Build Our V1 Product.vtt",
               "contentPath": "content/lessons/60-setting-up-jira-tickets-for-claude-code-to-build-our-v1-product.md",
+              "summaryPath": "content/summaries/60-setting-up-jira-tickets-for-claude-code-to-build-our-v1-product.md",
               "transcriptPath": "content/transcripts/60-setting-up-jira-tickets-for-claude-code-to-build-our-v1-product.txt"
             },
             {
@@ -630,6 +690,7 @@
               "lessonNum": 61,
               "vttPath": "assets/2 - Week 2/61. Day 5 - Building Features with Claude Code, Jira, and FastAPI.vtt",
               "contentPath": "content/lessons/61-building-features-with-claude-code-jira-and-fastapi.md",
+              "summaryPath": "content/summaries/61-building-features-with-claude-code-jira-and-fastapi.md",
               "transcriptPath": "content/transcripts/61-building-features-with-claude-code-jira-and-fastapi.txt"
             },
             {
@@ -639,6 +700,7 @@
               "lessonNum": 62,
               "vttPath": "assets/2 - Week 2/62. Day 5 - Testing the AI Legal Doc Generator with Cerebras and Claude Code.vtt",
               "contentPath": "content/lessons/62-testing-the-ai-legal-doc-generator-with-cerebras-and-claude-code.md",
+              "summaryPath": "content/summaries/62-testing-the-ai-legal-doc-generator-with-cerebras-and-claude-code.md",
               "transcriptPath": "content/transcripts/62-testing-the-ai-legal-doc-generator-with-cerebras-and-claude-code.txt"
             },
             {
@@ -648,6 +710,7 @@
               "lessonNum": 63,
               "vttPath": "assets/2 - Week 2/63. Day 5 - Final PR Merge, Full SaaS Demo & Week 2 Victory in Claude Code.vtt",
               "contentPath": "content/lessons/63-final-pr-merge-full-saas-demo-week-2-victory-in-claude-code.md",
+              "summaryPath": "content/summaries/63-final-pr-merge-full-saas-demo-week-2-victory-in-claude-code.md",
               "transcriptPath": "content/transcripts/63-final-pr-merge-full-saas-demo-week-2-victory-in-claude-code.txt"
             }
           ]
@@ -671,6 +734,7 @@
               "lessonNum": 64,
               "vttPath": "assets/3 - Week 3/64. Day 1 - Claude Code Pro Sub-Agents, Hooks, Swarms & Controlled Chaos.vtt",
               "contentPath": "content/lessons/64-claude-code-pro-sub-agents-hooks-swarms-controlled-chaos.md",
+              "summaryPath": "content/summaries/64-claude-code-pro-sub-agents-hooks-swarms-controlled-chaos.md",
               "transcriptPath": "content/transcripts/64-claude-code-pro-sub-agents-hooks-swarms-controlled-chaos.txt"
             },
             {
@@ -680,6 +744,7 @@
               "lessonNum": 65,
               "vttPath": "assets/3 - Week 3/65. Day 1 - Setting Up the FiNALLY Project Our Multi-Agent Trading App.vtt",
               "contentPath": "content/lessons/65-setting-up-the-finally-project-our-multi-agent-trading-app.md",
+              "summaryPath": "content/summaries/65-setting-up-the-finally-project-our-multi-agent-trading-app.md",
               "transcriptPath": "content/transcripts/65-setting-up-the-finally-project-our-multi-agent-trading-app.txt"
             },
             {
@@ -689,6 +754,7 @@
               "lessonNum": 66,
               "vttPath": "assets/3 - Week 3/66. Day 1 - Creating Custom Slash Commands in Claude Code.vtt",
               "contentPath": "content/lessons/66-creating-custom-slash-commands-in-claude-code.md",
+              "summaryPath": "content/summaries/66-creating-custom-slash-commands-in-claude-code.md",
               "transcriptPath": "content/transcripts/66-creating-custom-slash-commands-in-claude-code.txt"
             },
             {
@@ -698,6 +764,7 @@
               "lessonNum": 67,
               "vttPath": "assets/3 - Week 3/67. Day 1 - Building Agents & Sub-Agents with Claude Code and Codex CLI.vtt",
               "contentPath": "content/lessons/67-building-agents-sub-agents-with-claude-code-and-codex-cli.md",
+              "summaryPath": "content/summaries/67-building-agents-sub-agents-with-claude-code-and-codex-cli.md",
               "transcriptPath": "content/transcripts/67-building-agents-sub-agents-with-claude-code-and-codex-cli.txt"
             },
             {
@@ -707,6 +774,7 @@
               "lessonNum": 68,
               "vttPath": "assets/3 - Week 3/68. Day 1 - Subagents vs Agent Teams in Claude Code with Codex Review.vtt",
               "contentPath": "content/lessons/68-subagents-vs-agent-teams-in-claude-code-with-codex-review.md",
+              "summaryPath": "content/summaries/68-subagents-vs-agent-teams-in-claude-code-with-codex-review.md",
               "transcriptPath": "content/transcripts/68-subagents-vs-agent-teams-in-claude-code-with-codex-review.txt"
             },
             {
@@ -716,6 +784,7 @@
               "lessonNum": 69,
               "vttPath": "assets/3 - Week 3/69. Day 1 - Claude Code Hooks Auto-Trigger Reviews with Events & Commands.vtt",
               "contentPath": "content/lessons/69-claude-code-hooks-auto-trigger-reviews-with-events-commands.md",
+              "summaryPath": "content/summaries/69-claude-code-hooks-auto-trigger-reviews-with-events-commands.md",
               "transcriptPath": "content/transcripts/69-claude-code-hooks-auto-trigger-reviews-with-events-commands.txt"
             },
             {
@@ -725,6 +794,7 @@
               "lessonNum": 70,
               "vttPath": "assets/3 - Week 3/70. Day 1 - Building Custom Claude Code Plugins and Marketplaces.vtt",
               "contentPath": "content/lessons/70-building-custom-claude-code-plugins-and-marketplaces.md",
+              "summaryPath": "content/summaries/70-building-custom-claude-code-plugins-and-marketplaces.md",
               "transcriptPath": "content/transcripts/70-building-custom-claude-code-plugins-and-marketplaces.txt"
             }
           ]
@@ -741,6 +811,7 @@
               "lessonNum": 71,
               "vttPath": "assets/3 - Week 3/71. Day 2 - Claude Code Sandboxing and Cloud Execution Deep Dive.vtt",
               "contentPath": "content/lessons/71-claude-code-sandboxing-and-cloud-execution-deep-dive.md",
+              "summaryPath": "content/summaries/71-claude-code-sandboxing-and-cloud-execution-deep-dive.md",
               "transcriptPath": "content/transcripts/71-claude-code-sandboxing-and-cloud-execution-deep-dive.txt"
             },
             {
@@ -750,6 +821,7 @@
               "lessonNum": 72,
               "vttPath": "assets/3 - Week 3/72. Day 2 - Remote Execution & Cloud Sandboxes with Claude Code on the Web.vtt",
               "contentPath": "content/lessons/72-remote-execution-cloud-sandboxes-with-claude-code-on-the-web.md",
+              "summaryPath": "content/summaries/72-remote-execution-cloud-sandboxes-with-claude-code-on-the-web.md",
               "transcriptPath": "content/transcripts/72-remote-execution-cloud-sandboxes-with-claude-code-on-the-web.txt"
             },
             {
@@ -759,6 +831,7 @@
               "lessonNum": 73,
               "vttPath": "assets/3 - Week 3/73. Day 2 - Setting Up Claude Code Sandbox & GitHub Integration.vtt",
               "contentPath": "content/lessons/73-setting-up-claude-code-sandbox-github-integration.md",
+              "summaryPath": "content/summaries/73-setting-up-claude-code-sandbox-github-integration.md",
               "transcriptPath": "content/transcripts/73-setting-up-claude-code-sandbox-github-integration.txt"
             },
             {
@@ -768,6 +841,7 @@
               "lessonNum": 74,
               "vttPath": "assets/3 - Week 3/74. Day 2 - 5 Ways to Run Claude Code Remotely Cloud, Web, Mobile & GitHub.vtt",
               "contentPath": "content/lessons/74-5-ways-to-run-claude-code-remotely-cloud-web-mobile-github.md",
+              "summaryPath": "content/summaries/74-5-ways-to-run-claude-code-remotely-cloud-web-mobile-github.md",
               "transcriptPath": "content/transcripts/74-5-ways-to-run-claude-code-remotely-cloud-web-mobile-github.txt"
             },
             {
@@ -777,6 +851,7 @@
               "lessonNum": 75,
               "vttPath": "assets/3 - Week 3/75. Day 2 - Third-Party Cloud Sandboxes Running Claude Code on Sprites.dev.vtt",
               "contentPath": "content/lessons/75-third-party-cloud-sandboxes-running-claude-code-on-sprites-dev.md",
+              "summaryPath": "content/summaries/75-third-party-cloud-sandboxes-running-claude-code-on-sprites-dev.md",
               "transcriptPath": "content/transcripts/75-third-party-cloud-sandboxes-running-claude-code-on-sprites-dev.txt"
             },
             {
@@ -786,6 +861,7 @@
               "lessonNum": 76,
               "vttPath": "assets/3 - Week 3/76. Day 2 - Cloud Sandbox Recap YOLO Mode with Sprites.dev & GitHub PRs.vtt",
               "contentPath": "content/lessons/76-cloud-sandbox-recap-yolo-mode-with-sprites-dev-github-prs.md",
+              "summaryPath": "content/summaries/76-cloud-sandbox-recap-yolo-mode-with-sprites-dev-github-prs.md",
               "transcriptPath": "content/transcripts/76-cloud-sandbox-recap-yolo-mode-with-sprites-dev-github-prs.txt"
             }
           ]
@@ -802,6 +878,7 @@
               "lessonNum": 77,
               "vttPath": "assets/3 - Week 3/77. Day 3 - Large Codebases with Claude Code, Codex & Sprites.dev.vtt",
               "contentPath": "content/lessons/77-large-codebases-with-claude-code-codex-sprites-dev.md",
+              "summaryPath": "content/summaries/77-large-codebases-with-claude-code-codex-sprites-dev.md",
               "transcriptPath": "content/transcripts/77-large-codebases-with-claude-code-codex-sprites-dev.txt"
             },
             {
@@ -811,6 +888,7 @@
               "lessonNum": 78,
               "vttPath": "assets/3 - Week 3/78. Day 3 - Best Practices for Using Claude Code on Large Team Codebases.vtt",
               "contentPath": "content/lessons/78-best-practices-for-using-claude-code-on-large-team-codebases.md",
+              "summaryPath": "content/summaries/78-best-practices-for-using-claude-code-on-large-team-codebases.md",
               "transcriptPath": "content/transcripts/78-best-practices-for-using-claude-code-on-large-team-codebases.txt"
             },
             {
@@ -820,6 +898,7 @@
               "lessonNum": 79,
               "vttPath": "assets/3 - Week 3/79. Day 3 - Driving Claude Code Programmatically with Claude Agent SDK.vtt",
               "contentPath": "content/lessons/79-driving-claude-code-programmatically-with-claude-agent-sdk.md",
+              "summaryPath": "content/summaries/79-driving-claude-code-programmatically-with-claude-agent-sdk.md",
               "transcriptPath": "content/transcripts/79-driving-claude-code-programmatically-with-claude-agent-sdk.txt"
             },
             {
@@ -829,6 +908,7 @@
               "lessonNum": 80,
               "vttPath": "assets/3 - Week 3/80. Day 3 - Claude Cowork Agentic AI for Everyday Tasks Demo.vtt",
               "contentPath": "content/lessons/80-claude-cowork-agentic-ai-for-everyday-tasks-demo.md",
+              "summaryPath": "content/summaries/80-claude-cowork-agentic-ai-for-everyday-tasks-demo.md",
               "transcriptPath": "content/transcripts/80-claude-cowork-agentic-ai-for-everyday-tasks-demo.txt"
             },
             {
@@ -838,6 +918,7 @@
               "lessonNum": 81,
               "vttPath": "assets/3 - Week 3/81. Day 3 - OpenClaw Your Personal AI Sidekick via Telegram & WhatsApp.vtt",
               "contentPath": "content/lessons/81-openclaw-your-personal-ai-sidekick-via-telegram-whatsapp.md",
+              "summaryPath": "content/summaries/81-openclaw-your-personal-ai-sidekick-via-telegram-whatsapp.md",
               "transcriptPath": "content/transcripts/81-openclaw-your-personal-ai-sidekick-via-telegram-whatsapp.txt"
             }
           ]
@@ -854,6 +935,7 @@
               "lessonNum": 82,
               "vttPath": "assets/3 - Week 3/82. Day 4 - Claude Code Agent Teams Swarms and Orchestration.vtt",
               "contentPath": "content/lessons/82-claude-code-agent-teams-swarms-and-orchestration.md",
+              "summaryPath": "content/summaries/82-claude-code-agent-teams-swarms-and-orchestration.md",
               "transcriptPath": "content/transcripts/82-claude-code-agent-teams-swarms-and-orchestration.txt"
             },
             {
@@ -863,6 +945,7 @@
               "lessonNum": 83,
               "vttPath": "assets/3 - Week 3/83. Day 4 - Setting Up Claude Code Agent Teams for Full-Stack Development.vtt",
               "contentPath": "content/lessons/83-setting-up-claude-code-agent-teams-for-full-stack-development.md",
+              "summaryPath": "content/summaries/83-setting-up-claude-code-agent-teams-for-full-stack-development.md",
               "transcriptPath": "content/transcripts/83-setting-up-claude-code-agent-teams-for-full-stack-development.txt"
             },
             {
@@ -872,6 +955,7 @@
               "lessonNum": 84,
               "vttPath": "assets/3 - Week 3/84. Day 4 - Multi-Agent Team Build Live Trading Dashboard with Claude Opus.vtt",
               "contentPath": "content/lessons/84-multi-agent-team-build-live-trading-dashboard-with-claude-opus.md",
+              "summaryPath": "content/summaries/84-multi-agent-team-build-live-trading-dashboard-with-claude-opus.md",
               "transcriptPath": "content/transcripts/84-multi-agent-team-build-live-trading-dashboard-with-claude-opus.txt"
             },
             {
@@ -881,6 +965,7 @@
               "lessonNum": 85,
               "vttPath": "assets/3 - Week 3/85. Day 4 - GSD Spec-Driven Design Meets Multi-Agent Orchestration.vtt",
               "contentPath": "content/lessons/85-gsd-spec-driven-design-meets-multi-agent-orchestration.md",
+              "summaryPath": "content/summaries/85-gsd-spec-driven-design-meets-multi-agent-orchestration.md",
               "transcriptPath": "content/transcripts/85-gsd-spec-driven-design-meets-multi-agent-orchestration.txt"
             },
             {
@@ -890,6 +975,7 @@
               "lessonNum": 86,
               "vttPath": "assets/3 - Week 3/86. Day 4 - Building a Trading Platform with Claude GSD A 5-Hour Deep Dive.vtt",
               "contentPath": "content/lessons/86-building-a-trading-platform-with-claude-gsd-a-5-hour-deep-dive.md",
+              "summaryPath": "content/summaries/86-building-a-trading-platform-with-claude-gsd-a-5-hour-deep-dive.md",
               "transcriptPath": "content/transcripts/86-building-a-trading-platform-with-claude-gsd-a-5-hour-deep-dive.txt"
             },
             {
@@ -899,6 +985,7 @@
               "lessonNum": 87,
               "vttPath": "assets/3 - Week 3/87. Day 4 - GSD vs Claude Agent Teams Side-by-Side UI Comparison & Wrap-Up.vtt",
               "contentPath": "content/lessons/87-gsd-vs-claude-agent-teams-side-by-side-ui-comparison-wrap-up.md",
+              "summaryPath": "content/summaries/87-gsd-vs-claude-agent-teams-side-by-side-ui-comparison-wrap-up.md",
               "transcriptPath": "content/transcripts/87-gsd-vs-claude-agent-teams-side-by-side-ui-comparison-wrap-up.txt"
             }
           ]
@@ -915,6 +1002,7 @@
               "lessonNum": 88,
               "vttPath": "assets/3 - Week 3/88. Day 5 - Gastown Orchestrating Swarms of Claude Code Agents.vtt",
               "contentPath": "content/lessons/88-gastown-orchestrating-swarms-of-claude-code-agents.md",
+              "summaryPath": "content/summaries/88-gastown-orchestrating-swarms-of-claude-code-agents.md",
               "transcriptPath": "content/transcripts/88-gastown-orchestrating-swarms-of-claude-code-agents.txt"
             },
             {
@@ -924,6 +1012,7 @@
               "lessonNum": 89,
               "vttPath": "assets/3 - Week 3/89. Day 5 - Gastown_s Parallel Polecats Claude Code Agents Build in Chaos.vtt",
               "contentPath": "content/lessons/89-gastown-s-parallel-polecats-claude-code-agents-build-in-chaos.md",
+              "summaryPath": "content/summaries/89-gastown-s-parallel-polecats-claude-code-agents-build-in-chaos.md",
               "transcriptPath": "content/transcripts/89-gastown-s-parallel-polecats-claude-code-agents-build-in-chaos.txt"
             },
             {
@@ -933,6 +1022,7 @@
               "lessonNum": 90,
               "vttPath": "assets/3 - Week 3/90. Day 5 - Gastown vs Claude Agent Teams vs GSD Multi-Agent Orchestrators.vtt",
               "contentPath": "content/lessons/90-gastown-vs-claude-agent-teams-vs-gsd-multi-agent-orchestrators.md",
+              "summaryPath": "content/summaries/90-gastown-vs-claude-agent-teams-vs-gsd-multi-agent-orchestrators.md",
               "transcriptPath": "content/transcripts/90-gastown-vs-claude-agent-teams-vs-gsd-multi-agent-orchestrators.txt"
             },
             {
@@ -942,6 +1032,7 @@
               "lessonNum": 91,
               "vttPath": "assets/3 - Week 3/91. Day 5 - Codex Wins Final Trader Workstation with Live Market Data.vtt",
               "contentPath": "content/lessons/91-codex-wins-final-trader-workstation-with-live-market-data.md",
+              "summaryPath": "content/summaries/91-codex-wins-final-trader-workstation-with-live-market-data.md",
               "transcriptPath": "content/transcripts/91-codex-wins-final-trader-workstation-with-live-market-data.txt"
             },
             {
@@ -951,6 +1042,7 @@
               "lessonNum": 92,
               "vttPath": "assets/3 - Week 3/92. Day 5 - Final Deployment, Course Wrap-Up & Coding Agent Best Practices.vtt",
               "contentPath": "content/lessons/92-final-deployment-course-wrap-up-coding-agent-best-practices.md",
+              "summaryPath": "content/summaries/92-final-deployment-course-wrap-up-coding-agent-best-practices.md",
               "transcriptPath": "content/transcripts/92-final-deployment-course-wrap-up-coding-agent-best-practices.txt"
             },
             {
@@ -960,6 +1052,7 @@
               "lessonNum": 93,
               "vttPath": "assets/3 - Week 3/93. Day 5 - Course Recap From Vibe Coding to Agentic Engineer.vtt",
               "contentPath": "content/lessons/93-course-recap-from-vibe-coding-to-agentic-engineer.md",
+              "summaryPath": "content/summaries/93-course-recap-from-vibe-coding-to-agentic-engineer.md",
               "transcriptPath": "content/transcripts/93-course-recap-from-vibe-coding-to-agentic-engineer.txt"
             }
           ]
@@ -975,6 +1068,7 @@
       "lessonNum": 1,
       "vttPath": "assets/1 - Week 1/1. Day 1 - Welcome to the Course Building a 3D Game with Cursor AI.vtt",
       "contentPath": "content/lessons/01-welcome-to-the-course-building-a-3d-game-with-cursor-ai.md",
+      "summaryPath": "content/summaries/01-welcome-to-the-course-building-a-3d-game-with-cursor-ai.md",
       "transcriptPath": "content/transcripts/01-welcome-to-the-course-building-a-3d-game-with-cursor-ai.txt",
       "weekId": "week-1",
       "weekTitle": "Week 1",
@@ -988,6 +1082,7 @@
       "lessonNum": 2,
       "vttPath": "assets/1 - Week 1/2. Day 1 - Building a First-Person Shooter Game with Cursor AI Agent.vtt",
       "contentPath": "content/lessons/02-building-a-first-person-shooter-game-with-cursor-ai-agent.md",
+      "summaryPath": "content/summaries/02-building-a-first-person-shooter-game-with-cursor-ai-agent.md",
       "transcriptPath": "content/transcripts/02-building-a-first-person-shooter-game-with-cursor-ai-agent.txt",
       "weekId": "week-1",
       "weekTitle": "Week 1",
@@ -1001,6 +1096,7 @@
       "lessonNum": 3,
       "vttPath": "assets/1 - Week 1/3. Day 1 - The Missing Manual for Agentic AI Coding.vtt",
       "contentPath": "content/lessons/03-the-missing-manual-for-agentic-ai-coding.md",
+      "summaryPath": "content/summaries/03-the-missing-manual-for-agentic-ai-coding.md",
       "transcriptPath": "content/transcripts/03-the-missing-manual-for-agentic-ai-coding.txt",
       "weekId": "week-1",
       "weekTitle": "Week 1",
@@ -1014,6 +1110,7 @@
       "lessonNum": 4,
       "vttPath": "assets/1 - Week 1/4. Day 1 - Meet Your Instructor & the 3-Week AI Coder Course Roadmap.vtt",
       "contentPath": "content/lessons/04-meet-your-instructor-the-3-week-ai-coder-course-roadmap.md",
+      "summaryPath": "content/summaries/04-meet-your-instructor-the-3-week-ai-coder-course-roadmap.md",
       "transcriptPath": "content/transcripts/04-meet-your-instructor-the-3-week-ai-coder-course-roadmap.txt",
       "weekId": "week-1",
       "weekTitle": "Week 1",
@@ -1027,6 +1124,7 @@
       "lessonNum": 5,
       "vttPath": "assets/1 - Week 1/5. Day 1 - Vibe Coding, Agentic Coders & Coding Agents Like Claude Code.vtt",
       "contentPath": "content/lessons/05-vibe-coding-agentic-coders-coding-agents-like-claude-code.md",
+      "summaryPath": "content/summaries/05-vibe-coding-agentic-coders-coding-agents-like-claude-code.md",
       "transcriptPath": "content/transcripts/05-vibe-coding-agentic-coders-coding-agents-like-claude-code.txt",
       "weekId": "week-1",
       "weekTitle": "Week 1",
@@ -1040,6 +1138,7 @@
       "lessonNum": 6,
       "vttPath": "assets/1 - Week 1/6. Day 1 - The 8 Stages of AI Coding From ChatGPT to Agent Orchestration.vtt",
       "contentPath": "content/lessons/06-the-8-stages-of-ai-coding-from-chatgpt-to-agent-orchestration.md",
+      "summaryPath": "content/summaries/06-the-8-stages-of-ai-coding-from-chatgpt-to-agent-orchestration.md",
       "transcriptPath": "content/transcripts/06-the-8-stages-of-ai-coding-from-chatgpt-to-agent-orchestration.txt",
       "weekId": "week-1",
       "weekTitle": "Week 1",
@@ -1053,6 +1152,7 @@
       "lessonNum": 7,
       "vttPath": "assets/1 - Week 1/7. Day 1 - Wrapping Up Your Unique Agentic Coding Journey Ahead.vtt",
       "contentPath": "content/lessons/07-wrapping-up-your-unique-agentic-coding-journey-ahead.md",
+      "summaryPath": "content/summaries/07-wrapping-up-your-unique-agentic-coding-journey-ahead.md",
       "transcriptPath": "content/transcripts/07-wrapping-up-your-unique-agentic-coding-journey-ahead.txt",
       "weekId": "week-1",
       "weekTitle": "Week 1",
@@ -1066,6 +1166,7 @@
       "lessonNum": 8,
       "vttPath": "assets/1 - Week 1/8. Day 2 - How LLMs Work Tokens, Memory, and Reasoning Explained.vtt",
       "contentPath": "content/lessons/08-how-llms-work-tokens-memory-and-reasoning-explained.md",
+      "summaryPath": "content/summaries/08-how-llms-work-tokens-memory-and-reasoning-explained.md",
       "transcriptPath": "content/transcripts/08-how-llms-work-tokens-memory-and-reasoning-explained.txt",
       "weekId": "week-1",
       "weekTitle": "Week 1",
@@ -1079,6 +1180,7 @@
       "lessonNum": 9,
       "vttPath": "assets/1 - Week 1/9. Day 2 - Tools, Loops, and the Definition of AI Agents.vtt",
       "contentPath": "content/lessons/09-tools-loops-and-the-definition-of-ai-agents.md",
+      "summaryPath": "content/summaries/09-tools-loops-and-the-definition-of-ai-agents.md",
       "transcriptPath": "content/transcripts/09-tools-loops-and-the-definition-of-ai-agents.txt",
       "weekId": "week-1",
       "weekTitle": "Week 1",
@@ -1092,6 +1194,7 @@
       "lessonNum": 10,
       "vttPath": "assets/1 - Week 1/10. Day 2 - Context Engineering System Prompts, Context Windows & agents.md.vtt",
       "contentPath": "content/lessons/10-context-engineering-system-prompts-context-windows-agents-md.md",
+      "summaryPath": "content/summaries/10-context-engineering-system-prompts-context-windows-agents-md.md",
       "transcriptPath": "content/transcripts/10-context-engineering-system-prompts-context-windows-agents-md.txt",
       "weekId": "week-1",
       "weekTitle": "Week 1",
@@ -1105,6 +1208,7 @@
       "lessonNum": 11,
       "vttPath": "assets/1 - Week 1/11. Day 2 - Mastering agents.md Context Window Strategy for Coding Agents.vtt",
       "contentPath": "content/lessons/11-mastering-agents-md-context-window-strategy-for-coding-agents.md",
+      "summaryPath": "content/summaries/11-mastering-agents-md-context-window-strategy-for-coding-agents.md",
       "transcriptPath": "content/transcripts/11-mastering-agents-md-context-window-strategy-for-coding-agents.txt",
       "weekId": "week-1",
       "weekTitle": "Week 1",
@@ -1118,6 +1222,7 @@
       "lessonNum": 12,
       "vttPath": "assets/1 - Week 1/12. Day 2 - The Evolution of AI Coding Workflows From YOLO to Ralph Loops.vtt",
       "contentPath": "content/lessons/12-the-evolution-of-ai-coding-workflows-from-yolo-to-ralph-loops.md",
+      "summaryPath": "content/summaries/12-the-evolution-of-ai-coding-workflows-from-yolo-to-ralph-loops.md",
       "transcriptPath": "content/transcripts/12-the-evolution-of-ai-coding-workflows-from-yolo-to-ralph-loops.txt",
       "weekId": "week-1",
       "weekTitle": "Week 1",
@@ -1131,6 +1236,7 @@
       "lessonNum": 13,
       "vttPath": "assets/1 - Week 1/13. Day 2 - Beyond the Hype Comparing LLMs on Artificial Analysis.vtt",
       "contentPath": "content/lessons/13-beyond-the-hype-comparing-llms-on-artificial-analysis.md",
+      "summaryPath": "content/summaries/13-beyond-the-hype-comparing-llms-on-artificial-analysis.md",
       "transcriptPath": "content/transcripts/13-beyond-the-hype-comparing-llms-on-artificial-analysis.txt",
       "weekId": "week-1",
       "weekTitle": "Week 1",
@@ -1144,6 +1250,7 @@
       "lessonNum": 14,
       "vttPath": "assets/1 - Week 1/14. Day 3 - Hands-On with Cursor, Copilot, Codex & Agentic Vibe Coding.vtt",
       "contentPath": "content/lessons/14-hands-on-with-cursor-copilot-codex-agentic-vibe-coding.md",
+      "summaryPath": "content/summaries/14-hands-on-with-cursor-copilot-codex-agentic-vibe-coding.md",
       "transcriptPath": "content/transcripts/14-hands-on-with-cursor-copilot-codex-agentic-vibe-coding.txt",
       "weekId": "week-1",
       "weekTitle": "Week 1",
@@ -1157,6 +1264,7 @@
       "lessonNum": 15,
       "vttPath": "assets/1 - Week 1/15. Day 3 - Exploring the agents.md File and Cursor Settings for Vibe Coding.vtt",
       "contentPath": "content/lessons/15-exploring-the-agents-md-file-and-cursor-settings-for-vibe-coding.md",
+      "summaryPath": "content/summaries/15-exploring-the-agents-md-file-and-cursor-settings-for-vibe-coding.md",
       "transcriptPath": "content/transcripts/15-exploring-the-agents-md-file-and-cursor-settings-for-vibe-coding.txt",
       "weekId": "week-1",
       "weekTitle": "Week 1",
@@ -1170,6 +1278,7 @@
       "lessonNum": 16,
       "vttPath": "assets/1 - Week 1/16. Day 3 - Building a Kanban App with the Cursor AI Agent in YOLO Mode.vtt",
       "contentPath": "content/lessons/16-building-a-kanban-app-with-the-cursor-ai-agent-in-yolo-mode.md",
+      "summaryPath": "content/summaries/16-building-a-kanban-app-with-the-cursor-ai-agent-in-yolo-mode.md",
       "transcriptPath": "content/transcripts/16-building-a-kanban-app-with-the-cursor-ai-agent-in-yolo-mode.txt",
       "weekId": "week-1",
       "weekTitle": "Week 1",
@@ -1183,6 +1292,7 @@
       "lessonNum": 17,
       "vttPath": "assets/1 - Week 1/17. Day 3 - Building a Kanban Board with GitHub Copilot in VS Code.vtt",
       "contentPath": "content/lessons/17-building-a-kanban-board-with-github-copilot-in-vs-code.md",
+      "summaryPath": "content/summaries/17-building-a-kanban-board-with-github-copilot-in-vs-code.md",
       "transcriptPath": "content/transcripts/17-building-a-kanban-board-with-github-copilot-in-vs-code.txt",
       "weekId": "week-1",
       "weekTitle": "Week 1",
@@ -1196,6 +1306,7 @@
       "lessonNum": 18,
       "vttPath": "assets/1 - Week 1/18. Day 3 - OpenAI Codex VS Code Extension Zero-Shot Kanban App Build.vtt",
       "contentPath": "content/lessons/18-openai-codex-vs-code-extension-zero-shot-kanban-app-build.md",
+      "summaryPath": "content/summaries/18-openai-codex-vs-code-extension-zero-shot-kanban-app-build.md",
       "transcriptPath": "content/transcripts/18-openai-codex-vs-code-extension-zero-shot-kanban-app-build.txt",
       "weekId": "week-1",
       "weekTitle": "Week 1",
@@ -1209,6 +1320,7 @@
       "lessonNum": 19,
       "vttPath": "assets/1 - Week 1/19. Day 3 - Building a Kanban App with Antigravity IDE and Gemini 3 Pro.vtt",
       "contentPath": "content/lessons/19-building-a-kanban-app-with-antigravity-ide-and-gemini-3-pro.md",
+      "summaryPath": "content/summaries/19-building-a-kanban-app-with-antigravity-ide-and-gemini-3-pro.md",
       "transcriptPath": "content/transcripts/19-building-a-kanban-app-with-antigravity-ide-and-gemini-3-pro.txt",
       "weekId": "week-1",
       "weekTitle": "Week 1",
@@ -1222,6 +1334,7 @@
       "lessonNum": 20,
       "vttPath": "assets/1 - Week 1/20. Day 3 - Cursor vs Copilot vs Codex vs Antigravity Final Verdict.vtt",
       "contentPath": "content/lessons/20-cursor-vs-copilot-vs-codex-vs-antigravity-final-verdict.md",
+      "summaryPath": "content/summaries/20-cursor-vs-copilot-vs-codex-vs-antigravity-final-verdict.md",
       "transcriptPath": "content/transcripts/20-cursor-vs-copilot-vs-codex-vs-antigravity-final-verdict.txt",
       "weekId": "week-1",
       "weekTitle": "Week 1",
@@ -1235,6 +1348,7 @@
       "lessonNum": 21,
       "vttPath": "assets/1 - Week 1/21. Day 4 - YOLO Mode Choosing the Right LLM for Agentic Coding in IDEs.vtt",
       "contentPath": "content/lessons/21-yolo-mode-choosing-the-right-llm-for-agentic-coding-in-ides.md",
+      "summaryPath": "content/summaries/21-yolo-mode-choosing-the-right-llm-for-agentic-coding-in-ides.md",
       "transcriptPath": "content/transcripts/21-yolo-mode-choosing-the-right-llm-for-agentic-coding-in-ides.txt",
       "weekId": "week-1",
       "weekTitle": "Week 1",
@@ -1248,6 +1362,7 @@
       "lessonNum": 22,
       "vttPath": "assets/1 - Week 1/22. Day 4 - Five Principles for Successful Vibe Coding Be the Boss.vtt",
       "contentPath": "content/lessons/22-five-principles-for-successful-vibe-coding-be-the-boss.md",
+      "summaryPath": "content/summaries/22-five-principles-for-successful-vibe-coding-be-the-boss.md",
       "transcriptPath": "content/transcripts/22-five-principles-for-successful-vibe-coding-be-the-boss.txt",
       "weekId": "week-1",
       "weekTitle": "Week 1",
@@ -1261,6 +1376,7 @@
       "lessonNum": 23,
       "vttPath": "assets/1 - Week 1/23. Day 4 - Responsible YOLO Coding Setting Up OpenRouter for AI Projects.vtt",
       "contentPath": "content/lessons/23-responsible-yolo-coding-setting-up-openrouter-for-ai-projects.md",
+      "summaryPath": "content/summaries/23-responsible-yolo-coding-setting-up-openrouter-for-ai-projects.md",
       "transcriptPath": "content/transcripts/23-responsible-yolo-coding-setting-up-openrouter-for-ai-projects.txt",
       "weekId": "week-1",
       "weekTitle": "Week 1",
@@ -1274,6 +1390,7 @@
       "lessonNum": 24,
       "vttPath": "assets/1 - Week 1/24. Day 4 - YOLO Mode Building a Next.js Website with GPT Codex in Cursor.vtt",
       "contentPath": "content/lessons/24-yolo-mode-building-a-next-js-website-with-gpt-codex-in-cursor.md",
+      "summaryPath": "content/summaries/24-yolo-mode-building-a-next-js-website-with-gpt-codex-in-cursor.md",
       "transcriptPath": "content/transcripts/24-yolo-mode-building-a-next-js-website-with-gpt-codex-in-cursor.txt",
       "weekId": "week-1",
       "weekTitle": "Week 1",
@@ -1287,6 +1404,7 @@
       "lessonNum": 25,
       "vttPath": "assets/1 - Week 1/25. Day 4 - Adding an AI Digital Twin Chat with OpenRouter & Vibe Coding.vtt",
       "contentPath": "content/lessons/25-adding-an-ai-digital-twin-chat-with-openrouter-vibe-coding.md",
+      "summaryPath": "content/summaries/25-adding-an-ai-digital-twin-chat-with-openrouter-vibe-coding.md",
       "transcriptPath": "content/transcripts/25-adding-an-ai-digital-twin-chat-with-openrouter-vibe-coding.txt",
       "weekId": "week-1",
       "weekTitle": "Week 1",
@@ -1300,6 +1418,7 @@
       "lessonNum": 26,
       "vttPath": "assets/1 - Week 1/26. Day 4 - Tutorials, Code Reviews with Opus, and Cross-Model Collaboration.vtt",
       "contentPath": "content/lessons/26-tutorials-code-reviews-with-opus-and-cross-model-collaboration.md",
+      "summaryPath": "content/summaries/26-tutorials-code-reviews-with-opus-and-cross-model-collaboration.md",
       "transcriptPath": "content/transcripts/26-tutorials-code-reviews-with-opus-and-cross-model-collaboration.txt",
       "weekId": "week-1",
       "weekTitle": "Week 1",
@@ -1313,6 +1432,7 @@
       "lessonNum": 27,
       "vttPath": "assets/1 - Week 1/27. Day 5 - Karpathy on Vibe Coding & Rules for Building a Commercial MVP.vtt",
       "contentPath": "content/lessons/27-karpathy-on-vibe-coding-rules-for-building-a-commercial-mvp.md",
+      "summaryPath": "content/summaries/27-karpathy-on-vibe-coding-rules-for-building-a-commercial-mvp.md",
       "transcriptPath": "content/transcripts/27-karpathy-on-vibe-coding-rules-for-building-a-commercial-mvp.txt",
       "weekId": "week-1",
       "weekTitle": "Week 1",
@@ -1326,6 +1446,7 @@
       "lessonNum": 28,
       "vttPath": "assets/1 - Week 1/28. Day 5 - Web Apps 101 Front-End, Back-End, APIs & Docker Setup.vtt",
       "contentPath": "content/lessons/28-web-apps-101-front-end-back-end-apis-docker-setup.md",
+      "summaryPath": "content/summaries/28-web-apps-101-front-end-back-end-apis-docker-setup.md",
       "transcriptPath": "content/transcripts/28-web-apps-101-front-end-back-end-apis-docker-setup.txt",
       "weekId": "week-1",
       "weekTitle": "Week 1",
@@ -1339,6 +1460,7 @@
       "lessonNum": 29,
       "vttPath": "assets/1 - Week 1/29. Day 5 - Setting Up a Full-Stack Project with GitHub Copilot & FastAPI.vtt",
       "contentPath": "content/lessons/29-setting-up-a-full-stack-project-with-github-copilot-fastapi.md",
+      "summaryPath": "content/summaries/29-setting-up-a-full-stack-project-with-github-copilot-fastapi.md",
       "transcriptPath": "content/transcripts/29-setting-up-a-full-stack-project-with-github-copilot-fastapi.txt",
       "weekId": "week-1",
       "weekTitle": "Week 1",
@@ -1352,6 +1474,7 @@
       "lessonNum": 30,
       "vttPath": "assets/1 - Week 1/30. Day 5 - Building Step-by-Step with AI Copilot Planning & Scaffolding.vtt",
       "contentPath": "content/lessons/30-building-step-by-step-with-ai-copilot-planning-scaffolding.md",
+      "summaryPath": "content/summaries/30-building-step-by-step-with-ai-copilot-planning-scaffolding.md",
       "transcriptPath": "content/transcripts/30-building-step-by-step-with-ai-copilot-planning-scaffolding.txt",
       "weekId": "week-1",
       "weekTitle": "Week 1",
@@ -1365,6 +1488,7 @@
       "lessonNum": 31,
       "vttPath": "assets/1 - Week 1/31. Day 5 - Building a Kanban App with GitHub Copilot, Docker & FastAPI.vtt",
       "contentPath": "content/lessons/31-building-a-kanban-app-with-github-copilot-docker-fastapi.md",
+      "summaryPath": "content/summaries/31-building-a-kanban-app-with-github-copilot-docker-fastapi.md",
       "transcriptPath": "content/transcripts/31-building-a-kanban-app-with-github-copilot-docker-fastapi.txt",
       "weekId": "week-1",
       "weekTitle": "Week 1",
@@ -1378,6 +1502,7 @@
       "lessonNum": 32,
       "vttPath": "assets/1 - Week 1/32. Day 5 - Building a Kanban App with Codex Debugging Drag and Drop.vtt",
       "contentPath": "content/lessons/32-building-a-kanban-app-with-codex-debugging-drag-and-drop.md",
+      "summaryPath": "content/summaries/32-building-a-kanban-app-with-codex-debugging-drag-and-drop.md",
       "transcriptPath": "content/transcripts/32-building-a-kanban-app-with-codex-debugging-drag-and-drop.txt",
       "weekId": "week-1",
       "weekTitle": "Week 1",
@@ -1391,6 +1516,7 @@
       "lessonNum": 33,
       "vttPath": "assets/1 - Week 1/33. Day 5 - AI Assistant Kanban App Complete Codex, OpenRouter & Week 1 Wrap.vtt",
       "contentPath": "content/lessons/33-ai-assistant-kanban-app-complete-codex-openrouter-week-1-wrap.md",
+      "summaryPath": "content/summaries/33-ai-assistant-kanban-app-complete-codex-openrouter-week-1-wrap.md",
       "transcriptPath": "content/transcripts/33-ai-assistant-kanban-app-complete-codex-openrouter-week-1-wrap.txt",
       "weekId": "week-1",
       "weekTitle": "Week 1",
@@ -1404,6 +1530,7 @@
       "lessonNum": 34,
       "vttPath": "assets/2 - Week 2/34. Day 1 - Welcome to Pro Week From Vibe Coding to Vibe Engineering.vtt",
       "contentPath": "content/lessons/34-welcome-to-pro-week-from-vibe-coding-to-vibe-engineering.md",
+      "summaryPath": "content/summaries/34-welcome-to-pro-week-from-vibe-coding-to-vibe-engineering.md",
       "transcriptPath": "content/transcripts/34-welcome-to-pro-week-from-vibe-coding-to-vibe-engineering.txt",
       "weekId": "week-2",
       "weekTitle": "Week 2",
@@ -1417,6 +1544,7 @@
       "lessonNum": 35,
       "vttPath": "assets/2 - Week 2/35. Day 1 - The Rise of Claude Code History, Setup & Installation in VS Code.vtt",
       "contentPath": "content/lessons/35-the-rise-of-claude-code-history-setup-installation-in-vs-code.md",
+      "summaryPath": "content/summaries/35-the-rise-of-claude-code-history-setup-installation-in-vs-code.md",
       "transcriptPath": "content/transcripts/35-the-rise-of-claude-code-history-setup-installation-in-vs-code.txt",
       "weekId": "week-2",
       "weekTitle": "Week 2",
@@ -1430,6 +1558,7 @@
       "lessonNum": 36,
       "vttPath": "assets/2 - Week 2/36. Day 1 - Getting Started with Claude Code CLI Init, Context & Testing.vtt",
       "contentPath": "content/lessons/36-getting-started-with-claude-code-cli-init-context-testing.md",
+      "summaryPath": "content/summaries/36-getting-started-with-claude-code-cli-init-context-testing.md",
       "transcriptPath": "content/transcripts/36-getting-started-with-claude-code-cli-init-context-testing.txt",
       "weekId": "week-2",
       "weekTitle": "Week 2",
@@ -1443,6 +1572,7 @@
       "lessonNum": 37,
       "vttPath": "assets/2 - Week 2/37. Day 1 - Claude Code Review Fixing Hallucinations & Refactoring Code.vtt",
       "contentPath": "content/lessons/37-claude-code-review-fixing-hallucinations-refactoring-code.md",
+      "summaryPath": "content/summaries/37-claude-code-review-fixing-hallucinations-refactoring-code.md",
       "transcriptPath": "content/transcripts/37-claude-code-review-fixing-hallucinations-refactoring-code.txt",
       "weekId": "week-2",
       "weekTitle": "Week 2",
@@ -1456,6 +1586,7 @@
       "lessonNum": 38,
       "vttPath": "assets/2 - Week 2/38. Day 1 - OpenCode Use Free Models Like GLM 4.7 as a Claude Code Alternative.vtt",
       "contentPath": "content/lessons/38-opencode-use-free-models-like-glm-4-7-as-a-claude-code-alternative.md",
+      "summaryPath": "content/summaries/38-opencode-use-free-models-like-glm-4-7-as-a-claude-code-alternative.md",
       "transcriptPath": "content/transcripts/38-opencode-use-free-models-like-glm-4-7-as-a-claude-code-alternative.txt",
       "weekId": "week-2",
       "weekTitle": "Week 2",
@@ -1469,6 +1600,7 @@
       "lessonNum": 39,
       "vttPath": "assets/2 - Week 2/39. Day 1 - AMP Code, OpenCode & Claude Code with OpenRouter and Ollama.vtt",
       "contentPath": "content/lessons/39-amp-code-opencode-claude-code-with-openrouter-and-ollama.md",
+      "summaryPath": "content/summaries/39-amp-code-opencode-claude-code-with-openrouter-and-ollama.md",
       "transcriptPath": "content/transcripts/39-amp-code-opencode-claude-code-with-openrouter-and-ollama.txt",
       "weekId": "week-2",
       "weekTitle": "Week 2",
@@ -1482,6 +1614,7 @@
       "lessonNum": 40,
       "vttPath": "assets/2 - Week 2/40. Day 2 - Claude Code Commands, Shortcuts & Configuration Deep Dive.vtt",
       "contentPath": "content/lessons/40-claude-code-commands-shortcuts-configuration-deep-dive.md",
+      "summaryPath": "content/summaries/40-claude-code-commands-shortcuts-configuration-deep-dive.md",
       "transcriptPath": "content/transcripts/40-claude-code-commands-shortcuts-configuration-deep-dive.txt",
       "weekId": "week-2",
       "weekTitle": "Week 2",
@@ -1495,6 +1628,7 @@
       "lessonNum": 41,
       "vttPath": "assets/2 - Week 2/41. Day 2 - Sessions, Checkpoints & Git Managing Your Claude Code Workflow.vtt",
       "contentPath": "content/lessons/41-sessions-checkpoints-git-managing-your-claude-code-workflow.md",
+      "summaryPath": "content/summaries/41-sessions-checkpoints-git-managing-your-claude-code-workflow.md",
       "transcriptPath": "content/transcripts/41-sessions-checkpoints-git-managing-your-claude-code-workflow.txt",
       "weekId": "week-2",
       "weekTitle": "Week 2",
@@ -1508,6 +1642,7 @@
       "lessonNum": 42,
       "vttPath": "assets/2 - Week 2/42. Day 2 - Claude Code Checkpoints, Rewind, and YOLO Mode Explained.vtt",
       "contentPath": "content/lessons/42-claude-code-checkpoints-rewind-and-yolo-mode-explained.md",
+      "summaryPath": "content/summaries/42-claude-code-checkpoints-rewind-and-yolo-mode-explained.md",
       "transcriptPath": "content/transcripts/42-claude-code-checkpoints-rewind-and-yolo-mode-explained.txt",
       "weekId": "week-2",
       "weekTitle": "Week 2",
@@ -1521,6 +1656,7 @@
       "lessonNum": 43,
       "vttPath": "assets/2 - Week 2/43. Day 2 - Claude Code YOLO Mode Bypass Permissions for Autonomous Coding.vtt",
       "contentPath": "content/lessons/43-claude-code-yolo-mode-bypass-permissions-for-autonomous-coding.md",
+      "summaryPath": "content/summaries/43-claude-code-yolo-mode-bypass-permissions-for-autonomous-coding.md",
       "transcriptPath": "content/transcripts/43-claude-code-yolo-mode-bypass-permissions-for-autonomous-coding.txt",
       "weekId": "week-2",
       "weekTitle": "Week 2",
@@ -1534,6 +1670,7 @@
       "lessonNum": 44,
       "vttPath": "assets/2 - Week 2/44. Day 2 - Ralph Loops in Claude Code Autonomous Agent Coding on Autopilot.vtt",
       "contentPath": "content/lessons/44-ralph-loops-in-claude-code-autonomous-agent-coding-on-autopilot.md",
+      "summaryPath": "content/summaries/44-ralph-loops-in-claude-code-autonomous-agent-coding-on-autopilot.md",
       "transcriptPath": "content/transcripts/44-ralph-loops-in-claude-code-autonomous-agent-coding-on-autopilot.txt",
       "weekId": "week-2",
       "weekTitle": "Week 2",
@@ -1547,6 +1684,7 @@
       "lessonNum": 45,
       "vttPath": "assets/2 - Week 2/45. Day 3 - MCP, Skills & Plugins The Big Three Building Blocks of Claude Code.vtt",
       "contentPath": "content/lessons/45-mcp-skills-plugins-the-big-three-building-blocks-of-claude-code.md",
+      "summaryPath": "content/summaries/45-mcp-skills-plugins-the-big-three-building-blocks-of-claude-code.md",
       "transcriptPath": "content/transcripts/45-mcp-skills-plugins-the-big-three-building-blocks-of-claude-code.txt",
       "weekId": "week-2",
       "weekTitle": "Week 2",
@@ -1560,6 +1698,7 @@
       "lessonNum": 46,
       "vttPath": "assets/2 - Week 2/46. Day 3 - MCP Servers Explained Hosts, Clients, and Discovery for Claude Code.vtt",
       "contentPath": "content/lessons/46-mcp-servers-explained-hosts-clients-and-discovery-for-claude-code.md",
+      "summaryPath": "content/summaries/46-mcp-servers-explained-hosts-clients-and-discovery-for-claude-code.md",
       "transcriptPath": "content/transcripts/46-mcp-servers-explained-hosts-clients-and-discovery-for-claude-code.txt",
       "weekId": "week-2",
       "weekTitle": "Week 2",
@@ -1573,6 +1712,7 @@
       "lessonNum": 47,
       "vttPath": "assets/2 - Week 2/47. Day 3 - Adding MCP Servers to Claude Code Context7 & Polygon IO.vtt",
       "contentPath": "content/lessons/47-adding-mcp-servers-to-claude-code-context7-polygon-io.md",
+      "summaryPath": "content/summaries/47-adding-mcp-servers-to-claude-code-context7-polygon-io.md",
       "transcriptPath": "content/transcripts/47-adding-mcp-servers-to-claude-code-context7-polygon-io.txt",
       "weekId": "week-2",
       "weekTitle": "Week 2",
@@ -1586,6 +1726,7 @@
       "lessonNum": 48,
       "vttPath": "assets/2 - Week 2/48. Day 3 - Skills vs MCP Claude Code_s Simpler Way to Add Abilities.vtt",
       "contentPath": "content/lessons/48-skills-vs-mcp-claude-code-s-simpler-way-to-add-abilities.md",
+      "summaryPath": "content/summaries/48-skills-vs-mcp-claude-code-s-simpler-way-to-add-abilities.md",
       "transcriptPath": "content/transcripts/48-skills-vs-mcp-claude-code-s-simpler-way-to-add-abilities.txt",
       "weekId": "week-2",
       "weekTitle": "Week 2",
@@ -1599,6 +1740,7 @@
       "lessonNum": 49,
       "vttPath": "assets/2 - Week 2/49. Day 3 - Skills Marketplaces Installing Agent Browser in Claude Code.vtt",
       "contentPath": "content/lessons/49-skills-marketplaces-installing-agent-browser-in-claude-code.md",
+      "summaryPath": "content/summaries/49-skills-marketplaces-installing-agent-browser-in-claude-code.md",
       "transcriptPath": "content/transcripts/49-skills-marketplaces-installing-agent-browser-in-claude-code.txt",
       "weekId": "week-2",
       "weekTitle": "Week 2",
@@ -1612,6 +1754,7 @@
       "lessonNum": 50,
       "vttPath": "assets/2 - Week 2/50. Day 3 - Claude Code Plugins Marketplace, Installation & Best Practices.vtt",
       "contentPath": "content/lessons/50-claude-code-plugins-marketplace-installation-best-practices.md",
+      "summaryPath": "content/summaries/50-claude-code-plugins-marketplace-installation-best-practices.md",
       "transcriptPath": "content/transcripts/50-claude-code-plugins-marketplace-installation-best-practices.txt",
       "weekId": "week-2",
       "weekTitle": "Week 2",
@@ -1625,6 +1768,7 @@
       "lessonNum": 51,
       "vttPath": "assets/2 - Week 2/51. Day 3 - MCP vs Skills vs Plugins Choosing the Right Claude Code Setup.vtt",
       "contentPath": "content/lessons/51-mcp-vs-skills-vs-plugins-choosing-the-right-claude-code-setup.md",
+      "summaryPath": "content/summaries/51-mcp-vs-skills-vs-plugins-choosing-the-right-claude-code-setup.md",
       "transcriptPath": "content/transcripts/51-mcp-vs-skills-vs-plugins-choosing-the-right-claude-code-setup.txt",
       "weekId": "week-2",
       "weekTitle": "Week 2",
@@ -1638,6 +1782,7 @@
       "lessonNum": 52,
       "vttPath": "assets/2 - Week 2/52. Day 4 - Building with Claude Code, Jira, MCP & Plugins Workflow.vtt",
       "contentPath": "content/lessons/52-building-with-claude-code-jira-mcp-plugins-workflow.md",
+      "summaryPath": "content/summaries/52-building-with-claude-code-jira-mcp-plugins-workflow.md",
       "transcriptPath": "content/transcripts/52-building-with-claude-code-jira-mcp-plugins-workflow.txt",
       "weekId": "week-2",
       "weekTitle": "Week 2",
@@ -1651,6 +1796,7 @@
       "lessonNum": 53,
       "vttPath": "assets/2 - Week 2/53. Day 4 - Connecting Claude Code to Jira MCP Server & GitHub Repository.vtt",
       "contentPath": "content/lessons/53-connecting-claude-code-to-jira-mcp-server-github-repository.md",
+      "summaryPath": "content/summaries/53-connecting-claude-code-to-jira-mcp-server-github-repository.md",
       "transcriptPath": "content/transcripts/53-connecting-claude-code-to-jira-mcp-server-github-repository.txt",
       "weekId": "week-2",
       "weekTitle": "Week 2",
@@ -1664,6 +1810,7 @@
       "lessonNum": 54,
       "vttPath": "assets/2 - Week 2/54. Day 4 - Setting Up GitHub MCP Server & Featured Dev Plugin in Claude Code.vtt",
       "contentPath": "content/lessons/54-setting-up-github-mcp-server-featured-dev-plugin-in-claude-code.md",
+      "summaryPath": "content/summaries/54-setting-up-github-mcp-server-featured-dev-plugin-in-claude-code.md",
       "transcriptPath": "content/transcripts/54-setting-up-github-mcp-server-featured-dev-plugin-in-claude-code.txt",
       "weekId": "week-2",
       "weekTitle": "Week 2",
@@ -1677,6 +1824,7 @@
       "lessonNum": 55,
       "vttPath": "assets/2 - Week 2/55. Day 4 - Claude Code Autonomy From Jira Issue to PR via MCP Server.vtt",
       "contentPath": "content/lessons/55-claude-code-autonomy-from-jira-issue-to-pr-via-mcp-server.md",
+      "summaryPath": "content/summaries/55-claude-code-autonomy-from-jira-issue-to-pr-via-mcp-server.md",
       "transcriptPath": "content/transcripts/55-claude-code-autonomy-from-jira-issue-to-pr-via-mcp-server.txt",
       "weekId": "week-2",
       "weekTitle": "Week 2",
@@ -1690,6 +1838,7 @@
       "lessonNum": 56,
       "vttPath": "assets/2 - Week 2/56. Day 4 - Claude Code Builds a Full Next.js App from a Jira Ticket.vtt",
       "contentPath": "content/lessons/56-claude-code-builds-a-full-next-js-app-from-a-jira-ticket.md",
+      "summaryPath": "content/summaries/56-claude-code-builds-a-full-next-js-app-from-a-jira-ticket.md",
       "transcriptPath": "content/transcripts/56-claude-code-builds-a-full-next-js-app-from-a-jira-ticket.txt",
       "weekId": "week-2",
       "weekTitle": "Week 2",
@@ -1703,6 +1852,7 @@
       "lessonNum": 57,
       "vttPath": "assets/2 - Week 2/57. Day 4 - Debugging Strategies for Claude Code A Disciplined Approach.vtt",
       "contentPath": "content/lessons/57-debugging-strategies-for-claude-code-a-disciplined-approach.md",
+      "summaryPath": "content/summaries/57-debugging-strategies-for-claude-code-a-disciplined-approach.md",
       "transcriptPath": "content/transcripts/57-debugging-strategies-for-claude-code-a-disciplined-approach.txt",
       "weekId": "week-2",
       "weekTitle": "Week 2",
@@ -1716,6 +1866,7 @@
       "lessonNum": 58,
       "vttPath": "assets/2 - Week 2/58. Day 5 - Building a SaaS Platform Claude Code Skills & Claude.md Setup.vtt",
       "contentPath": "content/lessons/58-building-a-saas-platform-claude-code-skills-claude-md-setup.md",
+      "summaryPath": "content/summaries/58-building-a-saas-platform-claude-code-skills-claude-md-setup.md",
       "transcriptPath": "content/transcripts/58-building-a-saas-platform-claude-code-skills-claude-md-setup.txt",
       "weekId": "week-2",
       "weekTitle": "Week 2",
@@ -1729,6 +1880,7 @@
       "lessonNum": 59,
       "vttPath": "assets/2 - Week 2/59. Day 5 - Writing claude.md and Creating Custom Skills for Cerebras.vtt",
       "contentPath": "content/lessons/59-writing-claude-md-and-creating-custom-skills-for-cerebras.md",
+      "summaryPath": "content/summaries/59-writing-claude-md-and-creating-custom-skills-for-cerebras.md",
       "transcriptPath": "content/transcripts/59-writing-claude-md-and-creating-custom-skills-for-cerebras.txt",
       "weekId": "week-2",
       "weekTitle": "Week 2",
@@ -1742,6 +1894,7 @@
       "lessonNum": 60,
       "vttPath": "assets/2 - Week 2/60. Day 5 - Setting Up Jira Tickets for Claude Code to Build Our V1 Product.vtt",
       "contentPath": "content/lessons/60-setting-up-jira-tickets-for-claude-code-to-build-our-v1-product.md",
+      "summaryPath": "content/summaries/60-setting-up-jira-tickets-for-claude-code-to-build-our-v1-product.md",
       "transcriptPath": "content/transcripts/60-setting-up-jira-tickets-for-claude-code-to-build-our-v1-product.txt",
       "weekId": "week-2",
       "weekTitle": "Week 2",
@@ -1755,6 +1908,7 @@
       "lessonNum": 61,
       "vttPath": "assets/2 - Week 2/61. Day 5 - Building Features with Claude Code, Jira, and FastAPI.vtt",
       "contentPath": "content/lessons/61-building-features-with-claude-code-jira-and-fastapi.md",
+      "summaryPath": "content/summaries/61-building-features-with-claude-code-jira-and-fastapi.md",
       "transcriptPath": "content/transcripts/61-building-features-with-claude-code-jira-and-fastapi.txt",
       "weekId": "week-2",
       "weekTitle": "Week 2",
@@ -1768,6 +1922,7 @@
       "lessonNum": 62,
       "vttPath": "assets/2 - Week 2/62. Day 5 - Testing the AI Legal Doc Generator with Cerebras and Claude Code.vtt",
       "contentPath": "content/lessons/62-testing-the-ai-legal-doc-generator-with-cerebras-and-claude-code.md",
+      "summaryPath": "content/summaries/62-testing-the-ai-legal-doc-generator-with-cerebras-and-claude-code.md",
       "transcriptPath": "content/transcripts/62-testing-the-ai-legal-doc-generator-with-cerebras-and-claude-code.txt",
       "weekId": "week-2",
       "weekTitle": "Week 2",
@@ -1781,6 +1936,7 @@
       "lessonNum": 63,
       "vttPath": "assets/2 - Week 2/63. Day 5 - Final PR Merge, Full SaaS Demo & Week 2 Victory in Claude Code.vtt",
       "contentPath": "content/lessons/63-final-pr-merge-full-saas-demo-week-2-victory-in-claude-code.md",
+      "summaryPath": "content/summaries/63-final-pr-merge-full-saas-demo-week-2-victory-in-claude-code.md",
       "transcriptPath": "content/transcripts/63-final-pr-merge-full-saas-demo-week-2-victory-in-claude-code.txt",
       "weekId": "week-2",
       "weekTitle": "Week 2",
@@ -1794,6 +1950,7 @@
       "lessonNum": 64,
       "vttPath": "assets/3 - Week 3/64. Day 1 - Claude Code Pro Sub-Agents, Hooks, Swarms & Controlled Chaos.vtt",
       "contentPath": "content/lessons/64-claude-code-pro-sub-agents-hooks-swarms-controlled-chaos.md",
+      "summaryPath": "content/summaries/64-claude-code-pro-sub-agents-hooks-swarms-controlled-chaos.md",
       "transcriptPath": "content/transcripts/64-claude-code-pro-sub-agents-hooks-swarms-controlled-chaos.txt",
       "weekId": "week-3",
       "weekTitle": "Week 3",
@@ -1807,6 +1964,7 @@
       "lessonNum": 65,
       "vttPath": "assets/3 - Week 3/65. Day 1 - Setting Up the FiNALLY Project Our Multi-Agent Trading App.vtt",
       "contentPath": "content/lessons/65-setting-up-the-finally-project-our-multi-agent-trading-app.md",
+      "summaryPath": "content/summaries/65-setting-up-the-finally-project-our-multi-agent-trading-app.md",
       "transcriptPath": "content/transcripts/65-setting-up-the-finally-project-our-multi-agent-trading-app.txt",
       "weekId": "week-3",
       "weekTitle": "Week 3",
@@ -1820,6 +1978,7 @@
       "lessonNum": 66,
       "vttPath": "assets/3 - Week 3/66. Day 1 - Creating Custom Slash Commands in Claude Code.vtt",
       "contentPath": "content/lessons/66-creating-custom-slash-commands-in-claude-code.md",
+      "summaryPath": "content/summaries/66-creating-custom-slash-commands-in-claude-code.md",
       "transcriptPath": "content/transcripts/66-creating-custom-slash-commands-in-claude-code.txt",
       "weekId": "week-3",
       "weekTitle": "Week 3",
@@ -1833,6 +1992,7 @@
       "lessonNum": 67,
       "vttPath": "assets/3 - Week 3/67. Day 1 - Building Agents & Sub-Agents with Claude Code and Codex CLI.vtt",
       "contentPath": "content/lessons/67-building-agents-sub-agents-with-claude-code-and-codex-cli.md",
+      "summaryPath": "content/summaries/67-building-agents-sub-agents-with-claude-code-and-codex-cli.md",
       "transcriptPath": "content/transcripts/67-building-agents-sub-agents-with-claude-code-and-codex-cli.txt",
       "weekId": "week-3",
       "weekTitle": "Week 3",
@@ -1846,6 +2006,7 @@
       "lessonNum": 68,
       "vttPath": "assets/3 - Week 3/68. Day 1 - Subagents vs Agent Teams in Claude Code with Codex Review.vtt",
       "contentPath": "content/lessons/68-subagents-vs-agent-teams-in-claude-code-with-codex-review.md",
+      "summaryPath": "content/summaries/68-subagents-vs-agent-teams-in-claude-code-with-codex-review.md",
       "transcriptPath": "content/transcripts/68-subagents-vs-agent-teams-in-claude-code-with-codex-review.txt",
       "weekId": "week-3",
       "weekTitle": "Week 3",
@@ -1859,6 +2020,7 @@
       "lessonNum": 69,
       "vttPath": "assets/3 - Week 3/69. Day 1 - Claude Code Hooks Auto-Trigger Reviews with Events & Commands.vtt",
       "contentPath": "content/lessons/69-claude-code-hooks-auto-trigger-reviews-with-events-commands.md",
+      "summaryPath": "content/summaries/69-claude-code-hooks-auto-trigger-reviews-with-events-commands.md",
       "transcriptPath": "content/transcripts/69-claude-code-hooks-auto-trigger-reviews-with-events-commands.txt",
       "weekId": "week-3",
       "weekTitle": "Week 3",
@@ -1872,6 +2034,7 @@
       "lessonNum": 70,
       "vttPath": "assets/3 - Week 3/70. Day 1 - Building Custom Claude Code Plugins and Marketplaces.vtt",
       "contentPath": "content/lessons/70-building-custom-claude-code-plugins-and-marketplaces.md",
+      "summaryPath": "content/summaries/70-building-custom-claude-code-plugins-and-marketplaces.md",
       "transcriptPath": "content/transcripts/70-building-custom-claude-code-plugins-and-marketplaces.txt",
       "weekId": "week-3",
       "weekTitle": "Week 3",
@@ -1885,6 +2048,7 @@
       "lessonNum": 71,
       "vttPath": "assets/3 - Week 3/71. Day 2 - Claude Code Sandboxing and Cloud Execution Deep Dive.vtt",
       "contentPath": "content/lessons/71-claude-code-sandboxing-and-cloud-execution-deep-dive.md",
+      "summaryPath": "content/summaries/71-claude-code-sandboxing-and-cloud-execution-deep-dive.md",
       "transcriptPath": "content/transcripts/71-claude-code-sandboxing-and-cloud-execution-deep-dive.txt",
       "weekId": "week-3",
       "weekTitle": "Week 3",
@@ -1898,6 +2062,7 @@
       "lessonNum": 72,
       "vttPath": "assets/3 - Week 3/72. Day 2 - Remote Execution & Cloud Sandboxes with Claude Code on the Web.vtt",
       "contentPath": "content/lessons/72-remote-execution-cloud-sandboxes-with-claude-code-on-the-web.md",
+      "summaryPath": "content/summaries/72-remote-execution-cloud-sandboxes-with-claude-code-on-the-web.md",
       "transcriptPath": "content/transcripts/72-remote-execution-cloud-sandboxes-with-claude-code-on-the-web.txt",
       "weekId": "week-3",
       "weekTitle": "Week 3",
@@ -1911,6 +2076,7 @@
       "lessonNum": 73,
       "vttPath": "assets/3 - Week 3/73. Day 2 - Setting Up Claude Code Sandbox & GitHub Integration.vtt",
       "contentPath": "content/lessons/73-setting-up-claude-code-sandbox-github-integration.md",
+      "summaryPath": "content/summaries/73-setting-up-claude-code-sandbox-github-integration.md",
       "transcriptPath": "content/transcripts/73-setting-up-claude-code-sandbox-github-integration.txt",
       "weekId": "week-3",
       "weekTitle": "Week 3",
@@ -1924,6 +2090,7 @@
       "lessonNum": 74,
       "vttPath": "assets/3 - Week 3/74. Day 2 - 5 Ways to Run Claude Code Remotely Cloud, Web, Mobile & GitHub.vtt",
       "contentPath": "content/lessons/74-5-ways-to-run-claude-code-remotely-cloud-web-mobile-github.md",
+      "summaryPath": "content/summaries/74-5-ways-to-run-claude-code-remotely-cloud-web-mobile-github.md",
       "transcriptPath": "content/transcripts/74-5-ways-to-run-claude-code-remotely-cloud-web-mobile-github.txt",
       "weekId": "week-3",
       "weekTitle": "Week 3",
@@ -1937,6 +2104,7 @@
       "lessonNum": 75,
       "vttPath": "assets/3 - Week 3/75. Day 2 - Third-Party Cloud Sandboxes Running Claude Code on Sprites.dev.vtt",
       "contentPath": "content/lessons/75-third-party-cloud-sandboxes-running-claude-code-on-sprites-dev.md",
+      "summaryPath": "content/summaries/75-third-party-cloud-sandboxes-running-claude-code-on-sprites-dev.md",
       "transcriptPath": "content/transcripts/75-third-party-cloud-sandboxes-running-claude-code-on-sprites-dev.txt",
       "weekId": "week-3",
       "weekTitle": "Week 3",
@@ -1950,6 +2118,7 @@
       "lessonNum": 76,
       "vttPath": "assets/3 - Week 3/76. Day 2 - Cloud Sandbox Recap YOLO Mode with Sprites.dev & GitHub PRs.vtt",
       "contentPath": "content/lessons/76-cloud-sandbox-recap-yolo-mode-with-sprites-dev-github-prs.md",
+      "summaryPath": "content/summaries/76-cloud-sandbox-recap-yolo-mode-with-sprites-dev-github-prs.md",
       "transcriptPath": "content/transcripts/76-cloud-sandbox-recap-yolo-mode-with-sprites-dev-github-prs.txt",
       "weekId": "week-3",
       "weekTitle": "Week 3",
@@ -1963,6 +2132,7 @@
       "lessonNum": 77,
       "vttPath": "assets/3 - Week 3/77. Day 3 - Large Codebases with Claude Code, Codex & Sprites.dev.vtt",
       "contentPath": "content/lessons/77-large-codebases-with-claude-code-codex-sprites-dev.md",
+      "summaryPath": "content/summaries/77-large-codebases-with-claude-code-codex-sprites-dev.md",
       "transcriptPath": "content/transcripts/77-large-codebases-with-claude-code-codex-sprites-dev.txt",
       "weekId": "week-3",
       "weekTitle": "Week 3",
@@ -1976,6 +2146,7 @@
       "lessonNum": 78,
       "vttPath": "assets/3 - Week 3/78. Day 3 - Best Practices for Using Claude Code on Large Team Codebases.vtt",
       "contentPath": "content/lessons/78-best-practices-for-using-claude-code-on-large-team-codebases.md",
+      "summaryPath": "content/summaries/78-best-practices-for-using-claude-code-on-large-team-codebases.md",
       "transcriptPath": "content/transcripts/78-best-practices-for-using-claude-code-on-large-team-codebases.txt",
       "weekId": "week-3",
       "weekTitle": "Week 3",
@@ -1989,6 +2160,7 @@
       "lessonNum": 79,
       "vttPath": "assets/3 - Week 3/79. Day 3 - Driving Claude Code Programmatically with Claude Agent SDK.vtt",
       "contentPath": "content/lessons/79-driving-claude-code-programmatically-with-claude-agent-sdk.md",
+      "summaryPath": "content/summaries/79-driving-claude-code-programmatically-with-claude-agent-sdk.md",
       "transcriptPath": "content/transcripts/79-driving-claude-code-programmatically-with-claude-agent-sdk.txt",
       "weekId": "week-3",
       "weekTitle": "Week 3",
@@ -2002,6 +2174,7 @@
       "lessonNum": 80,
       "vttPath": "assets/3 - Week 3/80. Day 3 - Claude Cowork Agentic AI for Everyday Tasks Demo.vtt",
       "contentPath": "content/lessons/80-claude-cowork-agentic-ai-for-everyday-tasks-demo.md",
+      "summaryPath": "content/summaries/80-claude-cowork-agentic-ai-for-everyday-tasks-demo.md",
       "transcriptPath": "content/transcripts/80-claude-cowork-agentic-ai-for-everyday-tasks-demo.txt",
       "weekId": "week-3",
       "weekTitle": "Week 3",
@@ -2015,6 +2188,7 @@
       "lessonNum": 81,
       "vttPath": "assets/3 - Week 3/81. Day 3 - OpenClaw Your Personal AI Sidekick via Telegram & WhatsApp.vtt",
       "contentPath": "content/lessons/81-openclaw-your-personal-ai-sidekick-via-telegram-whatsapp.md",
+      "summaryPath": "content/summaries/81-openclaw-your-personal-ai-sidekick-via-telegram-whatsapp.md",
       "transcriptPath": "content/transcripts/81-openclaw-your-personal-ai-sidekick-via-telegram-whatsapp.txt",
       "weekId": "week-3",
       "weekTitle": "Week 3",
@@ -2028,6 +2202,7 @@
       "lessonNum": 82,
       "vttPath": "assets/3 - Week 3/82. Day 4 - Claude Code Agent Teams Swarms and Orchestration.vtt",
       "contentPath": "content/lessons/82-claude-code-agent-teams-swarms-and-orchestration.md",
+      "summaryPath": "content/summaries/82-claude-code-agent-teams-swarms-and-orchestration.md",
       "transcriptPath": "content/transcripts/82-claude-code-agent-teams-swarms-and-orchestration.txt",
       "weekId": "week-3",
       "weekTitle": "Week 3",
@@ -2041,6 +2216,7 @@
       "lessonNum": 83,
       "vttPath": "assets/3 - Week 3/83. Day 4 - Setting Up Claude Code Agent Teams for Full-Stack Development.vtt",
       "contentPath": "content/lessons/83-setting-up-claude-code-agent-teams-for-full-stack-development.md",
+      "summaryPath": "content/summaries/83-setting-up-claude-code-agent-teams-for-full-stack-development.md",
       "transcriptPath": "content/transcripts/83-setting-up-claude-code-agent-teams-for-full-stack-development.txt",
       "weekId": "week-3",
       "weekTitle": "Week 3",
@@ -2054,6 +2230,7 @@
       "lessonNum": 84,
       "vttPath": "assets/3 - Week 3/84. Day 4 - Multi-Agent Team Build Live Trading Dashboard with Claude Opus.vtt",
       "contentPath": "content/lessons/84-multi-agent-team-build-live-trading-dashboard-with-claude-opus.md",
+      "summaryPath": "content/summaries/84-multi-agent-team-build-live-trading-dashboard-with-claude-opus.md",
       "transcriptPath": "content/transcripts/84-multi-agent-team-build-live-trading-dashboard-with-claude-opus.txt",
       "weekId": "week-3",
       "weekTitle": "Week 3",
@@ -2067,6 +2244,7 @@
       "lessonNum": 85,
       "vttPath": "assets/3 - Week 3/85. Day 4 - GSD Spec-Driven Design Meets Multi-Agent Orchestration.vtt",
       "contentPath": "content/lessons/85-gsd-spec-driven-design-meets-multi-agent-orchestration.md",
+      "summaryPath": "content/summaries/85-gsd-spec-driven-design-meets-multi-agent-orchestration.md",
       "transcriptPath": "content/transcripts/85-gsd-spec-driven-design-meets-multi-agent-orchestration.txt",
       "weekId": "week-3",
       "weekTitle": "Week 3",
@@ -2080,6 +2258,7 @@
       "lessonNum": 86,
       "vttPath": "assets/3 - Week 3/86. Day 4 - Building a Trading Platform with Claude GSD A 5-Hour Deep Dive.vtt",
       "contentPath": "content/lessons/86-building-a-trading-platform-with-claude-gsd-a-5-hour-deep-dive.md",
+      "summaryPath": "content/summaries/86-building-a-trading-platform-with-claude-gsd-a-5-hour-deep-dive.md",
       "transcriptPath": "content/transcripts/86-building-a-trading-platform-with-claude-gsd-a-5-hour-deep-dive.txt",
       "weekId": "week-3",
       "weekTitle": "Week 3",
@@ -2093,6 +2272,7 @@
       "lessonNum": 87,
       "vttPath": "assets/3 - Week 3/87. Day 4 - GSD vs Claude Agent Teams Side-by-Side UI Comparison & Wrap-Up.vtt",
       "contentPath": "content/lessons/87-gsd-vs-claude-agent-teams-side-by-side-ui-comparison-wrap-up.md",
+      "summaryPath": "content/summaries/87-gsd-vs-claude-agent-teams-side-by-side-ui-comparison-wrap-up.md",
       "transcriptPath": "content/transcripts/87-gsd-vs-claude-agent-teams-side-by-side-ui-comparison-wrap-up.txt",
       "weekId": "week-3",
       "weekTitle": "Week 3",
@@ -2106,6 +2286,7 @@
       "lessonNum": 88,
       "vttPath": "assets/3 - Week 3/88. Day 5 - Gastown Orchestrating Swarms of Claude Code Agents.vtt",
       "contentPath": "content/lessons/88-gastown-orchestrating-swarms-of-claude-code-agents.md",
+      "summaryPath": "content/summaries/88-gastown-orchestrating-swarms-of-claude-code-agents.md",
       "transcriptPath": "content/transcripts/88-gastown-orchestrating-swarms-of-claude-code-agents.txt",
       "weekId": "week-3",
       "weekTitle": "Week 3",
@@ -2119,6 +2300,7 @@
       "lessonNum": 89,
       "vttPath": "assets/3 - Week 3/89. Day 5 - Gastown_s Parallel Polecats Claude Code Agents Build in Chaos.vtt",
       "contentPath": "content/lessons/89-gastown-s-parallel-polecats-claude-code-agents-build-in-chaos.md",
+      "summaryPath": "content/summaries/89-gastown-s-parallel-polecats-claude-code-agents-build-in-chaos.md",
       "transcriptPath": "content/transcripts/89-gastown-s-parallel-polecats-claude-code-agents-build-in-chaos.txt",
       "weekId": "week-3",
       "weekTitle": "Week 3",
@@ -2132,6 +2314,7 @@
       "lessonNum": 90,
       "vttPath": "assets/3 - Week 3/90. Day 5 - Gastown vs Claude Agent Teams vs GSD Multi-Agent Orchestrators.vtt",
       "contentPath": "content/lessons/90-gastown-vs-claude-agent-teams-vs-gsd-multi-agent-orchestrators.md",
+      "summaryPath": "content/summaries/90-gastown-vs-claude-agent-teams-vs-gsd-multi-agent-orchestrators.md",
       "transcriptPath": "content/transcripts/90-gastown-vs-claude-agent-teams-vs-gsd-multi-agent-orchestrators.txt",
       "weekId": "week-3",
       "weekTitle": "Week 3",
@@ -2145,6 +2328,7 @@
       "lessonNum": 91,
       "vttPath": "assets/3 - Week 3/91. Day 5 - Codex Wins Final Trader Workstation with Live Market Data.vtt",
       "contentPath": "content/lessons/91-codex-wins-final-trader-workstation-with-live-market-data.md",
+      "summaryPath": "content/summaries/91-codex-wins-final-trader-workstation-with-live-market-data.md",
       "transcriptPath": "content/transcripts/91-codex-wins-final-trader-workstation-with-live-market-data.txt",
       "weekId": "week-3",
       "weekTitle": "Week 3",
@@ -2158,6 +2342,7 @@
       "lessonNum": 92,
       "vttPath": "assets/3 - Week 3/92. Day 5 - Final Deployment, Course Wrap-Up & Coding Agent Best Practices.vtt",
       "contentPath": "content/lessons/92-final-deployment-course-wrap-up-coding-agent-best-practices.md",
+      "summaryPath": "content/summaries/92-final-deployment-course-wrap-up-coding-agent-best-practices.md",
       "transcriptPath": "content/transcripts/92-final-deployment-course-wrap-up-coding-agent-best-practices.txt",
       "weekId": "week-3",
       "weekTitle": "Week 3",
@@ -2171,6 +2356,7 @@
       "lessonNum": 93,
       "vttPath": "assets/3 - Week 3/93. Day 5 - Course Recap From Vibe Coding to Agentic Engineer.vtt",
       "contentPath": "content/lessons/93-course-recap-from-vibe-coding-to-agentic-engineer.md",
+      "summaryPath": "content/summaries/93-course-recap-from-vibe-coding-to-agentic-engineer.md",
       "transcriptPath": "content/transcripts/93-course-recap-from-vibe-coding-to-agentic-engineer.txt",
       "weekId": "week-3",
       "weekTitle": "Week 3",
