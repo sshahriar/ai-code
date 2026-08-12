@@ -1,0 +1,29 @@
+{
+  "name": "ai-coder-learning",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run build:content && vite build",
+    "build:content": "node scripts/build-content.mjs",
+    "generate:content": "node scripts/generate-content.mjs",
+    "lint": "oxlint",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-markdown": "^10.1.0",
+    "react-router-dom": "^7.9.4",
+    "remark-gfm": "^4.0.1"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.4",
+    "dotenv": "^17.2.2",
+    "oxlint": "^1.75.0",
+    "vite": "^8.2.0"
+  }
+}

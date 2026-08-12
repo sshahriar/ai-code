@@ -1,0 +1,305 @@
+WEBVTT
+
+00:00.000 --> 00:03.759
+The final point I want to make about this is a sobering one,
+
+00:03.759 --> 00:07.519
+which is about not getting caught up in the hype
+
+00:07.519 --> 00:09.839
+of agentic coding.
+
+00:09.839 --> 00:14.199
+Now look, generally I am a huge fan, very passionate
+
+00:14.199 --> 00:17.280
+about the impact that LLMs can make to software development,
+
+00:17.280 --> 00:20.039
+but there is certainly some hype out there
+
+00:20.039 --> 00:21.800
+that is unwarranted.
+
+00:21.800 --> 00:25.359
+There are some tasks for sure where using LLMs
+
+00:25.359 --> 00:28.559
+can make it an order of magnitude faster
+
+00:28.559 --> 00:29.559
+to deliver.
+
+00:29.559 --> 00:33.880
+If you're building a boilerplate React frontend, which is going to evolve a lot of
+
+00:33.880 --> 00:38.159
+componentry and you've got a very good sense of what you want the UI to look like, an
+
+00:38.159 --> 00:43.799
+LLM can do that in a matter of minutes when it would take a great frontend person, maybe
+
+00:43.799 --> 00:46.119
+a day and it would take me several weeks.
+
+00:46.119 --> 00:49.600
+So certainly for me, order of magnitude difference.
+
+00:49.600 --> 00:56.840
+But there are some tasks where LLMs are only incrementally faster than just doing it yourself.
+
+00:56.840 --> 01:01.899
+And indeed, I've had experiences where I feel like it has actually slowed me down
+
+01:01.899 --> 01:14.239
+because I had to go in and rewrite something where there was a mistake, a very subtle mistake that I wasn't expecting. Netnet, there is no question that LLMs are a huge value add and
+
+01:14.239 --> 01:20.159
+that I'm able to achieve a lot more as a result of using them. How much more depends critically
+
+01:20.159 --> 01:26.239
+on the project. More highly innovative projects with larger code bases and the improvement becomes
+
+01:26.239 --> 01:33.200
+more incremental. Starting out with something completely new where it's a complete Greenfields project, and where I'm
+
+01:33.200 --> 01:37.120
+working on something where there's plenty of boilerplate code in there, like, as I say,
+
+01:37.120 --> 01:43.760
+a sort of boilerplate React frontend. That's the kind of thing where LLMs can change the game.
+
+01:44.879 --> 01:57.760
+Days turn into minutes. It can be that radical. So there are both extremes there as in aggregate for me, it is a multiplier but it's not a 10X and that's
+
+01:57.760 --> 02:04.239
+something which I think we all have to have that kind of very reasonable grounded opinion and be
+
+02:04.239 --> 02:10.240
+sure to set the record straight if people, there's people that are that are too caught up in the hype
+
+02:10.240 --> 02:18.319
+and there are also now there's a sort of movement of people who are anti-AI, perhaps because they've got frustrated by the hype
+
+02:18.319 --> 02:20.520
+and they've had some negative experiences.
+
+02:20.520 --> 02:25.719
+So it's encumbered on us to do the work, to learn about these tools, to use them and
+
+02:25.719 --> 02:27.599
+then to set the record straight.
+
+02:27.599 --> 02:32.000
+Both the pros and the cons be able to explain where they are highly beneficial and where
+
+02:32.000 --> 02:33.879
+they still have some room to grow.
+
+02:33.879 --> 02:39.500
+And as the final topic for today, I have lots of courses which go into tons of detail about
+
+02:39.500 --> 02:44.460
+the different LLMs out there, but it's worth having a quick mention of it because this
+
+02:44.460 --> 02:47.139
+is such an important part of what we're going to be doing.
+
+02:47.139 --> 02:53.900
+There's a website called artificialanalysis.ai, and I have that right up here to show you.
+
+02:53.900 --> 02:58.939
+And this is one, this is one I know that people don't use bookmarks anymore if I say
+
+02:58.939 --> 03:00.800
+you should add this to your bookmarks.
+
+03:00.800 --> 03:03.319
+I said like I'm but I still use Facebook.
+
+03:03.319 --> 03:05.599
+But you should add this to your bookmarks.
+
+03:05.599 --> 03:06.599
+Only have one bookmark.
+
+03:06.599 --> 03:09.120
+It should be artificialanalysis.ai.
+
+03:09.120 --> 03:10.280
+Here it is.
+
+03:10.280 --> 03:14.800
+And yeah, this is a website that allows you to compare the different models.
+
+03:14.800 --> 03:18.240
+And when you bring up artificialanalysis.ai, you're going to see something different to
+
+03:18.240 --> 03:20.639
+me because models change so fast.
+
+03:20.639 --> 03:22.560
+And you're going to be lucky that you're going to see,
+
+03:22.560 --> 03:28.240
+you're going to have even better experiences than me. But what you find on this page is various
+
+03:28.240 --> 03:34.800
+different ways to compare the different LLMs out there in terms of intelligence and speed and price
+
+03:35.599 --> 03:41.039
+dimensioned in all sorts of different ways. And we'll look at some of them now. So this is the
+
+03:48.240 --> 03:51.439
+So this is the intelligence index, which is the single encompassing score from these people as official analysis on how smart a model is.
+
+03:51.439 --> 03:55.680
+And what you'll see is that in top position are the models that I mentioned, they're all
+
+03:55.680 --> 04:03.759
+sort of around November 2025, which was a point of inflection when suddenly these agentic,
+
+04:03.759 --> 04:09.360
+these coding agents really had a step change in terms of how much you can trust them.
+
+04:09.360 --> 04:14.840
+And there are still some naysayers out there who are still burnt, have scar tissue,
+
+04:14.840 --> 04:18.300
+from how the models used to be before November 2025.
+
+04:18.300 --> 04:21.560
+And you have to sort of encourage them to come back and give it another try,
+
+04:21.560 --> 04:24.220
+because so much has changed since then.
+
+04:24.220 --> 04:30.879
+And here we have, like we used yesterday, GPT 5.2 from OpenAI.
+
+04:30.879 --> 04:34.319
+That is considered at least by this index
+
+04:34.319 --> 04:36.579
+to be the smartest model.
+
+04:36.579 --> 04:39.339
+Claude Opus 4.5 comes next.
+
+04:39.339 --> 04:41.040
+It is my model of choice,
+
+04:41.040 --> 04:44.160
+but that's partly because I use it within Claude code.
+
+04:44.160 --> 04:47.040
+And that whole environment is so geared
+
+04:47.040 --> 04:55.120
+towards productive coding. And then GPT 5.2 codex is just a variant of GPT 5.2
+
+04:55.120 --> 05:03.560
+that's more designed for coding. And Gemini 3 Pro is of course Google's latest strongest
+
+05:03.560 --> 05:13.220
+model at least as of now. And that also scores quite well. And then before that, you see where the models used to be and you can see it made a big jump
+
+05:13.779 --> 05:16.100
+suddenly in in in around
+
+05:16.839 --> 05:21.339
+November of last year and I would encourage you to spend time on this site
+
+05:21.339 --> 05:28.860
+I'm not going to go through it now, but you'll see so much here including this amazing chart that shows frontier model intelligence over time
+
+05:28.860 --> 05:35.360
+It does have this slightly spooky way of appearing to be on a curve upwards in terms of intelligence.
+
+05:35.360 --> 05:40.480
+I personally think that that's because there's been a couple of bumps. One of them came in the
+
+05:40.480 --> 05:46.800
+last year or so with this big boost because of these new reasoning techniques. So I don't think
+
+05:46.800 --> 05:50.800
+that curve is going to continue to steepen, but you'll be able to see you. We have to go and look
+
+05:50.800 --> 05:56.860
+right now and see whether my prediction is right. I expect to see more improvement this year,
+
+05:56.860 --> 06:00.399
+but not a continual sharpening slope.
+
+06:00.399 --> 06:03.000
+So you will have better models than me
+
+06:03.000 --> 06:05.240
+and you should see that in your outputs.
+
+06:05.240 --> 06:06.759
+So have a look through this site.
+
+06:06.759 --> 06:09.480
+You'll also see a number of these individual tests,
+
+06:09.480 --> 06:12.879
+including a specific coding related test
+
+06:12.879 --> 06:15.800
+that you'll see here to see what comes through strongest
+
+06:15.800 --> 06:20.160
+in terms of coding and here in terms of being able to use tools
+
+06:20.160 --> 06:24.480
+and what comes through most strongly. And you'll see here that this open source model,
+
+06:24.480 --> 06:32.399
+GLM47 from Z.AI, the Chinese AI startup, is really, really strong there. So spend some time,
+
+06:32.959 --> 06:39.199
+look at this and use this incredible resource, this amazing website to learn more about the
+
+06:39.199 --> 06:40.220
+different models and the different models
+
+06:40.220 --> 06:41.399
+and the different providers
+
+06:41.399 --> 06:43.480
+and find out how much the world has changed
+
+06:43.480 --> 06:46.879
+since since I look at artificial analysis to AI right here.
+
+06:46.879 --> 06:50.000
+And with that, that wraps up day two of week one,
+
+06:50.000 --> 06:52.199
+we've covered the foundations you've put up with me
+
+06:52.199 --> 06:53.639
+talking more than I'll talk
+
+06:53.639 --> 06:54.759
+and any other point in this course.
+
+06:54.759 --> 06:55.800
+So thank you.
+
+06:55.800 --> 06:58.319
+And tomorrow we're going to look at tools, tools, tools.
+
+06:58.319 --> 06:59.839
+We're going to look at Cursor,
+
+06:59.839 --> 07:03.759
+Copilot, Codex, Anti-Ggravity. It's going to be really
+
+07:03.759 --> 07:08.040
+fun. I can't wait to show you all of that. But for now, take a moment to celebrate your
+
+07:08.040 --> 07:13.439
+13% way through this journey. And we've got lots of great things ahead.
+

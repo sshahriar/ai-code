@@ -1,0 +1,479 @@
+WEBVTT
+
+00:00.000 --> 00:04.400
+And finally, last but definitely not least, plugins.
+
+00:04.400 --> 00:09.439
+And again, I have some green and some red, some pros and some cons.
+
+00:09.439 --> 00:10.560
+Let's dig in.
+
+00:10.560 --> 00:14.960
+So plugins are the highest level idea.
+
+00:14.960 --> 00:19.920
+And a plugin is a bundle of stuff, a bundle of features.
+
+00:19.920 --> 00:25.600
+It can be a bundle of one or more MCP servers, a bundle of skills,
+
+00:25.600 --> 00:28.719
+a bundle of commands, things that we do slash
+
+00:28.719 --> 00:32.039
+and then something, along with some other stuff
+
+00:32.039 --> 00:34.560
+that Claude Coquan do, like hooks that I haven't explained yet,
+
+00:34.560 --> 00:35.439
+but that we will do.
+
+00:35.439 --> 00:37.600
+But all of these things can be packaged up together
+
+00:37.600 --> 00:39.079
+into plugins.
+
+00:39.079 --> 00:42.119
+And plugins is the most new idea of the ideas.
+
+00:42.119 --> 00:44.600
+Plugins came in October 2025.
+
+00:44.600 --> 00:46.840
+So that's a sort of, came at the end.
+
+00:46.840 --> 00:50.039
+And I rather suspect that plugins came along partly
+
+00:50.039 --> 00:51.679
+because people were getting a bit fed up
+
+00:51.679 --> 00:54.719
+with the weird discovery jankiness.
+
+00:54.719 --> 00:58.200
+So there's never quite clear where you go to find things.
+
+00:58.200 --> 01:01.000
+So plugins have kind of sorted out this idea
+
+01:01.000 --> 01:03.079
+of having proper marketplaces,
+
+01:03.079 --> 01:05.280
+having somewhere authoritative to go
+
+01:05.280 --> 01:07.840
+to understand the source of these things
+
+01:07.840 --> 01:11.959
+and to package things up in a better granularity.
+
+01:11.959 --> 01:18.579
+But unlike mcp and skills, plugins only applies, at least as of now, to Cloud Code.
+
+01:18.579 --> 01:20.120
+It's like a Cloud Code thing.
+
+01:20.120 --> 01:22.719
+You don't have plugins and to chat GPT or anything else.
+
+01:22.719 --> 01:28.439
+This is like anthropic Cloud Code plugins and it's designed specifically for Cloud Code.
+
+01:28.439 --> 01:34.599
+So it is the most simple idea of all is just just install a plugin or don't it's something which
+
+01:35.079 --> 01:42.159
+It allows the the people who implement the plugin to decide how we're gonna trade off what should be an mcp server
+
+01:42.159 --> 01:43.040
+What should be a skill?
+
+01:43.040 --> 01:49.359
+We're not gonna worry the user about that will take will figure it out and take care of it and package it into a good
+
+01:49.480 --> 01:50.959
+plugin and
+
+01:50.959 --> 01:54.359
+You do need to explicitly trigger commands.
+
+01:54.359 --> 01:56.280
+You type them out and that removes some
+
+01:56.280 --> 01:57.879
+of the sort of hand waviness of,
+
+01:57.879 --> 02:00.120
+oh, is this gonna pick up or not?
+
+02:00.120 --> 02:01.680
+So it makes, it makes, just makes things
+
+02:01.680 --> 02:03.159
+a little bit more, more bulletproof.
+
+02:03.159 --> 02:04.760
+Now that goes, there are some downsides.
+
+02:04.760 --> 02:06.120
+There's always some downsides.
+
+02:06.120 --> 02:07.040
+There's some downsides.
+
+02:07.040 --> 02:09.560
+The first of them, I don't know if it's a downside,
+
+02:09.560 --> 02:13.199
+but it's like a limitation that it's just a called code thing.
+
+02:13.199 --> 02:15.639
+It's the one that's sort of the least configurable.
+
+02:15.639 --> 02:19.020
+You just install the plugin and it's in.
+
+02:19.020 --> 02:21.939
+And you know, there's always the risk that in doing so
+
+02:21.939 --> 02:24.060
+it's quite a broad brush stroke.
+
+02:24.060 --> 02:27.060
+You're bringing in a whole kind of package of stuff.
+
+02:27.060 --> 02:28.819
+And maybe you'd rather mix and match
+
+02:28.819 --> 02:30.340
+or make these decisions yourself.
+
+02:30.340 --> 02:32.180
+But that's not what plugins are about.
+
+02:32.180 --> 02:36.979
+They're about like bringing in this new ability.
+
+02:36.979 --> 02:41.000
+And so the simple bottom line is that whilst all of this stuff
+
+02:41.000 --> 02:45.000
+about MCP and skills is kind of complicated and I've given you lots of
+
+02:45.000 --> 02:51.439
+complexity to navigate, the bottom line is, most of the time,
+
+02:51.439 --> 02:52.919
+just start with plugins.
+
+02:52.919 --> 02:55.080
+If there's a plugin that's going to work for you,
+
+02:55.080 --> 02:58.000
+then you don't really need to worry that much about whether it's MCP
+
+02:58.000 --> 03:00.120
+or skills or whatever else, install the
+
+03:00.120 --> 03:05.120
+plugin, you got the plugin installed, you can then you'll see we can enable it and disable
+
+03:05.120 --> 03:09.439
+it when we're using it when we're not. And so that just gives you a way to keep things
+
+03:09.439 --> 03:14.360
+simple, stick with plugins unless you know better, unless you want stock prices, and
+
+03:14.360 --> 03:19.919
+you particularly want to install the polygon massive MCP server, because that's what you
+
+03:19.919 --> 03:23.159
+need to do. The Cloud Code to be able to do. If you need that, then
+
+03:23.159 --> 03:27.840
+that makes total sense. You do your research, you install it. But most of the time for most
+
+03:27.840 --> 03:34.159
+everyday activities we will do plugins is the way to go. And as it happens, you're already
+
+03:34.159 --> 03:39.000
+something of a pro with plugins because you've used them already. Or at least you've
+
+03:39.000 --> 03:45.960
+seen me use one already. I don't think you've used it yet. Uh, you know what I mean. Do you remember me using a plugin?
+
+03:47.240 --> 03:49.319
+Give you a second to think about it.
+
+03:49.319 --> 03:51.159
+Yes, well maybe no.
+
+03:51.159 --> 03:52.120
+I don't know if you got it or not.
+
+03:52.120 --> 03:53.400
+But if you did, congratulations.
+
+03:53.400 --> 03:55.560
+Yes, the Ralph Loop thing.
+
+03:55.560 --> 03:57.319
+Remember when I kicked off Ralph Loop,
+
+03:57.319 --> 03:58.759
+and I think I said, don't worry,
+
+03:58.759 --> 04:00.599
+you shouldn't run this, but I'm going to blah, blah, blah,
+
+04:00.599 --> 04:01.439
+blah, blah, blah.
+
+04:01.439 --> 04:02.560
+That was a plugin.
+
+04:02.560 --> 04:04.919
+The Ralph Loop is a plugin that someone wrote
+
+04:04.919 --> 04:07.520
+that has a bunch of stuff including a command
+
+04:07.520 --> 04:15.439
+and we ran the Ralph Loop command and that caused that craziness yesterday with all sorts
+
+04:15.439 --> 04:16.879
+of stuff going on.
+
+04:16.879 --> 04:20.839
+So that was our first example of using plugins.
+
+04:20.839 --> 04:23.639
+Let's go now and have a look at more plugins.
+
+04:23.639 --> 04:29.040
+So the marketplace for plugins is something which can be directly accessed within
+
+04:29.040 --> 04:34.300
+Cloud which I will show you but also the main one that it links to is this
+
+04:34.300 --> 04:40.040
+Cloud plugins official is a repo in anthropics github and so you can come in
+
+04:40.040 --> 04:44.600
+here and see it and you can see it explains the structure of the different
+
+04:44.600 --> 04:47.399
+plugins that it's got and you can come in and see that there's a
+
+04:47.399 --> 04:51.379
+directory called plugins and one called external plugins.
+
+04:51.379 --> 04:53.199
+And this has a bunch of different plugins
+
+04:53.199 --> 04:55.800
+that we're about to see within Cloud Code in plugins,
+
+04:55.800 --> 04:58.279
+which are written by anthropic and then external
+
+04:58.279 --> 04:59.759
+are ones written by other people.
+
+04:59.759 --> 05:01.720
+They've got people like context-driven,
+
+05:01.720 --> 05:03.800
+that's a familiar one.
+
+05:03.800 --> 05:08.199
+They've got GitHub, the GitLab as well,
+
+05:08.199 --> 05:10.120
+and Playwright for browser automation
+
+05:10.120 --> 05:12.000
+and Slack and Stripe and Superbase.
+
+05:12.000 --> 05:19.439
+So lots of plugins here in the official repository that are going to be very, very useful.
+
+05:19.439 --> 05:23.040
+Now let's go into Cloud Code and see how you access these directly.
+
+05:23.040 --> 05:29.920
+Okay, so I'm just first going to, we're looking here, if I first do slash skills,
+
+05:29.920 --> 05:33.600
+you can see that we've got this agent browser skill right here.
+
+05:34.000 --> 05:38.879
+You can see that we've got this this agent browser skill right here. So what I'm going to do is I'm just going to, I'm going to come out of
+
+05:38.879 --> 05:44.560
+Cloud Code and I'm going to right click on skills directory here and I'm going to say delete,
+
+05:44.560 --> 05:50.480
+move to trash, it's gone and now I'm going to start Cloud again and I'm going to do slash
+
+05:50.480 --> 05:54.399
+skills and I just want to show you that there's now no skills found.
+
+05:54.399 --> 05:57.399
+Uninstalling a skill is just a matter of deleting the directory.
+
+05:57.399 --> 05:58.819
+That's it.
+
+05:58.819 --> 06:01.740
+OK, so back back to plugins.
+
+06:01.740 --> 06:04.319
+I'm going to do slash plug-in.
+
+06:04.319 --> 06:08.160
+And that is the way to launch the sort of in-cloud code
+
+06:08.160 --> 06:10.920
+experience of looking at these things.
+
+06:10.920 --> 06:14.120
+And you can see that there's these three tabs
+
+06:14.120 --> 06:21.360
+discover, installed, and marketplaces. And if I flip between them, you can see that we've only got
+
+06:21.360 --> 06:27.600
+one marketplace that I'm linked up to. And it's the Claude plugins official marketplace.
+
+06:27.600 --> 06:32.160
+And that's the marketplace that you will be linked up to too. And you can install additional
+
+06:32.160 --> 06:37.839
+marketplaces, which you would only do you do with care and only to a marketplace that you trust.
+
+06:37.839 --> 06:41.279
+And a classic example might be that your own company
+
+06:41.279 --> 06:45.839
+might have an internal marketplace, or you could have one for your team. It could be one
+
+06:45.839 --> 06:50.759
+you just need to have access to it in Git. You give like a GitHub address. And then you
+
+06:50.759 --> 06:54.600
+can have a marketplace here, which is how you could mix and match plugins between your
+
+06:54.600 --> 07:00.279
+team members or between other people at your company. So it's so clever, so powerful.
+
+07:00.279 --> 07:04.000
+And you can also add in other sort of legitimate ones that you know about new
+
+07:04.000 --> 07:09.680
+trust. But we're going to stick with the Claude plugins official marketplace, which is in by default.
+
+07:09.879 --> 07:14.480
+We've got no plugins installed right now. I did. I used to have one that I that I
+
+07:14.480 --> 07:18.079
+uninstalled. I used to have the Ralph Lute one that I removed before showing you this.
+
+07:18.800 --> 07:25.199
+And Discover is where you can find new plugins that are part of the marketplaces that you have active.
+
+07:25.199 --> 07:30.720
+And these are ordered by the most popular with the most installs at the top.
+
+07:30.720 --> 07:35.680
+And the one that has the most installs of all is one called front-end design,
+
+07:35.680 --> 07:39.439
+which creates distinctive production-grade front-end interfaces.
+
+07:39.439 --> 07:42.639
+And a lot of people talk about this plugin, it's meant to be really amazing.
+
+07:42.639 --> 07:47.519
+And we should definitely install that. So let's press space to say we want that plugin
+
+07:47.519 --> 07:53.519
+for sure. Next up is context seven. That's fun. They've got a plugin as well. It just
+
+07:53.519 --> 07:59.839
+it just installs upstashes context seven mcp server. It's just the same thing. It just gives
+
+07:59.839 --> 08:05.360
+us this easier way. I think I told you when I was when I was saying how difficult it was to
+
+08:05.920 --> 08:09.759
+to discover mcp servers that you can also do it through plugins
+
+08:09.759 --> 08:12.240
+and that's exactly what we're doing right now.
+
+08:12.240 --> 08:15.199
+Code review is something which is like an official
+
+08:15.199 --> 08:18.519
+and throw pick written way to do a code review
+
+08:18.519 --> 08:19.639
+for pull requests.
+
+08:19.639 --> 08:20.639
+That's pretty cool.
+
+08:20.639 --> 08:22.279
+I say we want that.
+
+08:22.279 --> 08:25.040
+GitHub, this is one that installs the official
+
+08:25.040 --> 08:26.240
+GitHub MCP server.
+
+08:26.240 --> 08:28.920
+We're gonna actually install that MCP server directly
+
+08:28.920 --> 08:32.000
+ourselves and we'll probably, I think we're going to do that tomorrow.
+
+08:32.000 --> 08:36.799
+Feature dev, I don't think we want that right now.
+
+08:36.799 --> 08:42.200
+But this one, code simplifier with 51,000 installs.
+
+08:42.200 --> 08:47.000
+This is anthropic, open sourcing their own internal agent
+
+08:47.000 --> 08:50.799
+that they have built, which is able to simplify code,
+
+08:50.799 --> 08:53.279
+particularly code that might have been written by LLMs,
+
+08:53.279 --> 08:59.620
+that might have what people call LLMs, slop, lots of overly complicated constructs.
+
+08:59.620 --> 09:06.299
+The code simplifier is an example of an agent, which we haven't really, we certainly haven't talked about having agents yet.
+
+09:06.299 --> 09:10.639
+It's another thing that comes in the mix with plugins, but we'll install that too.
+
+09:10.639 --> 09:17.120
+And I think the next one, the next one is hopefully familiar to you, is the
+
+09:17.120 --> 09:22.480
+Ralph Loop that we used to have that I'll leave uninstalled for now. And then we will
+
+09:22.480 --> 09:28.000
+talk about LSPs as well later. Okay, so that's a useful bunch of plugins.
+

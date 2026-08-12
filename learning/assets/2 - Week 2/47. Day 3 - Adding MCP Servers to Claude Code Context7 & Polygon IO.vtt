@@ -1,0 +1,632 @@
+WEBVTT
+
+00:00.000 --> 00:04.200
+And I'm back here at Glamour and I'm going to look for another MCP server.
+
+00:04.400 --> 00:06.679
+I'm going to look for one that's not really got anything to the coding.
+
+00:06.879 --> 00:09.320
+We're just to show you the extent of the capabilities.
+
+00:09.519 --> 00:10.880
+I keep talking about market data.
+
+00:11.080 --> 00:11.839
+Well, here's one.
+
+00:12.039 --> 00:13.919
+Here's one by Polygon.
+
+00:14.119 --> 00:16.800
+They've actually changed their name to massive as a company.
+
+00:17.000 --> 00:19.800
+But I do believe that their MCP server here it is Polygon.
+
+00:20.000 --> 00:22.160
+I/O MCP server.
+
+00:22.359 --> 00:25.760
+It's still it's still it's still comes under that name.
+
+00:26.039 --> 00:29.640
+It still comes under that name. And this is a way that you could give your
+
+00:29.640 --> 00:32.520
+Claude access to stock prices.
+
+00:32.520 --> 00:35.259
+Now for this one to work, you have to get an API key,
+
+00:35.259 --> 00:37.920
+which is free if you don't mind having like stale
+
+00:37.920 --> 00:39.520
+market data.
+
+00:39.520 --> 00:43.079
+But the, you, you, I've got an API key
+
+00:43.079 --> 00:45.079
+and in my agent of course, we actually use it.
+
+00:45.079 --> 00:47.159
+So you might have one if you've taken that course.
+
+00:47.159 --> 00:48.399
+So I am going to show you this too,
+
+00:48.399 --> 00:54.000
+but more for amusement of showing how you can give so many different kinds of skills. But it's
+
+00:54.000 --> 00:58.320
+not obviously not a great example for helping with coding. But if you're in the middle of coding and
+
+00:58.320 --> 01:02.880
+you want to know what your portfolio value is, then maybe it'll be useful. So we'll look at that one
+
+01:02.880 --> 01:10.859
+too. Okay, and with this, let's now go to Claude Code and try equipping our cloud with some skills.
+
+01:10.859 --> 01:13.040
+So here I am in VS code.
+
+01:13.040 --> 01:14.439
+I'm in the PM project.
+
+01:14.439 --> 01:16.480
+Again, we've come back to this one more time.
+
+01:16.480 --> 01:17.900
+I'm going to bring up a terminal.
+
+01:17.900 --> 01:19.920
+You know it's control back tick.
+
+01:19.920 --> 01:22.560
+And I'm going to start cloud code, my typing,
+
+01:22.560 --> 01:24.680
+"Claud, we're in cloud code."
+
+01:24.680 --> 01:27.780
+I'm going to do slash context to bring up details
+
+01:27.780 --> 01:30.319
+of our context and show you that it's nice and clean
+
+01:30.319 --> 01:32.560
+and make this bigger, very empty.
+
+01:32.719 --> 01:37.599
+It does actually come with a few MCP tools and skills baked in and we'll talk
+
+01:37.599 --> 01:40.560
+about them another day. But it's basically pretty empty.
+
+01:40.799 --> 01:45.280
+And now it's going to be our time. We're going to add in context seven.
+
+01:45.599 --> 01:50.680
+And I'm going to come out of this and you do that at the command line,
+
+01:50.680 --> 01:54.200
+not within Claude, but out of Claude, at the command line.
+
+01:54.239 --> 01:59.400
+We're going to run a command that's going to bring in context seven.
+
+01:59.519 --> 02:00.239
+Now, here we go.
+
+02:00.239 --> 02:04.519
+I'm just going to paste in the command that I just took from their GitHub.
+
+02:04.560 --> 02:06.159
+And it was also on Glamour.
+
+02:06.200 --> 02:07.840
+This is just the command that we have there.
+
+02:07.840 --> 02:08.879
+You can see what it's doing.
+
+02:08.919 --> 02:09.960
+It's it's Claude.
+
+02:09.960 --> 02:12.280
+It's calling Claude mcp add.
+
+02:12.280 --> 02:14.240
+It's saying I want to add in an mcp server.
+
+02:14.280 --> 02:15.840
+It's called context seven.
+
+02:21.000 --> 02:33.000
+And what comes after the double dash is how it will actually launch that mcp server behind the scenes. It's written in JavaScript. So it's going to do an mpx command, which you may know runs like a node tool. And it's going to take it from up stash slash context 7 mcp.
+
+02:33.000 --> 02:39.360
+That's what it's going to do. Now, if you look in the instructions, you'll see that it asks you to also put an
+
+02:39.360 --> 02:44.800
+API key at the end here. But that API key is optional. If you want to have a better rate limits,
+
+02:44.800 --> 02:48.639
+you have to put an API key, we're not going to do that. We're just going to run this, and it's
+
+02:48.639 --> 02:56.159
+added it in. It's added in to local config, it says, so we have added in this mcp server. And now
+
+02:56.159 --> 03:00.120
+we can just run Claude again. All right, we're into Claude.
+
+03:00.120 --> 03:03.360
+Let's do slash context and see what we see here.
+
+03:03.360 --> 03:08.360
+So we can see now that there are two MCP tools here.
+
+03:08.919 --> 03:10.759
+In addition to you may recognize
+
+03:10.759 --> 03:12.500
+that those were there already, as I say,
+
+03:12.500 --> 03:14.199
+we'll talk about them another time.
+
+03:14.199 --> 03:15.699
+But there's two new ones.
+
+03:15.699 --> 03:18.439
+Now, it's possible that you won't see those ones in
+
+03:18.439 --> 03:21.300
+immediately because there's some recent optimizations
+
+03:21.300 --> 03:22.719
+that means that sometimes it sort
+
+03:22.719 --> 03:26.719
+of delays adding them in until it knows it needs them. So you may not and if you don't
+
+03:26.719 --> 03:31.120
+don't worry they're going to appear very soon. But you can see that mine are in there and I'm using
+
+03:31.120 --> 03:36.240
+up a little chunk. I'm using up like like there's two tools and they're using up about
+
+03:36.240 --> 03:44.039
+a thousand tokens in total. One of the tools is called resolve library ID and one is called query docs.
+
+03:44.039 --> 03:47.560
+And the whole point of MCP is that these tools
+
+03:47.560 --> 03:49.520
+that we've equipped Claude with
+
+03:49.520 --> 03:52.400
+come with some English to describe
+
+03:52.400 --> 03:55.000
+how Claude should think about using them.
+
+03:55.000 --> 03:57.039
+It's described, it tells Claude,
+
+03:57.039 --> 04:00.120
+hey, you should use this if you're given
+
+04:00.120 --> 04:02.759
+a description of a library to look up
+
+04:02.759 --> 04:05.400
+and find out what's the ID associated with that library.
+
+04:05.400 --> 04:09.300
+And then once you've got the ID, you can use this to query its docs.
+
+04:09.300 --> 04:11.300
+And that's why there are two tools.
+
+04:11.300 --> 04:15.800
+And so what we should now be able to do is just ask Cloud Code a question
+
+04:15.800 --> 04:18.100
+that pertains to a particular library.
+
+04:18.100 --> 04:23.800
+And we should see whether or not it can use these tools to dig in.
+
+04:23.800 --> 04:27.800
+Now there's something to know about which is that if you just ask Claude,
+
+04:27.800 --> 04:28.319
+it can be a
+
+04:28.319 --> 04:33.240
+bit hit and miss whether or not it actually uses the MCP server.
+
+04:33.240 --> 04:36.560
+And if you want to make sure that it's going to use the MCP server, you have to tell it
+
+04:36.560 --> 04:38.000
+quite specifically.
+
+04:38.000 --> 04:39.199
+You don't need to.
+
+04:39.199 --> 04:42.120
+You can sort of risk it and see if it figures it out.
+
+04:42.120 --> 04:44.160
+It's got an English description of these.
+
+04:44.160 --> 04:47.839
+So it should just be able to make sensible choices.
+
+04:47.839 --> 04:52.860
+But if you know what you're doing, it's usually best to be direct in the prompt.
+
+04:52.860 --> 04:53.779
+Let me show you.
+
+04:53.779 --> 04:57.180
+The key is to use the word use.
+
+04:57.180 --> 05:01.899
+You say use, contact seven, and the name of the MCP server.
+
+05:01.899 --> 05:03.259
+And once you've said that,
+
+05:03.259 --> 05:05.740
+it knows that it's got to try and find that stuff
+
+05:05.740 --> 05:07.620
+in order to do what are you about to tell it.
+
+05:07.620 --> 05:10.819
+To summarize, for me,
+
+05:10.819 --> 05:25.600
+the open, the right way to use open AI agents SDK. Let's just with a model other
+
+05:25.600 --> 05:36.240
+than open AI's models. Let's ask it that very specific question. We will see what it does. So first of all, it's saying
+
+05:36.240 --> 05:41.639
+it wants to resolve, it's saying a tool use. Are you okay for it to proceed to use this
+
+05:41.639 --> 05:46.480
+tool? So you can see the good news is it's figured out, it needs to use this tool. It's
+
+05:46.480 --> 05:51.920
+figured out it needs to resolve a library. That's amazing. We'll say yes. And again,
+
+05:51.920 --> 05:58.600
+I hope in your mind you're clear on what is amazing. It's not amazing that these tools exist.
+
+05:58.600 --> 06:00.240
+It's great that someone's written these tools.
+
+06:00.240 --> 06:03.160
+What's amazing is that we've plugged them in so easily.
+
+06:03.160 --> 06:08.160
+And now it wants to use this again.
+
+06:09.120 --> 06:10.519
+Let's see which...
+
+06:10.519 --> 06:11.720
+No, it's using query docs.
+
+06:11.720 --> 06:14.319
+So it has found opening our agents Python,
+
+06:14.319 --> 06:16.079
+and it's now querying the docs.
+
+06:16.079 --> 06:19.240
+I'm gonna say yes, so it's using that second tool now. This is great
+
+06:19.240 --> 06:22.660
+It's doing just what we wanted. It's thinking about that and
+
+06:24.000 --> 06:29.120
+Hopefully it's going to give us a summary and yes, I could see look at that it is indeed
+
+06:29.120 --> 06:33.000
+This is this is all the the exactly the right instructions
+
+06:33.000 --> 06:37.480
+It's something that people often trips people up and I can see here from looking at it quickly
+
+06:38.079 --> 06:41.160
+That it's doing it the right way. That's good to see.
+
+06:41.160 --> 06:42.519
+It took my word for it.
+
+06:42.519 --> 06:47.360
+So yes, what you just saw is that because we said
+
+06:47.360 --> 06:50.800
+use context seven, it knew that it should,
+
+06:50.800 --> 06:53.920
+it gave it a hint that it should use those MCP servers,
+
+06:53.920 --> 06:56.360
+and then it used the two tools in the right way.
+
+06:56.360 --> 06:59.240
+It found the idea of the library I'm talking about,
+
+06:59.240 --> 07:01.160
+and then it looked up the documentation,
+
+07:01.160 --> 07:02.560
+got the latest documentation and
+
+07:03.040 --> 07:09.160
+Responded with exactly the steps to take that's pretty cool. All right, and now let's try one without saying use
+
+07:10.240 --> 07:18.120
+context 7 let's say how do I turn off telemetry with crew AI
+
+07:19.120 --> 07:23.600
+Let's see what happens and see if it tries to use the tool that we need to ask for permission because
+
+07:23.600 --> 07:24.319
+happens, let's see if it tries to use the tool, it would need to ask for permission because
+
+07:28.240 --> 07:28.959
+but it is, maybe because it's already gotten the conversation, it is going to do that.
+
+07:34.399 --> 07:42.480
+So it just shows you don't need to do use if it's got the handle on things, but if you want to be sure then it is best to use that but it's great to see that in this case it wasn't necessary,
+
+07:42.480 --> 07:47.240
+it was smart enough and here we go, This looks like it's exactly the right instruction.
+
+07:47.240 --> 07:50.100
+So another nice example and actually showing
+
+07:50.100 --> 07:53.279
+that you probably don't need to say use context 7,
+
+07:53.279 --> 07:54.839
+but it's good to know that you can do.
+
+07:54.839 --> 07:56.680
+OK, what I'm going to do now is I'm
+
+07:56.680 --> 07:58.000
+going to come out of this.
+
+07:58.000 --> 08:01.120
+I'm going to Control-C twice.
+
+08:01.120 --> 08:03.560
+And then I'm going to run this command again
+
+08:03.560 --> 08:05.920
+to add another MCP server that I just
+
+08:05.920 --> 08:09.000
+taken from Glamour again.
+
+08:09.240 --> 08:10.720
+I'm going to do PACE.
+
+08:10.720 --> 08:15.720
+And what you'll see here is I'm adding in the polygon I/O MCP server.
+
+08:16.079 --> 08:21.160
+Now you'll see what it says there is that it says massive API key equals your API key here.
+
+08:21.160 --> 08:24.519
+So I have to put in my API key and I'm going to do that off camera.
+
+08:25.879 --> 08:29.319
+But so I'll do that right now and when I see you back I will put in that,
+
+08:29.319 --> 08:32.399
+I will have then restarted Claude
+
+08:32.399 --> 08:35.279
+so we can see whether or not Claude can tell me
+
+08:35.279 --> 08:36.600
+my share prices.
+
+08:36.600 --> 08:40.919
+Okay, here we go, Claude, back it comes.
+
+08:40.919 --> 08:43.340
+Let's do slash context to see what we've got
+
+08:43.340 --> 08:44.820
+in our context now.
+
+08:45.879 --> 08:47.399
+(laughs)
+
+08:47.399 --> 08:49.039
+So there's a lot more now.
+
+08:49.039 --> 08:53.519
+There is a whole ton of these Mcp massive and then there's mcp
+
+08:53.519 --> 08:57.840
+context 7. You can see that the massive which is the new known for polygon I/O
+
+08:57.840 --> 09:04.139
+it has like tons of stuff for getting all sorts of things about share prices
+
+09:04.139 --> 09:09.080
+and a whole lot more futures and analysis and goodness gracious there's
+
+09:09.080 --> 09:14.120
+lots there. So it only remains for me to find out share price.
+
+09:14.120 --> 09:22.600
+All right, let's do what's the current share price of Apple.
+
+09:22.600 --> 09:26.000
+And of course, again, you don't need to do this one.
+
+09:26.000 --> 09:27.399
+This is only if you've got a key
+
+09:27.399 --> 09:29.159
+and you want to see this working, whatever.
+
+09:29.159 --> 09:33.840
+I do this just to show you again how easy it is to give power.
+
+09:33.840 --> 09:36.679
+And it's good to see that I didn't need to say use massive.
+
+09:36.679 --> 09:38.639
+It's already going to try and do this.
+
+09:38.639 --> 09:41.320
+It's using the right tool, get snapshot ticker.
+
+09:41.320 --> 09:44.480
+And so I'm going to say yes, I'm going to let it use that tool.
+
+09:44.480 --> 09:46.600
+It's contacting Polygon IO.
+
+09:46.600 --> 09:49.039
+It's running locally, but it is calling out
+
+09:49.039 --> 09:51.320
+to Polygon in the cloud or massive.
+
+09:51.320 --> 09:52.159
+And there we go.
+
+09:52.159 --> 09:54.639
+Apparently it's currently trading at $270.
+
+09:54.639 --> 09:55.759
+I'm not going to double check.
+
+09:55.759 --> 09:57.399
+I'm guessing that it knows.
+
+09:57.399 --> 09:58.519
+There you have it.
+
+09:58.519 --> 10:01.879
+We have just equipped Claude code with the skill
+
+10:01.879 --> 10:05.139
+to look up equity prices and research
+
+10:05.139 --> 10:06.879
+and tons and tons more,
+
+10:06.879 --> 10:11.879
+all through this massive MCPServer.
+
+10:12.000 --> 10:15.200
+And you can see that it is something of a massive MCPServer.
+
+10:15.200 --> 10:18.320
+It's certainly something that's got lots of different tools.
+
+10:18.320 --> 10:22.480
+And the latest way that Claude Code works, it doesn't
+
+10:22.480 --> 10:23.820
+load all of them into context.
+
+10:23.820 --> 10:27.279
+It's quite efficient, but over time it would start to use things up.
+
+10:27.279 --> 10:32.120
+Let's just do context again right now to look at the latest and you'll see, yeah, actually
+
+10:32.120 --> 10:37.120
+it's still being very efficient with usage, but we do have lots of tools there that we've
+
+10:37.120 --> 10:38.120
+added in.
+
+10:38.120 --> 10:39.120
+Yeah, so I'm being an idiot.
+
+10:39.120 --> 10:40.120
+You probably saw this.
+
+10:40.120 --> 10:43.559
+Look, you can see very clearly these are the tools that are available,
+
+10:43.559 --> 10:45.419
+this long, long, long list.
+
+10:45.419 --> 10:49.840
+But actually, Cloud Code has only loaded this tool,
+
+10:49.840 --> 10:51.080
+156 tokens.
+
+10:51.080 --> 10:53.600
+This is a reasonably new feature in the last few weeks
+
+10:53.600 --> 10:56.519
+for me that Cloud Code used to load all of these,
+
+10:56.519 --> 10:59.480
+but now it only loads the tool it needs.
+
+10:59.480 --> 11:01.159
+And so that does me the MCP servers
+
+11:01.159 --> 11:05.600
+aren't as much context hogs as they once were because they are all
+
+11:05.600 --> 11:10.000
+dark race. You should be able to see that distinction between the available mcp tools
+
+11:10.000 --> 11:16.240
+and the loaded mcp tools. Okay, very nice. That is mcp in action. There's just one more thing we
+
+11:16.240 --> 11:22.240
+have to do with these mcp servers. If I do here slash mcp enter, you'll see that we have context
+
+11:22.240 --> 11:26.200
+seven and massive, both there, both connected connected come out of that.
+
+11:26.200 --> 11:28.960
+I'm going to quit out of Claude code.
+
+11:28.960 --> 11:34.960
+I'm going to type Claude MCP remove and then contact seven.
+
+11:36.039 --> 11:41.879
+So before it was Claude MCP add and then I'm going to do Claude MCP remove massive.
+
+11:43.320 --> 11:45.360
+And now I'm going to launch Claude code again.
+
+11:46.440 --> 11:49.559
+And now I'm going to do /mcp again.
+
+11:49.559 --> 11:52.080
+And we'll see there are no mcp service configured.
+
+11:52.080 --> 11:54.600
+So we have now removed those mcp servers.
+
+11:54.600 --> 11:59.000
+They've gone, OK, next is skills.
+

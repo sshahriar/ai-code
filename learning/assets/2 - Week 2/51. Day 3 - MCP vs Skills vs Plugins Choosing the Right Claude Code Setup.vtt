@@ -1,0 +1,476 @@
+WEBVTT
+
+00:00.000 --> 00:04.559
+And as it says here, we can hit Enter to go in and read the description.
+
+00:04.960 --> 00:10.359
+This is an agent that simplifies and refines code for clarity, consistency and maintainability,
+
+00:10.359 --> 00:12.519
+while preserving functionality.
+
+00:12.919 --> 00:16.079
+Okay, that's pretty nice, let's go back.
+
+00:16.600 --> 00:19.879
+So this is all great, I think I like all of these.
+
+00:19.879 --> 00:22.519
+It says, "I to install", let's press "I".
+
+00:22.879 --> 00:28.079
+Off it goes, "Install four plugins, restart called code to load new plugins.
+
+00:28.079 --> 00:29.760
+Okay, let's do that.
+
+00:29.760 --> 00:32.679
+Control C twice, launch cloud again.
+
+00:32.679 --> 00:36.500
+And now apparently we have cloud with multiple plugins.
+
+00:36.500 --> 00:37.340
+Let's have a look.
+
+00:37.340 --> 00:41.060
+Okay, let's do slash contacts and see what we have.
+
+00:42.240 --> 00:46.280
+Well, we have MCP for context seven.
+
+00:46.280 --> 00:47.280
+That's great.
+
+00:47.280 --> 00:57.399
+We have a plugin called code simplifier. We have then got some plugins down here front end design and code review.
+
+00:57.640 --> 01:10.560
+That is that is exciting. Okay, it's time for us to put put one of them to the test. Okay, we're going to try and run our code simplifier to simplify everything and you can directly call it precisely, as I said,
+
+01:10.560 --> 01:13.519
+but we could also just try just using natural language.
+
+01:13.519 --> 01:18.519
+Let's say, please use the code simplifier agent
+
+01:20.079 --> 01:24.120
+to simplify the entire code base.
+
+01:25.079 --> 01:26.400
+Let's see what happens.
+
+01:27.400 --> 01:29.560
+Let's see what goes on.
+
+01:38.859 --> 01:46.379
+what goes on. There we go. So the real name is code simplify colon code simplifier and it figured it out I think I think there we go it's appears to be
+
+01:46.379 --> 01:58.799
+navigating its way around running this properly let's see if it can if it gets sorted out or if we have to be more precise.
+
+02:00.200 --> 02:00.799
+Yeah, no, it's running for sure. It's happening.
+
+02:00.799 --> 02:02.299
+This is Code Simplifier, Code Simplifier.
+
+02:02.299 --> 02:06.700
+So we successfully kicked off the agent just by saying,
+
+02:06.700 --> 02:08.400
+please use the Code Simplifier.
+
+02:08.400 --> 02:10.199
+It figured out the right one to use.
+
+02:10.199 --> 02:11.400
+It's now running.
+
+02:11.400 --> 02:15.599
+It's going through right now and simplifying everything based
+
+02:15.599 --> 02:17.759
+on the plugin that we installed.
+
+02:17.759 --> 02:19.960
+And so I imagine this will take a minute.
+
+02:19.960 --> 02:24.500
+I will come back when it's finished and we'll see whether or not the application still
+
+02:24.500 --> 02:25.500
+works.
+
+02:25.500 --> 02:30.259
+Okay, so it went for, as it says, but six minutes or so, chugging away, it made a ton
+
+02:30.259 --> 02:31.259
+of changes.
+
+02:31.259 --> 02:35.759
+It mentioned everything that it did and it says that it's also run the tests.
+
+02:35.759 --> 02:41.680
+And it's kind of cool that we're using anthropics own internal code simplification tool
+
+02:41.680 --> 02:46.000
+that's been written and trusted by the maestros.
+
+02:46.000 --> 02:49.139
+So let's see if it actually comes up, if it works.
+
+02:49.139 --> 02:49.979
+Well, here we go.
+
+02:49.979 --> 02:52.840
+I press the plus button, I'm starting a new terminal,
+
+02:52.840 --> 02:57.840
+I'm going to do scripts slash start Mac.
+
+02:59.439 --> 03:03.000
+Let's see if it comes up, it builds, it's opened at least.
+
+03:03.000 --> 03:06.000
+Let's see if we can actually bring it up now.
+
+03:06.000 --> 03:08.000
+Okay, so I'm going to bring up a browser.
+
+03:08.000 --> 03:10.000
+Going to go to localhost 8000.
+
+03:10.000 --> 03:11.000
+Here we go.
+
+03:11.000 --> 03:12.000
+Welcome back.
+
+03:12.000 --> 03:13.000
+Sign in.
+
+03:13.000 --> 03:14.000
+We will have to create an account.
+
+03:14.000 --> 03:16.000
+It's our first time coming in.
+
+03:16.000 --> 03:17.000
+We will make one.
+
+03:17.000 --> 03:22.560
+We'll call it Ralph again since Ralph Loops did make this.
+
+03:27.699 --> 03:28.599
+Loops, two exclamation marks, loops, two exclamation marks. Let's see if it works.
+
+03:28.599 --> 03:29.439
+Drum roll please.
+
+03:29.439 --> 03:31.879
+Yes, we're into a camban.
+
+03:31.879 --> 03:33.780
+It seems to be working.
+
+03:33.780 --> 03:36.000
+There's boards, there's all of this stuff.
+
+03:36.000 --> 03:38.800
+We can add a card.
+
+03:38.800 --> 03:41.360
+This is pretty neat.
+
+03:43.360 --> 03:48.060
+In both senses. There we over it goes very nice hi there
+
+03:50.680 --> 03:54.280
+Let's see if our AI assistant is there drum roll yes hello
+
+03:54.280 --> 03:56.280
+How can I help you with your cam and board today?
+
+03:56.879 --> 04:01.360
+Success our code base has been simplified courtesy of
+
+04:08.800 --> 04:13.280
+uh, atthropics own work with their agent that has their best, their best abilities to simplify code bases. And of course, we don't even yet know how to install agents ourselves. We haven't got
+
+04:13.280 --> 04:19.360
+there on the course, but we know how to use plugins and plugins can do it can install commands,
+
+04:19.360 --> 04:24.800
+it can install mcp servers, it can install skills and things like hooks and agents that we haven't
+
+04:24.800 --> 04:28.439
+even covered yet. And that's what it did in this case. And it worked great.
+
+04:28.439 --> 04:30.279
+Okay, what a journey it's been.
+
+04:30.279 --> 04:33.839
+That wraps up plugins and that wraps up our look
+
+04:33.839 --> 04:36.000
+at those three different techniques.
+
+04:36.000 --> 04:37.399
+And what were they again?
+
+04:37.399 --> 04:38.680
+The three techniques.
+
+04:38.680 --> 04:41.959
+MCP, let's stitch up someone else's tools
+
+04:41.959 --> 04:43.680
+to our cloud code.
+
+04:43.680 --> 04:47.120
+Skills, a simpler way to take expertise written
+
+04:47.120 --> 04:51.480
+in markdown files along with entire scripts to run, like a sort of
+
+04:51.480 --> 04:56.319
+higher level tool, just a packaged up tool into a script that can all be put into a
+
+04:56.319 --> 04:59.240
+skill, simpler, higher level.
+
+04:59.240 --> 05:04.600
+And then plugins are convenient way to bundle together things that can include MCP servers
+
+05:04.600 --> 05:10.519
+and skills, along with other stuff like agents and commands, put that all into a plugin and
+
+05:10.519 --> 05:14.699
+make it more discoverable through the official marketplace.
+
+05:14.699 --> 05:18.100
+That is a plugin and that's what we did last.
+
+05:18.100 --> 05:20.699
+And all of these have pros and cons,
+
+05:20.699 --> 05:23.300
+as you are now so familiar.
+
+05:23.300 --> 05:27.199
+The MCP, it's a huge ecosystem,
+
+05:27.199 --> 05:28.500
+so much to choose from.
+
+05:28.500 --> 05:31.500
+They're very flexible and the marketplace is like,
+
+05:31.500 --> 05:33.600
+glamour is getting more mature.
+
+05:33.600 --> 05:36.560
+There's certainly like good rating system and so on.
+
+05:36.560 --> 05:41.360
+But the cons is that it's certainly used up a lot of context, although it's better now,
+
+05:41.360 --> 05:46.079
+but it's still not great and it's complex to set it up. It's very granular.
+
+05:46.639 --> 05:52.079
+Skills, efficient with the context, simple to set up, you get good results from skills.
+
+05:52.079 --> 05:54.079
+People are really loving it.
+
+05:54.800 --> 05:58.879
+Negative is that it's quite limited in terms of the flexibility and it still feels a bit immature.
+
+05:59.680 --> 06:02.560
+Things like the evolving marketplace situation.
+
+06:03.199 --> 06:08.720
+Plugins, of course, something of the best of both in that you can have the right balance
+
+06:08.720 --> 06:13.360
+of both of these. They're very simplest to set up. It's just you just install it all
+
+06:13.360 --> 06:18.120
+and you can be very explicit about what you run. We weren't explicit just then
+
+06:18.120 --> 06:20.000
+when we did our code simplification,
+
+06:20.000 --> 06:21.120
+but you can be.
+
+06:21.120 --> 06:22.639
+As we were when we did Ralph Loops,
+
+06:22.639 --> 06:24.199
+remember there was just like a command
+
+06:24.199 --> 06:25.759
+to kick off the Ralph loop.
+
+06:25.759 --> 06:27.959
+The negatives is that right now,
+
+06:27.959 --> 06:29.399
+it's only include code,
+
+06:29.399 --> 06:31.560
+and it's better not to overuse these
+
+06:31.560 --> 06:33.959
+'cause you can complicate your situation
+
+06:33.959 --> 06:38.399
+by having lots and lots of these kinds of plugins.
+
+06:38.399 --> 06:44.000
+And you know, this gives you the the the lay of the land and you may be thinking,
+
+06:44.000 --> 06:50.500
+okay, so with this in mind, thinking back to Andrei Carpathi's tweet about all these different options,
+
+06:50.500 --> 06:55.100
+how do you navigate which one you actually use yourself? And what I would say is quite simple,
+
+06:55.100 --> 07:03.259
+I would say this is the answer. Start with plugins. If there's a that you like, that you need. That's what you should use.
+
+07:03.259 --> 07:04.459
+That's the simplest way.
+
+07:04.459 --> 07:06.060
+Start with plugins.
+
+07:06.060 --> 07:08.040
+There are specific circumstances
+
+07:08.040 --> 07:10.699
+when you might use MCP and you might use skills.
+
+07:10.699 --> 07:13.220
+You might use MCP if there's something very specialized
+
+07:13.220 --> 07:15.819
+that you want to do like reading market data
+
+07:15.819 --> 07:19.819
+and you want to equip the market data MCP server directly.
+
+07:19.819 --> 07:22.420
+You can often do it through plugins as well
+
+07:22.420 --> 07:24.819
+because it would just be a wrapper around the MCP server.
+
+07:24.819 --> 07:28.040
+But there are probably, I imagine the polygon massive one
+
+07:28.040 --> 07:30.420
+is only available by going directly to it.
+
+07:30.420 --> 07:32.060
+And so that's how you would do it.
+
+07:32.060 --> 07:33.480
+And I think when we do GitHub,
+
+07:33.480 --> 07:35.459
+we'll probably just install the MCP server.
+
+07:35.459 --> 07:38.860
+So there are very specific specialized sets of tools
+
+07:38.860 --> 07:40.779
+that you would want to just use the MCP server
+
+07:40.779 --> 07:43.939
+'cause you know how and you want that kind of flexibility.
+
+07:43.939 --> 07:46.319
+And then skills, it's similar. There's particular skill that you want that kind of flexibility. And then skills, it's similar.
+
+07:46.319 --> 07:49.360
+If there's particular skill that you want to use,
+
+07:49.360 --> 07:52.560
+like the one from Vassal, for having an agent browser,
+
+07:52.560 --> 07:56.160
+a great skill, then you can install it from Vassal's site.
+
+07:56.160 --> 07:57.439
+There are reasons like that.
+
+07:57.439 --> 07:59.600
+And the other time to use skills, of course, as I say,
+
+07:59.600 --> 08:03.160
+is if you want to share around your team and your organization,
+
+08:03.160 --> 08:06.439
+it's so easy just to check in these skills packages
+
+08:06.439 --> 08:10.800
+into your repo and then have it be available to everyone.
+
+08:10.800 --> 08:16.720
+But generally speaking, even when you're using skills, the simplest way to do it is just by using
+
+08:16.720 --> 08:22.560
+a plugin that contains those skills. That's the place to start. That's how you can tweet back
+
+08:22.560 --> 08:34.960
+at Andre and tell him that. And on that note, that's enough for today. That's enough. That is mcp skills and plugins. If it felt like it was a lot to digest
+
+08:34.960 --> 08:40.080
+don't worry. We're going to do more. We're going to use them tomorrow and we're going to use them
+
+08:40.080 --> 08:43.759
+at the end of the week as well. And then into next week we're going to be building on top of
+
+08:43.759 --> 08:48.799
+it as we get into agents and things. So there's going to be tons more on this, but we covered so
+
+08:48.799 --> 08:52.080
+much ground. Thank you so much for hanging on in there
+
+08:52.080 --> 08:52.919
+till the end of today.
+
+08:52.919 --> 08:54.320
+I know it was a long day.
+
+08:54.320 --> 08:57.440
+Tomorrow's going to be great fun as we look to apply
+
+08:57.440 --> 09:00.279
+some of these things into to really talk about the best way
+
+09:00.279 --> 09:04.080
+to have a workflow around the way that you work on projects.
+
+09:04.080 --> 09:06.759
+But take a moment to celebrate in the fact
+
+09:06.759 --> 09:08.919
+that you have passed the 50% point.
+
+09:08.919 --> 09:11.759
+This today, as I say, a day of inflection.
+
+09:11.759 --> 09:13.120
+And you're through that.
+
+09:13.120 --> 09:16.799
+And you are already so much more of a pro than you were
+
+09:16.799 --> 09:19.600
+just yesterday and it'll be even more tomorrow. I'll see you then.
+

@@ -1,0 +1,464 @@
+WEBVTT
+
+00:00.000 --> 00:04.639
+It's absolutely remarkable. It's done everything. It's been chugging for a while.
+
+00:05.440 --> 00:09.359
+It's seven minutes. I think it's been longer. I think that's just the last step of it or something.
+
+00:09.359 --> 00:15.039
+Successfully implemented JIRA Tech at PL5. What was built, an AI chat interface,
+
+00:15.039 --> 00:22.879
+backend API, light L&M integration with Suribras, presumably per the skill. We will soon see
+
+00:22.879 --> 00:27.519
+structured outputs and a live preview updates. and it's made all these and it's
+
+00:27.519 --> 00:34.079
+made a PR and that PR is right here and let's go and take a look. So this is GitHub right here.
+
+00:34.079 --> 00:40.320
+So if we go into pull requests, we'll see there is indeed a PR right here. Let's go into the PR.
+
+00:40.320 --> 00:45.439
+It says ticket number PL5 on here. This is the details of everything that's going on.
+
+00:45.439 --> 00:48.820
+13 files have been changed 456 lines of
+
+00:48.820 --> 00:52.539
+code. So let's come into it. We can see the PR. We can see that this is the
+
+00:52.539 --> 00:56.939
+pedantic object. If you're familiar with this stuff, what I'm looking for is to
+
+00:56.939 --> 01:02.299
+see whether or not it's used its skill to to to call the LLM in the right way.
+
+01:02.299 --> 01:07.859
+Let's see here we go. It has indeed extra body. You remember that's exactly
+
+01:07.859 --> 01:10.319
+from the way I put it in the skill. Let's see where
+
+01:10.319 --> 01:16.640
+extra body is and make sure that there it is. That's precisely taken from the skill. It's taken
+
+01:16.640 --> 01:21.599
+the skill, it's backed about in exactly the way I wanted it to. It's using the right model.
+
+01:22.159 --> 01:27.840
+Everything looks good from just looking at the code. It's time for us to try it.
+
+01:27.840 --> 01:35.579
+So back we go here. Let's go over here and let's, I'm not sure if it's already running,
+
+01:35.579 --> 01:37.540
+let's stop it if it is already running.
+
+01:37.540 --> 01:44.500
+So that would be scripts slash stop Mac, if we need to.
+
+01:44.500 --> 01:49.500
+Okay, and now we're going to do scripts slash start Mac.
+
+01:49.500 --> 01:52.480
+Okay, off it goes.
+
+01:52.480 --> 01:53.760
+It says it's running.
+
+01:53.760 --> 01:57.959
+Okay, we will, we'll see. Right, come on, click
+
+01:57.959 --> 02:05.640
+to bring this up. Here it is. Okay. Well, hello, I'll help you create a mutual non-disclosure
+
+02:05.640 --> 02:23.759
+agreement. Let's start with the basics. What's the purpose? So yes, I'm evaluating a business relationship. Okay, we get back an AI response. When would you like
+
+02:23.759 --> 02:33.319
+today? Let's say yes today. Sounds good. Let's set the effect to date for how long?
+
+02:33.319 --> 02:42.000
+Three years. Please. By the way, you see how fast it is? BAM! You see what I mean? There would be no need for streaming for this.
+
+02:42.000 --> 02:51.000
+It's like the first chunk is everything. Got it. The MDA, uh, okay. That's interesting. So I guess it thinks it's happened over here.
+
+02:51.000 --> 03:00.319
+It's sort of stopped asking questions. Um, okay. What else do you need to know?
+
+03:01.379 --> 03:03.379
+Great, next could you, the confidential protected two years?
+
+03:03.379 --> 03:04.219
+Yeah, okay.
+
+03:04.219 --> 03:05.520
+What was this?
+
+03:05.520 --> 03:06.520
+How long was she over here?
+
+03:06.520 --> 03:07.719
+Two years.
+
+03:12.800 --> 03:14.319
+Got it.
+
+03:14.319 --> 03:16.680
+Okay, yeah, obviously that's a piece of feedback
+
+03:16.680 --> 03:17.520
+we need for it.
+
+03:17.520 --> 03:20.199
+It's that needs to always ask the next question.
+
+03:20.199 --> 03:21.879
+Otherwise we're just left like this.
+
+03:21.879 --> 03:23.000
+But you can see over here,
+
+03:23.000 --> 03:26.439
+we've got something that presumably we can download
+
+03:27.400 --> 03:29.000
+as it is, oh I see them.
+
+03:29.000 --> 03:31.439
+We can't download till we get to the end of it.
+
+03:31.439 --> 03:32.960
+What else do you need to know?
+
+03:38.560 --> 03:39.400
+We're almost there,
+
+03:39.400 --> 03:58.599
+which state one New York, 2 New York, 3 just put default company names in there for now.
+
+03:58.599 --> 04:02.060
+We're giving it something that requires a little bit of thinking through.
+
+04:02.060 --> 04:07.120
+Perfect, I'll use yes, finalize it.
+
+04:08.759 --> 04:11.759
+Okay, wow, it's done. And now download PDF has appeared up here.
+
+04:11.759 --> 04:13.520
+And that's pretty cool.
+
+04:13.520 --> 04:15.120
+Let's try that, there it is.
+
+04:15.120 --> 04:18.040
+Let's open it and here we have it.
+
+04:18.040 --> 04:19.439
+So look, it's not without a few things
+
+04:19.439 --> 04:20.480
+that need to be tweaked.
+
+04:20.480 --> 04:21.600
+I don't know if you noticed as well
+
+04:21.600 --> 04:23.399
+that it didn't automatically give focus
+
+04:23.399 --> 04:24.480
+to that window.
+
+04:24.480 --> 04:25.600
+So we've got a bit of feedback.
+
+04:25.600 --> 04:27.120
+It needs to keep asking questions
+
+04:27.120 --> 04:28.639
+or conversation dries up.
+
+04:28.639 --> 04:24.000
+But it worked, we had AI chats using open-r
+
+04:31.000 --> 04:33.000
+using Suribras on new skill.
+
+04:33.000 --> 04:37.000
+I think that's 90% victory, I would say.
+
+04:37.000 --> 04:40.000
+And luckily, we've got more, more geo tickets to go,
+
+04:40.000 --> 04:42.000
+more opportunities for it to fix it up.
+
+04:42.000 --> 04:57.000
+Okay, so back we are here. So, yes, please, merge the PR locally, push and push and switch to main branch.
+
+04:57.000 --> 05:01.000
+We'll get that done.
+
+05:01.000 --> 05:03.000
+Then we'll check out our context.
+
+05:03.000 --> 05:12.860
+It's already mentioned somewhere that it updated claw.md, but I'll give it one more chance to do that as well. After it's done all this done,
+
+05:12.860 --> 05:25.279
+merged. Please check Claude.md is up to date with project status, but I think it is already.
+
+05:28.220 --> 05:30.139
+And we'll see how it is.
+
+05:37.000 --> 05:42.000
+(silence) Clauders up to date. Okay, great. Let's do slash context. See how we're doing.
+
+05:42.000 --> 05:47.000
+Scroll here. Look at that. We're almost full. Very nice.
+
+05:47.000 --> 05:53.000
+Okay, so now time to do the good old slash clear. It feels almost scary doing this as well.
+
+05:53.000 --> 05:56.680
+All of the information that we're wiping. There we go, it's gone.
+
+05:56.680 --> 05:58.720
+And now we know what to do next.
+
+05:58.720 --> 06:00.899
+First thing we do is slash mcp.
+
+06:02.199 --> 06:06.240
+And then we go in here and we say re-authenticate.
+
+06:06.240 --> 06:09.519
+And up comes this and we say approve.
+
+06:09.519 --> 06:11.959
+And we say accept.
+
+06:11.959 --> 06:14.040
+And then we go back to the code again.
+
+06:15.060 --> 06:16.660
+Okay, very good.
+
+06:16.660 --> 06:52.360
+And now we go up, up, up, up. And here we go. Implement your ticket of fixes. Ensure that after answering a question, the UI focus goes back to the text
+
+06:52.360 --> 07:06.720
+input field. And ensure that the AI always asks a follow-on question if it needs more information.
+
+07:13.660 --> 07:25.000
+When PL6 is done and these enhancements are done, please make a PR.
+
+07:25.000 --> 07:26.000
+Test.
+
+07:26.000 --> 07:29.000
+Then make a PR.
+
+07:29.000 --> 07:31.000
+Okay, that all seems good to me.
+
+07:31.000 --> 07:32.000
+That seems good to you.
+
+07:32.000 --> 07:33.000
+Are you ready?
+
+07:33.000 --> 07:34.000
+Let's do it.
+
+07:34.000 --> 07:38.000
+Hopefully it didn't take so long over that that we've already lost our authentication to Jira.
+
+07:38.000 --> 07:39.000
+Let's see.
+
+07:39.000 --> 07:41.000
+It's now it's working fine.
+
+07:41.000 --> 07:42.000
+We're off.
+
+07:42.000 --> 07:43.000
+We're off.
+
+07:43.000 --> 07:44.000
+We're on to PL6.
+
+07:44.000 --> 07:47.759
+And that, of course, if you remember, is expanding it to support
+
+07:47.759 --> 07:49.959
+all the other documents.
+
+07:49.959 --> 07:54.579
+So off it goes doing its stuff.
+
+07:54.579 --> 07:59.660
+This time I might just let it go and I'll answer the questions myself unless I feel
+
+07:59.660 --> 08:04.660
+like they're going to be useful for you to see them so that we can speed this along and
+
+08:04.660 --> 08:05.660
+get to a product.
+
+08:05.660 --> 08:06.660
+Oh, we're done.
+
+08:06.660 --> 08:09.360
+The questions were good. I mostly just took its
+
+08:09.360 --> 08:15.519
+defaults. It is now completed PL6, expanded to support all legal document types, some additional
+
+08:15.519 --> 08:20.560
+fixes, the two that I asked for and some quality improvements based on its review and it's made a
+
+08:20.560 --> 08:26.160
+PR. But first, it's time for us to test it. So I already actually started up the server. And let's
+
+08:26.160 --> 08:32.039
+go and have a look. Let's go to local host through 8,000. Sorry, localhost 8,000.
+
+08:32.039 --> 08:33.039
+Let's see what we have.
+
+08:33.039 --> 08:34.919
+Wow, bam, here's something.
+
+08:34.919 --> 08:36.120
+Ha ha ha.
+
+08:36.120 --> 08:37.440
+Let's expand it.
+
+08:37.440 --> 08:38.879
+I don't know if I remember seeing last time
+
+08:38.879 --> 08:40.799
+that it has all the right color scheme.
+
+08:40.799 --> 08:43.720
+Hello, I'll help you create a legal agreement.
+
+08:43.720 --> 08:45.080
+What type of document do you need?
+
+08:45.080 --> 08:46.240
+For example, here's some.
+
+08:46.240 --> 08:51.240
+All right, let's say we want a cloud SAS agreement.
+
+08:53.000 --> 08:53.679
+a cloud sass agreement.
+
+08:55.860 --> 08:57.399
+Okay, bam, so fast. Great, a cloud service agreement it is.
+
+08:57.399 --> 08:58.320
+Let's start.
+
+08:58.320 --> 09:01.220
+Please be telling the name of the provider company.
+
+09:01.220 --> 09:06.220
+What's a brief, please use invented,
+
+09:07.820 --> 09:10.399
+names, invented placeholder names
+
+09:12.220 --> 09:13.539
+for both companies.
+
+09:25.240 --> 09:43.960
+for both companies. The cloud service is an AI assistant. Let's go with that. Okay, off it goes. What start laws New York, New York please.
+
+09:43.960 --> 09:46.159
+And notice on the right things are filling in.
+
+09:46.159 --> 09:49.700
+There we go, New York is just filled in.
+
+09:49.700 --> 09:58.820
+Noted subscription period, one year, business, hours, phone support.
+
+09:58.820 --> 09:59.659
+Seems very reasonable.
+
+09:59.659 --> 10:01.080
+These are all great questions.
+
+10:01.080 --> 10:02.600
+Let me know the pricing structure.
+
+10:02.600 --> 10:06.919
+Let's say it's going to be 10,000 per annum.
+
+10:06.919 --> 10:08.440
+Per annum.
+
+10:09.700 --> 10:11.740
+Invoice a net 30.
+
+10:14.559 --> 10:15.720
+Okay.
+
+10:15.720 --> 10:17.919
+Thanks for the details.
+
+10:17.919 --> 10:19.759
+That all seems good, perfect.
+
+10:21.840 --> 10:23.080
+Oh, I don't need to say perfect.
+
+10:23.080 --> 10:23.919
+It's already done.
+
+10:23.919 --> 10:24.799
+(laughs)
+
+10:24.799 --> 10:25.840
+I don't need to say anything at all.
+
+10:25.840 --> 10:27.639
+It's happened, it's been built,
+
+10:27.639 --> 10:30.899
+it says download PDF, I press that, we have a PDF.
+
+10:30.899 --> 10:33.600
+We have success, that is a completed product
+
+10:33.600 --> 10:35.679
+and it has the right brand colors too
+
+10:35.679 --> 10:37.159
+and it's looking really terrific.
+
+10:37.159 --> 10:39.000
+This is so impressive.
+
+10:39.000 --> 10:40.600
+And of course there's no surprise
+
+10:40.600 --> 10:42.960
+but there's a pull request right here. Here
+
+10:42.960 --> 10:50.320
+it is, pull request for PL6. Come on in here and you'll see another 2.5 thousand lines of code added
+
+10:50.320 --> 10:57.200
+to our repo with 16 files changed. Lots of stuff in here. Super impressive stuff.
+

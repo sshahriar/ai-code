@@ -1,0 +1,545 @@
+WEBVTT
+
+00:00.000 --> 00:05.759
+Okay, so onto the main topic of the day, which is about how you best use these kinds
+
+00:05.759 --> 00:10.560
+of advanced coding agents if you're working on a large team with a big code base.
+
+00:10.560 --> 00:15.640
+And this is where historically they've been criticized, because things like Cloud Code
+
+00:15.640 --> 00:21.440
+work really well with great market data demos like the one you just saw, when there's a nice,
+
+00:21.440 --> 00:27.519
+defined, small project it's building from scratch, it can write the docs, where they can struggle
+
+00:27.519 --> 00:34.399
+is when they're suddenly inheriting a massive code base. And to be honest, this is less true
+
+00:34.399 --> 00:40.560
+now, now that we are past the point of inflection from last November, now they are much better
+
+00:40.560 --> 00:46.000
+at handling massive code bases. But there are still rules of the road, there are still some good
+
+00:46.000 --> 00:49.119
+practices, which allow you to be successful as a large
+
+00:49.119 --> 00:52.240
+team and I'd like to go through them with you now. And I should warn you that in most
+
+00:52.240 --> 00:56.640
+cases I'm really stating the obvious here. I feel like by this point in the course you already
+
+00:56.640 --> 01:02.000
+know this stuff pretty well. We're basically talking about focusing on the top half of those
+
+01:02.000 --> 01:11.000
+kind of six ways of doing things on the yellow, on the 2025 techniques more than the purple 2026 crazy techniques.
+
+01:11.239 --> 01:16.159
+So first of all, invest time in your agents.md or your
+
+01:16.159 --> 01:20.920
+Claude.md in your documentation, which is disclosed
+
+01:20.920 --> 01:24.760
+progressively only as you get to the subdirectories. Make
+
+01:24.760 --> 01:28.519
+sure that at every level, at every subdirectory, there is
+
+01:28.519 --> 01:32.519
+great documentation that it reflects the interface.
+
+01:32.519 --> 01:38.920
+It reflects what an agent would need to know in order to work within this directory, this folder,
+
+01:38.920 --> 01:40.840
+without having to read all the files.
+
+01:40.840 --> 01:47.920
+So it should be like really a good, tight documentation that reflects the package
+
+01:47.920 --> 01:51.000
+and what's needed to be known as soon as one goes inside it.
+
+01:51.000 --> 01:56.299
+And then, you know, making sure that it is at the right level of detail, not so much detail
+
+01:56.299 --> 02:02.000
+that it consumes context, but enough so that the right core functions are called in that
+
+02:02.000 --> 02:03.099
+package.
+
+02:03.099 --> 02:06.019
+That is the trick and it takes time and effort.
+
+02:06.019 --> 02:09.740
+You can get, of course, Cloud Code to write this for you, but then you need to eyeball it
+
+02:09.740 --> 02:11.780
+and make sure you're satisfied with it.
+
+02:11.780 --> 02:13.460
+Do a couple of rounds of reviews.
+
+02:13.460 --> 02:20.800
+Invest time in your agents.md, it will pay dividends. And also, project documentation
+
+02:20.800 --> 02:27.039
+for agents is what it's all about. If you have a document that you tag with the @ sign,
+
+02:27.039 --> 02:32.800
+then that gets inserted into, in an entirety, into that outer document, which is not normally
+
+02:32.800 --> 02:39.740
+what you want. Better is to describe what a document does and then put a link to it because then Claude
+
+02:39.740 --> 02:44.919
+Code or the other coding agent can decide does it need to know about this document and
+
+02:44.919 --> 02:50.419
+if so it will read it. So structuring your documents to be summarizing and then to be
+
+02:50.419 --> 02:56.020
+pointing to more detailed documents so that an agent can navigate properly. That is a
+
+02:56.020 --> 03:01.360
+key to success with big code bases and taking time to get that documentation
+
+03:01.360 --> 03:03.199
+and making sure that it's up to date
+
+03:03.199 --> 03:06.120
+as changes happen, always make sure there's a step
+
+03:06.120 --> 03:08.520
+when documents are revised and updated.
+
+03:08.520 --> 03:12.439
+And then having a consistent strategy
+
+03:12.439 --> 03:16.500
+for how you will work as a team using coding agents.
+
+03:16.500 --> 03:20.000
+So for example, if you want to use the GitHub approach
+
+03:20.000 --> 03:21.759
+where you will tag Claude,
+
+03:21.759 --> 03:23.919
+then have that be the policy,
+
+03:23.919 --> 03:25.919
+have that be the way that you're gonna work as a team.
+
+03:25.919 --> 03:28.039
+If everyone's approaching it a bit differently,
+
+03:28.039 --> 03:30.000
+things can become a complete muddle.
+
+03:30.000 --> 03:32.080
+You're not sure who's following what process,
+
+03:32.080 --> 03:34.360
+who is it that's putting tickets in JIRA,
+
+03:34.360 --> 03:36.800
+and then you're using one flow for this,
+
+03:36.800 --> 03:39.780
+who is it that's using the GitHub actions
+
+03:39.780 --> 03:41.039
+and tag in Claude.
+
+03:41.039 --> 03:47.520
+So you wanna have one consistent flow, one agreed process that everyone follows.
+
+03:47.520 --> 03:51.680
+And if you're going to use plugins, which makes a lot of sense, like the feature dev plugin,
+
+03:51.680 --> 03:56.159
+that I guess we used a couple of weeks ago now, a week ago, then have that be something that you
+
+03:56.159 --> 04:02.560
+all agree to and you rally around and it's part of your project process. And that way you'll have
+
+04:02.560 --> 04:06.560
+common, you'll have consistency across the project and also everyone knows
+
+04:06.560 --> 04:10.039
+when you're going to order a new feature what's the right way to approach it.
+
+04:10.039 --> 04:14.159
+So when it comes to choosing things to add on for your project, I would focus on plugins
+
+04:14.159 --> 04:19.959
+first and foremost, like add the right plugins like maybe the code simplification and the
+
+04:19.959 --> 04:23.259
+feature dev and a few others that make sense for your project.
+
+04:23.259 --> 04:29.959
+When it comes to building specialized functionality for coding agents to use on your project.
+
+04:29.959 --> 04:34.740
+I recommend focusing on skills as a thing that makes so much sense right now.
+
+04:34.740 --> 04:40.040
+Develop skills, special skills that make sense for your project, how common things
+
+04:40.040 --> 04:41.959
+should work in your project.
+
+04:41.959 --> 04:47.680
+An example, this bit of an obvious example might be the cerebras skill that we wrote.
+
+04:47.680 --> 04:52.040
+If you particularly want to use that approach for LLM inference in your project,
+
+04:52.040 --> 04:56.540
+then build that out as a skill. But that's a bit of a bitty thing to mention. I'm really
+
+04:56.540 --> 05:01.439
+thinking of bigger skills you might want your agent to know. Ways in which it has to understand
+
+05:01.439 --> 05:06.759
+the frameworks that you're using on your project and making sure that that's something that has
+
+05:06.759 --> 05:12.920
+a special skill that is that is domain specific. If, for example, you were using a particular technique
+
+05:12.920 --> 05:14.759
+for market data that mattered,
+
+05:14.759 --> 05:16.439
+then you might have a skill around that.
+
+05:16.439 --> 05:17.600
+So it was very clear,
+
+05:17.600 --> 05:20.800
+the right way to use the market data API
+
+05:20.800 --> 05:22.040
+throughout your project.
+
+05:22.040 --> 05:24.800
+So building special skills is a great way
+
+05:24.800 --> 05:27.720
+to have common standards, common approaches
+
+05:27.720 --> 05:29.639
+that you know will be reinforced
+
+05:29.639 --> 05:32.959
+for all development across the project by coding agents.
+
+05:32.959 --> 05:35.040
+And the next one is stating the obvious, I'm afraid,
+
+05:35.040 --> 05:39.639
+but having a robust test suite, of course,
+
+05:39.639 --> 05:41.439
+it's like likely to always--
+
+05:41.439 --> 05:43.079
+I mean, test driven development, of course,
+
+05:43.079 --> 05:45.519
+is well known as being something
+
+05:45.519 --> 05:49.000
+that is incredibly important for large projects
+
+05:49.000 --> 05:51.959
+and having 80% unit test coverage for a long time
+
+05:51.959 --> 05:53.680
+has been the kind of gold standard.
+
+05:53.680 --> 05:55.759
+I sort of suggest, though, being
+
+05:55.759 --> 05:56.819
+less focused
+
+05:56.819 --> 06:00.720
+on things like the percentage coverage of your tests,
+
+06:00.720 --> 06:03.519
+LLMs will often focus on that,
+
+06:03.519 --> 06:07.759
+and they will often, to a fault, do things like mocking out,
+
+06:07.759 --> 06:08.759
+if you're familiar with this,
+
+06:08.759 --> 06:12.680
+that the right tests that are very, very specifically
+
+06:12.680 --> 06:15.399
+designed to make sure that every path through the code
+
+06:15.399 --> 06:17.439
+is tested, and that's not really what you want,
+
+06:17.439 --> 06:19.740
+and you certainly don't want brittle tests
+
+06:19.740 --> 06:21.259
+that are overly mocked.
+
+06:21.259 --> 06:22.980
+You want good tests.
+
+06:22.980 --> 06:26.019
+You want tests that actually test the functionality
+
+06:26.019 --> 06:27.939
+you're trying to build such that
+
+06:27.939 --> 06:29.379
+if there's some reimplementation,
+
+06:29.379 --> 06:30.740
+it doesn't break your tests.
+
+06:30.740 --> 06:32.019
+But if there's something that actually does
+
+06:32.019 --> 06:34.540
+break the logic, then it breaks the tests.
+
+06:34.540 --> 06:37.259
+So I'm making sure that you have,
+
+06:37.259 --> 06:42.560
+that you give feedback on the testing strategy, maybe as part of your agents.md.
+
+06:42.560 --> 06:46.279
+That's very important and always pushing back
+
+06:46.279 --> 06:49.240
+if you see a ton of tests getting put in there,
+
+06:49.240 --> 06:50.879
+just for the sake of testing,
+
+06:50.879 --> 06:53.040
+mocking everything out and just making sure
+
+06:53.040 --> 06:54.720
+that different parts through the code are tested.
+
+06:54.720 --> 06:57.620
+I mean, that's what you would do as a human review as well,
+
+06:57.620 --> 06:58.720
+and that's what you should do,
+
+06:58.720 --> 07:00.800
+particularly with coding agents.
+
+07:00.800 --> 07:02.000
+And there's a lot of overlap here
+
+07:02.000 --> 07:03.399
+because really that second item
+
+07:03.399 --> 07:05.759
+about having consistent workflows and plugins,
+
+07:05.759 --> 07:08.519
+that should include having the kinds of workflows
+
+07:08.519 --> 07:11.519
+and instructions to alarms that make sure
+
+07:11.519 --> 07:14.360
+that they write good tests that don't overly mock.
+
+07:14.360 --> 07:17.240
+Okay, and then finally, of course,
+
+07:17.240 --> 07:19.800
+at the end of the day, you are responsible,
+
+07:19.800 --> 07:22.600
+you are accountable for the quality of your code.
+
+07:22.600 --> 07:25.120
+Your coding agent is a tool that is helping you,
+
+07:25.120 --> 07:30.319
+you and your team. And so there needs to be a culture of there being a human reviewer,
+
+07:30.319 --> 07:37.279
+the buck stopping with the human and a strong culture of rejecting coding agent slop.
+
+07:37.279 --> 07:43.199
+If they are writing long, long files that are just going to be a hard work to review,
+
+07:43.199 --> 07:48.879
+if they're being overly defensive, all of these things need to be caught and fixed.
+
+07:48.879 --> 07:52.000
+And the, you know, there's definitely this asymmetry problem
+
+07:52.000 --> 07:55.399
+that is becoming increasingly easy to generate tons
+
+07:55.399 --> 07:57.279
+and tons of code and the,
+
+07:57.279 --> 08:00.519
+the onus is becoming on the human to then take all
+
+08:00.519 --> 08:02.079
+of this code and have to review it,
+
+08:02.079 --> 08:03.560
+which, which is hard work.
+
+08:03.560 --> 08:04.920
+It's very hard work.
+
+08:04.920 --> 08:09.319
+And, and so making sure that there are disciplined
+
+08:09.319 --> 08:12.240
+processes in place to make sure that that human review happens
+
+08:12.439 --> 08:16.360
+and making sure that coding agents are challenged to write
+
+08:16.360 --> 08:19.480
+succinct code that doesn't overwhelm the human reviewer.
+
+08:19.639 --> 08:21.759
+These are all priorities.
+
+08:21.959 --> 08:25.439
+And there's tons of other good advice and you'll see lots of articles
+
+08:25.439 --> 08:28.959
+about this stuff and some of the good advice will become no
+
+08:28.959 --> 08:31.220
+longer relevant very quickly as the models
+
+08:31.220 --> 08:32.720
+get stronger and stronger.
+
+08:32.720 --> 08:37.700
+But one of the things that I would certainly add to this list would be to always work with
+
+08:37.700 --> 08:39.440
+bite-sized chunks.
+
+08:39.440 --> 08:44.179
+When you're dealing with a massive project, you don't want to tag Claude and say, "Hey,
+
+08:44.179 --> 08:47.279
+refactor the whole codebase," because you're asking for trouble.
+
+08:47.279 --> 08:49.000
+You could do that with a small project.
+
+08:49.000 --> 08:52.559
+We could do it with our little one that we're working on right now this week.
+
+08:52.559 --> 08:58.159
+But you can't do that if you've got a massive project with 50 people working on it. So take
+
+08:58.159 --> 09:03.360
+small bits at a time, let a human or working with something like Cloud Code,
+
+09:03.360 --> 09:09.600
+divvy up a big piece of work into smaller steps, and then assign the small steps to the coding
+
+09:09.600 --> 09:14.899
+agent, have each one be something that is independently, can be specified, can be
+
+09:14.899 --> 09:20.600
+tested, can be reviewed by a human. So taking it in small steps, absolutely
+
+09:20.600 --> 09:24.080
+crucial. And this is very much an evolving story. If you have your own
+
+09:24.080 --> 09:27.519
+advice from your own experiences, please do post them in Udemy. It'll be
+
+09:27.519 --> 09:31.279
+great to have conversation about this. And if you want to have a quick
+
+09:31.279 --> 09:35.960
+assignment, one thing that's quite entertaining to do is to take a big
+
+09:35.960 --> 09:37.379
+open-source project. Maybe something from your domain, maybe something that One thing that's quite entertaining to do is to take a big open source project,
+
+09:37.379 --> 09:41.419
+maybe something from your domain, maybe something that's from whatever industry
+
+09:41.419 --> 09:47.279
+versus you work in, a popular open source platform, and then clone it and then try and take on
+
+09:47.279 --> 09:49.720
+like something that's got to do or something like that.
+
+09:49.720 --> 09:59.919
+Ask the LML to find a to do in the code and do it and see how it does. And then work on things, some of these steps here,
+
+09:59.919 --> 10:05.360
+work on a more detailed agents.md across all of the
+
+10:05.360 --> 10:08.879
+entire directory structure, work on perhaps the
+
+10:08.879 --> 10:11.759
+feature dev plugin and put some of these things into
+
+10:11.759 --> 10:13.600
+practice and see how it does.
+
+10:13.600 --> 10:16.440
+And you could also, as a sort of anti-test, you could
+
+10:16.440 --> 10:19.879
+try the kind of, hey, refactor the whole code base
+
+10:19.879 --> 10:20.759
+and see what happens.
+
+10:20.759 --> 10:22.399
+Simplify everything.
+
+10:22.399 --> 10:24.159
+You could maybe put that in a rough loop
+
+10:24.159 --> 10:26.039
+and leave it going for ten iterations.
+
+10:26.039 --> 10:27.440
+See what comes out the other end,
+
+10:27.440 --> 10:29.120
+but it's probably not gonna be pretty.
+
+10:29.120 --> 10:31.759
+And that will give you a good sense of what does work
+
+10:31.759 --> 10:34.600
+and what doesn't work with a massive code base.
+

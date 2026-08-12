@@ -1,0 +1,344 @@
+WEBVTT
+
+00:00.000 --> 00:06.480
+Okay, but we're not going to go back snarky-glored. We're going to go to normal old boring stuffy-glored.
+
+00:06.639 --> 00:09.619
+You can feel free to keep going with snarky-glored if that's what you wish.
+
+00:10.480 --> 00:17.039
+Okay, and now we're just going to do some proper stuff so I can show you within this particular session how we can rewind.
+
+00:17.600 --> 00:20.219
+So what should we, we'll start with please summarize the project.
+
+00:23.679 --> 00:26.839
+And then I will, I will go ahead and ask a bunch of stuff.
+
+00:26.839 --> 00:28.960
+I'll ask it to do a code review again
+
+00:28.960 --> 00:30.719
+and to draw an architect's diagram
+
+00:30.719 --> 00:32.000
+and I will see you back in a minute.
+
+00:32.000 --> 00:33.479
+Actually, I'm gonna do it while you watch
+
+00:33.479 --> 00:36.000
+'cause I'm gonna show another shortcut key.
+
+00:36.000 --> 00:40.320
+Okay, so I'm gonna say please do a code review
+
+00:40.320 --> 00:42.640
+and write results
+
+00:44.840 --> 00:47.439
+to review.md
+
+00:49.000 --> 00:53.219
+to review.md in the docs directory.
+
+00:54.259 --> 00:57.020
+And we'll leave that running. And while we do it, I'm going to press control O,
+
+00:57.020 --> 00:59.659
+which is the way to see the detail.
+
+00:59.659 --> 01:03.020
+Look at that and control E is to show all,
+
+01:03.020 --> 01:05.299
+and E again to collapse.
+
+01:05.299 --> 01:07.780
+So we can see everything that's going on
+
+01:07.780 --> 01:19.040
+in this thinking trace here. And this is if you want all the gory detail of what's happening in the agent's mind,
+
+01:19.040 --> 01:22.719
+as it's thinking this through. You can also see the control B is a way that you could have this
+
+01:22.719 --> 01:25.760
+go off and run in the background. What do you keep going with more commands?
+
+01:26.400 --> 01:29.680
+But here we go. We can see it doing its thing, exploring the code base.
+
+01:31.000 --> 01:33.780
+it's thing exploring the code base. You can see the model on the bottom right.
+
+01:35.159 --> 01:38.200
+Okay, and I'm now going to leave this running
+
+01:38.200 --> 01:39.239
+while you should do it too,
+
+01:39.239 --> 01:41.319
+and watch that trace uses the way of getting
+
+01:41.319 --> 01:44.000
+a little bit of insight into how the model runs,
+
+01:44.000 --> 01:45.760
+and I will see you back in a second.
+
+01:45.760 --> 01:47.879
+Okay, and it's made all of those changes,
+
+01:47.879 --> 01:50.040
+and it's showing it up here in the screen,
+
+01:50.040 --> 01:53.000
+and I'm going to say yes, allow all edits
+
+01:53.000 --> 01:54.959
+during the session, pressing number two.
+
+01:54.959 --> 01:57.840
+So that's been accepted and that has happened.
+
+01:57.840 --> 02:00.379
+And it's now just writing some more.
+
+02:00.379 --> 02:02.799
+But again, I want to show you if I press control O,
+
+02:02.799 --> 02:04.560
+I can go through this and you'll see
+
+02:04.560 --> 02:06.799
+tons and tons of information here
+
+02:06.799 --> 02:09.159
+about everything that it worked on
+
+02:09.159 --> 02:12.759
+and come back down here again to the bottom
+
+02:12.759 --> 02:16.199
+and control O to sort of release that.
+
+02:16.199 --> 02:19.639
+So yeah, that has done its thing and written
+
+02:19.639 --> 02:21.520
+a long code review.
+
+02:21.520 --> 02:23.400
+And I do believe, I think I saw when I was looking
+
+02:23.400 --> 02:25.759
+through the transcript, that it's made the same mistake
+
+02:25.759 --> 02:28.919
+again, yeah, of the exposed API key.
+
+02:28.919 --> 02:32.020
+I suppose it's the same, it's using the same sub-agent
+
+02:32.020 --> 02:33.120
+that's making the same mistake.
+
+02:33.120 --> 02:36.199
+So once more, it has failed with that.
+
+02:36.199 --> 02:38.400
+Let's just try, since we're going to do some checkpoints,
+
+02:38.400 --> 02:39.479
+and let's just try saying,
+
+02:39.479 --> 02:44.479
+"Are you sure that the API key is exposed?"
+
+02:44.919 --> 02:46.439
+It's not tell it that's in Get Ignore,
+
+02:46.439 --> 02:49.960
+let's see if it can work that one out for itself.
+
+02:51.659 --> 02:53.520
+Give it a moment to think about that,
+
+02:53.520 --> 02:58.520
+and yeah, then I will see you back,
+
+02:58.560 --> 03:03.080
+and we'll then try looking back, the rewind going back through the check
+
+03:03.080 --> 03:09.240
+point. Okay, and just based on that simple challenge, it did indeed spot that it was wrong
+
+03:09.240 --> 03:14.360
+that there wasn't a key exposed. It corrects itself and updated all of the files. And again,
+
+03:14.360 --> 03:19.439
+you get this up, but here, control O and you get to see all of its thinking and what it's doing
+
+03:19.439 --> 03:25.080
+and how it's making its changes. So control O is worth doing if you want to really dig into the detail there.
+
+03:25.080 --> 03:29.080
+Okay, at this point, we're now going to just look at the checkpoints to see how that works.
+
+03:29.080 --> 03:37.280
+So, first of all, if we look at the review, we can see that the review does not have the critical issue of the.env file,
+
+03:37.280 --> 03:38.479
+the wrong critical issue.
+
+03:38.479 --> 03:43.400
+Let's now try and see if we can rewind one step to before I gave it that hint.
+
+03:43.400 --> 03:48.419
+So, I'm going to slash rewind and you just type rewind
+
+03:48.419 --> 03:49.699
+and press enter.
+
+03:49.699 --> 03:52.159
+And now you can see, we go down,
+
+03:52.159 --> 03:55.580
+it's similar to the sessions resuming.
+
+03:55.580 --> 03:57.000
+You can see how we can go back
+
+03:57.000 --> 04:00.120
+to these different sections of,
+
+04:00.120 --> 04:03.180
+and I'm pressing the current is where the arrow is set right now.
+
+04:03.180 --> 04:04.719
+If I press the up button,
+
+04:04.719 --> 04:08.599
+we go up to are you sure that the API key is exposed?
+
+04:08.599 --> 04:12.039
+And that would take us back to before I sent that.
+
+04:12.039 --> 04:14.520
+And then before that is please do a code review.
+
+04:14.520 --> 04:16.360
+And before that is please summarize the project.
+
+04:16.360 --> 04:17.759
+So let's press there.
+
+04:17.759 --> 04:22.079
+And now we can choose, do we want to restore
+
+04:22.079 --> 04:24.600
+both the conversation, the chat we were having to that point,
+
+04:24.600 --> 04:29.839
+but also the code as well, because will track back or undo that change the
+
+04:29.839 --> 04:35.439
+markdown or just the conversation or just the code or never mind forget it. Let's do both,
+
+04:35.439 --> 04:40.879
+let's go back in time, back we've got and now you can see that it's put my message on the prompt
+
+04:40.879 --> 04:47.759
+there, but if I come back here to review.md, we can see that there is now again that high
+
+04:47.759 --> 04:50.319
+security key, the code has been reverted.
+
+04:50.439 --> 04:55.800
+So both the context of conversation with the model and also it's the code,
+
+04:55.819 --> 04:59.639
+the state of the code has been reverted back to that checkpoint.
+
+04:59.959 --> 05:04.180
+So that hopefully has given you some clarity on the difference between checkpoints
+
+05:04.180 --> 05:09.319
+and rewinding the checkpoint in the current, in the session that you're in versus
+
+05:09.339 --> 05:12.560
+saving a whole session and resuming Claude
+
+05:12.560 --> 05:15.959
+from a previous session, which is a sort of bigger deal
+
+05:15.959 --> 05:17.879
+and doesn't involve changing the code.
+
+05:17.879 --> 05:21.000
+It's just about go back to that state of the context.
+
+05:21.000 --> 05:23.319
+Those are the two concepts that we've worked through.
+
+05:23.319 --> 05:26.079
+And next up, we're going to have some fun.
+
+05:26.079 --> 05:30.040
+So look, I mentioned earlier when we were doing Shift Tab
+
+05:30.040 --> 05:32.319
+and we were saying automatically accept edits.
+
+05:32.319 --> 05:34.639
+I sort of coily called that YOLO.
+
+05:34.639 --> 05:36.360
+And it's not YOLO at all.
+
+05:36.360 --> 05:40.199
+It's just about saying that will automatically approve diffs rather than
+
+05:40.199 --> 05:42.519
+stopping at each one of the diffs.
+
+05:42.959 --> 05:46.439
+YOLO is a bigger deal, as you know, from the times we've done it before.
+
+05:46.759 --> 05:51.160
+And you can do YOLO with Claude Code and it's where YOLO began, I think,
+
+05:51.360 --> 05:53.439
+is what caused the whole movement.
+
+05:53.639 --> 05:56.000
+And that's what we're going to do next.
+
+05:56.000 --> 06:01.360
+We're going to do YOLO and then we're going to do YOLO on steroids and that will then,
+
+06:01.360 --> 06:06.000
+that will be the end of our living dangerously for today.
+
+06:06.000 --> 06:09.600
+Okay, but before we do that, we're going to just check everything in.
+
+06:09.600 --> 06:11.199
+We're going to do a git add dot.
+
+06:11.199 --> 06:13.279
+I think we're going to just go to a couple of changes to files.
+
+06:13.279 --> 06:15.279
+I also, I deleted the code review.
+
+06:15.279 --> 06:20.240
+So there's nothing like that in the git commit minus m before
+
+06:20.240 --> 06:29.959
+yolo, before yoko before yolo. There we go. Done. All right. Clear the screen. It's time
+
+06:29.959 --> 06:31.959
+for me to show you the trick of the day.
+

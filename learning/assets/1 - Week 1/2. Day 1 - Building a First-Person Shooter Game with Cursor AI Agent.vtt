@@ -1,0 +1,341 @@
+WEBVTT
+
+00:00.000 --> 00:06.320
+Okay, so it finished and you can see it ended up creating three files. Now every time you run
+
+00:06.320 --> 00:10.800
+this, it does something a bit different. That's one of the bizarre things about this. For you,
+
+00:10.800 --> 00:16.719
+it might have only created one file, indexed.html. For me, it created three. And I can click on them
+
+00:16.719 --> 00:21.920
+to look at them. This is one file. This is one file. This is presumably quite a long file. There
+
+00:21.920 --> 00:27.039
+it is. And then this is another one, the style sheet. So three files have been created.
+
+00:27.039 --> 00:31.199
+They're sitting here in the directory and you can see what it thought about and what
+
+00:31.199 --> 00:37.840
+it did all the way over here. Okay, it's time to give it a try. So I can look in my file
+
+00:37.840 --> 00:42.960
+system at this directory called instant and we'll see that it has created those three files.
+
+00:42.960 --> 00:48.799
+And I can double click on index dot HTML to launch this website.
+
+00:48.799 --> 00:51.240
+I double click on it and up comes this.
+
+00:51.240 --> 00:53.240
+Arrow Keys to Move and Turn, space to shoot,
+
+00:53.240 --> 00:55.740
+neon arena first person shooter,
+
+00:55.740 --> 00:57.780
+let's give it a whirl, start match.
+
+00:57.780 --> 01:00.960
+Whoa, oh, so I am now controlling,
+
+01:00.960 --> 01:04.000
+oh and I can hit this thing, and oops,
+
+01:04.000 --> 01:07.359
+that is clearly an I was kill.
+
+01:07.359 --> 01:09.900
+I'm not much good at this, but wow,
+
+01:09.900 --> 01:13.120
+we just have a first person shooter game that was created
+
+01:13.120 --> 01:18.480
+out of nothing doing no work whatsoever. Now look, it's entirely possible that when you
+
+01:18.480 --> 01:23.519
+ran your one, it didn't work and something went wrong and I'll show you, but then you can just go
+
+01:23.519 --> 01:28.640
+back and tell your agent that something went wrong and it will fix it for you. But before we do
+
+01:28.640 --> 01:32.200
+that, I do think that I should redeem myself by at least trying to win this.
+
+01:32.200 --> 01:33.640
+And so that I can,
+
+01:33.640 --> 01:34.959
+victory, there we go.
+
+01:34.959 --> 01:38.379
+So that I can show that I have some dexterity.
+
+01:38.379 --> 01:42.000
+So success, we have been victorious in this game.
+
+01:42.000 --> 01:45.079
+And it's pretty cool that it just worked like that.
+
+01:45.079 --> 01:46.599
+It created these files,
+
+01:46.599 --> 01:50.560
+it coded this game from just that simple prompt.
+
+01:50.560 --> 01:52.659
+But let's see if we can make it a little bit better.
+
+01:52.659 --> 01:56.359
+So maybe something didn't work, maybe the shooting didn't work, sometimes for me that
+
+01:56.359 --> 01:58.840
+didn't happen once the keys didn't work at all.
+
+01:58.840 --> 02:01.879
+I've tried this a bunch of times and it's a bit different every time.
+
+02:01.879 --> 02:07.480
+But let's suppose we want the opponent to look a bit more awesome than just a sphere
+
+02:07.480 --> 02:08.479
+like that.
+
+02:08.479 --> 02:10.319
+So let's prompt here.
+
+02:10.319 --> 02:25.000
+I'll say that's great. Please add some detail to the opponent so that it looks more like an enemy.
+
+02:25.000 --> 02:28.000
+Let it be creative.
+
+02:28.000 --> 02:34.000
+That is the instruction that we will give and we will see what comes of this.
+
+02:34.000 --> 02:40.120
+It's now going to add some details and you'll see it editing and changing and I'll come back
+
+02:40.120 --> 02:44.159
+in a second when it's ready for us to test it out again. Okay, well it tells us that
+
+02:44.159 --> 02:48.719
+it's done that. So now let's go back, let's double click on index again, here we have
+
+02:48.719 --> 02:55.780
+it. Oh, there indeed is a slightly more interesting enemy. And I, I, I won again. I'm
+
+02:55.780 --> 03:02.599
+good at this game. It's an easy game. Okay, Well, let's go and do some more edits to the game.
+
+03:02.599 --> 03:04.400
+All right. So back we go.
+
+03:04.400 --> 03:10.599
+We'll say, please add a heads up display, H-U-D,
+
+03:10.599 --> 03:17.000
+and also make the difficulty harder.
+
+03:19.000 --> 03:20.599
+Let's see what it makes of this.
+
+03:20.599 --> 03:24.400
+I'll let it do its planning next moves and it's thinking.
+
+03:24.400 --> 03:29.800
+We will go through in more detail at some point about the planning and then executing
+
+03:29.800 --> 03:34.759
+on these kinds of ideas and I will see you in a second when it's finished its work.
+
+03:34.759 --> 03:38.319
+Okay, it claims again that it has done our bidding.
+
+03:38.319 --> 03:40.639
+Let's see, let's bring up this.
+
+03:40.639 --> 03:43.080
+Here we have it, start match.
+
+03:43.080 --> 03:47.599
+Okay, it's... [laughs it's 30 seems more difficult.
+
+03:47.919 --> 03:50.159
+All right, it achieved that goal.
+
+03:50.159 --> 03:51.159
+Very nice.
+
+03:51.159 --> 03:52.879
+So there you have it.
+
+03:52.879 --> 03:56.400
+There you see a very unbusiness like example
+
+03:56.400 --> 04:00.199
+of how quick and easy it is to have an LLM,
+
+04:00.199 --> 04:04.439
+a language model, be our agent writing code with us.
+
+04:04.439 --> 04:07.759
+It incursor, we had this conversation with the agent. It
+
+04:07.759 --> 04:12.800
+created these three files that are now in instant and by iterating. By adding
+
+04:12.800 --> 04:17.439
+some more comments, we were able to sort of work hand in hand at building this out
+
+04:17.439 --> 04:21.839
+without writing a single line of code and it worked great. And if this didn't
+
+04:21.839 --> 04:27.519
+work out for you, if it didn't work, then please do come back and iterate. And if you
+
+04:27.519 --> 04:29.920
+get stuck and you're not able to get through some point,
+
+04:29.920 --> 04:33.399
+then just delete the whole instant directory and start again,
+
+04:33.399 --> 04:35.839
+create a new instant and give it a second shot.
+
+04:35.839 --> 04:39.120
+Try different model options and try different ways to prompt it.
+
+04:39.120 --> 04:41.279
+This is great experimenting.
+
+04:41.279 --> 04:42.920
+This is not an important project.
+
+04:42.920 --> 04:45.120
+This is just for you to get a first feel for it.
+
+04:45.120 --> 04:47.680
+We will be doing so much of this in the next few weeks
+
+04:47.680 --> 04:51.160
+until you are great at it. But now let me show you
+
+04:51.160 --> 04:52.240
+one more thing.
+
+04:52.240 --> 04:55.060
+Over the next three weeks, we're going to be using a number of different techniques
+
+04:55.060 --> 05:01.480
+to get more and more sophisticated at working hand in hand with AI agents to build complicated
+
+05:01.480 --> 05:06.600
+projects. And I decided to put some of those techniques to the test. I used a technique
+
+05:06.600 --> 05:13.279
+called Ralph Loops with Claude Code to do this same project. And I did what people sometimes call zero-shot,
+
+05:13.279 --> 05:19.360
+which is I just set it off. I didn't give it any feedback. It was one iteration, one prompt
+
+05:19.360 --> 05:24.720
+only in this thing called a Ralph Loop that we will cover. And this is the result of it.
+
+05:24.720 --> 05:30.240
+Let me show you what it came up with now. Okay, I'm going to double click on index HTML. All right,
+
+05:30.240 --> 05:34.920
+well, that looks cool. This is the entry entry screen I'll make this nice and big
+
+05:34.920 --> 05:39.740
+so you can see it fully let's start again.
+
+05:39.740 --> 05:44.639
+"Fights" it says check this out look at that gun look at that oh my goodness
+
+05:44.639 --> 05:50.160
+oh haha try not to get too distracted by this look at his energy there we go
+
+05:50.160 --> 05:58.439
+I won and you can see my health and my kills up at the top. And you can see the map on the bottom right.
+
+05:58.439 --> 06:01.120
+Do you see that, that little display there?
+
+06:01.120 --> 06:02.160
+It's absolutely amazing.
+
+06:02.160 --> 06:03.439
+And there's a health over here.
+
+06:03.439 --> 06:05.879
+I can go and get a health to recover quickly.
+
+06:05.879 --> 06:07.319
+There we go.
+
+06:07.319 --> 06:09.279
+So this, I will stop playing.
+
+06:09.279 --> 06:11.160
+That's not the point of this.
+
+06:11.160 --> 06:14.000
+This is just to give you that teaser,
+
+06:14.000 --> 06:17.660
+that example of what it's like to go pro
+
+06:17.660 --> 06:18.680
+with this toolset.
+
+06:18.680 --> 06:21.279
+This is using Ralph Loops, something that we will cover
+
+06:21.279 --> 06:24.600
+and it's using Cloud Code to build out a whole application
+
+06:24.600 --> 06:25.199
+like this.
+
+06:25.199 --> 06:27.040
+But again, the thing to bear in mind
+
+06:27.040 --> 06:29.720
+is that this is something where I just typed in a prompt
+
+06:29.720 --> 06:30.639
+and let it go.
+
+06:30.639 --> 06:32.319
+I didn't give it any feedback.
+
+06:32.319 --> 06:36.079
+And it came up with this, which I think is really cool.
+
+06:36.079 --> 06:38.240
+This is something that you'll be able to do too
+
+06:38.240 --> 06:39.920
+in just a matter of days.
+
+06:39.920 --> 06:42.800
+All right, so that concludes the instant gratification.
+
+06:42.800 --> 06:44.959
+I hope that you feel gratified.
+
+06:44.959 --> 06:46.360
+That was a lot of fun.
+
+06:46.360 --> 06:48.360
+From this point on, it's all business.
+
+06:48.360 --> 06:54.319
+We'll be building commercial stuff and we're going to start by actually discussing what this course is all about.
+

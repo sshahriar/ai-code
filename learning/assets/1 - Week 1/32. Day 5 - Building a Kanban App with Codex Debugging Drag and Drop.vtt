@@ -1,0 +1,389 @@
+WEBVTT
+
+00:00.000 --> 00:11.279
+All right, so yes, approved, proceed with part five and off it goes. And again, I'll see you in a sec.
+
+00:11.279 --> 00:15.519
+Okay, it says now that part five is waiting for the sign off. Part five, you may remember,
+
+00:15.519 --> 00:19.600
+it's all really about documenting the database because you do want to check this out first.
+
+00:19.600 --> 00:28.079
+So I'm going to open this, let me close this, have a look at this. So the users is a database table that makes sense,
+
+00:28.079 --> 00:33.600
+board one board per user, title stored for future multi-board expansion, that makes sense,
+
+00:34.240 --> 00:41.119
+columns, cards, okay, ordering, strategy, migration, approach. So it's interesting,
+
+00:41.119 --> 00:50.320
+it's, I had thought it would store everything as a JSON blob, so it could be easily provided. But this is possibly a better design. Maybe I
+
+00:50.320 --> 00:56.960
+might not perhaps the most sensible way of doing it. This seems like a pretty good approach,
+
+00:56.960 --> 01:10.480
+I have to say. So we're going to go with it. We are going to say that we're going to approve, approved, proceed.
+
+01:12.079 --> 01:13.560
+Two parts.
+
+01:13.560 --> 01:16.239
+Six, I probably would have done it differently
+
+01:16.239 --> 01:18.239
+but then my way might have been a little bit more hacky.
+
+01:18.239 --> 01:20.480
+This is perhaps a better way of doing it.
+
+01:20.480 --> 01:24.280
+We will see, I'll let it do part six and I'll see you in a sec.
+
+01:24.280 --> 01:26.760
+Okay, well I confirmed part six finished
+
+01:26.760 --> 01:29.079
+and then I checked it, nothing is broken,
+
+01:29.079 --> 01:31.120
+it hasn't yet wired up, the front and the back end.
+
+01:31.120 --> 01:32.400
+Everything still seems to be fine.
+
+01:32.400 --> 01:42.560
+Again, I'm going to do a git status. I'm going to do a git add git commit minus m part six done.
+
+01:43.920 --> 01:51.680
+Okay, so we've taken our git checkpoint and now we come over here and say proceed with part seven.
+
+01:51.680 --> 01:54.120
+I'll also press keep here. So we keep all those changes, proceed with part seven, I'll also press keep here, so we keep all those changes,
+
+01:54.120 --> 01:57.439
+proceed with part seven, and off it goes,
+
+01:57.439 --> 02:00.120
+and we will, yeah, a moment ago,
+
+02:00.120 --> 02:02.280
+I thought that it was already hooked up
+
+02:02.280 --> 02:03.120
+the front and the back end,
+
+02:03.120 --> 02:05.159
+I forgot that's what part seven is all about.
+
+02:05.159 --> 02:07.840
+Part seven is hooking up the front and the back end,
+
+02:07.840 --> 02:10.520
+that's what it's now doing, it's a big deal,
+
+02:10.520 --> 02:12.560
+so this is probably the most significant change
+
+02:12.560 --> 02:15.159
+we've had so far, I will see you when it's ready.
+
+02:15.159 --> 02:20.340
+Okay, it's been in thralling, but it's been 15 minutes on the go here and we are now at the point
+
+02:20.340 --> 02:26.460
+where I do believe we have a part seven ready for us to test and it's been a lot
+
+02:26.460 --> 02:30.259
+of change. A lot has happened, a lot of changes, tests were repeatedly failing
+
+02:30.259 --> 02:33.500
+and it rebuilt them. It had to do a lot of rewriting of the front end for this
+
+02:33.500 --> 02:39.000
+to work. So anyway, let's do the usual ScriptStart Mac.
+
+02:39.680 --> 02:42.479
+Let it come up, see if it does come up successfully.
+
+02:42.479 --> 02:44.120
+It's building a production build,
+
+02:44.120 --> 02:45.180
+which is what I like to see.
+
+02:45.180 --> 02:48.340
+This is these are the steps that it would need to do.
+
+02:48.340 --> 02:50.280
+Okay, and it believes that it's running.
+
+02:50.280 --> 02:51.879
+Let's go and take a look.
+
+02:51.879 --> 02:54.759
+Here it is, localhost 8000.
+
+02:54.759 --> 02:56.000
+Okay, so far so good.
+
+02:56.000 --> 02:59.659
+It's serving something here, user and password.
+
+02:59.659 --> 03:02.879
+We'll get those usual warnings. Here it comes, okay, okay.
+
+03:04.080 --> 03:10.240
+And not now, alright. So here we have it. Let's move this over here.
+
+03:12.560 --> 03:14.319
+Well, that's not a good sign, is it?
+
+03:15.680 --> 03:20.159
+That's interesting. That one did move. There's something janky with the way that they move.
+
+03:20.159 --> 03:22.039
+But anyway, let's start by seeing if this has
+
+03:22.039 --> 03:27.520
+worked. So we've moved this over here, let's bring up a separate browser, let's
+
+03:27.520 --> 03:32.639
+we'll actually close that down altogether, come in again, log in as user
+
+03:32.639 --> 03:39.659
+password and see what's happened there and it has indeed come up fine, it's
+
+03:39.659 --> 03:46.240
+moved it to the second column, it did get persisted. That's pretty impressive. This is working nicely.
+
+03:46.240 --> 03:51.599
+We just have to fix this problem with the drag and drop. So I'll dig into that a bit and then
+
+03:51.599 --> 03:55.919
+we'll give it a message. Okay, so I'm going to stop the server. I'm going to do a git
+
+03:56.800 --> 04:01.840
+status. I'm just going to make sure we capture where we are, git add dot git commit,
+
+04:09.000 --> 04:14.000
+This M part seven built some drag and drop bugs.
+
+04:18.000 --> 04:24.000
+Okay, and now I'm going to see if I can't prompt it to fix these UI bugs. The persistence is working, but the drag and drop
+
+04:25.000 --> 04:41.160
+seems to only work occasionally. Most of the time I drag a card the next column highlights,
+
+04:41.160 --> 04:51.519
+but when I release the card goes back to its original position.
+
+04:53.959 --> 04:56.040
+Please test thoroughly and fix.
+
+04:56.839 --> 04:58.480
+Fix. I'll reproduce the problem.
+
+05:00.759 --> 05:04.920
+Fix it and confirm it is fixed.
+
+05:05.120 --> 05:06.560
+That is the way to do it.
+
+05:06.560 --> 05:11.279
+Always make sure that you're very prescriptive about debugging
+
+05:11.279 --> 05:12.959
+and we'll see how it gets on with this.
+
+05:12.959 --> 05:14.079
+I will see you in a sec.
+
+05:14.079 --> 05:18.399
+Okay, so this has been an interesting debugging experience just trying to get the drag and
+
+05:18.399 --> 05:19.759
+drop to work.
+
+05:19.759 --> 05:21.600
+It's been going at it for half an hour.
+
+05:21.600 --> 05:27.980
+It's been continually in this loop, it seems, really stuck in a rut of trying again and again.
+
+05:27.980 --> 05:31.480
+And I can see it keeps saying it's likely because of this.
+
+05:31.480 --> 05:34.759
+I keep seeing it like jumping to conclusions, which is such a
+
+05:34.759 --> 05:39.500
+such a classic move by the LLM. And then somewhat to my surprise, I stopped it.
+
+05:39.500 --> 05:42.759
+You can stop it by pressing like the stop button that's here. And I just
+
+05:42.759 --> 05:47.160
+decided to go in and try it myself. And I found that it has in fact fixed it
+
+05:47.160 --> 05:51.339
+along the way. At some point in the last half an hour, it did actually fix it.
+
+05:51.339 --> 05:56.959
+It's working great, but the tests that it was running to try and test drag and drop were failing.
+
+05:56.959 --> 06:01.120
+And so it just continually decided that it hadn't fixed it.
+
+06:01.120 --> 06:06.240
+So kind of bizarre, but it shows that that human involvement was needed to be able to
+
+06:06.240 --> 06:09.160
+check and confirm that actually it's working fine.
+
+06:09.160 --> 06:12.720
+So now with that in mind, let me show you it working right now.
+
+06:12.720 --> 06:16.079
+So I'm going to bring up my server with startmac.shell.
+
+06:16.079 --> 06:17.240
+Up it comes.
+
+06:17.240 --> 06:18.639
+Everything is starting up.
+
+06:18.639 --> 06:22.100
+Go to a browser, go to localhost 8000, here we go.
+
+06:22.100 --> 06:23.839
+We're going to go in as user password.
+
+06:23.839 --> 06:27.439
+We're going to get that angry message saying it's not a good password.
+
+06:27.439 --> 06:28.740
+Yes, yes, we know that.
+
+06:28.740 --> 06:29.540
+Here we are.
+
+06:29.540 --> 06:30.759
+We're at a campman studio.
+
+06:30.759 --> 06:33.819
+I can now indeed drag and drop and it works.
+
+06:33.819 --> 06:34.600
+And there it is.
+
+06:34.600 --> 06:36.560
+And now we will do some more dragging.
+
+06:36.560 --> 06:37.920
+I'll drag that one over there.
+
+06:37.920 --> 06:39.399
+Now this is empty.
+
+06:39.399 --> 06:40.319
+See all of that. I'm going
+
+06:40.319 --> 06:44.399
+to open a new tab. I'm going to close this tab down. I'm going to go back to localo state thousand.
+
+06:44.399 --> 06:50.480
+I'm going to log in again as user and password and sign in and back we are. And you can see that
+
+06:50.480 --> 06:58.240
+that has worked. We've got an empty column here. Everything is looking great. Congratulations to our
+
+06:58.240 --> 07:03.920
+agent to codex. Things are going well. Okay, so back I go here, I'm going to stop that server,
+
+07:03.920 --> 07:13.439
+I'm also going to do a git status, and I'm going to do a git add dot and git commit -m
+
+07:14.800 --> 07:17.680
+sub part seven working.
+
+07:19.199 --> 07:26.519
+And there we've done it, we're in good shape, we now have part seven is in good shape, it's time
+
+07:26.519 --> 07:31.319
+for us to move on. Let's just quickly take a look at the plan to remind ourselves of
+
+07:31.319 --> 07:38.139
+where we are here, part seven is done, and we're going on to part eight, which is AI
+
+07:38.139 --> 07:42.220
+connectivity. And now I have something important to discuss with you.
+
+07:42.220 --> 07:46.920
+Over the course of this time that we've spent together going through parts one to seven,
+
+07:46.920 --> 07:50.040
+our context window has been gradually filling up.
+
+07:50.040 --> 07:52.040
+We don't actually get that display that we get
+
+07:52.040 --> 07:53.639
+in when we're using cursor.
+
+07:53.639 --> 07:56.759
+It's handling it for us, but we know that we're filling
+
+07:56.759 --> 07:59.040
+things up and we've certainly reached a point now
+
+07:59.040 --> 08:00.759
+where it's gonna be summarizing and dropping
+
+08:00.759 --> 08:02.920
+some of the messages and so on.
+
+08:02.920 --> 08:06.199
+This is something that we are going to obsess over
+
+08:06.199 --> 08:09.759
+when we use Cloud Code next week and everyone that is a pro
+
+08:09.759 --> 08:15.839
+on Claude Code obsesses over this and we don't have as much visibility to it but we should obsess
+
+08:15.839 --> 08:22.240
+over it just as much nonetheless and a technique that is a common good practice but it feels kind
+
+08:22.240 --> 08:33.799
+of galling to do it is that at some point we should stop the chat and start again and have it read plan.md to understand where we've got.
+
+08:33.799 --> 08:39.700
+So that's what we're going to do now. I'm going to start by saying, please confirm that
+
+08:39.700 --> 08:57.000
+plan.md is up to date with all the latest, including any design decisions that you made. Let me know when ready. So we're going to update plan
+
+08:57.000 --> 09:02.519
+dot MD and make sure that that we're super happy with it. And then we're going to do
+
+09:02.519 --> 09:07.960
+a big step of resetting the chat. Okay, that is done. So I'm going to press keep here
+
+09:07.960 --> 09:18.879
+to keep the changes. I'm just going to do one more get status and just just to see it has indeed updated plan.md I'm just going to do a git.get commit
+
+09:19.840 --> 09:38.120
+as m final tweaks, final updates after part seven and that is done and here we go. And what I'm now going to do is over here,
+
+09:38.120 --> 09:42.679
+I am going to right click here and I'm going to say new chat,
+
+09:42.679 --> 09:45.440
+starting all over again, built with agent.
+
+09:45.440 --> 09:49.600
+Here we go, it's time for us to go on to part eight.
+

@@ -1,0 +1,563 @@
+WEBVTT
+
+00:00.000 --> 00:04.320
+Well, look, I'm honestly shocked, but it only took seven minutes or something,
+
+00:04.320 --> 00:06.799
+uh, at six minutes, less than this, and- and, uh,
+
+00:06.799 --> 00:09.000
+less time than it took to write that document.
+
+00:09.000 --> 00:11.000
+And it went through all of those to-dos,
+
+00:11.000 --> 00:14.800
+and it then gave me this beautiful output, explaining what it's done
+
+00:14.800 --> 00:17.199
+with the testing, with- with all of the things.
+
+00:17.199 --> 00:19.199
+There's all of the tasks that it completed,
+
+00:19.199 --> 00:23.600
+and it says- it's made 90-plus comprehensive tests,
+
+00:23.600 --> 00:25.600
+which sounds amazing.
+
+00:25.600 --> 00:29.920
+So, with all of that, it's then made a PR that we can then
+
+00:29.920 --> 00:35.039
+go in or just made it made it made this branch that we can then make a PR and then merge in
+
+00:35.039 --> 00:41.679
+the changes and see what we think. Let's do that. So I go in, I press create PR, up it comes,
+
+00:41.679 --> 00:51.000
+we can come down and have a look at all the things that is built here. It's changed 21 files with 1600 lines of code in here. You can see some of
+
+00:51.000 --> 00:56.920
+this stuff, this looks, well I don't have time to go through this carefully but I'm
+
+00:56.920 --> 01:04.359
+pleased to see that there's plenty of what appears to be not unwieldy, there's some initial
+
+01:04.359 --> 01:10.760
+setup, not unwieldy functions here. Okay, well we'll just go with that.
+
+01:10.760 --> 01:12.439
+We're going to say create pull request.
+
+01:12.439 --> 01:13.799
+We're going to do a merge.
+
+01:16.359 --> 01:17.599
+It should be fine.
+
+01:17.599 --> 01:22.280
+Merge pull request, confirm merge, and that is done.
+
+01:22.280 --> 01:23.480
+How about that?
+
+01:23.480 --> 01:25.239
+And now of course you could just go in
+
+01:25.239 --> 01:26.760
+and make a ton more issues.
+
+01:26.760 --> 01:28.840
+Make an issue to go and carry out the tests
+
+01:28.840 --> 01:30.060
+to do a code review.
+
+01:30.060 --> 01:33.040
+You could be just just throwing in lots and lots of issues
+
+01:33.040 --> 01:36.560
+to get your project done. But we have other things to try.
+
+01:36.560 --> 01:40.400
+So just in case you're getting disorientated by how much we're covering today, I just want
+
+01:40.400 --> 01:44.280
+to remind you of the three techniques we're going to be doing. And we've done the blue
+
+01:44.280 --> 01:50.719
+and the purple and we're about to do the yellow. The blue, we used native sandboxing/sandbox
+
+01:50.719 --> 01:54.920
+so that we can control the environment we're running in and auto-approve a ton of
+
+01:54.920 --> 02:00.239
+stuff. That was the blue. And then we did the purple and the purple within the purple.
+
+02:00.239 --> 02:05.959
+There are five different ways to run Claude code in a sandbox out on the web. A couple
+
+02:05.959 --> 02:09.960
+of them didn't work for me because I'm florobics having production problems, but the mobile
+
+02:09.960 --> 02:17.479
+one was really cool. And the GitHub one was absolutely fantastic. I hope you like that. That is such a way to work.
+
+02:17.479 --> 02:19.520
+Imagine combining that with the techniques
+
+02:19.520 --> 02:20.439
+we learned last week,
+
+02:20.439 --> 02:22.860
+how you could just be firing off GitHub issues
+
+02:22.860 --> 02:25.199
+and just letting it run in the cloud.
+
+02:25.199 --> 02:28.699
+Okay, and now finally, the yellow,
+
+02:28.699 --> 02:31.240
+the third approach, which is to use
+
+02:31.240 --> 02:34.080
+a third party cloud sandbox.
+
+02:34.080 --> 02:36.520
+And I suggest this is optional for you,
+
+02:36.520 --> 02:39.360
+because this is something which you may be very satisfied
+
+02:39.360 --> 02:43.360
+with what we've already covered, very happy with AnthropiX Cloud if you want to use any
+
+02:43.360 --> 02:46.400
+cloud and not need to use a third party cloud sandbox.
+
+02:46.400 --> 02:50.639
+It's more, particularly if you're not using Cloud, say, this is something which is useful
+
+02:50.639 --> 02:52.120
+to know that these things exist.
+
+02:52.120 --> 02:54.240
+They are a new up and coming thing.
+
+02:54.240 --> 02:58.159
+And in particular, I'm going to pick one which has got a lot of press recently made
+
+02:58.159 --> 03:00.219
+by Fly.io, but there are a bunch of them,
+
+03:00.219 --> 03:01.860
+and you could pick whichever one you like,
+
+03:01.860 --> 03:03.740
+I'll give you this example.
+
+03:03.740 --> 03:05.159
+We're going to set up an account.
+
+03:05.159 --> 03:08.080
+The product is called Sprite.dev,
+
+03:08.080 --> 03:10.639
+and it's this idea of having a really simple,
+
+03:10.639 --> 03:12.759
+nice sandbox in the cloud.
+
+03:12.759 --> 03:15.280
+We'll set one up, we'll use it,
+
+03:15.280 --> 03:16.639
+and then we will move on.
+
+03:16.639 --> 03:18.039
+We won't dwell on it too much.
+
+03:18.039 --> 03:18.879
+Let's go do that.
+
+03:18.879 --> 03:21.360
+So this is what you get if you go to Sprite.dev
+
+03:21.360 --> 03:22.960
+in your favorite browser.
+
+03:22.960 --> 03:24.479
+You get an ISO website,
+
+03:24.479 --> 03:28.439
+stateful sandbox environments with checkpoint and restore.
+
+03:28.439 --> 03:31.199
+So they give you this sort of isolated world
+
+03:31.199 --> 03:33.539
+where you can operate in, but they add in some extra features
+
+03:33.539 --> 03:36.520
+to make it super useful, like being able to go back in time.
+
+03:36.520 --> 03:39.360
+It's a hardware isolated execution environment
+
+03:39.360 --> 03:43.199
+for arbitrary code, a persistent Linux computer,
+
+03:43.199 --> 03:46.680
+whether it's an AI agent like Cloud Code, or a binary
+
+03:46.680 --> 03:52.240
+your user just uploaded sprites are the simplest answer for where should I run a blob of code.
+
+03:52.240 --> 03:55.439
+And look at that right now they're offering $30 of trial credits, maybe you have something
+
+03:55.439 --> 03:56.439
+similar.
+
+03:56.439 --> 03:59.599
+It says create like 500 sprites with read.
+
+03:59.599 --> 04:00.599
+That sounds good.
+
+04:00.599 --> 04:03.560
+So I'm going to sign up now and go through a quick sign up flow.
+
+04:03.560 --> 04:04.879
+It's completely up to you.
+
+04:04.879 --> 04:06.719
+You may have had your fill of remote
+
+04:06.719 --> 04:10.400
+execution, but should you wish to then go through it with me and I'll see you back in a sec.
+
+04:10.400 --> 04:15.199
+And after signing up, it is telling me it needs my credit cards, which I know for some of you is
+
+04:15.199 --> 04:19.839
+like, "Uh-uh." So even despite the free credits, it's going to want me to put in a card,
+
+04:19.839 --> 04:26.240
+which I will do now. But as I say, you can choose to just watch me go through it and consider it
+
+04:26.240 --> 04:32.620
+for the future if you'd prefer. Now after I put in my credit card, it then slightly confusingly bounced me to fly.io's
+
+04:32.620 --> 04:38.319
+landing page because Sprites.dev is built by fly.io and I had to just know to get back
+
+04:38.319 --> 04:40.959
+to Sprites.dev and then I was then logged in.
+
+04:40.959 --> 04:46.879
+And the first screen it shows you has the instruction that you use to install the Sprite
+
+04:46.879 --> 04:52.680
+command line interface, the Sprite command. And that instruction contains within it your key.
+
+04:52.680 --> 04:54.879
+And so I can't show it to you because it has my key
+
+04:54.879 --> 04:56.720
+and you'll be able to mimic me,
+
+04:56.720 --> 04:58.040
+which would be no good,
+
+04:58.040 --> 05:00.439
+but you have to take that exactly as it says,
+
+05:00.439 --> 05:03.720
+paste it into any terminal and this one will do just fine,
+
+05:03.720 --> 05:05.639
+the one we've already got for finally,
+
+05:05.639 --> 05:07.680
+which I have right here in VS Code,
+
+05:07.680 --> 05:09.319
+put it in there and it will work
+
+05:09.319 --> 05:11.240
+and then Sprite will be there.
+
+05:11.240 --> 05:12.560
+And once you've done that, you type
+
+05:12.560 --> 05:18.240
+sprite login and it will then pop up a browser window and you sign in with the same credentials
+
+05:18.240 --> 05:22.639
+you just used to make sure that you're then fully signed in. And I of course have already
+
+05:22.639 --> 05:29.519
+done that. So now I am signed in and I can use the command sprite and you will not believe how
+
+05:29.519 --> 05:34.160
+easy it now is. Here we go. Hold on to her. You're not going to believe this. I'm going to type
+
+05:34.160 --> 05:41.519
+Sprite, and then the command is Sprite create. And that means I want to build an instance, an engine
+
+05:41.519 --> 05:46.480
+up on the cloud that I can just use myself. And you give it a name. So we'll call it like, I don't
+
+05:46.480 --> 05:52.560
+know, like, um, remote worker remote. We'll call it remote fight. We'll call it finally worker.
+
+05:52.560 --> 05:57.040
+So it's clearly something that we're building for us. Finally, worker.
+
+05:57.040 --> 05:58.040
+It's going to be our worker.
+
+05:58.040 --> 06:01.439
+Created, finally, worker in 0.6 seconds.
+
+06:01.439 --> 06:06.079
+Fly.io take great pains to tell you how proud they are
+
+06:06.079 --> 06:09.480
+of how fast it is to spin up your own box,
+
+06:09.480 --> 06:11.240
+which in the past has been something
+
+06:11.240 --> 06:14.040
+that has been problematic, kind of getting access
+
+06:14.040 --> 06:17.160
+and installing everything on a server in the cloud.
+
+06:17.160 --> 06:19.600
+And for them, it is bam, it's ready for you.
+
+06:19.600 --> 06:21.519
+So it is there.
+
+06:21.519 --> 06:24.560
+And we've created it and we can now use it.
+
+06:24.560 --> 06:26.480
+And this prompt, Sprite, that Sprite,
+
+06:26.480 --> 06:29.360
+is telling us that we are here connected
+
+06:29.360 --> 06:30.600
+to something that is remote.
+
+06:30.600 --> 06:33.699
+We're connected to this box out on the cloud.
+
+06:33.699 --> 06:36.000
+Okay, so if I run the command LS
+
+06:36.000 --> 06:38.000
+to see what is in this directory
+
+06:38.000 --> 06:39.319
+that we are sitting in on the cloud,
+
+06:39.319 --> 06:40.399
+there's nothing there at all.
+
+06:40.899 --> 06:42.000
+Well, let's change that.
+
+06:42.000 --> 06:46.800
+Let's do git clone and then paste in our repo, our finally repo.
+
+06:46.899 --> 06:48.800
+And bam, now doing LS.
+
+06:48.800 --> 06:51.600
+This finally is there on this box in the cloud.
+
+06:51.699 --> 06:52.800
+CD finally.
+
+06:52.899 --> 06:53.899
+Let's look at it.
+
+06:54.100 --> 07:00.500
+It's everything is there a backend, cloud.md, a license, the planning directory and a read me.
+
+07:00.699 --> 07:01.500
+Okay.
+
+07:01.600 --> 07:04.800
+Well, that's something we've got up there. We've got our repo here. What
+
+07:04.800 --> 07:09.680
+what should we do next? Well, I've got an idea of what we should do next. We should run Claude. We
+
+07:09.680 --> 07:16.319
+should just type Claude and guess what? It comes pre-installed on all of the boxes. So when you run
+
+07:16.319 --> 07:26.000
+Claude, up comes Claude Code. And it says choose the style that works and the usual questions that you may remember from the first time you ever launch Cloud Code.
+
+07:26.399 --> 07:37.000
+We'll say that we want dark mode and then it's going to want us to log in and this is confusing because it's going to want to do this Cloud account login.
+
+07:37.000 --> 07:47.259
+But this is all running out there on the Cloud. So it's going to try and like you know login, bring up a browser window on some remote box in the cloud. But no, they've thought of all of this.
+
+07:47.259 --> 07:48.620
+They've got it all worked out
+
+07:48.620 --> 07:50.620
+so that when I press one here,
+
+07:50.620 --> 07:54.540
+it's launches the browser locally on my computer.
+
+07:54.540 --> 07:59.100
+I press authorize, and then I go back here again,
+
+07:59.100 --> 08:02.740
+and I've logged in to cloud on this remote box.
+
+08:02.740 --> 08:04.379
+Press enter to continue.
+
+08:04.379 --> 08:06.060
+Press enter to continue.
+
+08:06.060 --> 08:09.160
+Warning, Cloudco running in bypass permissions mode.
+
+08:09.160 --> 08:10.399
+Yes, I accept.
+
+08:10.399 --> 08:12.519
+They have automatically configured clords
+
+08:12.519 --> 08:16.519
+to be in dangerously skipped permissions in Yolo mode.
+
+08:16.519 --> 08:18.680
+And that's okay because it's running
+
+08:18.680 --> 08:21.680
+on this isolated hardware out there on the cloud.
+
+08:21.680 --> 08:23.600
+It doesn't matter what it does.
+
+08:23.600 --> 08:25.040
+Nothing can can happen.
+
+08:25.040 --> 08:28.959
+It's just running with a public repo out on the cloud.
+
+08:28.959 --> 08:31.240
+And bypass permissions is on.
+
+08:31.240 --> 08:34.720
+And this is a classic example of what it's like
+
+08:34.720 --> 08:37.600
+to run on a server in the cloud
+
+08:37.600 --> 08:41.799
+in a total sandbox on a third party sandbox.
+
+08:41.799 --> 08:43.000
+And as a particular pro point,
+
+08:43.000 --> 08:44.360
+you might have noticed that it's running
+
+08:44.360 --> 08:46.539
+an older version of Cloud Code,
+
+08:46.539 --> 08:49.879
+and it's using Opus 4.5,
+
+08:49.879 --> 08:51.240
+and I want to be on Opus 4.6.
+
+08:51.240 --> 08:54.779
+And that's only because it's like a fresh install on this box.
+
+08:54.779 --> 08:58.799
+If I get out of Claude code and then I launch Claude code again,
+
+08:58.799 --> 09:05.279
+it automatically updates itself and we are now on the latest version and on Opus 4.6.
+
+09:05.279 --> 09:08.519
+And here we are running a version of Claude code.
+
+09:08.519 --> 09:11.080
+It feels like it's just running on my box, right?
+
+09:11.080 --> 09:16.240
+It looks like, but especially as I'm using the terminal inside VS code in the finally repo,
+
+09:16.240 --> 09:21.919
+it feels just like it's running here, but it's not. This is running out there on the cloud in a
+
+09:21.919 --> 09:27.200
+third party sandbox. And so let's give it a command. Here we go. Please read all the documentation
+
+09:27.200 --> 09:30.960
+in the planning folder. The market data backend has been implemented with tests,
+
+09:30.960 --> 09:39.480
+carry out a comprehensive code review, run all the tests, write your conclusions, do market data review in the planning folder. And we can set
+
+09:39.480 --> 09:43.360
+this off. It's running out there on the cloud, not on my
+
+09:43.360 --> 09:47.360
+computer in this, this, this third way, this different way
+
+09:47.360 --> 09:52.679
+of doing it, using a third party sandbox instance. And this
+
+09:52.679 --> 09:55.240
+is really cool. And this is, this is very much, this is the
+
+09:55.240 --> 09:58.320
+latest, this is like the pioneering way to do it.
+
+09:58.320 --> 10:02.679
+And it's particularly, it's so easy to spawn new instances
+
+10:02.679 --> 10:04.480
+and run things like this.
+
+10:04.480 --> 10:07.340
+And yeah, it's completely isolated.
+
+10:07.340 --> 10:11.039
+So this is great, this is up and running,
+
+10:11.039 --> 10:14.820
+and it's running on the fly.io hardware,
+
+10:14.820 --> 10:18.279
+on this sprites.bev hardware, not on anthropics hardware,
+
+10:18.279 --> 10:20.200
+and certainly not on my computer.
+
+10:20.200 --> 10:22.919
+We will let it do its thing and I will report back.
+
+10:22.919 --> 10:25.919
+Hopefully, when we have a market data review.md.
+

@@ -1,0 +1,482 @@
+WEBVTT
+
+00:00.000 --> 00:03.520
+Okay, so it's saying that it's done that part and everything is good.
+
+00:03.520 --> 00:07.679
+I just want it to ask it to explain itself about this requirements.text.
+
+00:07.679 --> 00:15.199
+Can you explain why you needed a requirements.text?
+
+00:15.759 --> 00:19.600
+I thought we were using UV.
+
+00:21.359 --> 00:26.320
+Okay, let's see what it says. UV still needs an input and use requirements.
+
+00:26.320 --> 00:27.280
+Okay, that's fine.
+
+00:27.280 --> 00:28.280
+That's fine. So I did.
+
+00:28.280 --> 00:30.079
+I, if you know about UV,
+
+00:30.079 --> 00:31.839
+it didn't set up a UV project,
+
+00:31.839 --> 00:33.000
+which is what I would have done.
+
+00:33.000 --> 00:35.920
+It used requirements.txt, but it was still using UV.
+
+00:35.920 --> 00:38.359
+It claims at least, maybe I should check that.
+
+00:38.359 --> 00:41.880
+But I think that sounds fine.
+
+00:41.880 --> 00:44.560
+If we look here, we should see the Dockerfile.
+
+00:44.560 --> 00:47.759
+This Dockerfile is the,
+
+00:47.759 --> 00:51.039
+this is where you describe the Docker image. If
+
+00:51.039 --> 00:54.320
+you remember when I, when I explained how Docker works, and you can look through this
+
+00:54.320 --> 00:59.759
+to see that it's using Python 312, which is always a sensible idea for this kind of stuff.
+
+00:59.759 --> 01:06.200
+It's, yep, it's brought in the requirements.txt. And yes, it has indeed done. That's not
+
+01:06.200 --> 01:11.359
+the best way of doing it for people that know UV but it doesn't matter that's fine. It works
+
+01:11.359 --> 01:19.040
+for this purpose. I'm happy with that. Okay, good. Now maybe I can ask it please. Please tell me
+
+01:20.000 --> 01:35.560
+how I test this part myself. Okay, so we'll get it to explain to us how we can check that part two is working. 'Cause we want to trust but verify at each step.
+
+01:35.560 --> 01:36.920
+Okay, so it's saying first of all
+
+01:36.920 --> 01:38.519
+that we should bring up a terminal.
+
+01:38.519 --> 01:39.840
+Here's a terminal.
+
+01:39.840 --> 01:42.799
+Right here, I can press the plus button to have a terminal.
+
+01:42.799 --> 01:47.799
+And I should go to run scripts start Mac.sh.
+
+01:51.280 --> 01:59.700
+So I'm gonna do scripts start Mac dot sh and it says permission denied because
+
+01:59.700 --> 02:04.980
+I need to hang on. No, I'm just going to I'm just going to I know what to do but I rather
+
+02:04.980 --> 02:12.879
+than do anything I'm just going to show this allow. So if you have a problem like that,
+
+02:12.879 --> 02:20.719
+you just tell it the problem and it should fix it. And now it's telling me to do that again. So now I'm going to do, sorry, I'm going to go over to my terminal.
+
+02:20.719 --> 02:24.400
+Just here is where you flip between the different terminals you have open. I'm going
+
+02:24.400 --> 02:30.680
+to run scripts slash start Mac dot SH. That's the script that should be starting this.
+
+02:30.680 --> 02:36.120
+Up it goes. It has, it has started. And now it's telling me that I should go to local
+
+02:36.120 --> 02:40.000
+host colon 8000 to see this. And that's what we'll do. Okay. So I'm I should go to localhost colon 8000 to see this and that's what we'll do.
+
+02:40.000 --> 02:44.479
+Okay, so I'm going to go to localhost colon 8000.
+
+02:49.280 --> 02:53.360
+Sorry, localhost 8000 slash and here we go.
+
+02:55.280 --> 03:06.960
+Try slash health and status is okay and try slash API slash hello. Hello from fast API. Everything
+
+03:06.960 --> 03:14.719
+is working. Thank you. Thank you to our GitHub co pilot, part two is working. Okay, and that's
+
+03:14.719 --> 03:24.000
+telling us that we can run the stop script. I know as well, I can just do control C and c and that will work perfectly well too. Okay, that's good.
+
+03:25.520 --> 03:28.199
+Part two is done.
+
+03:28.199 --> 03:29.039
+Done.
+
+03:30.159 --> 03:35.159
+Are all the success criteria for part two achieved.
+
+03:43.759 --> 03:45.680
+Let's see what it says.
+
+03:45.680 --> 03:46.680
+Not fully.
+
+03:46.680 --> 03:47.680
+We verified something.
+
+03:47.680 --> 03:51.479
+We did not measure 80% coverage.
+
+03:51.479 --> 03:52.479
+Let me see.
+
+03:52.479 --> 03:53.479
+Or valid scripts on PC or Linux.
+
+03:53.479 --> 03:56.039
+Well, I'm not going to be using PC or Linux for this.
+
+03:56.039 --> 04:05.280
+So I'm good to skip that the PC Linux.
+
+04:05.280 --> 04:11.000
+And I can confirm I've tested all the roots.
+
+04:12.719 --> 04:21.980
+Let's mark that complete and proceed with part three.
+
+04:21.980 --> 04:27.720
+On it goes. So let's go and have a look and have a look at,
+
+04:27.720 --> 04:30.000
+remind ourselves what part three is all about,
+
+04:30.000 --> 04:34.959
+but I imagine this is going to be an exciting moment for us when we actually get to see a proper
+
+04:34.959 --> 04:43.279
+front end. Let's go into the docs. Let's go into plan. Let's open preview and see what part three
+
+04:43.279 --> 04:51.360
+it is indeed adding in a front end, a static front end. You can notice over here that it's showing us that there are 16 files
+
+04:51.360 --> 04:56.560
+changed and it shows you the sort of edits, the diffs. And this is where you can see what
+
+04:56.560 --> 05:05.120
+differences are happening, like what is being changed by the agent and see what's being added,
+
+05:05.120 --> 05:08.959
+what's being removed and so on. And pressing the keep button means that you're saying,
+
+05:08.959 --> 05:14.319
+"I agree to those diffs." And there's a school of thought that says that you should look through every single diff
+
+05:14.319 --> 05:17.759
+individually. We're not going to do that. I'm just pressing the keep button. We're going to be
+
+05:17.759 --> 05:21.759
+accepting changes like that unless there's something that we're particularly concerned about,
+
+05:21.759 --> 05:26.800
+like maybe when we first use the AI aspect. All right. Anyway, I will see you back in a second
+
+05:26.800 --> 05:31.199
+when part three is ready for testing. I'm going to stop for a moment while it's in the middle
+
+05:31.199 --> 05:35.399
+thinking. It's been going for about 10 minutes to mention something interesting that I'm seeing happening here.
+
+05:35.759 --> 05:39.120
+I made that perhaps I'll keep allowing things as they go.
+
+05:39.319 --> 05:44.079
+Maybe perhaps a foolish point of saying that it had to achieve 80% unit test
+
+05:44.079 --> 05:48.639
+coverage and it's been spending the last like most of the time it wrote the
+
+05:48.639 --> 05:49.519
+stuff very quickly.
+
+05:49.720 --> 05:54.560
+It's been bogged down in testing, building long complicated tests to try
+
+05:54.560 --> 05:56.240
+and get to make sure that it's covered
+
+05:56.240 --> 05:59.879
+things but it's not doing it in an intelligent way. It's not testing things
+
+05:59.879 --> 06:03.240
+that really matter. It's adding in tests just for the sake of it.
+
+06:03.240 --> 06:08.199
+There are testing things in a way that are not considered helpful way to test
+
+06:08.199 --> 06:12.120
+things just in order to achieve the objective. And this is a great example
+
+06:12.120 --> 06:17.120
+of a trap that you can fall into with LLM's that they're so eager to follow the
+
+06:17.120 --> 06:19.240
+letter of the rules that they don't push back and say,
+
+06:19.240 --> 06:25.079
+"You know what, I know you wanted 80% test coverage, but we're not making productive use of time."
+
+06:25.079 --> 06:30.139
+So that's something to note. Now it says everything is done, it's done lots and lots of testing.
+
+06:30.139 --> 06:34.220
+It's been spending most of the time testing, it's done both front and and back end tests,
+
+06:34.220 --> 06:41.040
+so we should now be in really good shape. It's time for us to try out part three. Okay, so with part three completed, we're going to
+
+06:41.040 --> 06:46.560
+give it a test. I'm going to do the start Mac script. You should be doing start PC script.
+
+06:46.560 --> 06:52.720
+Up it comes. The server has come up. It's running. So now I should bring up my browser and go to
+
+06:52.720 --> 07:02.480
+localhost, localhost colon 8000. And we are hoping to see a canamban. We do see a camban.
+
+07:02.480 --> 07:03.480
+Here we have it.
+
+07:03.480 --> 07:04.639
+This is the camban.
+
+07:04.639 --> 07:06.279
+The front end is being served.
+
+07:06.279 --> 07:07.199
+It looks great.
+
+07:07.199 --> 07:08.519
+We should be able to move that over there.
+
+07:08.519 --> 07:09.800
+Yes, we can.
+
+07:09.800 --> 07:13.000
+We have a camban front end view,
+
+07:13.000 --> 07:15.079
+looking very fancy indeed.
+
+07:15.079 --> 07:16.519
+The good old codecs one
+
+07:16.519 --> 07:18.920
+that we liked so much, camban studio.
+
+07:18.920 --> 07:19.759
+All right.
+
+07:19.759 --> 07:21.480
+I'd say that that's success.
+
+07:21.480 --> 07:22.800
+It's time to move forwards.
+
+07:22.800 --> 07:26.160
+I'm going to say approved.
+
+07:26.160 --> 07:56.959
+Move to part four. By the way, going forwards. Please update the plan to only If it's sensible to do so, avoid adding unnecessary tests just to hit 80%.
+
+07:56.959 --> 08:12.360
+Focus on useful, on valuable tests, not hitting 80% is okay. All right, let's give it that direction. That's a good re-steer that maybe
+
+08:12.360 --> 08:18.959
+will help us out later on. But now it's moving on. It's going to step four. I will see you
+
+08:18.959 --> 08:22.920
+in a minute when we have that done. And while it's running, I'll just mention again,
+
+08:22.920 --> 08:27.560
+looking here at these diffs, you see the green of the new lines it's adding. The red
+
+08:27.560 --> 08:30.800
+is where it took something out because it replaced it with that. You can
+
+08:30.800 --> 08:37.440
+press keep and undo on each of these diffs manually or I can just come here and press keep here
+
+08:37.440 --> 08:43.519
+and everything is accepted. And you know, as Andre would say, watch it like a hawk, but I think
+
+08:43.519 --> 08:48.320
+you probably don't need to review all of the diffs at this point, just the sensitive ones that
+
+08:48.320 --> 08:52.759
+that you really care about. And I'm going to definitely allow for that.
+
+08:52.759 --> 08:53.600
+I'll see you in a minute.
+
+08:53.600 --> 08:55.580
+Okay, it says that part four is complete.
+
+08:55.580 --> 08:56.840
+We'll be the judges of that.
+
+08:56.840 --> 08:58.700
+We'll come back over here.
+
+08:58.700 --> 09:00.659
+Where are we exactly?
+
+09:00.659 --> 09:02.340
+We are just in the PM directory.
+
+09:02.340 --> 09:07.340
+So I'm going to start scripts slash start_mac.
+
+09:08.320 --> 09:10.820
+Oops, sorry, we're on my start-mac.
+
+09:11.860 --> 09:18.440
+Dotsh, let's give this a whirl and now we will take a look and see what we have running. Up
+
+09:18.440 --> 09:23.639
+we come, we're going to reload this page. Oh, it's still starting up. Sorry. There we go.
+
+09:23.639 --> 09:29.519
+For a moment, I was, I was concerned. So welcome back. Sign in to continue your cambam
+
+09:29.519 --> 09:36.100
+board. Use the demo credentials. Sign in with the user and pass word. Oops, spell it right though.
+
+09:38.320 --> 09:41.500
+There we go, sign in and in we come.
+
+09:41.500 --> 09:42.419
+(laughs)
+
+09:42.419 --> 09:45.000
+Yeah, so Google of course does not like that.
+
+09:45.000 --> 09:46.879
+I'm not gonna add that to LastPass.
+
+09:46.879 --> 09:50.559
+Up comes my Camben Studio and there's a logout button up there.
+
+09:50.559 --> 09:52.600
+And for us that I come back to here.
+
+09:52.600 --> 09:56.279
+That's nice, this seems to be working just fine.
+
+09:56.279 --> 09:57.759
+I like that a lot.
+
+09:57.759 --> 10:00.399
+In we have this here, okay,
+
+10:00.399 --> 10:02.559
+that's gonna be annoying, isn't it?
+
+10:02.559 --> 10:03.960
+Very good, okay.
+
+10:03.960 --> 10:05.799
+I'm happy with that.
+
+10:05.799 --> 10:10.799
+And now log out and log in.
+
+10:14.759 --> 10:15.600
+And here we go.
+
+10:15.600 --> 10:16.440
+And did you see that?
+
+10:16.440 --> 10:17.279
+Look at that.
+
+10:17.279 --> 10:18.919
+This is maintained.
+
+10:18.919 --> 10:21.120
+That is good to see excellent
+
+10:21.120 --> 10:25.879
+okay alright and I'm going to do ctrl c to stop that server running now something
+
+10:25.879 --> 10:28.840
+I'm going to do now that I said I was going to do every step and I did end so
+
+10:28.840 --> 10:34.279
+you did do you notice did you stop me something that I said I would do is be
+
+10:34.279 --> 10:38.080
+taking git snapshots as we go which we should be doing but you know the first
+
+10:38.080 --> 10:43.039
+four parts have been pretty innocuous we We could always do them again and then they were low risk,
+
+10:43.039 --> 10:47.039
+but now we're going to get to databases coming up. It's a little bit more serious,
+
+10:47.039 --> 10:52.159
+so it's a good point. So if you don't know the basic git commands to do this kind of thing,
+
+10:52.159 --> 10:58.480
+then please do do or there's some git resources that I've got, but also you could just ask the
+
+10:58.480 --> 11:03.360
+agent or ask chat GPT just to give you the basics. But essentially I can type git status
+
+11:04.000 --> 11:05.759
+to give you the basics, but essentially I can type get status to see all of the things that have changed,
+
+11:05.759 --> 11:07.279
+a lot of things have changed.
+
+11:07.279 --> 11:12.120
+I can do git add dot to stage them all for commit.
+
+11:12.120 --> 11:17.120
+I can do git commit minus m part four complete.
+
+11:17.879 --> 11:22.360
+And that is now all put committed to the repo,
+
+11:22.360 --> 11:23.279
+just to my local repo.
+
+11:23.279 --> 11:24.600
+I haven't pushed it to GitHub,
+
+11:24.600 --> 11:26.720
+but I've committed it locally in a way that I could
+
+11:26.720 --> 11:29.919
+then come back to this point if I need to.
+
+11:29.919 --> 11:31.580
+That's a good practice.
+
+11:31.580 --> 11:34.000
+Okay, on to part five.
+

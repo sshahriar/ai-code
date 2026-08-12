@@ -1,0 +1,410 @@
+WEBVTT
+
+00:00.000 --> 00:06.559
+And we have now arrived at the part of today that I am affectionately calling the spicy part.
+
+00:06.559 --> 00:12.160
+Well, we're going to go through a few demos of other related things that we're not fully covering
+
+00:12.160 --> 00:17.920
+on this course, but it's nice for you to know about. So you can be, you don't need to take all
+
+00:17.920 --> 00:27.000
+of those in there and remember anything. This is just to give you a quick tour of related stuff, starting with the Claude Agents SDK
+
+00:27.739 --> 00:29.019
+that you might heard of that
+
+00:29.019 --> 00:30.739
+and you might have been wondering how that fits in
+
+00:30.739 --> 00:33.539
+and how it fits into other agent frameworks
+
+00:33.539 --> 00:35.380
+that I cover in my other courses.
+
+00:35.380 --> 00:36.259
+And the answer is of course
+
+00:36.259 --> 00:38.659
+that it's not really an agent framework at all,
+
+00:38.659 --> 00:41.179
+even though it's called the Claude Agents SDK,
+
+00:41.179 --> 00:43.299
+which can certainly give you the impression
+
+00:43.299 --> 00:44.659
+that it's an agent framework.
+
+00:44.659 --> 00:51.039
+But what it is is a way to programmatically drive cloud code have access to all of the
+
+00:51.039 --> 00:58.399
+power of the agents in cloud code. But do it by writing code. Okay, let me show you exactly what
+
+00:58.399 --> 01:04.959
+that means. I've got here in VS code, a project I've just created called space. And true to the
+
+01:04.959 --> 01:12.319
+name space, we're looking at a completely empty, totally empty directory with nothing in it whatsoever.
+
+01:12.319 --> 01:15.000
+And we're going to fill up this space with something.
+
+01:15.000 --> 01:15.959
+Let me show you.
+
+01:15.959 --> 01:22.599
+And I'm going to use a UV project, which you know, I like UV if I don't listen and then Google it.
+
+01:22.599 --> 01:26.719
+I'm going to do a UV in it, dash dash bear.
+
+01:26.719 --> 01:29.319
+That's going to be up with a nice empty project.
+
+01:29.319 --> 01:37.180
+Let's do UV Python pin 3.13. Let's go with. And now it's time to UV ads,
+
+01:37.180 --> 01:42.439
+which is the going to pip install a few things. We will have Python dot emv to handle
+
+01:42.439 --> 01:50.019
+keys. We will have requests because you always want requests. And then let's go with
+
+01:50.019 --> 01:56.120
+Claude agent SDK. It used to be called Claude Code SDK,
+
+01:56.120 --> 01:59.120
+and they called it, they changed the name to Claude Agent SDK.
+
+01:59.120 --> 02:01.000
+And it's worth knowing that Agent is singular.
+
+02:01.000 --> 02:03.120
+I think I might have even said agents earlier,
+
+02:03.120 --> 02:05.859
+'cause I'm used to opening our agents SDK,
+
+02:05.859 --> 02:08.159
+but it's singular, Claude Agent SDK.
+
+02:08.159 --> 02:09.919
+We've just done it, we've built everything,
+
+02:09.919 --> 02:13.280
+we have ourselves a.vmv,
+
+02:13.280 --> 02:16.639
+and so we are ready to build something.
+
+02:16.639 --> 02:20.000
+All right, and I just copied in my.env file from somewhere else,
+
+02:20.000 --> 02:23.520
+which has a few keys in it, like my anthropic key.
+
+02:23.520 --> 02:27.120
+And I've also written a.getignore file to get ignored that,
+
+02:27.120 --> 02:28.879
+even though we don't have a git repo,
+
+02:28.879 --> 02:31.879
+this is just an empty folder, but still, it's a good practice.
+
+02:31.879 --> 02:36.599
+Okay, now new file, let's have a main.py.
+
+02:36.599 --> 02:39.120
+This is where we're gonna write some code.
+
+02:39.120 --> 02:41.099
+And what's our code gonna do?
+
+02:41.099 --> 02:45.080
+We're effectively gonna like drive-cloud code using code.
+
+02:45.080 --> 02:47.360
+All right, so I'm gonna have some imports here.
+
+02:47.360 --> 02:52.360
+I'm gonna, first of all, do the whole load.env
+
+02:53.240 --> 02:55.000
+to bring in my environment variables.
+
+02:55.000 --> 02:57.360
+And I like to say override equals true.
+
+02:57.360 --> 02:59.919
+So that the dotenv overrides anything
+
+02:59.919 --> 03:01.039
+that's set up as like a system
+
+03:01.039 --> 03:05.680
+environment variable otherwise trouble trouble. Okay, and yeah, we're gonna want an async here
+
+03:05.680 --> 03:10.639
+dot it's filling it all in. That's not what I want. I don't want that. I'm gonna type myself.
+
+03:10.639 --> 03:15.919
+I want to have like a prompt. What does the meaning of life is not going to be my prompt.
+
+03:17.039 --> 03:24.280
+And stop, stop, stop filling in. And we're also going to want to have,
+
+03:25.120 --> 03:28.759
+we're gonna want to have the tools that it can use.
+
+03:28.759 --> 03:30.919
+So I'm gonna have tools equals,
+
+03:30.919 --> 03:33.960
+and that is indeed going to be some kind of a list.
+
+03:33.960 --> 03:36.319
+Okay, so what's the prompt and what are the tools?
+
+03:36.319 --> 03:41.319
+Okay, the prompt is gonna be make a vanilla HTML plus JS
+
+03:47.000 --> 03:50.740
+HTML plus JS plus CSS website for a game of space invaders.
+
+03:52.879 --> 03:55.699
+Nope, not a piece of it, it's space invaders. That's why the reader, this folder is called space.
+
+03:57.039 --> 03:58.960
+Full stop, we won't give it any more than that,
+
+03:58.960 --> 04:00.539
+we'll just give it that to work with.
+
+04:00.539 --> 04:01.800
+Now I know what you're thinking.
+
+04:01.800 --> 04:04.280
+You're thinking I said on week one day one
+
+04:04.280 --> 04:10.000
+that that was going to be the only frivolous thing that we were going to build and everything else is going to be commercial.
+
+04:10.000 --> 04:11.000
+Well, sumy.
+
+04:11.000 --> 04:13.000
+Alright, and now tools.
+
+04:13.000 --> 04:16.000
+For tools we're going to have all of these tools.
+
+04:16.000 --> 04:17.000
+We'll let it have all of those.
+
+04:17.000 --> 04:22.000
+Those are the tools we're going to let our Cloud Code through Code have access to.
+
+04:22.000 --> 04:25.000
+Alright, let's write the main function.
+
+04:25.000 --> 04:30.879
+Alright, I'm going to start by saying options equals Claude agent options.
+
+04:30.879 --> 04:35.360
+This is where we specify what we want done. You can see all those parameters that we can have,
+
+04:35.920 --> 04:42.480
+including permission mode, a whole lot of stuff, mcp servers, we can pass in all these different
+
+04:42.480 --> 04:53.519
+things and we can describe the model. We're just going to say allowed tools equals tools. That's what we're doing.
+
+04:53.519 --> 05:02.139
+And with that, we now say async for message in query. This is going to loop through the
+
+05:02.139 --> 05:07.500
+query where we're going to pass in the prompt equals the prompt. And just as it's saying,
+
+05:07.500 --> 05:13.220
+the options equals the options. And then we're going to print the message. That really is it. That
+
+05:13.220 --> 05:18.779
+is our main function right there. Okay, let's do some final tidy up. Oh, look, this
+
+05:18.779 --> 05:24.860
+looks wrong, doesn't it? That should just be.env like so. Let's just say make a vanilla
+
+05:24.860 --> 05:35.000
+HTML for a game of space errors. And let's just tell it right. The right the code to files in the current directory,
+
+05:36.779 --> 05:41.079
+including index.html.
+
+05:42.360 --> 05:45.000
+So it's very clear what it has to do.
+
+05:45.000 --> 05:47.639
+Let's say in here, do I remember
+
+05:47.639 --> 05:49.379
+that we could say model equals,
+
+05:49.379 --> 05:51.240
+is that one of the options here?
+
+05:51.240 --> 05:54.360
+I think so, model equals,
+
+05:54.360 --> 06:00.160
+and let's not use claud2. Let's go with Claude Opus 4.6 as our
+
+06:00.160 --> 06:04.199
+model. That seems like a good bet to me. You should not do this by the way. You
+
+06:04.199 --> 06:07.860
+should use a cheap model. I'm splashing out for your entertainment. It doesn't
+
+06:07.860 --> 06:10.720
+mean that you should please don't do this. Especially if you're in a tight
+
+06:10.720 --> 06:23.800
+loop like this. Not a good idea unless you are crazy. Okay and then finally a sync IO. Oops, spell it right. A sync IO dot run main. There
+
+06:23.800 --> 06:27.639
+we go. That should be everything. Does that look right to you? Have I missed anything?
+
+06:27.639 --> 06:31.600
+Hang on. That's probably good. All right, let's give it a whirl. Here we go. UV run
+
+06:31.600 --> 06:40.000
+UV what? UV run main dot pie. Okay. And so again, it's like we're calling Cloud Code,
+
+06:40.000 --> 06:42.000
+but instead of asking Cloud Code the question,
+
+06:42.000 --> 06:44.199
+we've got it here and these are the tools that can do.
+
+06:44.199 --> 06:48.600
+We are driving Cloud Code using code.
+
+06:48.600 --> 06:49.439
+That's the idea.
+
+06:49.439 --> 06:52.040
+We've equipped it with the tools that it may use,
+
+06:52.040 --> 06:55.720
+that read, write, edit, and we're letting it do its thing.
+
+06:55.720 --> 06:58.399
+And you can see here that it's sending back messages,
+
+06:58.399 --> 07:00.279
+oop, a file just got created.
+
+07:00.279 --> 07:03.779
+It's doing stuff, and that was our plan.
+
+07:03.779 --> 07:09.319
+So this is how you can write code so that you're not interacting in a terminal, but
+
+07:09.319 --> 07:13.259
+rather you're structuring things as code.
+
+07:13.259 --> 07:16.560
+And it's obviously it's not something you'd necessarily need to do day to day, but if
+
+07:16.560 --> 07:21.819
+you were building something that you wanted to take advantage of this whole ecosystem with
+
+07:21.819 --> 07:26.879
+skills, with the ability to have plugins, and you wanted to have that
+
+07:26.879 --> 07:31.040
+functionality and build an app built on top of that, then you could use the
+
+07:31.040 --> 07:36.639
+Cloud Agent SDK to achieve that. And also, should you want a space invaders
+
+07:36.639 --> 07:40.220
+game and you don't want to have to type it into a terminal and interact with
+
+07:40.220 --> 07:45.480
+Cloud Code, then take this code as it is right here, I think. We'll soon find
+
+07:45.480 --> 07:46.160
+out. Let it do its thing. I will see you back here, I think. We'll soon find out.
+
+07:47.079 --> 07:49.079
+Let it do its thing, I will see you back here in a second.
+
+07:49.079 --> 07:52.879
+Okay, and that has now completed, took a couple of minutes.
+
+07:52.879 --> 07:56.639
+And I do indeed see that there is,
+
+07:56.639 --> 07:58.540
+as you can see an index.html.
+
+07:58.540 --> 08:00.680
+I've got that up here in this little window here,
+
+08:00.680 --> 08:04.480
+here's a browser window for your viewing pleasure.
+
+08:04.480 --> 08:05.839
+I will double click here,
+
+08:05.839 --> 08:10.319
+and Upcome Space Invaders invaders enter or click to start
+
+08:11.199 --> 08:18.279
+It is a bit reminiscent of that first thing we had at the very beginning. All right, let's see let me press enter, okay?
+
+08:18.879 --> 08:20.879
+Oh, it's got sound
+
+08:21.160 --> 08:24.240
+How about that and the arrow keys work? I didn't tell anything about keys
+
+08:26.720 --> 08:31.160
+Look at the score as well a score and look, there's the alien at the top.
+
+08:31.160 --> 08:33.200
+That is absolutely brilliant.
+
+08:33.200 --> 08:34.279
+Absolutely brilliant.
+
+08:34.279 --> 08:37.039
+And the colors as well, everything here is great.
+
+08:37.039 --> 08:38.799
+The astute amongst you will probably know
+
+08:38.799 --> 08:42.360
+that this is probably in some form in its training data.
+
+08:42.360 --> 08:45.480
+Nonetheless, I should stop playing, getting distracted.
+
+08:45.480 --> 08:49.720
+Nonetheless, very cool, very cool result, nice outcome.
+
+08:49.720 --> 08:54.000
+That of course is generated, oh, whoops, generated, look at
+
+08:54.000 --> 08:59.399
+that, look at that flickering. Generated by Claude Code wonderfully, a fully working
+
+08:59.399 --> 09:07.899
+game in Vanilla HTML and JS and CSS, built by Claude Code using Claude Agent SDK.
+

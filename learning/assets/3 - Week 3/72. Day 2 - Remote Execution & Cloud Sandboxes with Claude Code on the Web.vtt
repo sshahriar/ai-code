@@ -1,0 +1,443 @@
+WEBVTT
+
+00:00.000 --> 00:06.459
+Okay, the juicy part what's coming in this blue box is what's known it's good it goes by lots of names
+
+00:06.459 --> 00:09.179
+It's confusing. It's sometimes called remote execution
+
+00:09.439 --> 00:12.359
+It's good with cloud code. It's called cloud code on the web
+
+00:12.359 --> 00:18.899
+I think codex also calls it codex on the web, but the idea is this is about not running
+
+00:19.379 --> 00:24.820
+The cloud code instance on your computer, but it running somewhere else also typically
+
+00:26.559 --> 00:30.559
+it running somewhere else, also typically in a sandbox. So it allows you to do more work like to be able to kind of not
+
+00:30.559 --> 00:33.579
+delegate something to a different agent, but delegate it to a different
+
+00:33.579 --> 00:37.280
+execution engine, delegates the work to happen somewhere else.
+
+00:37.359 --> 00:39.340
+And it can happen in multiple places.
+
+00:39.340 --> 00:42.640
+You can, you can have it going off and doing 10 different things remotely.
+
+00:43.079 --> 00:45.039
+It's also already sandboxed.
+
+00:45.039 --> 00:48.399
+When you do this, you do it typically through kind of dick GitHub.
+
+00:48.399 --> 00:52.880
+You check everything into GitHub, you send off a task. It happens in a sandbox
+
+00:52.880 --> 00:57.719
+world, which is why it's kind of all related to sandboxing. And it allows you
+
+00:57.719 --> 01:03.640
+also, in this crazy way, to do work on the move. And when I say that, what I mean
+
+01:03.640 --> 01:07.879
+is, you could be like on your mobile phone, on your cell phone, you could be
+
+01:07.879 --> 01:18.000
+like punching an instruction to Claude. And it's going off and doing it on the internet, in the cloud, in some way, and it's coming back and telling you something and you're continuing your conversation.
+
+01:18.000 --> 01:33.840
+And when you get back home, you're sort of picking up where you left off on your computer, which is crazy, but all of that is possible, and that's what I mean by juicy. It really is. It's really cool. And it's worth mentioning that this is a hugely evolving space. There are multiple
+
+01:33.840 --> 01:39.599
+different kinds of offerings and flavors. And so it's somewhat confusing. I will try and keep
+
+01:39.599 --> 01:44.319
+the course resources up to date. You may have different set of offerings than I have. And that's
+
+01:44.319 --> 01:48.400
+one of the challenges of being in this space that's moving so fast. But I'll do my best to take
+
+01:48.400 --> 01:55.760
+you through the latest stuff that's there. It's also Claude code Code was the first to do this I think, but
+
+01:55.760 --> 02:01.640
+Codex now offers all of this too. I think some of the others do, and if they don't,
+
+02:01.640 --> 02:05.879
+for me, they probably will for you. So you'll see that there's kind of analogous offerings
+
+02:05.879 --> 02:10.560
+from the different people, and you can pick the one that works for you. But the general
+
+02:10.560 --> 02:14.840
+principles is what I'll go through, and I'll give you, as before, the examples specifically
+
+02:14.840 --> 02:16.639
+for Claude Code, but you can probably
+
+02:16.639 --> 02:22.159
+apply this to whichever platform that you're most comfortable with. Okay, so with this, I'm going
+
+02:22.159 --> 02:28.000
+to talk you through three different approaches, three different things we're going to do that some
+
+02:28.000 --> 02:34.639
+blend of those two techniques, and that is what we will then go and do. And it's a bit confusing,
+
+02:34.639 --> 02:39.139
+as I say, because there are so many different ways to slice this, but I just want you to be crystal clear
+
+02:39.139 --> 02:41.159
+on these three different ways.
+
+02:41.159 --> 02:42.659
+And I'm gonna stop by saying,
+
+02:42.659 --> 02:44.460
+what's one of the things that we're not gonna do?
+
+02:44.460 --> 02:46.840
+I'm not gonna show you what would be the kind of
+
+02:46.840 --> 02:48.740
+original way this used to be done,
+
+02:48.740 --> 02:52.520
+which is using Docker, or for people familiar with VS code,
+
+02:52.520 --> 02:54.080
+it's what they call Dev containers,
+
+02:54.080 --> 02:57.759
+dot Dev containers, which is a way that you can use Docker,
+
+02:57.759 --> 03:00.300
+which itself gives you this box within a box.
+
+03:00.300 --> 03:02.259
+Remember that's how I explained it two weeks ago.
+
+03:02.259 --> 03:04.099
+And some of you probably know Docker very well.
+
+03:04.099 --> 03:06.219
+It gives you an environment in which to do it.
+
+03:06.219 --> 03:08.860
+That's a kind of simplistic way of doing this.
+
+03:08.860 --> 03:10.900
+Everything we're gonna do is sort of saying,
+
+03:10.900 --> 03:13.580
+"Okay, yeah, that's a given that you could do that,
+
+03:13.580 --> 03:15.580
+but we can do something better
+
+03:15.580 --> 03:17.740
+that's more powerful in some way."
+
+03:17.740 --> 03:19.780
+So you've always got Docker and Dev containers
+
+03:19.780 --> 03:22.379
+if you want it, but this is all taking it
+
+03:22.379 --> 03:23.379
+a step further.
+
+03:23.379 --> 03:24.379
+Okay.
+
+03:24.379 --> 03:31.500
+Approach one is something that maybe you'd call a native sandbox, just sandboxing.
+
+03:31.500 --> 03:34.900
+This is functionality that is built in to cloud code.
+
+03:34.900 --> 03:40.300
+I don't think as of now that code X is yet doing this or Gemini CLI, but I might be wrong.
+
+03:40.300 --> 03:50.319
+And if I, and even if they're not now, they might well be by the time you're seeing this. But this is built into Cloud Code. It's triggered by doing a command slash sandbox.
+
+03:50.319 --> 03:56.479
+And then you can set up Cloud Code so that it runs in a sandbox, meaning that things get auto
+
+03:56.479 --> 04:01.199
+approved within that sandbox. I'm pretty sure. Yeah. Yeah. Cursor has this functionality, right?
+
+04:01.199 --> 04:09.780
+We saw it ourselves. They have like a built in auto-approved a bunch of things within their sandbox. So cursor through through the user interface has this
+
+04:10.039 --> 04:16.759
+Cloud code has this sandbox built-in and this is something that's it's like it's as if you're running your own docket
+
+04:16.759 --> 04:18.839
+But it's more efficient than that. It's better than that
+
+04:18.839 --> 04:23.500
+It has it has lots of characteristics that make it very desirable as we will see and of course
+
+04:23.500 --> 04:24.839
+It's running on your machines
+
+04:24.839 --> 04:26.800
+And we're not doing anything remote at this point
+
+04:26.800 --> 04:28.319
+It's local. And the main
+
+04:28.319 --> 04:32.160
+way that it's better than running a Docker container is just that it's much more lightweight.
+
+04:32.160 --> 04:37.680
+It's implemented at the OS level. So it's very easy and quick and lightweight and runs well.
+
+04:37.680 --> 04:42.720
+There is a catch though. There's a catch which you're not going to like. The catch is that if
+
+04:42.720 --> 04:50.680
+you're a Mac person like me, this is super easy. If you're on a Windows PC, then to use this, at least as of now,
+
+04:50.680 --> 04:53.680
+you have to be set up to use something called WSL.
+
+04:53.680 --> 04:57.439
+If you already know about WSL and maybe you already use WSL,
+
+04:57.439 --> 04:59.639
+then that's all good. You know exactly what you're doing.
+
+04:59.639 --> 05:05.439
+If you don't know it and it's about running a Linux machine
+
+05:05.439 --> 05:08.759
+on your PC and developing within that Linux machine,
+
+05:08.759 --> 05:10.759
+it's not worth you taking that on right now.
+
+05:10.759 --> 05:12.839
+You should focus on on the
+
+05:12.839 --> 05:17.120
+other two approaches. If you're not familiar with WSL, but if you are, then you can use
+
+05:17.120 --> 05:20.759
+it with that. And if you're, if you have a Mac, then you're in great shape. And Linux
+
+05:20.759 --> 05:25.720
+is also great shape. Okay. So that's the first approach. The second approach is the absolutely
+
+05:25.720 --> 05:32.560
+crazy one. This is, it goes by lots of names. The product name is Claude code on the web.
+
+05:32.560 --> 05:34.879
+And codecs calls it codecs on the web. So this on the web. And codecs cools it, codecs on the web.
+
+05:34.879 --> 05:37.379
+So this on the web is obviously like a thing.
+
+05:37.379 --> 05:39.519
+The perhaps the technical way of describing it
+
+05:39.519 --> 05:42.959
+will be like a managed cloud sandbox.
+
+05:42.959 --> 05:46.639
+It's managed in that anthropic are taking care of it.
+
+05:46.639 --> 05:48.920
+They're running Cloud Code for you.
+
+05:48.920 --> 05:51.199
+And it's a Cloud sandbox.
+
+05:51.199 --> 05:53.759
+It's on the Cloud and it's in a sandbox.
+
+05:53.759 --> 05:55.800
+So that's what this is.
+
+05:55.800 --> 05:58.240
+It's basically you're connecting with
+
+05:58.240 --> 06:03.040
+Cloud Code from your CLI, from on your computer. But when you run something, it's not running
+
+06:03.040 --> 06:08.680
+on your computer. It's contacting anthropic. They're spinning up Cloud Code remotely on
+
+06:08.680 --> 06:14.079
+like their boxes and running it there in a sandbox. And that sounds like a whole lot
+
+06:14.079 --> 06:20.720
+of plumbing and configuration. And crazily, you can do it just by putting a little ampersand
+
+06:20.720 --> 06:25.199
+at the beginning of your Cloud Code instruction and then just typing out anything that you would
+
+06:25.199 --> 06:30.000
+have said to Cloud Code. And it doesn't happen on your box, it happens out on the Cloud. And that
+
+06:30.000 --> 06:35.279
+sounds too good to be true, but we'll see it. You can also make a command and not not within Cloud
+
+06:35.279 --> 06:41.759
+Code, but just on your normal PowerShell of instead of Cloud, you type Claude dash dash remote and then your
+
+06:41.759 --> 06:48.399
+command and the same thing happens and off it goes. It's crazy. So that's one thing.
+
+06:48.399 --> 06:53.439
+And then there's another thing you do which is also crazy, which is you can go to your GitHub
+
+06:53.439 --> 07:00.160
+repo and you could raise like a GitHub issue and tag it to Claude. You put at Claude,
+
+07:02.000 --> 07:06.000
+You put at-claud, you like address it to-claud. And insanely, anthropic will spin up a-claud code
+
+07:06.000 --> 07:10.000
+in the cloud, connect to your GitHub repo, do the work,
+
+07:10.000 --> 07:12.000
+and then say when it's done.
+
+07:12.000 --> 07:16.000
+It's like, what? That really happens, as we will see.
+
+07:16.000 --> 07:20.000
+And this needs you to install a GitHub app called the "Claud",
+
+07:20.000 --> 07:22.000
+GitHub app that we will do.
+
+07:22.000 --> 07:24.279
+It's tightly linked to GitHub.
+
+07:24.279 --> 07:27.720
+So you do need to have all of your code checked in.
+
+07:27.720 --> 07:31.680
+Everything is organized by the Cloud code on the web,
+
+07:31.680 --> 07:33.879
+we'll clone the repo, pull down the code
+
+07:33.879 --> 07:35.160
+and operate on it that way.
+
+07:35.160 --> 07:36.879
+So everything has to be checked in.
+
+07:36.879 --> 07:39.399
+And then there's one more feature that is like,
+
+07:39.399 --> 07:40.240
+"What?"
+
+07:40.240 --> 07:43.560
+The other feature is called teleport.
+
+07:43.560 --> 07:49.279
+And teleport allows you to sort of grab one of the cloud code things that's
+
+07:49.279 --> 07:55.480
+running out there and have that become your active session. It's like you're jumping into
+
+07:55.480 --> 08:01.439
+it. It's it's it's it sounds very sci-fi and it takes a while to get familiar with this
+
+08:01.439 --> 08:06.360
+with this idea, but it's really cool and slash tasks as a way of seeing all the different
+
+08:06.360 --> 08:08.759
+tasks that are running. So one way to think about this,
+
+08:08.759 --> 08:10.480
+that I was saying yesterday that of course,
+
+08:10.480 --> 08:14.420
+a simple way to have multiple agents working on your work
+
+08:14.420 --> 08:16.339
+is just to press that plus button
+
+08:16.339 --> 08:19.160
+and run lots of Cloud CLIs.
+
+08:19.160 --> 08:21.100
+This is effectively doing that,
+
+08:21.100 --> 08:24.319
+except the Cloud CLIs are not running on your computer,
+
+08:24.319 --> 08:26.959
+they're running on on throw-bricks computers instead.
+
+08:26.959 --> 08:28.439
+But otherwise it's quite similar
+
+08:28.439 --> 08:30.759
+and you can sort of attach to any of those
+
+08:30.759 --> 08:35.519
+conversations. So that's how it works. It sort of has to be seen to be believed, which
+
+08:35.519 --> 08:36.840
+is what we will do in a minute.
+
+08:36.840 --> 08:41.759
+And then the final one is really interesting and this is a new emerging idea, which is,
+
+08:41.759 --> 08:47.080
+I'm calling it third party cloud sandbox. I don't know if that, to what extent that is
+
+08:47.080 --> 08:52.000
+like the most official way of calling it, but I think that's probably the most accurate.
+
+08:52.000 --> 08:57.000
+This is when you're not using anthropic, but you're using another company who has
+
+08:57.000 --> 09:04.000
+an offering that allows you to run something like a container in the cloud that is sandboxed,
+
+09:04.000 --> 09:09.000
+and usually in this case is designed for coding agents, so it's sort of optimized for that use case.
+
+09:09.000 --> 09:18.240
+And one that's recently, for me, has really taken off, is called sprite.dev made by the people at Fly.io, that is a really great hosting platform.
+
+09:18.240 --> 09:23.639
+And this is particularly notable because it's very fast, very simple, very flexible.
+
+09:23.639 --> 09:27.840
+And it's designed for a few things, but one of them is very much like a
+
+09:27.840 --> 09:31.879
+clored code on the web in a managed sandbox.
+
+09:31.879 --> 09:35.120
+So it's really, really convenient for that use case.
+
+09:35.120 --> 09:40.559
+And one of the other points to make about this is that this one is of course applicable to any coding agent.
+
+09:40.559 --> 09:46.600
+So this is something that you can use no matter what you've chosen as your coding agent of choice.
+
+09:46.600 --> 09:49.200
+Alright, so these are the three.
+
+09:49.200 --> 09:57.299
+It is a bit confusing, but I think it's going to become much more clear when we actually put them to the test, when we try them out. And of course, that's what we're going to do right now.
+

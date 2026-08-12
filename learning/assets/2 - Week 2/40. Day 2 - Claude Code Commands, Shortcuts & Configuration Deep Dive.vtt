@@ -1,0 +1,593 @@
+WEBVTT
+
+00:00.000 --> 00:06.160
+Well, it's another yellow day. Welcome to week two, day two, our second day of getting
+
+00:06.160 --> 00:11.119
+inter-cloored code, and we're going to get deeper. And you know, I love to load code, and hopefully
+
+00:11.119 --> 00:15.439
+you're getting get in the cloored code bug yourself. And maybe you also enjoyed some of the
+
+00:15.439 --> 00:19.120
+others we saw yesterday. Let's quickly recap. And all the way back in week one, day one,
+
+00:19.120 --> 00:27.239
+I'd shown you this landscape of coding agents showing it to you again here. We've got IDEs, plugins, which is mostly the same,
+
+00:27.239 --> 00:28.800
+and CLI.
+
+00:28.800 --> 00:31.000
+And in the IDE camp, we've got cursor,
+
+00:31.000 --> 00:33.399
+anti-gravity, windsurfing, we didn't look at.
+
+00:33.399 --> 00:36.799
+In plugins, we've got GitHub co-pilot and codecs.
+
+00:36.799 --> 00:38.640
+I realized, I think when I showed you this before,
+
+00:38.640 --> 00:41.119
+I put codecs in IDE, and it doesn't really matter,
+
+00:41.119 --> 00:44.880
+but I guess codecs actually a plugin into VS code.
+
+00:44.880 --> 00:47.840
+And in CLI land, we've looked, of course,
+
+00:47.840 --> 00:57.000
+at Cloud Code and cursor and codecs also came out with CLI versions really really because of cloud code success and so did Gemini.
+
+00:57.000 --> 01:10.120
+So with Gemini, you've got like Gemini CLI and you've also got anti gravity as like two different products for using Gemini's models for agent coding. for a gente coating. And then yesterday we also had some fun
+
+01:10.120 --> 01:11.560
+with open code and AMP.
+
+01:11.560 --> 01:14.040
+And if you've fallen in love with either of those two
+
+01:14.040 --> 01:14.840
+and they're different models,
+
+01:14.840 --> 01:16.959
+then you should use them for the rest of this week
+
+01:16.959 --> 01:18.959
+for sure much of what we're gonna cover
+
+01:18.959 --> 01:21.200
+is in common in them too.
+
+01:21.200 --> 01:22.480
+And I need to say this is of course
+
+01:22.480 --> 01:25.200
+a massively rapidly evolving category.
+
+01:25.200 --> 01:27.659
+There's stuff coming up all the time.
+
+01:27.659 --> 01:29.760
+And there's also plenty of ambiguity
+
+01:29.760 --> 01:34.079
+with even with Gemini CLI versus anti-gravity. So keep an eye on
+
+01:34.079 --> 01:39.680
+the resources, ask me questions if anything is unclear and you know remember my view is that
+
+01:39.680 --> 01:44.879
+Claude Code is here to stay. There'll be lots of other things going on all around us but this is
+
+01:45.920 --> 01:51.040
+me anyway, this is my favorite of the bunch. And on that note we're now going to go back to Claude
+
+01:51.040 --> 01:58.959
+Code and experiment with some commands. The main topic for today is to be looking at different commands in Claude code, including
+
+01:58.959 --> 02:02.680
+as part of that things like check pointing.
+
+02:02.680 --> 02:06.040
+So as I said, let's go over to Claude code again and we'll work through some of the
+
+02:06.040 --> 02:07.040
+commands.
+
+02:07.040 --> 02:11.960
+Okay, and here I am back in VS code and I'm in my very same PM project.
+
+02:11.960 --> 02:13.319
+Why not?
+
+02:13.319 --> 02:16.300
+And here I am in a terminal and and I'm going to type exit,
+
+02:16.300 --> 02:18.319
+because maybe this terminal is still set up
+
+02:18.319 --> 02:19.759
+with some of those environment variables
+
+02:19.759 --> 02:21.539
+we were messing around with yesterday.
+
+02:21.539 --> 02:23.740
+Let's have a completely fresh terminal.
+
+02:23.740 --> 02:27.500
+I think yes, control and shift and back tick
+
+02:27.500 --> 02:30.060
+always opens a completely new terminal.
+
+02:30.060 --> 02:31.900
+It's a little extra trick to know.
+
+02:31.900 --> 02:33.740
+Now, if you're going to follow along in Claude code,
+
+02:33.740 --> 02:34.800
+then you can do exactly what I do.
+
+02:34.800 --> 02:36.800
+If you're in one of the other IDEs,
+
+02:36.800 --> 02:40.080
+then you should look up what their commands are.
+
+02:40.080 --> 02:41.919
+But I think in most of them,
+
+02:41.919 --> 02:45.199
+maybe all of them commands are always with a slash,
+
+02:45.199 --> 02:46.840
+and then the name of your command
+
+02:46.840 --> 02:48.639
+once you are in your platform.
+
+02:48.639 --> 02:50.960
+All right, with that, I'm going to go into Claude,
+
+02:50.960 --> 02:52.960
+by typing Claude, and here we are,
+
+02:52.960 --> 02:56.319
+we're in Claude code, let's work with some commands.
+
+02:56.319 --> 02:59.080
+Okay, so once you're in Claude, doing a slash,
+
+02:59.080 --> 03:02.000
+lets you run different commands that don't get sent to Claude,
+
+03:02.000 --> 03:04.000
+that actually just get run in the tool.
+
+03:04.000 --> 03:06.000
+And the easiest way to find out all the commands you can use
+
+03:06.000 --> 03:09.000
+is just to press the down button now and read them with a little descriptions of them.
+
+03:09.000 --> 03:11.000
+That tells you everything you need.
+
+03:11.000 --> 03:15.000
+You can also do slash help and get a quick summary of important commands,
+
+03:15.000 --> 03:16.000
+along with some shortcut keys.
+
+03:16.000 --> 03:21.000
+You can see they're useful shortcut keys to know how to do various different things.
+
+03:21.000 --> 03:23.919
+Okay, and now let's try out some
+
+03:23.919 --> 03:25.199
+of the really common commands.
+
+03:25.199 --> 03:27.599
+Well, I'm just gonna press escape to get out of that screen
+
+03:27.599 --> 03:30.159
+and then I'm gonna do, well, we know slash init,
+
+03:30.159 --> 03:31.719
+init sets up the project.
+
+03:31.719 --> 03:32.960
+The first time you come to a project,
+
+03:32.960 --> 03:36.599
+it writes a new cloud.md as it says,
+
+03:36.599 --> 03:39.439
+and I sometimes suggest to think about doing that yourself
+
+03:39.439 --> 03:41.520
+manually rather than doing slash init,
+
+03:41.520 --> 03:43.159
+but it is your choice.
+
+03:43.159 --> 03:46.039
+All right, other things we already know, slash model,
+
+03:46.039 --> 03:48.520
+that tells you the model that you're using
+
+03:48.520 --> 03:50.479
+and lets you choose a different one.
+
+03:50.479 --> 03:53.360
+And I've got the default one, which is using opus,
+
+03:53.360 --> 03:56.319
+because I've got the big plan, escape out of that.
+
+03:56.319 --> 04:00.759
+You know slash status, that gives you the lay of the land,
+
+04:00.759 --> 04:03.039
+tells you what version you're on and stuff like that,
+
+04:03.039 --> 04:05.080
+gives you a set of the different settings,
+
+04:05.080 --> 04:06.719
+and it shows you your usage
+
+04:06.719 --> 04:12.000
+so far for this session and for the week. Those are some commands that you've seen already.
+
+04:12.000 --> 04:16.000
+All right. And then a command that you've also seen already, which you know I use all the time
+
+04:16.000 --> 04:23.040
+is slash context. All the time. This gives us our beautiful memory printout. Let's make that
+
+04:23.040 --> 04:29.000
+nice and big and happy to see it looking so empty after we started the session again.
+
+04:29.000 --> 04:34.000
+That looks great and this is something that I do all the time as you know.
+
+04:34.000 --> 04:38.000
+And along with that, there are a couple of commands that go hand in hand.
+
+04:38.000 --> 04:44.000
+One of them we've also already met, which is compact, which kicks off a compact and resets everything,
+
+04:44.000 --> 04:49.000
+and it's worth doing that yourself, not letting it get into this dangerous territory
+
+04:49.000 --> 04:51.199
+and running it for you while it's
+
+04:51.199 --> 04:56.079
+right in the middle of doing some work. That can cause troubles. It just can cause a lack of
+
+04:56.079 --> 05:02.160
+coherence and problems to go off the rails. You can also type compact. And then as I said before,
+
+05:02.160 --> 05:07.040
+just put some summarization instructions here about what information you particularly want to keep.
+
+05:08.240 --> 05:14.120
+Personally, I prefer to put those sorts of bits of information in Claude.md myself.
+
+05:14.120 --> 05:18.420
+I rather play a primary role in controlling its information that way.
+
+05:18.420 --> 05:22.980
+But you should experiment and it gets better and better at this kind of thing as well.
+
+05:22.980 --> 05:27.379
+Maybe my knowledge is set from a few months ago of using it.
+
+05:27.379 --> 05:32.240
+And then the other one to use to know that the other one also begins with the letter C
+
+05:32.240 --> 05:35.279
+that goes along with context and compact is the
+
+05:35.279 --> 05:41.360
+one that's clear, a very dangerous one to use. What Clear does is absolutely wipes the composition
+
+05:41.360 --> 05:48.000
+history. It's the same as basically exiting and starting a fresh Claude. You do this to reset
+
+05:48.000 --> 05:57.839
+everything so that it's back to reading the agents.md. It's as if you started up a new cloud. Sometimes it's liberating to do this. I actually like working
+
+05:57.839 --> 06:03.519
+this way. I like to keep my cloud.md's up to date. I tell it to write its own files.
+
+06:03.519 --> 06:08.639
+I make sure that everything is tidy and up to date and then I just either just do a
+
+06:08.639 --> 06:14.240
+slash clear or I get out of cloud by doing control C twice and then launch cloud again.
+
+06:14.240 --> 06:19.220
+And I do a context to see that everything is nice and clean and fresh and that's the way I like to work.
+
+06:19.220 --> 06:24.740
+But often the compacting works pretty well too and of course it's much faster to do it that way.
+
+06:24.740 --> 06:27.639
+Okay, another one to show you is /config.
+
+06:27.639 --> 06:35.720
+I do that, it shows me it's actually the same as the second page of the stats that we were looking at before the status.
+
+06:35.720 --> 06:45.920
+But it's sometimes useful and / usage takes you to that third page. And then the other one I wanted to show you, yeah, is actually a slash stats, similar to status,
+
+06:45.920 --> 06:52.079
+but stats. This gives you a rather pleasing diagram of your usage of Cloud Code there.
+
+06:52.079 --> 06:58.160
+There you see an overview and the models, tokens per day, for whatever reason mine,
+
+06:58.160 --> 07:01.439
+and look at that, it shows my moonshot, kimike too at the bottom there.
+
+07:01.439 --> 07:04.319
+For whatever reason, my history is only as of this year
+
+07:04.319 --> 07:05.920
+or I've used Clorco for some time.
+
+07:05.920 --> 07:08.199
+Maybe that I changed the plan.
+
+07:08.199 --> 07:09.959
+But this is what it shows,
+
+07:09.959 --> 07:11.360
+but if you've been using Clorco for a while,
+
+07:11.360 --> 07:14.920
+you'll see a nice, busy screen there.
+
+07:14.920 --> 07:16.639
+And this is fun to track to see
+
+07:16.639 --> 07:19.800
+as you are using the platform.
+
+07:19.800 --> 07:21.480
+Okay, and over time, we're gonna learn
+
+07:21.480 --> 07:25.160
+some of the key shortcuts as you get more comfortable familiar with it
+
+07:25.160 --> 07:30.319
+But once and though perhaps that's used it used to be used a lot more than it is these days is shift tab
+
+07:30.600 --> 07:35.959
+shift tab switches to accept edits on which means that things just get
+
+07:36.160 --> 07:43.879
+Accepted and shift tab again is plan mode on that's back to this idea of a plan mode where it plans out first
+
+07:44.560 --> 07:49.879
+and plan mode where it plans out first. And yeah, the plan mode is something which is not used
+
+07:49.879 --> 07:52.360
+as much anymore because now it tends to be good
+
+07:52.360 --> 07:54.920
+at deciding itself when it's right to be planning
+
+07:54.920 --> 07:56.399
+and when it's right to be doing.
+
+07:56.399 --> 07:58.839
+So particularly with Opus, it's less necessary
+
+07:58.839 --> 08:01.480
+to force it to be on a plan mode.
+
+08:01.480 --> 08:03.000
+And yeah, except edits on,
+
+08:03.000 --> 08:05.720
+just means that it's going to accept file edits.
+
+08:05.720 --> 08:08.560
+It's not quite the same as Yolo mode on Cloud
+
+08:08.560 --> 08:11.959
+that we are going to do proper Yolo mode at some point.
+
+08:12.800 --> 08:16.279
+Okay, so that is some of the really common
+
+08:16.279 --> 08:17.839
+I can put it back to normal.
+
+08:17.839 --> 08:20.000
+Some of the very common shortcut keys.
+
+08:20.000 --> 08:22.839
+Another one you might want to look out for is Ctrl O
+
+08:22.839 --> 08:26.180
+puts it on a detailed transcript mode,
+
+08:26.180 --> 08:29.959
+detailed press control again to toggle that off.
+
+08:29.959 --> 08:30.920
+When it's on that detail mode,
+
+08:30.920 --> 08:32.919
+you get a lot more information printed,
+
+08:32.919 --> 08:34.899
+and that can be pretty interesting to see everything
+
+08:34.899 --> 08:37.799
+that's going on should you wish to get the gory detail.
+
+08:37.799 --> 08:41.759
+Okay, that's some of the common commands in Cloud Code.
+
+08:41.759 --> 08:43.080
+And then just some other things to mention
+
+08:43.080 --> 08:44.259
+about the setup of Cloud Code,
+
+08:44.259 --> 08:45.200
+there is at the top here,
+
+08:45.200 --> 08:47.799
+you'll see a directory called.Cloud
+
+08:47.799 --> 08:50.679
+that has been creating for us as we've been going.
+
+08:50.679 --> 08:53.779
+And in there are some settings in a JSON file.
+
+08:53.779 --> 08:54.980
+And if I show you this,
+
+08:54.980 --> 08:56.899
+you know all those times when we've been pressing
+
+08:56.899 --> 09:00.700
+the button to to say, okay, I accept you can do this.
+
+09:00.700 --> 09:02.940
+And by the way, you can do this again in the future.
+
+09:02.940 --> 09:04.019
+Whenever you do this,
+
+09:04.019 --> 09:07.340
+Cloud Code adds a line in this JSON file
+
+09:07.340 --> 09:10.379
+with all of the things that it's allowed to do.
+
+09:10.379 --> 09:11.500
+And if you wish you can come in
+
+09:11.500 --> 09:16.419
+and edit this permissions file directly yourself and give it the ability to do any of these things
+
+09:16.419 --> 09:24.259
+That gives you this kind of instant ability to manage the permissions that it's doing and you can also remove a permission by just taking out of the JSON here
+
+09:24.259 --> 09:27.639
+There's also a command slash permissions which you can use
+
+09:30.059 --> 09:36.500
+To see the different permissions that it's got to add a new rule and to remove a rule and so on. But
+
+09:36.500 --> 09:39.740
+it's easy to edit it directly here too. And a final thing worth knowing is that
+
+09:39.740 --> 09:45.019
+within Cloud Code you can use the @ sign to represent a file path, the
+
+09:45.019 --> 09:48.659
+contents of a file. And that's a good trick for knowing about when you're
+
+09:48.659 --> 09:54.259
+building some of these various files that Cloud will read. So to give an
+
+09:54.259 --> 09:58.759
+example, I can go into Cloud.md right here. This is our Claude.md.
+
+09:58.759 --> 10:01.879
+And if I want the plan to be in this file,
+
+10:01.879 --> 10:05.000
+then I can come here and I can just say,
+
+10:05.000 --> 10:06.580
+plan, detailed plan,
+
+10:08.360 --> 10:11.480
+as a heading, let's make that a heading like that.
+
+10:11.480 --> 10:13.360
+And then I can just do at,
+
+10:13.360 --> 10:16.600
+and now I can put the path to that detailed plan.
+
+10:16.600 --> 10:23.200
+So I can say docs/plan.md. And that plan file will now be inserted in there
+
+10:23.200 --> 10:29.799
+and included in the cloud.md file. And that is a common trick. Another neat trick that
+
+10:29.799 --> 10:35.159
+some people do is that if they want to be able to have an agent.md and also have a
+
+10:35.159 --> 10:40.080
+cloud.md file and they want it to be the same so that you could either use cloud code
+
+10:40.080 --> 10:43.120
+or be using GitHub co-pilot and have it access to the
+
+10:43.120 --> 10:50.000
+same information. Then they don't write a Cloud.md at all. Instead of the entire Cloud.md,
+
+10:50.000 --> 11:00.240
+they just have a single statement which is at agents.md. That basically means that Cloud.md
+
+11:00.240 --> 11:06.360
+is just the contents of agents.md. That that way you can maintain one file rather than two
+
+11:06.360 --> 11:09.399
+and it refers points to agents.md.
+
+11:09.399 --> 11:11.039
+So that's a nice trick to know about
+
+11:11.039 --> 11:14.200
+and some people use that to have one file rather than two.
+
+11:14.200 --> 11:18.080
+And you can use that at syntax in a claud.md file
+
+11:18.080 --> 11:20.279
+or you can use it just in a prompt to claud
+
+11:20.279 --> 11:24.279
+and it brings the contents of the file into the context.
+
+11:24.279 --> 11:25.559
+So it's to be used with care
+
+11:25.559 --> 11:26.759
+because it will fill up your context
+
+11:26.759 --> 11:32.159
+very quickly if the file is a long file. But it's a powerful way to bring information into
+
+11:32.159 --> 11:36.600
+context, whether it's in Cloud.md or in the prompt. And if you do a directory there, if
+
+11:36.600 --> 11:39.720
+you do add and then a directory, it just brings the listing of that directory. It
+
+11:39.720 --> 0:00.000
+doesn't bring all the files in that directory. It just brings like a list of the files into the context.
+

@@ -1,0 +1,578 @@
+WEBVTT
+
+00:00.000 --> 00:06.799
+And so, let me tell you about the phenomenon that is Claude Code. It all started in late 2024
+
+00:06.799 --> 00:12.800
+when Boris Churney, an engineer at Anthropic, did a side project that originally called Claude's
+
+00:12.800 --> 00:21.920
+CLI just to sort of drive coding with Claude in an agent loop, and it kind of took off from there.
+
+00:21.920 --> 00:28.920
+Anthropic released it generally in April. I think it was available to most people in February of 25.
+
+00:28.920 --> 00:31.280
+And it was considered, it was the first time
+
+00:31.280 --> 00:33.799
+that one of these CLI tools came out there
+
+00:33.799 --> 00:35.039
+and really took hold.
+
+00:35.039 --> 00:36.479
+There are so many of these now,
+
+00:36.479 --> 00:40.920
+but Cloud Code was where it began in April 2025.
+
+00:40.920 --> 00:42.600
+And in September 2025,
+
+00:42.600 --> 00:44.079
+I mean, obviously during 2025,
+
+00:44.079 --> 00:46.359
+it then took off massively.
+
+00:46.359 --> 00:51.159
+September brought V2, which brought this whole robust ecosystem.
+
+00:51.159 --> 00:54.479
+Many of these features have been rolled out over the course of the preceding months,
+
+00:54.479 --> 00:56.759
+but they sort of matured in V2.
+
+00:56.759 --> 01:00.840
+It was check pointing, sub-agents, hooks, skills, background tasks.
+
+01:00.840 --> 01:07.319
+There's also a Claude Code SDK that lets you write code to use the kind of Claude Code ecosystem.
+
+01:07.319 --> 01:14.480
+It's not the same as one of the agent frameworks like OpenAI agents SDK, which is just for building your own agents. The Cloud Code SDK is
+
+01:14.480 --> 01:18.560
+for working within the Cloud Code ecosystem. Now, at this time, the best
+
+01:18.560 --> 01:24.319
+model on the planet from Anthropic was Claude Sonnet 4.5, which is one of the
+
+01:24.319 --> 01:28.840
+best models in the world, but it was certainly up there in the top few and it
+
+01:28.840 --> 01:32.959
+was going... it was great, but there were certainly rough edges.
+
+01:32.959 --> 01:39.159
+And in November, anthropic released Opus 4.5, their strongest model.
+
+01:39.159 --> 01:44.200
+And many people see this as an inflection point in agentic coding generally.
+
+01:44.200 --> 01:46.799
+Opus 4.5 changed the game.
+
+01:46.799 --> 01:57.959
+And coming after that, Gemini 3 Pro, Google's-top model, seen as in the similar camp and codecs 5.2, GPT 5.2 codecs from
+
+01:57.959 --> 02:03.079
+OpenAI that we've been working with, is also at that tier. But Opus was the first one,
+
+02:03.079 --> 02:09.000
+Opus 4.5, the first one that had people sitting back and saying, "Something has changed.
+
+02:09.000 --> 02:17.840
+We've reached a point where suddenly LLM coding agents are so much more reliable that we can really trust them to do a lot of code
+
+02:17.840 --> 02:24.000
+and not be having to check all the diffs. And that's a big deal. And about the same point,
+
+02:24.000 --> 02:32.159
+anthropic passed a billion dollars of run rate revenue with claud code, which was quite
+
+02:32.159 --> 02:38.360
+a milestone. And then as of January, anthropic released co-work, which is like taking
+
+02:38.360 --> 02:43.000
+Claude Code beyond coding, the same idea, but now for other
+
+02:43.000 --> 02:45.120
+things. And of course, we won't be covering that in this course
+
+02:45.120 --> 02:47.919
+because we're all about coding. But for sure, you can look
+
+02:47.919 --> 02:50.360
+at it. And at the moment, there's a lot of hype around
+
+02:50.400 --> 02:53.319
+something called open claw, which is like a sort of open
+
+02:53.319 --> 02:57.759
+source version of it also to be used just generally for for
+
+02:57.759 --> 03:00.199
+co-working in your life.
+
+03:00.199 --> 03:02.360
+So lots of other related stuff.
+
+03:02.360 --> 03:05.479
+And Thropic also investing heavily in labs,
+
+03:05.479 --> 03:08.360
+which is also looking at more groundbreaking ways
+
+03:08.360 --> 03:09.780
+to use Cloud Code.
+
+03:09.780 --> 03:11.900
+So tons and tons going on.
+
+03:11.900 --> 03:14.900
+There's probably been lots of great big things happening
+
+03:14.900 --> 03:17.340
+super recently after I record this video.
+
+03:17.340 --> 03:19.240
+And I'll try and put things in the resources.
+
+03:19.240 --> 03:23.319
+But I do urge you as well to not get too caught up in the hype.
+
+03:23.319 --> 03:27.840
+The things that are really powerful and compelling are the things that tend to live
+
+03:27.840 --> 03:28.840
+for a few months.
+
+03:28.840 --> 03:33.120
+And if you get caught up in all of the excitement of the week, it can feel overwhelming.
+
+03:33.120 --> 03:36.919
+Claude Coder has been around for enough time for us to know it's here to stay.
+
+03:36.919 --> 03:38.800
+It's really powerful.
+
+03:38.800 --> 03:42.319
+And a big part of this journey as well has been the journey of MCP, which is somewhat
+
+03:42.319 --> 03:43.319
+aligned with this.
+
+03:43.319 --> 03:44.240
+It kind of came out in late
+
+03:44.240 --> 03:51.280
+2024. It took hold. It's it's now got 100 million downloads a month. It's just huge. And of course,
+
+03:51.280 --> 03:57.039
+mcp is a big part of the cloud code ecosystem as well that we will be covering. Okay, the time
+
+03:57.039 --> 04:08.259
+has come for us to install cloud code and find out what all the fuss is about. Now I will say that claw code, of course, that the clawed platform comes with a subscription price.
+
+04:08.259 --> 04:11.340
+It's another of these $20 a month's.
+
+04:11.340 --> 04:13.419
+And it's optional for you.
+
+04:13.419 --> 04:16.220
+You can not pay anything and later today,
+
+04:16.220 --> 04:19.060
+I will show you how to work with three models
+
+04:19.060 --> 04:22.019
+or very cheap models through clawed code.
+
+04:22.019 --> 04:23.279
+But it's not what I recommend.
+
+04:23.279 --> 04:25.620
+The experience will not be as good as for people
+
+04:25.620 --> 04:26.980
+that are willing to pay.
+
+04:26.980 --> 04:28.399
+And I think if there's anything that you
+
+04:28.399 --> 04:33.279
+want to invest in for this course, I would suggest that an anthropic subscription might be the thing.
+
+04:33.279 --> 04:38.079
+Remember again how much cheaper it is than buying a laptop or something like that, and you're getting
+
+04:38.079 --> 04:43.040
+so much power and capability. But it's a personal choice. You should only do it if you're happy with
+
+04:43.040 --> 04:48.240
+it. And there are plenty of other ways to do it without paying a penny. So you should choose,
+
+04:48.240 --> 04:50.920
+you go with start free and choose whether or not to use
+
+04:50.920 --> 04:56.740
+a paid model later if you wish. But let's go and get everything set up right now.
+
+04:56.740 --> 05:03.399
+Okay, so I've gone to a browser and I've gone to Claude.ai. Claude.ai. Here it is. This
+
+05:03.399 --> 05:09.579
+is the front door to talk to Anthrobix Claude. And as with many of these ais, there are two
+
+05:09.579 --> 05:12.860
+different ways to think about pricing, two different products.
+
+05:12.860 --> 05:17.160
+There is the API for making repeated calls for building your own products.
+
+05:17.160 --> 05:19.500
+That's what we use with OpenRutre last week.
+
+05:19.500 --> 05:23.959
+And there's also the consumer subscription product for a user.
+
+05:23.959 --> 05:26.639
+And in this context, we are being a user.
+
+05:26.639 --> 05:29.560
+So that is the kind of plan that we're thinking about.
+
+05:29.560 --> 05:33.519
+And there's a pricing menu here that will tell you more about those pricing plans.
+
+05:33.519 --> 05:35.279
+There is a free tier for just chatting
+
+05:35.279 --> 05:42.240
+with Claude like Chat GPT. We're not going to be using that. There is a pro tier which is $20 a
+
+05:42.240 --> 05:49.439
+month at Bill Monthly or local equivalent and this allows you to access Claude code on the web
+
+05:49.439 --> 05:59.360
+and in your terminal which is what we're going to do. And there is also a max which has $100 a month and a $200 a month plan. And
+
+05:59.360 --> 06:04.839
+I'll have you know, I am spending the $200 a month plan because I'm crazy. But I use it
+
+06:04.839 --> 06:09.740
+all the time. I use it all the time. And I have no doubt whatsoever that I'm getting
+
+06:09.740 --> 06:20.959
+value from that $200 a month, that unbelievable value. So I'm not obviously a salesperson for a PROPIC, but I can tell you I am a happy customer.
+
+06:20.959 --> 06:27.040
+Occasionally a very angry customer with with the Claude, but most of the time very happy customer.
+
+06:27.040 --> 06:32.000
+Okay, so I would certainly suggest that you consider this, as I say, you don't need to.
+
+06:32.000 --> 06:35.680
+I will give you three alternatives later, but for now I'm going to assume that you either already
+
+06:35.680 --> 06:41.600
+have or you are now signing up to have a pro subscription. When you do that, you would press try "Claud."
+
+06:41.600 --> 06:43.680
+It would take you through to its screens,
+
+06:43.680 --> 06:46.680
+and you would then sign in with your Google credentials
+
+06:46.680 --> 06:49.879
+with email and go through the usual sign up process
+
+06:49.879 --> 06:52.160
+to have a "Claud" account,
+
+06:52.160 --> 06:54.079
+then it's time to install "Claud Code."
+
+06:54.079 --> 06:57.360
+So now you go to code.claud.com,
+
+06:57.360 --> 07:00.439
+and that redirects you to the "Claud Code" website.
+
+07:00.439 --> 07:04.879
+Here it is, and cloud code is installing a computer
+
+07:04.879 --> 07:09.680
+is really very simple. It's just using this one line of code that will appear here that it will
+
+07:09.680 --> 07:14.399
+generate the right line of code for your system. But or as it says if you want if you want the
+
+07:14.399 --> 07:20.079
+proper documentation you click here and this has the details. It knows that I'm on a Mac so it's
+
+07:20.079 --> 07:24.240
+showing me this first and foremost. this is the command for Windows.
+
+07:24.240 --> 07:26.959
+You copy it to your clipboard like here,
+
+07:26.959 --> 07:29.240
+or there's another Windows approach as well,
+
+07:29.240 --> 07:31.000
+and then you can paste that.
+
+07:31.000 --> 07:33.240
+As we will in just a second, we're gonna take it over.
+
+07:33.240 --> 07:35.759
+We're gonna use the terminal in VS Code, why not?
+
+07:35.759 --> 07:38.240
+And we're gonna use that to install Cloud Code.
+
+07:38.240 --> 07:40.639
+So I'm gonna copy the Mac OS one right now,
+
+07:40.639 --> 07:43.480
+and now I'm going to open up VS Code and see you there.
+
+07:43.480 --> 07:46.379
+So here we are in VS Code.
+
+07:46.379 --> 07:47.819
+If you've got other windows open here,
+
+07:47.819 --> 07:50.100
+like various agent chats, then close them down.
+
+07:50.100 --> 07:51.740
+You're gonna file new window
+
+07:51.740 --> 07:53.779
+if you're not seeing something a bit like this.
+
+07:53.779 --> 07:55.339
+And now I'm going to bring up a terminal,
+
+07:55.339 --> 07:57.860
+which remember it's Control and Backtick.
+
+07:57.860 --> 08:00.779
+I think it's also Control and J on a PC in Command J
+
+08:00.779 --> 08:01.699
+on a Mac. Yes it is.
+
+08:01.699 --> 08:05.699
+Command J on a Mac, Control J on a PC brings up the terminal
+
+08:05.699 --> 08:08.240
+or Control and the back tick thing there,
+
+08:08.240 --> 08:10.600
+or just a view terminal.
+
+08:10.600 --> 08:12.639
+Oh yeah, and then paste.
+
+08:12.639 --> 08:15.740
+I'm gonna paste in the command that I copied
+
+08:15.740 --> 08:18.680
+from elsewhere, from Claude's page.
+
+08:18.680 --> 08:20.959
+And I press enter and it's now gonna install
+
+08:20.959 --> 08:23.319
+Claude code on my computer.
+
+08:23.319 --> 08:24.759
+Well, it thinks that one through.
+
+08:24.759 --> 08:27.660
+If you're on a PC and you get a bunch of permissions errors
+
+08:27.660 --> 08:29.720
+but you're not authorized to run scripts,
+
+08:29.720 --> 08:30.319
+simply Google that or ask chat GPT, a bunch of permissions errors, but you're not authorized to run scripts.
+
+08:30.319 --> 08:36.240
+Simply Google that or ask chat GPT, it will tell you about the absolutely standard instructions
+
+08:36.240 --> 08:40.559
+you need to run on your PC so that you have permissions to run scripts like this.
+
+08:40.559 --> 08:42.200
+Very ordinary thing to do.
+
+08:42.200 --> 08:43.960
+Okay, Iranet set it up.
+
+08:43.960 --> 08:44.960
+It's successfully installed.
+
+08:44.960 --> 08:47.120
+I'm on version 2.1.29.
+
+08:47.120 --> 08:50.000
+You may well be on a much more recent version than that.
+
+08:50.000 --> 08:54.700
+And let me know if there's anything new that you want to have be shown here.
+
+08:54.700 --> 08:57.120
+At the very least I will add it to the course resources.
+
+08:57.120 --> 08:59.379
+So make sure that there's lots of good information
+
+08:59.379 --> 09:02.100
+about tips and tricks from recent versions.
+
+09:02.100 --> 09:04.159
+But the course stuff should all be here.
+
+09:04.159 --> 09:05.379
+Everything we're gonna cover,
+
+09:05.379 --> 09:07.320
+we are ready to use Cloud Code.
+
+09:07.320 --> 09:09.000
+We are also gonna do something extra,
+
+09:09.000 --> 09:14.200
+which is install the Cloud Code extension for VS code.
+
+09:14.200 --> 09:17.600
+And I'm going to explain this and navigate it in just a second.
+
+09:17.600 --> 09:20.600
+But first up, please open the extensions window,
+
+09:20.600 --> 09:24.600
+which is view extensions or it's control shift X on a PC,
+
+09:24.600 --> 09:26.799
+command shift X on a Mac.
+
+09:26.799 --> 09:29.899
+And you can see our Claude code is already installed for me,
+
+09:29.899 --> 09:33.000
+but if you search for Claude code,
+
+09:33.000 --> 09:35.700
+it should come up as the top extension,
+
+09:35.700 --> 09:37.120
+Claude code for VS Code.
+
+09:37.120 --> 09:39.759
+It's from anthropic tick means it's verified.
+
+09:39.759 --> 09:41.759
+I have almost four million downloads.
+
+09:41.759 --> 09:44.500
+You probably have more and you would want to press
+
+09:44.500 --> 09:47.879
+the install button to install this extension
+
+09:47.879 --> 09:50.840
+so that you have the Cloud Code extension for VS Code.
+
+09:50.840 --> 09:52.720
+And now, this is a little bit confusing,
+
+09:52.720 --> 09:55.960
+but let me just explain that when you're now in VS Code
+
+09:55.960 --> 10:00.480
+using Cloud Code, there are two different ways that you can do things.
+
+10:00.480 --> 10:04.360
+One of those ways is going to be to use the extension,
+
+10:04.360 --> 10:05.799
+the Cloud Code extension.
+
+10:05.799 --> 10:07.879
+And you do that by pressing the little
+
+10:07.879 --> 10:09.639
+"Cloud" button that's appeared up here.
+
+10:09.639 --> 10:11.720
+You see that right next to the "Code X" button
+
+10:11.720 --> 10:12.799
+that we had before.
+
+10:12.799 --> 10:14.240
+There's two of these side bars.
+
+10:14.240 --> 10:17.039
+You press that and you get this thing appearing.
+
+10:17.039 --> 10:18.799
+And it's like one of these side bars,
+
+10:18.799 --> 10:24.460
+let me get rid of the terminal here, this is Claude Code appearing here in a sidebar but there's
+
+10:24.460 --> 10:29.799
+a different way to do it which is not to use this sidebar but rather to be in a
+
+10:29.799 --> 10:35.679
+terminal and to run it from within the terminal in VS Code and that is what
+
+10:35.679 --> 10:39.500
+we are going to be doing this week and you may may wonder why. They're very
+
+10:39.500 --> 10:44.240
+similar, very similar experiences. The one that is using the sidebar
+
+10:44.240 --> 10:51.120
+over here is more baked into the platform, into VS Code. It's more built in, it's a bit more like
+
+10:51.120 --> 10:57.759
+using something like the codecs sidebar as well. It's more of an agent chat and so it's more
+
+10:57.759 --> 11:06.000
+sort of it controls VS Code a bit better. And so in some ways that's better. But it's a slightly more constrained version of
+
+11:06.000 --> 11:11.120
+the product. You don't have all the pro features. It's a little bit more packaged for more of a
+
+11:11.120 --> 11:16.399
+novice user. And we're not novice users anymore. This is what we would have used last week in week
+
+11:16.399 --> 11:21.360
+one, when we like sidebars and agent chats like that. But we're pros now. We're going to be
+
+11:21.360 --> 11:29.279
+vibe engineers by the end of this week. So we want to work directly in the terminal. It's convenient to use this terminal here, because then we'll have the file explorer,
+
+11:29.279 --> 11:33.159
+we'll have the other VS Code tooling around us, and it's aware that it's being used in
+
+11:33.159 --> 11:36.399
+VS Code, so it still has some control over the other panes.
+
+11:36.399 --> 11:40.039
+But that way we get to use the full featured Cloud Code.
+
+11:40.039 --> 11:46.070
+So again, a bit confusing, you can use it as the Terminal CLI app within the VS Code Terminal, or in the sidebar sidebar we're going to be doing the terminal.
+

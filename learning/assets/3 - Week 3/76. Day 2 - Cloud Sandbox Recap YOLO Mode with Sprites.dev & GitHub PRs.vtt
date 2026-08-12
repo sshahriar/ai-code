@@ -1,0 +1,344 @@
+WEBVTT
+
+00:00.000 --> 00:03.839
+Okay, tons of cool stuff just happened and it's happened too fast.
+
+00:03.839 --> 00:06.480
+But let me let me quickly recap what it just happened.
+
+00:06.480 --> 00:11.119
+So first of all, I used one of the the prototypes that we went through in week two,
+
+00:11.119 --> 00:15.279
+which is to press control. Oh, to look at the full conversation,
+
+00:15.279 --> 00:19.440
+to see what was going on and to satisfy myself that indeed,
+
+00:19.440 --> 00:23.600
+most of the tests passed some failed and it correctly accounted for that.
+
+00:23.600 --> 00:25.199
+So that was a nice thing to do.
+
+00:25.199 --> 00:29.300
+Next up, I asked it to push its changes to GitHub.
+
+00:29.300 --> 00:31.179
+And that didn't work because we're not logged in
+
+00:31.179 --> 00:33.859
+to GitHub here and it told me you have to log in
+
+00:33.859 --> 00:36.659
+to GitHub with GH auth login,
+
+00:36.659 --> 00:39.539
+something that we just covered, I think, yesterday.
+
+00:39.539 --> 00:40.820
+No, no, earlier today.
+
+00:40.820 --> 00:45.060
+So I stopped Cloud Code with a Control-C twice.
+
+00:45.060 --> 00:50.359
+I did GH auth login and it spawned a window on my computer, even though we're
+
+00:50.359 --> 00:56.000
+in the cloud, I logged into GitHub and then we were logged into GitHub. I then typed "claud"
+
+00:56.000 --> 01:00.960
+to go back into Cloud Code. But the conversation was started again from the beginning and I
+
+01:00.960 --> 01:07.000
+just typed "slash-resume" and remember from the beginning of week two that /resume just
+
+01:07.000 --> 01:11.680
+takes us back to where we were and I could just say, you can see, I said right here,
+
+01:11.680 --> 01:14.599
+okay, I've logged you into GitHub, but please try now.
+
+01:14.599 --> 01:18.799
+And sure enough, it made, it already made a branch,
+
+01:18.799 --> 01:21.079
+it then pushed that branch to GitHub,
+
+01:21.079 --> 01:23.439
+and it told me it's created a pull request,
+
+01:23.439 --> 01:26.560
+and this is now ready for my review on GitHub.
+
+01:26.560 --> 01:27.560
+Let's go take a look.
+
+01:27.560 --> 01:29.760
+So here it is, here is the finally repo.
+
+01:29.760 --> 01:32.840
+There is indeed a market data review.
+
+01:32.840 --> 01:33.680
+Let's compare it.
+
+01:33.680 --> 01:35.400
+Let's take a look at it.
+
+01:35.400 --> 01:36.319
+Here it is.
+
+01:36.319 --> 01:39.439
+It's got this market data review.md.
+
+01:39.439 --> 01:41.359
+There is all of the information,
+
+01:41.359 --> 01:44.079
+including some of the problems with it.
+
+01:44.079 --> 01:47.640
+And so let's say create a pull request,
+
+01:48.640 --> 01:50.560
+and let's merge it,
+
+01:53.040 --> 02:02.739
+confirm the merge and we are done. Fantastic. Well now I'm a role here. I'm enjoying the
+
+02:02.739 --> 02:19.000
+fact that we're operating in the cloud like this and we can just keep going. So I can switch to mass domain and to a pull and to a pull.
+
+02:21.000 --> 02:28.000
+Then, please, then please carry out
+
+02:29.000 --> 02:35.000
+all the fixes and improvements that you've documented
+
+02:36.000 --> 02:39.000
+in the review file.
+
+02:41.719 --> 02:45.719
+Keep working until all tests pass
+
+02:47.159 --> 02:50.300
+and the product, the market data,
+
+02:51.620 --> 02:53.699
+the market data backend is ready.
+
+02:58.360 --> 03:07.500
+Then push your new branch to get up.
+
+03:07.500 --> 03:08.500
+That's it.
+
+03:08.500 --> 03:09.500
+I'm running that.
+
+03:09.500 --> 03:16.199
+It's all going to run in the cloud, again, on sprites.dev, in a YOLO world where it can
+
+03:16.199 --> 03:20.400
+do whatever it wants because we know we've got it nicely sandboxed.
+
+03:20.400 --> 03:23.919
+It's not touching my computer. it can't do damage to me
+
+03:24.560 --> 03:30.400
+so there we go this is so efficient because there's no more of this permissions approval nonsense
+
+03:30.400 --> 03:37.120
+it's all running it's going to do its thing and uh i will check back in when we have a working
+
+03:37.120 --> 03:41.680
+market data backend and i tell you it's just been the most amazing experience sitting here
+
+03:41.680 --> 03:44.879
+watching this happening i haven't approved anything. It's been
+
+03:44.879 --> 03:51.120
+working and working, fixing bugs one by one, rerunning the tests, more passing, reporting on
+
+03:51.120 --> 03:56.639
+problems. And then at the end it created a branch, it submitted the the the the push,
+
+03:57.199 --> 04:04.479
+everything just happening. And it's it's created the PR, it's ready for me to review it. And I've
+
+04:04.479 --> 04:07.120
+got this sense that it's super productive and lots
+
+04:07.120 --> 04:12.159
+of going on, lots of things going on, and yet it's also secure. It's happening in a way that is
+
+04:12.159 --> 04:16.959
+totally sandboxed. So it really feels like I've got the best of both, which is a great feeling.
+
+04:16.959 --> 04:21.759
+And I continued a conversation with Claude. I gave it a bit of feedback on the changes that
+
+04:21.759 --> 04:27.759
+are made, made some more changes. There's now a PR that's ready for me to review. Here we go.
+
+04:32.000 --> 04:32.879
+now a PR that's ready for me to review. Here we go and we're going to have the PR to merge this in
+
+04:40.079 --> 04:50.100
+and merge and confirm merge and this is fixed and it also incorporated the extra change I asked as well and so everything is now included in and it's all successfully done. That is finished.
+
+04:50.100 --> 04:57.240
+So we have successfully carried out a bunch of work in our remote sandbox, courtesy of
+
+04:57.240 --> 04:58.839
+sprites.dev.
+
+04:58.839 --> 05:03.199
+And one final point to make on this is that you don't need to just use this for Claude.
+
+05:03.199 --> 05:07.759
+You could use this, of course, for codecs, for open code, for whichever one you have
+
+05:07.759 --> 05:08.759
+picked.
+
+05:08.759 --> 05:13.000
+It is ideal for running in a sandbox regardless of your platform.
+
+05:13.160 --> 05:18.160
+And with that, that's enough for today to remind you one more time.
+
+05:18.500 --> 05:21.879
+The three different approaches that we use today in blue.
+
+05:21.879 --> 05:25.720
+The first thing we did is using the built-in slash sandbox,
+
+05:25.920 --> 05:29.360
+which is a sort of cheap and cheerful way of basically like having your own
+
+05:29.360 --> 05:33.120
+Docker container. It's like a lightweight OS level,
+
+05:33.199 --> 05:36.920
+It's like a lightweight OS level, clored code built sandboxing, running on your machine.
+
+05:36.920 --> 05:39.040
+We did that, it was easy.
+
+05:39.040 --> 05:41.680
+In purple, this is where you take advantage
+
+05:41.680 --> 05:45.759
+of anthropics, remote running, remote execution
+
+05:45.759 --> 05:47.759
+with sandboxes built in.
+
+05:47.759 --> 05:49.519
+And there's a bunch of different ways of doing it.
+
+05:49.519 --> 05:50.839
+Some of them didn't work for me,
+
+05:50.839 --> 05:52.920
+but we'll be working by now, you should try them.
+
+05:52.920 --> 05:54.720
+But some of the ones that did work
+
+05:54.720 --> 05:57.680
+was using the web interface, using the mobile app,
+
+05:57.680 --> 05:59.800
+which was cool, and then the coolest of all
+
+05:59.800 --> 06:03.579
+was going to GitHub, putting in an issue,
+
+06:03.579 --> 06:06.600
+it could also be like a PR, and then tag in Claude,
+
+06:06.600 --> 06:09.040
+and watching it, like pick up that issue,
+
+06:09.040 --> 06:12.160
+running it in the Anthro-Pick remote box,
+
+06:12.160 --> 06:16.279
+and then just raising the change at the end of it,
+
+06:16.279 --> 06:18.560
+pushing its branch, amazing. And then in yellow, after doing all of it, pushing its branch. Amazing.
+
+06:18.560 --> 06:21.480
+And then in yellow, after doing all of that,
+
+06:21.480 --> 06:23.800
+we looked at a completely different approach,
+
+06:23.800 --> 06:26.199
+which is when we don't use Antropic in the cloud,
+
+06:26.199 --> 06:29.839
+we use a third party, in this case, the company fly.io,
+
+06:29.839 --> 06:32.519
+that has this offering sprites.dev.
+
+06:32.519 --> 06:33.360
+We use that.
+
+06:33.360 --> 06:36.199
+It's one of the new ones that's really fast,
+
+06:36.199 --> 06:38.120
+really easy to use, and it gives you
+
+06:38.120 --> 06:40.319
+like a command line interface, which is
+
+06:40.319 --> 06:45.199
+actually remoting into something running on the cloud. But we could treat it as if it was my
+
+06:45.199 --> 06:48.959
+own machine. And it was a bit confusing because I was running it within VS code. So it really felt
+
+06:48.959 --> 06:54.240
+like it was on my machine. And we could interact with it. We could sign into GitHub remotely. We
+
+06:54.240 --> 07:03.360
+could sign into Cloud. And then we could carry out activities. And we could be in YOLO mode running really efficiently but feeling very
+
+07:03.600 --> 07:10.879
+Secure as we did and that was the the final approach the yellow approach running on a third-party cloud sandbox
+
+07:10.879 --> 07:16.500
+And so with that I promised you a juicy day and hopefully you agree it was a juicy day tomorrow large
+
+07:16.819 --> 07:22.360
+Cobaces a big area of concern from people when they're working with coding agents
+
+07:22.360 --> 07:24.560
+How does it perform on a big codebase,
+
+07:24.560 --> 07:28.720
+we're going to cover that, but also I'm going to throw some spicy stuff in the mix.
+
+07:28.720 --> 07:33.839
+Yeah, spice it up tomorrow. As you will see, and then there's going to be a kind of crescendo,
+
+07:33.839 --> 07:38.560
+because the day after is all about the swarms and orchestrators, there's all the rage at the
+
+07:38.560 --> 07:49.019
+moment before we land on our capstone. Okay, see you tomorrow. For now, take a moment to wallow in the fact that you are 80% through,
+
+07:49.019 --> 07:53.620
+20% left to go before you have really mastered coding agents.
+
+07:53.620 --> 07:54.540
+See you tomorrow.
+

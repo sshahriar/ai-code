@@ -1,0 +1,299 @@
+WEBVTT
+
+00:00.000 --> 00:05.759
+And with that, and with that, we've reached the last few minutes of this program.
+
+00:05.759 --> 00:09.960
+You remember we started out in week one, vibe coding for Fun and Profit.
+
+00:09.960 --> 00:13.800
+We built out, we went through all of the IDEs, just introducing like agents
+
+00:13.800 --> 00:15.919
+that MD, cursor, co-pilot, codecs,
+
+00:15.919 --> 00:20.320
+anti-gravity, looking at all those plugins and the IDEs themselves.
+
+00:20.399 --> 00:24.039
+Then our first experience with YOLO, it feels like an age away.
+
+00:24.640 --> 00:27.760
+And then the commercial MVP that was cool.
+
+00:27.760 --> 00:31.719
+Then we moved into claw code and open code and AMP.
+
+00:31.719 --> 00:33.880
+It was commands and checkpoints
+
+00:33.880 --> 00:36.320
+for the first time, the slash commands and Ralph loops.
+
+00:36.320 --> 00:38.840
+And then we, things got more serious.
+
+00:38.840 --> 00:42.039
+We got to see that whole workflow with Jira
+
+00:42.039 --> 00:44.799
+that was cool all the way going through to a git push
+
+00:44.799 --> 00:47.119
+and built out that legal SAS platform.
+
+00:47.119 --> 00:50.320
+And that finally took us to week three.
+
+00:50.320 --> 00:53.039
+By this point I said that you were now vibe engineering.
+
+00:53.039 --> 00:55.799
+You've gone from vibe coding to vibe engineering
+
+00:55.799 --> 00:56.960
+as a professional.
+
+00:56.960 --> 00:59.520
+And now this week was so much fun.
+
+00:59.520 --> 01:01.000
+I knew it would be.
+
+01:01.000 --> 01:03.280
+We just went crazy with first of all
+
+01:03.280 --> 01:05.599
+the idea of multi-agents, which is kind of worrying.
+
+01:05.599 --> 01:08.719
+But then sub-agents, I showed you hooks.
+
+01:08.719 --> 01:11.379
+Sandboxing was a much more interesting day
+
+01:11.379 --> 01:13.079
+than it might have sounded just from the name,
+
+01:13.079 --> 01:15.500
+Sandboxing, when we were doing,
+
+01:15.500 --> 01:16.739
+I think that for me, anyway,
+
+01:16.739 --> 01:19.579
+Sprite.dev is the really, really great thing,
+
+01:19.579 --> 01:23.140
+but also running with Cloud Code remotely,
+
+01:23.140 --> 01:25.579
+hopefully you tried the Ampersand thing
+
+01:25.579 --> 01:27.500
+and also using it from your mobile
+
+01:27.500 --> 01:30.859
+and then also tagging Cloud in a Git issue.
+
+01:30.859 --> 01:32.400
+It's fantastic.
+
+01:32.400 --> 01:35.280
+Then the large co-base workflow day,
+
+01:35.280 --> 01:37.959
+I didn't really do much about what large co-base workflow
+
+01:37.959 --> 01:40.319
+'cause I felt like we covered it enough.
+
+01:40.319 --> 01:43.200
+But yeah, instead we spent a moment
+
+01:43.200 --> 01:44.920
+looking at some of the other stuff.
+
+01:44.920 --> 01:47.640
+I got it, I think that the Claude Agent SDK
+
+01:47.640 --> 01:49.400
+is really interesting.
+
+01:49.400 --> 01:51.359
+Something that's definitely worth more exploration
+
+01:51.359 --> 01:54.959
+if you found that, that's something useful. And then of course we looked
+
+01:54.959 --> 02:00.959
+at co-work and an open claw was just something to take a nod at. It's all over the news, at least
+
+02:00.959 --> 02:08.000
+for me at the moment. And then the last couple of days have just been so great looking at orchestrators,
+
+02:08.000 --> 02:20.219
+of course, GSD, Claude agent teams, which is definitely my favourite. And then also the craziness that is gas town which was something we
+
+02:20.219 --> 02:26.120
+did today and then we finally very quickly I showed you Codex subagents and
+
+02:26.120 --> 02:31.800
+then getting Codex to fix up the massive API so we could have a real finance
+
+02:31.800 --> 02:37.259
+workstation hopefully you've recreated that yourself that completed our capstone
+
+02:37.259 --> 02:39.240
+project project number four.
+
+02:39.240 --> 02:40.919
+But I know what you're thinking.
+
+02:40.919 --> 02:42.159
+We didn't do four projects.
+
+02:42.159 --> 02:47.719
+We did six projects because we also did the first person shooter on the first day,
+
+02:47.719 --> 02:50.840
+and we did the space invaders.
+
+02:50.840 --> 02:55.680
+So if they count as projects, so that would make it six projects.
+
+02:55.680 --> 02:57.759
+Four commercial projects though.
+
+02:57.759 --> 03:05.240
+And that means of course that you are no longer a vibe coder, you are no longer a vibe engineer, you are now and officially an
+
+03:05.240 --> 03:10.759
+agentic engineer, I can fell in that third strip, you have completed the board,
+
+03:10.759 --> 03:16.280
+it's done, you're an agentic engineer, congratulations. And it remains me to
+
+03:16.280 --> 03:21.080
+give you a huge thank you, thank you so much for surviving the rollercoaster,
+
+03:21.080 --> 03:23.039
+making it all the way to the end.
+
+03:23.039 --> 03:26.360
+I promised you a roller coaster and I think I delivered.
+
+03:26.360 --> 03:29.000
+So remember, whether you like it or not,
+
+03:29.000 --> 03:32.199
+something came with this package
+
+03:32.199 --> 03:34.759
+that is yours that you can't avoid.
+
+03:34.759 --> 03:36.919
+It's like a mandatory part of it.
+
+03:36.919 --> 03:37.960
+And that is me.
+
+03:37.960 --> 03:39.159
+I come with it.
+
+03:39.159 --> 03:41.759
+You get me forever.
+
+03:41.759 --> 03:45.199
+I want you to reach out to me post on LinkedIn
+
+03:45.199 --> 03:46.479
+that you've completed the course
+
+03:46.479 --> 03:48.599
+with something you've learned, some insight,
+
+03:48.599 --> 03:51.280
+something about it and I will come in
+
+03:51.280 --> 03:53.000
+and amplify your success,
+
+03:53.000 --> 03:54.639
+make sure that others know about it.
+
+03:54.639 --> 03:57.080
+I'd love it if you post some of the projects you've built
+
+03:57.080 --> 03:59.919
+or some of your thoughts on what you like and dislike
+
+03:59.919 --> 04:01.240
+about the different platforms you've covered
+
+04:01.240 --> 04:03.039
+or the techniques.
+
+04:03.039 --> 04:04.759
+As I say, post the certificate,
+
+04:04.759 --> 04:07.240
+that's something that is easy for me to amplify.
+
+04:07.240 --> 04:09.000
+I would love to do so.
+
+04:09.000 --> 04:11.159
+Take a look through some of my other courses.
+
+04:11.159 --> 04:16.319
+If that interests you, I've got lots of stuff to build you into being an AI engineer and
+
+04:16.319 --> 04:21.319
+have a program for people who want to become proficient AI engineers.
+
+04:21.319 --> 04:25.839
+I should also mention, my editor would kill me, I didn't mention again, that to the extent
+
+04:25.839 --> 04:28.519
+you're willing to rate this course, that is the
+
+04:28.519 --> 04:31.899
+main way that Udemy decides whether or not to recommend it to others. So if
+
+04:31.899 --> 04:35.500
+you found it useful then please do rate it. It makes an enormous difference
+
+04:35.500 --> 04:39.439
+and I'm super grateful. But more important than any of this, the single
+
+04:39.439 --> 04:45.319
+most important thing for you, the to-do that you must do, is to build. It's all
+
+04:45.319 --> 04:52.120
+about building. I hope that I have equipped you with the missing manual to this this alien tool that
+
+04:52.120 --> 04:54.000
+André Capati spoke of.
+
+04:54.000 --> 04:57.240
+You now have the ability to use this tool.
+
+04:57.240 --> 04:58.240
+Go use it.
+
+04:58.240 --> 05:00.920
+Go build some amazing things.
+
+05:00.920 --> 05:01.920
+Build them.
+
+05:01.920 --> 05:02.920
+Share them with me.
+
+05:02.920 --> 05:04.519
+I can't wait to see them.
+
+05:04.519 --> 05:05.279
+Thank you so much again.
+

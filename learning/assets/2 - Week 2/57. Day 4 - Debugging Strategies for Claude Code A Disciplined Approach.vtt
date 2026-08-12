@@ -1,0 +1,512 @@
+WEBVTT
+
+00:00.000 --> 00:04.960
+Well, it made quite a meal about it. It took at least 10 minutes, maybe longer. It ended up with
+
+00:04.960 --> 00:10.800
+more than 8,000 lines in total. It built a really extensive test suite. It did have problems
+
+00:10.800 --> 00:15.199
+because of the way I shut down that server like that. But it figured it out, it navigated through.
+
+00:15.199 --> 00:20.160
+It hit the context window filled up and it had to do an auto compact, which is what it does when
+
+00:20.160 --> 00:24.480
+it realises it's going to need to compact itself. And that's always a bit of a nail biting
+
+00:24.480 --> 00:26.000
+experience for the for the
+
+00:26.000 --> 00:30.160
+voyeur, like you and me watching it doing it. And as sure enough afterwards it does
+
+00:30.160 --> 00:34.600
+seem for a moment to be confused about what it's trying to do, but it figured it out,
+
+00:34.600 --> 00:40.460
+it finished the job, and then it declared success. And sure enough I did just bring up
+
+00:40.460 --> 00:50.780
+our NDA creator and confirmed that it's working. You can see that 76 tests passed across five suites, a bunch of different sets of tests, which
+
+00:50.780 --> 00:57.479
+is all very impressive. And then I can indeed go to localos 3000 and see that it is here.
+
+00:57.479 --> 01:02.920
+Everything seems to be just fine with everything. Presumably, if I type in something here like
+
+01:02.920 --> 01:06.920
+the governing law in New York, we're going to see on the right there you go, you see that
+
+01:06.920 --> 01:10.900
+it does in fact update things live. I wonder if I can download a PDF before
+
+01:10.900 --> 01:15.000
+I finished you up. I can. That's fine. It will just show the fields in there that haven't
+
+01:15.000 --> 01:20.079
+yet been filled in and I can click and see that it comes up with New York filled in there
+
+01:20.079 --> 01:25.879
+and other stuff just there as a placeholder to be filled in. So there we go. It is working
+
+01:25.879 --> 01:34.760
+nicely and Cloud Code has built this very extensive set of tests and it has completed the task ably.
+
+01:34.760 --> 01:39.760
+And now I will just quickly go to the MCP one more time
+
+01:39.879 --> 01:42.439
+and just re-authenticate with that lesson.
+
+01:42.439 --> 01:44.760
+I know you have to do this all the time.
+
+01:44.760 --> 01:48.159
+Up it comes, approve, scroll down,
+
+01:48.159 --> 01:52.280
+accept, back we come to here.
+
+01:52.280 --> 02:23.000
+And now let's say please merge the PR locally and push to main and switch the branch to main and mark this issue PL3 done in JURUP.
+
+02:23.000 --> 02:25.000
+That's our final instruction.
+
+02:25.000 --> 02:27.000
+That should polish this off.
+
+02:27.000 --> 02:29.000
+Let it get on with it.
+
+02:29.000 --> 02:30.000
+I'll see you when it's done.
+
+02:30.000 --> 02:34.000
+And it's done, and it's successful, and that was too easy.
+
+02:34.000 --> 02:35.000
+It seems crazy.
+
+02:35.000 --> 02:38.620
+We built this prototype application in a matter of
+
+02:38.620 --> 02:42.599
+minutes, hardly doing anything. We just had to tell it to write some tests but
+
+02:42.599 --> 02:45.620
+I didn't need to because it was already working but now it's also written a
+
+02:45.620 --> 02:49.180
+bunch of tests. Now the bad news is that I wanted to go through with you today,
+
+02:49.180 --> 02:53.560
+debugging strategies and for that I wanted it to have a bug. I was sure there
+
+02:53.560 --> 02:57.259
+was going to be a bug and then we'd go through and fix it together and what we
+
+02:57.259 --> 03:00.240
+may have to do is I'll tell you about the strategy we would have followed and
+
+03:08.740 --> 03:14.439
+We'll no doubt hit pugs tomorrow instead and go through the strategy with it then so here's my recommended strategy for going after debugging It begins by taking a snapshot when you debug you can go off down a tangent
+
+03:14.439 --> 03:16.699
+Sometimes called coke can go way off track
+
+03:16.699 --> 03:21.580
+And so it's important to do this and I mean do a git commit of where you are
+
+03:22.259 --> 03:26.599
+It's important to do this and I mean do a git commit of where you are. Don't just trust the rewind functionality because as you know that will only back out
+
+03:26.599 --> 03:30.919
+changes made directly to file, file edits made by Cloud Code.
+
+03:30.919 --> 03:34.539
+It can't affect things that are side effects of running a script.
+
+03:34.539 --> 03:36.819
+So do a git commit to start with.
+
+03:36.819 --> 03:41.580
+Then particularly for small issues for things that just seem to be like something that is
+
+03:41.580 --> 03:47.979
+just bashed up against. The first mode that one tends to be in is just simply take the stack trace, the error
+
+03:47.979 --> 03:53.560
+message, whatever it is, copy it and paste it as is into Claude and just do that and
+
+03:53.560 --> 03:56.120
+repeat it fixes something, just do it again and again.
+
+03:56.120 --> 04:00.199
+You don't even need to explain I was doing blah blah blah and this happened just focus
+
+04:00.199 --> 04:03.479
+on efficiency, copy, paste, copy, paste.
+
+04:03.479 --> 04:08.000
+Usually for simple problems, Claude gets the joke, understands the context, it
+
+04:08.000 --> 04:13.360
+figures it out, it fixes it and you're on. And that's a super productive way to work.
+
+04:13.360 --> 04:17.759
+So that's typically the first kind of mode that I'm in. But if that doesn't yield good
+
+04:17.759 --> 04:22.319
+results or sometimes it just makes things even worse, I will revert back to where I took
+
+04:22.319 --> 04:29.920
+the last commit and do things in a more organized way. And if that quick interactive approach doesn't work, then I change tactic
+
+04:29.920 --> 04:37.120
+completely to a more disciplined, regimented approach, where I focus on a file, a markdown
+
+04:37.120 --> 04:41.839
+file that Claude should write to. I start by saying, this is the issue I needed to reproduce
+
+04:41.839 --> 04:49.199
+it consistently, every time and document how you do it, document it in debug.md or whatever.md.
+
+04:49.860 --> 04:51.519
+document it in debug.md or whatever.md. Then I want you to investigate.
+
+04:51.519 --> 04:54.100
+Look at all the related logs,
+
+04:54.100 --> 04:56.160
+put in extra logging information,
+
+04:56.160 --> 04:57.959
+get all the information you can,
+
+04:57.959 --> 05:00.519
+gather information, investigate deeply,
+
+05:00.519 --> 05:03.600
+come up with hypotheses for what could be causing this
+
+05:03.600 --> 05:06.639
+and document them in debug.md.
+
+05:06.639 --> 05:08.839
+Get everything recorded out there.
+
+05:08.839 --> 05:10.720
+Include in that doing a web search
+
+05:10.720 --> 05:12.560
+for other people that have had these problems.
+
+05:12.560 --> 05:17.439
+And by the way, there is a classic clawed problem to watch out for. One of the things that
+
+05:17.439 --> 05:24.399
+Clo code is famous for and the other tools too is it sees it finds online like a reported stack
+
+05:24.399 --> 05:30.240
+overflow issue or a git, a GitHub issue that's recorded there and it sees that it matches the
+
+05:30.240 --> 05:34.160
+problem that it's found and it sees someone's complained about it and there's a workaround
+
+05:34.160 --> 05:39.600
+and it says something like "I found it, this is the problem, it's a known problem" that's always
+
+05:39.600 --> 05:46.000
+one of my like like red flags when I hear that. What it doesn't notice is that this was an issue
+
+05:46.000 --> 05:52.560
+reported by maybe one person three years ago and it just takes a sense of perspective and
+
+05:52.560 --> 05:57.160
+frankly some common sense to see that this is in fact a sort of one-off thing
+
+05:57.160 --> 06:04.000
+that is no way that this could actually be the same thing that you've got. It's just someone else out there on the internet had a very
+
+06:04.000 --> 06:08.439
+similar problem three years ago, which no one ever responded to because it wasn't a big deal.
+
+06:08.439 --> 06:10.839
+But Claude will say, "Found it!"
+
+06:10.839 --> 06:20.800
+And this is what to do. You have to install a prior version of some package and it's all over the shop. And so having that sanity check to say
+
+06:20.800 --> 06:27.279
+just because you found one other recorded incidents of this issue, do you have evidence that this is
+
+06:27.279 --> 06:33.199
+a common issue? Did more than one person report it? Does it really seem like this is the same
+
+06:33.199 --> 06:38.720
+thing we're encountering? Like you got to challenge it hard on things like that. Jumping to conclusions
+
+06:38.720 --> 06:40.399
+is what these models often do,
+
+06:40.399 --> 06:44.480
+even though we didn't see that earlier, but it does happen and that's the kind of thing to watch
+
+06:44.480 --> 06:51.680
+out for, seizing on one reported incident that happened a while ago. So investigate, hypotheses,
+
+06:51.680 --> 06:56.879
+and sanity check the hypothesis that you see. And as a result of that, it should come up with a
+
+06:56.879 --> 07:03.040
+root cause that it has identified as being the root cause of the issue, in which case it needs to demonstrate it.
+
+07:03.040 --> 07:06.120
+Prove that that really is the root cause
+
+07:06.120 --> 07:09.040
+and document the proof in debug.md.
+
+07:09.040 --> 07:10.240
+And you're guiding it through it.
+
+07:10.240 --> 07:11.639
+You're giving it these instructions.
+
+07:11.639 --> 07:15.160
+Okay, if that's the recourse, prove it, document it,
+
+07:15.160 --> 07:18.040
+write it to.md.
+
+07:18.040 --> 07:21.040
+And then of course, the next step is now you know
+
+07:21.040 --> 07:27.759
+the root cause, now fix it and prove that your fix consistently fixes the issue.
+
+07:27.759 --> 07:32.240
+You've reproduced it consistently, you've applied your fix and now it works consistently.
+
+07:32.240 --> 07:39.920
+And finally document lessons learned in claud.md, come back and realizing, recognizing what you did,
+
+07:39.920 --> 07:47.120
+learn from it for this project, put down some tips so that you don't repeat the same mistake again because often once you clear
+
+07:47.120 --> 07:53.839
+the conversation or there's a compact, suddenly it's forgotten about this and it repeats, which is
+
+07:53.839 --> 07:58.160
+awful, which is the worst. It's infuriating. You don't want that to happen, document it in
+
+07:58.160 --> 08:03.519
+claw.md. This is the approach I go through. It's disciplined. It's a bit frustrating,
+
+08:03.519 --> 08:09.000
+but it tends to yield good outcomes. And it is common to find it going off the rails
+
+08:09.000 --> 08:12.439
+and going off on a tangent that proves to be a red herring.
+
+08:12.439 --> 08:15.279
+And then I would typically go back to my Git commit.
+
+08:15.279 --> 08:16.680
+I'd wipe everything out.
+
+08:16.680 --> 08:19.319
+I'd put a note about what the problem is not.
+
+08:19.319 --> 08:21.279
+And then I'd start it all over again.
+
+08:21.279 --> 08:24.000
+There was the kind of thing that it loves to latch onto.
+
+08:24.000 --> 08:26.160
+When it does, it says it with such confidence.
+
+08:26.160 --> 08:32.320
+It was said things like, no, an LLM cannot both have tool use and structured outputs
+
+08:32.320 --> 08:37.679
+in the same LLM call. This is the problem. It's a known issue and as a result." And then it rewrites
+
+08:37.679 --> 08:42.879
+everything. And when you look back, it's a completely fictional, fictional issue. Maybe someone
+
+08:42.879 --> 08:48.159
+reported something about this by mistake years ago. And now I often find that that particular thing
+
+08:48.159 --> 08:53.379
+has happened two or three times to me when it suddenly latches onto that and starts rebuilding things and you're like no
+
+08:53.659 --> 09:01.000
+So that's a moment when you stop it you you restore from your last commit and then you go and tell it
+
+09:01.000 --> 09:06.340
+This is not the problem try again and another hot tip that works really well is
+
+09:06.740 --> 09:11.000
+Using a different agent and I mean using a different LLM
+
+09:11.000 --> 09:15.779
+So it's time to pull up codecs and anti-gravity,
+
+09:15.779 --> 09:18.299
+one of the other ones we did in last week
+
+09:18.299 --> 09:22.120
+back in the IDE again and give it the assignment instead,
+
+09:22.120 --> 09:24.019
+make it go through this process
+
+09:24.019 --> 09:26.460
+because it's like saying having a second pair of eyes,
+
+09:26.460 --> 09:27.899
+but because each model has gone through
+
+09:27.899 --> 09:29.299
+a different training experience
+
+09:29.299 --> 09:30.820
+and has some different prompts
+
+09:30.820 --> 09:33.019
+and it is just set differently.
+
+09:33.019 --> 09:35.539
+There's every chance that it will discover something
+
+09:35.539 --> 09:36.960
+that Claude has missed.
+
+09:36.960 --> 09:43.039
+And so doing that is a really great technique to have multiple different LLMs, totally different
+
+09:43.039 --> 09:49.039
+prompts and models work on the same problem. That is a pro tip for sure, particularly with
+
+09:49.039 --> 09:53.440
+really hard problems. And as a final point, there is in fact a skill. There are in fact a bunch of
+
+09:53.440 --> 09:58.720
+skills for debugging. This I think is the most popular one as of right now, a systematic debugging.
+
+09:58.720 --> 10:02.559
+And it's a really good one. If you read through this, the skill is brilliantly written. I've
+
+10:02.559 --> 10:07.360
+actually not tried it myself, but I really want to because it's a bit like my five steps here,
+
+10:07.360 --> 10:12.159
+but it's a lot more thorough. It has a lot more about searching the web. It has a lot about
+
+10:12.159 --> 10:18.559
+really hammering home about finding and proving the root cause, which it calls the iron rule.
+
+10:18.559 --> 10:22.080
+So read, read the skill. It's great. And try it out if
+
+10:22.080 --> 10:26.559
+you get stuck on debugging. And if we get stuck in the next week and a bit, maybe we'll try it
+
+10:26.559 --> 10:30.559
+ourselves. That would be fun. But that's a good skill to know. And if you look under skills
+
+10:30.559 --> 10:34.799
+and debugging, you'll see there's a ton of them that you can experiment with as part of trying to
+
+10:34.799 --> 10:45.580
+problem solve. And with that, a quick reminder, a recap of what we did today. We were able to read issues from Jira using an Atlassian
+
+10:45.580 --> 10:50.519
+MCP server. That was then flowed through into Cloud Co where we were running the
+
+10:50.519 --> 10:54.879
+feature dev plugin that took it through the discipline seven step process. Well,
+
+10:54.879 --> 10:59.000
+there was some reason it skipped step six, but we made it go back and do it. And
+
+10:59.000 --> 11:05.000
+then that used the GitHub MCP server to create a PR and then merge it.
+
+11:05.240 --> 11:10.440
+And all of that ran into end and allowed us to deliver a full feature.
+
+11:10.440 --> 11:13.000
+And it worked, which is super impressive.
+
+11:13.000 --> 11:16.720
+And of course, the cool thing is that all of this was running inside
+
+11:16.720 --> 11:20.519
+Cloud Code, all of these different bells and whistles of using
+
+11:20.519 --> 11:22.159
+Cloud Code really effectively.
+
+11:22.159 --> 11:24.679
+And it was just that one command that we typed out,
+
+11:24.679 --> 11:26.320
+featured Dev, come up featured of,
+
+11:26.320 --> 11:28.820
+please implement your issue PL3
+
+11:28.820 --> 11:30.519
+with a next-year application and directory
+
+11:30.519 --> 11:32.480
+with front-end and razor PL when done.
+
+11:32.480 --> 11:34.000
+Bam, that's all it took.
+
+11:34.000 --> 11:35.399
+And it all ran.
+
+11:35.399 --> 11:38.399
+And so again, looking back at the kapathy tweet,
+
+11:38.399 --> 11:41.960
+this is the kind of way that you can build a workflow
+
+11:41.960 --> 11:45.120
+that is robust and that is thorough and disciplined
+
+11:45.120 --> 11:48.679
+and really uses Cloud Code to the max.
+
+11:48.679 --> 11:52.600
+And that is a wrap on day four of week two.
+
+11:52.600 --> 11:55.519
+And tomorrow is when we bring all of this into a project,
+
+11:55.519 --> 11:58.279
+now that we're really good at driving Cloud Code.
+
+11:58.279 --> 12:00.799
+And I'm so excited to tell you that that brings us
+
+12:00.799 --> 12:04.879
+to the 60% point, 60% of the way through.
+
+12:04.879 --> 12:08.279
+And hopefully you really do feel that big step
+
+12:08.279 --> 12:10.490
+that's been made now and that we're ready for tomorrow,
+
+12:10.490 --> 12:12.809
+ready for a big project, bring it on.
+

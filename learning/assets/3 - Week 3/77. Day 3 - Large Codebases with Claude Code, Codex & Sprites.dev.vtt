@@ -1,0 +1,578 @@
+WEBVTT
+
+00:00.000 --> 00:05.040
+This is the start of the crescendo towards the finale of this program.
+
+00:05.040 --> 00:13.279
+This is week three, day three, another purple day, another core learning day of skills,
+
+00:13.279 --> 00:19.440
+and this is the day when we look at what it takes to build large code bases, working with
+
+00:19.440 --> 00:26.559
+with big teams, working together with platforms like Claude Code and Codex and Open Code
+
+00:26.559 --> 00:30.160
+and so on, professional coding agents in large teams.
+
+00:30.160 --> 00:35.280
+And originally that was going to be all I was going to cover today.
+
+00:35.280 --> 00:38.640
+I was going to have a whole day talk about large team work
+
+00:38.640 --> 00:41.679
+and I had some stuff prepared and I was thinking we would dive in
+
+00:41.679 --> 00:45.200
+and take a big open source repo and kind of work on it.
+
+00:45.200 --> 00:50.240
+But what I sort of realized is that we've already covered all of the foundational skills,
+
+00:50.240 --> 00:55.679
+so this is more about summarizing and packaging it all up and explaining the do's and don'ts.
+
+00:55.679 --> 00:59.759
+And that will be boring to be an entire day, especially this late in the game. We're not
+
+00:59.759 --> 01:05.280
+up for a boring day like that. I can cover that material quite quickly. And then, and then,
+
+01:05.280 --> 01:11.000
+I've got some spicy topics, some spicy things to throw into the mix
+
+01:11.040 --> 01:12.680
+to keep things sizzling.
+
+01:12.680 --> 01:15.560
+So prepare yourself, be prepared for some spice.
+
+01:15.560 --> 01:17.439
+Let's get through the large cobay to work place,
+
+01:17.439 --> 01:21.560
+some good stuff, some vegetables to get through first,
+
+01:21.560 --> 01:24.120
+and then we will bring on the fun.
+
+01:24.120 --> 01:25.680
+All right, let's get started.
+
+01:25.680 --> 01:28.079
+Now I'm gonna start with another recap,
+
+01:28.079 --> 01:29.980
+and I realize this is like the third day in a row
+
+01:29.980 --> 01:32.280
+of recapping the same material,
+
+01:32.280 --> 01:35.640
+but I feel like I gave you a lot to digest
+
+01:35.640 --> 01:37.000
+on the first day.
+
+01:37.000 --> 01:39.120
+We keep the food down as we go.
+
+01:39.120 --> 01:40.400
+A lot to digest.
+
+01:40.400 --> 01:42.920
+And before we get to the spicy stuff,
+
+01:42.920 --> 01:44.959
+if I'm not carrying this too much,
+
+01:44.959 --> 01:47.879
+it's worth us taking one more moment to look at this.
+
+01:47.879 --> 01:50.280
+Slash commands, we know, include code
+
+01:50.280 --> 01:51.680
+or how you run commands.
+
+01:51.680 --> 01:54.519
+And there is a way to configure your own as I showed you,
+
+01:54.519 --> 01:57.760
+although these days it's more common just to use skills.
+
+01:57.760 --> 02:00.299
+And skills of course consistent across Cloud Code
+
+02:00.299 --> 02:02.939
+and codecs, and I think everyone is really jumping
+
+02:02.939 --> 02:05.959
+on the skills bandwagon to a large extent,
+
+02:05.959 --> 02:07.959
+they're kind of taking over from MCP
+
+02:07.959 --> 02:10.939
+as being the way that we like to build functionality
+
+02:10.939 --> 02:13.340
+into these coding agents.
+
+02:13.340 --> 02:18.000
+Then multi-agents, which is just this idea of running lots of cloud code at once,
+
+02:18.000 --> 02:24.080
+or maybe kicking off codecs to run as we did, which was really cool. Or now we know how to throw
+
+02:24.080 --> 02:29.919
+into that, like running multiple clouds that might be on the internet, like out on the cloud,
+
+02:29.919 --> 02:34.800
+perhaps because we just raised a bunch of GitHub issues and we've tagged cloud in them.
+
+02:34.800 --> 02:39.520
+And that means that cloud just goes off and doesn't. Or perhaps we're using something
+
+02:39.520 --> 02:45.520
+like sprite stop dev to run on a remote container, a remote sandbox on the cloud,
+
+02:45.520 --> 02:51.360
+running lots of clods. All of these things are possible. Those are multi agents. Sub agents
+
+02:51.360 --> 02:57.120
+is something that's a bit more contained. It's when when you really delegate one particular task
+
+02:57.120 --> 03:02.319
+to a sort of sub instance of Claude that just keeps that context, takes care of that,
+
+03:02.319 --> 03:03.919
+and then returns the results.
+
+03:03.919 --> 03:06.120
+And one of the built-in ones that's used a lot
+
+03:06.120 --> 03:08.479
+is the exploration sub-agent.
+
+03:08.479 --> 03:11.199
+They can just sort of go off and dig around a lot of files,
+
+03:11.199 --> 03:14.159
+read them all, summarize them, and return that back
+
+03:14.159 --> 03:16.240
+to the Claude Code context.
+
+03:16.240 --> 03:18.120
+So that's multi-agents and sub-agents,
+
+03:18.120 --> 03:20.280
+and of course you can create your own sub-agents
+
+03:20.280 --> 03:22.639
+and have them able to carry out a task.
+
+03:22.639 --> 03:28.560
+Agent teams, we talked about a bit but we didn't actually use them. We're going to do them tomorrow.
+
+03:28.560 --> 03:34.639
+They are where we start to get a bit more kooky and have things like swans and orchestration and
+
+03:34.639 --> 03:41.199
+stuff like that. Hooks is something very specific when you want to be able to tie something that's
+
+03:41.199 --> 03:44.340
+going on like like Claude using a tool or something like that,
+
+03:44.340 --> 03:46.060
+and have that always triggering,
+
+03:46.060 --> 03:49.240
+running a command or sending a prompt to Claude
+
+03:49.240 --> 03:51.080
+or kicking off a sub agent.
+
+03:51.080 --> 03:52.719
+And you can configure it that way.
+
+03:52.719 --> 03:54.960
+And it's, you know, used only occasionally,
+
+03:54.960 --> 03:58.039
+but they do sometimes come packaged in with plugins.
+
+03:58.039 --> 04:01.800
+And speaking of, you can also create your own plugins
+
+04:01.800 --> 04:02.879
+as I showed you.
+
+04:02.879 --> 04:04.560
+You can package up different plugins
+
+04:04.560 --> 04:07.919
+that can contain things like skills and subagents
+
+04:07.919 --> 04:10.840
+and commands and you can package them up together
+
+04:10.840 --> 04:13.360
+and you can also put them into a marketplace
+
+04:13.360 --> 04:15.039
+and you can then publish that marketplace
+
+04:15.039 --> 04:18.560
+and other people can bring in your marketplace
+
+04:18.560 --> 04:21.980
+and then choose to add in your different plugins.
+
+04:21.980 --> 04:24.439
+So that is how you'd create a plugin,
+
+04:24.439 --> 04:25.959
+not something you'd do every day,
+
+04:25.959 --> 04:27.399
+but something you might do as part
+
+04:27.399 --> 04:30.319
+of a larger project as we'll get to today.
+
+04:30.319 --> 04:35.079
+So that's the quick recap on the different pro features that we covered on week three
+
+04:35.079 --> 04:36.079
+day one.
+
+04:36.079 --> 04:40.720
+And then yesterday we had such an interesting time looking at sandboxing.
+
+04:40.720 --> 04:45.800
+It's a very important topic when you're thinking about being able to do more yoloing, kick
+
+04:45.800 --> 04:50.800
+off claw to do more, but there are serious security risks doing that on your computer
+
+04:50.800 --> 04:56.439
+with your file system, with your network access, running shell scripts on your computer.
+
+04:56.439 --> 04:58.199
+That's where sandbox has come in.
+
+04:58.199 --> 05:03.240
+Built into Cloud is the native sandbox, and it's also built into some other tools like
+
+05:03.240 --> 05:07.720
+we saw in cursor, but in Cloud Code, it's just slash sandbox, and then you're running
+
+05:07.720 --> 05:10.279
+in a lightweight native sandbox.
+
+05:10.279 --> 05:12.920
+Then we also found out all about using like
+
+05:12.920 --> 05:14.959
+managed cloud on the web.
+
+05:14.959 --> 05:17.000
+And you could have like cloud on the web and just
+
+05:17.000 --> 05:18.480
+through a web browser kick it off.
+
+05:18.480 --> 05:20.360
+You could do it through a mobile app.
+
+05:20.360 --> 05:23.399
+You can have it so that it's hooked into GitHub,
+
+05:23.399 --> 05:26.519
+so that a GitHub action, you tag cloud and
+
+05:26.519 --> 05:29.079
+cloud just goes away and does the work.
+
+05:29.079 --> 05:32.000
+And then you find that there's a branch that's been pushed.
+
+05:32.000 --> 05:34.680
+There's a PR ready for you with the change made,
+
+05:34.680 --> 05:36.839
+just because you tagged Claude.
+
+05:36.839 --> 05:38.000
+It's amazing.
+
+05:38.000 --> 05:40.560
+And so yeah, obviously I hope you shared in my joy
+
+05:40.560 --> 05:42.160
+with that and I hope you've been trying it out
+
+05:42.160 --> 05:43.399
+'cause it's really great.
+
+05:43.399 --> 05:45.160
+The thing I didn't get to do yesterday
+
+05:45.160 --> 05:47.920
+but you hopefully did is just that simple trick
+
+05:47.920 --> 05:50.920
+of putting an ampersand before a command to Claude,
+
+05:50.920 --> 05:52.879
+which means don't run this here.
+
+05:52.879 --> 05:55.000
+Take this whole conversation so far,
+
+05:55.000 --> 05:57.879
+push it out onto the internet and run it in
+
+05:57.879 --> 06:01.360
+a remote cloud and then get back the answer.
+
+06:01.360 --> 06:03.240
+It's really amazing that you can do that.
+
+06:03.240 --> 06:04.399
+I guess you don't get back the answer.
+
+06:04.399 --> 06:09.079
+It runs remotely and then you probably saw you could do slash tasks to come and look
+
+06:09.079 --> 06:10.079
+at them.
+
+06:10.079 --> 06:14.879
+So that is a really cool feature of a cloud code on the web.
+
+06:14.879 --> 06:19.000
+And then there is third party sandboxes.
+
+06:19.199 --> 06:21.600
+It's a bit of an up and coming feature.
+
+06:21.600 --> 06:24.639
+I showed you sprites.dev that I'm super impressed with.
+
+06:24.639 --> 06:27.000
+Just as they say, it is really, really quick.
+
+06:27.000 --> 06:31.600
+And it's just very easy then to run on Yolo mode,
+
+06:31.600 --> 06:34.480
+on the cloud, on a fast box.
+
+06:34.480 --> 06:38.079
+And it is, so it is stateful in that you can just come back
+
+06:38.079 --> 06:40.120
+to it and it's exactly where you left it.
+
+06:40.120 --> 06:41.959
+And again, it comes up really, really fast
+
+06:41.959 --> 06:44.040
+and it's got everything just as you left it.
+
+06:44.040 --> 06:46.639
+So you can use it as a little home away from home.
+
+06:46.639 --> 06:48.759
+And that's really amazing for developing.
+
+06:48.759 --> 06:50.560
+And the fact that Cloud Code,
+
+06:50.560 --> 06:52.920
+it runs in the terminal like that,
+
+06:52.920 --> 06:54.920
+means that it's just so convenient.
+
+06:54.920 --> 06:57.480
+You just run it there in the terminal remotely
+
+06:57.480 --> 07:00.959
+and you have access to your Cloud wherever you are.
+
+07:00.959 --> 07:02.620
+So that is sprites.dev.
+
+07:02.620 --> 07:05.279
+I absolutely love it, and I hope you were impressed
+
+07:05.279 --> 07:06.160
+with that too.
+
+07:06.160 --> 07:09.959
+And here I am back in VS Code again in the finally repo.
+
+07:09.959 --> 07:11.920
+And I've got two terminal screens.
+
+07:11.920 --> 07:14.199
+One of them is just a terminal, as usual,
+
+07:14.199 --> 07:16.279
+normal terminal in the finally directory.
+
+07:16.279 --> 07:18.120
+This one here says Sprite on it.
+
+07:18.120 --> 07:20.040
+This is just the same one as I had yesterday.
+
+07:20.040 --> 07:22.319
+And it's weird that it looks like this is just a terminal
+
+07:22.319 --> 07:26.720
+like any other, but of course, this is actually connected to my remote box,
+
+07:26.720 --> 07:29.360
+my sprite box, out there, somewhere.
+
+07:29.360 --> 07:31.560
+And I actually kept going.
+
+07:31.560 --> 07:32.800
+Yes, sir. I couldn't resist.
+
+07:32.800 --> 07:34.040
+I couldn't stop.
+
+07:34.040 --> 07:37.160
+It was the end of the recording, the end of the day.
+
+07:37.160 --> 07:38.319
+But I just had to keep going.
+
+07:38.319 --> 07:39.759
+I asked it to do one more thing.
+
+07:39.759 --> 07:42.360
+I asked it to update all of its documentation,
+
+07:42.360 --> 07:44.360
+to have one summary document.
+
+07:44.360 --> 07:45.800
+'Cause I thought that would be nicer.
+
+07:45.800 --> 07:50.040
+And then I also asked it to make a little demo called Market Data Demo,
+
+07:50.040 --> 07:53.680
+so that I could see for myself that was actually doing something and working.
+
+07:53.680 --> 07:56.600
+And I asked it to push that, which of course it did.
+
+07:56.600 --> 08:01.319
+And I then came to my other, my local machine here,
+
+08:01.319 --> 08:02.360
+and I already did this.
+
+08:02.360 --> 08:07.399
+I did like a git pull, so that the latest code would come down to my computer.
+
+08:07.399 --> 08:09.819
+And then I thought, all right,
+
+08:09.819 --> 08:11.620
+now it's time to try out this demo.
+
+08:11.620 --> 08:12.540
+Let's see what it looks like.
+
+08:12.540 --> 08:16.139
+So I asked it for a demo that could run in a terminal,
+
+08:16.139 --> 08:18.620
+like this, like not a fancy graphical demo
+
+08:18.620 --> 08:21.379
+that could prove that the market data simulator
+
+08:21.379 --> 08:24.379
+was working and able to generate market data.
+
+08:24.379 --> 08:28.939
+So I see the backend, and then I wanted to go UV run,
+
+08:28.939 --> 08:30.199
+market data demo.
+
+08:30.199 --> 08:31.160
+That's what I should be able to do.
+
+08:31.160 --> 08:32.399
+Let's see what happens.
+
+08:32.399 --> 08:33.559
+Whoa.
+
+08:33.559 --> 08:35.639
+(laughs)
+
+08:37.720 --> 08:38.840
+Wow.
+
+08:38.840 --> 08:40.080
+So take that over a second.
+
+08:40.080 --> 08:42.360
+So you'll see a bunch of tickers here.
+
+08:42.360 --> 08:43.539
+Prices changing here.
+
+08:43.539 --> 08:45.879
+This is the change appearing in red and green
+
+08:45.879 --> 08:46.840
+and things happening.
+
+08:46.840 --> 08:50.600
+And these sparklines is like a text based graph
+
+08:50.600 --> 08:52.759
+of the movement of these stock tickets
+
+08:53.399 --> 08:55.000
+and
+
+08:55.000 --> 08:57.500
+Yeah, come on. This is fantastic
+
+08:58.039 --> 09:01.879
+This again, this is all like zero shot stuff as they say
+
+09:01.879 --> 09:06.299
+Which means this isn't based on it not working and then me giving feedback and then it working
+
+09:06.299 --> 09:15.000
+This is just the demo that that I asked for just working first time pushed pushed to GitHub, just like that.
+
+09:15.440 --> 09:17.320
+So I absolutely love it.
+
+09:17.320 --> 09:20.039
+So I present this to you and hopefully you'll be able
+
+09:20.039 --> 09:22.879
+to get similar kinds of things by asking for a demo
+
+09:22.879 --> 09:23.919
+just like this.
+

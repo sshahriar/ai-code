@@ -1,0 +1,635 @@
+WEBVTT
+
+00:00.000 --> 00:04.960
+So context engineering, possibly the single most popular
+
+00:04.960 --> 00:08.000
+expression in our world last year.
+
+00:08.000 --> 00:12.800
+Context engineering, so look, the output of an LLM,
+
+00:12.800 --> 00:16.640
+we know it's based entirely on the input.
+
+00:16.640 --> 00:18.719
+It's stateless, you give it an input,
+
+00:18.719 --> 00:21.199
+it produces an output, the most likely tokens
+
+00:21.199 --> 00:23.879
+to follow that input, and that input is sometimes known
+
+00:23.879 --> 00:26.519
+as the context,'because it's all the contextual
+
+00:26.519 --> 00:32.060
+information that we're giving the LLM that it can use to generate the output.
+
+00:32.060 --> 00:36.340
+Getting that input right, getting the context right, that's all we've got.
+
+00:36.340 --> 00:37.340
+That's it.
+
+00:37.340 --> 00:39.560
+The output is only based on the input.
+
+00:39.560 --> 00:43.079
+So to say getting this right is everything, it's almost like obvious that of course it's
+
+00:43.079 --> 00:44.079
+everything.
+
+00:44.079 --> 00:45.079
+That's all it has.
+
+00:45.079 --> 00:46.079
+It's got that input.
+
+00:46.079 --> 00:49.920
+And so getting it right is what this game is all about.
+
+00:50.719 --> 00:55.359
+We used to call that prompt engineering. Remember when prompt engineering a couple of years ago
+
+00:55.359 --> 00:59.920
+was like a job that people could have and it was the idea that you had to figure out the best way
+
+00:59.920 --> 01:05.840
+to prompt an LLM. But really that term prompt engineering has evolved into this bigger term
+
+01:05.840 --> 01:11.159
+context engineering which is recognizing it's not just about the prompt, it's all other
+
+01:11.159 --> 01:16.560
+things like the kind of tools you give it and other things that surround it to make
+
+01:16.560 --> 01:22.599
+sure that you're doing the best job you possibly can do to give the LLM all the right
+
+01:22.599 --> 01:29.400
+information in the context so that the output is most likely to achieve your goal. That whole
+
+01:29.400 --> 01:33.280
+set of techniques is what's known as context engineering.
+
+01:33.280 --> 01:35.280
+And there were a lot of different components
+
+01:35.280 --> 01:37.879
+of what goes into this input context,
+
+01:37.879 --> 01:40.079
+this input to an LLM.
+
+01:40.079 --> 01:41.760
+First of them, the first thing,
+
+01:41.760 --> 01:43.680
+and one of the first things you learn about
+
+01:43.680 --> 01:46.000
+when you're calling an LLM directly,
+
+01:46.000 --> 01:47.599
+is there's a part of the prompt,
+
+01:47.599 --> 01:50.480
+part of the text input that's known as the system prompt
+
+01:50.480 --> 01:52.560
+that is the most crucial,
+
+01:52.560 --> 01:54.859
+the most general information
+
+01:54.859 --> 01:57.579
+that frames the overall situation.
+
+01:57.579 --> 02:00.219
+What role is this LLM playing?
+
+02:00.219 --> 02:02.180
+What's its overall job?
+
+02:02.180 --> 02:04.859
+Is it an agent that's responsible for writing code?
+
+02:04.859 --> 02:07.739
+Is it an agent that is a customer support agent
+
+02:07.739 --> 02:08.900
+for an airline?
+
+02:08.900 --> 02:11.500
+Whatever it is, that overall framing,
+
+02:11.500 --> 02:13.259
+including the tone it should take
+
+02:13.259 --> 02:14.819
+and the approach it should use,
+
+02:14.819 --> 02:20.280
+that goes into something called the system prompt, which usually is at the very beginning of the information that is
+
+02:20.280 --> 02:22.360
+sent to the LLM.
+
+02:22.360 --> 02:27.599
+There's then a set of descriptions of the different tools that it has access to, a bit
+
+02:27.599 --> 02:32.319
+like the way I said that if it put the word Python and then something, it would be saying,
+
+02:32.319 --> 02:34.280
+I want to run that in Python.
+
+02:34.280 --> 02:39.919
+And that descriptions of the different tools, that's also part of the context.
+
+02:39.919 --> 02:41.520
+That's what might go in there next.
+
+02:41.520 --> 02:44.199
+And of course, the more tools you want it to have access to,
+
+02:44.199 --> 02:46.800
+the more space you will fill up with these tools.
+
+02:46.800 --> 02:50.039
+And some people might say that those tool descriptions
+
+02:50.039 --> 02:52.080
+are actually part of the system prompt.
+
+02:52.080 --> 02:53.479
+And that's really a definitional thing.
+
+02:53.479 --> 02:55.560
+It doesn't particularly matter if you think of them
+
+02:55.560 --> 02:58.960
+as being part of the same thing or just two separate chunks.
+
+02:58.960 --> 03:00.639
+It's more or just about how you label it.
+
+03:00.639 --> 03:04.800
+But in for this diagram anyway, I'm saying there is the overall framing
+
+03:04.800 --> 03:10.240
+followed by the tools. And then there's something that is sometimes called the memory.
+
+03:10.240 --> 03:16.879
+And this is basically information that you want to persist across potentially multiple
+
+03:16.879 --> 03:23.599
+different conversations. Some people call this long term memory or medium term memory, but this is typically general
+
+03:24.000 --> 03:28.879
+Resources that can change over time, but the you'd want to always be able to come back to and
+
+03:29.280 --> 03:32.240
+Then there is the big part of it
+
+03:32.240 --> 03:36.919
+Which is basically the the the actual input that you're sending to the LLM
+
+03:37.319 --> 03:45.960
+But remember because of the this way that we have this this trick that that allows us to give the illusion of a memory. What we
+
+03:45.960 --> 03:51.379
+send can't just be the most recent message that we want to send the LLM. It's got to be
+
+03:51.379 --> 03:56.240
+the entire conversation so far. It's got to be the very first message that we sent
+
+03:56.240 --> 04:01.060
+and then its reply and then our follow-on message and its reply to that. So all of the
+
+04:01.060 --> 04:07.400
+messages that formed this conversation to the LLM. All need to fit next in the context.
+
+04:07.400 --> 04:09.520
+You'll need to be squeezed in next.
+
+04:09.520 --> 04:12.199
+And that also needs to include any reasoning
+
+04:12.199 --> 04:13.699
+that the LLM has done,
+
+04:13.699 --> 04:15.639
+any of these tokens that it generates
+
+04:15.639 --> 04:17.800
+to describe its thought process.
+
+04:17.800 --> 04:20.560
+There are sometimes when you can actually not include that,
+
+04:20.560 --> 04:21.600
+but generally speaking,
+
+04:21.600 --> 04:23.480
+that does tend to get included here.
+
+04:23.480 --> 04:26.720
+And it's replies, and then if it's generated code,
+
+04:26.720 --> 04:28.959
+then that code that it's generated needs to go here.
+
+04:28.959 --> 04:34.480
+If it's called tools, then the tools that it's decided to call and the output from calling those
+
+04:34.480 --> 04:40.480
+tools, that all has to go in here. All this information forms the input and when it's generating
+
+04:40.480 --> 04:52.639
+the output, it will be generating output that's consistent with this entire conversation history history of the full conversation so far. So all of that makes up the single
+
+04:52.639 --> 04:57.959
+input to the LLM because it's stateless and needs to get this entire package
+
+04:57.959 --> 05:03.160
+that you see here in order to be able to generate the most likely next token
+
+05:03.160 --> 05:06.839
+that will be consistent with our objective. And there's something else. In
+
+05:06.839 --> 05:14.839
+the coding agents that we're going to be working with. There is a special thing that gets included in there too, which is really, I guess, part
+
+05:14.839 --> 05:15.839
+of memory.
+
+05:15.839 --> 05:20.319
+But I'm going to show it as a separate line item, if you will, a separate thing that gets
+
+05:20.319 --> 05:21.800
+shoved in here.
+
+05:21.800 --> 05:24.279
+And it is a special file.
+
+05:24.279 --> 05:28.040
+And it's often called agents.md.
+
+05:28.040 --> 05:30.839
+And you may well know about this already, but we'll be looking at it.
+
+05:30.839 --> 05:36.680
+And we'll be talking a lot about what makes a good one and a bad one and so on. And you can think of this as being like part of the memory.
+
+05:36.680 --> 05:38.560
+It's a resource that persists.
+
+05:38.560 --> 05:40.759
+Or you can say this is something extra
+
+05:40.759 --> 05:42.660
+in addition to the other parts of memory.
+
+05:42.660 --> 05:46.240
+This agents.md is something special.
+
+05:46.240 --> 05:48.079
+And of course, if you're working with Cloud Code,
+
+05:48.079 --> 05:50.040
+it's in fact, claud.md.
+
+05:50.040 --> 05:52.800
+And with anti-gravity, it's germany.md.
+
+05:52.800 --> 05:54.560
+But these are all what we generally think of
+
+05:54.560 --> 05:57.000
+as the agents.md files.
+
+05:57.000 --> 06:04.000
+And these are files that we particularly use with coding agents that describe special things
+
+06:04.000 --> 06:09.000
+about the project we're working on, particular coding standards or things about our objective,
+
+06:09.000 --> 06:14.000
+something that we want to be in the memory of the AI agent while it's writing code for us.
+
+06:14.000 --> 06:21.319
+That is agents.md, a special file we write that gets shoved in the context every single time.
+
+06:21.319 --> 06:23.300
+Ah, I can hear you correcting me there.
+
+06:23.300 --> 06:25.300
+You know that it's not every single time.
+
+06:25.300 --> 06:26.540
+It's more complicated than that.
+
+06:26.540 --> 06:28.199
+But never fear, we will get to that.
+
+06:28.199 --> 06:29.100
+We will get to that.
+
+06:29.100 --> 06:31.500
+But for now, consider it to be every single time.
+
+06:31.500 --> 06:34.100
+All right, so that is the context.
+
+06:34.100 --> 06:37.300
+That's what context engineering is all about.
+
+06:37.300 --> 06:40.639
+And as you probably also know, but there's no harm in us going through it
+
+06:40.639 --> 06:48.920
+again, there is, of course, this idea of a context window, which is to say that an LLM
+
+06:48.920 --> 06:57.360
+has a limit to how many tokens can be fit in this context before it runs out of room.
+
+06:57.360 --> 07:02.720
+Because an LLM is designed to be able to look back a number of different tokens as it's forming its predicted
+
+07:02.720 --> 07:08.519
+next tokens and each LLM can only look back so far that they are only large enough to
+
+07:08.519 --> 07:11.079
+look back a certain amount of tokens.
+
+07:11.079 --> 07:17.759
+And if you try and pass in more tokens than its maximum context window, it will fail.
+
+07:17.759 --> 07:19.199
+That is considered a break.
+
+07:19.199 --> 07:22.000
+It can't handle it and it will be an error.
+
+07:22.000 --> 07:25.079
+It's the maximum number of tokens that it can examine
+
+07:25.079 --> 07:28.399
+in its input in order to predict the next tokens.
+
+07:28.399 --> 07:30.360
+That's called, that's sometimes just called
+
+07:30.360 --> 07:33.959
+the context window or the context window limit,
+
+07:33.959 --> 07:37.720
+but it is the maximum size of this context
+
+07:37.720 --> 07:39.000
+that's passed in.
+
+07:39.000 --> 07:43.079
+And so it needs to fit within this context window.
+
+07:43.079 --> 07:45.600
+And that's something which many of us
+
+07:45.600 --> 07:47.680
+agonize over constantly.
+
+07:47.680 --> 07:53.279
+And people obsess over this context limit, the fact that you can't go over it.
+
+07:53.279 --> 07:58.459
+But in fact, it's worth keeping in mind that in a lot of cases, just having too much
+
+07:58.459 --> 08:03.800
+in the context, even if you're not yet at the limit, it can still cause performance
+
+08:03.800 --> 08:05.240
+to degrade.
+
+08:05.240 --> 08:08.519
+And I'm using performance there, not in the kind of speed sense,
+
+08:08.519 --> 08:11.680
+not performance like we software people sometimes say,
+
+08:11.680 --> 08:13.120
+I'm talking about the accuracy,
+
+08:13.120 --> 08:15.920
+the quality of the results, that kind of performance.
+
+08:15.920 --> 08:18.959
+That can start to degrade, you get poorer results,
+
+08:18.959 --> 08:21.120
+you start to lose coherence,
+
+08:21.120 --> 08:23.639
+it starts to forget things as you fill up
+
+08:23.639 --> 08:25.079
+the context more and more.
+
+08:25.079 --> 08:27.519
+So even if you're not yet at the limit,
+
+08:27.519 --> 08:30.779
+even if you haven't filled up the context window, you might start
+
+08:30.779 --> 08:35.700
+to see degrading performance if you're shoving too much in the context.
+
+08:35.700 --> 08:40.240
+And conversely, you tend to get the best performance at the very start of your conversation
+
+08:40.240 --> 08:45.200
+when the context is super empty and it's only got a little bit to pay attention to.
+
+08:45.200 --> 08:47.539
+And so that's something to be very cognizant of.
+
+08:47.539 --> 08:54.879
+It's not just a binary, have you got too much, it fails. There's also a sense of less is more when it comes
+
+08:54.879 --> 09:00.080
+to filling up the context. Okay, now I've been saying that the LLM fails when the context
+
+09:00.080 --> 09:04.440
+window gets filled up and you're probably thinking, well, I don't think it fails. I think
+
+09:04.440 --> 09:09.799
+it does compacting. You've probably experienced compacting before. That's actually a feature
+
+09:09.799 --> 09:15.039
+built in to things like Cloud Code, which is that rather than allowing it to fail, it detects
+
+09:15.039 --> 09:20.080
+when the context window is almost filled up and it runs this process that essentially looks back
+
+09:20.080 --> 09:27.039
+at the whole conversation history and then summarizes it and replaces everything with a
+
+09:27.039 --> 09:33.279
+little summary of what was there before, freeing up lots of space in the context history, in the
+
+09:33.279 --> 09:37.039
+conversation history. And this is something which which is very common
+
+09:37.039 --> 09:43.360
+and it's also something which is feared by people like you and me a lot because it changes the
+
+09:43.360 --> 09:48.240
+game suddenly. The challenge with compacting is that we are trusting the all-alam to do a good
+
+09:48.240 --> 09:52.799
+job of figuring out what's important and what's not important from the conversation history
+
+09:52.799 --> 09:57.919
+and often it does a good job but sometimes it doesn't sometimes it misses an important thing
+
+09:59.759 --> 10:04.720
+but sometimes it doesn't. Sometimes it misses an important thing that we care a lot about, that we told it about during the conversation, that gets removed when it's summarizing. And as a
+
+10:04.720 --> 10:09.759
+result, the LLM appears to forget something that we've told it, or it makes the same mistake
+
+10:09.759 --> 10:16.080
+twice, which is super frustrating. And because of this, people have tended to fear the compactor,
+
+10:16.080 --> 10:21.600
+don't like it when it compacts. And often, you'll find the people that I do this a lot myself.
+
+10:21.600 --> 10:27.120
+Rather than let it compact, I will look at what's happened before, I will stop the agent.
+
+10:27.120 --> 10:33.679
+And then I will rewrite my file like agents.md that I mentioned before and then started up again
+
+10:33.679 --> 10:38.639
+fresh, making sure that I've kept careful note of everything that's happened that it needs to know
+
+10:38.639 --> 10:42.799
+about. So people do tend to fear the compacting process
+
+10:42.799 --> 10:45.480
+and like to stop it and refresh it and rewrite it
+
+10:45.480 --> 10:48.960
+because there's a lack of trust for how compacting works.
+
+10:48.960 --> 10:50.240
+There's a particular fear as well
+
+10:50.240 --> 10:52.279
+for if it's going to run compacting
+
+10:52.279 --> 10:54.360
+whilst it's in the middle of doing something.
+
+10:54.360 --> 10:55.919
+And that's something that you can get around
+
+10:55.919 --> 10:57.799
+by forcing it to compact at a good time.
+
+10:57.799 --> 10:59.440
+And that's a bit different.
+
+10:59.440 --> 11:02.919
+But I'm talking about is just a general fear of compacting.
+
+11:02.919 --> 11:04.360
+But the truth of the matter is,
+
+11:04.360 --> 11:06.320
+compacting has got a lot better
+
+11:06.320 --> 11:08.360
+in a just recent history.
+
+11:08.360 --> 11:10.879
+And now as of 2026,
+
+11:10.879 --> 11:13.840
+there is less reason to fear the compactor.
+
+11:13.840 --> 11:16.080
+It does a really good job.
+
+11:16.080 --> 11:18.840
+So I am still of the old guard
+
+11:18.840 --> 11:21.639
+that I do tend to still like to stop
+
+11:21.639 --> 11:23.960
+and summarize my agents.md.
+
+11:23.960 --> 11:26.720
+But I know that some of that is my stubbornness at this
+
+11:26.720 --> 11:30.519
+point and that often you can just trust the compactor.
+
+11:30.519 --> 11:32.840
+And so I'm here to tell you, don't be like me.
+
+11:32.840 --> 11:39.139
+At least start out by trusting the compactor, trust compacting, let it do its thing and it
+
+11:39.139 --> 11:44.720
+will often do a really fine job of summarizing the conversation history, keeping relevant
+
+11:44.720 --> 11:50.919
+stuff that it needs to remember and freeing up tons of space for more conversation.
+
+11:50.919 --> 11:53.360
+That's what it does and it tends to do it well.
+
+11:53.360 --> 11:57.779
+And maybe one more point to mention on context windows is just to tell you the context window
+
+11:57.779 --> 12:00.779
+size of different major models.
+
+12:00.779 --> 12:15.539
+So open AIs, GPT 5.2 that we used yesterday. yesterday, that has a context window of 400,000 tokens, 400,000 tokens, Claude, the
+
+12:15.539 --> 12:24.059
+Claude Sonnet 4.5, Claude Opus 4.5, that has 200,000 tokens, so about half. And Gemini,
+
+12:24.059 --> 12:30.059
+and the Gemini in Antigravity from Google, that has a context window of a million tokens,
+
+12:30.059 --> 12:32.559
+a million tokens, much greater.
+
+12:32.559 --> 12:34.480
+So these are the limits of you.
+
+12:34.480 --> 12:36.559
+It can't go above that number.
+
+12:36.559 --> 12:41.519
+But it's again worth pointing out that you'll see degrading performance as you start to put
+
+12:41.519 --> 12:42.879
+more in the context.
+
+12:42.879 --> 12:49.000
+So personally, I don't over obsess about these max context window sizes because I'm
+
+12:49.000 --> 12:54.480
+more interested in how is performance affected by putting more into the context.
+
+12:54.480 --> 12:59.919
+And I find across all the models that having less in the context gets better results.
+

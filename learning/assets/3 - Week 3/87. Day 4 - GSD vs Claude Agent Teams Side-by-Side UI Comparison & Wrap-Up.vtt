@@ -1,0 +1,389 @@
+WEBVTT
+
+00:00.000 --> 00:03.520
+Okay, well here we go, we'll bring up a new terminal.
+
+00:03.520 --> 00:08.519
+We will go, we will just run scripts/start_mac.sh.
+
+00:14.439 --> 00:17.359
+Okay, here we go, let's give this a shot.
+
+00:17.359 --> 00:19.960
+It says it's running, let's go and take a look,
+
+00:19.960 --> 00:22.660
+let's see if it's actually running.
+
+00:22.660 --> 00:25.519
+Bring this up, here's the browser window.
+
+00:27.320 --> 00:28.920
+Let's see what we get. Okay, it's working.
+
+00:28.920 --> 00:32.479
+It's working. The portfolio isn't empty.
+
+00:32.479 --> 00:37.560
+But that's because it's remembered the data from the last portfolio.
+
+00:37.560 --> 00:38.399
+That's something.
+
+00:38.399 --> 00:39.600
+Wow, I don't...
+
+00:39.600 --> 00:42.920
+That's of course because we have that database directory locally.
+
+00:42.920 --> 00:44.840
+Okay, this looks really cool.
+
+00:44.840 --> 00:47.719
+What do you think? I think this is probably a better display.
+
+00:47.719 --> 00:48.159
+It's got
+
+00:48.159 --> 00:54.159
+a lot in common. All right, let's, it's amazing that it looks so similar actually. So how do
+
+00:54.159 --> 01:00.560
+we add a ticker to, to, to this? Well, let's, let's just buy four Apple share, three Apple
+
+01:00.560 --> 01:06.079
+shares, press buy. There we go. Three got onto the list right here and Apple appeared right
+
+01:06.079 --> 01:11.680
+here. Okay, that's nice. And that's the portfolio and the cash is changing. Let's try this again.
+
+01:11.680 --> 01:20.400
+Let's go for for meta and let's get a 10 meta and press buy. I saw the cash come right the way
+
+01:20.400 --> 01:25.519
+down. Portfolios come all the way up and meta is now a big part of the portfolio but this isn't
+
+01:25.519 --> 01:32.760
+actually showing in different colors yet. So the heat map looks a bit inferior, but generally speaking, it is working.
+
+01:32.760 --> 01:33.560
+We'll give it that.
+
+01:33.560 --> 01:34.599
+This is pretty cool.
+
+01:34.719 --> 01:37.480
+I have to say what just happened to Amazon.
+
+01:37.480 --> 01:38.239
+I'm not sure.
+
+01:38.480 --> 01:42.920
+But in we will come back in a sec and try out the AI assistant.
+
+01:43.120 --> 01:44.959
+OK, so I'm going to say hi there.
+
+01:46.319 --> 01:47.799
+And it's thinking hello.
+
+01:47.799 --> 01:50.000
+How can I assist you with your portfolio today?
+
+01:50.799 --> 01:57.000
+I'm going to say I'd like to add, let's see what we add.
+
+01:57.000 --> 02:03.000
+Let's add IBM to the watch list.
+
+02:03.000 --> 02:07.000
+Okay, it's thinking.
+
+02:07.000 --> 02:11.000
+Still thinking.
+
+02:11.000 --> 02:19.520
+IBM has been added to watch list and it has IBM is on the Watchlist. This is working. Okay, let's
+
+02:19.520 --> 02:35.159
+now say, okay, I'd like to buy one share of IBM and sell five shares of Meta. Let's
+
+02:35.159 --> 02:40.159
+see what happens. Let's see what happens. We want Meta to go down to 5 in our portfolio
+
+02:40.159 --> 02:45.939
+right here. It's thinking over here. We're not getting the trademark speed from Suri
+
+02:45.939 --> 02:52.740
+Brass, but there we go. It did its thing. It executed by and sell, and I see that IBM
+
+02:52.740 --> 03:00.520
+is up to 1, and Meta is down to 5. It is working, and I see our portfolio updating down there. And that's pretty cool.
+
+03:00.520 --> 03:03.520
+So I would say this is really nice.
+
+03:03.520 --> 03:06.039
+This chart here is odd.
+
+03:06.039 --> 03:08.120
+I'm not sure why we're not seeing something there.
+
+03:08.120 --> 03:09.400
+It's funny that we had the same problem
+
+03:09.400 --> 03:11.080
+with the other UI as well.
+
+03:11.080 --> 03:13.360
+It's meant to be showing Apple, I guess.
+
+03:13.360 --> 03:16.280
+And this portfolio isn't highlighting in colors.
+
+03:16.280 --> 03:18.879
+This heat map, the way that the other one did.
+
+03:18.879 --> 03:21.979
+But otherwise, I would say this is pretty impressive.
+
+03:21.979 --> 03:23.599
+The chat is working, this
+
+03:23.599 --> 03:29.360
+is working really nicely. That just looks terrific. And generally speaking, it's working.
+
+03:29.360 --> 03:35.439
+It's, I'm, I'm not sure which one I give the edge, probably the other one actually.
+
+03:35.439 --> 03:40.960
+I think I give Claude agent's teams a slight one one step ahead of this, but it's pretty
+
+03:40.960 --> 03:42.879
+impressive. Let's face it.
+
+03:42.879 --> 03:44.639
+And I've also, I just dug into the code a bit
+
+03:44.639 --> 03:49.479
+to see whether it was using our skill to call cerebras.
+
+03:49.479 --> 03:51.240
+And I've noticed some interesting stuff here
+
+03:51.240 --> 03:52.919
+and the code that it's got here
+
+03:52.919 --> 03:55.479
+is that it is using cerebras,
+
+03:55.479 --> 03:57.280
+but it's not using our code.
+
+03:57.280 --> 03:58.960
+It is using light LLM as well.
+
+03:58.960 --> 04:01.280
+So it seems that it's read our skill,
+
+04:01.280 --> 04:03.080
+but it's taken in a different direction.
+
+04:03.080 --> 04:05.800
+It's using a different approach for structured outputs.
+
+04:05.800 --> 04:10.379
+It may be, this sometimes happens when it does what we suggest and then hits some sort of
+
+04:10.379 --> 04:16.019
+a bug and the way that it fixes the bug is to sort of rewrite and do things differently.
+
+04:16.019 --> 04:18.600
+So I'm speculating that something like that happened.
+
+04:18.600 --> 04:23.459
+So it still stayed true to sending it to cerebras, but it's also doing some different
+
+04:23.459 --> 04:30.040
+things to perhaps after encountering a bug. But generally speaking, I would say this is pretty solid
+
+04:30.040 --> 04:31.759
+for a first implementation.
+
+04:31.759 --> 04:34.519
+Even if it had taken a while, I'm pretty happy with the results.
+
+04:34.519 --> 04:36.959
+And as a final step, we should check into GitHub.
+
+04:36.959 --> 04:41.199
+Let's just see, I know it's been taking commits as we go.
+
+04:41.199 --> 04:43.160
+So a lot has already been committed.
+
+04:43.160 --> 04:44.560
+There's just a little bit left to go.
+
+04:44.560 --> 04:47.879
+There's some of the most recent stuff with the,
+
+04:47.879 --> 04:50.120
+oh, that's weird that it's got a no modules,
+
+04:50.120 --> 04:52.800
+not get ignored from the test directory.
+
+04:52.800 --> 04:53.720
+We would want to do that.
+
+04:53.720 --> 04:55.800
+That seems like a bit of a mistake.
+
+04:55.800 --> 05:00.800
+And yeah, so I will now check this all into Git,
+
+05:01.279 --> 05:03.800
+so we've got it nice and tight.
+
+05:03.800 --> 05:05.800
+And then I will see you for the wrap.
+
+05:05.800 --> 05:08.720
+Wait a second, I couldn't resist.
+
+05:08.720 --> 05:10.240
+Before we have the wrap,
+
+05:10.240 --> 05:13.480
+I had to bring up the two user interfaces side by side. It's
+
+05:13.480 --> 05:16.920
+kind of hard because neither of them does well when it's squashed horizontally. But
+
+05:16.920 --> 05:24.279
+this is the first one we built. This is the one that took half an hour and used agent
+
+05:24.279 --> 05:30.839
+teams from Claude. It had this slight janky problem here. It also has this problem that
+
+05:30.839 --> 05:34.240
+it can't seem to get the prices of things that aren't on the watch
+
+05:34.240 --> 05:40.199
+list that seems like a bug. But the UI is really nice and I love the way it does this.
+
+05:40.199 --> 05:45.959
+And then yeah, I think it looks very professional and it hasn't fallen prey to that problem
+
+05:45.959 --> 05:51.000
+where these LLMs tend to have purple backgrounds to all of their UIs. The one that took all
+
+05:51.000 --> 05:56.439
+of the hours, the five hour alternative is this one. It looks very similar.
+
+05:56.439 --> 05:59.240
+I think that it's failed on the heat map,
+
+05:59.240 --> 06:02.959
+isn't colored in in the way that the original one was.
+
+06:02.959 --> 06:05.399
+And that this isn't quite as dramatic,
+
+06:05.399 --> 06:07.279
+but it hasn't got the same bug.
+
+06:07.279 --> 06:09.959
+It is able to deal with new things
+
+06:09.959 --> 06:11.360
+that isn't on the watch list,
+
+06:11.360 --> 06:13.519
+and it's able to handle things better,
+
+06:13.519 --> 06:15.879
+able to add to the watch list as we saw,
+
+06:15.879 --> 06:22.100
+and still have prices for things that get added. So from that point of view, maybe it did a little bit better from a quality
+
+06:22.100 --> 06:27.879
+point of view, but I also, I really like the original one too. So I don't know,
+
+06:27.879 --> 06:31.899
+it's your call, of course it's your call. Put it in the chat and you do me,
+
+06:31.899 --> 06:37.120
+which one you think is better, but for me I'm going with the first one actually.
+
+06:37.120 --> 06:41.279
+I think that that's despite the defects defects which I think I could tell it to
+
+06:41.279 --> 06:45.360
+fix them pretty quickly and the fact that it got the whole thing done in in half an hour
+
+06:46.160 --> 06:53.439
+already speaks volumes to me. But two beautiful products it's super fun to see them side by side
+
+06:53.439 --> 06:57.120
+and I hope you like that and now I will see you for the wrap.
+
+06:57.120 --> 07:03.600
+Well what a day it's been I told you it would be a great day, got a roller coaster. I wasn't, I have to admit,
+
+07:03.600 --> 07:08.240
+I wasn't expecting how much I was signing up for. For you, it's just been like an hour. For me,
+
+07:08.240 --> 07:14.959
+it's been a whole day of toiling with GSD. I understand why people love it. I see that when
+
+07:14.959 --> 07:19.439
+it's ticking on a really big project, especially if you're willing to run it in YOLO mode and just
+
+07:19.439 --> 07:24.959
+leave it be, then it's clearly very, very diligent. I mean, honestly, when I saw it,
+
+07:24.959 --> 07:28.040
+like I backwards and forwards over confirming
+
+07:28.040 --> 07:29.939
+and double checking and triple checking
+
+07:29.939 --> 07:31.480
+that the tests were passing,
+
+07:31.480 --> 07:33.579
+it was clearly very thorough indeed.
+
+07:33.579 --> 07:34.980
+I see why it works well,
+
+07:34.980 --> 07:37.339
+but it's a lot of time spent
+
+07:37.339 --> 07:39.579
+and a lot of token spent as well.
+
+07:39.579 --> 07:43.060
+So we really saw those two sides of the spectrum.
+
+07:43.060 --> 07:48.720
+We saw the new Claude agent teams and how it's able to be very dynamic
+
+07:48.720 --> 07:55.360
+and then we saw the more regimented, more strict orchestration in GSD and I think we
+
+07:55.360 --> 08:02.240
+enjoyed two fabulous results as a result of that and yeah I hope you enjoyed that and then
+
+08:02.240 --> 08:08.759
+tomorrow we should have a fitting finale. I can't wait to show you what I got in store for you.
+
+08:08.759 --> 08:13.360
+With that, that brings us to 93% of the way along.
+
+08:13.360 --> 08:18.079
+We've only got 7% left and it's all tomorrow and I can't wait to see them.
+

@@ -1,0 +1,122 @@
+# The 8 Stages of AI Coding From ChatGPT to Agent Orchestration
+
+> Week 1 · Day 1
+
+## Overview
+
+To give you another perspective on the journey that you and I are about to go through, I wanted to share something that was written by Steve Yege, the author of a product called Gastown that's that's huge that we will look at at some point. And it's this this has been a very popular post when he described the different stages that you go through as an AI coder as you use AI in a more and more advanced way.
+
+in a more and more advanced way. So in his post, Steve described the first stage of your AI journey is using things like interacting with chat GBT and using AI autocompletes to help you code, just as something that you refer over to.
+
+Stage two is when you have a coding agent and it's in the sidebar of your IDE just as it was for us with cursor moments ago. But it's asking for permission before it makes any change to the code.
+
+## You will learn
+
+- Understand the main ideas covered in **The 8 Stages of AI Coding From ChatGPT to Agent Orchestration**
+- Follow the practical walkthrough from Week 1, Day 1
+- Apply the techniques discussed in your own projects
+
+## Key concepts
+
+### Foundations
+
+You are checking everything step by step. And it's just there to give you suggestions, maybe to make a few changes with your approval with your express consent. And then stage three is the same, except you are now in something that we like to call YOLO mode.
+
+YOLO of course, sure for you only left once, but this is the mode where you just don't accept changes. You just say, I accept everything. Go for it.
+
+Do whatever you want. I trust you. It's a level of trust that you're giving the coding agent in the IDE sidebar.
+
+And Steve also distinguished between a stage four, which is where it's more of a sort of conceptual change where you don't have the coding agent in a sidebar, but it's really occupying the main window. You've kind of expanded it, and as far as you're concerned, that is where you're looking. You're not looking at the code that it's changing.
+
+You're looking at the agent of what it's telling you. And occasionally you're checking the differences in code that it's making. You're seeing them fly by, you're not actually expressly accepting them, you're just seeing them looking at them, but maybe you're just walking away and letting it do its thing.
+
+That is the distinction between stage three and stage four. Stage four, your attention is on the agent, not on the code. Now, all of stages one to four are about working in an IDE, like cursor or VS code.
+
+Stage five is where you've moved to the command line, to the CLI, to the terminal. You were using Cloud Code or similar, a coding agent in the CLI. You are still on YOLO, letting it do its thing.
+
+And now the diffs are just scrolling by. You're not even checking them. You're just sitting back, watching it happen.
+
+Maybe you're just leaving it as I say, coming back later and it's done. That's stage five. And stage six is the same except it's not one agent now.
+
+You've spawned multiple agents. You've got many of them working concurrently on your project. Like you've got a little team, maybe three to five agents and they're all running in your CLI.
+
+Okay, and then seven is just up in the ante. You've now got 10 or more agents in your CLI and you're managing them all yourself. You're like kicking them all off and watching them do their thing and coordinating what they're all doing.
+
+So it's like you've got a lot of work to do to coordinate them and they're all running. It's like you're hugely leveraged with all of these agents and sub-agents, all running, building your stuff for you. And of course, you see where this is heading.
+
+Stage eight is when you have an agent that is orchestrating the other agents. So you're not manually managing this. You've got agents managing each other.
+
+### Deep dive
+
+And maybe there's a whole hierarchy. There's one agent managing a bunch of manager agents that are all managing a bunch of worker agents, all in some structured way. There's a testing team, a design team.
+
+There's all sorts of different roles and responsibilities happening in your agents orchestrating other agents. That is stage eight. That is the most advanced stage in Steve's progression.
+
+And Steve's original post, he also asked Google Gemini's nano banana to come up with images associated with each one. And these are like the little nano banana images. And you can see they tell that story of the progression, particularly figure eight or the bottom right.
+
+You can really see that sense of hierarchy and of many agents that are organized together and coordinating activities. That is the journey. And I'll just make the point that week one of our course here is about those first four stages, not really stage one, because that's just using chat GPT, I imagine you can do that already.
+
+It's really stages two, three and four. We're gonna be covering that in the first week. The second week is all about stage five.
+
+We're really digging down on stage five to make sure that's absolutely understood. And then very much the third week is about adding six, seven and eight to the mix so that we end up at the very peak performance using an entire orchestrated network of agents to deliver your product. And I'll make the point that whilst these eight stages represent moving to more and more sophisticated use of AI to build more and more, it's not necessarily, it doesn't necessarily translate to the most advanced way to use AI agents in the enterprise.
+
+In fact, I would argue that somewhere between stages 5 and 6 is the sweet spot for building quality software in the enterprise. And that is mostly what we will be focused on in this course. It is largely stage five in week two and stage six in week three.
+
+I'm going to be giving you stages seven and eight, so you can see it happening. Whether you would actually use that in practice in the enterprise, at least today, I would say, is an open question, but certainly you will have exposure to it. But five and six is really for me the sweet spot for building bulletproof reliable Scalable software and adding the most commercial value.
+
+Okay now you and I at this point have to have a conversation about AI costs always a hot topic I get a bunch of questions on this every single day and so let me let me set the record straight Let's have words on this. So look, here's the thing. You can take this entire course without spending a penny on API costs, not a cent.
+
+You don't need to spend anything. You can also, should you wish, consume a lot of your money. There's plenty of opportunity to spend plenty on Cloud Code and others.
+
+It's an easy way to burn lots of money if you want to ramp up and have 20 agents build something enormous. Certainly they will happily take your money. So that option is available for you.
+
+I often do and I have great fun and for me, it's worth it, but it's your choice and you should always understand what you're gonna spend and make sure that that is worth it to you. My recommendation, I think to get the most out of this course, is to just have the cursor pilot as long as you still are eligible for that free period, just so that you've had some experience with it. And then go for the $20 a month plan with Claude Code, which is where we'll spend weeks two and three.
+
+And only go up beyond that if you want to get more intense. So that will be my recommendation, but it's not like it's required you don't need to spend a cent. If you choose to not spend anything, if that's how you'd like to approach this, please look at the resources where I'll try and put in extra tips and examples for how you do it, how you set up to use free models and there will be some parts of the course that you might need to skip some things that I'll show you that are paid products, in which case just take it that I'm showing it to you for future reference and you won't use that yourself but you'll use one of the free tools instead.
+
+### Putting it together
+
+So you may need to pick and choose as we go a little bit. I'll try and put notes about that in the resources and keep an eye on that. And so for the golden rule, the golden rule, it is this.
+
+It is that I will take responsibility for many things on this course. I am responsible for getting you to be able to answer the Andre tweet at the end of three weeks, but I can't take responsibility for the API costs, the AI costs. You need to make the decisions about the spend you're comfortable with and you need to monitor any costs that you're incurring on the different platforms.
+
+I'll be very clear on how you do it and where you do it as we go. But that part of it needs to be on you. I'm shirking that responsibility because I can't have that responsibility.
+
+It's pricing. It varies. I've had your different regions.
+
+There are different offers available for people. There are various free trials. There are special deals.
+
+And I don't know about them. You will need to do that research and make sure that you're comfortable with whatever you sign up for. So this is the one thing.
+
+I'll give you as much transparency and clarity as I possibly can, but please, you need to be in the driving seat when it comes to AI costs. And I know this is a source of frustration for people because it feels like you're getting nickel and dined. When everything you sign up for is like another $20 a month or whatever.
+
+But it's just worth keeping in mind that this is the new cost of working with this kind of technology. We're all familiar with the model that you might need to buy a laptop that might cost as much as $1,000 or more for high-end laptops. And that doesn't surprise us, but this sort of $20, $30 a month from lots of different people.
+
+That's something which we're not used to. And so it feels like there's this friction and it's painful. But keep in mind that these vendors do it doing this kind of AI calculation involves hundreds of trillions of floating point calculations.
+
+There's a lot of compute that goes into it. And someone needs to pay the electricity bills. They can't lose money on doing this for you.
+
+And as I say, it's astonishing that we're able to have AIs that can do what they can do.
+
+## Walkthrough
+
+This session walks through the material step by step. Use the notes below as a study guide while you rewatch or practice alongside the original lesson.
+
+You are checking everything step by step. And it's just there to give you suggestions, maybe to make a few changes with your approval with your express consent. And then stage three is the same, except you are now in something that we like to call YOLO mode.
+
+## Practical tips
+
+- YOLO of course, sure for you only left once, but this is the mode where you just don't accept changes. You just say, I accept everything. Go for it.
+- And Steve also distinguished between a stage four, which is where it's more of a sort of conceptual change where you don't have the coding agent in a sidebar, but it's really occupying the main window. You've kind of expanded it, and as far as you're concerned, that is where you're looking. You're not looking at the code that it's changing.
+- We're really digging down on stage five to make sure that's absolutely understood. And then very much the third week is about adding six, seven and eight to the mix so that we end up at the very peak performance using an entire orchestrated network of agents to deliver your product. And I'll make the point that whilst these eight stages represent moving to more and more sophisticated use of AI to build more and more, it's not necessarily, it doesn't necessarily translate to the most advanced way to use AI agents in the enterprise.
+- Okay now you and I at this point have to have a conversation about AI costs always a hot topic I get a bunch of questions on this every single day and so let me let me set the record straight Let's have words on this. So look, here's the thing. You can take this entire course without spending a penny on API costs, not a cent.
+
+## Common pitfalls
+
+- Skipping setup steps called out early in the lesson
+- Copying outcomes without understanding the workflow behind them
+- Running ahead without verifying intermediate results
+
+## Summary
+
+And so it shouldn't be massively shocking that there is some cost associated with it. So for what it's worth, I will say that I do want to make the point again, you, you're in charge of your charges, you're the boss, you're in charge of that, but I'm here to help. So if you ever have any questions, ask me at any time, I'll give you all the information I can, I'll show you where to look. So as long as you're happy to be in control of those costs, I'm here to make sure that they are as transparent as possible.

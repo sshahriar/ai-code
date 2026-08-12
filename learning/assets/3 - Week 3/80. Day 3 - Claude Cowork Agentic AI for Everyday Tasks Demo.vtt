@@ -1,0 +1,206 @@
+WEBVTT
+
+00:00.000 --> 00:06.400
+Claude Agent SDK was sizzle number one, but I have another sizzle lined up for you and it's
+
+00:06.400 --> 00:15.279
+to show you co-work. Co-work is another product by Claude, by Anthropic, and it is basically
+
+00:15.279 --> 00:21.120
+taking Claude code and that whole agentic experience that we take people get to have
+
+00:21.679 --> 00:27.519
+and offering it to business people or to anyone, anyone that wants to use Cloud Code's magic
+
+00:27.519 --> 00:30.879
+for things other than coding. That's what Co-Work is about,
+
+00:30.879 --> 00:36.880
+Cloud Co-Work. And I want to show it to you now. And this is still like an early release of it in
+
+00:36.880 --> 00:40.799
+research preview. And maybe by the time you're seeing this, it's already gone through a few
+
+00:40.799 --> 00:50.859
+iterations. So you might be more familiar with it. But let's do a quick sizzle. Let's have a look at it. You start by going to cloud.com/product/cowork,
+
+00:50.859 --> 00:54.420
+link in the resources, and then you download Cloud
+
+00:54.420 --> 00:57.380
+to install it on your Mac or Windows box,
+
+00:57.380 --> 00:59.060
+and I'll see you when you have it installed.
+
+00:59.060 --> 01:02.259
+And of course, this is just the usual Cloud desktop app,
+
+01:02.259 --> 01:03.899
+which you may already have.
+
+01:03.899 --> 01:05.739
+If you don't, then the first time you open it,
+
+01:05.739 --> 01:07.980
+will look like this, Cloud for Mac for me
+
+01:07.980 --> 01:09.180
+and maybe Cloud for Mac view,
+
+01:09.180 --> 01:10.620
+maybe Cloud from Windows.
+
+01:10.620 --> 01:12.379
+Fastest way to talk with Claude,
+
+01:12.379 --> 01:13.900
+I'm going to press get started.
+
+01:13.900 --> 01:16.099
+It's going to want me to log in.
+
+01:16.099 --> 01:18.140
+I'm going to come in here.
+
+01:18.140 --> 01:20.099
+I'm going to continue with Google.
+
+01:20.099 --> 01:23.540
+That's my Google account, continue.
+
+01:23.540 --> 01:28.540
+And then back we come and we're signed on the usual OAuth flow.
+
+01:29.079 --> 01:35.319
+And then I will just say it's giving me the instructions that allow me to have shortcut
+
+01:35.319 --> 01:41.079
+keys. And here we are in something that looks very similar to the web interface and is in
+
+01:41.079 --> 01:45.879
+fact of course the desktop app. We are on chat, which is a normal way that you might
+
+01:45.879 --> 01:50.480
+chat with Claude, like Claude.ai. But you'll see there are some other tabs here. It's worth
+
+01:50.480 --> 01:55.280
+pointing out there is of course a code tab, which looks, I mean it's less and bigger,
+
+01:55.280 --> 02:01.920
+which looks very much like the one that was using a CloudCobe on the web looked like,
+
+02:01.920 --> 02:08.639
+and it is of course also going to be connecting to the managed service of Cloud on the web.
+
+02:09.919 --> 02:18.879
+And then there is co-work, the new tab in the middle. Let's not something off your list setting up Claude's workspace.
+
+02:18.879 --> 02:25.120
+So again, what we're doing here is we are connecting to Claude running on the cloud
+
+02:25.120 --> 02:31.199
+for it to do a task for us. And you can see that it's got some things that it can do, like
+
+02:31.199 --> 02:41.960
+optimize my week, organize my screenshots. It's the sorts of things that it's good at doing. It's like Claude Codes, kind of to-do lists and abilities,
+
+02:42.039 --> 02:45.219
+but applied to everyday kinds of tasks.
+
+02:45.240 --> 02:50.500
+So the sorts of things that co-work can do is stuff like reorganizing files,
+
+02:50.500 --> 02:53.699
+like you can look at images that can do stuff.
+
+02:54.099 --> 02:58.379
+It's also got the ability to have plugins customized with plugins.
+
+02:58.379 --> 03:00.800
+And you can see from the way this is organized, the
+
+03:00.800 --> 03:06.080
+anthropic official plugins and so on, there's like plugin marketplaces, it's all a very nice
+
+03:06.080 --> 03:10.479
+mirror from what we used to with Cloud Code. And this has stuff like like looking digging through
+
+03:10.479 --> 03:15.520
+data, looking at finance stuff, legal things like contract review, we know a tool that can
+
+03:15.520 --> 03:23.439
+that can build legal documents, NDA triage. So there's lots of useful things in here. Let's go for something that might be useful
+
+03:23.439 --> 03:29.120
+for me right now. Okay, so I'm going to click on this button, work in a folder right here. And I'm
+
+03:29.120 --> 03:34.479
+going to go into my desktop. And there's a folder called receipts. And I'm going to work in this
+
+03:34.479 --> 03:53.439
+folder, allow it to change files in there. And now, in the folder that I've shared with you, there are a bunch of receipts. They are all PDFs of images.
+
+04:14.000 --> 04:19.000
+report as an Excel file expenses dot x l s x. And that's what we will do. That would be handy. There's like 12 of them in there. It would like to access it. We'll give it access to that.
+
+04:19.000 --> 04:31.079
+And off it goes, the stuff happening over here. Let me start by reading the Excels skill and checking what receipts you have. Off it goes, things are happening. 12 PDF receipts.
+
+04:31.079 --> 04:35.639
+Let me read them all to extract the details. So we will let this happen. Look at all these
+
+04:35.639 --> 04:41.519
+things going on. Stuff happening there. And it's going through and reading them at one
+
+04:41.519 --> 04:46.879
+at a time. And I will see you in a minute when it's hopefully done. Well, a lot happened
+
+04:46.879 --> 04:50.480
+there. It chugged away. It did lots of processing, it had some problems
+
+04:50.480 --> 04:54.439
+with the PDFs because it realized it needed to read them in, it's like images and it did
+
+04:54.439 --> 04:59.759
+some stuff but it's just finished after I think about 5 or 10 minutes of thinking.
+
+04:59.759 --> 05:05.120
+And in my receipts folder, a new file has appeared called expenses dot x l s x. And
+
+05:05.120 --> 05:12.300
+if I launch that, this thing comes up and sure enough, it has like, it's a nicely formatted expenses report
+
+05:12.300 --> 05:14.860
+with 12 receipts in there.
+
+05:14.860 --> 05:18.500
+And with all of these different bits of visual audio equipment
+
+05:18.500 --> 05:22.180
+and subscriptions, and then with a total and a total amount,
+
+05:22.180 --> 05:24.600
+and it all seems to be good.
+
+05:24.600 --> 05:29.259
+And so yes, that is something that I might have had to have done myself.
+
+05:29.259 --> 05:31.259
+It's from the past, so I did that myself.
+
+05:31.259 --> 05:35.240
+And so I know that it's painful, and this is an example of the kind
+
+05:35.240 --> 05:39.399
+of task that is quite easy for co-work.
+
+05:39.399 --> 05:41.000
+So there you have it.
+
+05:41.000 --> 05:46.680
+This is taking the Claude code that we know and that is so helpful for us as engineers
+
+05:46.680 --> 05:54.149
+and allowing people to use it for everyday tasks like making expenses spreadsheets. [BLANK_AUDIO]
+

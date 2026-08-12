@@ -1,0 +1,518 @@
+WEBVTT
+
+00:00.000 --> 00:02.799
+And just to convince you, I'm actually qualified to talk to you about this.
+
+00:02.799 --> 00:04.000
+I should introduce myself.
+
+00:04.400 --> 00:05.639
+My name is Ed Donner.
+
+00:05.639 --> 00:09.919
+I'm the co-founder and CTO of an AI startup called Nebula.io.
+
+00:10.119 --> 00:11.160
+You should go check him out.
+
+00:11.359 --> 00:13.800
+I spent most of my career working for JP Morgan.
+
+00:14.080 --> 00:16.760
+I started out in London, which is where I'm from originally.
+
+00:17.160 --> 00:22.359
+I moved to Tokyo for a few months and then ended up in NYC, which is where I am right now.
+
+00:22.640 --> 00:28.160
+And at the end of my time at J.P. Morgan, I was a managing director leading a team of about 300
+
+00:28.160 --> 00:34.399
+technologists working in software engineering and Python and in analytics. And before my current
+
+00:34.399 --> 00:41.840
+role at Nebula, I founded an AI startup called Untapped. And Untapped was acquired in 2021. And
+
+00:41.840 --> 00:51.200
+this picture here is my magical moment, which is a billboard in Times Square announcing the acquisition of my startup.
+
+00:51.200 --> 00:55.759
+And in case you don't believe me, you're like, eh, that could be any picture from Times Square.
+
+00:55.759 --> 01:00.719
+I will tell you that if you if you squint and look very carefully, the thing I just circled in
+
+01:00.719 --> 01:08.400
+green there is me. So there is evidence of this. I am, I am there on that billboard. And the other
+
+01:08.400 --> 01:11.980
+reason I show this, not just to show off about my moment in Times Square,
+
+01:11.980 --> 01:13.980
+but also because I actually live
+
+01:13.980 --> 01:16.040
+like one block from Times Square.
+
+01:16.040 --> 01:18.980
+It's very rare for people to live in this,
+
+01:18.980 --> 01:21.700
+because it's such a sort of touristy area to be in,
+
+01:21.700 --> 01:23.579
+but that is where I live, about a block that way,
+
+01:23.579 --> 01:24.980
+behind that guitar.
+
+01:24.980 --> 01:26.180
+If that guitar weren't there,
+
+01:26.180 --> 01:29.900
+you would see my window that I'm looking out onto right now.
+
+01:29.900 --> 01:35.079
+So that is where I am, if you can picture me right there making this.
+
+01:35.079 --> 01:36.640
+And look, it's customary in these things
+
+01:36.640 --> 01:38.879
+to show like a hobby,
+
+01:38.879 --> 01:40.680
+like something I do outside work.
+
+01:40.680 --> 01:42.480
+And so I have this picture of me
+
+01:42.480 --> 01:44.799
+just having flown that airplane to be like,
+
+01:44.799 --> 01:47.560
+"Look, I can do things other than being a nerd."
+
+01:47.560 --> 01:49.319
+But in fact, I am a big old nerd.
+
+01:49.319 --> 01:51.319
+Most of what I do in my spare time
+
+01:51.319 --> 01:53.599
+is more working with LLMs.
+
+01:53.599 --> 01:57.040
+And I'm honestly really bad at anything else.
+
+01:57.040 --> 01:58.680
+So you're lucky.
+
+01:58.680 --> 02:01.680
+You're lucky that this is how we get to work together,
+
+02:01.680 --> 02:02.959
+because this is all I'm good at.
+
+02:02.959 --> 02:05.120
+And as it turns out, when I flew that plane,
+
+02:05.120 --> 02:06.840
+I was really bad at it.
+
+02:06.840 --> 02:08.800
+And so if you get on a plane and you
+
+02:08.800 --> 02:12.639
+see that it's me there behind the stick,
+
+02:12.639 --> 02:14.800
+you want to be looking for a parachute really quickly.
+
+02:14.800 --> 02:16.199
+You ought to be getting out of there.
+
+02:16.560 --> 02:21.479
+But if you find yourself on a course and I'm there and I'm teaching about
+
+02:21.479 --> 02:23.360
+LLMs, then congratulations.
+
+02:23.360 --> 02:24.439
+You've come to the right place.
+
+02:24.680 --> 02:25.639
+That's what I'm good at.
+
+02:25.719 --> 02:29.360
+And that brings me to the other thing I do, which is explaining
+
+02:29.520 --> 02:31.439
+LLMs and agents to other people.
+
+02:31.639 --> 02:33.560
+I speak at conferences and live events.
+
+02:33.560 --> 02:36.000
+And of course, I teach a bunch of courses on Udemy.
+
+02:36.479 --> 02:40.319
+It's been my great joy, but I have more than 400,000 people on
+
+02:40.319 --> 02:45.520
+my various different courses and I absolutely love it and I'm very good at interacting with
+
+02:45.520 --> 02:50.159
+people. If you send me a message, I will reply and it's not an agent, it's really me.
+
+02:51.039 --> 02:56.879
+Try me and I'll reply right away. I very much enjoy interacting with people and I love the whole
+
+02:56.879 --> 03:01.199
+process of explaining things and I can't wait to be doing that with you
+
+03:01.199 --> 03:02.360
+over the next three weeks.
+
+03:02.360 --> 03:05.560
+So as I say, I have five other courses on Udemy,
+
+03:05.560 --> 03:06.599
+and you might be wondering,
+
+03:06.599 --> 03:09.439
+how exactly does this fit in with the other things I do?
+
+03:09.439 --> 03:12.319
+I've got a course that's called AI Builder
+
+03:12.319 --> 03:15.400
+that is about building solutions,
+
+03:15.400 --> 03:18.800
+using platforms like N8N and 11 Labs,
+
+03:18.800 --> 03:20.560
+Agents and Voice Agents.
+
+03:20.560 --> 03:23.219
+I've got three different courses for AI
+
+03:23.219 --> 03:28.020
+engineers. There's a core track and a genetic track and an MLOps track.
+
+03:28.219 --> 03:32.979
+And then I have a leadership course, a briefing for business leaders and
+
+03:32.979 --> 03:37.659
+for tech people too, on what it takes to build a durable AI business and
+
+03:37.659 --> 03:43.139
+deliver AI to production and building a roadmap to deliver commercial impact.
+
+03:43.159 --> 03:45.039
+building a roadmap to deliver commercial impact. And so this is my latest course.
+
+03:45.039 --> 03:47.439
+This is AI CODA.
+
+03:47.439 --> 03:53.639
+This is for people who want to write code using AI and agents to help them.
+
+03:53.639 --> 03:55.120
+Now, all of these courses,
+
+03:55.120 --> 03:59.159
+I often get the question of which order should I take your courses?
+
+03:59.159 --> 04:00.520
+And I always say, look,
+
+04:00.520 --> 04:03.800
+I've built these courses to be complementary.
+
+04:03.800 --> 04:08.080
+If there is overlap and it's only additive. It makes absolute sense to
+
+04:08.080 --> 04:13.840
+take them in whatever order works best for you. If you're looking for an order to take them in,
+
+04:13.840 --> 04:18.480
+then I do have a webpage on my homepage called Curriculum, which lays out the curriculum,
+
+04:18.480 --> 04:23.199
+explains how they relate to each other, and perhaps the most natural order to take them in.
+
+04:23.199 --> 04:29.199
+And it's always possible that I've made more courses since I've spoken to you now, in which case you'll find those other
+
+04:29.199 --> 04:35.120
+courses also explained on my curriculum page and laid out so that you can connect the dots
+
+04:35.120 --> 04:40.720
+between them. But this course that you're on right now is a bit of an odd one out. And let me
+
+04:40.720 --> 04:45.360
+tell you what I mean by that. Most of the courses that I teach, if not all the courses I teach,
+
+04:45.360 --> 04:52.000
+are about how do you use technology? How do you write code in order to make AI platforms,
+
+04:52.000 --> 04:54.100
+AI products or AI agents?
+
+04:54.100 --> 04:56.839
+So it's about using code to make agents.
+
+04:56.839 --> 04:59.360
+This course is kind of the other way round.
+
+04:59.360 --> 05:02.959
+This is about using agents to write code.
+
+05:02.959 --> 05:07.480
+And that code can also itself be about new AI products.
+
+05:07.480 --> 05:10.439
+So it's certainly worth having this in mind
+
+05:10.439 --> 05:13.959
+that most of my courses are about people who want to build AI
+
+05:13.959 --> 05:15.879
+How do you write code to build AI?
+
+05:15.879 --> 05:19.360
+And this is about how do you use AI in order to write code?
+
+05:19.360 --> 05:25.339
+And there's something circular going on there, which is confusing, but hopefully that's clear to you and you understand what I mean
+
+05:25.339 --> 05:31.600
+That's why this course is a bit different to all of the others, although it's still very complementary to everything else
+
+05:31.600 --> 05:35.439
+And now I've had a particular strategy when putting together
+
+05:35.439 --> 05:42.639
+this course curriculum for AI CODA. And that is that I've tried to combine both breadth and depth.
+
+05:42.639 --> 05:48.160
+I've tried to think about covering this whole space quite broadly, but also going deep on what
+
+05:48.160 --> 05:52.560
+I think is most interesting and important. So in terms of breadth, I wanted to make sure that we
+
+05:52.560 --> 05:58.079
+touch on a large number of different kinds of tools that you may encounter in different
+
+05:58.079 --> 06:01.920
+jobs and different environments or working with others. Now, one of these might be your
+
+06:01.920 --> 06:06.319
+favorite. It might become your go to, but I certainly want to make sure that you've had exposure
+
+06:06.319 --> 06:10.000
+to lots of them. It doesn't mean that you need to pay for them, that you could just watch me,
+
+06:10.000 --> 06:14.879
+or there's free trials of most of these, but certainly I'd like you to have that exposure,
+
+06:14.879 --> 06:18.959
+so you feel comfortable knowing about all these different tools out there,
+
+06:18.959 --> 06:24.959
+at least the most popular ones. But I do want to go deep on one front. I want to go deep on
+
+06:24.959 --> 06:31.759
+CLI coding in Cloud Code or also potentially in Open Code or others that are similar. So that
+
+06:31.759 --> 06:36.800
+is how we will go deep and in weeks two and three we're going to go much deeper on that front.
+
+06:36.800 --> 06:41.120
+So I want to leave you with both the breadth and the depth, combine them both for
+
+06:41.120 --> 06:47.600
+this course. And that's a nice segue to laying out the three-week program that I have in store for
+
+06:47.600 --> 06:53.120
+you. And this, this is the curriculum construct that we will come back to lots of times. I'm going
+
+06:53.120 --> 06:57.279
+to show you that there's going to be three types of session. There's going to be ones where we focus
+
+06:57.279 --> 07:02.639
+on core skills. There's going to be ones where we talk about actual platforms, products, things like
+
+07:02.639 --> 07:08.480
+codecs and cloud code and cursor. And then there's going to be real commercial projects.
+
+07:08.480 --> 07:12.800
+Aside from today, which doesn't count, they're going to be real commercial projects all the way
+
+07:12.800 --> 07:16.560
+through. So these are the three different types of session that we will have.
+
+07:16.560 --> 07:28.560
+And with that, I have divided your learning into three weeks. Week one, I'm calling it vibe coding for fun and profit. Week one is going to be about
+
+07:28.560 --> 07:34.560
+vibe coding. Week two is using a new term that's kind of coming up that was sort of coined by
+
+07:34.560 --> 07:47.600
+by an amazing writer, Simon Wilson, vibe engineering, which is more about being a pro, going beyond vibe coding into using this tooling for more professional purposes.
+
+07:47.600 --> 07:55.439
+And then week three is a genetic engineering as an expert. This is where you are, you are really
+
+07:55.439 --> 08:01.360
+at the sort of top of what is possible, what is capable, using the best of this technology.
+
+08:01.360 --> 08:09.319
+And on each of these weeks, I have got five days worth of material. Everything is divided into five days
+
+08:09.319 --> 08:10.720
+within each of the three weeks.
+
+08:10.720 --> 08:11.959
+You get two days off.
+
+08:11.959 --> 08:14.240
+And you can see how I've laid it out here
+
+08:14.240 --> 08:15.519
+for the first week.
+
+08:15.519 --> 08:17.360
+We are today in day one,
+
+08:17.360 --> 08:19.000
+which is that box on the bottom left,
+
+08:19.000 --> 08:21.319
+the agentic coding landscape.
+
+08:21.319 --> 08:23.040
+That's where we are right now.
+
+08:23.040 --> 08:24.680
+And then during the course of this week,
+
+08:24.680 --> 08:27.079
+we'll have another purple day on core skills
+
+08:27.079 --> 08:30.040
+about the foundation's agents, context,
+
+08:30.040 --> 08:31.279
+the tool tomorrow.
+
+08:31.279 --> 08:32.460
+Then we're going to have a yellow day
+
+08:32.460 --> 08:34.600
+when we look at the different tooling, cursor,
+
+08:34.600 --> 08:37.120
+copilot, codecs, anti-gravity.
+
+08:37.120 --> 08:39.960
+And then we're going to have two projects.
+
+08:39.960 --> 08:42.279
+The first project I'm calling YOLO
+
+08:42.279 --> 08:45.639
+and the second project is a commercial MVP.
+
+08:45.639 --> 08:48.080
+We'll be doing all of that this week,
+
+08:48.080 --> 08:50.919
+week one, vibe coding for fun and profit.
+
+08:50.919 --> 08:53.360
+And then next week, vibe engineering,
+
+08:53.360 --> 08:56.559
+we go deep into CLI code.
+
+08:56.559 --> 08:59.480
+We're going to be using Cloud Code and Open Code
+
+08:59.480 --> 09:00.440
+and some others.
+
+09:00.440 --> 09:02.440
+We're going to look at commands and checkpoints.
+
+09:02.440 --> 09:04.200
+They think of Ralph Loops, which is what I just
+
+09:04.200 --> 09:06.120
+demod you the result of.
+
+09:06.120 --> 09:10.080
+We're going to be then looking at MCP, Skills, plugins,
+
+09:10.080 --> 09:12.679
+which is going to be really interesting material.
+
+09:12.679 --> 09:14.799
+And definitely the stuff that people are debating
+
+09:14.799 --> 09:21.039
+feverishly at the moment. We're going to look at building workflows, working with a team, debugging
+
+09:21.039 --> 09:26.879
+when you're trying to debug existing problems or debugging problems that your AI agent has built,
+
+09:26.879 --> 09:32.639
+and then we'll have a really meaty project at the end of the week, a SaaS platform that we will
+
+09:32.639 --> 09:37.279
+build together, will be us together and also with our AI agents.
+
+09:37.279 --> 09:40.279
+And everything will culminate in week three,
+
+09:40.279 --> 09:43.399
+which is really when we raise the bar,
+
+09:43.399 --> 09:47.840
+we start with multi-agents running with lots of agents
+
+09:47.840 --> 09:50.740
+and sub-agents and using hooks.
+
+09:50.740 --> 09:54.080
+We'll spend a whole day digging into sandboxing,
+
+09:54.080 --> 09:55.679
+perhaps with some other advanced things
+
+09:55.679 --> 09:58.559
+thrown in there too, such an important topic.
+
+09:58.559 --> 10:01.879
+Then we will work on large code bases.
+
+10:01.879 --> 10:05.799
+This is certainly where you start to see rough edges with Agentic AI.
+
+10:05.799 --> 10:10.759
+And we'll figure out what is the survival guide for working with a large code base.
+
+10:10.759 --> 10:23.679
+Then really fun topics of agents, swarms and orchestrators of all the rage and we will finally end with a super juicy capstone project, a fitting
+
+10:23.679 --> 10:28.480
+finale for this three week curriculum. And at the end of it, you'll be able to say,
+
+10:28.480 --> 10:35.600
+yes, I am now an expert, a genetic engineer. You'll be able to respond to Andre's tweet and say,
+
+10:35.600 --> 10:44.490
+I've got the missing manual and you'll be able to build large scale, high quality software with a team of agents working for you.
+
