@@ -8,6 +8,7 @@
     "build": "npm run build:content && vite build",
     "build:content": "node scripts/build-content.mjs",
     "generate:content": "node scripts/generate-content.mjs",
+    "generate:summaries": "node scripts/generate-summaries.mjs",
     "lint": "oxlint",
     "preview": "vite preview"
   },

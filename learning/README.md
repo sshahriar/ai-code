@@ -18,12 +18,15 @@ Open: [http://localhost:5173/ai-code/learning/](http://localhost:5173/ai-code/le
 
 | Command | Purpose |
 |---------|---------|
-| `npm run build:content` | Build manifest + structured markdown from all VTTs |
-| `npm run generate:content` | Optional OpenRouter polish of lesson markdown |
+| `npm run build:content` | Build manifest + lesson markdown + **static summaries** from all VTTs |
+| `npm run generate:content` | Optional OpenRouter polish of full lesson markdown |
+| `npm run generate:summaries` | Optional OpenRouter polish of static summary files |
 | `npm run generate:content -- --slug 01-...` | Polish one lesson |
 | `npm run generate:content -- --limit 3` | Polish first N lessons |
-| `npm run dev` | Vite dev server (includes `/api/chat` proxy) |
+| `npm run dev` | Vite dev server (includes `/api/chat` proxy for Ask + live regenerate) |
 | `npm run build` | Production static build |
+
+On GitHub Pages, the **Summary** tab loads prebuilt files from `content/summaries/` (no API required). Ask chat still needs `npm run dev` unless you add a separate backend.
 
 ## Layout
 
