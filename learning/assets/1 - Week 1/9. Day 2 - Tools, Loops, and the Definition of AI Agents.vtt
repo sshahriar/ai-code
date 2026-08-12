@@ -1,0 +1,350 @@
+WEBVTT
+
+00:00.000 --> 00:04.320
+And then trick number three is called tools.
+
+00:04.320 --> 00:10.880
+And of course this is a really exciting one and it really took off in a massive way last year and
+
+00:10.880 --> 00:19.600
+a bit the year before as well. Tools is about realizing that when we have LLM's generate tokens,
+
+00:19.600 --> 00:29.280
+the most likely output, we could use those tokens not just to generate just a text response but also to decide whether or not the LLM
+
+00:29.280 --> 00:36.399
+would like to carry out some actions that it's been told it could do. So in the prompt in the input
+
+00:36.399 --> 00:41.679
+that you send the LLM you can say hey I'd like you to answer my question but by the way
+
+00:41.679 --> 00:53.000
+you can also respond with some special tokens to say I would like to search the internet," or "I would like to use a calculator," or "I would like to run some Python code," and then tell me what.
+
+00:53.000 --> 01:00.000
+And if you respond with that, then I will do that action for you, and then I will call you a second time with the results.
+
+01:00.000 --> 01:11.280
+And that little clever trick, which is called "using tools," it allows us to use the LLM, not just to generate a text output, but actually to decide to do something.
+
+01:11.280 --> 01:16.739
+We call it running a tool and then we will run the tool and provide it back with the response.
+
+01:16.739 --> 01:21.719
+But you always have to stay grounded in the reality that the LLM itself
+
+01:21.719 --> 01:26.280
+isn't going off and searching the Internet or running Python code.
+
+01:26.280 --> 01:31.120
+And LLM is just a statistical engine that generates tokens.
+
+01:31.120 --> 01:34.319
+But we are interpreting those tokens.
+
+01:34.319 --> 01:36.719
+It's generating tokens that said something like,
+
+01:36.719 --> 01:38.640
+I would like to run a calculator.
+
+01:38.640 --> 01:40.120
+And we're interpreting that output,
+
+01:40.120 --> 01:41.799
+and we're running the calculator.
+
+01:41.799 --> 01:43.519
+So it's always our code,
+
+01:43.519 --> 01:46.159
+it's always software that ends up calling a tool.
+
+01:46.159 --> 01:49.519
+We're using the LLM just to generate the tokens
+
+01:49.519 --> 01:51.760
+to say what it wants to do next.
+
+01:51.760 --> 01:56.959
+And that whole process is called calling tools and it's really clever.
+
+01:56.959 --> 02:01.439
+All right, I just want to make this super real for you just just to be very clear.
+
+02:01.439 --> 02:06.719
+Here is something hopefully familiar to you. This is Jout GPT and I'm going to paste in
+
+02:06.719 --> 02:16.000
+a question I have for it. Okay, before the question, I want to I want to prefix it to use Python code to respond to the next question.
+
+02:16.000 --> 02:19.000
+Just reply, Python colon,
+
+02:19.000 --> 02:22.000
+and then a Python expression here.
+
+02:22.000 --> 02:27.000
+And then my question, what is the square root of pi,
+
+02:27.000 --> 02:30.000
+a question which perhaps isn't going to be very easy
+
+02:30.000 --> 02:32.000
+for a language model to respond to,
+
+02:32.000 --> 02:35.000
+but I'm telling it that it can do something special.
+
+02:35.000 --> 02:40.319
+It can reply this way if it wants to just execute Python code. So I'm going to run that
+
+02:40.319 --> 02:48.080
+and we'll see how it responds. And this is how it responds. And you can see that it's done something,
+
+02:48.080 --> 02:51.599
+it's done something reasonably advanced because it's doing all in one line, including imports,
+
+02:51.599 --> 03:03.000
+which I assume will work. But it's actually decided instead of responding with a square root of pi, it's responding with this Python line of code right here,
+
+03:03.000 --> 03:05.000
+quite a clever Python line of code.
+
+03:05.000 --> 03:11.000
+And so you can see that basically it's using a tool.
+
+03:11.000 --> 03:15.000
+We've equipped chat GBT with this tool that we've just used language for.
+
+03:15.000 --> 03:18.000
+And when we've asked it this question, it hasn't given us the answer,
+
+03:18.000 --> 03:21.000
+it hasn't just told us the square root of pi.
+
+03:21.000 --> 03:23.560
+But rather, it's said that it wants to execute
+
+03:23.560 --> 03:25.360
+some Python code.
+
+03:25.360 --> 03:28.599
+And this is like a super clear example
+
+03:28.599 --> 03:32.039
+of what it means to have an LLM use a tool.
+
+03:32.039 --> 03:35.159
+It's just about giving it a clever input
+
+03:35.159 --> 03:37.759
+and then interpreting the output.
+
+03:37.759 --> 03:40.240
+That is what tool calling is all about.
+
+03:40.240 --> 03:43.879
+And the fourth trick is something that's so simple,
+
+03:43.879 --> 03:45.400
+it's super elegant.
+
+03:45.400 --> 03:50.800
+It's basically saying what could be better than calling an LLM with an input and getting some output?
+
+03:50.800 --> 03:54.400
+Or what could be better is calling it multiple times.
+
+03:54.400 --> 04:01.199
+In fact, in a loop, we can call an LLM and then when it's produced its output,
+
+04:01.199 --> 04:04.300
+we can ask if it's finished yet and if not, we just call it again.
+
+04:04.300 --> 04:07.199
+And then again, and then again, in just call it again and then again and then again in just a loop
+
+04:07.199 --> 04:14.319
+repeating until a goal is met. And that simple idea of calling an LLM multiple times is something
+
+04:14.319 --> 04:19.600
+which turns out to allow us to achieve much bigger goals than just calling an LLM once with
+
+04:19.600 --> 04:25.680
+an input and getting an output. And so that fourth trick of the loop is something which allowed us
+
+04:25.680 --> 04:28.120
+to achieve much bigger things.
+
+04:29.120 --> 04:31.199
+So those are four tricks. There are lots of other tricks,
+
+04:31.199 --> 04:36.240
+but these are the big four tricks that allow us to get from the sort of
+
+04:36.240 --> 04:39.279
+beginnings, from the chat GPT of 2022,
+
+04:39.560 --> 04:42.800
+to some of the high performance products today,
+
+04:43.000 --> 04:45.879
+like cursor agent and cloud code. Okay.
+
+04:46.160 --> 04:49.639
+Now it's time for me to define an AI agent for you.
+
+04:50.000 --> 04:53.759
+So there's been a lot of different definitions of AI agents.
+
+04:53.759 --> 04:59.279
+And in fact, there was a meme a while back that an AI agent could be whatever you wanted it to be
+
+04:59.279 --> 05:02.959
+because it was so hyped and because everyone meant something a bit different.
+
+05:03.759 --> 05:08.959
+There've been a few different definitions that people have really stood behind over the years.
+
+05:08.959 --> 05:14.879
+And one of the earliest ones came from OpenAI and others that described it as AI systems
+
+05:14.879 --> 05:18.160
+that can do work for you independently.
+
+05:18.160 --> 05:21.480
+This is the idea behind products like GPT agent
+
+05:21.480 --> 05:23.480
+that used to be called Operator.
+
+05:23.480 --> 05:27.019
+And this was something where you can prompt it
+
+05:27.019 --> 05:29.079
+and it will open up a browser
+
+05:29.079 --> 05:31.040
+and you can watch it while it goes off
+
+05:31.040 --> 05:32.480
+and searches the web.
+
+05:32.480 --> 05:35.600
+It looks for restaurants that have availability this evening,
+
+05:35.600 --> 05:40.319
+for the particular type of food you like with reservations for four and it will make the
+
+05:40.319 --> 05:46.160
+reservation while you watch. And you have that sense that there is something there that's working
+
+05:46.160 --> 05:53.839
+autonomously. And that is the sense of having an AI agent that is doing work. Some other people
+
+05:53.839 --> 05:57.879
+use a similar definition and that it's something that can act as well
+
+05:57.879 --> 06:06.240
+as generating tokens. It is an LLM that can act. Which, you know, it's hard to be super
+
+06:06.240 --> 06:10.279
+crisp about what that means, but you kind of know it when you see it. And that was the
+
+06:10.279 --> 06:22.240
+first of the definitions of an AI agent. And then the next one came in, I guess, early 2025. And I think it was hugging face, first of all, that the New Yorker AI starts up.
+
+06:22.240 --> 06:29.540
+The described it as AI systems where an LLM controls the workflow.
+
+06:29.540 --> 06:31.220
+And LLM controls the workflow.
+
+06:31.220 --> 06:36.500
+So an LLM as it's generating output tokens, those tokens describe what should happen next,
+
+06:36.500 --> 06:41.399
+and orchestrate future LLM calls. That became the definition,
+
+06:41.399 --> 06:43.480
+and anthropic and a double-down on that
+
+06:43.480 --> 06:46.980
+with a seminal blog post called Building Effective Agents
+
+06:46.980 --> 06:48.519
+that had a similar definition,
+
+06:48.519 --> 06:50.439
+and that for a long time was like
+
+06:50.439 --> 06:53.319
+the prevailing definition of an AI agent.
+
+06:53.319 --> 06:56.740
+But more recently, the definition that's really taken hold
+
+06:56.740 --> 06:58.839
+that's become the definition
+
+06:58.839 --> 07:01.600
+that I think Simon Willison, who I mentioned before,
+
+07:01.600 --> 07:03.600
+was perhaps the first
+
+07:03.600 --> 07:08.120
+to really sort of plant the flag and say, "This is going to be the definition."
+
+07:08.120 --> 07:16.839
+It came in late 2025, and it is that an agent is where there is an allalam that runs tools
+
+07:16.839 --> 07:20.319
+in a loop to achieve a goal.
+
+07:20.319 --> 07:29.000
+It runs tools in a loop to achieve a goal. So it ties back to a couple of those tricks that I just mentioned.
+
+07:29.000 --> 07:30.699
+Tools and loop.
+
+07:30.699 --> 07:32.000
+I've heard something.
+
+07:32.000 --> 07:34.600
+Again, it runs tools in a loop to achieve a goal.
+
+07:34.600 --> 07:38.399
+And I'm hoping that already clicks for you, but if not,
+
+07:38.399 --> 07:42.399
+remember what we did yesterday with the Cursor Agent.
+
+07:42.399 --> 07:44.300
+When we gave it a goal, we said,
+
+07:44.300 --> 07:47.480
+"I want a first-person shooter in a web page." And off it went. We'd gave it a goal, we said, "I want a first person shooter in a web page."
+
+07:47.480 --> 07:52.720
+And off it went. We've given it a goal. It was obviously in a loop because we saw stuff
+
+07:52.720 --> 07:59.079
+happening one after another. We saw files being created. It was an LLM being repeatedly
+
+07:59.079 --> 08:05.300
+called again and again. And it had tools. It had tools to write files to disk. It had
+
+08:05.300 --> 08:10.160
+tools to run code. It had tools to generate code. So it had these various tools,
+
+08:10.160 --> 08:16.560
+and it was using those tools. And you could see it happening. And so that gave you like a first-hand
+
+08:16.560 --> 08:23.439
+experience of an AI agent. It was running tools in a loop, and we gave it a goal, and it achieved it.
+
+08:23.439 --> 0:00.000
+So that is the current winning definition of an AI agent.
+

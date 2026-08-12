@@ -1,0 +1,350 @@
+WEBVTT
+
+00:00.000 --> 00:05.599
+I'm not going to lie, I feel a little bit guilty that yesterday was all me talking.
+
+00:05.599 --> 00:12.080
+Well, I have good news. Today, let's talking more doing. Welcome to your first yellow day,
+
+00:12.080 --> 00:16.480
+the first day of working with products. Welcome to the day when we go through Cursor,
+
+00:16.480 --> 00:23.199
+Copilot, Codex and Antigravity. Let's get started. So the purpose for today is for me to show you
+
+00:23.199 --> 00:29.440
+a number of the different agentic coding products out there and also to get it as an opportunity to show you some of the way
+
+00:29.440 --> 00:34.960
+that you go about doing what we call vibe coding. And I want to give you some principles
+
+00:34.960 --> 00:40.560
+to keep in mind throughout today. First of them is that everything I show you today is going to be
+
+00:40.560 --> 00:45.679
+optional for you. I want you to have a feel for the different agentic AI coding platforms
+
+00:45.679 --> 01:14.239
+there are out there. It doesn't mean that you need to use all of them. You might want to, and I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I be clawed code that we're really going to dig into next week and that can be the one that you stick with, you don't need to do them all. And then the second point to mention is that you are
+
+01:14.239 --> 01:20.319
+going to get different results to me. I say your results may vary. Your results will vary.
+
+01:20.319 --> 01:24.480
+And I'm going to be using some versions of models and you might be on different models,
+
+01:24.480 --> 01:28.159
+you might be on cheaper models, if you don't want to spend so much, you might be on free models,
+
+01:28.159 --> 01:32.319
+you might be on something completely different. So your results might be different,
+
+01:32.319 --> 01:37.560
+go with what you have and yeah, take it, take it as part of the experience to see different
+
+01:37.560 --> 01:44.480
+results. And the single most important principle for today is not to get frustrated. If things
+
+01:44.480 --> 01:49.799
+don't go well and the agent starts delivering nonsense, which can happen, particularly if
+
+01:49.799 --> 01:55.379
+you're getting downgraded to cheap hurt models, then the trick is first of all, be patient.
+
+01:55.379 --> 01:56.480
+It's easy for me to say it.
+
+01:56.480 --> 01:58.439
+I lose my patience myself sometimes.
+
+01:58.439 --> 02:00.200
+Try and stay patient.
+
+02:00.200 --> 02:03.000
+Give the agent feedback on what's happening.
+
+02:03.000 --> 02:06.560
+And then if in doubt, simplify, simplify, simplify.
+
+02:06.560 --> 02:09.379
+Reduce the scope of the problem, make it simpler,
+
+02:09.379 --> 02:12.199
+get something to work and then build from there.
+
+02:12.199 --> 02:15.319
+Simplification is such a big trick to keep in mind.
+
+02:15.319 --> 02:22.039
+And if you can't get it to work, you can always just delete and start everything again and just give it a second shot from from the beginning.
+
+02:22.039 --> 02:27.439
+And if that doesn't work, you can always skip that particular product and go to the next product and see if that works.
+
+02:27.439 --> 02:29.280
+There's so many options today.
+
+02:29.280 --> 02:32.639
+Most important of all is to have fun with it.
+
+02:32.639 --> 02:34.800
+We're going to be playing with tons of different products.
+
+02:34.800 --> 02:36.719
+We're going to be seeing very different results.
+
+02:36.719 --> 02:38.719
+It's really interesting.
+
+02:38.719 --> 02:44.400
+You should enjoy today a lot. And with that, let's go straight to the lab. I would like you to open
+
+02:44.400 --> 02:50.479
+back up Cursor again. Cursor that we already had some experience with. Go back into Cursor and I
+
+02:50.479 --> 02:54.719
+will see that. And this is what Cursor should look like when you open it. And if not, you go to
+
+02:54.719 --> 03:02.120
+File and you go to New Window and then you should see this. and I would like you to start by going back to the instant
+
+03:02.120 --> 03:06.199
+project that we already worked on. It might pop it up as one of the things here or you might
+
+03:06.199 --> 03:11.000
+need to press open project and go into it but once you have you should be back in instant.
+
+03:11.000 --> 03:14.840
+Let's look familiar. This is what we did before. This is where we're going to begin.
+
+03:14.840 --> 03:19.560
+Now what I now like you to do is to find the course resources. If you don't already have
+
+03:19.560 --> 03:22.960
+them to hand they are linked in many of the first
+
+03:22.960 --> 03:27.280
+few videos in Udemy. You wish they should have got a link in your welcome email when you're
+
+03:27.280 --> 03:32.639
+enrolled. Bring up the course resources and find this section. So you're following along there,
+
+03:32.639 --> 03:39.120
+and the first thing you should see is a link to the website for Node.js, Node. And if you don't
+
+03:39.120 --> 03:45.199
+already have Node installed in a system, that's what we're going to do right now. And this, this is nodes landing page
+
+03:45.199 --> 03:51.520
+right here. It is node JS dot org. And when you come here, I want you to click on download,
+
+03:51.520 --> 03:56.639
+which if you haven't done it before, is where we will download node. So here on the download page,
+
+03:56.639 --> 04:03.199
+you will see that you can get nodes to install it on a Mac or on a PC. It's defaulted to the Mac
+
+04:03.199 --> 04:07.400
+settings right here. This using these commands is the way to do it on a Mac.
+
+04:07.400 --> 04:08.560
+Don't worry about where we run them.
+
+04:08.560 --> 04:10.300
+We'll do that in just a second together.
+
+04:10.300 --> 04:12.939
+And if you're on a PC, then you can.
+
+04:12.939 --> 04:15.259
+If you're on Windows and you have something called
+
+04:15.259 --> 04:17.040
+Chocolaty, if you've used that before,
+
+04:17.040 --> 04:18.420
+you could just install it this way.
+
+04:18.420 --> 04:21.420
+But also, you could come down here, go to Windows,
+
+04:21.420 --> 04:26.420
+pick X64 and then use this to get a normal Windows installer.
+
+04:27.160 --> 04:30.319
+Use any of these techniques to install Node.
+
+04:30.319 --> 04:32.120
+If you have any problems with it,
+
+04:32.120 --> 04:33.959
+then you should just message me
+
+04:33.959 --> 04:35.519
+or look at the course resources
+
+04:35.519 --> 04:37.639
+in case I've got some suggestions there.
+
+04:37.639 --> 04:39.160
+And when it comes to running commands,
+
+04:39.160 --> 04:41.480
+if you want to run these commands for Windows or Mac
+
+04:41.480 --> 04:43.240
+rather than running this installer,
+
+04:43.240 --> 04:47.120
+the place that you can do that is back here in cursor.
+
+04:47.120 --> 04:48.759
+When you're looking at cursor,
+
+04:48.759 --> 04:51.040
+you can go to the view menu and select
+
+04:51.040 --> 04:55.300
+terminal and up will come this little screen here, a little terminal and this
+
+04:55.300 --> 05:00.699
+is where you can punch in the commands to install node. And once you've done it,
+
+05:00.699 --> 05:03.920
+once you've installed node, you can then bring up a new terminal by pressing
+
+05:03.920 --> 05:07.339
+like the plus button here, you get a new terminal and in here you should be able
+
+05:07.339 --> 05:11.759
+to type node minus minus version and you should get back a version. Maybe it's
+
+05:11.759 --> 05:12.399
+the same as me, maybe you've got a back a version. Maybe it's the same as me.
+
+05:12.399 --> 05:13.899
+Maybe you've got a more recent version.
+
+05:13.899 --> 05:17.000
+Anything after 22 is great.
+
+05:17.000 --> 05:20.600
+And at this point you are set with Node.js.
+
+05:20.600 --> 05:22.180
+Any problems with it?
+
+05:22.180 --> 05:25.139
+Drop me a message, a Q and A and you to me or an email
+
+05:25.139 --> 05:27.899
+and I'll help out or look in the course resources for tips.
+
+05:27.899 --> 05:29.540
+Now we're just going to spend a few moments now
+
+05:29.540 --> 05:32.740
+in this terminal and some of you use terminals all the time.
+
+05:32.740 --> 05:34.560
+For some of you, this might be a bit new
+
+05:34.560 --> 05:39.519
+and there's nothing to be afraid of even if it does look a little bit like it's something hung
+
+05:39.519 --> 05:47.040
+over from the 80s. But here we are. What we're looking at here is we're looking within the directory
+
+05:47.040 --> 05:53.360
+that's called instant that we created before that's in perhaps in a projects directory. And the way
+
+05:53.360 --> 05:56.720
+you can see that is you can type this command pwd, which stands for
+
+05:56.720 --> 06:04.160
+print working directory. And it tells you where you are. And I am in users ed projects instant,
+
+06:04.160 --> 06:08.160
+which makes sense. And if you're on a PC, it will look a bit different. You'll have backslashes
+
+06:08.160 --> 06:12.560
+and sort of forward slashes, but it's going to be much the same kind of thing. You're in instant.
+
+06:12.560 --> 06:22.480
+And that's a fine place to be if you're working on instant, but we're going to work on something different. So what I want to do is I want to go up one directory to the projects directory and the way
+
+06:22.480 --> 06:28.319
+you do that is you type cd for change directory and then a space and then dot dot and I know
+
+06:28.319 --> 06:33.839
+most of you know this already but then when I do that if I now do pwd you can see that sure enough
+
+06:33.839 --> 06:40.560
+I am in the parent directory I'm in the projects directory where I have all of my projects, quite a few of them.
+
+06:40.560 --> 06:46.480
+Okay, and if you look in the course resources, you'll see that I have a repository, a repo
+
+06:46.480 --> 06:53.120
+on GitHub that I now want to bring down locally so that that repo is on your computer.
+
+06:53.120 --> 06:58.399
+And there's a simple way to do it. It's a git clone command. I'm going to type git clone,
+
+06:58.399 --> 07:03.160
+and then I'm going to paste in the link to that repo. There it is right here.
+
+07:03.160 --> 07:04.800
+It'll also be on the course resources,
+
+07:04.800 --> 07:09.800
+it's hcpps github.com/ed-donor/camban.get.
+
+07:12.079 --> 07:13.600
+You know what a camban is?
+
+07:13.600 --> 07:14.800
+That's what we're about to be doing.
+
+07:14.800 --> 07:18.399
+So I run this and bam, it happens, I've done it.
+
+07:18.399 --> 07:21.120
+We now have a directory, I can go into it.
+
+07:21.120 --> 07:25.759
+You don't need to but I can go cd c can, ban and there we go, we are in
+
+07:25.759 --> 07:32.000
+canban. If I do PWD then you will see I am in users ed projects can ban and you
+
+07:32.000 --> 07:35.759
+will be in some different thing probably with backslashes maybe but
+
+07:35.759 --> 07:41.000
+basically the same idea you will have canban set up that is the project we'll be
+
+07:41.000 --> 07:47.920
+working on now. Okay so now to switch over from instant to this new project called Canban, you go to the
+
+07:47.920 --> 07:53.360
+cursor's file menu and you say new window and this screen comes up. Remember this screen.
+
+07:53.360 --> 07:59.839
+And now you press open projects. Okay, fair enough. Here we go. And now you go into your
+
+07:59.839 --> 08:05.519
+project, so you navigate your way to your project's directory and you'll see that there is Canban.
+
+08:05.519 --> 08:11.120
+Here it is. And then you go into Canban by double clicking and then you press the open button
+
+08:11.120 --> 08:16.560
+to have launched the Canban project and you'll know because it'll say Canban here and it will say
+
+08:16.560 --> 08:22.560
+Canban in block capitals up on the top left and that means we've had success. We are now in the
+
+08:22.560 --> 0:00.000
+Canban project. Great, it's time for us to start work.
+

@@ -1,0 +1,662 @@
+WEBVTT
+
+00:00.000 --> 00:04.040
+Okay, here I am back in VS Code, back in Claude Code.
+
+00:04.040 --> 00:07.280
+I've also, as it happens, I've uninstalled that plugin
+
+00:07.280 --> 00:10.300
+and deleted those files and pushed to git.
+
+00:10.300 --> 00:13.000
+The only thing I've now got set up in my dot-clawed,
+
+00:13.000 --> 00:15.880
+everything is empty except the cerebras skill.
+
+00:15.880 --> 00:18.160
+I'm keeping that around because we will need that
+
+00:18.160 --> 00:19.600
+at some point.
+
+00:19.600 --> 00:23.879
+Okay, so here we are in Inclo Code,
+
+00:23.879 --> 00:27.000
+and I'm gonna type /sandbox.
+
+00:27.199 --> 00:30.000
+There we go, sandbox disabled, it says.
+
+00:30.000 --> 00:33.159
+Sandbox, press enter to configure.
+
+00:33.159 --> 00:35.240
+Okay, so we're now going to set it up.
+
+00:35.240 --> 00:38.679
+Now, it is clever in that it knows what needs to be installed
+
+00:38.679 --> 00:42.039
+and it should guide you through the installation process.
+
+00:42.039 --> 00:45.140
+If anything, if it doesn't give you all of the steps required,
+
+00:45.140 --> 00:47.280
+I will of course have links in the resources
+
+00:47.280 --> 00:56.240
+to what you need to do. And you can see that there's a few different options. The current thing is no sandbox.
+
+00:56.240 --> 01:02.240
+The there's a sandbox number two would be to give me a sandbox, which allows a bash,
+
+01:02.240 --> 01:07.840
+which shell scripts to be run and regular permissions. But number one is like a sandbox
+
+01:07.840 --> 01:12.840
+version of YOLO commands will try to run in the sandbox automatically
+
+01:12.840 --> 01:14.840
+and attempts to run outside,
+
+01:14.840 --> 01:17.519
+fall back to regular permissions.
+
+01:17.519 --> 01:20.120
+Explicit, Aston I-Rules always respected.
+
+01:20.120 --> 01:21.920
+So you can always add an I-Rul
+
+01:21.920 --> 01:23.439
+if you don't want it to do something
+
+01:23.439 --> 01:25.640
+and it has a link to the docs in there as well.
+
+01:25.640 --> 01:27.599
+So I'm gonna go with that.
+
+01:27.599 --> 01:29.760
+I'm just gonna show you on the overrides,
+
+01:29.760 --> 01:31.959
+you'd be able to set up overrides,
+
+01:31.959 --> 01:33.599
+but let me press one.
+
+01:33.599 --> 01:37.879
+Let's go back there now to Sandbox and have a look at here.
+
+01:37.879 --> 01:40.159
+This is now the current setting.
+
+01:40.159 --> 01:46.760
+Overrides is where you can choose to have a fallback that
+
+01:46.760 --> 01:48.840
+would be then no longer in the Sandbox
+
+01:48.840 --> 01:50.239
+or have it be strict.
+
+01:50.239 --> 01:52.359
+And then config is where you can set things that
+
+01:52.359 --> 01:54.560
+are allowed and denied.
+
+01:54.560 --> 01:58.000
+You can see a few things in there that look like they probably should be denied,
+
+01:58.000 --> 01:59.840
+which is just as well.
+
+01:59.840 --> 02:06.640
+The sandbox mode is now on and that should mean that we are in good shape to be running things
+
+02:06.640 --> 02:09.919
+with fewer need to approve permissions.
+
+02:09.919 --> 02:13.840
+Okay, so I'm going to run something which is going to require it to a few things.
+
+02:13.840 --> 02:18.080
+I should probably point out the, I think what it can do within
+
+02:18.080 --> 02:24.120
+the sandbox is run bash scripts, shell scripts, and it can read and write files to its hearts
+
+02:24.120 --> 02:28.840
+content without asking me anything. Web searches will, it will still ask me, but once I've
+
+02:28.840 --> 02:32.599
+approved that, then it should be good to do it. So it does, it does need to do that still.
+
+02:32.599 --> 02:39.120
+But I'm going to say please carry out comprehensive research and write three documents to the planning directory. And I'm
+
+02:39.120 --> 02:45.039
+asking it to research the market data API from massive, formerly polygon, write a document
+
+02:45.039 --> 02:50.840
+about that, research, how think about how we would like to build our interface, our
+
+02:50.840 --> 02:55.199
+market data interface, write a document about that, and finally research how we would do
+
+02:55.199 --> 03:00.000
+a market data simulator and write a document about that too.
+
+03:00.000 --> 03:01.520
+So I'm setting all of that off.
+
+03:01.520 --> 03:05.000
+It's running now in our sandbox mode
+
+03:05.000 --> 03:06.319
+that means it should only be asking me
+
+03:06.319 --> 03:08.400
+for permissions to do web searches.
+
+03:08.400 --> 03:10.240
+Everything else that it might need to do
+
+03:10.240 --> 03:13.120
+should it should just be able to go off and do the task.
+
+03:13.120 --> 03:15.840
+No need to ask me for anything.
+
+03:15.840 --> 03:18.560
+And we will see what happens.
+
+03:18.560 --> 03:20.419
+It's doing its thing.
+
+03:20.419 --> 03:21.719
+It's garnishing.
+
+03:21.719 --> 03:25.680
+It's doing task. It's researching. It's doing its thing, it's garnishing, it's doing task, it's researching, it's thinking,
+
+03:25.680 --> 03:27.939
+it's reading files.
+
+03:27.939 --> 03:32.439
+A lot going on without it needing to ask me for stuff.
+
+03:32.439 --> 03:37.159
+So I will see what's happening and now here we go.
+
+03:37.159 --> 03:39.439
+Oh, it does one so icy, icy.
+
+03:39.439 --> 03:43.400
+So to use this plugin, this isn't something that I've given it permission for before and
+
+03:43.400 --> 03:48.099
+it's asking to use the context seven plugin that I quite forgot that I had. But of course that is
+
+03:48.099 --> 03:55.460
+a wonderful way that is much better than doing the research from a web search and that's
+
+03:55.460 --> 04:01.080
+using an agent. So that's going off. And it's now using the other the query docs command.
+
+04:01.080 --> 04:07.960
+So we'll let it do that too. And those are all happening and it's now going to be creating this documentation
+
+04:07.960 --> 04:12.719
+and I will see you in a minute when all of this finishes. Okay, and that's done and
+
+04:12.719 --> 04:17.720
+there are the documents and it all looks pretty good. I haven't reviewed them because
+
+04:17.720 --> 04:23.199
+I'm not going to because we're going to now just just let this thing keep going. We're
+
+04:23.199 --> 04:28.759
+going to be much more trusting this week. The couple of things to bear in mind,
+
+04:28.759 --> 04:30.120
+if you look through the documents,
+
+04:30.120 --> 04:33.040
+if you do want to use this strategy for sandboxing,
+
+04:33.040 --> 04:35.000
+it is worth reading the docs.
+
+04:35.000 --> 04:37.439
+It goes into more detail about how you can configure it
+
+04:37.439 --> 04:39.079
+in a more granular way, for example,
+
+04:39.079 --> 04:41.480
+to allow web searches to various places.
+
+04:41.480 --> 04:44.360
+It also has some very important security concerns
+
+04:44.360 --> 04:46.639
+that you do need to keep in mind if you use this a lot
+
+04:46.639 --> 04:49.399
+and it's laid out very nicely in the docs.
+
+04:49.399 --> 04:50.920
+It also does mention I notice
+
+04:50.920 --> 04:55.959
+that support for native support for Windows not having to go through WSL is
+
+04:55.959 --> 05:00.160
+coming soon. So maybe by the time you see this it already supports Windows out of
+
+05:00.160 --> 05:05.000
+the box. But that is the first type of sandboxing. This is the one that's built
+
+05:05.000 --> 05:16.560
+into cloud code super simple and very convenient just slash sandbox to get it running. Okay, and now, now we're going to progress to the
+
+05:16.560 --> 05:23.439
+remote cloud code on the web. Okay, I'm really looking forward to this. The first step, there's a
+
+05:23.439 --> 05:34.060
+bit of a setup thing, just a little tiny bit of setup. The first step is to bring up a browser and go to claw.ai/code.
+
+05:34.060 --> 05:37.240
+claw.ai/code.
+
+05:37.240 --> 05:39.600
+And it takes you over to this screen here,
+
+05:39.600 --> 05:42.279
+code with clawed anywhere.
+
+05:42.279 --> 05:45.199
+As you will see, run multiple coding tasks in the cloud
+
+05:45.199 --> 05:49.360
+seamlessly between your browser, terminal, or mobile.
+
+05:49.360 --> 05:50.399
+Mobile.
+
+05:50.399 --> 05:51.319
+And the first thing you need to do,
+
+05:51.319 --> 05:53.740
+the reason we've come here is you need to connect
+
+05:53.740 --> 05:56.560
+clawed with your GitHub account.
+
+05:56.560 --> 06:00.199
+So you press connect to GitHub and it's now going to want to
+
+06:00.199 --> 06:05.319
+authorize Claude and it's going to hopefully connect my
+
+06:05.319 --> 06:07.000
+GitHub to Claude.
+
+06:07.000 --> 06:07.720
+There we go.
+
+06:07.720 --> 06:08.959
+Something is happening.
+
+06:08.959 --> 06:13.920
+Connect your repos, install the Claude Code GitHub app in
+
+06:13.920 --> 06:15.680
+your repositories, connect them to Claude.
+
+06:15.680 --> 06:17.000
+You can manage this later.
+
+06:17.000 --> 06:18.480
+So we might as well do it right now. So when you've manage this later so so we might as
+
+06:18.480 --> 06:21.720
+well do it right now so you when you've got this screen here you then press
+
+06:21.720 --> 06:26.920
+connect repositories this is going to bring up this and I'm going to go into
+
+06:26.920 --> 06:33.839
+installing cloud into repos and I guess what what I'll do now is I'll click on
+
+06:33.839 --> 06:37.720
+only selected repositories and I'm just going to pick this one for now and
+
+06:37.720 --> 06:42.720
+press install and authorize depending on your, you can do it to all repositories,
+
+06:42.720 --> 06:46.560
+or whatever you would like. Okay, there's just a small little bit of extra setup. Still needs to
+
+06:46.560 --> 06:52.399
+be done. I'm going to go into Cloud again. There's a command you need to run to set up
+
+06:52.959 --> 06:58.560
+something called the the the Cloud app in the GitHub repo. And when you do that, it's going to
+
+06:58.560 --> 07:05.439
+complain if you don't have a few things already installed on your machine. The way you do that is that you slash and then I start typing install. You'll see that
+
+07:05.439 --> 07:10.319
+installed GitHub app is one of the commands. If I run it, it's going to complain that there's
+
+07:10.319 --> 07:17.439
+a few things not installed. The GitHub CLI being able to run the command gh and conveniently,
+
+07:17.439 --> 07:24.120
+it tells me exactly where I go to find out more about how to do that. And it tells me the command to run on a Mac and the command to
+
+07:24.120 --> 07:29.759
+run on Windows and the command for Linux or where to go for Linux. So that's very convenient.
+
+07:29.759 --> 07:32.579
+I'm going to run this one because I'm on a Mac. You're going to run that one. If you're
+
+07:32.579 --> 07:36.139
+on a Windows PC or if you're a Mac like me, you're going to run this. And then after
+
+07:36.139 --> 07:50.240
+that, I'm going to run g h auth login to login from this computer. So I'm gonna come out of Claude code, escape from that, and come on C.
+
+07:51.199 --> 07:52.600
+There we go, I'm out.
+
+07:52.600 --> 07:54.439
+I thought I'd stuck a Claude code for a minute.
+
+07:54.439 --> 07:57.879
+And now I'm going to run that brew install command.
+
+07:57.879 --> 07:59.600
+I'm gonna come in and do that,
+
+07:59.600 --> 08:04.600
+and then after that, I'm gonna do the GH auth login,
+
+08:05.399 --> 08:09.360
+and then there we go it's happening already and once I've done that
+
+08:09.360 --> 08:16.000
+GH auth login which will take me on the github auth flow and then I'll come back
+
+08:16.000 --> 08:19.720
+in a second once I'm logged in and then we should be ready to go and it took me
+
+08:19.720 --> 08:23.540
+through some shenanigans where it launched a web browser as these things
+
+08:23.540 --> 08:28.939
+off to do and I had to log into github and meanwhile it printed a code in the
+
+08:28.939 --> 08:32.600
+PowerShell in this terminal and I had to type that code
+
+08:32.600 --> 08:34.720
+into the screen, and then we're all set.
+
+08:34.720 --> 08:39.039
+And now I am, or I'm logged in to the GitHub command line
+
+08:39.039 --> 08:41.559
+interface from my computer.
+
+08:41.559 --> 08:42.639
+I should also mention, by the way,
+
+08:42.639 --> 08:45.840
+that I've done a git add dot and a git commit,
+
+08:45.840 --> 08:48.879
+so that if I do a git status, we can see
+
+08:48.879 --> 08:50.679
+that everything is up to date and done.
+
+08:50.679 --> 08:54.120
+All right, and now I'm going back into Claude again.
+
+08:54.120 --> 08:56.200
+Now look, we're almost done with the shenanigans,
+
+08:56.200 --> 08:58.799
+but there's just potentially a little bit more to be done.
+
+08:58.799 --> 09:01.440
+And this depends a bit on how you've gone through
+
+09:01.440 --> 09:04.240
+the flow so far and also Claude and Thropic
+
+09:04.240 --> 09:06.080
+is changing this from time to time.
+
+09:06.080 --> 09:08.039
+So always look out for the course resources
+
+09:08.039 --> 09:10.360
+for the latest, but come back in.
+
+09:10.360 --> 09:12.840
+Now I've actually gone to a new blank project
+
+09:12.840 --> 09:17.000
+to see what it's like first time. And one more time now that we've got everything installed
+
+09:17.000 --> 09:19.399
+I'm going to do this slash install
+
+09:19.700 --> 09:23.700
+GitHub app and I'm going to to set select this repository
+
+09:23.700 --> 09:26.440
+Which for you is going to be the the
+
+09:27.440 --> 09:30.100
+Finally repository and I'm coming in here
+
+09:30.100 --> 09:38.919
+Let me bring up this browser so you can see and we are now going to say that we want to install the GitHub app in this repo that you may have already done
+
+09:38.919 --> 09:43.240
+But you may get to see this screen and when you press that configure button you come through to here
+
+09:43.240 --> 09:46.600
+Which is a screen you might have seen from earlier, so this might not be necessary
+
+09:46.879 --> 09:50.360
+You might need to make sure that you select this repository
+
+09:50.360 --> 09:57.320
+I've just done that or you can choose all repositories and then press save and it takes you back into the the Claude screen
+
+09:59.879 --> 10:03.600
+and it takes you back into the the Claude screen. You then have to go back to Claude Code which is sitting here. It says press enter once you've installed
+
+10:03.600 --> 10:09.720
+the app and you press enter and look at what comes up here. It says select the
+
+10:09.720 --> 10:16.200
+GitHub workflows to install. This is a key step. This is where you are installing
+
+10:16.200 --> 10:21.000
+a couple of workflows into your GitHub repo,
+
+10:21.000 --> 10:23.120
+which is going to control Claude.
+
+10:23.120 --> 10:25.740
+And it's going to allow you to do things
+
+10:25.740 --> 10:28.379
+that have a GitHub issue, tag Claude,
+
+10:28.379 --> 10:29.960
+and Claude will take it over.
+
+10:29.960 --> 10:31.080
+If you see what I mean.
+
+10:31.080 --> 10:33.480
+And you will, once you made sure that these two are ticked,
+
+10:33.480 --> 10:35.379
+you can press the space bar to untick,
+
+10:35.379 --> 10:37.500
+the space bar to tick, now they're both ticked.
+
+10:37.500 --> 10:40.399
+You hit enter and you can then say
+
+10:40.399 --> 10:43.940
+that you want to have a long-lived token that comes with your
+
+10:43.940 --> 10:48.860
+Claude subscription and then at that point you press enter one more time here.
+
+10:48.860 --> 10:55.340
+So here we go I'm going to press enter here and off we go back in here.
+
+10:55.340 --> 11:01.700
+Claude Cobra likes to connect your Claude Chatter count. You press authorize and now
+
+11:01.700 --> 11:05.519
+that has been done and now you come back here one more time
+
+11:05.519 --> 11:08.600
+and it will automatically open up GitHub
+
+11:08.600 --> 11:10.120
+and what you're looking at here,
+
+11:10.120 --> 11:12.399
+and this takes a while to get your head around,
+
+11:12.399 --> 11:15.639
+you're looking at a pull request in the repo.
+
+11:15.639 --> 11:18.600
+For you, this will be in the repo we're working on,
+
+11:18.600 --> 11:20.120
+finally, but I've already done it.
+
+11:20.120 --> 11:22.519
+So I'm doing it again with something called Testflow,
+
+11:22.519 --> 11:24.879
+but it's created a pull request
+
+11:24.879 --> 11:29.000
+that is to add a GitHub workflow into your repo.
+
+11:29.000 --> 11:34.000
+I will try and put some notes down on this or ask me in Udemy Q&A if you're confused.
+
+11:34.000 --> 11:38.000
+And you simply have to press the Create Pull request here to create.
+
+11:38.000 --> 11:39.000
+This is a pull request.
+
+11:39.000 --> 11:42.000
+And then you need to press the Merge Pull request.
+
+11:42.000 --> 11:46.000
+And it says, Add Cloud Code GitHub Workflow.
+
+11:46.000 --> 11:48.559
+Confirm the merge.
+
+11:48.559 --> 11:50.320
+That is done.
+
+11:50.320 --> 11:54.299
+And that might have seemed all quite mysterious to you.
+
+11:54.299 --> 11:56.899
+But what you've just done is you followed a process,
+
+11:56.899 --> 11:59.600
+which has added a special workflow
+
+11:59.600 --> 12:02.399
+into this GitHub repo, which is going to allow
+
+12:02.399 --> 12:04.159
+Cloud to access it.
+
+12:04.159 --> 12:07.840
+You've really bridged Cloud with your GitHub repo.
+
+12:07.840 --> 12:10.039
+And ultimately, the effect of all of this
+
+12:10.039 --> 12:12.000
+is that if we're in the finally repo,
+
+12:12.000 --> 12:14.960
+looking at it here, you'll see that there is this folder
+
+12:14.960 --> 12:18.200
+dot GitHub slash workflows.
+
+12:18.200 --> 12:20.600
+And if I come into that, you'll see that there are
+
+12:20.600 --> 12:22.440
+some YAML files in here,
+
+12:22.440 --> 12:25.200
+Cloud Code review and Cloud dot YAML.
+
+12:25.200 --> 12:28.759
+And these are new workflows added to our GitHub repo
+
+12:28.759 --> 12:30.440
+coming from Cloud.
+
+12:30.440 --> 12:32.840
+And that means the setup is complete.
+
+12:32.840 --> 12:37.879
+The bottom line is that all of this is about within Claude Code,
+
+12:37.879 --> 12:39.519
+running that slash command,
+
+12:39.519 --> 12:42.720
+install GitHub app and then just following the instructions,
+
+12:42.720 --> 12:45.200
+dealing with pasting tokens from one place to another,
+
+12:45.200 --> 12:50.159
+following all of the commands and making sure that everything is followed.
+
+12:50.159 --> 12:53.440
+You can see it's telling you right here the steps that you need to do
+
+12:53.440 --> 12:54.559
+in order to complete
+
+12:54.559 --> 13:01.360
+this and then any key to exit and finally we're done with setup it's time to put this to work.
+

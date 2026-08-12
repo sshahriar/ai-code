@@ -1,0 +1,503 @@
+WEBVTT
+
+00:00.000 --> 00:04.120
+Yesterday we covered a ton of ground with MCP and skills and plugins
+
+00:04.120 --> 00:06.960
+and sometimes it can feel a bit overwhelming with so much choice.
+
+00:07.360 --> 00:09.480
+Today we're going to put some event into action.
+
+00:09.480 --> 00:14.560
+We're going to get more concrete about what makes a good workflow for building
+
+00:14.679 --> 00:19.320
+business functionality in Cloud Code or in the other CLI tools.
+
+00:19.519 --> 00:23.079
+We're also going to think about team interactions and about the right
+
+00:23.079 --> 00:28.399
+approach for debugging a big day, another purple day. Welcome to week two,
+
+00:28.399 --> 00:35.280
+day four. Let's get started. As always, we begin with a recap after such a big day of the three
+
+00:35.280 --> 00:43.200
+ways to add some juice to Claude code. One of them is MCP using this standard invented by
+
+00:43.200 --> 00:51.880
+anthropic for connecting other people's tools to our Claude Code. One of them is Skills, this nice, lightweight, flexible way
+
+00:51.880 --> 00:55.159
+to take some markdown and associated commands and scripts,
+
+00:55.159 --> 00:59.960
+and using this very elegant approach that's very context friendly,
+
+00:59.960 --> 01:02.719
+adding expertise and capabilities.
+
+01:02.719 --> 01:08.599
+And then the third, the plugins are like packages of MCP and Skills,
+
+01:08.599 --> 01:15.000
+and perhaps other things like commands and agents, putting them all together and being able to install them in one go.
+
+01:15.000 --> 01:32.079
+And of course there are pros and cons of all of these as is so often the case, and with MCP the big not so much now with some of the recent improvements,
+
+01:32.079 --> 01:35.319
+but also that they're kind of hard to work with sometimes.
+
+01:35.319 --> 01:38.640
+Skills are more efficient, they're simple.
+
+01:38.640 --> 01:41.640
+You often get really good results with skills.
+
+01:41.640 --> 01:45.079
+Some of the negatives is that they let not as powerful,
+
+01:45.079 --> 01:47.719
+as flexible as MCP, particularly some of the things
+
+01:47.719 --> 01:51.000
+like authorization, authentication that's really built
+
+01:51.000 --> 01:53.480
+into the MCP standard is stronger.
+
+01:53.480 --> 01:57.000
+And they're still quite immature and plugins,
+
+01:57.000 --> 01:58.500
+in some ways the best of both,
+
+01:58.500 --> 02:01.739
+but it is just a cloud code thing at least as of now.
+
+02:01.739 --> 02:03.340
+Although I think many of the other platforms
+
+02:03.340 --> 02:05.799
+have their own versions of it.
+
+02:05.799 --> 02:07.659
+And it can be tempting just to slam in
+
+02:07.659 --> 02:08.979
+tons and tons of plugins.
+
+02:08.979 --> 02:12.460
+And again, you can then start to get degrading performance
+
+02:12.460 --> 02:18.120
+if you give your LML, your Opus too much, too many options, too many possibilities.
+
+02:18.120 --> 02:21.360
+For a start it could sometimes not know which one you wanted to use.
+
+02:21.360 --> 02:25.039
+And usually where the right way to navigate this is to think, you know what, let's start
+
+02:25.039 --> 02:26.039
+with plugins.
+
+02:26.039 --> 02:29.479
+Have a look at the plugins marketplace, maybe you'll connect to other marketplaces
+
+02:29.479 --> 02:34.319
+as we will do at some point, and then use a plugin that makes sense for you.
+
+02:34.319 --> 02:39.039
+And then there are specific situations when you might use MCP such as when you want specific
+
+02:39.039 --> 02:44.240
+functionality and there's an ideal MCP server from the enormous ecosystem and there are specific
+
+02:44.240 --> 02:49.039
+situations and skills make sense. One of the reasons is because they're so easy to share them
+
+02:49.039 --> 02:54.159
+with others in your team. You can just put skills into your your dot-clawed folder and then
+
+02:54.159 --> 03:00.259
+check that into GitHub but commit it push it and suddenly your other team members will be able to have the same
+
+03:00.259 --> 03:02.259
+skills as you, and that's really convenient.
+
+03:02.259 --> 03:05.939
+Okay, so for the rest of today, there's going to be no more slides.
+
+03:05.939 --> 03:07.539
+It's going to be doing.
+
+03:07.539 --> 03:13.659
+We are going to work together on going through a disciplined process, a workflow for building
+
+03:13.659 --> 03:18.020
+business functionality, using Cloud Code and using plugins and using mcp servers and
+
+03:18.020 --> 03:19.259
+maybe some skills, whatever.
+
+03:19.259 --> 03:23.639
+We'll use a bunch of them together as a way to build out code.
+
+03:23.639 --> 03:27.000
+And this is gonna form the start of the two-day project,
+
+03:27.000 --> 03:28.759
+basically, 'cause we're gonna conclude this tomorrow
+
+03:28.759 --> 03:30.199
+with the main project,
+
+03:30.199 --> 03:32.360
+and it's gonna be something that we'll build out together.
+
+03:32.360 --> 03:33.199
+Now, here's the thing,
+
+03:33.199 --> 03:34.919
+the crazy thing about this course
+
+03:34.919 --> 03:36.759
+and using something like Cloud Code
+
+03:36.759 --> 03:39.000
+is that you can choose to follow along
+
+03:39.000 --> 03:41.879
+and do something very similar to what I do,
+
+03:41.879 --> 03:45.360
+or you could do something completely different, have a different idea
+
+03:45.360 --> 03:50.000
+and follow along with the same kind of workflow and process, but build your own thing. And
+
+03:50.000 --> 03:54.479
+you can also choose to somewhere in the middle. You can follow the general idea I'm going to have,
+
+03:54.479 --> 03:59.759
+but then take it off in your own unique direction. This is a choose your own adventure
+
+03:59.759 --> 04:03.919
+moment. I'm going to give you the general techniques. I'm going to give you the general
+
+04:03.919 --> 04:10.479
+workflow ideas. I'm going to give you equip you with the skills, the toolkit, so that you can go off and do some
+
+04:10.479 --> 04:14.280
+debugging. But I'm not necessarily going to give you the exact recipe and the
+
+04:14.280 --> 04:18.079
+answers because it's going to be different for everyone. That is the crazy
+
+04:18.079 --> 04:22.959
+thing about Cloud Code and these tools generally. This is about the art of the
+
+04:22.959 --> 04:27.240
+possible, not necessarily one prescriptive path to follow. So today we're
+
+04:27.240 --> 04:28.399
+going to be building out the kind
+
+04:28.399 --> 04:35.600
+of development process that you can use yourself and that your teams can use and may well be using.
+
+04:35.600 --> 04:40.879
+And it's a process that covers the entire development lifecycle and we need to start at
+
+04:40.879 --> 04:46.079
+the beginning. Where do these things usually start? And you might say, well, perhaps a business
+
+04:46.079 --> 04:50.959
+requirements document or a meeting with your business sponsor or something like that. But that's
+
+04:50.959 --> 04:54.399
+too, too, too, to start for me. I'm, I'm talking a little bit further down than that. I'm talking
+
+04:54.399 --> 05:01.680
+about when things become a JIRA ticket, JIRA, something that I imagine 90% of you are very
+
+05:01.680 --> 05:08.319
+familiar with. It's, it's almost ubiquitous. Atlassian's product that's used to manage our work into
+
+05:08.319 --> 05:13.279
+JIRA issues. And so that is what I'm going to suggest we use as our starting point.
+
+05:13.279 --> 05:15.800
+But similarly, a lighter weight version of it
+
+05:15.800 --> 05:18.519
+that a lot of people use is having issues in GitHub.
+
+05:18.519 --> 05:20.279
+And you could also start from GitHub
+
+05:20.279 --> 05:21.560
+if that's what you'd prefer.
+
+05:21.560 --> 05:24.000
+But what I'm going to do now is I am going to do something
+
+05:24.000 --> 05:27.160
+unusual, which is I'm going to sign up for a new plan
+
+05:27.160 --> 05:27.899
+with Jira.
+
+05:27.899 --> 05:31.519
+Of course, we use it in all of the jobs I can imagine
+
+05:31.519 --> 05:33.480
+I've had for the last few jobs.
+
+05:33.480 --> 05:36.920
+But we might as well get our own version of it for our experiments,
+
+05:36.920 --> 05:41.360
+and it's free for this kind of for a small number of users.
+
+05:41.360 --> 05:43.480
+So we can sign up to Jira for free,
+
+05:43.480 --> 05:46.759
+which is what we'll do now at at lassin.com/software/jira.
+
+05:46.759 --> 05:48.399
+I'll put a link in the resources.
+
+05:48.399 --> 05:49.879
+You don't need to do this if you don't want,
+
+05:49.879 --> 05:52.240
+because an easier way is just to use GitHub,
+
+05:52.240 --> 05:55.759
+but Jira is so ubiquitous that we might as well do it now.
+
+05:55.759 --> 05:58.720
+So I'm going to press the get it free button to come on here
+
+05:58.720 --> 06:03.920
+Get started with Jira. It's free up to 10 users. No credit card needed. I like the sound of that
+
+06:03.920 --> 06:07.279
+I'm going to use Google auth. I'm going to come in with my
+
+06:07.959 --> 06:15.360
+This email address come on in here. We go full name. That seems nice. I guess I'll use my informal name
+
+06:16.279 --> 06:21.199
+continue and that's going to be my site. That seems pretty good since
+
+06:21.199 --> 06:28.319
+that's my website too. We'll stick with that and it's thinking about that and it's all
+
+06:28.319 --> 06:32.160
+getting set up. So you should, you don't need to do this if you don't want to, part
+
+06:32.160 --> 06:35.420
+of the choose your own adventure. Should you wish to be hooked up to Jira, then please
+
+06:35.420 --> 06:36.420
+do that too.
+
+06:36.420 --> 06:42.000
+And when you come into Jira, you should see a screen a bit like this with spaces in it.
+
+06:42.000 --> 06:45.000
+If you don't have this kind of screen or something a bit like this,
+
+06:45.000 --> 06:48.000
+you can go to this app icon up here and select JIRA,
+
+06:48.000 --> 06:50.000
+and it should take you to something like this.
+
+06:50.000 --> 06:54.000
+Spaces is like the new name for what used to be called JIRA Projects,
+
+06:54.000 --> 06:58.000
+not to be confused with something that comes up here, which says projects,
+
+06:58.000 --> 07:01.000
+which is something different, which is like for project management.
+
+07:01.000 --> 07:04.720
+Super confusing. But for people that know Jera back to front,
+
+07:04.720 --> 07:07.160
+this is all stuff you know well.
+
+07:07.160 --> 07:10.000
+So what we're going to do is do create space.
+
+07:10.000 --> 07:12.959
+This is where you can set up your own space,
+
+07:12.959 --> 07:14.759
+and depending on quite how you've come through,
+
+07:14.759 --> 07:17.519
+you might have already had a chance to create your space.
+
+07:17.519 --> 07:26.000
+And I'm going to go for a tap, typical software development space, Camban, which is a term we're familiar with, is very
+
+07:26.000 --> 07:31.500
+standard way of doing it and now we're going to describe our space. Okay, so
+
+07:31.500 --> 07:35.959
+we're going to call our space "prelegal". That's going to be the name of our product.
+
+07:35.959 --> 07:40.360
+"Prelegal". The idea is we're going to build a product that is something that is
+
+07:40.360 --> 07:47.680
+able to draft legal documents for a user, for a company. It can draft an NDA, a client contract, an
+
+07:47.680 --> 07:52.600
+engagement, anything like that based on a repository of templates. And I'm
+
+07:52.600 --> 07:57.079
+calling it pre-legal because it's not meant to replace a lawyer, it's just
+
+07:57.079 --> 08:02.680
+meant to do some of the pre-work so that a lawyer, an attorney or a paralegal
+
+08:02.680 --> 08:06.839
+can be best set up or it might be a tool that a lawyer would use. So that's
+
+08:06.839 --> 08:08.560
+going to be the name of our product.
+
+08:08.560 --> 08:10.199
+It seems like a juicy product
+
+08:10.199 --> 08:12.040
+that could use some gen AI
+
+08:12.040 --> 08:14.759
+and could be something potentially we could monetize.
+
+08:14.759 --> 08:17.040
+So that is what our project is gonna be.
+
+08:17.040 --> 08:19.480
+And for select how your space is managed,
+
+08:19.480 --> 08:21.480
+I'm going to say team managed,
+
+08:21.480 --> 08:22.759
+so we don't need to work with others
+
+08:22.759 --> 08:25.319
+across many spaces in a way.
+
+08:25.319 --> 08:28.519
+And access will have as open anyone with access
+
+08:28.519 --> 08:31.439
+to this site, which is only me, will have access to this,
+
+08:31.439 --> 08:37.039
+and the key, which is going to be, as it tells us, the prefix that's going to come before everything,
+
+08:37.039 --> 08:45.840
+we'll just go with PL for pre-legal, something really simple. Okay, that is going to be our project,
+
+08:45.840 --> 08:52.860
+this seems good, no longer called a project, now it's got a space in we come and this is going to set up our
+
+08:52.860 --> 08:59.000
+pre-legal space that we will use going forwards and now it wants to bring team
+
+08:59.000 --> 09:02.559
+along this where we get to involve others in this and this is how you would
+
+09:02.559 --> 09:05.659
+work with your team and typically in a company set up you would have a whole
+
+09:05.659 --> 09:09.919
+team of people collaborating on one jira board as you probably know and so
+
+09:09.919 --> 09:15.480
+I'm gonna say I'll do this later and connect your work, activate, we'll just just press
+
+09:15.480 --> 09:18.100
+done there and we are done.
+
+09:18.100 --> 09:21.059
+We have pre-legal set up.
+
+09:21.059 --> 09:22.120
+Here it is.
+
+09:22.120 --> 09:24.639
+We have our very own board.
+
+09:24.639 --> 09:28.679
+And on that note, it is quite fun to see that this is in fact a camban board, something
+
+09:28.679 --> 09:31.240
+that we're familiar with perhaps.
+
+09:31.240 --> 09:39.200
+We'll see how its functionality compares to something we've done before. All right, so we're now going to create our first Jira
+
+09:39.200 --> 09:42.519
+issue as they're called, at least they used to be called
+
+09:42.519 --> 09:44.039
+that now they're called something different,
+
+09:44.039 --> 09:47.639
+but we're still in the same mindset of a Jira issue.
+
+09:47.639 --> 09:49.360
+Let's go and create that now.
+
+09:49.360 --> 09:51.240
+Okay, I'm gonna press the create button.
+
+09:51.240 --> 09:53.279
+It says what needs to be done.
+
+09:53.279 --> 09:55.940
+So we're gonna put in something very simple here.
+
+09:55.940 --> 10:03.720
+We're going to say we need a simple website that
+
+10:03.720 --> 10:10.879
+describes the pre-legal company.
+
+10:12.460 --> 10:20.080
+There we go. So that has been created and it's called PL-1. If I click on it, it comes up.
+
+10:20.080 --> 10:22.000
+We'll see what this is.
+
+10:22.000 --> 10:22.840
+Here it is.
+
+10:22.840 --> 10:27.000
+It is a work item, which is used to be, I think,
+
+10:27.000 --> 10:28.519
+what we call a Jura issue.
+
+10:28.519 --> 10:32.200
+It's a task, which is the lowest level of granularity.
+
+10:32.200 --> 10:35.899
+And that's something that we've now set up in Jura.
+

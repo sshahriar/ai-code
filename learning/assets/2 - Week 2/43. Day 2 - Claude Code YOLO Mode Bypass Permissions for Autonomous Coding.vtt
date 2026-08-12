@@ -1,0 +1,284 @@
+WEBVTT
+
+00:00.000 --> 00:08.160
+Okay, so we're going to do real YOLO mode and real YOLO mode as we did at one point in the other platforms
+
+00:08.160 --> 00:11.560
+Is about saying I don't want you to ask me for permissions
+
+00:11.679 --> 00:13.320
+Just do anything you want
+
+00:13.320 --> 00:18.239
+It's all yours and the way you do that with Claude is when you launch Claude you put in a special mode
+
+00:18.239 --> 00:23.859
+And you do it by by running Claude and then after the work Lord you put a flag you put - -
+
+00:24.480 --> 00:26.260
+Dangerously you put a flag, you put dash dash dangerously.
+
+00:26.260 --> 00:28.179
+They really want you to know you're doing something bad here.
+
+00:28.179 --> 00:31.859
+Dangerously dash skip dash permissions.
+
+00:31.859 --> 00:34.380
+And you know, it's a run this at your own risk thing
+
+00:34.380 --> 00:39.380
+as many people have said whilst this sounds like it could be,
+
+00:39.380 --> 00:41.020
+potentially damaging,
+
+00:41.020 --> 00:44.020
+particularly if you're using a frontier model like Opus,
+
+00:44.020 --> 00:47.859
+the chances that it does something destructive are very low indeed.
+
+00:47.859 --> 00:48.840
+And they haven't,
+
+00:49.119 --> 00:54.240
+that I know of, been any very well publicized stories of something like it running an RNN-RF
+
+00:54.240 --> 00:55.439
+and wiping your drive.
+
+00:55.799 --> 01:00.880
+But in theory, it's a model that's based on statistics and there is some non-zero
+
+01:00.880 --> 01:03.479
+probability that it does something that we don't want.
+
+01:03.640 --> 01:05.799
+So that is why you do this at your own risk.
+
+01:06.040 --> 01:09.640
+If you understand those risks, you come full with them, then you should do this with me.
+
+01:09.799 --> 01:13.840
+If you don't, then just watch me and see whether I crash and burn.
+
+01:13.840 --> 01:15.680
+But that is how you launch Claude.
+
+01:17.120 --> 01:21.040
+Warning, Claude Code running in bypass permissions mode.
+
+01:21.040 --> 01:25.280
+And in bypass permissions mode, Claude Code will not ask you approval before running potentially
+
+01:25.280 --> 01:31.120
+dangerous commands, only used in a sandboxed container that has restricted internet access
+
+01:31.120 --> 01:34.120
+and can be easily restored by proceeding to take all
+
+01:34.819 --> 01:39.239
+Responsibility now. We will look at sandboxing properly next week
+
+01:39.239 --> 01:43.420
+Which is which is where you can you can learn how to do this kind of thing properly
+
+01:43.439 --> 01:50.879
+But for now I'm going to do it improperly and I'm going to run claw dangerously on my computer as it is
+
+01:51.079 --> 01:58.480
+We will see what I do. Okay, I'm gonna say please improve the UI of this project,
+
+02:01.000 --> 02:06.000
+particularly making sure the horizontal layout
+
+02:07.659 --> 02:12.659
+looks better with icons instead of delete buttons
+
+02:22.000 --> 02:32.000
+Instead of delete buttons and using the horizontal space properly. Make your changes, test everything, let me know when done.
+
+02:32.000 --> 02:35.000
+That is it, bypass permissions on.
+
+02:35.000 --> 02:38.560
+You can see at the bottom there in red, shift tab to cycle.
+
+02:38.560 --> 02:44.479
+I'm pressing Enter, we are yolo-ing, we're letting it add it. And of course that's a pretty contained
+
+02:44.479 --> 02:49.120
+instruction that I've given it. And you can be much more bold than the people that do this for
+
+02:49.120 --> 02:55.039
+a living, do it with much more grandiose instructions, perhaps to build all the 10 steps of the
+
+02:55.039 --> 03:01.039
+instructions that we had before, do the whole thing on yO mode and come back later. But typically if you did something
+
+03:01.039 --> 03:06.879
+like that, you'd be ill-advised to do it not in a sandbox. It would be better to do it in a sandbox
+
+03:06.879 --> 03:12.080
+that we will cover in due course. But for just redoing the user interface, it feels like the
+
+03:12.080 --> 03:16.319
+potential for damage is relatively low. That could be my famous last words, but let's hope not.
+
+03:16.319 --> 03:24.000
+Let's see, I'll see you in a second. If I'm still here, well YOLO has run and YOLO has completed and I'm still here to tell the tale.
+
+03:24.000 --> 03:31.599
+It took seven minutes and 44 seconds. So lots happened there. I did. I must confess I did sort of watch.
+
+03:31.599 --> 03:37.120
+But not always. I did. I looked away. I think I read an email, you know, and so maybe during that time,
+
+03:37.120 --> 03:45.000
+horror has happened. Who knows, but we will start the server with the scripts/start-mac.
+
+03:46.080 --> 03:47.699
+See if the server starts.
+
+03:47.699 --> 03:49.740
+Yes, it does seem to start.
+
+03:49.740 --> 03:52.740
+Okay, and now we will bring up a browser window.
+
+03:52.740 --> 03:54.699
+Hang on, let me resize that.
+
+03:54.699 --> 03:58.580
+Here it is, and we will go to localhost 8000.
+
+03:58.580 --> 04:00.979
+Okay, so far so good, it's come up at least.
+
+04:00.979 --> 04:02.080
+Oh, not, what am I doing?
+
+04:02.080 --> 04:04.180
+Sorry, there we go.
+
+04:04.180 --> 04:06.159
+That's silly thing. And sign in. Okay, yes, yes we go. That silly thing.
+
+04:08.000 --> 04:09.560
+And sign in. Okay, yes, yes, yes, yes.
+
+04:09.560 --> 04:12.479
+We know have to change the password, not now.
+
+04:12.479 --> 04:14.599
+And first blush, this does indeed look,
+
+04:14.599 --> 04:17.680
+oh, I see it's floated onto two sections.
+
+04:17.680 --> 04:18.560
+That's clever.
+
+04:18.560 --> 04:20.000
+Now does this still work?
+
+04:20.000 --> 04:21.480
+Yes, it does, and that's really nice actually.
+
+04:21.480 --> 04:24.040
+These look sharp, a little bins.
+
+04:24.040 --> 04:25.759
+And does this come down here?
+
+04:25.759 --> 04:27.720
+Yes, yes, that works right.
+
+04:27.720 --> 04:29.279
+Did it design, let's put that in there
+
+04:29.279 --> 04:35.839
+too? Yes yes it's working well very nice very nice the user interface does definitely look a
+
+04:35.839 --> 04:40.000
+lot better look at these different sections like this and it's nice that it's flow does that
+
+04:40.000 --> 04:45.680
+mean if I expand it that it's going to play yes it does mean that that's good come on you got
+
+04:45.680 --> 04:51.199
+to hand it to it that's really very nice indeed I'd say that say a yeah, it's a it's mobile
+
+04:51.199 --> 04:57.639
+responsive to that's clever, clever, a really good job done. That's showing you the power
+
+04:57.639 --> 05:03.579
+of YOLO mode. I did nothing. I even looked away from time to time. It took seven minutes,
+
+05:03.579 --> 05:09.199
+almost eight minutes, and it totally re-engineered user interface and it looks it looks great.
+
+05:09.199 --> 05:15.279
+It looks sharp. And so that that is the power of Claude Code on YOLO mode.
+
+05:15.279 --> 05:17.120
+And we should try the AI Assistant too.
+
+05:17.120 --> 05:18.300
+Look, it looks much nicer now.
+
+05:18.300 --> 05:20.720
+Look at that nice background here.
+
+05:20.720 --> 05:22.959
+Ask the Assistant to, oh, hi there.
+
+05:22.959 --> 05:24.279
+We'll say hi there.
+
+05:24.279 --> 05:26.040
+See if open router still talks to me
+
+05:26.040 --> 05:26.879
+after all of our stuff.
+
+05:26.879 --> 05:28.199
+Yes, it's so low.
+
+05:28.199 --> 05:29.720
+How can I have the board today?
+
+05:29.720 --> 05:41.439
+Please move all cards to the done column. See if we can handle this. It's gonna think
+
+05:41.439 --> 06:01.540
+about that. Lots of stuff happening. Drum roll please everybody. Done. All non-done cards have been moved to the done column and it doesn't lie. Check
+
+06:01.540 --> 06:06.180
+that out. It did it. It took a little minute to do it, but that's fine. I'm super impressed
+
+06:06.180 --> 06:10.899
+that it did. I was thinking it failed there. But no, it already did it. Great job. The
+
+06:10.899 --> 06:15.000
+user interface looks fantastic. I'm very happy with its work. And that means, of course,
+
+06:15.000 --> 06:19.759
+we should go back here. We should go back to make a new terminal window
+
+06:19.759 --> 06:32.879
+and do a git status and do a git add dot and do a git commit -m after ui revamp.
+
+06:34.480 --> 06:37.839
+There we go, we've committed it, we've got that code checked in,
+
+06:38.399 --> 06:40.319
+they've never tossed it until that's done.
+
+06:40.319 --> 06:44.720
+And with that, we can end our dangerous Yolo session
+
+06:44.720 --> 06:48.000
+and move on to my next trick, my last trick for today.
+

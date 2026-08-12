@@ -1,0 +1,509 @@
+WEBVTT
+
+00:00.000 --> 00:03.439
+So, the simplest way is to put something like this.
+
+00:03.439 --> 00:05.120
+Just use natural language.
+
+00:05.120 --> 00:09.560
+There are a number of commands you can tell it to create issues, to assign issues, to these
+
+00:09.560 --> 00:12.919
+things called "pulcats", which is part of the terminology.
+
+00:12.919 --> 00:32.240
+But we can just say, build the entire project as described by spec.md is just I've taken that plan.md document as as specified by spec.md file the issues,
+
+00:32.240 --> 00:39.880
+create a convoy and sling the work to pull cats. That's all the terminology. That's what it needs
+
+00:39.880 --> 00:44.520
+to know how to do. Now that involves a bunch of different commands which you could look up
+
+00:44.520 --> 00:49.159
+and a bit hard to remember and hopefully it's got enough context itself
+
+00:49.159 --> 00:50.820
+that it knows what it needs to do.
+
+00:50.820 --> 00:54.560
+So it now knows how to do all of this with its rig.
+
+00:54.560 --> 00:57.140
+It's reading about the tooling for them right now.
+
+00:57.140 --> 00:59.719
+We'll let it do that and I'll see you back there.
+
+00:59.719 --> 01:03.000
+Hopefully when all of this is up and running.
+
+01:03.000 --> 01:05.200
+So tons has been going on, it's been creating
+
+01:05.200 --> 01:07.819
+lots of different things, lots of beads,
+
+01:07.819 --> 01:11.680
+which are like issues that all being being created and I'm hoping to
+
+01:11.680 --> 01:16.359
+see that it's going to soon be starting work on these beads.
+
+01:16.359 --> 01:23.280
+So far it's just all about setting up projects, stuff, lots of Gastown lingo and I'm excited
+
+01:23.280 --> 01:24.280
+for action.
+
+01:24.280 --> 01:36.239
+Okay and it's just created a convoy and it's slinging phase one. It's "Slinging Phase 1" and that is Gaston's speak for saying that work is about to start
+
+01:36.239 --> 01:42.079
+happening, creating the convoy and "Slinging Phase 1" to "Pole Cats", which should all
+
+01:42.079 --> 01:43.840
+be working on it.
+
+01:43.840 --> 01:47.980
+So this is happening, you're seeing stuff going on here.
+
+01:47.980 --> 01:51.680
+You can see that it's built a ton of these different, each of these different things here,
+
+01:51.680 --> 01:54.040
+this "thin" dash, this dash, this thin dash that these are
+
+01:54.040 --> 01:59.159
+all the different issues that need to be worked on, a bit like like a Git issue or
+
+01:59.159 --> 02:00.719
+a Jira ticket.
+
+02:00.719 --> 02:05.799
+And they've all been set up and they are all all getting getting prepared right now.
+
+02:05.799 --> 02:07.439
+But as yet no, no action.
+
+02:07.439 --> 02:20.080
+Okay, 10 issues filed decomposing the the the the finally spec. Phase 1 polecats are running now. When they land, Phase 2 beads unlock and I can
+
+02:20.080 --> 02:25.120
+sling those next. Okay, so the kind of crazy thing about Gastown is that you're never quite sure
+
+02:25.120 --> 02:29.680
+what's going on. It looks like not much is happening. It just gave me some message about some
+
+02:29.680 --> 02:40.319
+deacon witness not working. It seems quite quiet, but it's not quiet. What's going on is that lots of chords are all running right now and to
+
+02:40.319 --> 02:41.960
+prove it there's a special key
+
+02:41.960 --> 02:44.199
+combination I have to press. It's within
+
+02:44.199 --> 02:46.960
+this I need to press control B and then
+
+02:46.960 --> 02:49.719
+W and what comes up and this is because
+
+02:49.719 --> 02:52.000
+we're running something called T-Max is
+
+02:52.000 --> 02:54.280
+all of these different screens are
+
+02:54.280 --> 02:57.560
+different chord code instances running
+
+02:57.560 --> 03:01.759
+different things. There is this thing called witness and this thing called
+
+03:01.759 --> 03:08.479
+Chrome and they are running and I can go back to the mayor which is right here to see what's happening.
+
+03:08.479 --> 03:14.879
+And all of this is what's going on right now and I can also see this by going to the the convoys
+
+03:14.879 --> 03:20.080
+screen and bring this up and see what's happening although we see that one of them is running and
+
+03:20.080 --> 03:24.240
+another one is not and some of them are idle and waiting for work to do.
+
+03:24.240 --> 03:28.240
+So let's say that we're being prompted here, check on the pollcats.
+
+03:28.240 --> 03:33.919
+So let's do that. Let's ask it to check on the pollcats and find out what's going on.
+
+03:41.360 --> 03:46.280
+Well, we're getting some help, hopefully. Chrome is done, Rust already nukes, let me check,
+
+03:46.280 --> 03:48.240
+bead status and the merge queue.
+
+03:48.240 --> 03:51.039
+So, as long as the man knows what's going on,
+
+03:51.039 --> 03:53.080
+I guess that's okay by me.
+
+03:53.080 --> 03:55.639
+I will let it keep going and I'll come back in a second.
+
+03:55.639 --> 03:57.759
+Okay, so it says, here's the status.
+
+03:57.759 --> 04:00.360
+Backend foundation, closed merged.
+
+04:00.360 --> 04:03.240
+Polcat Rust already nukes.
+
+04:03.240 --> 04:09.680
+Finn, WMW is in the merge queue, status ready, and then pullcat Chrome is done, pushed its
+
+04:09.680 --> 04:16.399
+branch, it's wrapping up, waiting to submit its MR to the merge queue. So, one means to
+
+04:16.399 --> 04:21.600
+wait for Chrome to finish and then sling phase two, I guess I'll say yes, sling phase
+
+04:21.600 --> 04:27.399
+two as they unblock will go with the suggestion. I'm sort of going with the flow, you know,
+
+04:27.399 --> 04:28.319
+and that is the thing with this. You just kind of go with the flow, you know, and that is the thing with
+
+04:28.319 --> 04:32.720
+this. You just kind of go with it, let it do its thing. While it's doing its thing,
+
+04:32.720 --> 04:37.040
+one thing I'll mention is that the challenge we've given it, just the specification, is
+
+04:37.040 --> 04:42.519
+a bigger, harder challenge than the challenges that we did yesterday because we haven't included
+
+04:42.519 --> 04:52.699
+the market data implementation. This is completely blank. We've really had it do everything from scratch to see whether it can pull it off. That's the idea and
+
+04:53.439 --> 04:58.199
+We will we will find out very soon. Okay, so a crazy lot of things are going on
+
+04:58.199 --> 05:04.800
+It's just completed one set of tasks. It's now slinging all six phase two beads
+
+05:04.800 --> 05:09.800
+It's got it's got these beads which are the the tasks the issues to be to be tackled
+
+05:10.600 --> 05:13.759
+They are all being that here is the list of them,
+
+05:13.759 --> 05:16.959
+they've all been thrown off to different workers
+
+05:16.959 --> 05:18.000
+to work on them.
+
+05:18.000 --> 05:21.319
+If I do the, the old trick of control BW
+
+05:21.319 --> 05:22.959
+to list the different sessions,
+
+05:22.959 --> 05:23.800
+well that didn't do much,
+
+05:23.800 --> 05:25.439
+I don't think I was selected there, there we go.
+
+05:25.439 --> 05:27.879
+You can see that there's plenty going on here.
+
+05:27.879 --> 05:29.040
+There's lots of stuff here,
+
+05:29.040 --> 05:30.600
+the gas time workflow,
+
+05:30.600 --> 05:31.939
+Q processing,
+
+05:31.939 --> 05:36.279
+cloud code for different things. I'm not entirely sure what all these different
+
+05:36.279 --> 05:39.759
+windows are doing, but I trust that stuff is happening.
+
+05:39.759 --> 05:42.839
+The thing about gas town is you just go with it.
+
+05:42.839 --> 05:47.079
+This is the most disruptive and chaotic of all of them,
+
+05:47.079 --> 05:49.439
+and you just kind of go with the flow.
+
+05:49.439 --> 05:51.759
+If I bring up this user interface thing here,
+
+05:51.759 --> 05:54.079
+there's plenty happening here as well.
+
+05:54.079 --> 05:56.959
+I'm not that this thing here, refinery, the yellow one,
+
+05:56.959 --> 06:00.600
+I think is one that I, both these two ones,
+
+06:00.600 --> 06:03.000
+the yellow and the, oh, definitely this red one
+
+06:03.000 --> 06:04.839
+was something that I had kicked off before
+
+06:04.839 --> 06:07.040
+in a previous incarnation that we can ignore,
+
+06:07.040 --> 06:10.519
+but all of these look like they are all working away
+
+06:10.519 --> 06:15.040
+called Chrome, Fury, Guzzle, Nitro, Rust and Shiny.
+
+06:15.040 --> 06:20.879
+And I think this one too, they are all doing stuff as they work in parallel.
+
+06:20.879 --> 06:26.959
+So this is definitely the most parallel that we've ever had. Quite a contrast to GSD.
+
+06:26.959 --> 06:34.480
+If GSD was the most kind of slow, careful, triple check everything one by one, take five hours.
+
+06:34.480 --> 06:40.399
+This is the kind of crazy, sling everything to use their word, sling everything out to a ton of different
+
+06:40.399 --> 06:44.600
+workers, all running in parallel. Here they will go. All six phase two pole
+
+06:44.600 --> 06:49.240
+cats are running. These are the pole cats. Rust Chrome, Nitro, Guzzel, Shiny and
+
+06:49.240 --> 06:55.199
+Fury. Six pole cats running these tasks, back in marketator and SSE, back in
+
+06:55.199 --> 07:00.399
+portfolio, back in LLM chat, front end front end front end, they're all happening.
+
+07:00.399 --> 07:04.399
+And that reminds me, we also didn't tell it about open
+
+07:04.399 --> 07:06.100
+router and structured outputs.
+
+07:06.100 --> 07:10.480
+So yeah, I'm, all I got was the specifications.
+
+07:10.480 --> 07:12.500
+I don't know if this is all gonna hang together.
+
+07:12.500 --> 07:14.160
+We'll soon find out.
+
+07:14.160 --> 07:17.079
+So as more of a slight mystery of this thing,
+
+07:17.079 --> 07:20.399
+it keeps telling me that the decon session won't stay up.
+
+07:20.399 --> 07:22.839
+And I'm asking it, what is the decon session used for?
+
+07:22.839 --> 07:28.720
+What are the implications of it not staying up. And it's telling it's and assuring me that there's minimal implications. The
+
+07:28.720 --> 07:35.519
+witness is still running. That's the thing that monitors our six pole cats are kind of
+
+07:35.519 --> 07:40.920
+workers. The refinery is running. The pole cats are running. What we what we lose is the
+
+07:40.920 --> 07:46.399
+ability to to watch multiple projects if they were running, but we only have one so it doesn't matter.
+
+07:46.399 --> 07:50.759
+Want me to keep going with monitoring the yes, keep going, monitoring the
+
+07:50.759 --> 07:59.360
+pole cats. That's exactly what we want. And meanwhile we can just keep checking
+
+07:59.360 --> 08:03.439
+that everything looks healthy. It's funny, this dashboard says that something is
+
+08:03.439 --> 08:12.000
+stuck. I wonder what that means. Let's see if it's "Guzzel and Fury are already done. Their sessions are so all faceless."
+
+08:12.000 --> 08:20.600
+Okay, okay. So it seems that our mayor agrees. Let's see what's happening.
+
+08:20.600 --> 08:25.139
+Now there's some new error. Well, hopefully it's all underway. The mayor has
+
+08:25.139 --> 08:29.259
+control of the situation. I will see you in a second. "And indeed the mayor was
+
+08:29.259 --> 08:31.079
+able to resolve whatever problems are happening
+
+08:31.079 --> 08:35.679
+It assures me there's good progress across the board and sure enough when I bring up this dashboard
+
+08:35.679 --> 08:39.480
+It's a stale up there for some reason, but everything here seems to be working feverishly
+
+08:40.080 --> 08:45.240
+Chrome dust fury guzzle nitro refinery rust shiny thunder all on the go
+
+08:45.320 --> 08:50.080
+There's one here that's got a red thing and that's because it was something I kicked off before which we're not even doing anymore
+
+08:50.080 --> 08:52.480
+So everything seems to be happening.
+
+08:52.480 --> 08:54.039
+There's lots of these sessions running.
+
+08:54.039 --> 08:59.120
+I can do this whole control BW and we see that there are lots of different sessions
+
+08:59.120 --> 09:01.159
+running at the same time.
+
+09:01.159 --> 09:05.480
+It's quite bewildering, but I'm confident that work is happening.
+
+09:05.480 --> 09:07.519
+And I'm hopeful we're going to get good results.
+
+09:07.519 --> 09:09.960
+And I just asked for a quick status update from our mayor.
+
+09:09.960 --> 09:12.120
+It says things are humming along.
+
+09:12.120 --> 09:14.440
+It's giving me each of the different tasks assigned to each
+
+09:14.440 --> 09:17.159
+of our pole cats and the status.
+
+09:17.159 --> 09:22.399
+The front end watch the sun charts are done, Docker is done, back end done, front end done,
+
+09:22.399 --> 09:25.360
+and then you can see these other things that are in progress will be fixed.
+
+09:25.360 --> 09:28.679
+It's like we're getting a status update from each of the different agents that are
+
+09:28.679 --> 09:29.679
+running.
+
+09:29.679 --> 09:32.559
+It's what eight different things happening in parallel.
+
+09:32.559 --> 09:36.120
+It's crazy. I think in the Claude agent team,
+
+09:36.120 --> 09:40.919
+we had two things are going on the go at any one time.
+
+09:40.919 --> 09:43.240
+I think very much when I was doing GSD,
+
+09:43.240 --> 09:44.600
+it was very serial.
+
+09:44.600 --> 09:46.340
+It felt very serial and careful.
+
+09:46.340 --> 09:47.679
+There were some overlaps,
+
+09:47.679 --> 09:49.600
+but only when one thing was verifying,
+
+09:49.600 --> 09:51.039
+another thing might be planning.
+
+09:51.039 --> 09:54.519
+This is like all out, everything on the go,
+
+09:54.519 --> 09:55.919
+everything is happening,
+
+09:55.919 --> 10:00.080
+and the mayor appears to be handling the situation very nicely.
+
+10:00.080 --> 10:05.279
+Okay, it's super impressive. Now the eight polecats are done coding.
+
+10:05.279 --> 10:12.320
+There's five items in a merge queue and the refinery, one of these processes, is actively working.
+
+10:12.320 --> 10:17.200
+It's merged three branches, resolved a conflict. So there was a merge conflict,
+
+10:17.200 --> 10:23.480
+which is like a classics software engineering problem. When you have eight different workers working on the same code base, there's going to be
+
+10:23.480 --> 10:24.480
+some overlap.
+
+10:24.480 --> 10:25.799
+There's going to be some merge conflict.
+
+10:25.799 --> 10:26.919
+So it handled that.
+
+10:26.919 --> 10:28.480
+It's now processing more.
+
+10:28.480 --> 10:31.320
+It just got nudged about new merge requests.
+
+10:31.320 --> 10:35.879
+It's like these different, these different pullcats forming it, and it needs to do more
+
+10:35.879 --> 10:37.240
+merging.
+
+10:37.240 --> 10:38.240
+Everything is flowing.
+
+10:38.240 --> 10:44.320
+Just needs a few more minutes for the refinery to chew through all five queued items and for dust
+
+10:44.320 --> 10:53.200
+to wrap up tests. Wowzer. Okay, all that is happening. I'm I'm feeling quite kind of feeling
+
+10:53.200 --> 10:59.519
+cautiously confident. We will see. Well, here we go. It says that it is finished. All of these
+
+10:59.519 --> 11:05.200
+things have all run. Many of them were running in parallel, they've all been merged, they're all now in
+
+11:05.200 --> 11:12.000
+Maine in this repo called Finn, which was initially completely empty except for the specifications.
+
+11:12.000 --> 11:13.000
+That was it.
+
+11:13.000 --> 11:15.799
+Well, I'm being given a try.
+

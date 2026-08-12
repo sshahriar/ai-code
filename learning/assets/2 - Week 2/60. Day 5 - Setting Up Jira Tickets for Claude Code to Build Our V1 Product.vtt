@@ -1,0 +1,299 @@
+WEBVTT
+
+00:00.000 --> 00:04.719
+Okay, this is us back in JIRA again. Check this out. You can see that it moved the other
+
+00:04.719 --> 00:08.880
+tickets to Done. I didn't remember seeing it do that. I didn't ask it to. I don't think I
+
+00:08.880 --> 00:14.800
+don't remember, but it did. Okay. So now we're going to create some more tickets. I just started
+
+00:14.800 --> 00:27.000
+writing this one. Let's have the first of them being from prototype, build foundation of V1 product.
+
+00:28.879 --> 00:30.839
+Let's start with that as a ticket.
+
+00:30.839 --> 00:33.159
+And then the next ticket is going to be
+
+00:34.560 --> 00:39.560
+add AI chat, but still just mutual NDA.
+
+00:43.200 --> 00:54.740
+And then the next up is expand to all legal, all supported legal document types. There we go. That's
+
+00:54.740 --> 00:59.500
+our three sets. This is coming in from our business. Let's have a look at this one.
+
+00:59.500 --> 01:16.599
+First of all, maybe this one is a bit more of a technical one, but this one is upgrade prototype so that it is the proper technical foundation for the full V1
+
+01:16.599 --> 01:43.000
+project including front-end, back-end, and temporary database with scripts to start and stop, but without updating the functionality yet.
+
+01:43.000 --> 01:47.599
+Let's say the features, the product features.
+
+01:47.599 --> 01:50.659
+Yes, that seems like a clear instruction.
+
+01:50.659 --> 01:51.760
+That's may well.
+
+01:51.760 --> 01:58.719
+That's probably one of the technical lead we've put in rather than the business sponsor but you would say as we move from prototype to the full v1 that would be the
+
+01:58.719 --> 02:03.120
+next thing that we would do so I put that in the comments stupidly let me cut that I meant to
+
+02:03.120 --> 02:08.800
+put it in the description put it in there that's what I meant to do save that there we go very good
+
+02:08.800 --> 02:17.400
+that is our first ticket added presumably yes we are pl4, now I'm going over here to PL5,
+
+02:17.400 --> 02:21.080
+add AI chat, but still just mutual NDA.
+
+02:21.080 --> 02:26.080
+We're gonna say now change the user,
+
+02:27.199 --> 02:30.919
+the UX user input,
+
+02:34.400 --> 02:36.439
+let's write it in business speak.
+
+02:36.439 --> 02:41.159
+Now change the way the platform the product
+
+02:43.719 --> 02:46.639
+interacts with a user
+
+02:47.800 --> 02:51.599
+Instead of a series of of questions
+
+02:52.680 --> 02:59.120
+This should be a free form chat with an AI
+
+02:59.759 --> 03:00.139
+the AI asks about form chat with an AI.
+
+03:00.139 --> 03:05.139
+The AI asks about the document,
+
+03:06.159 --> 03:11.159
+asks questions related to the fields
+
+03:12.599 --> 03:17.599
+and populates the document based on the responses.
+
+03:21.400 --> 03:22.479
+And I think that's it.
+
+03:22.479 --> 03:23.919
+I'm not going to mention Soree Brass.
+
+03:23.919 --> 03:26.240
+I'm not going to mention using structured outputs
+
+03:26.240 --> 03:27.159
+or anything else.
+
+03:27.159 --> 03:28.840
+I can think in my mind there's different ways
+
+03:28.840 --> 03:29.800
+to interpret this.
+
+03:29.800 --> 03:33.639
+Like is it able to change the text outside the key fields?
+
+03:33.639 --> 03:34.680
+I'm not sure.
+
+03:34.680 --> 03:37.680
+I think we're just going to let it interpret it as it wants.
+
+03:37.680 --> 03:39.280
+Maybe ask us some questions.
+
+03:39.280 --> 03:40.639
+That seems like a cool way to do it.
+
+03:40.639 --> 03:42.280
+Yet again, I put that in the comment
+
+03:42.280 --> 03:43.159
+instead of the description.
+
+03:43.159 --> 03:49.960
+What's wrong with me? There we go. I'm too excited. Save that. Okay, let's keep going.
+
+03:49.960 --> 03:56.280
+Okay, now it's on to PL6. Up it comes. Let's click in description, paste in one. I just
+
+03:56.280 --> 04:00.680
+wrote. Now expand the functionality so it supports all legal document types for which
+
+04:00.680 --> 04:08.599
+we have templates engaged with the user if they want an unsupported document. Explain we can't generate that, but offer a closest document
+
+04:08.599 --> 04:10.199
+that we can generate.
+
+04:10.199 --> 04:11.360
+Save that.
+
+04:11.360 --> 04:13.240
+There we go.
+
+04:13.240 --> 04:14.879
+OK.
+
+04:14.879 --> 04:20.040
+And then I just want to be clear about the users.
+
+04:20.040 --> 04:21.439
+Let's just see, hang on.
+
+04:21.439 --> 04:22.920
+For upgrade the product, the proper
+
+04:22.920 --> 04:24.240
+will do front and back in.
+
+04:34.600 --> 04:38.519
+can only have a fake login screen for now. No authentication.
+
+04:38.519 --> 04:44.079
+Just bring the user into the platform.
+
+04:44.079 --> 04:44.720
+So that's clear.
+
+04:44.720 --> 04:47.680
+I don't want to add on user authentication upfront.
+
+04:47.680 --> 04:50.399
+But at the end of it,
+
+04:50.399 --> 04:52.319
+we will, I press Save by mistake,
+
+04:52.319 --> 04:54.560
+we'll add in one more ticket in here.
+
+04:54.560 --> 05:03.560
+What needs to be done, support multiple users.
+
+05:03.560 --> 05:04.399
+Let's write that.
+
+05:04.399 --> 05:06.600
+Okay, so I'm going into support multiple users,
+
+05:06.600 --> 05:09.680
+go to the description, and I'm gonna paste in there,
+
+05:09.680 --> 05:12.199
+add a proper sign in and sign up screen.
+
+05:12.199 --> 05:14.639
+Then let's use a register and come back into the platform.
+
+05:14.639 --> 05:16.600
+Store previously generated documents,
+
+05:16.600 --> 05:18.839
+allow the user to look back at prior documents
+
+05:18.839 --> 05:19.879
+that they've created.
+
+05:19.879 --> 05:22.480
+The database can be temporarily reset,
+
+05:22.480 --> 05:25.439
+can be temporary, can be temporary,
+
+05:25.439 --> 05:27.439
+and be reset every time the server restart,
+
+05:27.439 --> 05:28.279
+that's fine.
+
+05:29.800 --> 05:33.240
+Also add polish to all the screens
+
+05:42.920 --> 05:58.000
+also add polish to all the screens so that they look like a subject to legal review.
+
+06:06.000 --> 06:14.000
+And let's change this to support multiple users and other final polish.
+
+06:15.000 --> 06:17.000
+There we go. Okay, got there in the end.
+
+06:28.000 --> 06:43.959
+There we go. Okay, got there in the end. This is our, this is our, our Dura board now. We've got our four tickets, PL4, 5, 6 and 7 with the functionality you want to build. Imagine it's been your engineering lead, your product people, your business sponsors, maybe even your clients that have come in and added these Dura tickets. Typically this would now go off to the engineering team. These will be assigned off to different people but what we're going to do is we're going to
+
+06:43.959 --> 06:49.579
+assign it of course to our friend Claude Code. So here I am in VS Code.
+
+06:49.579 --> 06:54.899
+Close down these open screens including our beautiful new skill. Let's bring up
+
+06:54.899 --> 06:58.879
+a new terminal and I'm going to type Claude. And the first we want to make sure
+
+06:58.879 --> 07:02.199
+is see what we see if I do slash context.
+
+07:02.199 --> 07:04.959
+We're hoping to see that there is a new skill,
+
+07:04.959 --> 07:09.879
+Siribras inference, a project skill, isn't that cool.
+
+07:09.879 --> 07:13.040
+We could see that we've got our plugins and we know, of course,
+
+07:13.040 --> 07:18.920
+that we have our existing Atlassian and GitHub MCP servers.
+
+07:18.920 --> 07:25.939
+Now, and you can see that we've used up a fair amount of contacts with the MCP tools that we've got, but we are in
+
+07:25.939 --> 07:29.300
+we're primed for our project.
+
+07:29.300 --> 07:30.339
+Is there anything we have to do first?
+
+07:30.339 --> 07:31.339
+Yes, there is.
+
+07:31.339 --> 07:34.339
+I know you're thinking, why is there always something we have to do first?
+
+07:34.339 --> 07:35.439
+This one is an obvious one.
+
+07:35.439 --> 07:40.220
+We have to do that authentication again because of Atlassian is funny.
+
+07:40.220 --> 07:44.139
+Come on in, reauthenticate, here we go, approve.
+
+07:44.139 --> 07:46.560
+I tell you, if I don't do this it wouldn't work.
+
+07:46.560 --> 07:53.839
+Accept, accept. Okay, we're ready. We're authenticated. So right away I come back.
+
+07:53.839 --> 07:57.879
+It's time for us to do this.
+

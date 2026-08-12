@@ -1,0 +1,485 @@
+WEBVTT
+
+00:00.000 --> 00:04.559
+Welcome back to VS Code. We're going to start by cleaning things up so we're in great shape.
+
+00:04.559 --> 00:10.400
+I want to just check what's in dot-claud. You can see that we have agents as empty, commands as empty
+
+00:10.400 --> 00:15.039
+skills. We just have our cerebras skill, which is great. We want to keep that.
+
+00:15.039 --> 00:20.320
+settings.json is empty. settings.local.json says what it's allowed to do.
+
+00:21.280 --> 00:27.820
+Okay, and the sandbox is currently off. That's good because we want to keep everything as vanilla,
+
+00:27.820 --> 00:29.559
+as simple as possible.
+
+00:29.559 --> 00:31.600
+.github contains the actions,
+
+00:31.600 --> 00:33.200
+if we wanted to tag Claude,
+
+00:33.200 --> 00:36.119
+that's fine, we're not going to be doing that right now.
+
+00:36.119 --> 00:39.960
+Okay, we've got the market data summary at this point,
+
+00:39.960 --> 00:41.320
+that's great.
+
+00:41.320 --> 00:44.200
+I also want to go into Claude and find out
+
+00:44.200 --> 00:46.200
+what kind of plugins we have enabled,
+
+00:46.200 --> 00:50.240
+what MCP we have enabled. We want to make sure that everything is nice and vanilla
+
+00:50.240 --> 00:53.920
+Because we don't want to confuse things if we're gonna go crazy with agent teams
+
+00:53.920 --> 00:57.320
+So here we go bring up a terminal and we will go into
+
+00:57.880 --> 01:04.359
+Claude here it is let's just have a look at the plug-in situation see what we've got installed right now
+
+01:04.359 --> 01:09.719
+We've got no plugins or mcp servers installed. That seems pretty good. Okay, let's go back
+
+01:10.459 --> 01:12.120
+Let's go into skills.
+
+01:12.120 --> 01:14.980
+So I need the slash skills.
+
+01:14.980 --> 01:16.219
+See what we've got.
+
+01:16.219 --> 01:17.239
+We've got the one skill,
+
+01:17.239 --> 01:18.579
+Ceribris inference.
+
+01:18.579 --> 01:19.420
+That's it.
+
+01:19.420 --> 01:20.260
+Love it.
+
+01:20.260 --> 01:21.560
+And let's go into MCP.
+
+01:21.560 --> 01:23.980
+See what we have in our MCP servers.
+
+01:23.980 --> 01:26.459
+No MCP servers as we just saw.
+
+01:26.459 --> 01:27.299
+Very good.
+
+01:27.299 --> 01:29.859
+Okay, we are now going to install a few plugins
+
+01:29.859 --> 01:32.760
+that might be useful for our agents to have.
+
+01:32.760 --> 01:36.640
+And I want to avoid plugins that themselves spawn sub agents,
+
+01:36.640 --> 01:37.959
+or we're going to lose control.
+
+01:37.959 --> 01:39.200
+So I'm going for the simple ones.
+
+01:39.200 --> 01:40.840
+I'm not going for the really sophisticated ones,
+
+01:40.840 --> 01:42.519
+like featured there or something like that.
+
+01:42.519 --> 01:45.040
+So we go back to plug-in, let's take a look at them.
+
+01:45.040 --> 01:50.159
+So frontend design is one that just adds some information
+
+01:50.159 --> 01:53.120
+so that it makes production grade frontends that don't have
+
+01:53.120 --> 01:56.400
+that characteristic LLM look and feel.
+
+01:56.400 --> 02:02.000
+And so I think this is a good one for us to have. Let's put that in in the project scope.
+
+02:02.000 --> 02:07.439
+So I will do that. We will press enter and we've installed that. And let's go back to plug in again,
+
+02:08.000 --> 02:13.039
+see what else we could have here. So context seven, we know that that's great. That adds all
+
+02:13.039 --> 02:16.819
+information about current APIs. Let's add that in as well.
+
+02:16.819 --> 02:18.300
+So we will do that.
+
+02:18.300 --> 02:21.340
+We'll also install it in the project scope.
+
+02:21.340 --> 02:24.159
+And then just one more plugin.
+
+02:24.159 --> 02:25.060
+Let's add.
+
+02:25.060 --> 02:28.139
+So the code simplifier seems like a great thing to have.
+
+02:28.139 --> 02:30.560
+But again, I feel like that's gonna be installing
+
+02:30.560 --> 02:33.699
+a sub agent that's gonna be too confusing.
+
+02:34.580 --> 02:45.000
+And I just think I might want to include this playwright one, which is going to allow the agent to be able to spawn a browser and run playwright tests, which is pretty cool.
+
+02:45.000 --> 02:47.000
+So I do want to install that one.
+
+02:47.000 --> 02:52.000
+Let's do that for collaborators on this project project scope.
+
+02:52.000 --> 02:55.000
+Okay, so we do now have those plugins.
+
+02:55.000 --> 03:00.800
+You remember we need to restart Cloud Code for those to take effect. But first I'm going to come out of here
+
+03:00.800 --> 03:05.080
+and I'm going to go to the Cloud.md
+
+03:05.080 --> 03:07.919
+and just get a sense of where we are with that.
+
+03:07.919 --> 03:10.960
+Make sure that we're happy that this is giving us
+
+03:10.960 --> 03:12.439
+the full layer of the land.
+
+03:12.439 --> 03:15.240
+So it's saying that the document is planned.md
+
+03:15.240 --> 03:16.400
+and included here.
+
+03:16.400 --> 03:19.960
+Let's just add to this now to give it a bit more context.
+
+03:19.960 --> 03:22.319
+Okay, so I'm coming into claw.md.
+
+03:22.319 --> 03:25.680
+I'm going to take that sentence there and replace it with this.
+
+03:25.680 --> 03:28.639
+The key document is plan.md, including full below.
+
+03:28.639 --> 03:30.840
+The market data components already completed.
+
+03:30.840 --> 03:35.719
+It's summarized in this file with more details in that folder.
+
+03:35.719 --> 03:38.039
+Consult these docs only when required.
+
+03:38.039 --> 03:40.800
+The remainder of the platform is still to be developed.
+
+03:40.800 --> 03:45.680
+So that shows you the key distinction between using the at tag that will insert the
+
+03:45.680 --> 03:53.199
+entire contents of plan.md in context versus giving a link like this, which is giving it
+
+03:53.199 --> 03:59.520
+like a path. We should probably put this inside single ticks so that it knows it's
+
+03:59.520 --> 04:08.120
+like a path like that. Like that. And now it's going to look into these only if it needs to. It's
+
+04:08.120 --> 04:12.719
+a bit like the way that we build skills files. It means that it's going to only progressively
+
+04:12.719 --> 04:19.360
+add these to the context when required, naturally. Okay, I would say that's enough for the updated
+
+04:19.360 --> 04:24.879
+claw.md. Okay, and now just some quick git housekeeping. I'm bringing back up my terminal.
+
+04:24.879 --> 04:29.040
+Let's come out of Claude code, just clear the screen. I'm just going to do
+
+04:29.040 --> 04:35.800
+a quick git status to see where I am. Great. I'm going to check everything in. I'm going
+
+04:35.800 --> 04:53.759
+to do a git commit, git commit and call it ready for teens and git push. Okay, that all those changes are now committed and done. And we are, we
+
+04:53.759 --> 04:59.360
+have a good baseline point that we can use for going crazy. Okay, we're now going to
+
+04:59.360 --> 05:03.959
+create a separate branch in git so that we can work off to one side in case we need
+
+05:03.959 --> 05:15.899
+to come back here easily. So I'm going to do git checkout minus B agent teams, a new branch called agent teams, switch to a new branch agent teams.
+
+05:15.899 --> 05:19.379
+If you need to know more about Git, look at the resources for that.
+
+05:19.379 --> 05:24.139
+All right, and now we are going to change our settings.json.
+
+05:24.139 --> 05:26.139
+Are you ready for this?
+
+05:26.139 --> 05:30.720
+I'm adding into the settings.json some more settings.
+
+05:30.720 --> 05:33.060
+Let's have a look.
+
+05:33.060 --> 05:36.000
+Missing a comma there that I will, that was wrong in the slide as well.
+
+05:36.000 --> 05:41.000
+You may have noticed that missing a comma, obviously I will add that in.
+
+05:41.000 --> 05:45.000
+So yeah, this is now saying we want an environment variable,
+
+05:45.000 --> 05:48.000
+Cloud Code Experimental Agent Teams to be set to one.
+
+05:48.000 --> 05:51.000
+The team mode is going to be in process.
+
+05:51.000 --> 05:53.000
+Save that.
+
+05:53.000 --> 05:54.000
+Okay.
+
+05:54.000 --> 06:01.600
+So we are now ready to go. It's when we start Claude, it's going to start in this mode.
+
+06:02.560 --> 06:08.959
+Hold on to your hat, let's do this. Okay, so in I go into Claude, here is Claude, everybody,
+
+06:08.959 --> 06:16.480
+Opus 4.6, we hopefully have our settings done, we are ready to go, we're ready to do the command
+
+06:16.480 --> 06:22.800
+that's going to kick off our team. Well, actually, let's just quickly do a slash usage to see where we stand. We can come back to this.
+
+06:22.800 --> 06:31.120
+We've currently got 0% usage just as of today's quota, and I'm at 8% of the week's quota.
+
+06:31.759 --> 06:38.240
+I'm going to write that down. That's for all models. So it's 0%, 8% and 2%.
+
+06:41.439 --> 06:47.120
+percent, eight percent and two percent. Okay, that's interesting. We'll see where this ends up being. And let's also do slash context to see how we're looking at the context. You'll see
+
+06:47.120 --> 06:51.519
+gosh, there's lots of playwright related tools. I'm wondering whether that was a mistake to add
+
+06:51.519 --> 06:56.560
+that in, but it's only a couple of these. And then a lot of memory used up from from our plan,
+
+06:56.560 --> 07:05.920
+which is good. Excellent. I think we're ready to go. Let me paste in the command. I want to create an agent team to build the entire project.
+
+07:05.920 --> 07:08.160
+Team members, I'm specifying you don't need to.
+
+07:08.160 --> 07:09.439
+You can let it choose its own,
+
+07:09.439 --> 07:11.639
+or you can choose them by stating them.
+
+07:11.639 --> 07:13.360
+A front end engineer to work in the front end,
+
+07:13.360 --> 07:15.759
+a backend engineer, a database engineer
+
+07:15.759 --> 07:19.240
+for all database code, an LLM engineer for the calls,
+
+07:19.240 --> 07:22.360
+the LLM's hopefully using this some rebrass skill.
+
+07:22.360 --> 07:26.480
+And all engineers should work on their unit tests, but there should
+
+07:26.480 --> 07:33.600
+also be an integration test there and also a DevOps engineer for the Docker container.
+
+07:33.600 --> 07:40.800
+Now I was tempted to also add in a code reviewer agent to check that code is simple and clear
+
+07:40.800 --> 07:47.600
+and give feedback back to the agents. But on reflection I feel like that might be a step too far in terms of just too
+
+07:47.600 --> 07:52.160
+much noise, too much chatiness between the agents. We're introducing something which is
+
+07:52.160 --> 07:57.040
+which is going to require conversation with every single agent and more backwards and forwards,
+
+07:57.040 --> 08:02.160
+and I feel like that's going to just add more noise than we would like. So that's probably
+
+08:02.160 --> 08:06.800
+probably going too far that way. Anyway, that's that's why I made this decision. We're going to
+
+08:06.800 --> 08:11.519
+give it a try and we know we might have to do this several times over to get it right.
+
+08:11.519 --> 08:15.000
+Before I kick it off, I'm going to shift tab to go through the modes,
+
+08:15.000 --> 08:17.160
+except edit on plan mode on.
+
+08:17.160 --> 08:19.079
+We want to accept edits on.
+
+08:19.079 --> 08:22.920
+And then I'm going to kick this off.
+
+08:22.920 --> 08:23.800
+Here we go.
+
+08:23.800 --> 08:27.000
+Off it goes, accept edits on.
+
+08:27.000 --> 08:31.180
+I think I remember that shift tab should also well let's watch what it does
+
+08:31.740 --> 08:37.580
+It's starting by exploring the current project state then it's going to create the team and then the tasks
+
+08:39.779 --> 08:42.500
+Exciting I am a bit anxious. I have to a bit
+
+08:43.659 --> 08:47.779
+Now I thought that shift tab was also supposed to put on delegate mode. Let's see no
+
+08:47.779 --> 08:50.419
+It's just I'm just gonna leave it on on this except edits on
+
+08:55.600 --> 08:59.840
+just I'm just gonna leave it on on this except edits on. The anthropic docs might also be not always completely up to date so I don't know whether to take it with a pinch of salt.
+
+09:00.960 --> 09:05.039
+Okay so it's still exploring the states. We're waiting to see once it's done there,
+
+09:05.039 --> 09:09.120
+if it's going to then launch all the teams in which case I've got my fingers ready to do
+
+09:09.120 --> 09:16.000
+shift up and down so that I can flip between the different agents. It's keeping on going.
+
+09:16.000 --> 09:19.000
+I think I'll probably put you on pause
+
+09:19.000 --> 09:22.000
+and come back in a second when it's starting to spawn the team.
+
+09:22.000 --> 09:24.000
+Okay, it's all happening.
+
+09:24.000 --> 09:27.000
+It took about five minutes to think things through,
+
+09:27.000 --> 09:29.000
+and now it is spawning team members,
+
+09:29.000 --> 09:32.000
+and you can see that there is a DB Engineer
+
+09:32.000 --> 09:34.000
+and a front-end Engineer happening.
+
+09:34.000 --> 09:38.679
+The DB Engineer is already building a SQL light database
+
+09:38.679 --> 09:40.000
+layer, there's stuff going on.
+
+09:40.000 --> 09:43.919
+I need to make this bigger to see what's going on here.
+
+09:45.159 --> 09:46.080
+Lots happening.
+
+09:46.080 --> 09:46.919
+Team is launched.
+
+09:46.919 --> 09:48.840
+Here's the current setup.
+
+09:48.840 --> 09:50.200
+Database engineer, front end engineer,
+
+09:50.200 --> 09:52.320
+and then back end LLM DevOps and integration testing
+
+09:52.320 --> 09:54.759
+are all waiting on other tasks.
+
+09:54.759 --> 09:56.600
+I guess it's, oh yes, look at that blocked bias.
+
+09:56.600 --> 10:02.879
+It's got like a little dependency project plan going on. Now let's just try pressing shift and up and down
+
+10:02.879 --> 10:06.559
+and see what happens. I probably have to be clicked in here, shift up. Now there we go. This is
+
+10:06.559 --> 10:12.240
+how I can, you can see that it's flipping between team lead, DB engineer, front end engineer,
+
+10:12.240 --> 10:21.120
+and hide. This is how you can flip between them and look at each one and what it's doing. And they are all on the go.
+
+10:21.120 --> 10:22.759
+Everything is happening.
+
+10:22.759 --> 10:24.799
+Only only three so far, the lead,
+
+10:24.799 --> 10:25.799
+the DB and the front end,
+
+10:25.799 --> 10:28.840
+but I imagine many more to come very shortly.
+

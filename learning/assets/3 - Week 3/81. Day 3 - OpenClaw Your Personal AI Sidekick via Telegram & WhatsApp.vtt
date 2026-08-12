@@ -1,0 +1,515 @@
+WEBVTT
+
+00:00.000 --> 00:04.480
+And now, the third of our sizzles is open claw.
+
+00:04.480 --> 00:08.000
+Open claw is massively hyped at the moment and blowing up.
+
+00:08.000 --> 00:11.599
+And I personally rather suspect that it's going to die down a bit.
+
+00:11.599 --> 00:14.000
+I could be completely wrong. I might be like someone that's saying,
+
+00:14.000 --> 00:16.719
+"This chat GPT thing, it's not going to last."
+
+00:16.719 --> 00:22.399
+But yeah, I might as well just throw it into the mix of some sizzle.
+
+00:22.399 --> 00:24.480
+It's not, of course, related to coding agents.
+
+00:24.480 --> 00:28.079
+It's a big hyped thing, but just to give you a sense of what it is.
+
+00:28.079 --> 00:30.199
+So you've got the context.
+
+00:30.199 --> 00:34.960
+It is still sort of its first of all, it was itself vibe coded.
+
+00:34.960 --> 00:41.280
+And it's very much on the same theme of appreciating the power of these coding agents
+
+00:41.280 --> 00:46.679
+like Cloud Code and imagining rather like co-work what happens if we apply this to
+
+00:46.679 --> 00:49.079
+every day beyond development?
+
+00:49.079 --> 00:50.859
+An open-glower is taking it even further.
+
+00:50.859 --> 00:53.799
+It's described as your personal AI.
+
+00:53.799 --> 00:58.079
+It's about really trying to be your sidekick, something that could be
+
+00:58.079 --> 00:59.719
+there for you.
+
+00:59.719 --> 01:03.000
+And it's also considered something that's a bit on the dangerous side,
+
+01:03.000 --> 01:05.319
+because you run it on your computer.
+
+01:05.319 --> 01:07.879
+You typically give it access to everything.
+
+01:07.879 --> 01:09.079
+You connect it to everything.
+
+01:09.079 --> 01:10.560
+That's why it has its power,
+
+01:10.560 --> 01:15.760
+but with great power comes responsibility and comes risk. And that's why some security
+
+01:15.760 --> 01:20.239
+professionals are very concerned about Open Claw. And one way that you could run it, of course,
+
+01:20.239 --> 01:25.680
+in a sandbox as we discovered a couple of days ago. Anyway, Open Claw isn't completely
+
+01:25.680 --> 01:33.200
+relevant for coding, except for seeing the potential of this stuff, so I will just quickly give you a perspective on it
+
+01:33.200 --> 01:34.799
+so that we get our sizzle
+
+01:34.799 --> 01:36.439
+and then we will move swiftly on.
+
+01:36.439 --> 01:38.739
+So here is OpenClaw.
+
+01:38.739 --> 01:41.480
+And you go to openclaw.ai to see this page.
+
+01:41.480 --> 01:43.760
+OpenClaw, of course, was originally called
+
+01:43.760 --> 01:48.760
+Claude Bot, spelt C-L-A-W-D, Claude Bot.
+
+01:49.239 --> 01:53.840
+And apparently they had a letter from Anthropic,
+
+01:53.840 --> 01:57.040
+and so they changed their name to "Maltbot",
+
+01:57.040 --> 01:59.159
+which was still a sort of riff of this,
+
+01:59.159 --> 02:03.879
+the lobster idea, but that they decided didn't sound,
+
+02:03.879 --> 02:07.439
+it was hard to say, and so they changed it third time
+
+02:07.439 --> 02:09.639
+to "Openclaw", which is what it's called now,
+
+02:09.639 --> 02:11.699
+unless it's changed to something again, but I doubt it.
+
+02:11.699 --> 02:13.580
+So, "Openclaw" is what we've got,
+
+02:13.580 --> 02:16.000
+and you can install it with our one liner
+
+02:16.139 --> 02:20.319
+That's the one line from Mac OS if you're on a Windows PC
+
+02:20.319 --> 02:24.460
+Then this will be your one liner if you're in a power shell or this in a CMD
+
+02:24.460 --> 02:25.860
+But you're probably in a power shell
+
+02:25.860 --> 02:31.199
+But I'm going to go back to being on a Mac and I will run this now in a terminal
+
+02:31.199 --> 02:39.139
+And one of the things I say is that if you don't know how to use a terminal then perhaps you're not ready to use open claw 'cause it's designed for people that know enough
+
+02:39.139 --> 02:43.539
+about what's going on to feel like you know the risks
+
+02:43.539 --> 02:44.939
+you're signing up for.
+
+02:44.939 --> 02:46.860
+And of course, the main thing, as it says here,
+
+02:46.860 --> 02:49.860
+that it runs on your computer,
+
+02:49.860 --> 02:53.219
+that the way that you interact with it is through a chat app.
+
+02:53.219 --> 02:56.419
+It's like got a, this native chat first experience.
+
+02:56.419 --> 02:58.419
+You can be in WhatsApp or in Telegram,
+
+02:58.419 --> 03:00.840
+talking to your sidekick to your cloudbot
+
+03:00.919 --> 03:03.900
+It's got it's got memory remembers what's going on it can drive a browser
+
+03:03.900 --> 03:07.060
+It can use anything on your computer and it's got a whole
+
+03:07.379 --> 03:13.620
+raft of plugins that you could click into it and there in lies many of its powers
+
+03:13.699 --> 03:18.360
+So here like I brought up a terminal. This is just a normal Mac terminal
+
+03:18.360 --> 03:24.400
+I'm going to paste in that command to install it on my Mac. Let's give this a try. It's doing
+
+03:24.719 --> 03:26.719
+doing a bunch of stuff and
+
+03:28.800 --> 03:32.879
+Opened-core installer. I'm the reason your shell history looks like a hacker movie montage
+
+03:33.879 --> 03:40.080
+Okay, and I will let it do its thing. I will see you in a sec and so I love this it says
+
+03:40.719 --> 03:46.860
+Opened-core installed successfully the lobster. "Your terminal will never be the same."
+
+03:46.860 --> 03:48.840
+Let's make this nice and big for you.
+
+03:48.840 --> 03:52.939
+And then we get this Open Claw security.
+
+03:52.939 --> 03:53.860
+Please read.
+
+03:53.860 --> 03:55.919
+It's a hobby project still in beta.
+
+03:55.919 --> 03:58.039
+Expect sharp edges.
+
+03:58.039 --> 04:00.039
+It can read files, run actions,
+
+04:00.039 --> 04:04.060
+a bad prompt can trick it to doing unsafe things.
+
+04:04.060 --> 04:09.520
+Run an Open Claw security audit regularly. You must read the security stuff.
+
+04:09.520 --> 04:15.280
+I understand this is powerful and inherently risky. Continue defaulting to know.
+
+04:15.280 --> 04:20.959
+We'll go to yes, onboarding mode, quick start. And we will do the quick start.
+
+04:21.600 --> 04:28.720
+Okay. And now we get to the models and we start with choosing a model auth provider and it's got a bunch of them.
+
+04:28.720 --> 04:32.720
+And I think we've got enough of using anthropic.
+
+04:32.720 --> 04:36.480
+Let's switch to open AI for a bit and use OAuth.
+
+04:36.480 --> 04:37.600
+So I'm going to select this.
+
+04:38.399 --> 04:43.519
+We can choose whether we want to do a chat GPT OAuth or whether we want to use an API key.
+
+04:43.519 --> 04:48.399
+This is like an in-browser login and that is the one that we will try.
+
+04:48.399 --> 04:53.600
+So I will do this
+
+04:54.319 --> 04:55.959
+Continue with Google,
+
+04:57.000 --> 04:59.939
+sign into codex with chat GPT, continue.
+
+05:01.040 --> 05:05.300
+That's successful, return to your terminal to continue.
+
+05:05.300 --> 05:07.560
+And now it's saying default model, keep current,
+
+05:07.560 --> 05:09.920
+but we'll use GPT 5.3 codex.
+
+05:09.920 --> 05:11.439
+That sounds good to me.
+
+05:11.439 --> 05:14.560
+Select our channel, quick start.
+
+05:14.560 --> 05:17.740
+So I'd say let's go with the telegram.
+
+05:17.740 --> 05:19.160
+Let's do telegram.
+
+05:19.160 --> 05:21.639
+Telegram bot token, open telegram.
+
+05:21.639 --> 05:23.480
+And now it's telling me to do this,
+
+05:23.480 --> 05:24.759
+and I have telegram.
+
+05:24.759 --> 05:26.399
+So I'm going to open telegram.
+
+05:26.399 --> 05:27.639
+I'm going to chat.
+
+05:27.639 --> 05:30.639
+I'm going to select that I want to chat with @botfather.
+
+05:30.639 --> 05:32.920
+I'm going to run slash new bot.
+
+05:32.920 --> 05:43.000
+It's going to make a token, and I'm going to copy it in here. And then I'm going to run /new bot. It's going to make a token and I'm going to copy it in here and then I'm going to keep going and I'm going to do that offline so that I keep that secret and I'll see you back here in a sec.
+
+05:43.000 --> 05:58.560
+Okay, so I did that. I set up my telegram bot following the skills now. My preferred node manager is NPM.
+
+05:58.560 --> 06:01.279
+And I can now install skills,
+
+06:01.279 --> 06:04.759
+different things to do stuff that might be useful for me.
+
+06:04.759 --> 06:07.399
+And you can see all the different things it can do
+
+06:07.399 --> 06:10.920
+by scrolling through here and get a good sense.
+
+06:10.920 --> 06:13.680
+It could turn on and off my light bulbs.
+
+06:13.680 --> 06:15.860
+It could do all these different things.
+
+06:15.860 --> 06:19.759
+And let me see what we want to have it be able to do today.
+
+06:19.759 --> 06:24.639
+Okay, so I've only chosen one simple skill, the open AI whisper, which seems like a nice
+
+06:24.639 --> 06:29.439
+easy one. It's got no API key. It just means that there'll be access to a speech to text.
+
+06:30.079 --> 06:34.000
+So we'll let that install and then we'll see what else we can set up.
+
+06:34.000 --> 06:38.319
+Okay, so I went through a setup process. I had to answer a few questions. It wanted to know
+
+06:38.319 --> 06:42.240
+what it would be called and I called it Sidekick, it kind of warring. It wanted to know what it would be called. And I called it Sidekick, it kind of warring.
+
+06:42.240 --> 06:45.279
+It wanted to know a vibe and it wanted an emoji.
+
+06:45.279 --> 06:48.660
+I'm definitely not cool enough to be using this product.
+
+06:48.660 --> 06:52.439
+So I tried my best and then hooked it up to a few things.
+
+06:52.439 --> 06:54.680
+And now it's connected to Telegram.
+
+06:54.680 --> 06:56.160
+So I can chat with it over Telegram
+
+06:56.160 --> 06:57.920
+and I could be doing this on my phone.
+
+06:57.920 --> 07:00.240
+I could be doing this as I am on my computer
+
+07:00.240 --> 07:03.399
+and my Telegram app, but this is gonna allow me now
+
+07:03.399 --> 07:05.519
+to have a conversation with my sidekick
+
+07:05.519 --> 07:06.800
+running on my computer.
+
+07:06.800 --> 07:08.160
+Okay, let's give this a try.
+
+07:08.160 --> 07:11.980
+I'm pressing start, let's have a conversation.
+
+07:11.980 --> 07:14.480
+I'm here Edward, sidekick's ready.
+
+07:14.480 --> 07:19.480
+Okay, please look up Tesla stock price.
+
+07:36.040 --> 07:42.480
+stock price. If it went up today, please play me something upbeat. Otherwise something depressing. Okay, let's give it that instruction. I'm
+
+07:42.480 --> 07:48.819
+wanting it to go and do a web search. I want it to understand what I mean figure this out and then play me music
+
+07:48.819 --> 07:50.819
+How's it gonna do that through telegram or something?
+
+07:52.040 --> 07:53.139
+Okay
+
+07:53.139 --> 07:56.240
+We have music we have something playing
+
+07:56.759 --> 08:02.439
+It went up today and so it's playing upside down by Diana Ross
+
+08:02.439 --> 08:10.680
+And how's it playing it it's playing it because it's controlling Spotify on my computer. It's activated Spotify and it's playing Diana Ross
+
+08:12.519 --> 08:15.240
+And here you can see the telegram
+
+08:15.959 --> 08:22.120
+Chat I was having alongside open claw that was running on my computer in this terminal UI
+
+08:22.180 --> 08:27.600
+Looking a lot like clawed code in a way, and it's got a message. It's replying to it
+
+08:27.759 --> 08:31.060
+It's decided it's looked up the stock price, it went up
+
+08:31.060 --> 08:37.240
+today, upbeat is the decision, it made a choice about what track to play, I left that up to
+
+08:37.240 --> 08:42.899
+its autonomy, it's discretion, it put on Diana Ross, it controlled Spotify and that's
+
+08:42.899 --> 08:44.559
+what you heard playing.
+
+08:44.559 --> 08:48.799
+So you know that, that gives you a sense of what this is all about, people are excited
+
+08:48.799 --> 08:54.179
+because you can drive things from just from your chat interface, it comes to you.
+
+08:54.179 --> 08:57.120
+It can wake up and alert you about things.
+
+08:57.120 --> 09:00.139
+It can be integrated across all of the capabilities
+
+09:00.139 --> 09:00.980
+on your computer.
+
+09:00.980 --> 09:02.259
+It can drive windows.
+
+09:02.259 --> 09:04.019
+It can look things up on the web.
+
+09:04.019 --> 09:07.519
+So it can be incredibly autonomous,
+
+09:07.519 --> 09:10.440
+and it really brings the power of Cloud Code
+
+09:10.440 --> 09:13.860
+and the CLI tools again that we're used to as engineers,
+
+09:13.860 --> 09:15.379
+and it brings them to people
+
+09:15.379 --> 09:18.299
+personally as their personal sidekick.
+
+09:18.299 --> 09:21.620
+Okay, so that brings today to a wrap today.
+
+09:21.620 --> 09:23.779
+Really was a light day.
+
+09:23.779 --> 09:28.899
+We did cover the big project concerns of just the right way to approach a big repo.
+
+09:28.899 --> 09:33.580
+And we will touch on that again tomorrow when things go really crazy.
+
+09:33.580 --> 09:36.480
+And then after doing that, we just had some light relief
+
+09:36.480 --> 09:38.320
+with a few things for you to look at,
+
+09:38.320 --> 09:42.399
+like the good old Claude Agent SDK,
+
+09:42.399 --> 09:47.399
+which is an important way to drive Claude Co-programmatically.
+
+09:47.399 --> 09:49.080
+And then we looked at co-work,
+
+09:49.080 --> 09:51.919
+taking what these exciting tooling
+
+09:51.919 --> 09:54.759
+and bringing it to the professional world.
+
+09:54.759 --> 09:57.200
+And then OpenClaw, which is bringing the same kind
+
+09:57.200 --> 09:59.299
+of capability to a personal
+
+09:59.299 --> 10:04.539
+world to have everyone have their own personal sidekick that you can control from telegram
+
+10:04.539 --> 10:10.200
+from WhatsApp and have it be able to control your computer, your lights, your music, whatever
+
+10:10.200 --> 10:15.080
+you want. And that, that is open claw. I know I just gave you a teaser of it because that's
+
+10:15.080 --> 10:20.000
+not really what we're covering on this course, but I did want you to see it and have a feel for it.
+
+10:20.000 --> 10:26.799
+All right, tomorrow is a massive day. Tomorrow is when we go into swarms. We look at teams.
+
+10:26.799 --> 10:33.360
+We're going to look at a few really interesting way to orchestrate multiple agents collaborating
+
+10:33.360 --> 10:45.840
+together in unison to achieve a bigger task. And that will lead us all the way to the capstone. And with that, amazingly, 87% is where we're at. Massive congrats.
+
+10:45.840 --> 10:49.600
+Get ready for two big days ahead. See you tomorrow.
+

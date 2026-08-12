@@ -1,0 +1,572 @@
+WEBVTT
+
+00:00.000 --> 00:06.639
+Okay now it's time to write a claw dot md and you know there's no there's no secret here that
+
+00:06.639 --> 00:12.800
+that you need to put work into your claw dot md to get it right for your project that of course
+
+00:12.800 --> 00:17.359
+it's tempting just to do like a rough loop or something just give it a one sentence let it go
+
+00:17.359 --> 00:23.519
+but if we're trying to build a strong project here this is our opportunity to influence like
+
+00:23.519 --> 00:28.120
+the boss this is where we put our human element behind it
+
+00:28.120 --> 00:30.120
+and make something that's really differentiated.
+
+00:30.120 --> 00:32.240
+So look, I've just written this claw.md,
+
+00:32.240 --> 00:35.439
+let's take a look at it, the pre-legal project.
+
+00:35.439 --> 00:37.679
+This is a SAS product to allow users
+
+00:37.679 --> 00:40.039
+to draw legal agreements based on templates
+
+00:40.039 --> 00:41.479
+in the templates directory.
+
+00:41.479 --> 00:43.960
+The user can carry a chat in order to establish
+
+00:43.960 --> 00:46.759
+what document they want and how to fill in the fields.
+
+00:46.759 --> 00:49.119
+The available documents are covered in catalogue.json
+
+00:49.119 --> 00:56.000
+file in the project route included here. And then I've done this thing here at and then something.
+
+00:56.000 --> 01:02.240
+If you do that, I think I mentioned this before a while back, if you do that, it inserts that file,
+
+01:02.240 --> 01:08.239
+and this can be like a long path to something, or in this case, catalogue.json is just in the
+
+01:08.239 --> 01:11.599
+project route, then that just gets shoved in there in the file.
+
+01:11.599 --> 01:15.319
+I remember I told you about this one, I said you could have an agents.md that this could
+
+01:15.319 --> 01:16.620
+just refer to.
+
+01:16.620 --> 01:18.280
+So that's why I'm doing that here.
+
+01:18.280 --> 01:20.239
+It's a great trick to know about.
+
+01:20.239 --> 01:22.140
+And then I'm just giving it the context.
+
+01:22.140 --> 01:26.640
+The initial implementation is a front-end-only prototype, just so that it understands what's
+
+01:26.640 --> 01:27.640
+going on.
+
+01:27.640 --> 01:28.640
+Okay, so that's the overview.
+
+01:28.640 --> 01:32.959
+And you'll notice I haven't given it all the business requirements 'cause we're gonna use JIRA for that,
+
+01:32.959 --> 01:35.159
+but I've given it the overall context
+
+01:35.159 --> 01:36.760
+so that it's clear.
+
+01:36.760 --> 01:41.239
+It's easy to be coherent when it knows what the game is.
+
+01:41.239 --> 01:42.719
+And then I've got a section that's called
+
+01:42.719 --> 01:45.719
+Development Process, which is just saying,
+
+01:45.719 --> 01:47.519
+use your Atlassian tools to read
+
+01:47.519 --> 01:49.560
+the feature instructions from JIRA,
+
+01:49.560 --> 01:52.799
+develop the feature to not skip any steps,
+
+01:52.799 --> 01:55.780
+you just factor in what we've already learned. Thoroughly test the feature to not skip any steps. You just factor in what we've already learned. Thoroughly
+
+01:55.780 --> 02:01.780
+test the feature with unit test integration tests, fix any issues, submit a PR using
+
+02:01.780 --> 02:08.780
+your GitHub tools. And now, for AI design, I've put in these two sections, AI design,
+
+02:08.780 --> 02:16.039
+technical design, when writing code to make calls to alarms, use your cereibras skill.
+
+02:16.039 --> 02:17.479
+What's that you're wondering?
+
+02:17.479 --> 02:20.099
+To use light NLM via open router
+
+02:20.099 --> 02:23.280
+to the GPT-OSS 120B model
+
+02:23.280 --> 02:26.360
+with Suribras as the inference provider.
+
+02:26.360 --> 02:27.780
+You should use structured outputs
+
+02:27.780 --> 02:29.340
+so you can interpret the results
+
+02:29.340 --> 02:32.879
+and populate fields in the legal document.
+
+02:32.879 --> 02:35.520
+Well, so you're thinking I'm gonna add in a skill
+
+02:35.520 --> 02:38.039
+called Suribras that's gonna make all of this clear.
+
+02:38.039 --> 02:39.740
+Well, I hope I've gone out.
+
+02:39.740 --> 02:41.800
+Maybe we're gonna do that together in a second.
+
+02:41.800 --> 02:44.120
+Technical design, the entire project should be packaged
+
+02:44.120 --> 02:45.599
+into a Docker container.
+
+02:45.599 --> 02:47.599
+The backend should be in backend/
+
+02:47.599 --> 02:49.960
+and be a UV project using fast API.
+
+02:49.960 --> 02:53.759
+The front end should be fast, front end/ consider.
+
+02:53.759 --> 02:56.319
+This is similar to what we said last time.
+
+02:56.319 --> 02:58.240
+There should be scripts like this.
+
+02:58.240 --> 02:59.479
+Now I noticed you can see there
+
+02:59.479 --> 03:01.319
+that one of the funny things about Markdown,
+
+03:01.319 --> 03:02.919
+I put this as separate lines,
+
+03:02.919 --> 03:04.520
+but it doesn't put them as separate lines
+
+03:04.520 --> 03:05.599
+when you look at a preview.
+
+03:05.599 --> 03:07.280
+To do that you have to put two spaces
+
+03:07.280 --> 03:09.000
+at the end of each line like this.
+
+03:09.000 --> 03:12.000
+Oops, and now it's turned into a full stop by default.
+
+03:13.400 --> 03:16.439
+And then this, now if we now look at the preview,
+
+03:16.439 --> 03:17.719
+you're wondering what I just did,
+
+03:17.719 --> 03:20.319
+save that right click, open preview.
+
+03:20.319 --> 03:23.280
+Now you're gonna see that this technical design is laid out much
+
+03:23.280 --> 03:28.719
+more nicely. That's what I wanted and then these are the start and stop scripts and that's where
+
+03:28.719 --> 03:34.879
+the backend will then be running and I shoved my color scheme in at the very end with my personal
+
+03:34.879 --> 03:41.759
+favorite brand colors, the ones from the slide deck. So that is where we are. That's laid out a
+
+03:41.759 --> 03:45.039
+nice claw dot indeed. Do we have anything else to do before we
+
+03:45.039 --> 03:49.439
+start well yes we have to make this skill okay so we're gonna make a new
+
+03:49.439 --> 03:53.360
+skill it's gonna be a skill that anyone on our project our other team members
+
+03:53.360 --> 03:57.000
+will be able to use too because it's going to be an important skill for this
+
+03:57.000 --> 04:01.000
+SaaS product and it's going to be a skill that's about calling an LLM but I
+
+04:01.000 --> 04:04.759
+want to call an LLM in a particular way for this product what I really care
+
+04:04.759 --> 04:11.439
+about is that I want the responses to be incredibly fast. I want the LLM to respond really quickly.
+
+04:11.439 --> 04:16.480
+And to do that, I'm going to use an open source model, GPT-OSS120, and I'm
+
+04:16.480 --> 04:20.600
+going to use it over open router as we've done before, which is great. But I'm going
+
+04:20.600 --> 04:24.800
+to, with open router, I'm going to specify, I want it to use one of the
+
+04:24.800 --> 04:28.920
+providers. In particular, I want to use a provider called SoreeBrass,
+
+04:28.920 --> 04:31.199
+which is super fast.
+
+04:31.199 --> 04:33.639
+You pay a little bit more, it's still quite cheap,
+
+04:33.639 --> 04:37.360
+but it's a little bit more than normal
+
+04:37.360 --> 04:40.120
+for GPT ISS 120, but as a result,
+
+04:40.120 --> 04:42.279
+you get stuff really, really fast.
+
+04:42.279 --> 04:44.480
+Now, you may want to stick with three models,
+
+04:44.480 --> 04:46.639
+you may not want to do this, in which case,
+
+04:46.639 --> 04:48.800
+just skip this part or change the skill
+
+04:48.800 --> 04:50.720
+to something different, but that's what I'm going
+
+04:50.720 --> 04:56.639
+to do to demonstrate creating our own skill. And also, while I'm at it, show you siree brass.
+
+04:56.639 --> 05:01.439
+So I'm going into the dot cloud directory, I'm making a new folder and I'm calling it skills.
+
+05:02.000 --> 05:07.279
+And then I'm going to make a new folder in here. And this folder is what you call the name of your
+
+05:07.279 --> 05:12.600
+skill. I'm going to call it siree brass. There it is. That is my new skill.
+
+05:12.600 --> 05:14.920
+And now within that, I'm making a new file,
+
+05:14.920 --> 05:17.959
+and that new file is going to be the one that's going to have
+
+05:17.959 --> 05:22.759
+the agent skill itself, which is skill.md.
+
+05:22.759 --> 05:24.079
+This is where we begin.
+
+05:24.079 --> 05:27.160
+Okay, and at the top of the file, skill.md,
+
+05:27.160 --> 05:30.199
+you have to put something in with this exact format.
+
+05:30.199 --> 05:32.399
+And look, it's a bit like API keys.
+
+05:32.399 --> 05:33.879
+You've got to get this format right.
+
+05:33.879 --> 05:36.000
+If you get it wrong, it won't work.
+
+05:36.000 --> 05:38.360
+And you know, I'm here to help you.
+
+05:38.360 --> 05:39.759
+I'll help you if you get stuck,
+
+05:39.759 --> 05:43.540
+but it's very hard for me to debug that remotely.
+
+05:43.540 --> 05:46.839
+It's the best thing to do is to just get it right.
+
+05:46.839 --> 05:49.160
+So using this format,
+
+05:49.160 --> 05:51.779
+and of course I have this in the course resources,
+
+05:51.779 --> 05:53.680
+but you can, we're now going to give it a name.
+
+05:53.680 --> 05:55.519
+We're going to call it Ceribras.
+
+05:56.959 --> 06:01.560
+It's going to be the Cerib. We're going to call it "Serebrass." It's going to be the "Serebrass inference" we'll call it.
+
+06:01.560 --> 06:19.000
+Use this to write code to call an LLM using light LLM open Rousa with the cerebras inference provider.
+
+06:22.800 --> 06:23.639
+There we go.
+
+06:23.639 --> 06:24.480
+That's very clear.
+
+06:24.480 --> 06:26.800
+That's exactly what we're going to do with this skill.
+
+06:26.800 --> 06:29.120
+I'll save it so that dot disappears.
+
+06:29.120 --> 06:31.399
+That is the metadata for the skill.
+
+06:31.399 --> 06:34.439
+Okay, and now to paste in the skill itself,
+
+06:34.439 --> 06:35.779
+and I've just written this,
+
+06:35.779 --> 06:37.579
+and obviously take care of these things,
+
+06:37.579 --> 06:40.519
+but I'm gonna put this in the course resources of course.
+
+06:40.519 --> 06:42.360
+And let me just quickly show it to you.
+
+06:42.360 --> 06:43.839
+I'll open it as a preview.
+
+06:43.839 --> 06:46.240
+So you can see what this is.
+
+06:46.240 --> 06:48.439
+Calling an LLM via cerebras.
+
+06:48.439 --> 06:53.839
+These instructions allow you to write code to call it LLM with cerebras specified as the
+
+06:53.839 --> 06:56.079
+inference provider.
+
+06:56.079 --> 06:58.839
+And then there's some setup that tells you what to do.
+
+06:58.839 --> 07:03.040
+And then code snippets, some imports and constants, code to call
+
+07:03.040 --> 07:08.259
+cerebras, code to call cerebras for structured outputs. And there is some
+
+07:08.259 --> 07:13.959
+clear code, some good examples, very simple, clearly explained, that
+
+07:13.959 --> 07:18.759
+should be all it takes to add our own skill. Now, we're pretty much ready
+
+07:18.759 --> 07:22.279
+to go just a couple more things to do. I just want to make this model
+
+07:22.319 --> 07:26.639
+clear to in our claw.md and tell it one more thing
+
+07:26.639 --> 07:32.720
+and then we're ready to go. So back we go over to the claw.md and over here I just in this AI design
+
+07:33.600 --> 07:39.759
+I want to make it clear that we're going to be using the model that we've got. Let's just put
+
+07:39.759 --> 07:46.040
+this in here. Hang on, let me delete that. We'll use our back ticks in markdown to show code.
+
+07:46.040 --> 07:50.000
+I'm going to put that in there for that model to the open
+
+07:50.000 --> 07:55.079
+router, open AI GPT, OSS 120B model with cerebras as the
+
+07:55.079 --> 07:56.360
+inference provider.
+
+07:56.360 --> 07:57.560
+That seems clear.
+
+07:57.920 --> 07:58.480
+OK.
+
+07:58.519 --> 08:00.000
+And then one more thing we've got to do.
+
+08:00.199 --> 08:01.160
+Do you know what that is?
+
+08:01.600 --> 08:06.279
+We we have to add our.env file with our open router key that we
+
+08:06.279 --> 08:09.680
+set up before I can just copy it across into here.
+
+08:09.680 --> 08:12.100
+I'm going to do that right now and you should do it too.
+
+08:12.100 --> 08:14.079
+And the simplest way to do that is to bring up
+
+08:14.079 --> 08:15.160
+a new terminal.
+
+08:15.160 --> 08:18.759
+We're in pre-legal here and we just do CPE for copy.
+
+08:18.759 --> 08:20.240
+We want to go up one directory.
+
+08:20.240 --> 08:22.800
+We want to go into the directory that's called pm
+
+08:22.800 --> 08:25.720
+and we want to take the.env file that's there
+
+08:25.720 --> 08:28.360
+and we want to copy that right here in this current directory.
+
+08:28.360 --> 08:30.959
+Bam, the.env file has appeared. I'm not going
+
+08:30.959 --> 08:34.240
+to double click on it because then you'll see my key. But hopefully you've done that and you've
+
+08:34.240 --> 08:39.840
+checked it and it's got open router API key spelled right in there. And then as a final step,
+
+08:39.840 --> 08:45.200
+I just checked that we have explained here that that key just in case we
+
+08:49.679 --> 08:50.700
+absolutely crystal clear.
+
+08:55.700 --> 08:55.919
+There is an open router API key
+
+09:00.759 --> 09:01.600
+in the.env file in the project route. Done.
+
+09:01.600 --> 09:02.440
+Okay.
+
+09:02.440 --> 09:03.960
+So it's super clear now.
+
+09:03.960 --> 09:05.700
+We've got everything laid out.
+
+09:05.700 --> 09:08.179
+We've got a cloud.md in our home directory.
+
+09:08.179 --> 09:09.220
+We've got one here.
+
+09:09.220 --> 09:10.960
+We've got a.env file
+
+09:10.960 --> 09:14.480
+and we've even added a new skill for so rebrass.
+
+09:14.480 --> 09:19.919
+And we've told it to use that skill in order to do what we need.
+
+09:19.919 --> 09:23.960
+So we're already now to build our SAS application.
+
+09:23.960 --> 09:25.120
+Oh, not so fast.
+
+09:25.120 --> 09:26.600
+I think I forgot one thing.
+
+09:26.600 --> 09:30.960
+In the technical design, I want to say that it should use a database
+
+09:30.960 --> 09:36.320
+that it sets up in the Docker container just as we did before with the PM project.
+
+09:36.320 --> 09:38.159
+If you want to use a proper database,
+
+09:38.159 --> 09:41.120
+like use superbase or something to have an API database,
+
+09:41.120 --> 09:42.519
+then you should definitely do that.
+
+09:42.519 --> 09:45.159
+You've taken my ML obstacles, so with my NAN course,
+
+09:45.159 --> 09:46.840
+you know how to do these kinds of things
+
+09:46.840 --> 09:48.240
+using Clark or superbase.
+
+09:48.240 --> 09:51.559
+But I'm going to keep it simple for this,
+
+09:51.559 --> 09:54.500
+and just say the backend, the front end,
+
+09:55.320 --> 10:21.000
+the database should use SQL Lite and be created from scratch each time the Docker container is brought up, allowing for a users table with sign up and sign in.
+
+10:24.879 --> 10:27.960
+Okay, that's a very simple extra directive
+
+10:27.960 --> 10:29.799
+we'll put in there, leave that there
+
+10:29.799 --> 10:31.120
+so it's got that information too,
+
+10:31.120 --> 10:32.759
+and now I believe that we're ready.
+

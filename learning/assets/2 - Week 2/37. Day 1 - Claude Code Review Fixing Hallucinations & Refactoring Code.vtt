@@ -1,0 +1,722 @@
+WEBVTT
+
+00:00.000 --> 00:03.500
+So next, I'm going to press the plus button here to open a second terminal.
+
+00:03.500 --> 00:07.200
+You see the way these terminals appear as two different rows on the right there?
+
+00:07.200 --> 00:09.900
+And I'm just going to do a git status to see what's going on here.
+
+00:09.900 --> 00:12.500
+There's just claw.md that is the one that is written.
+
+00:12.500 --> 00:30.079
+Let's just add this in. "Claw.md". Okay, and now you click over here
+
+00:30.079 --> 00:35.759
+and to go back to "claud" running. What I want to do now is have it look at a few things. First
+
+00:35.759 --> 00:42.240
+of all, I notice the red over here is saying that there's some linting problem with page.test.tsx.
+
+00:42.240 --> 00:50.399
+I want it to fix that, find out what's wrong and fix it. And then I'm going to want it to come in and sort out this mess
+
+00:50.399 --> 00:54.719
+with that Python module that I really hate. Okay, but you might be at a different point to me.
+
+00:54.719 --> 00:58.640
+You might have a different code base. So rather than assuming anything is wrong,
+
+00:58.640 --> 01:05.359
+let's follow Simon Willison's suggestions. And let's just have Claude do a code review,
+
+01:05.359 --> 01:11.040
+do a thorough code review of everything. And we'll see if it spots this problem with frontend here and whether
+
+01:11.040 --> 01:17.280
+on it also resents main.py which looks really ugly check out my main.py. Yours hopefully won't
+
+01:17.280 --> 01:38.299
+be as horrible as this. Look at all that code, enormous and disgusting. But let's see where the code review of the entire repo repo and write results and write a report a report
+
+01:38.299 --> 01:54.859
+with actions to code review.md in the docs folder. Okay we will let Claude Code do its thing, meandering.
+
+01:54.859 --> 01:59.400
+We will let it meander, and I will see you back after it has meandered.
+
+01:59.400 --> 02:04.519
+And while it's running, I will mention it's running three agents in parallel.
+
+02:04.519 --> 02:09.580
+You can see there's a backend code quality agent frontend and infrastructure and config,
+
+02:09.580 --> 02:13.580
+and they seem to be running together, which is kind of cool.
+
+02:13.580 --> 02:19.919
+All of this is happening. A lot is going on in this cloud code terminal and you can see
+
+02:19.919 --> 02:25.439
+the different tokens and the tools that it is using as it reviews a comprehensive code review
+
+02:25.439 --> 02:31.199
+of the repo. Everything is happening and I will see you back when it's done.
+
+02:31.199 --> 02:35.919
+Okay, so the code review completed. It had a comprehensive review. It came out with a bunch
+
+02:35.919 --> 02:38.759
+of different actions through which are critical.
+
+02:38.759 --> 02:42.159
+The first of them and the second of them are about the same thing.
+
+02:42.159 --> 02:49.560
+Rotate open-routine API key, it's exposed in Git, remove.env from the Git history.
+
+02:49.560 --> 02:54.919
+The API key is in Git and it's obviously a very serious problem.
+
+02:54.919 --> 03:03.000
+If you look up here, it explains what it means that we've got an API key in our.env file, which is exposed
+
+03:03.000 --> 03:04.599
+in Git.
+
+03:04.599 --> 03:07.439
+And the problem here is that that is false.
+
+03:07.439 --> 03:09.080
+I'm not an idiot.
+
+03:09.080 --> 03:14.879
+Obviously, my.env file that contains my secrets is a file that I put in.get.
+
+03:14.879 --> 03:18.240
+Ignore to make absolutely sure that it would not be exposed.
+
+03:18.240 --> 03:20.400
+So this is a failure.
+
+03:20.400 --> 03:23.919
+It's a classic LLM failure because it reports it with so much confidence,
+
+03:23.919 --> 03:28.719
+with lots of if we go into the code review, you'll see if you went in there, you won't see it now
+
+03:28.719 --> 03:33.919
+because I've corrected it already. But you put it there in very strongly worded statements.
+
+03:33.919 --> 03:38.319
+And I often get questions from students who've got something like this and they've pasted it,
+
+03:38.319 --> 03:41.759
+and they haven't said this is what the LLM is saying. They've just put something that's very
+
+03:41.759 --> 03:44.039
+authoritative. The key is exposed
+
+03:44.039 --> 03:49.520
+blah blah blah blah and you can see the telltale signs of an LLM hallucination
+
+03:49.520 --> 03:53.960
+and this is why everything has to be checked it's a classic example it was
+
+03:53.960 --> 04:00.520
+completely false so I responded with how is.env in git it's clearly
+
+04:00.520 --> 04:07.280
+included in.kid ignore and it's not in GitHub and it responds, you're right, let me verify.
+
+04:07.520 --> 04:08.400
+You're correct.
+
+04:08.439 --> 04:09.960
+.env is not tracked.
+
+04:10.240 --> 04:12.919
+The file exists locally, but it's properly get ignored.
+
+04:12.960 --> 04:14.439
+I'll correct the review.
+
+04:14.560 --> 04:15.800
+It's like, gee, thanks.
+
+04:16.000 --> 04:21.279
+You'll correct the review, but it's really it's it's it's it's very destructive
+
+04:21.399 --> 04:24.360
+to so confidently make a big mistake like that.
+
+04:24.560 --> 04:28.420
+And so I take the time to take through this just so that you are wise to this, you
+
+04:28.420 --> 04:32.620
+know what to look out for. So now it rewrites things, it removes and as you can see the
+
+04:32.620 --> 04:37.180
+red is where it's removing a line, the green is where it's adding it in. And at the end
+
+04:37.180 --> 04:42.360
+here, it says, the report is corrected, apologies for the false positive. The exploration
+
+04:42.360 --> 04:47.420
+agent read the dot e and v file and incorrectly concluded it was a get. I think it's funny
+
+04:47.420 --> 04:50.720
+that just I tell you, you shouldn't blame the LLM if you need to
+
+04:50.720 --> 04:56.240
+take accountability. It looks like the LLM is blaming one of its exploration agents or one of
+
+04:56.240 --> 05:02.800
+its sub-agents. It's like, don't blame the agent. You should have checked. So, you know, it is what
+
+05:02.800 --> 05:08.240
+it is. It's a good learning point to watch out for these things. But with that now, let's go and
+
+05:08.240 --> 05:14.319
+have a look at the code review, code review.md that it wrote, and let's see what it has to say.
+
+05:14.319 --> 05:21.360
+Okay, so let's take a look here at the code review. So first critical issue is that the back end
+
+05:21.360 --> 05:27.680
+dependencies are unpinned. Okay, it doesn't seem like it's a major issue to me, it's saying that
+
+05:27.680 --> 05:33.040
+we've got dependencies here that should be fixed to a particular version. If we'd use uv, then this
+
+05:33.040 --> 05:35.040
+would have all been fine, but it decided not to use uv, so we don't have a lot version. If we'd use UV, then this would have all been fine, but it decided
+
+05:35.040 --> 05:42.879
+not to use UV, so we don't have a lot file. And this is a perfectly decent thing. The back end test,
+
+05:42.879 --> 05:48.480
+okay, that's interesting. It says that it will fail, but I thought it would run all of the tests,
+
+05:48.480 --> 05:52.800
+but maybe that's it, it run unit tests, but not integration tests. But fair enough, the
+
+05:52.800 --> 05:58.480
+high priority, it's talking about the deprecation morning fair enough. Playwright hard coding. Oh,
+
+05:58.480 --> 06:01.600
+that's a good one. So it saw that playwright was hard coded
+
+06:01.600 --> 06:04.660
+to run on a Mac, which will only work for me. This is
+
+06:04.660 --> 06:08.500
+interesting. It sees a sequel injection risk here. That's a
+
+06:08.500 --> 06:13.000
+nasty one. If it's true, missing input validation. Okay.
+
+06:13.199 --> 06:17.079
+And here's one I was hoping to see. That's great. Number
+
+06:17.079 --> 06:21.120
+seven, of course, it has agreed with me that this
+
+06:21.120 --> 06:27.600
+main.py is a horrible, a horrible back-end file, all coded a single file, hard to maintain,
+
+06:27.600 --> 06:34.879
+hard to test, and just very bad. And then number eight is a fairly minor point. And then we're into
+
+06:35.439 --> 06:41.000
+into smaller things here, but accessibility gaps in the front end.
+
+06:41.000 --> 06:44.240
+Docker health check missing, fair enough.
+
+06:44.240 --> 06:47.160
+Docker runs as root, okay.
+
+06:47.160 --> 06:49.959
+These are all perfectly decent, decent points.
+
+06:49.959 --> 06:52.199
+Now we're getting much lower here.
+
+06:52.199 --> 06:54.519
+No doc strings, SQL, welcome back.
+
+06:54.519 --> 06:55.800
+Okay, fair enough, fair enough.
+
+06:55.800 --> 06:58.519
+Now we're onto smaller stuff.
+
+06:58.519 --> 07:01.920
+All right, so a code review was done comprehensively.
+
+07:01.920 --> 07:03.019
+What's left to do?
+
+07:03.019 --> 07:04.920
+Well, let's look back in Encloed Code.
+
+07:04.920 --> 07:06.980
+Let's just quickly do a slash context
+
+07:06.980 --> 07:08.379
+to see how we're looking.
+
+07:08.379 --> 07:09.620
+How much is the context full?
+
+07:09.620 --> 07:12.660
+We've got two lines full of the conversation.
+
+07:12.660 --> 07:13.939
+So far, fair enough.
+
+07:13.939 --> 07:16.860
+We've got room, we can do something, we can do plenty.
+
+07:16.860 --> 07:19.620
+What we're gonna do is say, okay, thank you.
+
+07:20.459 --> 07:25.000
+Please go ahead and address all the,
+
+07:26.399 --> 07:28.360
+what do we get to say, all the high and all the medium,
+
+07:28.360 --> 07:31.959
+all the, let's look at this executive summary one more time
+
+07:31.959 --> 07:35.720
+and see that the, let's address all the critical,
+
+07:35.720 --> 07:40.720
+high and medium priority, critical, high,
+
+07:42.639 --> 07:47.000
+and medium priority issues and let me know
+
+07:49.160 --> 07:54.160
+and retest, retest everything and let me know
+
+07:56.879 --> 08:01.879
+when everything is remediated and tests okay.
+
+08:02.399 --> 08:04.199
+All right, there we go.
+
+08:04.199 --> 08:05.959
+We've had it do a code review on my saying,
+
+08:05.959 --> 08:07.959
+all right, you've identified these things.
+
+08:07.959 --> 08:12.720
+Now go fix them. Well, honestly, that ran pretty fast in about five minutes, and it did follow
+
+08:12.720 --> 08:20.079
+everything nicely, and it says that all alt-tests have passed successfully, and I just brought it up,
+
+08:20.079 --> 08:25.120
+and sure enough, it's working fine. So that was nice, but one thing to look for, you always have to
+
+08:25.120 --> 08:33.440
+read particularly the summaries and just watch as things happen. I saw this happening while it happened. It decided to defer this idea of restructuring
+
+08:33.440 --> 08:34.720
+the monolithic file.
+
+08:34.720 --> 08:37.360
+It just felt like the cost benefit wasn't there
+
+08:37.360 --> 08:39.120
+given the amount of change it would evolve,
+
+08:39.120 --> 08:40.440
+which is super interesting, you know,
+
+08:40.440 --> 08:42.120
+'cause it's not a bad decision.
+
+08:42.120 --> 08:43.960
+And it shows that it doesn't just blindly
+
+08:43.960 --> 08:45.120
+follow instructions.
+
+08:45.120 --> 08:48.360
+It decided to disobey me and it didn't fix
+
+08:48.360 --> 08:49.799
+all of the hyper-arity things.
+
+08:49.799 --> 08:51.039
+But I really wanted that.
+
+08:51.039 --> 08:52.639
+And so this is where I come back and say,
+
+08:52.799 --> 09:15.519
+this is good, is good. But actually, it's main.py, right?
+
+09:15.519 --> 09:22.519
+Main.py and organize into modules and packages
+
+09:25.799 --> 09:27.879
+as appropriate.
+
+09:27.879 --> 09:31.000
+Check and test everything.
+
+09:33.159 --> 09:35.559
+This is going to be an important step.
+
+09:35.559 --> 09:37.039
+We will see how it does.
+
+09:37.039 --> 09:38.120
+Let's leave that running.
+
+09:38.120 --> 09:38.960
+I'll see you in a sec.
+
+09:38.960 --> 09:40.480
+Okay, and it's just finished.
+
+09:40.480 --> 09:43.159
+And it again took five minutes or so.
+
+09:43.159 --> 09:48.000
+And it has restructured the monolithic main.py file.
+
+09:48.000 --> 09:51.480
+It's just restructured it into a lightweight main file.
+
+09:51.480 --> 09:53.000
+Let's go and take a look at that in a second.
+
+09:53.000 --> 09:56.200
+With config, models, database, AI dependencies,
+
+09:56.200 --> 09:58.679
+and then routes with a separate module for each of
+
+09:58.679 --> 09:59.679
+the routes.
+
+09:59.679 --> 10:01.620
+That's a great, very decent structure.
+
+10:01.620 --> 10:02.620
+It's run all of the tests.
+
+10:02.620 --> 10:03.620
+They've all passed.
+
+10:03.620 --> 10:04.620
+I saw it doing it.
+
+10:04.620 --> 10:09.279
+You see it running through as it runs these things and as it makes the changes here and
+
+10:09.279 --> 10:14.080
+there you see the pass all 23 backend tests pass and then it runs the front end test,
+
+10:14.080 --> 10:15.879
+all of those passed.
+
+10:15.879 --> 10:21.039
+It also I noted updates the documentation without needing to be prompted to update it,
+
+10:21.039 --> 10:22.000
+which is great.
+
+10:22.000 --> 10:24.679
+And then this is the summary of all the test passing,
+
+10:24.679 --> 10:26.419
+a summary of the fixed,
+
+10:26.419 --> 10:27.879
+and that all of the criticals are fixed,
+
+10:27.879 --> 10:28.879
+all the highs are fixed,
+
+10:28.879 --> 10:30.960
+most of the mediums are fixed,
+
+10:30.960 --> 10:33.379
+and it's updated the docs.
+
+10:33.379 --> 10:36.120
+And I did open a separate terminal,
+
+10:36.120 --> 10:38.840
+and I opened it up, and I just ran it,
+
+10:38.840 --> 10:39.960
+and it ran successfully,
+
+10:39.960 --> 10:41.399
+I asked it to describe the project,
+
+10:41.399 --> 10:42.840
+and it described the project.
+
+10:42.840 --> 10:44.519
+Everything is working nicely.
+
+10:44.519 --> 10:47.080
+If we have a look at the code itself,
+
+10:47.080 --> 10:48.519
+move this down a bit.
+
+10:48.519 --> 10:50.399
+We should see this is the new main dot.
+
+10:50.399 --> 10:52.840
+That's a perfectly good sized module.
+
+10:52.840 --> 10:55.039
+You remember how before the smaller preview here
+
+10:55.039 --> 10:57.200
+was absolutely monstrous.
+
+10:57.200 --> 10:58.960
+Now it's perfectly decent.
+
+10:58.960 --> 11:01.879
+And there's some pretty nice looking classes here
+
+11:01.879 --> 11:03.039
+that organize things.
+
+11:03.039 --> 11:06.080
+This is the AI layer that organizes the AI call.
+
+11:06.080 --> 11:07.799
+Very nice, nicely done.
+
+11:07.799 --> 11:11.519
+The database models, this is a good code structure.
+
+11:11.519 --> 11:14.320
+Cloud Code has done a comprehensive code review with
+
+11:14.320 --> 11:16.940
+one little mistake of a false positive,
+
+11:16.940 --> 11:19.600
+and then it has fixed up everything nicely,
+
+11:19.600 --> 11:22.200
+and everything is tested successfully.
+
+11:22.200 --> 11:23.480
+Good job, Cloud Code.
+
+11:23.480 --> 11:24.500
+What do I have left to do?
+
+11:24.500 --> 11:27.000
+I, of course, at this point, have to go,
+
+11:27.000 --> 11:29.940
+I can stay in this here, I'll stop my server,
+
+11:29.940 --> 11:33.740
+control C to stop the server, do a git status,
+
+11:33.740 --> 11:35.539
+to see all the files that got changed,
+
+11:35.539 --> 11:37.220
+lots of things got changed,
+
+11:37.220 --> 11:39.299
+changed the Docker file 'cause I added in a health check
+
+11:39.299 --> 11:41.580
+in there I notice, which is great,
+
+11:41.580 --> 11:44.580
+git add dots to bring everything in,
+
+11:44.580 --> 11:47.379
+git commit minus m,
+
+11:56.600 --> 12:02.700
+get commit -m, "glored code code review fixes." And there we have it. We've checked everything in all those changes have now been committed and I think that's a job well done. And I
+
+12:02.700 --> 12:08.919
+will flip back to "glored code" running here and I will just do /context so we can see how
+
+12:08.919 --> 12:11.360
+much of the context that we use up with all of that.
+
+12:11.360 --> 12:16.000
+Well, look at that. All of that work that we did refactoring and rebuilding everything
+
+12:16.000 --> 12:22.879
+has filled up all of the context. And so it would be about to do a compact itself. As it comes into
+
+12:22.879 --> 12:28.080
+this buffer territory, it will decide at some point, you know what, I need to compact. But we
+
+12:28.080 --> 12:33.840
+can force that ourselves by doing slash compact, which will right now clear the
+
+12:33.840 --> 12:37.940
+conversation history, but keep a summary in context.
+
+12:37.940 --> 12:42.240
+Optionally, you can do slash compact and then write some instructions to tell how to
+
+12:42.240 --> 12:43.240
+compact.
+
+12:43.240 --> 12:44.440
+But we're just going to do this.
+
+12:44.440 --> 12:47.559
+This is now going to kick off a manual compact.
+
+12:47.559 --> 12:50.399
+I do recommend that you try and do this manually.
+
+12:50.399 --> 12:53.080
+You don't what you don't want to happen is for it to be right in the middle of some
+
+12:53.080 --> 12:54.200
+big activity and then to suddenly go into compact be right in the middle of some big activity
+
+12:54.200 --> 12:57.960
+and then to suddenly go into compacting, right in the middle when it's trying to do
+
+12:57.960 --> 13:01.000
+something like rewriting all of your code or something like that.
+
+13:01.000 --> 13:05.799
+So it's always best to kick off a big task when you've got plenty of room in your context
+
+13:05.799 --> 13:09.519
+and then do a slash compact at the end of it.
+
+13:09.519 --> 13:13.000
+And this will take a couple of minutes to go through and compact and I'll see you when
+
+13:13.000 --> 13:14.000
+it's done.
+
+13:14.000 --> 13:15.440
+Okay, and the compact finish.
+
+13:15.440 --> 13:16.860
+Let's do slash context.
+
+13:16.860 --> 13:18.700
+To have a look at what we've got now,
+
+13:18.700 --> 13:21.419
+here is the context, very nice,
+
+13:21.419 --> 13:24.100
+lots of clean, empty space there.
+
+13:24.100 --> 13:26.539
+You get a sense of relief when you do this,
+
+13:26.539 --> 13:29.440
+and everything has been compressed down to this space here.
+
+13:29.440 --> 13:31.419
+And of course, the thing that's always on one's mind
+
+13:31.419 --> 13:33.460
+is what have you lost by doing that?
+
+13:33.460 --> 13:36.440
+And often when you do this and you compact,
+
+13:36.440 --> 13:38.639
+you find that things are faster and better and
+
+13:38.639 --> 13:44.120
+sharper afterwards except you've lost some of the information about what was discussed.
+
+13:44.120 --> 13:45.960
+And so some mistakes get repeated.
+
+13:45.960 --> 13:49.460
+Maybe again, it's going to think that the.env file is checked into Git or something
+
+13:49.460 --> 13:50.460
+like that.
+
+13:50.460 --> 13:57.759
+And so that's why it's always worth having the human eye on this process update clawed.md.
+
+13:57.759 --> 14:00.519
+So it has some crucial information or tell it to.
+
+14:00.519 --> 14:02.820
+Make sure that you've got the information you need
+
+14:02.820 --> 14:04.600
+always in context.
+
+14:04.600 --> 14:08.240
+And as a very final thing to do, I'm going to do slash status.
+
+14:08.240 --> 14:09.159
+I just want to show you this.
+
+14:09.159 --> 14:12.919
+You press slash status, you get this little status panel.
+
+14:12.919 --> 14:15.059
+You can use the left and the right arrows
+
+14:15.059 --> 14:19.139
+to flip between three pages, status, config and usage.
+
+14:19.139 --> 14:21.879
+The status is telling me what version I'm on,
+
+14:21.879 --> 14:25.279
+the session ID is giving me that my login
+
+14:25.279 --> 14:32.799
+method is that I have a claud of max account and that my model is opus 4.5, the most powerful
+
+14:32.799 --> 14:38.799
+model there is. If I go over to config, you can see more about the different settings that
+
+14:38.799 --> 14:47.360
+I've got and then over to usage. You can see that I've used 7% of my daily allowance that is going to reset quite soon
+
+14:47.360 --> 14:54.399
+and I've used 2% of my weekly allowance and zero of my current week for sonnet, which is a lower end
+
+14:54.399 --> 14:59.679
+model and this is because I had the max plan that means I have a lot of ability to do lots of things.
+
+14:59.679 --> 15:08.879
+So that gives you a good sense to slash status to see that report depending on the plan you may have used a lot more than me, but we will cover
+
+15:08.879 --> 15:14.799
+more about that kind of thing later. I hope you've enjoyed your first deeper experience with
+
+15:14.799 --> 15:15.799
+Claude Code.
+

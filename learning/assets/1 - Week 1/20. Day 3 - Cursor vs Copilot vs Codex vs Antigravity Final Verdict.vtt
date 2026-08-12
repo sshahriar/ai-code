@@ -1,0 +1,206 @@
+WEBVTT
+
+00:00.000 --> 00:11.279
+Alright, let's try this. Okay, it looks good, but creating a new card isn't great.
+
+00:12.880 --> 00:25.760
+There's a simplistic JavaScript pop-up for the name and no way to add a description.
+
+00:28.960 --> 00:30.719
+and no way to add a description. This does not look professional.
+
+00:39.439 --> 00:44.560
+Not look professional. Can it be improved? All right, we give it its marching orders. We'll see how it does with this, and it's a good example of working iteratively.
+
+00:44.560 --> 00:50.000
+It says I've been wrestling with a better UI for card creation."
+
+00:50.000 --> 00:53.799
+So obviously it was already thinking about this somewhere in the trace that went by that
+
+00:53.799 --> 00:54.799
+I didn't read.
+
+00:54.799 --> 00:58.280
+We'll let it do its thing and I'll see you back in a second.
+
+00:58.280 --> 01:00.320
+Okay, it claims it has done that.
+
+01:00.320 --> 01:05.280
+It says you can now click the dashed ad card button in any column to see the professional
+
+01:05.280 --> 01:06.640
+modal.
+
+01:06.640 --> 01:10.319
+And you can do npm run dev but it is already running so I don't need to do that
+
+01:10.319 --> 01:13.359
+I can I can see here in the terminal that it's that is doing fine
+
+01:13.959 --> 01:15.959
+close that terminal
+
+01:15.959 --> 01:21.359
+And I'm now going to I'm gonna say accept all and I'm going to bring back up the cambam board here
+
+01:21.359 --> 01:27.359
+It is and I'm going to try pressing add card. Oh, oh, oh this is
+
+01:28.079 --> 01:29.840
+Better
+
+01:29.840 --> 01:32.000
+Okay, I like this
+
+01:33.500 --> 01:36.620
+Add card, there it is, it worked.
+
+01:36.620 --> 01:37.819
+Very nice.
+
+01:37.819 --> 01:41.900
+Okay, I think we'll let Gemini off at this point.
+
+01:41.900 --> 01:43.319
+I think this is pretty good.
+
+01:43.319 --> 01:45.659
+I sort of prefer to edit it, but still,
+
+01:45.659 --> 01:46.500
+I think it's great.
+
+01:46.500 --> 01:47.620
+We haven't checked the delete works,
+
+01:47.620 --> 01:49.260
+let's try that, yes, delete does work.
+
+01:49.260 --> 01:51.819
+All right, I think that is a wrap
+
+01:51.819 --> 01:55.000
+for Google anti-gravity for Gemini.
+
+01:55.319 --> 01:57.920
+It seems that it's done a fine job.
+
+01:57.920 --> 01:59.000
+I like this a lot.
+
+01:59.000 --> 02:00.799
+I think it's very nice.
+
+02:00.799 --> 02:01.640
+I don't know.
+
+02:01.640 --> 02:02.920
+What do you think for me?
+
+02:02.920 --> 02:06.840
+I gotta be honest, for today, I'm giving Codex,
+
+02:06.840 --> 02:10.439
+the top position, but it is clearly between Codex,
+
+02:10.439 --> 02:12.960
+and really, I mean, GPT 5.2 Codex,
+
+02:12.960 --> 02:20.000
+the model running in the codecs IDE and that versus Gemini 3 Pro running in
+
+02:20.000 --> 02:26.319
+anti-gravity that both did well I give codecs the win but it's really it's your choice.
+
+02:26.319 --> 02:30.400
+Maybe you've had completely different answers to me, maybe you've got very different results,
+
+02:30.400 --> 02:34.479
+you may have used different models in which case please do share them, share them in Udemy
+
+02:34.479 --> 02:38.840
+or email them to me. I'd love to see them. I would love to see what you've got.
+
+02:38.840 --> 02:41.680
+Well, we seem to get through a lot today,
+
+02:41.680 --> 02:43.599
+but it was just a teaser.
+
+02:43.599 --> 02:46.240
+I wanted to give you the flyby of cursor,
+
+02:46.240 --> 02:48.680
+copilot, codecs and anti-gravity,
+
+02:48.680 --> 02:50.879
+with the overall takeaway being that look
+
+02:50.879 --> 02:55.080
+they're all quite similar when the IDE-based agents,
+
+02:55.080 --> 02:57.680
+you can see that they often, they have a sidebar
+
+02:57.680 --> 02:59.800
+on the left or the right that you can make larger.
+
+02:59.800 --> 03:04.800
+They often come with plan mode and an execute mode, although not all of them.
+
+03:04.800 --> 03:09.479
+They're mostly agents.md as the way to drive them, but in the case of anti-gravity, it's
+
+03:09.479 --> 03:11.960
+the dot agent rules.
+
+03:11.960 --> 03:16.099
+And generally you can see a lot of the same stuff in each of them, and you get very familiar
+
+03:16.099 --> 03:17.099
+with this.
+
+03:17.099 --> 03:21.300
+And really which one you picked depends on which plan you've paid for or which one you
+
+03:21.300 --> 03:22.199
+like, or what
+
+03:22.199 --> 03:27.439
+the rest of your team are using. Some people are in for GitHub co-pilot, some like cursor,
+
+03:27.439 --> 03:32.759
+which was one of the first that I used. And, you know, it's really the one that suits
+
+03:32.759 --> 03:38.639
+you and your needs the most. You can do similar things in all of them. And we're going
+
+03:38.639 --> 03:44.479
+to pick a couple of them for the next two days for the projects. really for you you can pick whichever one you like.
+
+03:44.479 --> 03:49.719
+You can do much the same things and it's more about now the focus turns to
+
+03:49.719 --> 03:53.319
+developing the right techniques to use these in the most effective way.
+
+03:53.319 --> 03:57.919
+And on that note, tomorrow we'll be doing our first project, the YOLO project.
+
+03:57.919 --> 04:03.139
+I hope you feel brave as we go into YOLO mode and at this point you should
+
+04:03.139 --> 04:06.560
+congratulate yourself because somehow already you are 20% of
+
+04:06.560 --> 04:09.919
+the way through. You're a fifth of the way through the programme but don't worry
+
+04:09.919 --> 04:14.000
+that means it's still four-fifths to go and it's going to be so much fun
+
+04:14.000 --> 04:17.959
+starting with YOLO tomorrow.
+

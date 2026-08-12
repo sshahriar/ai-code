@@ -1,0 +1,557 @@
+WEBVTT
+
+00:00.000 --> 00:03.919
+Well, this is exciting. We're in cursor. We're going to do some vibe coding.
+
+00:04.200 --> 00:07.799
+So first up, just to tell you some shortcut keys, which is good to know,
+
+00:08.519 --> 00:13.039
+um, on, uh, to flip in and out the, the sidebar on the left,
+
+00:13.160 --> 00:18.719
+the file system on a Mac, it's command B on a PC. It's control B.
+
+00:18.839 --> 00:20.839
+So if you press that a couple of times, look at that.
+
+00:20.920 --> 00:23.559
+You'll see that it's coming in and out. It also, uh,
+
+00:23.640 --> 00:29.679
+it mentions that just here as well. And for the right hand bar over here, which
+
+00:29.679 --> 00:38.240
+has the agent chat on a Mac, it's command option B and on a PC, it's control option B.
+
+00:38.240 --> 00:43.000
+So let me do that a few times. There you go. You see? So that's something nice to get used
+
+00:43.000 --> 00:46.920
+to. So that's how you can bring in and out the two different screens if they're not there
+
+00:46.920 --> 00:49.759
+right now. Okay, that's oriented you.
+
+00:49.759 --> 00:51.740
+Now we're going to look at this repo
+
+00:51.740 --> 00:53.179
+and see what files we've got.
+
+00:53.179 --> 00:55.060
+Okay, well I have news for you.
+
+00:55.060 --> 00:57.000
+We don't have a lot of files.
+
+00:57.000 --> 00:59.859
+In fact, we've only got one file in this repo.
+
+00:59.859 --> 01:02.979
+It was a lot of palava for one file cloning this repo.
+
+01:02.979 --> 01:04.620
+I could just give a new this file.
+
+01:04.620 --> 01:05.459
+But here it is.
+
+01:05.459 --> 01:08.859
+It is of course the file called agent.md,
+
+01:08.859 --> 01:13.840
+which is the file that is going to be loaded in by default into the
+
+01:13.840 --> 01:19.040
+agent's memory when we set it going. And if I click on it, we can have a look at it and it's
+
+01:19.040 --> 01:24.719
+written in markdown, which means that it's got all the familiar markdown tags. That's a
+
+01:24.719 --> 01:34.480
+main heading. That's a secondary heading. It's got different sections. It's got bulleted lists and numbered lists with various sections. You can also right click on the
+
+01:34.480 --> 01:41.359
+file and say open preview. And if you do that, you see it in a sort of formatted way. And this is,
+
+01:41.359 --> 01:46.719
+if you will, this is the way that the agent sees it because it sees Markdown and it interprets
+
+01:46.719 --> 01:51.519
+it as actually being the headings that it is. So this is really looking at it the way the agent
+
+01:51.519 --> 01:55.280
+will see it. Okay, and I wrote this agents.md. I didn't
+
+01:55.280 --> 02:00.000
+generate it. I hand wrote it. I cranked it out and I'm going to take you through it right now.
+
+02:00.000 --> 02:05.840
+So the idea of this project is to try and build a simple project management application,
+
+02:05.840 --> 02:11.680
+something which has like a camban board, like you have an in in Jira or in Trello or products like
+
+02:11.680 --> 02:17.759
+that. If you're not familiar with them, google it and you'll see what I mean. And so we want one of these things, it's like a sort of
+
+02:17.759 --> 02:20.800
+note board with cards that you can move between them.
+
+02:20.800 --> 02:24.080
+So I've got the first section, it's called business requirements of the
+
+02:24.080 --> 02:29.520
+Canban project. We want an MVP, a minimum viable product, a prototype, if you will,
+
+02:29.520 --> 02:32.800
+of a Canban-style project management application as a web app.
+
+02:32.800 --> 02:36.879
+It should only have one board, it's keep it simple, always start simple,
+
+02:36.879 --> 02:40.120
+have fixed five columns that can be renamed.
+
+02:40.120 --> 02:43.599
+Each card will have a title and details only.
+
+02:43.599 --> 02:45.719
+We want a drag and drop interface
+
+02:45.719 --> 02:47.159
+to move cards between columns.
+
+02:47.159 --> 02:48.439
+Okay, so that's not so simple,
+
+02:48.439 --> 02:50.539
+but we need something that's gonna be cool.
+
+02:50.539 --> 02:52.639
+You're gonna be able to add a card,
+
+02:52.639 --> 02:54.039
+delete an existing card,
+
+02:54.039 --> 02:55.960
+but no more functionality than that.
+
+02:55.960 --> 02:59.280
+No archive, no search and filter, keep it simple.
+
+02:59.280 --> 03:02.000
+The priority is a slick, professional, gorgeous
+
+03:02.000 --> 03:07.560
+UI, very simple features and it should open with dummy data. There are other business requirements
+
+03:07.560 --> 03:12.719
+they're laid out. The sorts of tricks to doing a good agents.md, you ought to lay things
+
+03:12.719 --> 03:17.460
+out to be precise, you don't want to be ambiguous, you want to be very clear. They're generally
+
+03:17.460 --> 03:27.120
+focused on the positives but I've got a couple of negatives in there, but that's okay. Generally focus on being sort of assertive and clear and do it in a way that
+
+03:27.120 --> 03:30.680
+means that it's absolutely obvious what needs to be built.
+
+03:30.840 --> 03:35.280
+And I know what you're thinking you're thinking, but Ed, when in real world,
+
+03:35.280 --> 03:38.039
+when we're building big projects, they're much more complicated than this.
+
+03:38.199 --> 03:40.439
+And I say patience, patience.
+
+03:40.560 --> 03:42.000
+We've got three weeks together.
+
+03:42.159 --> 03:43.879
+There'll be time to get more complicated.
+
+03:43.879 --> 03:45.599
+We want to start with something neat.
+
+03:45.599 --> 03:47.960
+Okay, so this is the requirements.
+
+03:47.960 --> 03:50.360
+And by the way, you should feel free to change this.
+
+03:50.360 --> 03:51.800
+If you want to have something different,
+
+03:51.800 --> 03:53.800
+if you want to see what get the same as me
+
+03:53.800 --> 03:55.759
+or similar to me, then stick with this.
+
+03:55.759 --> 03:57.599
+But feel free to change it.
+
+03:57.599 --> 03:58.800
+The technical details.
+
+03:58.800 --> 04:02.360
+So I am going to try and tell how I want it to build it a bit.
+
+04:02.360 --> 04:04.800
+I want it to be our next JS app.
+
+04:04.800 --> 04:08.319
+I want it to use that technology. I want it to be in a
+
+04:08.319 --> 04:13.199
+subdirectory called frontends. So there can be a subdirectory here called frontend. No persistence,
+
+04:13.199 --> 04:19.600
+nothing being saved here. No user login or anything like that. Tell it to use popular libraries
+
+04:19.600 --> 04:25.600
+as simple as possible, but with an elegant UI. There's, you might say, isn't that some repetition
+
+04:25.600 --> 04:29.279
+with the previous section? There's no harm in repetition with these things,
+
+04:29.279 --> 04:31.379
+particularly for the really important points
+
+04:31.379 --> 04:32.319
+you want to make.
+
+04:32.319 --> 04:35.199
+Be clear, it's fine to repeat yourself.
+
+04:35.199 --> 04:37.639
+Okay, next up, I've got a color scheme.
+
+04:37.639 --> 04:39.600
+These are my favorite colors that I use
+
+04:39.600 --> 04:41.879
+for my various decks.
+
+04:41.879 --> 04:43.240
+So I just pasted it in here.
+
+04:43.240 --> 04:44.560
+I had it to hand.
+
+04:44.560 --> 04:46.399
+You can change this up, use your own,
+
+04:46.399 --> 04:47.240
+or just take it out.
+
+04:47.240 --> 04:48.959
+Let it come up with its own color scheme.
+
+04:48.959 --> 04:51.600
+You don't need to do this if you don't wish.
+
+04:51.600 --> 04:54.000
+And then I got a strategy section.
+
+04:54.000 --> 04:57.360
+Write a plan with success criteria for each phase
+
+04:57.360 --> 05:00.560
+to be checked off, include project scaffolding,
+
+05:00.560 --> 05:03.839
+rigorous unit testing, then execute the plan,
+
+05:03.839 --> 05:06.040
+then carry out extensive integration testing
+
+05:06.040 --> 05:09.480
+with playwright or similar, fixing defects.
+
+05:09.480 --> 05:13.319
+Only completes when the MVP is finished and tested with the server running
+
+05:13.319 --> 05:15.160
+and ready for the user.
+
+05:15.160 --> 05:20.319
+I use many of these same kinds of things often, so this is something that's fairly boilerplate.
+
+05:20.319 --> 05:23.000
+It's always good to lay it out this way.
+
+05:23.000 --> 05:28.360
+Increasingly, it's less necessary to say things like this because this kind of strategy
+
+05:28.360 --> 05:33.399
+is the kind of default strategy that most of these Agentic AIs are now following more
+
+05:33.399 --> 05:34.000
+and more closely.
+
+05:34.000 --> 05:37.000
+But there's no harm in putting it in here, and I found this was kind of helpful,
+
+05:37.000 --> 05:38.000
+so I've kept it in.
+
+05:38.000 --> 05:43.000
+And then at the end coding standards, these three are just three that I like to use.
+
+05:43.000 --> 05:47.000
+Similar kind of thing, actually, I used to use a lot more than this.
+
+05:47.000 --> 05:51.000
+I used to use this a lot, but it's becoming increasingly less necessary to say this,
+
+05:51.000 --> 05:53.000
+because LLM's are starting to get the joke.
+
+05:53.000 --> 05:57.160
+But I say, use latest versions of libraries,
+
+05:57.160 --> 05:59.879
+idiomatic approaches, as of today.
+
+05:59.879 --> 06:02.439
+I don't need to tell it the date I only need to hard code the date because they've
+
+06:02.439 --> 06:07.620
+got access to that, but I just remind it to be cognizant that it needs to look at the
+
+06:07.620 --> 06:09.279
+latest versions.
+
+06:09.279 --> 06:10.519
+Keep it simple.
+
+06:10.519 --> 06:12.120
+Never over-engineer.
+
+06:12.120 --> 06:13.199
+Always simplify.
+
+06:13.199 --> 06:15.839
+No unnecessary defensive programming.
+
+06:15.839 --> 06:17.160
+No extra features.
+
+06:17.160 --> 06:19.439
+Focus on simplicity. Again, it's less
+
+06:19.439 --> 06:24.720
+necessary to say it now but I still see it frequently over-complicating and I
+
+06:24.720 --> 06:29.959
+feel like you can't stress this too much. So I do. Be concise, keep read me's
+
+06:29.959 --> 06:35.800
+minimal. Important no emojis ever. I like to put that in there because these
+
+06:35.800 --> 06:41.040
+things love to make emojis and emojis are a pain and they just get in the way and maybe
+
+06:41.040 --> 06:46.120
+you like emojis in which case you can take this out and let it get a town but I find
+
+06:46.120 --> 06:50.759
+it thoroughly tires them and it also does actually cause some breaks sometimes with
+
+06:50.759 --> 06:58.399
+Windows PCs. So I like to say no emojis. As I say you can add on more and feel free
+
+06:58.399 --> 07:03.839
+to add on some of your own pet peeves to get this right. And it's something that can be a sort of living,
+
+07:03.839 --> 07:06.839
+breathing document for you of the coding stands you like.
+
+07:06.839 --> 07:08.959
+And we'll find out later how you can have things
+
+07:08.959 --> 07:10.480
+like this in a more central place
+
+07:10.480 --> 07:12.560
+where they're used for all of your projects.
+
+07:12.560 --> 07:14.360
+Now, you might be thinking, okay, Ed,
+
+07:14.360 --> 07:16.920
+but you just shown us this file,
+
+07:16.920 --> 07:18.879
+but don't we have to learn how to write
+
+07:18.879 --> 07:20.480
+these kinds of things ourselves?
+
+07:20.480 --> 07:23.079
+And the answer is, well, yes,
+
+07:23.079 --> 07:24.040
+but to be honest,
+
+07:24.040 --> 07:26.779
+you can always just start with what I've got here
+
+07:26.779 --> 07:29.839
+as a starting point, or you can just write one yourself
+
+07:29.839 --> 07:30.800
+from scratch.
+
+07:30.800 --> 07:33.800
+It actually honestly doesn't matter that much.
+
+07:33.800 --> 07:36.600
+You've got to get into the habit of being very specific
+
+07:36.600 --> 07:38.600
+and simple about what you want.
+
+07:38.600 --> 07:40.439
+You don't need to give it technical details,
+
+07:40.439 --> 07:42.160
+it can figure that out itself.
+
+07:42.160 --> 07:43.600
+You don't need to give a color scheme.
+
+07:43.600 --> 07:44.839
+You don't need to give it the strategy,
+
+07:44.839 --> 07:47.839
+but you could just copy exactly what I've got here.
+
+07:47.839 --> 07:49.279
+And the coding standards again,
+
+07:49.279 --> 07:51.079
+you can start with exactly what I've got.
+
+07:51.079 --> 07:52.079
+You could add to them.
+
+07:52.079 --> 07:54.600
+Over during this course, we're going to be experimenting
+
+07:54.600 --> 07:57.399
+with different kinds of standards and rules
+
+07:57.399 --> 07:59.480
+that we will give these LLMs.
+
+07:59.480 --> 08:02.019
+So this is something which you can experiment with.
+
+08:02.019 --> 08:05.680
+You can also begin with something much more minimal.
+
+08:05.680 --> 08:07.920
+Run it, see what you get,
+
+08:07.920 --> 08:10.120
+and then delete everything that it's built
+
+08:10.120 --> 08:14.920
+and rewrite this to be something that's more precise and accounts for where it went
+
+08:14.920 --> 08:17.540
+wrong when it was just allowed to do whatever it wants.
+
+08:17.540 --> 08:21.079
+That's a very effective technique working iteratively like that.
+
+08:21.079 --> 08:27.920
+So these are all great ways to build your agents.md and yeah, honestly, you can always
+
+08:27.920 --> 08:32.379
+just begin with what I have here and just updating the requirements to be what you want.
+
+08:32.379 --> 08:35.279
+And now I'd like you to bring up the Cursor settings.
+
+08:35.279 --> 08:38.580
+You can get to it from the settings menu or on a PC,
+
+08:38.580 --> 08:42.600
+Control + Shift + J, on a Mac, Command + Shift + J.
+
+08:42.600 --> 08:43.539
+Here it is.
+
+08:43.539 --> 08:44.899
+Go to Agents,
+
+08:44.899 --> 08:49.000
+Scroll down to the Auto Run section.
+
+08:49.000 --> 08:52.480
+And this is now your choice.
+
+08:52.480 --> 08:55.019
+If you know, if you have some sense of what you're doing,
+
+08:55.019 --> 08:56.960
+you're familiar with the risks,
+
+08:56.960 --> 08:59.740
+you can do this on YOLO mode.
+
+08:59.740 --> 09:03.860
+Run everything unsan-boxed as we did for instant.
+
+09:03.860 --> 09:06.039
+Now this is a very low risk.
+
+09:06.039 --> 09:07.919
+The project we're about to do is low risk,
+
+09:07.919 --> 09:10.440
+and personally, I'm happy doing this.
+
+09:10.440 --> 09:12.539
+I know what's happening, I can kick it off,
+
+09:12.539 --> 09:14.960
+I'll walk away, it's a risk I'm comfortable with,
+
+09:14.960 --> 09:19.600
+but it's a personal preference. If you're not entirely sure about what's going on and what
+
+09:19.600 --> 09:25.120
+you're signing up for, then please leave it auto run in sandbox or even ask every time.
+
+09:25.120 --> 09:30.720
+And that way you'll see what it's doing at each step, the files it's creating, you will say approve,
+
+09:30.720 --> 09:33.919
+and you can keep doing that. And you can keep doing that until you get more comfortable with
+
+09:33.919 --> 09:37.639
+what's happening. And then you can move it into run everything,
+
+09:37.639 --> 09:41.039
+sand, other sandbox to Yolo mode when you're ready.
+
+09:41.039 --> 09:42.879
+But I'm here to take some risks.
+
+09:42.879 --> 09:45.480
+So I'm going with that from the get go.
+
+09:45.480 --> 09:47.220
+Okay, there we go.
+
+09:47.220 --> 09:48.840
+It's time for us to begin.
+

@@ -1,0 +1,626 @@
+WEBVTT
+
+00:00.000 --> 00:04.000
+Okay, now that you know all about what we've got in store for this week,
+
+00:04.000 --> 00:06.719
+let's look at the techniques we're learning today.
+
+00:06.719 --> 00:10.560
+And we're going to start by creating a new slash command.
+
+00:10.560 --> 00:15.599
+How do you create slash commands for your projects or for your workspace?
+
+00:15.599 --> 00:17.440
+And it's unbelievably simple.
+
+00:18.480 --> 00:21.199
+It all comes back again to the dot-clawed folder.
+
+00:21.199 --> 00:23.679
+There are in fact two ways of doing it.
+
+00:23.679 --> 00:27.519
+And the first is within dot-claud, whether it's in your project or for your
+
+00:27.519 --> 00:31.760
+in your home directory, applying to all of your projects, we're going to do it in a project,
+
+00:31.760 --> 00:36.320
+you make a new folder and you'll never guess what it's called, it's called commands. So we made
+
+00:36.320 --> 00:42.079
+a new folder called commands. And in that folder, you put different markdown files for each of the
+
+00:42.079 --> 00:46.799
+slash commands you want to add. So if I want to have a new slash command, I just mean I want to
+
+00:46.799 --> 00:48.759
+be able to type slash and then type something new,
+
+00:48.759 --> 00:49.880
+then it's going to do something new
+
+00:49.880 --> 00:51.640
+for anyone that's using my project.
+
+00:51.640 --> 00:54.159
+We're going to call one that is like review,
+
+00:54.159 --> 00:57.399
+or call it doc review.md.
+
+00:59.359 --> 01:02.399
+It's most common to have these kinds of commands
+
+01:02.399 --> 01:05.680
+and skills and so on be in lowercase with a hyphen.
+
+01:05.680 --> 01:08.239
+And I've actually changed the name of the cerebras skill
+
+01:08.239 --> 01:09.400
+to follow that pattern.
+
+01:09.400 --> 01:12.000
+And we're going to do that with Doc Review right here.
+
+01:12.000 --> 01:14.599
+So what we put in here is what do we want this command
+
+01:14.599 --> 01:15.560
+to actually do?
+
+01:15.560 --> 01:17.400
+So I'm gonna paste in this.
+
+01:17.400 --> 01:20.719
+Review the documentation file in the planning folder
+
+01:20.719 --> 01:24.040
+called, and then this thing, dollar arguments
+
+01:24.040 --> 01:25.599
+and block caps like that.
+
+01:25.599 --> 01:29.640
+And that just means, shove in here whatever the person
+
+01:29.640 --> 01:32.400
+using Cloud Code puts after the slash command.
+
+01:32.400 --> 01:33.480
+You'll see.
+
+01:33.480 --> 01:36.200
+Review the documentation file in the planning folder called
+
+01:36.200 --> 01:40.359
+dollar arguments and add questions, clarifications, or feedback
+
+01:40.359 --> 01:42.079
+to a new section at the end.
+
+01:42.079 --> 01:48.920
+Let's add along with any opportunities to simplify.
+
+01:48.920 --> 01:51.000
+That's such an important thing.
+
+01:51.000 --> 01:56.400
+Let's just make that part of what the dock review does. So we save that file.
+
+01:56.400 --> 02:02.719
+This is a file called docreview.md and just by virtue of saving the file inside a commands folder,
+
+02:02.719 --> 02:07.439
+we have just given ourselves a new slash command. Don't believe me? Let's give it a try.
+
+02:07.439 --> 02:18.840
+I'm going to bring up my favorite terminal like this. I, Opus 4.6 is here, oh my goodness Christmases come early.
+
+02:18.840 --> 02:22.379
+Okay, now I have new slash command.
+
+02:22.379 --> 02:26.000
+So I can press slash and now I can type doc review.
+
+02:26.000 --> 02:27.879
+Look at that doc review is there,
+
+02:27.879 --> 02:30.520
+it is a real slash command that we've got.
+
+02:30.520 --> 02:33.199
+And now what comes next is what we passed in
+
+02:33.199 --> 02:35.319
+as dollar arguments right there.
+
+02:35.319 --> 02:37.159
+So I'm gonna type out plan.md,
+
+02:37.159 --> 02:38.520
+that's what I want it to review. plan.md. That's what I wanted to review.
+
+02:38.520 --> 02:39.360
+Do this.
+
+02:39.360 --> 02:40.520
+Let's see what happens.
+
+02:40.520 --> 02:42.520
+It's unraveling apparently.
+
+02:42.520 --> 02:46.080
+I'll start by reading plan.md files to thoroughly review it.
+
+02:46.080 --> 02:48.439
+Now let me search the existing project state
+
+02:48.439 --> 02:50.020
+to understand it's doing stuff.
+
+02:50.020 --> 02:51.080
+It's hopefully going to realize
+
+02:51.080 --> 02:53.039
+that absolutely nothing has happened.
+
+02:53.039 --> 02:56.120
+And now it's got a yes, empty scaffolding.
+
+02:56.120 --> 02:56.960
+Very good.
+
+02:56.960 --> 02:58.039
+Thank you.
+
+02:58.039 --> 03:03.520
+Now let me add the review section to plan. So it's all doing exactly
+
+03:03.520 --> 03:08.879
+what we wanted. It's going through and doing the analysis and when I come back we will look
+
+03:08.879 --> 03:14.560
+at its results. Okay, it's completed. It's always best to close down previews that are already
+
+03:14.560 --> 03:19.599
+open because it sometimes caches a preview. We'll open that up again and let's go to the bottom.
+
+03:19.599 --> 03:22.759
+Let me hide that terminal for a second and see what's going on.
+
+03:22.759 --> 03:25.639
+Document review is a new section at the end.
+
+03:25.639 --> 03:27.000
+That seems to have worked.
+
+03:27.000 --> 03:30.919
+Our slash command has worked, but let's see what it actually is saying.
+
+03:30.919 --> 03:32.280
+Questions and clarifications.
+
+03:32.280 --> 03:35.080
+Brand colours header is orphaned.
+
+03:35.080 --> 03:36.520
+That's probably my fault.
+
+03:36.520 --> 03:40.159
+It appears as a dangling label below the colour scheme.
+
+03:40.159 --> 03:42.520
+The colour scheme breaks the numbers.
+
+03:42.520 --> 03:43.400
+Okay.
+
+03:43.400 --> 03:45.159
+Okay, we'll let it fix that.
+
+03:45.159 --> 03:47.680
+Docs versus planning and consistency.
+
+03:47.680 --> 03:48.840
+The key boundaries.
+
+03:48.840 --> 03:49.840
+Okay.
+
+03:49.840 --> 03:50.840
+Okay.
+
+03:50.840 --> 03:51.840
+That's my mistake.
+
+03:51.840 --> 03:53.800
+Script naming.
+
+03:53.800 --> 03:54.960
+Start windows versus start.
+
+03:54.960 --> 03:55.960
+Okay.
+
+03:55.960 --> 03:57.960
+That's another mistake by me.
+
+03:57.960 --> 03:59.439
+That was not made by Claude.ai.
+
+03:59.439 --> 04:02.879
+That was made by me making a version of it and then changing it.
+
+04:02.879 --> 04:03.879
+Amazing.
+
+04:03.879 --> 04:05.319
+Price history for sparklines.
+
+04:05.319 --> 04:07.060
+That seems like a good thing. Portfolio
+
+04:07.060 --> 04:13.500
+snapshots, what triggers recording, chat streaming, post-response format. Quantity
+
+04:13.500 --> 04:22.819
+is real, is shared fractional. Yeah, no, I think shared, shared, let's, I think, I think
+
+04:22.819 --> 04:28.560
+we will put here is quantity as real. We're going to say answer.
+
+04:29.680 --> 04:32.199
+Yes, fractional shares should be supported.
+
+04:36.439 --> 04:37.639
+Be supported.
+
+04:39.199 --> 04:41.079
+Okay, let's go back.
+
+04:44.040 --> 04:47.600
+Simplification, drop the massive API integration.
+
+04:47.600 --> 04:49.480
+Okay, drop user ID from all tables.
+
+04:49.480 --> 04:52.120
+No, accumulate Spark data on the front end,
+
+04:52.120 --> 04:52.959
+not the back end.
+
+04:52.959 --> 04:54.360
+No, I don't like that much.
+
+04:54.360 --> 04:57.379
+Use a simple periodic timer.
+
+04:57.379 --> 05:00.759
+Take a snapshot every 30 seconds, simple, and,
+
+05:00.759 --> 05:02.040
+(laughs)
+
+05:02.040 --> 05:03.740
+I don't like it simplification suggestions.
+
+05:03.740 --> 05:06.079
+I must be honest, simplify the,
+
+05:06.079 --> 05:07.240
+don't stream just for trouble.
+
+05:07.240 --> 05:08.480
+I agree with that.
+
+05:08.480 --> 05:10.319
+I thought that's what we were doing.
+
+05:10.319 --> 05:11.540
+That's for sure.
+
+05:11.540 --> 05:12.759
+Consider dropping the separate. So don't's for sure. Consider dropping the separate.
+
+05:12.759 --> 05:14.040
+So don't agree with that.
+
+05:14.040 --> 05:14.939
+Consider dropping player, right?
+
+05:14.939 --> 05:15.779
+Don't agree with that.
+
+05:15.779 --> 05:19.000
+Okay, so let's just leave in the one simplification.
+
+05:19.000 --> 05:23.000
+So this is an example again of the human oversight.
+
+05:23.000 --> 05:24.279
+It was important that we asked it
+
+05:24.279 --> 05:25.759
+for simplification opportunities,
+
+05:25.759 --> 05:27.839
+but I don't agree with many of them,
+
+05:27.839 --> 05:30.560
+and this is where you have to exercise some discretion,
+
+05:30.560 --> 05:32.360
+maybe ask more questions.
+
+05:32.360 --> 05:35.639
+This is where you add value, and where you need to be the boss,
+
+05:35.639 --> 05:36.480
+be the manager.
+
+05:36.480 --> 05:38.199
+We want massive API integration.
+
+05:38.199 --> 05:39.879
+That is a big part of this.
+
+05:39.879 --> 05:41.959
+We want to have user ID on all tables.
+
+05:41.959 --> 05:47.240
+So in the future, we can be able to support multiple users.
+
+05:47.240 --> 05:49.920
+That seems like just an oversimplification
+
+05:49.920 --> 05:51.240
+that won't help us.
+
+05:51.240 --> 05:53.120
+So does that.
+
+05:53.120 --> 05:57.120
+This seems like a great important point. Important.
+
+05:57.120 --> 06:00.519
+Let's spell it right.
+
+06:00.519 --> 06:01.519
+Important.
+
+06:01.519 --> 06:03.720
+Simplify the response flow.
+
+06:03.720 --> 06:04.720
+Don't stream.
+
+06:04.720 --> 06:06.879
+Just return.
+
+06:06.879 --> 06:09.319
+And yeah, that's exactly right.
+
+06:09.319 --> 06:10.319
+Exactly right.
+
+06:10.319 --> 06:12.759
+And all of this is, it's spot on.
+
+06:12.759 --> 06:14.360
+It is absolutely spot on.
+
+06:14.360 --> 06:15.360
+And I'm cool.
+
+06:15.360 --> 06:16.560
+Takes one to three seconds.
+
+06:16.560 --> 06:17.560
+Fast enough.
+
+06:17.560 --> 06:19.540
+Streaming is no meaningful improvement.
+
+06:19.540 --> 06:22.579
+That's a bad idea and that's also a bad idea.
+
+06:22.579 --> 06:25.699
+So now we've got this down to something much simpler,
+
+06:25.699 --> 06:28.180
+but I do agree with all of the points
+
+06:28.180 --> 06:29.899
+it made in the previous section.
+
+06:29.899 --> 06:32.779
+This seems like some really, really great points.
+
+06:32.779 --> 06:33.939
+Now it's important to understand
+
+06:33.939 --> 06:36.180
+what this adding the slash command has done
+
+06:36.180 --> 06:37.540
+and what it has not done.
+
+06:37.540 --> 06:41.759
+What it's done is it's given us a neat shortcut to prompting the
+
+06:41.759 --> 06:47.519
+the chord with that particular request to update the the plan document with the feedback.
+
+06:47.519 --> 06:52.240
+And that has happened, but all of that and this conversation is part of the conversation history.
+
+06:52.240 --> 06:58.160
+If I do slash context here, we should see that we've got some some conversation history now,
+
+06:58.160 --> 07:02.560
+if I scroll up here, not much, but there's a bit and that's what we've just discussed.
+
+07:02.560 --> 07:08.160
+What we've not done is what subagents are all about. Subagents are when you spawn
+
+07:08.160 --> 07:14.079
+like a separate LLM call to take care of something, then it might add to the document and then you
+
+07:14.079 --> 07:18.720
+come back, in which case as far as this main chat with Claude would be concerned, there would be no
+
+07:18.720 --> 07:27.079
+extra purple in that context and it wouldn't know about this conversation, but it would discover that plan.md has a new section with questions
+
+07:27.079 --> 07:34.180
+and that's the key distinction between using normal things like commands and skills versus using subagents
+
+07:34.180 --> 07:37.480
+that will become more clear when we actually use subagents.
+
+07:37.519 --> 07:41.240
+But for now, this is all part of the conversation history, so it knows all about this.
+
+07:41.240 --> 07:45.360
+So I'm going to say I've updated the comments
+
+07:57.279 --> 08:16.079
+I've updated the comments at the end of Plan.md with my feedback and removed the solutions throughout plan.md letting me
+
+08:16.079 --> 08:23.600
+know any questions.
+
+08:23.600 --> 08:24.920
+So this is an excellent way.
+
+08:24.920 --> 08:31.040
+This is an example of the balancing forces of using multiple cloud codes to be iterating, but we're doing it
+
+08:31.040 --> 08:35.120
+in quite a manual way that you're already familiar with from previous weeks. Obviously,
+
+08:35.120 --> 08:39.240
+what we're going to be heading towards this week is increasingly automating this process
+
+08:39.240 --> 08:44.519
+of things like reviews. That's what it's going to be all about. So it's reading the
+
+08:44.519 --> 08:48.799
+current state of the file. We'll go through this. I don't need to hold you up for this.
+
+08:48.799 --> 08:53.440
+You get the joke for this part. I will iterate. I will get this incorporated in the document,
+
+08:53.440 --> 08:55.039
+answering questions sensibly.
+
+08:55.039 --> 08:56.279
+And so should you.
+
+08:56.279 --> 08:58.039
+You're going to be going through this project too.
+
+08:58.039 --> 08:59.679
+You'll be taking it off in your own direction.
+
+08:59.679 --> 09:01.240
+There might be very different to mine.
+
+09:01.240 --> 09:02.799
+So you should iterate through,
+
+09:02.799 --> 09:04.419
+answer questions intelligently,
+
+09:04.419 --> 09:06.259
+get the document in great shape.
+
+09:06.259 --> 09:07.799
+And I'll see you back here in a sec.
+
+09:07.799 --> 09:09.440
+Okay, that conversation is done.
+
+09:09.440 --> 09:10.639
+The plan is updated.
+
+09:10.639 --> 09:12.519
+It removed the last section.
+
+09:12.519 --> 09:15.120
+It also convinced me to change my mind on the frontend
+
+09:15.120 --> 09:20.240
+simplification of one of those charts, the Spotlines Chart, which made a good case. It's very impressive.
+
+09:20.240 --> 09:27.279
+I love 4.6, Opus 4.6, the new model. So very good. Now, you may be thinking to yourself,
+
+09:27.279 --> 09:32.559
+hang on a minute, Ed. You mentioned that there are two ways to add a slash command, and we only
+
+09:32.559 --> 09:37.919
+use one of them. So what is the other way? Unless you've already realized the other way.
+
+09:37.919 --> 09:41.919
+You realize the other way? Let me show you the other way. So the other way is that
+
+09:41.919 --> 09:48.720
+skills by default immediately give you another slash command. If you do a slash, you can see
+
+09:48.720 --> 09:54.639
+that of the things that appears there, cerebras inference is one of the slash commands available
+
+09:54.639 --> 09:58.320
+to me. And that's because we have a skill called Siribras
+
+09:58.320 --> 10:02.919
+inference that you and I wrote. And so it's there already. So
+
+10:02.960 --> 10:07.600
+skills give you an instant slash command. And so to be honest,
+
+10:07.600 --> 10:10.840
+the reality is that that's how people do it these days. If you
+
+10:10.840 --> 10:13.799
+want, you can have commands done on this way. You don't need
+
+10:13.799 --> 10:16.559
+the like what they call the front matter, the yaml stuff at
+
+10:16.559 --> 10:19.399
+the top of skills, because it's just a just a sentence. So
+
+10:19.399 --> 10:20.480
+this is still supported
+
+10:20.480 --> 10:24.679
+and people still use it. But most of the time people just focus on skills now. It's the
+
+10:24.679 --> 10:29.120
+easiest way to give yourself a new slash command. And we can equally drag this thing
+
+10:29.120 --> 10:35.639
+over to to the skills section and give it a folder of its own and make a skills.md
+
+10:35.639 --> 10:40.519
+with a bit of yaml on the top of it. And it would all work great too. And that is often
+
+10:40.519 --> 10:42.120
+the way people do it. Those are the two different
+
+10:42.120 --> 10:46.600
+ways you can give yourself a new slash command and of course if it's in the
+
+10:46.600 --> 10:50.299
+dot-claud directory and you check it in to git then everyone else in your
+
+10:50.299 --> 10:54.399
+project team gets those commands too.
+

@@ -1,0 +1,770 @@
+WEBVTT
+
+00:00.000 --> 00:04.639
+I should mention now that I've been asked to approve a few things, a UV add from the database
+
+00:04.639 --> 00:10.080
+engineer and now creating the next project by the front end engineer and that's great.
+
+00:10.080 --> 00:15.199
+I haven't done dangerously skip permissions, which I might have done YOLO mode if I were using
+
+00:15.199 --> 00:20.000
+the sandbox that we were looking at before. But in this case, it's good that I get to approve these
+
+00:20.000 --> 00:27.760
+things as should you because I want to make sure I know what kinds of commands are being run, particularly when one in this kind of chaotic setup.
+
+00:27.760 --> 00:30.960
+And it's now a few minutes later and the first,
+
+00:30.960 --> 00:33.960
+the database engineer is completed, the SQL setup,
+
+00:33.960 --> 00:36.719
+and so the backend engineer has been kicked off.
+
+00:36.719 --> 00:39.119
+And you can now see that that is happening.
+
+00:39.119 --> 00:40.520
+There's a backend engineer.
+
+00:40.520 --> 00:42.280
+If I do my shift up and down,
+
+00:42.280 --> 00:44.640
+you can see that we can flip between now the team lead,
+
+00:44.640 --> 00:47.079
+the backend engineer and the front end engineer.
+
+00:47.079 --> 00:50.520
+It's interesting that it is a bit more serial than I was expecting.
+
+00:50.520 --> 00:54.320
+I guess I had some sense when I put in that problem to the beginning that they
+
+00:54.320 --> 00:57.159
+were all going to kick off and start working.
+
+00:57.159 --> 00:59.079
+Because you could imagine you could begin the back and
+
+00:59.079 --> 01:02.079
+work before the database is completely finished.
+
+01:02.079 --> 01:04.200
+And so it is quite serial.
+
+01:04.200 --> 01:05.000
+And that does make sense.
+
+01:05.000 --> 01:05.959
+That is a more structured,
+
+01:05.959 --> 01:09.019
+organized way of doing it that probably leads to better outcomes,
+
+01:09.019 --> 01:11.079
+a bit less chaotic and more managed.
+
+01:11.079 --> 01:12.840
+So it's probably a good thing to see that.
+
+01:12.840 --> 01:15.519
+And I imagine that by tweaking that initial prompt,
+
+01:15.519 --> 01:17.799
+I could have encouraged it to try and be
+
+01:17.799 --> 01:20.079
+a little bit more, put everything in parallel,
+
+01:20.079 --> 01:22.840
+run more concurrently, but you'd probably get worse outcomes.
+
+01:22.840 --> 01:26.299
+And I'm happy to see the backend engineer is now complete.
+
+01:26.299 --> 01:29.879
+The backend engineer has done 121 passing,
+
+01:29.879 --> 01:32.040
+all 101 tests are passing.
+
+01:32.040 --> 01:35.019
+It's been marked as complete, it's being shut down again,
+
+01:35.019 --> 01:36.879
+a bit more serial than I was expecting,
+
+01:36.879 --> 01:41.579
+and then spawning the AI engineer now unblocked.
+
+01:41.579 --> 01:42.959
+And in some ways you could also argue,
+
+01:42.959 --> 01:45.579
+perhaps this is sensing that the AI,
+
+01:45.579 --> 01:47.359
+the LLM engineer and the backend engineer
+
+01:47.359 --> 01:49.879
+could have been the same sub-agent,
+
+01:49.879 --> 01:52.400
+although perhaps it's good to preserve some context
+
+01:52.400 --> 01:53.700
+and keep them as separate,
+
+01:53.700 --> 01:54.640
+but they didn't need
+
+01:54.640 --> 02:00.560
+there to run concurrently or at least it was perhaps ill advised certainly our team coordinator
+
+02:00.560 --> 02:05.799
+felt it was ill advised to run them concurrently and I notice I'm pleased to see that it's pointing
+
+02:05.799 --> 02:10.060
+out that it needs to be through open router. So rebrass I'm going to be interested to see
+
+02:10.060 --> 02:18.240
+if it ends up using the skill properly as it should and I imagine it will and we will be able to tell from
+
+02:18.240 --> 02:21.699
+either it knows how to assign it to Siribras.
+
+02:21.699 --> 02:24.080
+This seems to be happening.
+
+02:24.080 --> 02:26.340
+I can see that we've got now,
+
+02:26.340 --> 02:28.139
+oh now we have more agents running.
+
+02:28.139 --> 02:28.939
+Let's take a look.
+
+02:28.939 --> 02:31.900
+We've got the team lead, the DevOps engineer,
+
+02:31.900 --> 02:34.439
+the front end engineer and the LLM engineer.
+
+02:34.439 --> 02:35.259
+They are all running.
+
+02:35.259 --> 02:39.039
+So for the first time we have four subagents, not subagents, four
+
+02:39.039 --> 02:42.979
+agents running in our team, it's all happening.
+
+02:42.979 --> 02:45.280
+There's just tons going on now.
+
+02:45.280 --> 02:52.300
+You can see that lots of different tool calls happening, and that's asking me now whether
+
+02:52.300 --> 02:54.900
+it can proceed with running some tests.
+
+02:54.900 --> 02:55.900
+Absolutely.
+
+02:55.900 --> 02:58.419
+I'm going to press two, Chamod commands.
+
+02:58.419 --> 02:59.419
+Okay.
+
+02:59.419 --> 03:04.000
+So it's wanting to give power to run scripts. This is a clear case of
+
+03:04.000 --> 03:10.000
+when I should press one and not two. I'm happy for it to change the ownership of these scripts
+
+03:10.000 --> 03:14.639
+to change them so I can execute them. But I want to approve that every time. And let's see what's
+
+03:14.639 --> 03:19.759
+this, that one, this is for testing. I'm happy for to press two for that. So making good decisions
+
+03:19.759 --> 03:23.400
+about whether to approve only in this case or always approve is important.
+
+03:23.639 --> 03:29.599
+We see these are all running. You can see how many tool uses have happened already and how many tokens are coming out of these,
+
+03:29.599 --> 03:35.840
+the front of engineer and 93,000 tokens. Lots going on. Docker build. I'm happy for it to be able to do that.
+
+03:36.319 --> 03:44.560
+I'm pressing two for that. That is the DevOps engineer running that. So you can see and again, that's fine.
+
+03:44.560 --> 03:45.919
+You can see lots going on.
+
+03:45.919 --> 03:48.159
+I'm approving for each of the different workers.
+
+03:48.159 --> 03:50.759
+And I see stuff as a Docker just launched.
+
+03:50.759 --> 03:52.439
+So I wasn't running Docker.
+
+03:52.439 --> 03:53.639
+And it saw that.
+
+03:53.639 --> 03:54.479
+That was my mistake.
+
+03:54.479 --> 03:55.560
+I should have opened Docker.
+
+03:55.560 --> 03:59.159
+It just launched Docker and started it.
+
+03:59.159 --> 04:00.000
+Good for it.
+
+04:00.000 --> 04:01.039
+Amazing.
+
+04:01.039 --> 04:02.639
+And that's definitely an example of something
+
+04:02.639 --> 04:04.520
+that Opus 4.6 could handle,
+
+04:04.520 --> 04:06.319
+that models couldn't handle in the past.
+
+04:06.319 --> 04:07.599
+That's my mistake.
+
+04:07.599 --> 04:10.960
+And on it goes, see you in a second.
+
+04:10.960 --> 04:14.240
+Okay, we're now done with everything except it's explaining,
+
+04:14.240 --> 04:17.399
+just the LLM engineers done, the front end engineer is done,
+
+04:17.399 --> 04:19.120
+we're just waiting for the DevOps engineer
+
+04:19.120 --> 04:21.220
+to finish building, and then it's going to pass
+
+04:21.220 --> 04:23.399
+over to the integration tester.
+
+04:23.399 --> 04:26.160
+And I'm interested, I'm a bit concerned that
+
+04:26.160 --> 04:28.519
+if the integration tester finds problems, how
+
+04:28.519 --> 04:34.040
+is it going to be able to to data get back to the the agents that have completed.
+
+04:34.040 --> 04:36.079
+So that's going to be one to watch out for.
+
+04:36.079 --> 04:37.879
+See how that coordination works.
+
+04:37.879 --> 04:41.759
+Okay, everything has now completed except the integration tester.
+
+04:41.759 --> 04:45.959
+And so it is spawning the integration tester as it says the final agent.
+
+04:45.959 --> 04:50.920
+We'll see how it handles any problems that it has, but that is now the only other agent
+
+04:50.920 --> 04:55.000
+running except for our boss, our team lead.
+
+04:55.000 --> 04:56.000
+There you go.
+
+04:56.000 --> 04:59.000
+I just press shift up so I could see that.
+
+04:59.000 --> 05:03.000
+And I remember control T is how I toggle the task list.
+
+05:03.000 --> 05:04.439
+There's the task list.
+
+05:04.439 --> 05:10.240
+Control T toggles the task list off and on and shift up and down is how you flip between
+
+05:10.240 --> 05:11.959
+the different team members.
+
+05:11.959 --> 05:12.879
+Good shortcut keys to know.
+
+05:13.759 --> 05:20.639
+Now it's running the integration tests. We'll see how this goes and then we see what handles
+
+05:20.639 --> 05:25.040
+any problems with the integration tests and then we'll see where the thing works.
+
+05:25.040 --> 05:30.480
+So it's been testing for quite a while, I have to say, it's been going for 11 minutes and I can see
+
+05:30.480 --> 05:34.879
+here the integration tests have found five APA response mismatches
+
+05:34.879 --> 05:36.560
+causing a front end crash.
+
+05:36.560 --> 05:39.540
+And the team leaders good catch.
+
+05:39.540 --> 05:41.000
+Yes, fix blah, blah, blah.
+
+05:41.000 --> 05:42.240
+And it says the integration test
+
+05:42.240 --> 05:46.079
+that is now fixing the response format mismatches.
+
+05:46.079 --> 05:47.920
+So I was hoping it was going to be
+
+05:47.920 --> 05:49.800
+the original front end developer
+
+05:49.800 --> 05:51.279
+that would fix the problems.
+
+05:51.279 --> 05:52.959
+I guess it wants the integration test
+
+05:52.959 --> 05:54.759
+to do the fixing.
+
+05:54.759 --> 05:56.519
+I will let it do its thing. I'm not going to contradict. I will let it do its thing.
+
+05:56.519 --> 05:57.959
+I'm not going to contradict.
+
+05:57.959 --> 06:00.480
+We will let it finish, see where it gets to,
+
+06:00.480 --> 06:02.160
+see if that was a good pattern,
+
+06:02.160 --> 06:03.920
+or maybe you should have prompted it differently
+
+06:03.920 --> 06:06.279
+at the beginning, or maybe even I should jump in now.
+
+06:06.279 --> 06:08.959
+But for this one, I would rather just let it be,
+
+06:08.959 --> 06:11.399
+let it complete, let's see where it gets.
+
+06:11.399 --> 06:13.680
+And that is a wrap.
+
+06:13.680 --> 06:17.120
+So it completed all of the tasks.
+
+06:17.959 --> 06:21.199
+It found the bug with the five API responses.
+
+06:21.199 --> 06:27.120
+A minor note, the CSS let overlap. But non-blocking, I guess we'll see that.
+
+06:27.120 --> 06:31.000
+To run the app, it's got the instructions. Well, we shouldn't need to do that because
+
+06:31.000 --> 06:33.800
+there should be -- oh, there we go. It says there's a script, start Mac.
+
+06:33.800 --> 06:46.939
+It's finished. The teammate shut down gracefully. The team is cleaned up the finally project build is complete six agents six tasks all done the app is ready to run so there we've got
+
+06:46.939 --> 06:53.040
+lots of stuff we've got lots of files changed fair enough I think it's time
+
+06:53.040 --> 07:03.000
+for us to try this out okay I'm gonna start a new terminal window I am going scripts slash start Mac.
+
+07:03.480 --> 07:04.319
+Oh, that's not good.
+
+07:04.319 --> 07:06.100
+What have we got here?
+
+07:06.100 --> 07:10.319
+Start, sorry, start_mac.
+
+07:10.319 --> 07:11.160
+(laughs)
+
+07:11.160 --> 07:12.000
+There we go.
+
+07:12.000 --> 07:13.360
+Okay, here we go.
+
+07:13.360 --> 07:17.399
+And it's coming up at localhost to 8,000,
+
+07:17.399 --> 07:18.560
+but that didn't seem to run.
+
+07:18.560 --> 07:20.879
+There we go, bam.
+
+07:20.879 --> 07:23.920
+Okay, that's pretty cool.
+
+07:23.920 --> 07:24.040
+This is the market data watch list on the left. Okay, that's pretty cool.
+
+07:24.040 --> 07:26.560
+This is the market data watch list on the left.
+
+07:26.560 --> 07:28.120
+You can see that it's flashing.
+
+07:28.120 --> 07:29.480
+We can see everything going on.
+
+07:29.480 --> 07:32.019
+We've got an AI assistant, we've got a portfolio,
+
+07:32.019 --> 07:34.759
+we've got 10,000 in cash.
+
+07:34.759 --> 07:36.040
+Let's see now, what do we do?
+
+07:36.040 --> 07:37.160
+We can do ticker.
+
+07:37.160 --> 07:40.240
+Let's try and do some buying.
+
+07:40.240 --> 07:42.560
+Let's buy some JP Morgan stock, why not?
+
+07:42.560 --> 07:45.079
+Two, buy.
+
+07:45.079 --> 07:46.000
+BAM, there we go,
+
+07:46.000 --> 07:47.480
+JP Morgan has appeared here.
+
+07:47.480 --> 07:50.519
+The heat map shows it at zero.
+
+07:50.519 --> 07:52.480
+This is amazing.
+
+07:52.480 --> 07:54.279
+Okay, now why is there we go?
+
+07:54.279 --> 07:55.240
+It has just changed.
+
+07:55.240 --> 07:57.399
+The heat map has changed that trade.
+
+07:57.399 --> 07:59.800
+And this is of course all fake market data.
+
+07:59.800 --> 08:02.920
+That is a negative and now it's a positive.
+
+08:02.920 --> 08:04.180
+That's nice.
+
+08:04.180 --> 08:05.279
+As we go into the plus,
+
+08:05.279 --> 08:07.079
+what else should we get from here?
+
+08:07.079 --> 08:10.379
+Let's add in some Google stock.
+
+08:10.379 --> 08:15.040
+Take a Google quantity and look at that the cell,
+
+08:15.040 --> 08:17.480
+just moved across, that's a little bit of a blip,
+
+08:17.480 --> 08:18.680
+let's buy that.
+
+08:18.680 --> 08:22.040
+Now it comes in our portfolio heat map right here.
+
+08:22.040 --> 08:23.899
+What happens if we click on here,
+
+08:23.899 --> 08:25.500
+what does this price chart here give us?
+
+08:25.500 --> 08:26.459
+I'm not sure.
+
+08:27.439 --> 08:30.800
+This is the portfolio P and L showing right here.
+
+08:30.800 --> 08:32.320
+This is all pretty cool.
+
+08:32.320 --> 08:36.240
+It's got the right color scheme with the, my favorite colors but also looking very
+
+08:36.240 --> 08:37.519
+active.
+
+08:37.519 --> 08:42.100
+This is with, with perhaps a couple of things that might be improved.
+
+08:42.100 --> 08:48.480
+It looks like we're getting some zero shot success working first time but now we have
+
+08:48.480 --> 08:50.480
+to try out the AI assistant.
+
+08:50.480 --> 08:51.480
+Okay.
+
+08:51.480 --> 08:55.639
+So let's go over to the AI assistant and say,
+
+08:55.639 --> 09:00.639
+please add SPY to the watch list.
+
+09:04.600 --> 09:05.679
+See what it does.
+
+09:06.639 --> 09:08.279
+It's thinking about that.
+
+09:08.279 --> 09:10.120
+SPY has been added to your watch list
+
+09:10.120 --> 09:12.600
+and there it is on the watch list.
+
+09:12.600 --> 09:15.519
+It doesn't seem to be changing though. That's interesting.
+
+09:16.879 --> 09:33.759
+Okay, then we'll say please buy one share of V. Let's see what that does. And it just did
+
+09:33.759 --> 09:36.480
+executed purchase of one share of V at market price.
+
+09:36.480 --> 09:38.919
+Bam, and there it is on the heat map.
+
+09:38.919 --> 09:44.759
+And this heat map is obviously like one where larger boxes represent more,
+
+09:44.759 --> 09:49.480
+more portfolio weight in dollar terms.
+
+09:49.480 --> 09:50.639
+That's really cool.
+
+09:50.639 --> 09:51.759
+There's a lot to take in here.
+
+09:51.759 --> 09:54.480
+You can tell I'm slightly frazzled as I try and absorb all of this.
+
+09:54.480 --> 09:58.480
+This seems to be a bit of an error right here that this price chart doesn't
+
+09:58.480 --> 10:03.919
+seem to fill in, but this is all working. It's able to respond here. The overall portfolio
+
+10:03.919 --> 10:11.919
+P&L, this line appears not to be moving, but it's pretty good. I would say that this is an
+
+10:11.919 --> 10:20.919
+impressive setup. Yeah, you can see everything is happening here. The portfolio price is adjusting, the amount of cash I've got has come down of course. It's
+
+10:20.919 --> 10:30.440
+looking really excellent. Please give me some trading advice. See what it says if
+
+10:30.440 --> 10:35.320
+we do this. Your portfolio is cash heavy with small
+
+10:35.320 --> 10:43.840
+position and Google. Consider rebalancing. Oh and I just noticed that the portfolio P&L is changing like this.
+
+10:43.840 --> 10:44.840
+That's great.
+
+10:44.840 --> 10:47.279
+Please do this for me.
+
+10:47.279 --> 10:49.039
+Let's see how that does.
+
+10:49.039 --> 10:53.320
+Just giving it a request to do some portfolio rebalancing.
+
+10:53.320 --> 10:55.279
+Everything appears to have stopped.
+
+10:55.279 --> 10:56.519
+That's thinking.
+
+10:56.519 --> 10:58.120
+That's caused it some consternations.
+
+10:58.120 --> 10:59.120
+There we go.
+
+10:59.120 --> 11:03.080
+Sold your two shares of JP Morgan to free cash for rebalancing.
+
+11:03.080 --> 11:05.600
+Okay, fair enough.
+
+11:05.600 --> 11:06.759
+I don't think that was a great move,
+
+11:06.759 --> 11:09.799
+but if what it wanted to do was to bring in more cash
+
+11:09.799 --> 11:12.000
+into equity, but there we go.
+
+11:12.000 --> 11:15.320
+It's working, it's cool, it's amazing to see this.
+
+11:15.320 --> 11:18.559
+It definitely has the live dynamic sense.
+
+11:18.559 --> 11:20.960
+And most importantly, it's hanging together.
+
+11:20.960 --> 11:24.679
+It's the functionality, is there, it's tested right.
+
+11:24.679 --> 11:27.039
+A couple of quibbles like this section here
+
+11:27.039 --> 11:32.159
+that seems to be a bit, a bit, a bit unawesome. Other than that, I give this high marks. How
+
+11:32.159 --> 11:36.320
+about you? Okay, well, I've closed that window down. I'm intrigued to see that I can bring
+
+11:36.320 --> 11:41.120
+it back up and it just continues where it was just as we'd specified. Now, what we could
+
+11:41.120 --> 11:45.559
+do now is go in and fix those various bugs, give it some feedback and fix them. But I think
+
+11:45.559 --> 11:49.399
+it's more interesting for us to give this zero shot idea another
+
+11:49.399 --> 11:52.000
+try with some other workflows.
+
+11:52.000 --> 11:59.399
+So let's now stop this server scripts slash stop underscore Mac dot shell.
+
+11:59.399 --> 12:01.000
+It's stopped.
+
+12:01.000 --> 12:02.679
+Okay, great.
+
+12:02.679 --> 12:06.240
+And now we're going to do a git status and see everything that's in here.
+
+12:06.240 --> 12:08.759
+There's a lot of stuff that's been built.
+
+12:08.759 --> 12:12.000
+Okay. There's a lot of stuff that's been built. Okay, now I'm going to do a git add dot.
+
+12:12.000 --> 12:14.240
+That's putting everything into git.
+
+12:15.279 --> 12:18.320
+And so that's staged for commit.
+
+12:18.320 --> 12:20.639
+Let's do another git status and see what that looks like.
+
+12:20.639 --> 12:22.799
+Now lots of things have been set up here.
+
+12:23.919 --> 12:27.279
+And let's just make sure that there's nothing in here that looks concerning.
+
+12:27.279 --> 12:28.639
+It hasn't checked in.
+
+12:30.320 --> 12:31.440
+Node modules or anything.
+
+12:31.440 --> 12:33.940
+No, everything is correctly get ignored
+
+12:33.940 --> 12:37.360
+and there's a doc.ignore and there's a.env.example
+
+12:37.360 --> 12:39.039
+but not a.env file.
+
+12:39.039 --> 12:40.879
+That all seems great.
+
+12:42.120 --> 12:46.080
+Okay, then just double checking.
+
+12:46.080 --> 12:48.059
+Good, then what we're now going to do
+
+12:48.059 --> 12:52.440
+is now do a git push but to this branch,
+
+12:52.440 --> 12:55.440
+we're gonna commit and then push to agent dash teams.
+
+12:55.440 --> 13:11.039
+So git commit minus m agent teams v1 git push origin agent teams and off it has gone.
+
+13:11.039 --> 13:18.559
+So that is now been pushed to that branch agent teams. Excellent. Look at what we can do now. Thanks to the power
+
+13:18.559 --> 13:25.440
+of Git. We can do Git checkout main and all of our code flips back to where we were before.
+
+13:25.440 --> 13:31.200
+Bam! Gone. Okay. Great. Now on to the next.
+

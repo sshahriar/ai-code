@@ -1,0 +1,10 @@
+# Dependencies and secrets (also covered by root .gitignore)
+node_modules
+dist
+.env
+.env.local
+.DS_Store
+*.log
+
+# Large generated transcript mirrors are rebuilt by build:content
+content/transcripts/

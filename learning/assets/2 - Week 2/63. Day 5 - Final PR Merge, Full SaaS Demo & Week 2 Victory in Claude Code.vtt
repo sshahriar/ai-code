@@ -1,0 +1,605 @@
+WEBVTT
+
+00:00.000 --> 00:03.399
+Okay, and here we are, back in Cloud Code.
+
+00:03.399 --> 00:04.400
+Let's look at the context.
+
+00:04.400 --> 00:05.599
+I'm sure it's very full.
+
+00:06.599 --> 00:07.799
+Let's have a look at it.
+
+00:08.400 --> 00:09.500
+Not too bad, actually.
+
+00:09.500 --> 00:11.400
+It must have had to do a compact to have got there.
+
+00:11.400 --> 00:12.599
+I didn't spot that.
+
+00:12.599 --> 00:20.300
+Okay, let's just say, please go ahead and merge the PR locally
+
+00:21.800 --> 00:27.000
+and push and then switch the branch to main.
+
+00:33.359 --> 00:34.719
+Let it do its thing.
+
+00:34.719 --> 00:38.320
+And then we are going to straight after that,
+
+00:40.219 --> 00:43.380
+'cause we're going to done, merged and pushed,
+
+00:43.380 --> 00:59.039
+and now we'll say, please update claud.md to reflect the latest project status. Let it do its thing.
+
+00:59.039 --> 01:05.200
+And then even though the context is quite clear, I still want to do it clear. I still
+
+01:05.200 --> 01:10.359
+want to reset it because if it has compacted, as I say, that can sometimes compress the memory
+
+01:10.359 --> 01:11.519
+in ways that we wouldn't want.
+
+01:11.519 --> 01:16.519
+It's good to have it kind of be properly set.
+
+01:17.560 --> 01:19.239
+Done, all updated.
+
+01:19.239 --> 01:22.439
+Okay, with that, we are ready for the final,
+
+01:22.439 --> 01:24.140
+the final Azure issue.
+
+01:24.140 --> 01:25.900
+So we do a slash clear.
+
+01:27.439 --> 01:29.799
+We do a slash context.
+
+01:29.799 --> 01:32.560
+Let's take a look at it, make sure it's nice and clean. Yes, it is.
+
+01:32.560 --> 01:37.519
+Still lots of MCP tools. And you know the deal. You know what we have to do next.
+
+01:37.519 --> 01:45.840
+Okay, I'm going to do slash MCP. I'm going to go to Atlassian. I'm going to say Reauthenticate.
+
+01:45.840 --> 01:58.879
+Up it comes, approve, scroll down, accept, then back we go to Cloud Code. now now up a few times let's see here it is
+
+01:58.879 --> 02:10.060
+feature dev alright so we we don't want yeah we just delete all of this and we're
+
+02:10.060 --> 02:20.960
+going to implement the last of our tickets which is PL7 and then also test and push to the change to GitHub and then then we are really
+
+02:20.960 --> 02:39.000
+done with this project in which we will have done in just a matter of an hour. So implement And submit a PR.
+
+02:39.000 --> 02:40.479
+That's all we have.
+
+02:40.479 --> 02:42.039
+Let's do it.
+
+02:42.039 --> 02:43.400
+Let's do it.
+
+02:43.400 --> 02:46.759
+Hopefully it can get PL7 okay.
+
+02:46.759 --> 02:48.159
+Yes, it looks like it.
+
+02:48.159 --> 02:50.800
+Support multiple users and final polish.
+
+02:50.800 --> 02:52.080
+Off it goes.
+
+02:52.080 --> 02:53.979
+He will let you know if there are good questions.
+
+02:53.979 --> 02:56.199
+Otherwise I will see you on the other side.
+
+02:56.199 --> 02:59.400
+Okay, I'm again totally in shock about this,
+
+02:59.400 --> 03:00.219
+but it completed
+
+03:00.759 --> 03:06.259
+No nothing that I needed to intervene on except the usual set of questions work again good questions
+
+03:06.259 --> 03:12.460
+This is everything that was built. It's everything that I could have wanted. It's again a huge number of changes
+
+03:12.580 --> 03:14.780
+But the big question is will it work?
+
+03:15.520 --> 03:28.879
+Let's find out. Let's go over here. Let's let's just stop the server. So scripts/stopmac and then we will do startmac and please have
+
+03:28.879 --> 03:34.159
+a drumroll. First of all, will it come up? Okay, it came up and now we will give it a
+
+03:34.159 --> 03:41.919
+try. Here we go, drumroll. Up comes something. Okay, so it's coming up with something which
+
+03:41.919 --> 03:45.199
+allows me to sign in but I don't need to sign in to use it.
+
+03:45.199 --> 03:52.080
+That's an interesting angle. I guess that's uh let's give it a try. A pilot agreement
+
+03:53.199 --> 04:01.439
+for a trial please. Great, a pilot agreement is fine. Let's just see what happens if we
+
+04:02.800 --> 04:07.360
+press sign in here. There is this isn't't really nice, to sign in sign up screen.
+
+04:08.280 --> 04:10.800
+So yeah, we'll go straight to the sign up screen.
+
+04:10.800 --> 04:15.800
+We'll say add, add with donna.com.
+
+04:17.279 --> 04:20.160
+At least, that many characters, okay.
+
+04:20.160 --> 04:21.439
+Let's say,
+
+04:22.519 --> 04:27.240
+"Claud Code for the win."
+
+04:28.319 --> 04:29.319
+Okay.
+
+04:29.319 --> 04:31.439
+(laughs)
+
+04:31.439 --> 04:33.560
+All right, so now we're in as me.
+
+04:33.560 --> 04:34.600
+Look, there's this little thing.
+
+04:34.600 --> 04:37.639
+My documents sign out and it kept me,
+
+04:37.639 --> 04:39.600
+it kept the context of this.
+
+04:39.600 --> 04:40.879
+That's pretty impressive.
+
+04:40.879 --> 04:42.680
+So I guess it's like you can use it
+
+04:42.680 --> 04:44.639
+without needing to sign in and then you can
+
+04:44.639 --> 04:46.600
+and now we seem to be in.
+
+04:46.600 --> 04:48.879
+So first time in the name of the provider,
+
+04:49.439 --> 04:54.980
+So first time in the name of the provider, please come up with placeholder names.
+
+04:56.160 --> 04:59.319
+Okay, next the purpose,
+
+04:59.319 --> 05:03.879
+what is being trialed and AI assistant,
+
+05:03.879 --> 05:14.480
+an AI agent app for the legal profession.
+
+05:15.720 --> 05:16.680
+There we go. Got it.
+
+05:16.680 --> 05:18.240
+How long will the pilot run?
+
+05:18.240 --> 05:20.079
+Let's go for a 90 day pilot.
+
+05:21.839 --> 05:22.680
+Great.
+
+05:22.680 --> 05:24.639
+We'll be evaluating the,
+
+05:26.519 --> 05:30.220
+evaluating the business impact.
+
+05:32.800 --> 05:33.639
+Okay.
+
+05:33.639 --> 05:34.120
+Sounds clear.
+
+05:34.120 --> 05:57.000
+Liability cap, liability cap, $20,000, effective, effective today. And then New York and New York.
+
+05:59.879 --> 06:00.899
+Fair enough.
+
+06:04.879 --> 06:05.920
+That seems pretty impressive.
+
+06:05.920 --> 06:06.879
+That's done.
+
+06:06.879 --> 06:08.639
+There was, it was a bit silent at the end there,
+
+06:08.639 --> 06:12.720
+but there's now download PDF and there's save.
+
+06:12.720 --> 06:14.600
+Press save, save the document.
+
+06:14.600 --> 06:17.040
+We'll call it that, save document, document saved.
+
+06:17.040 --> 06:19.600
+Back we come. Okay, fair enough.
+
+06:20.480 --> 06:24.720
+I guess I can press a new document, it's going to come back to a blank sheet, that's very
+
+06:24.720 --> 06:31.759
+impressive indeed. And now we can sign out and come back in. So here we go, come here, sign out,
+
+06:32.560 --> 06:40.959
+sign in, oh wait, hang on, if I just come out of this, oh yeah, okay, so it's all clear. There's no more icon to go back to that document. Sign in, add, add,
+
+06:40.959 --> 06:54.180
+add would, donut.com, cloud code for the win. And we're in, not now. And let's have a look at this document preview,
+
+06:54.180 --> 07:02.399
+come down here, my documents, open. Wow, Wow, wow, wow.
+
+07:02.399 --> 07:04.000
+That is pretty impressive.
+
+07:04.000 --> 07:07.040
+I've got to say, that is like a first hit.
+
+07:07.040 --> 07:10.160
+Maybe there's something maybe I didn't quite like the way it gave us, sort of empty answer
+
+07:10.160 --> 07:13.199
+at the end, but it was pretty clear.
+
+07:13.199 --> 07:15.579
+And yeah, so that's got persistence now.
+
+07:15.579 --> 07:19.399
+It's got user management, and we saved our document and we brought it back.
+
+07:19.399 --> 07:22.319
+The look and feel looks super polished.
+
+07:22.319 --> 07:26.399
+It looks very nice indeed. I'm really really happy with that.
+
+07:27.439 --> 07:34.240
+Very nice. Very nice. I'm blown away. I'm absolutely blown away.
+
+07:34.240 --> 07:37.759
+Yeah, I'm spending more time with it. I'm super impressed. I think that that idea that
+
+07:37.759 --> 07:44.240
+it presents you with a sort of not logged in way of exploring it and then you have to sign in
+
+07:44.240 --> 07:47.379
+is very clever and I guess it is a good, it's the
+
+07:47.379 --> 07:51.939
+freemium pattern that is very common with what they call product-led growth, PRG.
+
+07:51.939 --> 07:56.680
+But yeah, it didn't ask me that question, it just did it and I love it. If I were to
+
+07:56.680 --> 07:59.480
+critique, I would say that there are still some things that could have done a little
+
+07:59.480 --> 08:03.360
+bit better like that message at the end. And also, I believe, if I remember, in the
+
+08:03.360 --> 08:10.120
+Dura issue we specified that we wanted a legal disclaimer saying that this wasn't and this was only for further
+
+08:10.620 --> 08:13.699
+Review and I haven't been able to see that written anywhere
+
+08:13.699 --> 08:20.639
+So I think it missed that which you just go just goes to show that it's not perfect even with its review and so on
+
+08:21.139 --> 08:25.920
+So that's that's an example of where there's still it's a role for us to come back and double check
+
+08:26.120 --> 08:32.860
+But I I would say that I don't know what you think, but this is definitely exceeding expectations
+
+08:32.860 --> 08:34.240
+as far as I'm concerned.
+
+08:34.240 --> 08:39.480
+This is as good a proof as any that we have passed this inflection point where you can
+
+08:39.480 --> 08:43.580
+be extremely productive with this kind of project.
+
+08:43.580 --> 08:48.659
+And it lends itself particularly well to these sorts of projects which are quite well contained
+
+08:48.659 --> 08:50.759
+and which can be nicely defined.
+
+08:50.759 --> 08:53.039
+But as we'll see as we get into bigger challenges
+
+08:53.039 --> 08:57.960
+next week, you can take it beyond this kind of thing very much as well. And I think the
+
+08:57.960 --> 09:03.799
+fact that we tied it together with Jura and with GitHub is particularly good. And with
+
+09:03.799 --> 09:08.080
+that, let's just quickly pop over to Git and make sure that the PR is waiting for us
+
+09:08.080 --> 09:18.100
+to review. And here we are in the repo. There is indeed one pull request no surprise. It's telling us about PL7 that's been completed and it's telling us that there's a remarkable
+
+09:18.740 --> 09:25.700
+1,500 lines of code added across 22 different files that were edited as part of this PR and
+
+09:25.860 --> 09:31.659
+It's all pretty impressive stuff and with that I think we can tell Claude to go ahead and merge
+
+09:32.019 --> 09:35.740
+please merge the PR locally and
+
+09:35.740 --> 09:40.460
+please merge the PR locally and
+
+09:46.639 --> 09:49.259
+Then push and then switch to the main branch
+
+09:57.440 --> 10:05.000
+Alright, so we will let it do its thing. That's very good indeed. We will then just update Cloud.md and we will then declare victory at this point.
+
+10:05.000 --> 10:15.000
+So please update Cloud.md with latest project status.
+
+10:15.000 --> 10:24.039
+And so again, we've seen end-to-end integration across Jira and Git. We've also seen the new skill that we added that allows us to rebrass
+
+10:24.039 --> 10:29.000
+the super-fast inference, which is why the responses from the AI were so fast.
+
+10:29.000 --> 10:31.480
+Behind the scenes was also using structured outputs
+
+10:31.480 --> 10:34.919
+so that it could apply the different fields in the document.
+
+10:34.919 --> 10:37.799
+And yeah, we have built a proper SAS app,
+
+10:37.799 --> 10:41.399
+and you can see that it's not like this is so far from being
+
+10:41.399 --> 10:43.759
+an app that truly could be commercialized.
+
+10:43.759 --> 10:46.120
+It needs a proper database that persists behind it,
+
+10:46.120 --> 10:47.519
+which would be fairly easy to do
+
+10:47.519 --> 10:49.360
+and it needs to be deployed to production,
+
+10:49.360 --> 10:51.200
+which is something that we plan on doing.
+
+10:51.200 --> 10:56.200
+But let's see, it's now completed Cloud MD as well.
+
+10:57.279 --> 10:59.399
+That is done, let's look at the context.
+
+11:02.840 --> 11:09.279
+It is a very full context. I guess it didn't need to compact. We got everything done. I
+
+11:09.279 --> 11:15.600
+am declaring victory on this product. I think that we have built something quite impressive.
+
+11:15.600 --> 11:23.320
+And that draws to conclusion. Project 3 and the end of week 2 of this program. And I've
+
+11:23.320 --> 11:26.000
+taken the bold step of coloring in weeks one and two
+
+11:26.000 --> 11:29.620
+darker. Maybe I should have done it after week one but it certainly feels now like
+
+11:29.620 --> 11:34.159
+this is a major milestone. The assignment for you of course hopefully is
+
+11:34.159 --> 11:39.519
+obvious. You have to go and repeat this and build your own SaaS product. You can
+
+11:39.519 --> 11:42.440
+repeat what I've done but do something that's like takes it in different
+
+11:42.440 --> 11:45.980
+direction. If you want it's kind of fun but you could also do something else.
+
+11:45.980 --> 11:48.799
+Like if you think of this kind of, this idea,
+
+11:48.799 --> 11:51.039
+this general idea of having some templates
+
+11:51.039 --> 11:53.720
+that apply to your business and being able to have a chat
+
+11:53.720 --> 11:55.320
+that then does something that's templates
+
+11:55.320 --> 11:56.960
+and produces some documents
+
+11:56.960 --> 11:58.960
+that are unavailable to anyone that logs in.
+
+11:58.960 --> 12:00.159
+It makes a lot of sense,
+
+12:00.159 --> 12:02.919
+but do it by putting geo tickets in there
+
+12:02.919 --> 12:06.179
+or you could use GitHub issues if you prefer,
+
+12:06.179 --> 12:08.320
+and then just have it run end to end
+
+12:08.320 --> 12:12.080
+and use the Cloud Code feature dev as as I did that
+
+12:12.080 --> 12:17.679
+plugin, which is so powerful and dividing that into a few tickets. So you still are at the helm,
+
+12:17.679 --> 12:22.320
+you're still guiding it through, answering the questions at each step. That is how to get these
+
+12:22.320 --> 12:28.399
+kinds of spectacular results that we had today. And when you have spectacular results, please
+
+12:28.399 --> 12:32.399
+share them, share them wherever you like to share things, but mostly on LinkedIn.
+
+12:33.200 --> 12:37.200
+And if you share them and you mention it's like the week two projects and you tag me,
+
+12:37.200 --> 12:43.279
+then I will see that and I will jump in and congratulate you to amplify your success.
+
+12:43.279 --> 12:46.399
+It's such an easy way to draw attention to your achievements.
+
+12:46.399 --> 12:51.840
+And look, if you see that I'm doing that to somebody else on the course, then please weigh in as well.
+
+12:51.840 --> 12:53.679
+Jump in and congratulate them.
+
+12:53.679 --> 12:56.200
+And that just helps to have the whole community
+
+12:56.200 --> 12:57.440
+supporting each other.
+
+12:57.440 --> 12:59.919
+And then hopefully they will also do that to you.
+
+12:59.919 --> 13:02.840
+And it's a way to make sure that we are amplifying
+
+13:02.840 --> 13:05.840
+everyone's achievements, drawing more attention
+
+13:05.840 --> 13:08.080
+to the expertise that's being built,
+
+13:08.080 --> 13:11.120
+and also drawing attention to how phenomenal
+
+13:11.120 --> 13:15.759
+Cloud Code is and just how amazing these projects can be.
+
+13:15.759 --> 13:19.580
+And I have one request myself, which is my editor would kill me if I didn't mention
+
+13:19.580 --> 13:25.000
+that to the extent that you're able to or willing to rate the course on Udemy,
+
+13:25.000 --> 13:26.600
+it makes a huge difference.
+
+13:26.600 --> 13:31.700
+That is the main way that Udemy decides whether or not to tell other people about this course.
+
+13:31.700 --> 13:37.399
+So building up this community, also massively helpful if you're able to rate it in Udemy.
+
+13:37.399 --> 13:39.620
+So I would hugely appreciate it.
+
+13:39.620 --> 13:42.259
+But anyways, take a moment to celebrate the fact
+
+13:42.259 --> 13:45.940
+that you are now a professional, a professional
+
+13:45.940 --> 13:48.440
+at whatever we call it, vibe engineering,
+
+13:48.440 --> 13:52.899
+using CLI platforms like Cloud Code to build projects.
+
+13:52.899 --> 13:55.580
+And if this week was about getting professional,
+
+13:55.580 --> 13:58.220
+next week is about going crazy.
+
+13:58.220 --> 13:59.820
+Next week is mad.
+
+13:59.820 --> 14:02.559
+We're going to be doing spectacular things with
+
+14:02.559 --> 14:08.720
+agents and hooks and bigger co-bases and then we're going to go to swarms and orchestrators.
+
+14:08.720 --> 14:17.360
+And honestly, it's just mad. It's wild. I can't wait to show you next week. You are absolutely
+
+14:17.360 --> 14:23.700
+going to love it. But in the meantime, final moment to celebrate where you've got to now.
+
+14:23.700 --> 14:26.720
+You are two thirds of the way through this program.
+
+14:26.720 --> 14:29.299
+67% of the way through.
+
+14:29.299 --> 14:30.299
+Massive congratulations.
+
+14:30.299 --> 14:32.879
+I can't wait to see you in Week 3.
+

@@ -1,0 +1,599 @@
+WEBVTT
+
+00:00.000 --> 00:04.719
+Okay, now I'm going to press the open button. You can also get to this by going file. I go into
+
+00:04.719 --> 00:13.119
+projects. I go into pre-legal. I say open. And now we have our new, our new open VS code projects.
+
+00:13.119 --> 00:19.519
+We say, yes, I trust the authors. Here we go. We are in here. This is the beginning of our new project.
+
+00:19.519 --> 00:27.039
+Okay, so I'm going to bring up a terminal again with command and then the the backslash. And now,
+
+00:27.039 --> 00:30.600
+And now we're going to install another MCP server.
+
+00:30.600 --> 00:33.119
+And this time it's for GitHub.
+
+00:33.119 --> 00:35.640
+We want to connect to GitHub using GitHub's
+
+00:35.640 --> 00:40.520
+famous remote MCP server using the token
+
+00:40.520 --> 00:43.200
+that we just created and that you're taking great care
+
+00:43.200 --> 00:45.520
+to preserve exactly as is.
+
+00:45.520 --> 00:48.140
+Now you may wonder why are we using MCP servers
+
+00:48.140 --> 00:49.899
+directly like this when I just told you
+
+00:49.899 --> 00:52.240
+that the best place to start is with plugins.
+
+00:52.240 --> 00:53.759
+And the reason is because first of all,
+
+00:53.759 --> 00:56.079
+these are two very famous MCP servers,
+
+00:56.079 --> 00:58.679
+Jura and GitHub that are very well known,
+
+00:58.679 --> 01:01.579
+very powerful and highly used in the community.
+
+01:01.579 --> 01:03.700
+And secondly, because they have these very particular
+
+01:03.700 --> 01:06.379
+authorization techniques and to do it,
+
+01:06.379 --> 01:08.859
+to go through that proper process,
+
+01:08.859 --> 01:11.439
+it is best to go directly through the MCP server. And that's why we're doing it that go through that proper process, it is best to go directly through the mcp server
+
+01:11.439 --> 01:18.640
+and that's why we're doing it that way. Okay, so let's now connect to the github mcp server
+
+01:18.640 --> 01:23.760
+using our key. Okay, so I've pasted in here the command which is in the course resources
+
+01:23.760 --> 01:28.640
+and I close that so you can see it all in one line. It's uh hang on let me just delete that
+
+01:28.640 --> 01:32.000
+that's not necessary right there.
+
+01:32.840 --> 01:34.959
+Here we go. This is the line that will be in the course resources.
+
+01:34.959 --> 01:39.359
+Cloud MCP ad, it's another remote MCP server,
+
+01:39.359 --> 01:43.079
+an HTTP MCP server, just like the Jira one was,
+
+01:43.079 --> 01:44.239
+the Atlassian one.
+
+01:44.239 --> 01:49.239
+It's at api.githubcoapilot.com/mcp,
+
+01:49.400 --> 01:51.400
+and we're passing in a header,
+
+01:51.400 --> 01:53.159
+and in that header, we're putting
+
+01:53.159 --> 01:56.719
+the GitHub Personal Access token. But you can see
+
+01:56.719 --> 02:01.120
+what I've got there is some text and that's not going to work. I'm going to have to replace this
+
+02:01.120 --> 02:09.039
+right here with the exact key that I carefully copied with taking great care from GitHub, from
+
+02:09.039 --> 02:14.240
+that screen we were on just a few moments ago. So I'm now off camera going to put in my private
+
+02:14.240 --> 02:17.599
+key in there that we took from there with these fine-grained permissions,
+
+02:17.599 --> 02:20.439
+put it in there and install this MCP server
+
+02:20.439 --> 02:22.520
+by running that just like this.
+
+02:22.520 --> 02:23.800
+And you should do the same.
+
+02:24.800 --> 02:26.599
+Okay, I've run that command.
+
+02:26.599 --> 02:30.280
+And now we're going to start Cloud
+
+02:30.280 --> 02:31.759
+and see what happens.
+
+02:31.759 --> 02:32.599
+Do we trust this?
+
+02:32.599 --> 02:33.439
+Yes, we do.
+
+02:33.439 --> 02:34.319
+Number one, here we go.
+
+02:34.319 --> 02:36.560
+We're in pre-legal.
+
+02:36.560 --> 02:42.659
+And we are going to do slash context to see what kinds of tools it
+
+02:42.659 --> 02:44.060
+has access to.
+
+02:44.060 --> 02:45.060
+Let's take a look.
+
+02:45.060 --> 02:49.500
+And you can see it's got access to a whole bunch of GitHub related tools.
+
+02:49.500 --> 02:50.500
+Excellent.
+
+02:50.500 --> 02:51.500
+Okay.
+
+02:51.500 --> 02:52.500
+Let's give this a whirl.
+
+02:52.500 --> 02:53.500
+Okay.
+
+02:53.500 --> 03:11.639
+We're going to say please write an issue to GitHub to GitHub that to GitHub, that the README needs to be updated. Let's see how it does. It's
+
+03:11.639 --> 03:18.080
+hopefully going to use the tools. It's first of all just running a local, and now it is,
+
+03:18.080 --> 03:24.800
+indeed, trying to use the create or update issue. Let's say yes. Do it not going to give
+
+03:24.800 --> 03:31.120
+it full approval to everything. It's doing that. Created issue. All right, let's go and have a look.
+
+03:31.120 --> 03:35.919
+Well, here we are in a browser window. I'm going to go to GitHub to the pre-legal,
+
+03:35.919 --> 03:46.300
+and here we are looking at the repository. Looks very similar to me. But wait, there's an issue under issues it says one let's go and check this out update
+
+03:46.300 --> 03:50.680
+read me let's look at it the read me needs to be updated to reflect the current
+
+03:50.680 --> 03:56.479
+state of the project there we go so very nice we've just used cloud code to
+
+03:56.479 --> 04:00.719
+connect to github and raise an issue okay well let's just take it one step
+
+04:00.719 --> 04:14.639
+further please update the read me to reflect that the project is in progress and will be completed in one week.
+
+04:15.520 --> 04:21.839
+Then raise a PR for this to be merged. I don't know if we have enough permissions for this,
+
+04:21.839 --> 04:26.800
+let's see what happens. Let's see what happens, give it a try and we can get into some problem
+
+04:26.800 --> 04:28.399
+solving if it doesn't work.
+
+04:28.399 --> 04:33.439
+It's reading a file, it wants to make a change to the readme, that sounds fine, go for it.
+
+04:34.000 --> 04:36.399
+I pressed number two, it should have updated that.
+
+04:37.839 --> 04:44.480
+And now it's going to check out and make a commit, that's all great, I'm fine with that,
+
+04:44.480 --> 04:50.720
+this is not using tools yet, this is just running git commands. We'll accept that. So it's just running that
+
+04:50.720 --> 05:03.360
+locally to make the commit. And now it wants to do a push. Let's say yes. Okay. And now it is
+
+05:03.360 --> 05:14.680
+looking to open a new pull request. Open a new pull request. This is using the tool. Tool use, yes. Let's see if it's working. Done.
+
+05:14.680 --> 05:19.800
+Created PR number two. There it is. Okay, let's go check this out.
+
+05:19.800 --> 05:25.000
+Alright, I'm going to click on this link right here to a pull request on this repo. Click,
+
+05:25.000 --> 05:29.120
+up it comes, and here we go. We do indeed have a pull request. I don't know why it's
+
+05:29.120 --> 05:35.040
+called number two, but experts will probably tell me why it's not number one, I mean.
+
+05:35.040 --> 05:37.480
+But here we go, it's got the summary,
+
+05:37.480 --> 05:39.000
+add status section to read me,
+
+05:39.000 --> 05:40.699
+indicated the progress in progress,
+
+05:40.699 --> 05:41.920
+generated with cloud code,
+
+05:41.920 --> 05:43.560
+it's put in here, which is really nice
+
+05:43.560 --> 05:45.240
+that it adds in that attribution.
+
+05:45.240 --> 05:47.160
+And then if we go to commits,
+
+05:47.160 --> 05:50.519
+we'll see that this PR includes the single commit
+
+05:50.519 --> 05:52.759
+to update read me with project status.
+
+05:52.759 --> 05:57.680
+There it is, and it's here so that we could check this out and should we wish
+
+05:57.680 --> 06:02.199
+we could press merge pull request, which will have the effect of updating this.
+
+06:02.199 --> 06:08.459
+So hang on, if I go and look into the code right now, you should see that this is the
+
+06:08.459 --> 06:09.660
+code that we've got.
+
+06:09.660 --> 06:11.000
+We now going to pull request.
+
+06:11.000 --> 06:13.639
+This is just standard GitHub stuff.
+
+06:13.639 --> 06:15.660
+We go into this pull request.
+
+06:15.660 --> 06:19.180
+We press merge pull request, confirm the merge.
+
+06:19.180 --> 06:20.399
+This has now been merged,
+
+06:20.399 --> 06:22.439
+we go back to the code again,
+
+06:22.439 --> 06:25.519
+and now you could see the status is updated.
+
+06:25.519 --> 06:26.439
+That's cool.
+
+06:26.439 --> 06:28.800
+Now if some of that git stuff went over your head,
+
+06:28.800 --> 06:30.680
+then honestly it doesn't matter,
+
+06:30.680 --> 06:32.639
+it's standard set of git stuff,
+
+06:32.639 --> 06:35.120
+I'll try and put some good resources for you,
+
+06:35.120 --> 06:37.279
+or let me know if you'd like more about it.
+
+06:37.279 --> 06:41.240
+If you're a seasoned git GitHub person, then you knew what was going
+
+06:41.240 --> 06:45.519
+on and you understand that's part of the typical workflow with a larger team and it's
+
+06:45.519 --> 06:49.879
+something that Claude Code can do for you. There's one little bit of housekeeping that
+
+06:49.879 --> 06:53.959
+we have to do now and then we can push on. If you bring up a terminal and you do a Git
+
+06:53.959 --> 07:03.000
+status, you'll see that we are in a branch origin slash update. Read me and I'm just going to say, get, check out Maine.
+
+07:04.120 --> 07:07.199
+And that just switches us back to the Maine branch.
+
+07:07.199 --> 07:09.439
+We were on a special branch for our PR.
+
+07:09.439 --> 07:10.839
+We're now back to Maine.
+
+07:10.839 --> 07:13.079
+Again, if you don't know about this kind of
+
+07:13.079 --> 07:16.920
+Git workflow stuff, then I'll put extra resources for you.
+
+07:16.920 --> 07:18.480
+But that's where we are right now.
+
+07:18.480 --> 07:20.480
+We've got Git status.
+
+07:20.480 --> 07:21.319
+Here we are.
+
+07:21.319 --> 07:23.279
+We are now on Origin at Maine.
+
+07:23.279 --> 07:25.920
+And we have our directory set up with
+
+07:25.920 --> 07:31.759
+our license and our README ready for the next step. Okay so we're back in
+
+07:31.759 --> 07:35.920
+Claude code again, I took Claude to bring it up. We have so far installed two
+
+07:35.920 --> 07:41.920
+mcp servers, a Atlassian Jiro one and a GitHub one and we've done them by going
+
+07:41.920 --> 07:46.920
+to the mcp server configuration directly. We are now going to install a plugin.
+
+07:46.920 --> 07:50.560
+So do slash plugin to bring up the plugins
+
+07:50.560 --> 07:51.740
+and have a look at them.
+
+07:51.740 --> 07:54.240
+And you can see there is in fact a GitHub official plugin
+
+07:54.240 --> 07:55.180
+that you could also use.
+
+07:55.180 --> 07:58.199
+It's a slightly different auth approach
+
+07:58.199 --> 08:00.120
+where you have to put it as an environment variable,
+
+08:00.120 --> 08:02.060
+but otherwise it would work in much the same way.
+
+08:02.060 --> 08:03.199
+That's not what we're going to install.
+
+08:03.199 --> 08:06.600
+We're going to install a plugin called feature dev.
+
+08:06.600 --> 08:10.180
+Feature dev is an official plugin from anthropic
+
+08:10.180 --> 08:13.160
+to guide Cloud Code through a disciplined
+
+08:13.160 --> 08:16.699
+seven stage process to build a new feature
+
+08:16.699 --> 08:17.800
+for your product.
+
+08:17.800 --> 08:20.779
+In some ways I think of this as like the polar opposite
+
+08:20.779 --> 08:22.079
+of Ralph Loops.
+
+08:22.079 --> 08:25.720
+Ralph Loops are all about chaos and just total autonomy
+
+08:25.720 --> 08:29.079
+and just go for it 10 times, see what happens.
+
+08:29.079 --> 08:32.240
+The feature dev is a rigorous discipline,
+
+08:32.240 --> 08:35.519
+keep you on rails, take you through a process.
+
+08:35.519 --> 08:38.080
+That's what feature dev is all about.
+
+08:38.080 --> 08:39.480
+That's what we're going to use.
+
+08:39.480 --> 08:42.919
+It's something which anthropic themselves use internally
+
+08:42.919 --> 08:44.480
+for their own software development.
+
+08:44.480 --> 08:45.440
+So it must be good.
+
+08:45.440 --> 08:46.799
+It sounds like I was saying that as a joke.
+
+08:46.799 --> 08:47.960
+It's like, so it must be good.
+
+08:47.960 --> 08:49.399
+But no, it really must be good
+
+08:49.399 --> 08:51.240
+if anthropic uses it themselves.
+
+08:51.240 --> 08:54.919
+So we select it and then press Enter to look at it,
+
+08:54.919 --> 08:59.320
+comprehensive feature development workflow with specialized agents
+
+08:59.320 --> 09:03.679
+for co-based exploration, architecture design and quality review.
+
+09:03.679 --> 09:06.000
+I know we haven't yet talked about having specialized agents,
+
+09:06.000 --> 09:08.360
+but I think you probably guessed what it's all about.
+
+09:08.360 --> 09:12.679
+And now if you look down below, we can choose to install just for you,
+
+09:12.679 --> 09:14.740
+have the scoped just for this user,
+
+09:14.740 --> 09:17.580
+for all collaborators on this repo,
+
+09:17.580 --> 09:20.860
+have project scope, and that is what we want.
+
+09:20.860 --> 09:25.019
+We want project scope, and so we select this,
+
+09:25.019 --> 09:28.139
+and I press enter, and now it has been installed,
+
+09:28.139 --> 09:32.059
+and you can see it just created a.claud file right there.
+
+09:32.059 --> 09:34.379
+We have everything here.
+
+09:34.379 --> 09:38.600
+We are ready to be using a disciplined development process.
+
+09:38.600 --> 09:41.960
+But just before we get started, just some final housekeeping,
+
+09:41.960 --> 09:45.440
+we've now created this.cloord folder that got created for us,
+
+09:45.440 --> 09:49.159
+which has turned on this plugin for all people in this repo.
+
+09:49.159 --> 09:50.639
+So we've got something to check in,
+
+09:50.639 --> 09:53.559
+and we might as well take this opportunity to create some other useful,
+
+09:53.559 --> 09:55.840
+or another useful file for our repo,
+
+09:55.840 --> 09:59.500
+which would be a.getignore file, which is an important one to have.
+
+09:59.500 --> 10:01.340
+So we'll get Cloud to do all that for us.
+
+10:01.340 --> 10:32.039
+I'm going to say please create a boilerplate.getignore for this new project for Fast API, next JS, web app development, and then commit and push to GitHub.
+
+10:32.039 --> 10:34.960
+All of that, all of that will let it do its thing.
+
+10:34.960 --> 10:38.120
+It shouldn't need to use any plugins for that.
+
+10:38.120 --> 10:41.240
+This is just about doing some files.
+
+10:41.240 --> 10:44.279
+There we go. We can see it's made a git ignore file.
+
+10:44.279 --> 10:47.799
+We will make its edits and do more edits.
+
+10:47.799 --> 10:51.600
+And hopefully it is now going to run.
+
+10:51.600 --> 10:53.600
+It is doing a git status.
+
+10:56.039 --> 10:57.340
+It's committing.
+
+11:02.159 --> 11:05.000
+And it's doing a git push.
+
+11:05.000 --> 11:12.519
+And it's doing a git pull because we merged the PR that needs to be done.
+
+11:12.519 --> 11:13.960
+It's doing all that for us.
+
+11:13.960 --> 11:16.759
+It's handling all the git stuff for us.
+
+11:16.759 --> 11:18.919
+And it's all been done.
+
+11:18.919 --> 11:21.679
+Okay, that sounds exciting.
+
+11:21.679 --> 11:23.200
+Let's see if this actually worked.
+
+11:23.200 --> 11:24.879
+We'll go over to GitHub now.
+
+11:24.879 --> 11:27.600
+And we can see here we are in GitHub. Sure enough,
+
+11:27.600 --> 11:34.480
+we've got ourselves set up with the full the new readme that says we're going to complete it in
+
+11:34.480 --> 11:41.120
+a week. Well, let's hope we do it in a day. And we've got a dot git ignore, and that dot git
+
+11:41.120 --> 11:48.799
+ignore, if we click into it, it looks like it's got all sorts of sensible things including a.env, you should check that your version has that.env
+
+11:48.799 --> 11:56.720
+and very standard stuff for a JavaScript and Python project that has been successfully created.
+
+11:56.720 --> 12:02.240
+It's obviously on our local disk, it's also now been committed to GitHub as well. And so
+
+12:02.240 --> 12:11.159
+we are ready for prime time, we are ready to build a feature using a proper disciplined workflow, taking advantage of our integrations with
+
+12:11.159 --> 12:15.840
+both Atlassian JIRA for issues, for work for tasks and also
+
+12:15.840 --> 12:19.840
+GitHub for managing PRs.
+

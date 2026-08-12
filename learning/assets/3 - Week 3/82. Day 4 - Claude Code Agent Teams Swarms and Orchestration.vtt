@@ -1,0 +1,596 @@
+WEBVTT
+
+00:00.000 --> 00:06.400
+At the start of our three weeks together, I told you to expect a rollercoaster and here's the thing.
+
+00:06.400 --> 00:11.279
+We on this rollercoaster journey, we have just reached that point when the rollercoaster has got
+
+00:11.279 --> 00:17.920
+to the very, very top and you're up there at the top and you're looking down and we're about to
+
+00:17.920 --> 00:27.760
+take the plunge. Prepare for the plunge, prepare for week three, day four, this is a big day. It's another purple day. It's a day of course skills.
+
+00:27.760 --> 00:34.320
+It's the day when we move into the world of swarms and orchestrators. The time when we go crazy and
+
+00:34.640 --> 00:38.399
+it's all about the stages 7 and 8 of
+
+00:38.759 --> 00:42.920
+the Steve Yege chart that we went through a couple of weeks ago now.
+
+00:43.079 --> 00:48.039
+We've already got quite comfortable with the idea that you could run multiple claw distances.
+
+00:48.039 --> 00:48.840
+We've done that a bit.
+
+00:48.840 --> 00:51.960
+We have done that in a massive way because it's all sort of leading up to this.
+
+00:51.960 --> 00:55.719
+But for sure, you've probably experimented with running clawed a few times and we have
+
+00:55.719 --> 01:00.159
+things like that experiment when we had clawed running and we had codex doing the code
+
+01:00.159 --> 01:01.159
+review.
+
+01:01.159 --> 01:02.600
+And so we've seen all of this happening.
+
+01:02.600 --> 01:05.680
+And of course, we've worked with subagents a fair bit too.
+
+01:05.680 --> 01:09.120
+Well, this is the moment when we hit stages seven and eight.
+
+01:09.120 --> 01:13.879
+So this is the moment when we start to have tons of agents running, which is what you think
+
+01:13.879 --> 01:15.400
+of as a swarm.
+
+01:15.400 --> 01:20.079
+When you have like a huge number of them all doing stuff, everything's going on.
+
+01:20.079 --> 01:21.799
+It seems mad.
+
+01:21.799 --> 01:23.079
+It's chaos.
+
+01:23.079 --> 01:28.280
+And then stage 8 is when you're like, okay, maybe we can, we can reel this in.
+
+01:28.280 --> 01:32.439
+We can control the chaos by giving the different agents some structure, by having
+
+01:32.439 --> 01:39.140
+some in charge of others, by trying to coordinate the work, but having the LLMs manage the process.
+
+01:39.140 --> 01:42.560
+That's what orchestration is about, and that's what we're going to be doing today.
+
+01:42.560 --> 01:46.359
+And as we look between stages 7 and 8, swarms versus orchestration, I don't know that there's
+
+01:46.359 --> 01:50.719
+necessarily a binary we are at this point and we're at that point. The different solutions
+
+01:50.719 --> 01:58.359
+will be looking at a somewhere on that continuum, but between being sort of wild, swarm with no structure and extremely
+
+01:58.400 --> 02:00.599
+organized, structured orchestration.
+
+02:00.799 --> 02:04.799
+And where you are on that continuum depends a bit on your choices that you
+
+02:04.799 --> 02:08.039
+make, how you set it up and how crazy you want to go.
+
+02:08.319 --> 02:12.639
+As we will see, all right, we're going to be doing a few different approaches.
+
+02:12.960 --> 02:17.319
+And I'm going to start right away by looking at Claude's agent teams
+
+02:17.400 --> 02:23.360
+Which is the one thing from I guess the day one of this week that we said we would come back to now's the time
+
+02:23.360 --> 02:31.159
+We're coming back to it right here. So Claude agent teams first of all is an experimental feature as of right now
+
+02:31.400 --> 02:42.800
+By the time you watch this maybe it's matured. Maybe it's no longer just an experimental feature, but for me, it is. This is brand new and I'll be going through the experimental side of it and maybe you'll
+
+02:42.800 --> 02:46.520
+look at the dots and see that some of this has become a bit more firm.
+
+02:46.520 --> 02:50.719
+But first of all, what are agent teams?
+
+02:50.719 --> 02:55.439
+They are ways that you can have multiple Cloud code instances, multiple different
+
+02:55.439 --> 02:59.759
+Cloud codes that are being coordinated in some way.
+
+02:59.759 --> 03:01.000
+One of them is acting as the team lead.
+
+03:01.000 --> 03:03.000
+It is in charge of the whole process.
+
+03:03.000 --> 03:08.000
+And its job is to assign out tasks and manage the collaboration between them
+
+03:08.000 --> 03:10.000
+in order to achieve a goal.
+
+03:10.000 --> 03:14.000
+And then the others, the teammates, they're able to work independently,
+
+03:14.000 --> 03:18.000
+and they're able to interact with each other so they can send each other messages.
+
+03:18.000 --> 03:24.000
+And you, as the human in the loop, you can interact with them directly as well.
+
+03:24.000 --> 03:26.000
+You don't need to go through the lead.
+
+03:26.000 --> 03:29.000
+And this is a massive distinction from sub-agents.
+
+03:29.000 --> 03:32.000
+With sub-agents, you can't send a message to a sub-agent.
+
+03:32.000 --> 03:36.000
+It just exists in order to serve the main-clawed code,
+
+03:36.000 --> 03:38.000
+and it doesn't really work independently.
+
+03:38.000 --> 03:42.000
+It only persists for the duration of its task and then its history.
+
+03:42.000 --> 03:44.400
+Whereas in this case these things
+
+03:44.400 --> 03:50.000
+called teammates, the teammate, they are all separate cloud codes that are running.
+
+03:50.000 --> 03:56.719
+Okay, so under what circumstances would you make use of Cloud Agent Teams instead of, say,
+
+03:56.719 --> 04:02.319
+sub-agents? We'll have a direct comparison in a moment, but here are some examples of use cases
+
+04:02.319 --> 04:09.020
+that work well for Cloud Teams. So one of them is if, and this is a simple one that you can imagine,
+
+04:09.020 --> 04:11.439
+if you want to research a ton of different things,
+
+04:11.439 --> 04:12.740
+like you want to head off and look,
+
+04:12.740 --> 04:16.560
+you want to look at Wikipedia and you also want to look at Stack Overflow,
+
+04:16.560 --> 04:18.600
+and you also want to look at three other places,
+
+04:18.600 --> 04:23.199
+then you could just have a multiple of these team members go off,
+
+04:23.199 --> 04:25.199
+do their research independently,
+
+04:25.199 --> 04:28.379
+working on it, maybe exchanging information between them and
+
+04:28.379 --> 04:31.680
+then come back with all of the results. And that's something that you can also
+
+04:31.680 --> 04:36.480
+use subagents for, but this is a nice kind of use case. But perhaps a better
+
+04:36.480 --> 04:42.319
+one, if I may, is a case where you have independent modules of your system and
+
+04:42.319 --> 04:45.339
+you've got an objective and you can see a way that different
+
+04:45.339 --> 04:49.519
+Claude codes could work independently. And indeed you could just spawn at
+
+04:49.519 --> 04:50.459
+multiple terminals and run Claude and have them run independently. And indeed, you could just spawn multiple terminals
+
+04:50.459 --> 04:52.899
+and run Claude and have them run independently.
+
+04:52.899 --> 04:55.220
+But you would prefer them to be able to communicate
+
+04:55.220 --> 04:57.220
+and have some shared structure.
+
+04:57.220 --> 05:00.139
+Now they can communicate anyway through.md files
+
+05:00.139 --> 05:02.019
+if you did have them as separate terminals,
+
+05:02.019 --> 05:04.579
+but it would be a little bit flaky,
+
+05:04.579 --> 05:07.459
+it would depend a lot on who's writing what to which file
+
+05:07.459 --> 05:08.939
+and whether they're reading them again.
+
+05:08.939 --> 05:14.800
+So this way you could have different Claude Code instances working on different modules, but still
+
+05:14.800 --> 05:17.600
+we're still working in lockstep, still having a channel of
+
+05:17.600 --> 05:20.839
+communication. And then the other way is kind of similar, but
+
+05:20.839 --> 05:23.560
+is saying rather than dividing them vertically into different
+
+05:23.560 --> 05:28.199
+areas of responsibility, you could divide them horizontally by
+
+05:28.720 --> 05:32.000
+layer by coding layer that you can have a front end engineer,
+
+05:32.240 --> 05:35.680
+backend engineer, LLM engineer responsible
+
+05:35.680 --> 05:40.759
+for different areas of your system. And that does translate quite nicely to the way
+
+05:40.759 --> 05:45.759
+that you sometimes organize humans in a software engineering team. You can do it by area, by
+
+05:45.759 --> 05:50.319
+feature, by feature area of your system, or you can do it into a front end team and
+
+05:50.319 --> 05:57.160
+a back end team and so on. And you know, I always hesitate before ascribing too much human-like responsibility to agents,
+
+05:57.160 --> 06:02.680
+but you can see how this works quite well in terms of having separate responsibilities
+
+06:02.680 --> 06:06.819
+that Claude Code instances can work on independently without too much overlap.
+
+06:06.819 --> 06:10.300
+And you're probably getting the idea that there's a lot of experimentation involved
+
+06:10.300 --> 06:12.459
+in getting agent teams to work well.
+
+06:12.459 --> 06:14.560
+There's not necessarily one right answer.
+
+06:14.560 --> 06:16.699
+It needs some balance.
+
+06:16.699 --> 06:19.040
+You're ideally looking to be able to give separate
+
+06:19.040 --> 06:22.639
+responsibilities to Claude agents so that they can work independently and
+
+06:22.639 --> 06:27.079
+still have some benefit to communication between the agents so they
+
+06:27.079 --> 06:30.879
+can collaborate but not so much communication that they start to grind
+
+06:30.879 --> 06:34.800
+down and they're churning with lots of backwards and forwards. So you're
+
+06:34.800 --> 06:39.319
+looking to strike that balance. And Anthropix website is really good on this.
+
+06:39.319 --> 06:41.819
+It's got some very clear instructions
+
+06:41.819 --> 06:44.720
+and they may have changed since I'm doing this.
+
+06:44.720 --> 06:46.279
+It's probably worth a look.
+
+06:46.279 --> 06:47.720
+It's got this nice table in there
+
+06:47.720 --> 06:50.959
+that compares subagents to agent teams,
+
+06:50.959 --> 06:52.680
+these two techniques.
+
+06:52.680 --> 06:56.319
+And it's pretty clear that they are very different.
+
+06:56.319 --> 06:58.680
+And they each have their place subagents
+
+06:58.680 --> 07:01.000
+where they have their own context,
+
+07:01.000 --> 07:03.439
+they return it to the caller, the communication
+
+07:03.439 --> 07:10.480
+is only back to their main agent. The main agent manages all the work, they have focused
+
+07:10.480 --> 07:16.399
+tasks, and they basically summarize the results back. So they're quite efficient from a token
+
+07:16.399 --> 07:21.360
+point of view. They can cause more tokens to be spent themselves, but they're relatively efficient.
+
+07:22.000 --> 07:26.680
+but they're relatively efficient. Agent teams, they have their own full context window
+
+07:26.680 --> 07:28.759
+that is completely independent.
+
+07:28.759 --> 07:31.560
+They don't return it to the caller.
+
+07:31.560 --> 07:34.560
+They can message the other teammates independently.
+
+07:34.560 --> 07:37.240
+They have a shared task list.
+
+07:37.240 --> 07:40.279
+There is one task list that is managed
+
+07:40.279 --> 07:43.680
+by the overall, by the main Cloud Code,
+
+07:43.680 --> 07:47.000
+but they coordinate their items on the task list.
+
+07:47.000 --> 07:52.300
+They're best for when there is complex work that does require a level of collaboration,
+
+07:52.300 --> 07:53.800
+but not too much.
+
+07:53.800 --> 07:55.439
+And they can be expensive.
+
+07:55.439 --> 07:57.540
+They can cause a lot of tokens to be spent.
+
+07:57.540 --> 07:59.160
+So you need to be aware of that.
+
+07:59.160 --> 08:01.519
+And look at that last bullet there.
+
+08:01.519 --> 08:05.920
+Use subagents when you need quick focused workers that report back.
+
+08:05.920 --> 08:09.879
+Use agent teams when teammates need to share findings, challenge
+
+08:09.879 --> 08:12.740
+each other and coordinate on their own.
+
+08:12.740 --> 08:16.759
+Okay, there are five instructions that we will go through now.
+
+08:16.759 --> 08:18.439
+It's time for us to do this.
+
+08:18.439 --> 08:21.560
+Five steps to making the Cloud agent teams work.
+
+08:21.560 --> 08:25.399
+First of all, we need to change settings.json for the project.
+
+08:25.399 --> 08:30.459
+We need to tell it that we are going to enable Cloud Code experimental agent teams.
+
+08:30.459 --> 08:31.779
+You might not need to do this
+
+08:31.779 --> 08:33.519
+because it might then be fully live
+
+08:33.519 --> 08:35.419
+without needing this fly, but we do.
+
+08:35.419 --> 08:37.899
+There's another field as well called teammate mode.
+
+08:37.899 --> 08:39.320
+And there are two modes,
+
+08:39.320 --> 08:42.340
+and one of them in process works on all computers
+
+08:42.340 --> 08:43.759
+on Mac and PC.
+
+08:43.759 --> 08:46.460
+And it just means that all of the agents report back
+
+08:46.460 --> 08:47.620
+in the same screen,
+
+08:47.620 --> 08:48.659
+and you can flip between them,
+
+08:48.659 --> 08:50.139
+by pressing shift up and down,
+
+08:50.139 --> 08:51.340
+and that's what we'll use.
+
+08:51.340 --> 08:55.019
+There is a cooler approach called T-Mucks,
+
+08:55.019 --> 08:57.779
+but that only works on a max and Linux
+
+08:57.779 --> 08:59.860
+when you have extra stuff installed.
+
+08:59.860 --> 09:01.580
+And so I'm not going to do it,
+
+09:01.580 --> 09:03.379
+but if you wish, you could try that.
+
+09:03.379 --> 09:05.220
+And when you do that, your screen splits
+
+09:05.220 --> 09:06.559
+into different sections,
+
+09:06.559 --> 09:08.500
+and you can see each of the different agents
+
+09:08.500 --> 09:09.340
+in different sections.
+
+09:09.340 --> 09:10.580
+And that's pretty cool.
+
+09:10.580 --> 09:12.779
+So you might wanna do that if you wanna see that yourself.
+
+09:12.779 --> 09:17.159
+You have to change in process to T-Mucksucks and you have to have the T-Mucks installed
+
+09:17.159 --> 09:20.039
+or be using something called iTurn2 if you know what that is.
+
+09:20.039 --> 09:23.879
+So this is what we're going to put in settings.json and this should work on all platforms.
+
+09:23.879 --> 09:30.120
+And then it's just as simple as prompting Cloud to say create an agent team to blah, blah, blah.
+
+09:30.120 --> 09:33.679
+And you can give it a lot of detail and tell it how the agent should be made up
+
+09:33.679 --> 09:37.279
+or the team should be made up or you could just give it the instruction.
+
+09:37.279 --> 09:40.600
+You can then press shift tab to turn it into delegate mode.
+
+09:40.600 --> 09:47.279
+That's something worth doing to make sure that the main agent doesn't just start handling
+
+09:47.279 --> 09:48.879
+the tasks itself.
+
+09:48.879 --> 09:52.860
+And you can also, if necessary, prompt it, wait for your teammates to complete their
+
+09:52.860 --> 09:56.659
+tasks before proceeding to stop it diving in and doing work itself.
+
+09:56.659 --> 09:59.600
+And throw-back mentions that that's a common problem.
+
+09:59.600 --> 10:01.679
+And then shift up and down is how you flip
+
+10:01.679 --> 10:03.360
+between the different teammates.
+
+10:03.360 --> 10:06.840
+And when you're done, you send a command,
+
+10:06.840 --> 10:10.759
+ask the BLAR teammate to shut down as a way
+
+10:10.759 --> 10:13.639
+to tell the main agent that it should shut down
+
+10:13.639 --> 10:16.519
+one of the team members, and then clean up the team
+
+10:16.519 --> 10:19.279
+is a general command to stop everything.
+
+10:19.279 --> 10:21.360
+So we need to know these commands.
+
+10:21.360 --> 10:24.440
+This, these are the instructions for successfully running
+
+10:24.440 --> 10:26.259
+an agent team in Cloud Code.
+
+10:26.259 --> 10:28.879
+And there's three final bits of advice before we go and do this.
+
+10:28.879 --> 10:31.000
+We should invest in Cloud.md.
+
+10:31.000 --> 10:33.480
+That gets loaded into the context for everything.
+
+10:33.480 --> 10:39.559
+And so it's our opportunity to make sure that all the agents start with the right information.
+
+10:39.559 --> 10:41.960
+We need to expect this to be pricey.
+
+10:41.960 --> 10:43.860
+If you try and use free
+
+10:43.860 --> 10:49.059
+models for this, you can give it a shot, but I imagine it's just not going to be reliable.
+
+10:49.059 --> 10:52.899
+So if you're not comfortable with the cost, just watch me use this as a learning experience
+
+10:52.899 --> 10:57.980
+from seeing someone else doing it. If you're okay to go for this, then do expect to cost
+
+10:57.980 --> 11:07.039
+watch your costs, stop it if you ever become uncomfortable. And also to add salt to the wound, you do need to be willing to
+
+11:07.039 --> 11:11.799
+rerun the whole thing. It might go off the rails, you might need to stop it, go back
+
+11:11.799 --> 11:17.440
+in, get, and then just run it another time, maybe tweaking the instructions. This is highly
+
+11:17.440 --> 11:23.200
+experimental, it's something that is incredibly powerful, it's also unpredictable and a bit
+
+11:23.200 --> 11:26.320
+chaotic and it can take several attempts.
+
+11:26.320 --> 11:32.120
+Okay, with that I hope you are excited and maybe a little tiny bit nervous.
+
+11:32.120 --> 11:36.879
+Let's go to VS Code, let's try Cloud Agent Teams for real.
+

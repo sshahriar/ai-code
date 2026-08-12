@@ -1,0 +1,329 @@
+WEBVTT
+
+00:00.000 --> 00:06.160
+A big part of my motivation for making this course came from a tweet, a post on X, that the
+
+00:06.160 --> 00:12.480
+incredible Andrei Karpathy made a few months ago. And I put the tweet up here, Andrei Karpathy,
+
+00:12.480 --> 00:18.160
+of course, he's one of the founding members of OpenAI. He's been across his work at
+
+00:18.160 --> 00:27.600
+Tassa and OpenAI, and at Stanford. He is just such a luminary in the industry. And he's also the person that coined the term
+
+00:27.600 --> 00:29.480
+"vibe coding," as we'll find out later.
+
+00:29.480 --> 00:33.359
+And this was a tweet that he came up with late last year.
+
+00:33.359 --> 00:34.880
+And I'm going to do the slightly unusual thing
+
+00:34.880 --> 00:36.399
+of reading this tweet to you,
+
+00:36.399 --> 00:37.880
+but adding some expression to it,
+
+00:37.880 --> 00:39.700
+'cause I think it's so incredible.
+
+00:39.700 --> 00:42.640
+Andres says, "I've never felt this much behind
+
+00:42.640 --> 00:43.479
+"as a programmer.
+
+00:43.479 --> 00:46.560
+"The profession is being dramatically refactored
+
+00:46.560 --> 00:49.600
+"as the bits contributed by the programmer are increasingly
+
+00:49.600 --> 00:55.679
+sparse and between. I have the sense that we could be 10x more powerful. If I could just properly
+
+00:55.679 --> 01:00.960
+string together what's become available over about the last year and a failure to claim that
+
+01:00.960 --> 01:11.760
+boost feels like a skill issue. There's this new layer of abstraction in addition to the usual layers that involves agents, sub-agents, their prompts,
+
+01:11.760 --> 01:18.000
+context, memory, modes, permissions, tools, plugins, skills, hooks, mcp, lsp, slash commands,
+
+01:18.000 --> 01:23.040
+workflows, id integrations, and the need to build an all-encompassing mental model
+
+01:23.040 --> 01:35.000
+for strengths and pitfalls of fundamentally stochastic, fallible, unintelligible and changing entities" suddenly intermingled with what used to be good old-fashioned
+
+01:35.000 --> 01:37.000
+engineering.
+
+01:37.000 --> 01:38.959
+Wow, what a tweet.
+
+01:38.959 --> 01:45.400
+And then Andre ends the tweet with "clearly, some powerful alien tool was handed around
+
+01:45.400 --> 01:50.659
+except it comes with no manual and everyone has to figure out how to hold it and operate
+
+01:50.659 --> 01:55.599
+it while the resulting magnitude 9 earthquake is rocking the profession.
+
+01:55.599 --> 01:59.000
+Roll up your sleeves to not fall behind.
+
+01:59.000 --> 02:05.000
+An inner nutshell, that, that tweet is what this course is all about.
+
+02:05.000 --> 02:08.599
+This course, as I said at the beginning, it is the missing manual.
+
+02:08.599 --> 02:12.400
+The idea is that at the end of this course you'll be able to bring back up this tweet
+
+02:12.400 --> 02:16.759
+and read that through and you'll be able to say, "Yes, yes, yes. I know what
+
+02:16.759 --> 02:20.520
+all these things mean. I know how they fit together. I know where they work well, where
+
+02:20.520 --> 02:27.159
+they don't work. I can separate the hype from the facts." And I know how to navigate
+
+02:27.159 --> 02:33.800
+this crazy new world of agentic AI coding. That is what I have in store for you over three
+
+02:33.800 --> 02:41.900
+weeks. So who exactly is this intended for? Is it meant for people who are junior or for people who are senior coders, never coded
+
+02:41.900 --> 02:42.900
+before?
+
+02:42.900 --> 02:43.900
+You're an expert.
+
+02:43.900 --> 02:45.500
+Well, here's the answer.
+
+02:45.500 --> 02:48.080
+It's for two different types of people.
+
+02:48.080 --> 02:53.219
+First of all, aspiring engineers, people who maybe are junior or not technical at all
+
+02:53.219 --> 02:54.219
+today.
+
+02:54.219 --> 02:57.500
+Maybe this is one of your first times ever writing code.
+
+02:57.500 --> 03:00.560
+Or maybe you've written a bit bit but you consider yourself not yet an
+
+03:00.560 --> 03:06.560
+expert. You will be able to build complete products, large-scale products
+
+03:06.560 --> 03:13.580
+with confidence with the assistance of AI agents. And the other archetype, the
+
+03:13.580 --> 03:18.560
+other person that I'm targeting this course for is actually people who are
+
+03:18.560 --> 03:24.319
+senior staff engineers, people who are experienced coders, but either relatively
+
+03:24.319 --> 03:29.800
+new to the Agentica AI coding, or you feel a bit like Andre's tweets, you feel like
+
+03:29.800 --> 03:33.759
+there's just too much going on. How do you navigate all these different things? How
+
+03:33.759 --> 03:39.180
+do you work them together to accelerate the most? And that's what this is about. I'm going
+
+03:39.180 --> 03:44.860
+to allow you to accelerate what you can do to maximize the potential and importantly to keep
+
+03:44.860 --> 03:46.560
+enjoying what you do.
+
+03:46.680 --> 03:51.120
+Because a lot of what drives the passion for being an engineer for me and for
+
+03:51.120 --> 03:54.599
+you is about solving problems and building great stuff.
+
+03:54.759 --> 03:58.680
+And there's this sense out there that some of these AI tools are taking away
+
+03:58.680 --> 03:59.479
+the enjoyment.
+
+03:59.639 --> 04:01.599
+And I don't think that needs to be the case.
+
+04:01.599 --> 04:03.240
+I think it changes the picture.
+
+04:03.400 --> 04:05.039
+It means some things that I used to enjoy.
+
+04:05.039 --> 04:06.000
+I don't do anymore, but there are new things that I things that I used to enjoy. I don't do anymore.
+
+04:06.000 --> 04:11.680
+But there are new things that I enjoy that I can now do. And so it's a change in the equation.
+
+04:11.680 --> 04:16.000
+It's a change in what we can do. And there's stuff to enjoy out of that as well.
+
+04:16.000 --> 04:20.079
+And I know you know I'm going to say this, but of course I'm going to say that it's not
+
+04:20.079 --> 04:26.720
+actually for those two archetypes of person. You have to be either an aspiring engineer or a
+
+04:26.720 --> 04:28.480
+senior staff engineer, of course.
+
+04:28.480 --> 04:30.779
+The idea is that there will be something
+
+04:30.779 --> 04:32.100
+in this for everyone.
+
+04:32.100 --> 04:34.220
+I'm going to talk to people that are relatively new
+
+04:34.220 --> 04:37.740
+to coding or completely new, and to the experts too.
+
+04:37.740 --> 04:39.699
+This is something that connects the dots.
+
+04:39.699 --> 04:41.259
+And as a result, there'll be some things
+
+04:41.259 --> 04:42.639
+that might be too advanced for you,
+
+04:42.639 --> 04:43.620
+and that's okay.
+
+04:43.620 --> 04:45.660
+Just get a gist of it and keep moving.
+
+04:45.660 --> 04:48.060
+And for the experts, there's gonna be some stuff,
+
+04:48.060 --> 04:49.300
+like how to set up cursor,
+
+04:49.300 --> 04:54.240
+what's what's the project directory. There's going to be super obvious to you and don't worry just put me on
+
+04:54.240 --> 04:59.040
+two x zoom through that. There's going to be tons of juicy stuff here. There's going to be something
+
+04:59.040 --> 05:04.399
+for everyone across the spectrum of your technical experience. And so what will I leave you with
+
+05:04.399 --> 05:14.600
+at the end of our three weeks together, you will be able to build and debug and troubleshoot and enhance existing software products at any scale,
+
+05:14.600 --> 05:17.759
+whether it's a small, whether it's a first-person shooter game,
+
+05:17.759 --> 05:21.699
+or whether it's a large team collaboration
+
+05:21.699 --> 05:24.839
+with a massive repo or multiple repos,
+
+05:24.839 --> 05:27.439
+whatever scale, whatever kind of problem you're working on,
+
+05:27.439 --> 05:31.319
+you will be able to do it assisted by AI agents.
+
+05:31.319 --> 05:34.560
+You will be able to take the greatest advantage
+
+05:34.560 --> 05:36.480
+of the current landscape.
+
+05:36.480 --> 05:38.959
+In other words, you'll be able to tweet back
+
+05:38.959 --> 05:42.199
+at Carpathi and Andre and say, I get all this,
+
+05:42.199 --> 05:45.319
+I know how to navigate it, I have the missing manual.
+
+05:45.319 --> 05:48.879
+And thirdly and importantly, of course, increasingly,
+
+05:48.879 --> 05:51.959
+if you look at job descriptions, people expect
+
+05:51.959 --> 05:54.079
+that you have these kinds of skill sets.
+
+05:54.079 --> 05:56.500
+So you're able to use a GenTic AI
+
+05:56.500 --> 05:59.199
+to help you write code more efficiently.
+
+05:59.199 --> 06:01.160
+And you'll be able to apply to those jobs
+
+06:01.160 --> 06:03.519
+and show that you have the full skill set.
+
+06:03.519 --> 06:07.639
+You know about MCP and skills and hooks and so on
+
+06:07.639 --> 06:09.279
+and even Ralph Loops
+
+06:09.279 --> 06:11.240
+and how to bring it all together
+
+06:11.240 --> 06:14.240
+to deliver high quality software fast.
+
+06:14.240 --> 06:16.279
+And by the way, I just wanna clarify something
+
+06:16.279 --> 06:19.040
+that you'll hear me say a lot, which is that,
+
+06:19.040 --> 06:25.839
+whilst I am an upbeat type, I'm generally an enthusiast, I am not caught up in the
+
+06:25.839 --> 06:31.519
+Agentic AI hype. The tools that we're going to be using in the next few weeks are incredibly
+
+06:31.519 --> 06:37.279
+powerful and allow us to do amazing things, but they are not without their downsides. There are
+
+06:37.279 --> 06:41.519
+significant benefits and there are also drawbacks, and I'm going to make you very
+
+06:41.519 --> 06:47.439
+aware of those drawbacks and being successful using agentic AI to write software is about
+
+06:47.439 --> 06:52.319
+knowing about both the strengths and the weaknesses and being able to maximize the strengths and
+
+06:52.319 --> 06:55.439
+being able to manage the weaknesses and that is what we will be doing.
+

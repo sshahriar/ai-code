@@ -1,0 +1,692 @@
+WEBVTT
+
+00:00.000 --> 00:04.400
+And last but not least, we're going to cover creating your own plugin.
+
+00:04.599 --> 00:06.839
+Not a common thing to want to do, but good tonight.
+
+00:06.839 --> 00:08.599
+You can good to have seen it.
+
+00:08.839 --> 00:13.400
+If you work in a larger team, it can be super convenient to have a few plugins
+
+00:13.599 --> 00:17.079
+that you've created for your team to work with, in which case you'd be able
+
+00:17.280 --> 00:21.120
+to create them all, you could even make your own marketplace to be used inside
+
+00:21.320 --> 00:25.480
+your company and then others with Claude Code can can add that marketplace
+
+00:25.679 --> 00:27.039
+to their marketplaces, and then
+
+00:27.039 --> 00:30.679
+you can just pick and choose from the plugins that are available.
+
+00:30.679 --> 00:31.839
+It's a pro feature.
+
+00:31.839 --> 00:33.520
+It's nice to know you've got it.
+
+00:33.520 --> 00:35.079
+Let's make a plugin right now.
+
+00:35.079 --> 00:41.380
+Okay, and I'm going to call it independent reviewer because we're going to use codecs.
+
+00:41.380 --> 00:44.560
+Maybe you'll do it some other way, but it's going to be something that can do an independent
+
+00:44.560 --> 00:46.079
+review of changes.
+
+00:46.079 --> 00:48.719
+And you start with a new folder, just a new dot-claud,
+
+00:48.719 --> 00:51.200
+just a new folder, it could be in a different repo
+
+00:51.200 --> 00:54.039
+altogether in your own marketplace repo.
+
+00:54.039 --> 00:55.700
+I'm gonna have it right here,
+
+00:55.700 --> 00:58.240
+and I'm going to call it independent,
+
+00:58.240 --> 01:01.479
+and spell it right, independent reviewer.
+
+01:01.479 --> 01:03.759
+Like so, that is our new folder,
+
+01:03.759 --> 01:05.280
+which is where it all begins.
+
+01:05.280 --> 01:08.400
+And within this, you then make a new subfolder,
+
+01:08.400 --> 01:11.000
+a new subdirectory inside here,
+
+01:11.280 --> 01:15.739
+which has a special name of dot-clawed dash plugin.
+
+01:15.739 --> 01:19.319
+That is the sort of the fixed name you have to have
+
+01:19.319 --> 01:22.439
+for the directory, which contains some important config.
+
+01:22.439 --> 01:25.200
+And in particular, we're going to make a file in here
+
+01:25.200 --> 01:28.439
+that's going to be called plugin dot-json,
+
+01:28.439 --> 01:30.700
+which is the sort of the manifest,
+
+01:30.700 --> 01:33.359
+the description of what it is that we're doing
+
+01:33.359 --> 01:36.959
+here. And you just have to know it has to be called that and it's of course in the
+
+01:36.959 --> 01:41.519
+documentation very clearly explained. That's what it has to look like and it has a particular
+
+01:41.519 --> 01:45.359
+format and which is the format that we will follow. Okay, and this is the structure
+
+01:45.359 --> 01:51.120
+of it. It is a JSON dictionary with a name, which is independent reviewer, in our case,
+
+01:51.120 --> 01:58.599
+a description, which is to go out an independent review of all changes since last commit and a version number and that is our plugin.json file.
+
+01:58.599 --> 02:04.140
+All right, one more thing left to do. This top-level independent reviewer directory
+
+02:04.140 --> 02:10.199
+can have four subdirectories that contain information pertaining to this plugin and they
+
+02:10.199 --> 02:16.120
+are predictably enough commands that can have slash commands, then skills that can have skills.
+
+02:16.120 --> 02:20.599
+And of course, agents that can have subagents and guess what else?
+
+02:20.599 --> 02:21.800
+Yes, hooks.
+
+02:21.800 --> 02:23.639
+So that's what we're going to create right now.
+
+02:23.639 --> 02:25.639
+Create a folder called hooks.
+
+02:25.639 --> 02:29.280
+And this is where you can put hooks associated with the plugin.
+
+02:29.280 --> 02:34.240
+And within this hooks directory, you just need a new file that is called hooks.json.
+
+02:34.240 --> 02:35.719
+It's as simple as that.
+
+02:35.719 --> 02:37.159
+Actually do try that again.
+
+02:37.159 --> 02:37.879
+Let's try that again.
+
+02:37.879 --> 02:38.060
+New file hooks.json. It's as simple as that. I'll actually try that again. Let's try that again.
+
+02:38.060 --> 02:40.939
+New file, hooks.json.
+
+02:40.939 --> 02:43.699
+And now all I do is I go to this settings.json.
+
+02:43.699 --> 02:44.979
+It's this exact JSON.
+
+02:44.979 --> 02:46.460
+I'm going to cut it from there.
+
+02:46.460 --> 02:48.219
+We don't want it in both places.
+
+02:48.219 --> 02:49.060
+I've saved that.
+
+02:49.060 --> 02:51.500
+I'm going to hooks.json, pasting it there.
+
+02:51.500 --> 02:55.780
+That is putting that hook in hooks.json right there.
+
+02:55.780 --> 03:00.300
+And so now we have our Cloud, plugin, and our hooks.
+
+03:00.300 --> 03:01.699
+That's set.
+
+03:01.699 --> 03:04.099
+So now we've got our independent reviewer plugin,
+
+03:04.099 --> 03:06.159
+and we want to attach that to Cloud Code.
+
+03:06.159 --> 03:07.879
+And there is a way to launch Cloud
+
+03:07.879 --> 03:10.180
+and tell it to use this plugin.
+
+03:10.180 --> 03:12.240
+But you can only do that for one plugin at a time,
+
+03:12.240 --> 03:13.879
+and it's not a very flexible way of doing it.
+
+03:13.879 --> 03:16.539
+The proper way is to create a marketplace.
+
+03:16.539 --> 03:19.580
+You can create a little marketplace just for yourself.
+
+03:19.580 --> 03:20.979
+But then once you pushed it to get,
+
+03:20.979 --> 03:23.379
+the rest of your team could use it as well.
+
+03:23.379 --> 03:24.560
+Let me show you how you do it.
+
+03:24.560 --> 03:30.520
+You create another folder which is a top level folder for this whole repository called
+
+03:30.520 --> 03:39.840
+dot-clawed-plugin, just like the dot-clawed-plugin that was within this particular plugin itself.
+
+03:39.840 --> 03:45.919
+And then within this, you make a new file, and the file is called marketplace.json.
+
+03:45.919 --> 03:49.000
+That's the name of the file that defines a marketplace.
+
+03:49.000 --> 03:51.439
+And I'm going to paste in there some JSON
+
+03:51.439 --> 03:54.159
+that defines my marketplace called edTools.
+
+03:54.159 --> 03:56.139
+Name is ed, you could call this marketplace
+
+03:56.139 --> 03:58.159
+anything you want, but this will be mine.
+
+03:58.159 --> 04:00.719
+And I put my name and an email,
+
+04:00.719 --> 04:02.800
+and then a list of plugins.
+
+04:02.800 --> 04:05.599
+And there's one called independent reviewer.
+
+04:05.599 --> 04:08.460
+The code is at independent reviewer right there.
+
+04:08.460 --> 04:09.560
+That's what it does.
+
+04:09.560 --> 04:11.159
+And this defines the plugin,
+
+04:11.159 --> 04:13.500
+the only plugin that is part of this marketplace,
+
+04:13.500 --> 04:15.080
+but I could have many.
+
+04:15.080 --> 04:17.500
+And this is the simple way to define a marketplace
+
+04:17.500 --> 04:20.319
+of plugins that you will make available to others.
+
+04:20.319 --> 04:21.800
+And once I've done that,
+
+04:21.800 --> 04:25.339
+I can then run the slash plugin command.
+
+04:25.339 --> 04:26.839
+And when I do that,
+
+04:26.839 --> 04:28.000
+let me make this a little bit bigger,
+
+04:28.000 --> 04:32.000
+we'll have a look at how the marketplaces are now presented to us.
+
+04:32.000 --> 04:36.000
+So I go over to marketplaces and you'll see that the only marketplace that I have access to
+
+04:36.000 --> 04:42.000
+is Claude Plugins official. And I can go to Add Marketplace and press Enter.
+
+04:42.000 --> 04:45.000
+And this is where you can select another marketplace to add in.
+
+04:45.000 --> 04:48.000
+It could be a marketplace that you've discovered from GitHub.
+
+04:48.000 --> 04:50.560
+It could be your company's one on GitHub. It could be your one that you've discovered from GitHub, it could be your company's one on GitHub,
+
+04:50.560 --> 04:54.720
+it could be your one that you pushed to GitHub, or you could just describe it locally right
+
+04:54.720 --> 04:58.379
+here, which is what I'm going to do right now. I'm going to do dot slash, which means
+
+04:58.379 --> 05:03.920
+just my local directory right here. And when I do that, it's going to say that it knows
+
+05:03.920 --> 05:08.279
+about this. This is now a marketplace. And you can see independent reviewer is the one
+
+05:08.279 --> 05:13.199
+plugin included in this marketplace, carry out independent review of all changes.
+
+05:13.199 --> 05:14.560
+Exactly what we wanted.
+
+05:14.560 --> 05:16.300
+If I go over to marketplaces right now,
+
+05:16.300 --> 05:18.959
+you'll see that edTools is a marketplace
+
+05:18.959 --> 05:21.720
+that's been added to my environment,
+
+05:21.720 --> 05:22.800
+into my cloud code,
+
+05:22.800 --> 05:25.139
+and I can have many plugins that I've added in here.
+
+05:25.139 --> 05:27.759
+And so now I'm going to go back to discover,
+
+05:28.660 --> 05:30.899
+or no, sorry, I'll go to marketplaces,
+
+05:30.899 --> 05:36.120
+I'll go into edTools, I'll say browse plugins, here is independent reviewer
+
+05:36.120 --> 05:40.819
+that we're looking at right now. I can press space to say that I want to add that plugin
+
+05:40.819 --> 05:49.300
+to my current cloud code and press enter. And I'll say install for the all collaborators
+
+05:49.300 --> 05:57.220
+on this repository, the project scope, I'll select that, and it's been installed. Restart to load new plugins.
+
+05:57.220 --> 05:58.399
+Excellent, let's do that.
+
+05:58.399 --> 06:00.399
+I'm going to come out of Cloud Code.
+
+06:00.399 --> 06:02.600
+I'm going to go back into Cloud Code.
+
+06:02.600 --> 06:03.639
+Here we go.
+
+06:03.639 --> 06:07.199
+And now let's do slash plugin to see what's installed.
+
+06:07.199 --> 06:10.360
+And these are not discovered, but go over to installed.
+
+06:10.360 --> 06:11.199
+Here we go.
+
+06:11.199 --> 06:14.759
+We've got code review, code simplifier,
+
+06:14.759 --> 06:17.680
+context seven, front end design.
+
+06:17.680 --> 06:21.079
+And up here above all of that is independent
+
+06:21.079 --> 06:26.600
+reviewer that is installed which is a plugin from the ed tools marketplace it
+
+06:26.600 --> 06:32.319
+worked brilliant now let's see if that hook is actually active this is so cool
+
+06:32.319 --> 06:40.560
+I'm going to come come on in here I'm going to delete from here the read me, delete the read me,
+
+06:40.560 --> 06:43.199
+and also move to trash.
+
+06:43.199 --> 06:46.040
+And also let's open up the planning folder
+
+06:46.040 --> 06:49.680
+and delete the review, move to trash.
+
+06:49.680 --> 06:54.680
+And now I'm gonna say please write a concise project,
+
+06:55.279 --> 06:56.120
+read me.
+
+06:58.079 --> 07:00.800
+And of course, what we're hoping to see
+
+07:00.800 --> 07:04.000
+is that this will kick off, that it will write a read me,
+
+07:04.000 --> 07:10.480
+and that is then going to trigger the plugin which is going to do a code review by launching
+
+07:10.480 --> 07:15.759
+codex behind the scenes, and all of this is going to happen. And we've seen now that it's
+
+07:15.759 --> 07:21.279
+still thinking, it's still working on the main instruction, we'll see how that goes.
+
+07:21.279 --> 07:24.920
+Hopefully we're going to see a read me. We can be pretty confident about that.
+
+07:24.920 --> 07:27.019
+But perhaps the bigger task is whether we're then going
+
+07:27.019 --> 07:28.879
+to see the code review.
+
+07:28.879 --> 07:31.600
+We'll say yes to this, yes.
+
+07:31.600 --> 07:33.319
+So it's written the readme.
+
+07:33.319 --> 07:35.319
+And now we're looking to see if it's going to call
+
+07:35.319 --> 07:36.160
+a stop hook.
+
+07:36.160 --> 07:38.439
+It is calling a stop hook.
+
+07:38.439 --> 07:39.279
+That's great.
+
+07:39.279 --> 07:41.439
+And we know it's, we deleted the stop hook
+
+07:41.439 --> 07:44.439
+from the immediate.claw directory.
+
+07:44.439 --> 07:47.120
+So it's not coming from here from the settings.json.
+
+07:47.120 --> 07:48.120
+That is empty.
+
+07:48.120 --> 07:53.839
+It is running the one that comes from our marketplace, from our plugin.
+
+07:53.839 --> 07:56.000
+That plugin is being run.
+
+07:56.000 --> 08:02.240
+And any second now, we hope to see that we also have a review.md.
+
+08:02.240 --> 08:03.439
+I will see you in a second.
+
+08:03.439 --> 08:12.160
+Yes, indeed, we have review.md has been written and it has noted that there's a new hook that
+
+08:12.160 --> 08:18.399
+it's in this plugin and it's worried about possible recursive loop, but I think no such
+
+08:18.399 --> 08:19.600
+risk exists.
+
+08:19.600 --> 08:23.680
+But still, it ran, it created review.md, we've had success.
+
+08:23.680 --> 08:28.480
+So look, a lot just happened and I understand it's a lot to take on.
+
+08:28.480 --> 08:30.040
+And really, I want to emphasize,
+
+08:30.040 --> 08:31.480
+if you know a lot about Cloud Code,
+
+08:31.480 --> 08:33.320
+then this might have been quite insightful for you.
+
+08:33.320 --> 08:35.879
+This might be stuff you could put into practice right away.
+
+08:35.879 --> 08:38.519
+But if you're still relatively new to Cloud Code,
+
+08:38.519 --> 08:40.440
+then just see this as a way to get a flavor
+
+08:40.440 --> 08:43.080
+for the kinds of functionalities that you can add.
+
+08:43.080 --> 08:46.399
+You can make a directory that is your plugin.
+
+08:46.399 --> 08:48.960
+Within your plugin, you have a.Cloud plugin
+
+08:48.960 --> 08:50.519
+and this is where you put the JSON
+
+08:50.519 --> 08:52.259
+that describes what it does.
+
+08:52.259 --> 08:59.360
+You then have subfolders for commands, for agents that have subagents, for hooks and
+
+08:59.360 --> 09:00.659
+for skills.
+
+09:00.659 --> 09:04.480
+And that is where you can figure all of the properties of your plugin that will be added
+
+09:04.480 --> 09:07.639
+in one shot when someone uses your plugin.
+
+09:07.639 --> 09:11.340
+And there is a way to just use just your one plugin when you launch Cloud.
+
+09:11.340 --> 09:14.200
+But the better way to do it is to create your own marketplace.
+
+09:14.559 --> 09:16.360
+And you do that by creating a dot
+
+09:16.559 --> 09:21.519
+clawed plug-in folder and having a marketplace.json, which is where you list
+
+09:21.720 --> 09:24.159
+all of the plugins that are part of your marketplace.
+
+09:24.360 --> 09:28.440
+And once you've done that, you can simply go to the slash plugin in Cloud
+
+09:28.639 --> 09:32.360
+Code, include this marketplace and add on the plugins.
+
+09:32.559 --> 09:36.759
+Those are the steps that we carried out in order to add our own plugin right now.
+
+09:36.759 --> 09:42.480
+Okay, look, we covered tons of ground today, lots of different things and probably you
+
+09:42.480 --> 09:46.980
+had spinning a bit with, "Okay, when do I use what, how does this all fit together?"
+
+09:46.980 --> 09:51.080
+Don't worry, as usual, we'll be going through this quite a few times, putting them into
+
+09:51.080 --> 09:54.840
+practice, and most of these are things that you will rarely use.
+
+09:54.840 --> 10:04.679
+It's good to know you've got them if you need them. Okay, just before we wrap today, I want to just summarize the pros and cons of subagents
+
+10:04.679 --> 10:05.679
+one more time.
+
+10:05.679 --> 10:11.700
+So when you're thinking about using subagents as the way to add functionality versus things
+
+10:11.700 --> 10:17.000
+like skills and commands, remember first of all, it allows you to do more in parallel
+
+10:17.000 --> 10:18.000
+at the same time.
+
+10:18.000 --> 10:20.720
+You can have multiple subagents working together.
+
+10:20.720 --> 10:22.320
+They can be self-corrective.
+
+10:22.320 --> 10:24.639
+They can not only allow you to do more at once,
+
+10:24.639 --> 10:26.679
+but they can also sort of have a negative feedback
+
+10:26.679 --> 10:28.399
+that they keep you more under control,
+
+10:28.399 --> 10:29.639
+doing a bit less.
+
+10:29.639 --> 10:31.840
+They can be very efficient for your context.
+
+10:31.840 --> 10:34.320
+It's usually the first reason you use subagents,
+
+10:34.320 --> 10:37.039
+is 'cause you pull stuff off the main context
+
+10:37.039 --> 10:40.320
+for Cloud Code, and they can be focused on one task
+
+10:40.320 --> 10:52.000
+that allows you to perfect the prompting, perfect the task at hand, do one thing really well and be really good at it, keeping again that kind of context of your main Claude code.
+
+10:52.000 --> 10:55.000
+But with these strengths come a few drawbacks.
+
+10:55.000 --> 11:04.980
+So any time you've got this kind of ability to delegate to some other process, you're adding more moving parts. There's more complexity in your system, which
+
+11:04.980 --> 11:09.840
+means that more things can go wrong in a mysterious way that's harder to track down.
+
+11:09.840 --> 11:14.820
+There are what are called boundary issues or problems at the interfaces between your
+
+11:14.820 --> 11:20.820
+sub-agent and your main agent that can result in mistakes. You can have this amplification
+
+11:20.820 --> 11:26.720
+of problems when you divvy up the task. Something can go a bit wrong and then agents go off in different directions
+
+11:26.720 --> 11:32.480
+and it gets more and more wrong in a way that's kind of hard to recover compounding errors.
+
+11:32.480 --> 11:37.840
+And then also whilst subagents are sometimes touted as a way to save money because you can use a
+
+11:37.840 --> 11:43.759
+cheaper model to do some of your processing, they can also be a way that money can add up because
+
+11:43.759 --> 11:48.480
+you're just doing a lot more. You've got more churn, particularly if you've got the sort of self-correcting
+
+11:48.480 --> 11:53.320
+agents that are doing code reviews, doing document reviews, coming back for feedback.
+
+11:53.320 --> 11:58.279
+So more is going on. Hopefully that results in better outcomes, but it might also mean
+
+11:58.279 --> 12:01.080
+that ultimately you spend more getting there.
+
+12:01.080 --> 12:04.639
+So look, needless to say, we're going to have more time to talk about this. I don't
+
+12:04.639 --> 12:10.360
+want to overwhelm you with these bits and pieces. We'll go through some of this in a recap tomorrow.
+
+12:10.360 --> 12:12.960
+I also, with the plugins, I didn't mention
+
+12:12.960 --> 12:15.480
+how you put MCP servers in the mix as well.
+
+12:15.480 --> 12:16.480
+So I'll touch on that.
+
+12:16.480 --> 12:19.159
+And things called LSP as well, which I didn't mention,
+
+12:19.159 --> 12:20.480
+which we'll get to too.
+
+12:20.480 --> 12:23.519
+But the main topic for tomorrow is sandboxing,
+
+12:23.519 --> 12:25.399
+which is such an important one,
+
+12:25.399 --> 12:29.039
+and also being able to run Cloud Code remotely.
+
+12:29.039 --> 12:34.480
+So a few juicy topics for tomorrow that rounds up the couple of yellow days.
+
+12:34.480 --> 12:41.679
+And with that, that brings us to 73% complete. We're entering the home stretch. Things are getting
+
+12:41.679 --> 12:46.559
+harder, but that's because we're doing so much more. And tomorrow's no exception. I'll see you then.
+

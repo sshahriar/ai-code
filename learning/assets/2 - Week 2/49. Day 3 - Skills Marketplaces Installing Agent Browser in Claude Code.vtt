@@ -1,0 +1,737 @@
+WEBVTT
+
+00:00.000 --> 00:04.559
+So just as with the MCP servers, there are marketplaces for skills as well.
+
+00:04.559 --> 00:08.720
+But they're a bit more simplistic because skills are just a bunch of files and folders.
+
+00:09.279 --> 00:12.800
+But to start with, the first place you might go would be to anthropics,
+
+00:12.800 --> 00:16.160
+GitHub repo, where they have a repo called skills.
+
+00:16.280 --> 00:18.120
+It contains the specification.
+
+00:18.120 --> 00:19.239
+It contains a template.
+
+00:19.239 --> 00:25.760
+If you want to make your own, which we will do at some point, and it also has a folder of skills that they have written.
+
+00:25.839 --> 00:28.280
+And it also has a folder of skills that they have written. And it has one of the first ones they produced,
+
+00:28.280 --> 00:32.600
+was one that allows you to create PDFs.
+
+00:32.600 --> 00:34.659
+They've got, was it the PowerPoint one,
+
+00:34.659 --> 00:35.979
+was one of the first ones they did.
+
+00:35.979 --> 00:38.759
+But they've got some other useful ones here
+
+00:38.759 --> 00:39.619
+that you could look at.
+
+00:39.619 --> 00:43.340
+There's one that actually is a skill to create skills.
+
+00:43.340 --> 00:45.439
+So they've got these various things in them,
+
+00:45.439 --> 00:47.600
+and you can come in and you'll see that there is this file
+
+00:47.600 --> 00:48.159
+called skill.md, which I mentioned. got these various things in them and you can come in and you'll see that there is this file called
+
+00:48.159 --> 00:55.840
+skill.md which I mentioned that is the main file with the metadata and the instructions.
+
+00:55.840 --> 00:59.679
+Those first two levels of hierarchy. While we're here we can just click in on one of them.
+
+00:59.679 --> 01:04.400
+This is the metadata at the top, this is the name and the description and then this is the
+
+01:04.400 --> 01:12.159
+instructions. You can see it's just free form text with some stuff and then it's got some information about how it can look
+
+01:12.159 --> 01:18.239
+to more detail like scripts, executable code for tasks that blah, blah, blah, blah.
+
+01:18.239 --> 01:24.159
+And this is informing Cloud Code about the other, the other things in this skill creator
+
+01:24.159 --> 01:29.120
+folder like in this in this script folder that tell it how, what things that it can, that it can
+
+01:29.120 --> 01:32.040
+actually action. So that's an example.
+
+01:32.040 --> 01:34.200
+It's a skill that is called Skill Creator.
+
+01:34.200 --> 01:35.120
+Let's look at another one.
+
+01:35.120 --> 01:37.879
+Let's look at a skill that is called PPTX
+
+01:37.879 --> 01:39.000
+for PowerPoint.
+
+01:39.000 --> 01:42.760
+Let's open the skill.to MD.
+
+01:42.760 --> 01:44.799
+This is about presentation creation,
+
+01:44.799 --> 01:46.359
+editing and analysis,
+
+01:46.359 --> 01:49.159
+when Claude needs to work with presentations.
+
+01:49.159 --> 01:54.000
+So this is telling it exactly when it should trigger this skill.
+
+01:54.000 --> 01:57.519
+And when Cloud Code finds that this is being asked for,
+
+01:57.519 --> 01:59.400
+it will read in this entire document.
+
+01:59.400 --> 02:02.319
+It will read in the instructions, the rest of this.
+
+02:02.319 --> 02:05.400
+And you can see that there's lots of information here
+
+02:05.400 --> 02:07.239
+about what it needs to do.
+
+02:07.239 --> 02:07.920
+Lots and lots.
+
+02:07.920 --> 02:08.759
+Look at that.
+
+02:08.759 --> 02:10.759
+It's a long document that would only get read in
+
+02:10.759 --> 02:12.840
+if this applies.
+
+02:12.840 --> 02:15.479
+And if we come back here, you'll see that there is also
+
+02:15.479 --> 02:17.000
+a scripts folder.
+
+02:17.000 --> 02:19.000
+And these are the different scripts that can run.
+
+02:19.000 --> 02:23.000
+There's a JavaScript thing that can convert HTML to PowerPoint.
+
+02:23.000 --> 02:24.000
+There's various things.
+
+02:24.000 --> 02:26.000
+There's a rearrange Python script.
+
+02:26.000 --> 02:28.000
+So these are all things.
+
+02:28.000 --> 02:33.000
+So this is a Python script that Cloud Code could run in order to,
+
+02:33.000 --> 02:39.000
+and it's got some usage here in order to rearrange some PowerPoint,
+
+02:39.000 --> 02:40.879
+the contents within a PowerPoint.
+
+02:40.879 --> 02:43.599
+That's what this script would allow it to do,
+
+02:43.599 --> 02:47.000
+similar to a tool, but at a higher level of granularity.
+
+02:47.000 --> 02:49.159
+If this still is completely feeling real to you,
+
+02:49.159 --> 02:52.120
+then I would suggest coming to anthropics,
+
+02:52.120 --> 02:54.319
+GitHub repo, and I'll put a link in the resources,
+
+02:54.319 --> 02:57.520
+and browse around and try and get that first hand sense
+
+02:57.520 --> 02:59.080
+of what do these skills look like
+
+02:59.080 --> 03:01.060
+and what functionality do they contain.
+
+03:01.060 --> 03:03.759
+Okay, and the other website is called skills.sh
+
+03:03.759 --> 03:04.719
+and it's a great one.
+
+03:04.719 --> 03:09.560
+It's made by Versal, the people that are behind Next.js
+
+03:09.560 --> 03:12.159
+and that have the Versal deployment.
+
+03:12.159 --> 03:14.800
+Great company and great product, great, great marketplace.
+
+03:14.800 --> 03:17.680
+Skills.sh is where you can come in
+
+03:17.680 --> 03:23.000
+to see a bunch of different skills out there and install them.
+
+03:23.479 --> 03:25.120
+And there are some really interesting ones.
+
+03:25.120 --> 03:27.039
+There's one front end design that it's taking
+
+03:27.039 --> 03:29.860
+from the Anthropics website we were just looking at.
+
+03:29.860 --> 03:33.120
+A bunch of different skills that you can look at here,
+
+03:33.120 --> 03:36.520
+that somewhat in a sort of meta way,
+
+03:36.520 --> 03:40.240
+that the top skill is a skill designed to allow
+
+03:40.240 --> 03:43.000
+Claude Coe to find other skills,
+
+03:43.000 --> 03:46.080
+called find skills, which is kind of confusing.
+
+03:46.080 --> 03:48.319
+And there's lots of other things here.
+
+03:48.319 --> 03:50.520
+It's a bit like we were just looking at the create skill
+
+03:50.520 --> 03:52.080
+skill.
+
+03:52.080 --> 03:54.639
+But yeah, there is the create skill skill
+
+03:54.639 --> 03:55.479
+that we were just looking at.
+
+03:55.479 --> 04:00.479
+Skill creator, a skill to allow Cloud Code to create skills.
+
+04:00.479 --> 04:03.159
+But yeah, hopefully I'm not completely confusing you.
+
+04:03.159 --> 04:06.039
+There are some, there's, back to some ordinary skills,
+
+04:06.039 --> 04:10.240
+like a skill to, to, to create and edit PDFs,
+
+04:10.240 --> 04:13.280
+a skill to know how to do brainstorming.
+
+04:13.280 --> 04:15.240
+That's, that sounds like an interesting one.
+
+04:15.240 --> 04:17.639
+So all of these are different skills
+
+04:17.639 --> 04:21.879
+that you can look into and equip your model to use.
+
+04:21.879 --> 04:25.079
+And look, this is a really powerful one, agent browser.
+
+04:25.079 --> 04:26.120
+If you come into this,
+
+04:26.120 --> 04:29.600
+if we're now looking at the skill.dot.md here, this
+
+04:29.600 --> 04:37.759
+is a really important one that allows you to equip Claude code so that it can run a
+
+04:37.759 --> 04:42.519
+browser, like launch a browser on your computer doing it what they call headless, which means
+
+04:42.519 --> 04:46.800
+you don't actually see the browser. It launches and then navigate around. So rather than having
+
+04:46.800 --> 04:51.620
+to go off onto the cloud to do searches, it can actually navigate and do things.
+
+04:51.620 --> 04:53.579
+Claude Coke can have that ability.
+
+04:53.579 --> 04:55.000
+So that's kind of cool.
+
+04:55.000 --> 05:00.319
+And yeah, it's being given the ability to control it
+
+05:00.319 --> 05:04.180
+through another product called Agent Browser.
+
+05:04.180 --> 05:07.339
+So what we're going to do now is install this skill
+
+05:07.339 --> 05:12.160
+and Vassal has made a utility called MPX Skills.
+
+05:12.160 --> 05:15.639
+You can just run MPX Skills Add and then give it
+
+05:15.639 --> 05:17.360
+a link to GitHub like this.
+
+05:17.360 --> 05:19.560
+And it will install that skill.
+
+05:19.560 --> 05:21.439
+And we are going to do that right now.
+
+05:21.439 --> 05:23.360
+So I'm going to copy that to the clipboard.
+
+05:23.360 --> 05:24.199
+We're going to do that.
+
+05:24.199 --> 05:27.399
+And that's going to be the way that we add a skill
+
+05:27.399 --> 05:28.759
+to Cloud Code.
+
+05:28.759 --> 05:31.319
+Okay, so first up, I'm going to come out of Cloud Code.
+
+05:31.319 --> 05:33.600
+I'll clear my screen there.
+
+05:33.600 --> 05:35.279
+And I'm just going gonna run a couple of commands
+
+05:35.279 --> 05:38.680
+that are gonna install this product called Agent Browser,
+
+05:38.680 --> 05:41.000
+which is like a headless browser.
+
+05:41.000 --> 05:42.839
+And I'll put these in the resources,
+
+05:42.839 --> 05:45.319
+but this is, since we've already got node installed,
+
+05:45.319 --> 05:47.079
+you shouldn't need to install anything else.
+
+05:47.079 --> 05:50.240
+This has installed this thing called Agent Browser.
+
+05:50.240 --> 05:54.759
+And then if you need to install Chromium,
+
+05:54.759 --> 05:58.379
+the open source at the Chrome version that this runs,
+
+05:58.379 --> 06:00.639
+then you run this command here.
+
+06:00.639 --> 06:04.759
+I say yes, and it's installing Chromium along this thing called Play Rights,
+
+06:04.759 --> 06:11.339
+which you may know is Microsoft's product that allows a code to drive a browser running on your computer.
+
+06:11.339 --> 06:13.720
+So that's all been installed successfully.
+
+06:13.720 --> 06:18.920
+The next thing I'm going to do is I'm going to paste to paste it in the thing that
+
+06:18.920 --> 06:23.360
+we just copied from that other screen from Vassell's skills list.
+
+06:23.360 --> 06:24.360
+So here we go.
+
+06:24.360 --> 06:25.360
+I'm pasting in that command.
+
+06:25.360 --> 06:26.360
+You recognize it there.
+
+06:26.360 --> 06:30.680
+Take it straight from that site using Vassell's skills utility.
+
+06:30.680 --> 06:33.480
+It's thinking it needs to install the following packages.
+
+06:33.480 --> 06:34.480
+Okay, proceed.
+
+06:34.480 --> 06:35.480
+I'll say yes.
+
+06:35.480 --> 06:36.480
+That's fine.
+
+06:36.480 --> 06:37.480
+Okay.
+
+06:37.480 --> 06:38.480
+Skills is installed.
+
+06:38.480 --> 06:41.600
+Okay. Okay, skills is installed. Okay, now, it's saying to me,
+
+06:41.600 --> 06:45.300
+"Selected Skill Agent Browser."
+
+06:45.300 --> 06:48.740
+Which agents do you want to install it to?
+
+06:48.740 --> 06:51.639
+So what it's saying is that it's recognized
+
+06:51.639 --> 06:54.879
+that it could be installed to be used by something like AMP.
+
+06:54.879 --> 06:56.000
+Remember AMP that we used?
+
+06:56.000 --> 06:59.240
+Anti-gravity, it could be used by Claude Code.
+
+06:59.240 --> 07:01.839
+OpenClaw, which is big right now.
+
+07:01.839 --> 07:06.480
+Maybe we'll talk about later, "Cline", "Covuddy", "CODEX", and lots more,
+
+07:06.480 --> 07:10.480
+including "Open Code", I believe. So, if you've decided to stick with that, you can use that as well.
+
+07:10.480 --> 07:14.240
+And all we want is "Clawed Code". And the way you do that is you press the "Down" button,
+
+07:14.240 --> 07:19.199
+and you press the "Space" bar to select it like that, and you press "Enter".
+
+07:19.199 --> 07:24.480
+And now we can choose, "Do you want it install for this project or globally?
+
+07:24.480 --> 07:27.800
+And all that means is do you want me to create these folders and files
+
+07:27.800 --> 07:31.319
+in your.Cloud file right here or in your home directory?
+
+07:31.319 --> 07:32.480
+And I'm going to say project.
+
+07:32.480 --> 07:33.639
+It's already highlighted there.
+
+07:33.639 --> 07:35.079
+I can just press Enter.
+
+07:35.079 --> 07:38.120
+An installation method, this is you.
+
+07:38.120 --> 07:40.839
+If in doubt, say copy to all agents.
+
+07:40.839 --> 07:44.360
+You don't know about Simlinks, we like aliases.
+
+07:44.360 --> 07:45.000
+Let's do that.
+
+07:45.000 --> 07:49.439
+Proceed with installation. Yes, done. And it seems very high
+
+07:49.439 --> 07:54.240
+tech, especially as it was all on the command line like that. But all it did is if I open up
+
+07:54.240 --> 07:59.680
+dot cloud, it has created this folder here, skills that just got created. That's why it's green.
+
+07:59.680 --> 08:04.560
+If I open that up, you could see that there is it's sorry within skills, there's only one folder,
+
+08:04.560 --> 08:09.279
+and it's called agent browser, which is the name of the skill that we just created.
+
+08:09.279 --> 08:14.800
+And that has this single file called skill.md and if I open that up in a preview mode
+
+08:14.800 --> 08:19.199
+so if you look at it, you can see that it is basically exactly what we were just looking
+
+08:19.199 --> 08:20.199
+at.
+
+08:20.199 --> 08:21.720
+Hang on and maybe I shouldn't show it in preview mode.
+
+08:21.720 --> 08:26.240
+If I show you the original version here, you can see that it's got this kind of header
+
+08:26.240 --> 08:32.480
+at the top with this particular format, three hyphens, and then this description right here
+
+08:32.480 --> 08:34.360
+is the metadata.
+
+08:34.360 --> 08:36.600
+YAML people will recognize this.
+
+08:36.600 --> 08:39.399
+So it's got this particular format here with name
+
+08:39.399 --> 08:41.720
+and description, and then this is optionally
+
+08:41.720 --> 08:43.080
+which tools are allowed.
+
+08:43.879 --> 08:46.720
+And then, yeah, we've got,
+
+08:48.080 --> 08:50.480
+the rest of this is the information
+
+08:50.480 --> 08:53.080
+that is only read into context if
+
+08:53.080 --> 08:55.879
+Claude code decides that this is met.
+
+08:55.879 --> 08:59.759
+So just by virtue of having these folders and files,
+
+08:59.759 --> 09:02.720
+we have effectively equipped Claude with a skill.
+
+09:02.720 --> 09:04.360
+There's nothing more to it than that.
+
+09:04.360 --> 09:07.799
+It's just about the files in this dot Claude directory.
+
+09:07.799 --> 09:11.679
+And so finally, I can launch Claude, up comes Claude.
+
+09:11.679 --> 09:12.639
+Here it is.
+
+09:12.639 --> 09:16.879
+I can look at the context. If we look at the context,
+
+09:16.879 --> 09:23.759
+we can see that we have underskills Agent Browser. It's easy up just a tiny 68
+
+09:23.759 --> 09:31.120
+tokens, but Agent Browser is there. And so now I can actually use Agent Browser.
+
+09:31.120 --> 09:37.960
+And now this is a definite example of how you need to be-- it's difficult to make it use this,
+
+09:37.960 --> 09:40.320
+because generally, Claude does have the ability
+
+09:40.320 --> 09:42.679
+to search the web from its tools.
+
+09:42.679 --> 09:44.240
+So we'll see how this goes.
+
+09:44.240 --> 10:13.320
+We'll say, please interact with the browser restaurant experiences in MOC next week, perhaps on resi or open table.
+
+10:13.320 --> 10:17.679
+So we're giving it a sort of broad task again, it's not to do with coding but we're just
+
+10:17.679 --> 10:19.759
+seeing whether or not it's got this.
+
+10:19.759 --> 10:22.120
+But look it is trying to use the Skill Agent browser.
+
+10:22.120 --> 10:24.200
+The first time I tested this before, it didn't.
+
+10:24.200 --> 10:28.919
+So you have to be careful that I'm using, you notice, the exact words from here.
+
+10:28.919 --> 10:34.679
+So I'm going to say yes, and it is now going to be behind the scenes launching
+
+10:34.679 --> 10:35.840
+Agent browser.
+
+10:35.840 --> 10:38.679
+It's looking at resi, it's running, it's looking at resi.
+
+10:38.679 --> 10:41.480
+Oh, and the browser window has actually come up.
+
+10:41.480 --> 10:43.320
+There's, I think, some control somewhere where you set
+
+10:43.320 --> 10:45.480
+whether it should be headless or not.
+
+10:45.480 --> 10:47.600
+And obviously it's set, so I thought it would be headless.
+
+10:47.600 --> 10:49.320
+But it's cool that you get to see it.
+
+10:49.320 --> 10:52.519
+So we see it running, it's doing stuff.
+
+10:52.519 --> 10:53.960
+That's a nice surprise.
+
+10:53.960 --> 10:54.840
+Look, it's searching.
+
+10:54.840 --> 10:56.519
+I'm not, my hands aren't on the keyboard.
+
+10:56.519 --> 10:57.440
+I'm not doing anything.
+
+10:57.440 --> 11:00.799
+This is Cloud Code driving this browser on my computer
+
+11:00.799 --> 11:03.279
+because of the skill that we equipped it with.
+
+11:03.279 --> 11:07.440
+They got a bit, it's pretty cool. It's continuing to search,
+
+11:07.440 --> 11:10.960
+and I could see, but you could probably see in the window behind that
+
+11:10.960 --> 11:13.919
+Cloud Code is doing stuff. Things are all happening.
+
+11:13.919 --> 11:17.120
+All right, I'm going to let it do its thing. I'll see you in a second when it's
+
+11:17.120 --> 11:19.279
+finished. Okay, that was pretty cool. It just
+
+11:19.279 --> 11:22.240
+searched around Rezi and then it searched around Open Table.
+
+11:22.240 --> 11:29.440
+It took screenshots, it then read in the screenshots asking me for permission and then summarised with some
+
+11:29.919 --> 11:32.480
+some experiences that are available.
+
+11:33.279 --> 11:35.480
+And so there's no question.
+
+11:35.480 --> 11:39.279
+I say I'm not sure which setting it is that controls whether it's headless or not,
+
+11:39.279 --> 11:45.759
+but you definitely get that real sense that Cloud Code is in the driving seat using its new skill when you see that.
+
+11:45.759 --> 11:47.240
+So I think it's a really cool example for you.
+
+11:47.240 --> 11:49.480
+It's not of course got much to do with coding,
+
+11:49.480 --> 11:51.519
+like you wouldn't need to look for a restaurant
+
+11:51.519 --> 11:52.480
+for its part of coding.
+
+11:52.480 --> 11:54.120
+But you can imagine things you might need to do
+
+11:54.120 --> 11:55.919
+that would need it to bring up a browser
+
+11:55.919 --> 11:56.960
+and do some searching.
+
+11:56.960 --> 12:00.519
+And that is the new skill that we've equipped
+
+12:00.519 --> 12:04.720
+Claude with so easily, literally just by having
+
+12:04.720 --> 12:09.200
+this bunch of files stored in the dot-clawed directory
+
+12:09.200 --> 12:12.399
+in this repo. And as I say, of course, the magic thing about having
+
+12:12.399 --> 12:15.000
+it be so simple is that I can now check this in
+
+12:15.000 --> 12:17.360
+and push it to a repo, like push it to GitHub.
+
+12:17.360 --> 12:19.639
+And any of my team members that pull it down
+
+12:19.639 --> 12:23.279
+will then do a git-pull, will also have this skill
+
+12:23.279 --> 12:26.600
+equipped in their cloud code immediately.
+
+12:26.600 --> 12:28.639
+Although they would also have to do that,
+
+12:28.639 --> 12:31.120
+that's a npm command to install the agent browser,
+
+12:31.120 --> 12:31.960
+they didn't have it.
+
+12:31.960 --> 12:32.240
+But you get the idea, these skills can be equipped have to do that that's a mpm command to install the agent browser if they didn't have it but but
+
+12:32.240 --> 12:38.720
+you get the idea these skills can be equipped that simply and that that is really why they're so popular.
+

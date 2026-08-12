@@ -1,0 +1,404 @@
+WEBVTT
+
+00:00.000 --> 00:06.240
+Okay, so we'll start by deleting review.md with its silly.env worry.
+
+00:06.240 --> 00:08.039
+Move that to trash.
+
+00:08.039 --> 00:09.000
+Off it goes.
+
+00:09.000 --> 00:10.599
+Close down these documents.
+
+00:10.599 --> 00:15.960
+And now we will go back to our agent here and see if we can't improve this.
+
+00:15.960 --> 00:20.120
+Okay, so I've just pasted in a new version of this called codecs reviewer.
+
+00:20.120 --> 00:23.000
+I've also changed the name of the files to give it nice and clean.
+
+00:23.000 --> 00:28.399
+You carry out a comprehensive review of plan.md when requested using codex.
+
+00:28.399 --> 00:32.880
+You are using a different AI agent to carry a review of the document planning plan.md.
+
+00:32.880 --> 00:38.000
+You must execute the following shell command to carry the review. Do not review yourself.
+
+00:38.000 --> 00:58.399
+I'm being super clear on this. All right, with that, let's launch Claude. Okay, use your codex-reviewer subagent to carry out a review of planning/plan.md.
+
+00:58.399 --> 01:00.500
+That seems very clear.
+
+01:00.500 --> 01:02.399
+Let's see what happens.
+
+01:02.399 --> 01:04.500
+Let's see what happens when we do this.
+
+01:04.500 --> 01:08.299
+It's thinking, it's celebrating, it's called the codex reviewer.
+
+01:08.299 --> 01:10.000
+Is it going to do this?
+
+01:10.000 --> 01:16.000
+It's reading plan.md itself, but is it going to kick off the bash command?
+
+01:16.000 --> 01:19.000
+It's going to kick off is run codecs.
+
+01:19.000 --> 01:20.000
+Let's see codecs exact.
+
+01:20.000 --> 01:21.000
+That seems good.
+
+01:21.000 --> 01:22.000
+Yes.
+
+01:22.000 --> 01:23.000
+We'll let it run that.
+
+01:23.000 --> 01:24.000
+Okay.
+
+01:24.000 --> 01:25.000
+codecs is now running.
+
+01:25.000 --> 01:34.079
+So we are running a sub agent in Cloud Code, and that is launching codecs, which is much the helping runners as a sub-agent.
+
+01:34.079 --> 01:40.079
+It's really cool that we're using a different LLM and a different LLM CLI as part of this process
+
+01:41.040 --> 01:48.719
+feels very sub-agenty. So that's going to happen now. codecs is running in the background.
+
+01:48.719 --> 01:54.000
+We're going to let this complete and all of the two and fro between the two is not going to pollute the context.
+
+01:54.000 --> 02:02.000
+And so we're going to get back in a very efficient way, a code review that's just been written to review.md by codex.
+
+02:02.000 --> 02:05.000
+And there we go. We've got like a response back.
+
+02:05.000 --> 02:11.000
+It's got a ton of bits of feedback here. Let's go and have a look at the review.
+
+02:11.000 --> 02:16.800
+It's got some strengths, that's kind of it. Some risks gaps.
+
+02:18.400 --> 02:21.520
+It's concerned about the skill not being defined
+
+02:21.520 --> 02:23.360
+but it is defined, that's fine.
+
+02:23.360 --> 02:26.599
+It's because it was only looking at that file right there.
+
+02:26.599 --> 02:29.539
+It's concerned about polygon, we're fine with this.
+
+02:30.560 --> 02:34.159
+And that doesn't seem like a concern to me.
+
+02:34.159 --> 02:41.280
+Okay, no explicit, that's fine. I think no authors intended. Yes,
+
+02:42.639 --> 02:50.639
+pricing model assumptions. That seems fine. Okay, that's it. It doesn't know that massive
+
+02:50.639 --> 02:56.639
+is the new name of polygon IO, obviously. Overall, this is a strong blueprint that should
+
+02:56.639 --> 03:00.560
+enable parallel execution. Little does it know that it's part
+
+03:00.560 --> 03:03.960
+of the first sign of that parallel execution.
+
+03:03.960 --> 03:04.879
+Very nice.
+
+03:04.879 --> 03:08.919
+So it's kind of cool that we've had this independent,
+
+03:08.919 --> 03:11.879
+a different LLM go off and do this analysis,
+
+03:11.879 --> 03:14.919
+and we packaged all that into a sub-agent
+
+03:14.919 --> 03:16.719
+that ran within Cloud Code.
+
+03:16.719 --> 03:18.400
+It could have been, "Lord, maybe you just stuck
+
+03:18.400 --> 03:20.039
+"with using Cloud for the review,
+
+03:20.039 --> 03:23.680
+"and that's totally good, but that is how we are doing it.
+
+03:23.680 --> 03:26.800
+Okay, and just to make this a little bit more interesting,
+
+03:26.800 --> 03:28.500
+I'm gonna change this now,
+
+03:28.500 --> 03:31.360
+not to review planning.md,
+
+03:31.360 --> 03:34.759
+but to review all changes since the last commit,
+
+03:34.759 --> 03:37.719
+making this a more general kind of tool.
+
+03:37.719 --> 03:39.800
+And I'm just gonna call it reviewer,
+
+03:39.800 --> 03:41.080
+and I'm going to use codecs,
+
+03:41.080 --> 03:43.020
+but you can just use Cloud code for this.
+
+03:43.020 --> 03:44.400
+You don't need to use codecs, but you can just use Cloud Code for this. You don't need to use codecs.
+
+03:44.400 --> 03:46.840
+I kind of enjoy doing that to have this idea
+
+03:46.840 --> 03:50.080
+of a different LLM in the mix, but it's not required.
+
+03:50.080 --> 03:53.800
+Okay, so I've updated this to be changereviewer.md,
+
+03:53.800 --> 03:56.199
+change reviewer, and you can see it's going to carry out
+
+03:56.199 --> 03:59.039
+a comprehensive review of all the changes
+
+03:59.039 --> 04:00.919
+since the last commit.
+
+04:00.919 --> 04:02.520
+This sub-agent reviews all changes
+
+04:02.520 --> 04:04.840
+since the last commit using shell commands.
+
+04:04.840 --> 04:07.039
+Now, I'm saying again that you should do it by
+
+04:07.039 --> 04:12.879
+using a shell command to call codex to do the work and not review itself but you can just tell
+
+04:12.879 --> 04:18.639
+it to do the code review itself that will work great. Cloud code will be good at it too but if you
+
+04:18.639 --> 04:31.040
+also have codex and this is a fun way to have different LLMs collaborate participate in the process. So that's what I'm doing. I am now going to come out of Cloud Code and then
+
+04:32.000 --> 04:41.040
+I am going to launch Cloud again. And now I'm going to say use, oh I'm going to delete review.md,
+
+04:41.040 --> 04:48.079
+delete. And I can't remember what's changed since the last commit, but I'm sure it can use the change
+
+04:59.139 --> 05:03.699
+And use the change reviewer subagent to review changes since last commit. And we'll see what happens there, but it will hopefully go off, make that shell command
+
+05:03.699 --> 05:05.680
+call to codex.
+
+05:05.680 --> 05:13.839
+And we'll then have an update that will, there we go, you can see it's on waiting on the exact and that will then cause an
+
+05:13.839 --> 05:19.600
+up file to be written by codex or in your case perhaps by clawed that will have that
+
+05:19.600 --> 05:24.480
+code review and this is obviously starting to put in place the foundations of what can
+
+05:24.480 --> 05:30.079
+become our multi-agent orchestration and now it's completed it did for me indeed use
+
+05:30.079 --> 05:35.360
+codex maybe you've done it that way as well and I can see that it's got back the results of
+
+05:35.360 --> 05:42.319
+the just looking at the changes since the last commit, which is cool. And yeah, this is a great
+
+05:42.319 --> 05:48.319
+example of using a subagent because the various toings and throwings about what actually was
+
+05:48.319 --> 05:52.800
+changed since the last commit and deciding how it's going to look into that and then ultimately
+
+05:52.800 --> 05:56.220
+coming up with the findings and then writing them, none of that was put
+
+05:56.220 --> 05:57.980
+into the main context window
+
+05:57.980 --> 05:59.699
+that was all handled by the sub-agent.
+
+05:59.699 --> 06:02.220
+And even more for us, that was actually handled
+
+06:02.220 --> 06:04.779
+by codecs off somewhere else,
+
+06:04.779 --> 06:05.620
+but it didn't need to be.
+
+06:05.620 --> 06:06.779
+It could've been handled by Claude Co.
+
+06:06.779 --> 06:09.379
+Right there, it would still have been kept isolated
+
+06:09.379 --> 06:12.100
+from the main context, which is the whole point.
+
+06:12.100 --> 06:14.899
+And we can see it by doing a slash context
+
+06:14.899 --> 06:17.540
+and looking at what our context window looks like.
+
+06:17.540 --> 06:22.600
+We've got all of this stuff, but you can see this basically no, no real conversation has
+
+06:22.600 --> 06:23.600
+happened.
+
+06:23.600 --> 06:27.839
+It's all very clean because that has been taken care of by our sub-agent.
+
+06:27.839 --> 06:32.759
+So on the list of things we were going to cover today, I had put agent teams, which
+
+06:32.759 --> 06:37.120
+is a new experimental feature in Cloud Code.
+
+06:37.120 --> 06:39.920
+And I'm going to cheat a bit in that I'm only covering it and I'm telling you that
+
+06:39.920 --> 06:42.600
+it's to come on day four. we're going to, we're going to come
+
+06:42.600 --> 06:45.759
+back to this when we look at agent teams and a number of different constructs.
+
+06:45.920 --> 06:49.480
+But I did want to explain the difference between agent teams and sub-agents,
+
+06:49.480 --> 06:50.879
+because they are quite different.
+
+06:51.240 --> 06:56.319
+Sub-agents really are this way to delegate one particular task to another
+
+06:56.319 --> 06:59.560
+Cloud Code that's going to run with an isolated context.
+
+06:59.680 --> 07:03.759
+And then the results will go back to the back to the main Cloud code that called it.
+
+07:03.759 --> 07:05.399
+And there is always this relationship
+
+07:05.399 --> 07:08.519
+that there is a main Cloud code that's just delegating off
+
+07:08.519 --> 07:12.319
+one task that goes to a subagent and back comes the result.
+
+07:12.319 --> 07:14.279
+It is actually possible for that subagent
+
+07:14.279 --> 07:17.279
+to have a longer term memory in those configuration settings.
+
+07:17.279 --> 07:19.480
+You can ask it to have like project level memory.
+
+07:19.480 --> 07:22.199
+But with that caveat, aside from that,
+
+07:22.199 --> 07:27.079
+it really does feel very much like it's just taking the one task, carrying it out,
+
+07:27.079 --> 07:30.540
+and that it's purpose in this whole arrangement.
+
+07:30.540 --> 07:32.019
+Agent teams are a bit different.
+
+07:32.019 --> 07:33.500
+Agent teams are about assembling
+
+07:33.500 --> 07:35.620
+a whole kind of group of Cloud Codes
+
+07:35.620 --> 07:38.899
+that all run collaboratively to try and solve a problem.
+
+07:38.899 --> 07:40.779
+So it is this thing that we're gonna be covering
+
+07:40.779 --> 07:42.500
+about swarms and orchestration
+
+07:42.500 --> 07:44.459
+when you have potentially many things
+
+07:44.459 --> 07:46.000
+all on the go at the same time.
+
+07:46.000 --> 07:52.000
+And one of the kind of big X factor moments with agent teams is that these different,
+
+07:52.000 --> 07:55.000
+these different, I would say subagents, but that might confuse you.
+
+07:55.000 --> 07:59.000
+These different agents that make up the agent teams can communicate with each other.
+
+07:59.000 --> 08:02.000
+They don't just have to go through the main cloud code.
+
+08:02.000 --> 08:04.000
+They can also interact.
+
+08:04.000 --> 08:10.399
+You could have one agent that is the tester that is giving test feedback directly to your front end agent and your back end agent.
+
+08:10.399 --> 08:23.279
+So they all have kind of a long running presence in your team and they are able to interact with each other, challenge each other, try out different things, test different hypotheses, all of those kinds of ideas.
+
+08:23.279 --> 08:30.399
+And it is experimental in Cloud Code for me right now. Maybe it's more mature by the time you see it, we will be experimenting
+
+08:30.399 --> 08:34.960
+with it, but it's obviously a different mindset than booking with subagents, which
+
+08:34.960 --> 08:40.960
+is more concrete, more simple, take a task, delegate it, get back the answer.
+

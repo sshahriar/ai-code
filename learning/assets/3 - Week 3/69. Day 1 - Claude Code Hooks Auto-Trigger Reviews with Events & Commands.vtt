@@ -1,0 +1,452 @@
+WEBVTT
+
+00:00.000 --> 00:04.320
+Okay, so next up we're going to look at hooks, which is one of the kind of pro features of
+
+00:04.320 --> 00:09.439
+claw code, which most of the time you don't need. But if you suddenly think, you know what, I could
+
+00:09.439 --> 00:14.240
+really use that. It's a cool thing to know that you can do. And I would suggest that when that
+
+00:14.240 --> 00:18.480
+happens, you would then bring up claw codes docs and just refresh your memory. So I want to give
+
+00:18.480 --> 00:22.640
+you a sense of how it works and we'll make one and you'll get a sort of the gist of it,
+
+00:22.640 --> 00:27.399
+but don't feel like you have to remember all of this. It's just one of those things that if you need it, you know how to do it,
+
+00:27.399 --> 00:29.039
+you know where to go and find out more.
+
+00:29.519 --> 00:34.659
+So a hook is something which in a certain circumstance can kick off
+
+00:34.659 --> 00:36.560
+making Claude code do something.
+
+00:36.759 --> 00:40.280
+And those circumstances are called events and they're things like when Claude
+
+00:40.280 --> 00:44.119
+is about to make a tool call, maybe it's about to run a shell command,
+
+00:44.359 --> 00:46.000
+or when it's just finishing work.
+
+00:46.000 --> 00:47.320
+It just thinks I'm done now.
+
+00:47.600 --> 00:53.000
+It's moments like that, they're considered events and they can trigger a hook.
+
+00:53.000 --> 00:57.799
+They can say, "Okay, something's happened and I want to make sure that Claude Code always,
+
+00:57.799 --> 01:02.600
+when that happens, it calls something that I've fixed and advanced."
+
+01:02.600 --> 01:06.799
+That is what a hook is all about, an event triggering something that you want.
+
+01:06.799 --> 01:12.400
+So the kind of classic examples of it, there's this thing that it constantly seems
+
+01:12.400 --> 01:18.040
+to forget with me that I wanted to use a UV run instead of Python. It always goes back
+
+01:18.040 --> 01:23.040
+to Python, which is the older pre UV way of doing it. You could add a hook so that before
+
+01:23.040 --> 01:28.659
+it calls a tool, any shell script, you always check if it's doing Python something. And if
+
+01:28.659 --> 01:34.920
+so, you say no, not Python always UV. That would be an example of a time where you might want to use a hook.
+
+01:34.920 --> 01:39.379
+Another one from Claude's documentation, they have one where if it's ever stopping
+
+01:39.379 --> 01:43.379
+to ask for your permission, it could send you a notification so that you could just leave
+
+01:43.379 --> 01:47.359
+it running and go to the other room and rather than coming back two hours later and
+
+01:47.359 --> 01:49.159
+realizing it's not made any progress.
+
+01:49.159 --> 01:50.219
+It's been waiting for you.
+
+01:50.219 --> 01:51.680
+You would get some kind of notification.
+
+01:51.680 --> 01:55.120
+So that's a cool one. So things like that are time to use
+
+01:55.120 --> 02:00.079
+hooks. And then one of the absolute standard ones that are very common that we're going to use
+
+02:00.079 --> 02:06.079
+now because it's so useful is having a hook that's triggered by an event of when Claude has
+
+02:06.079 --> 02:11.520
+finished doing its work. When Claude has finished, we can seize the moment to do something else like
+
+02:11.520 --> 02:17.000
+a review. And as it happens, this is the way that the Ralph Loop thing is implemented.
+
+02:17.000 --> 02:22.000
+I believe they've done it with a hook so that as soon as it finishes work,
+
+02:22.000 --> 02:25.000
+it's then sent a new prompt that says, "Hey, I don't think you've finished.
+
+02:25.000 --> 02:28.000
+Try again." And that's how it works.
+
+02:28.000 --> 02:29.000
+So we're going to use a hook.
+
+02:29.000 --> 02:33.000
+Now we're going to set one up to do a review at the end of any piece of work.
+
+02:33.000 --> 02:36.000
+And like so many things, it could belong in a few places,
+
+02:36.000 --> 02:38.680
+but.Cloud is usually the place to go. It's
+
+02:38.680 --> 02:44.680
+in the.claud folder and you may already have a file called just settings.json. But if
+
+02:44.680 --> 02:52.199
+not, I'm going to make that file right now. I'm going to make a file called settings.json.
+
+02:52.199 --> 02:56.639
+And this is the file into which you can put your hooks. And we're going to tell this
+
+02:56.639 --> 03:01.719
+hook that we want the event to be when, when Claude is stopping. And we're going to tell this hook that we want the event to be when Claude is stopping,
+
+03:01.719 --> 03:03.560
+and we're going to tell it what we want to do.
+
+03:03.560 --> 03:05.159
+And when you say what you want to do,
+
+03:05.159 --> 03:07.280
+you've got three different types of thing,
+
+03:07.280 --> 03:08.960
+and you don't need to commit this to memory,
+
+03:08.960 --> 03:10.099
+just have a sense of it.
+
+03:10.099 --> 03:12.039
+The three different things you could do is
+
+03:12.039 --> 03:13.240
+run a shell command,
+
+03:13.240 --> 03:16.340
+just give a command that needs to be run at that point.
+
+03:16.340 --> 03:18.479
+You could make a prompt to Claude,
+
+03:18.479 --> 03:21.159
+it could be some instructions you want to give Claude,
+
+03:21.159 --> 03:22.639
+or it could be an agent you want to give Claude or it could be an agent
+
+03:22.639 --> 03:29.159
+You want Claude to spawn a sub agent to do something and and that way it's kept off the context
+
+03:29.199 --> 03:34.840
+Those are the three things that you could you could have triggered by an event as part of a hook
+
+03:35.159 --> 03:37.199
+That's the terminology. That's how it fits together
+
+03:37.199 --> 03:45.360
+And if in doubt you can always just just Google Claude code hooks and read their docs. They're super clear. But now, let's make one that
+
+03:45.360 --> 03:51.680
+is going to do a code review whenever we hit a stopping point with cloud. Okay, so I've pasted
+
+03:51.680 --> 03:56.879
+it in the JSON that describes the hooks. You can also do this interactively by going to slash
+
+03:56.879 --> 04:02.879
+hooks. You can then interactively. These are the different events that can trigger a hook,
+
+04:02.879 --> 04:07.699
+pre-tool use, post-tool use, post-tool use, user failure, notification,
+
+04:07.699 --> 04:11.180
+user prompts submit, session start and stop.
+
+04:11.180 --> 04:13.599
+And we're gonna add one for stop, you can see it here,
+
+04:13.599 --> 04:15.719
+but you can add them, I can come in here
+
+04:15.719 --> 04:17.779
+and I can add a new hook that way.
+
+04:17.779 --> 04:19.120
+So you can do it all through the menus,
+
+04:19.120 --> 04:20.759
+but we're doing one for stop,
+
+04:20.759 --> 04:23.199
+and then for stop, for that event,
+
+04:23.199 --> 04:25.480
+we get to choose what are the hooks
+
+04:25.480 --> 04:28.000
+that you want to be triggered when that happens.
+
+04:28.160 --> 04:32.439
+You can also, should you wish, put in something called a "matcher" in here,
+
+04:32.439 --> 04:35.920
+which gives the circumstances a sort of filter on,
+
+04:35.920 --> 04:38.279
+in under what circumstances would this hook be called.
+
+04:38.439 --> 04:40.240
+But if you need to do that, you can look up the docs.
+
+04:40.639 --> 04:41.079
+All right.
+
+04:41.120 --> 04:44.240
+So then you specify what do you want to happen when,
+
+04:44.240 --> 04:45.639
+when Cloud Code stops.
+
+04:45.800 --> 04:47.680
+Well, we want to run a command.
+
+04:47.879 --> 04:49.480
+Now, as I say, three things can go there,
+
+04:49.480 --> 04:51.680
+command, prompt or agents,
+
+04:51.680 --> 04:56.639
+and the prompt and agents ones are a little bit fiddly. They have some constraints on the
+
+04:56.639 --> 05:01.279
+permissions that it has. So you can't do things like writing to a file. It just matters how it
+
+05:01.279 --> 05:05.600
+responds. So there's various things you can do, but it takes a lot of experimenting to get it to
+
+05:05.600 --> 05:13.279
+work predictably and robustly. The easiest one is command, which runs a shell command, and this is pretty bulletproof.
+
+05:13.279 --> 05:15.360
+And as it happens, at least I have
+
+05:15.360 --> 05:17.399
+a really cool shell command to run.
+
+05:17.399 --> 05:19.000
+You may not have done this one,
+
+05:19.000 --> 05:21.360
+but if you have, then you can experiment this with me
+
+05:21.360 --> 05:22.399
+'cause it's so cool.
+
+05:22.399 --> 05:25.620
+We can run that codecs exec command.
+
+05:25.620 --> 05:28.360
+That is gonna run a command on the shell prompt,
+
+05:28.360 --> 05:31.199
+which is actually going to launch a separate agent,
+
+05:31.199 --> 05:32.800
+a codecs agent.
+
+05:32.800 --> 05:35.040
+And it's gonna call call codex exec.
+
+05:35.040 --> 05:37.639
+And here comes the same thing as before,
+
+05:37.639 --> 05:39.519
+but I'm just slightly twisting it.
+
+05:39.519 --> 05:42.920
+I'm not saying review the plan.md.
+
+05:42.920 --> 05:46.839
+I'm saying review the changes since the last commit
+
+05:46.839 --> 05:51.259
+and write results to a file named planning review.md.
+
+05:51.259 --> 05:52.759
+That is the command.
+
+05:52.759 --> 05:55.680
+So I've put that in there as my hook.
+
+05:55.680 --> 05:57.199
+That's what we're going to be running. And just to
+
+05:57.199 --> 06:02.800
+show it, if I go slash hooks to look in at my hooks, and I come all the way down to these stop
+
+06:02.800 --> 06:08.800
+hooks, or there are more hooks, actually, I'd gone, I stopped after that. But there's also sub agent
+
+06:08.800 --> 06:13.600
+start and stop. There are hooks you can have for minutes about to compact. So just before it
+
+06:13.600 --> 06:18.399
+compacts the context, you could you could shove in extra, reminders. You want to stay in there.
+
+06:19.120 --> 06:23.759
+The session end is when an entire session is ending, when it's asking for permission,
+
+06:23.759 --> 06:28.079
+when it's setting up, and then here are some other things. Task completed. All right, anyway,
+
+06:28.079 --> 06:34.560
+we are going in to stop, and you can see that that codecs exec is in there. That is the one that
+
+06:34.560 --> 06:41.839
+I'm showing you on the screen here. By the way, I should also mention I just deleted the the command and the sub agent that
+
+06:41.839 --> 06:46.160
+we configured earlier to keep things nice and simple. So there are multiple ways to review
+
+06:46.160 --> 06:49.920
+changes and things. And so we don't have don't have this in two places. So we've just got this
+
+06:49.920 --> 06:58.399
+hook and it's time to try it out. And so now I'm going to say, please make a concise readme.md
+
+06:58.399 --> 07:03.879
+for the project. And so I'm just running that command in normal cloud code and so
+
+07:03.879 --> 07:08.040
+Claude is going to go ahead and make a read me it's going to search to see
+
+07:08.040 --> 07:11.279
+what's going on and then make a nice concise read me and what we're hoping to
+
+07:11.279 --> 07:16.240
+see is that when it's finished it's going to trigger this stop hook and we
+
+07:16.240 --> 07:19.680
+should see that here and what we probably won't see straight here but what
+
+07:19.680 --> 07:24.800
+we should know is that it's then going to spawn codecs behind the scenes.
+
+07:24.800 --> 07:25.920
+So I want to make this edit.
+
+07:25.920 --> 07:28.720
+I'm going to say yes, go ahead and make that edit.
+
+07:28.720 --> 07:31.720
+And now, now behind the scenes, done,
+
+07:31.720 --> 07:34.240
+it's finished, it's running the stop hook.
+
+07:34.240 --> 07:36.480
+And so that stop hook is now running.
+
+07:36.480 --> 07:38.120
+And what we know is actually happening
+
+07:38.120 --> 07:40.959
+is that that is launching codecs separately,
+
+07:40.959 --> 07:42.800
+running this command you see here.
+
+07:42.800 --> 07:44.839
+codecs is going to look at what's changed
+
+07:44.839 --> 07:47.600
+since the last commit. And codecs is going to look at what's changed since the last commit and codecs is going to use
+
+07:47.600 --> 07:55.519
+that to write a file review.md and it completes and that's really cool. That all happened as a
+
+07:55.519 --> 08:00.720
+command launched as part of this stop hook and you can see that what Claude says is that Claude
+
+08:00.720 --> 08:08.560
+is done, the readme covers the essentials, Claude isn't aware that codecs has come in and done a code review.
+
+08:08.560 --> 08:13.399
+And it's also, part of that review,
+
+08:13.399 --> 08:16.360
+it's noticed that I removed, like I said,
+
+08:16.360 --> 08:18.879
+the sub agent and I removed the command
+
+08:18.879 --> 08:20.839
+that we don't need anymore.
+
+08:20.839 --> 08:24.399
+And it sees that as a potential workflow regression.
+
+08:24.399 --> 08:26.560
+And then the read me that mentions
+
+08:26.560 --> 08:29.600
+that it's got some things that don't haven't yet
+
+08:29.600 --> 08:31.220
+been implemented, but that doesn't
+
+08:31.220 --> 08:36.240
+sound too severe. But it's cool that everything works. We've got this workflow happening,
+
+08:36.240 --> 08:41.100
+and that is what hooks are. And as I say, the main thing about hooks is that you shouldn't
+
+08:41.100 --> 08:45.159
+use them unless you need to. They're one of those extra complexities that might be
+
+08:45.159 --> 08:50.700
+handy for your situation. But wait until you need it. If so, skim through the docs,
+
+08:50.700 --> 08:53.679
+you now that you've got the sort the basic lay of the land. You understand
+
+08:53.679 --> 08:58.080
+that settings.json or you can do it through the menus and that you have an event that will
+
+08:58.080 --> 09:03.200
+trigger a hook and that you can have command or a prompt or an agent that is triggered as a result.
+
+09:03.200 --> 09:07.200
+The command is the most predictable one. That's basically what you need to know.
+

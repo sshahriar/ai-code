@@ -1,0 +1,524 @@
+WEBVTT
+
+00:00.000 --> 00:06.639
+Oh my goodness, I am super excited about today. It's another blue day. It's the conclusion of week
+
+00:06.639 --> 00:12.320
+one. It's a project day. It's just going to be so great. Yeah, this week is meant to be about
+
+00:12.320 --> 00:17.760
+vibe coding for fun and profit. I feel like we've done plenty of fun. It's time to look at the
+
+00:17.760 --> 00:23.280
+profit side of things. We're going to build a commercial MVP of a product that perhaps you
+
+00:23.280 --> 00:28.559
+could monetize. And we're going to do it with vibe coding. And I feel like yesterday I talked you through the rules of the
+
+00:28.559 --> 00:32.479
+road, how to be successful with vibe coding. And then I broke all the rules by
+
+00:32.479 --> 00:36.520
+just yoloing and not watching what was happening. Well, today we are going to
+
+00:36.520 --> 00:40.600
+follow the rules and you're going to see how that leads to successful outcomes.
+
+00:40.719 --> 00:45.159
+But first I want to take you through a series of tweets from Andrei Karpathy,
+
+00:45.159 --> 00:48.560
+the amazing Andre Karpathy, some of which we've already seen, but I want to
+
+00:48.560 --> 00:54.479
+take you through them in order of when they came out in chronological order. This tweet was the
+
+00:54.479 --> 01:00.560
+one I showed you before, which was when Andre coined the term "vibe coding." There's a new kind
+
+01:00.560 --> 01:06.799
+of coding. "Were you given fully to the vibes, embraced the exponentials, forget that the code
+
+01:06.799 --> 01:11.799
+even exists?" It's possible because the LLMs are getting too good.
+
+01:11.799 --> 01:13.280
+So there you have it.
+
+01:13.280 --> 01:17.200
+And Andra mentions Cursor Composer and Sonnet.
+
+01:17.200 --> 01:20.879
+And now we will take his next tweet in this series.
+
+01:20.879 --> 01:22.599
+Yeah, that was from February of last year.
+
+01:22.599 --> 01:24.840
+Then this came at the end of the year.
+
+01:24.840 --> 01:27.079
+And this was how I opened up the course.
+
+01:27.079 --> 01:30.319
+If you remember, this was Andra's kind of explosion
+
+01:30.319 --> 01:31.680
+of what's going on.
+
+01:31.680 --> 01:34.120
+I've never felt this much behind as a programmer.
+
+01:34.120 --> 01:36.280
+I feel like I could be 10x more powerful
+
+01:36.280 --> 01:39.439
+if I could just string together what's going on,
+
+01:39.439 --> 01:43.239
+involving agents, sub-agents, prompts, contacts, memory modes,
+
+01:43.239 --> 01:45.480
+permissions, tools, plug-in skills hooks,
+
+01:45.480 --> 01:50.439
+mcp lsp slash workflows, IDE integrations and a need
+
+01:50.439 --> 01:53.680
+for an all-encompassing mental model.
+
+01:53.680 --> 01:56.959
+That was Carpathi's tweet that inspired this entire course,
+
+01:56.959 --> 02:00.040
+and we've only touched a few of them,
+
+02:00.040 --> 02:01.560
+and by the end of our three weeks,
+
+02:01.560 --> 02:03.319
+we will have covered them all.
+
+02:03.319 --> 02:05.319
+So that was the tweet in December.
+
+02:05.319 --> 02:07.000
+And then there's another tweet.
+
+02:07.000 --> 02:10.599
+And this tweet is a long one from the end of January,
+
+02:10.599 --> 02:13.000
+and I'm not gonna go through all of this,
+
+02:13.000 --> 02:14.879
+but just, he sort of plocks out,
+
+02:14.879 --> 02:16.479
+it's sort of a train of thought
+
+02:16.479 --> 02:21.719
+about some of the things that are really on his mind about how agentic coding is really
+
+02:21.719 --> 02:28.360
+shaping up. He says in terms of the workflow, he's gone from being 80% in the manual auto
+
+02:28.360 --> 02:36.759
+complete world with 20% in agents. Now to 80% agents, 20% edits and touching up. That
+
+02:36.759 --> 02:39.039
+is the shift that he's been through.
+
+02:39.039 --> 02:41.620
+That's the first section, coding workflow.
+
+02:41.620 --> 02:44.400
+And the next section is on the sort of agent
+
+02:44.400 --> 02:46.000
+swarms movement.
+
+02:46.000 --> 02:49.259
+And he says the no need for IDE anymore,
+
+02:49.259 --> 02:54.199
+hype and the agent swarm hype is too much for me right now.
+
+02:54.199 --> 02:55.680
+The models definitely make mistakes.
+
+02:55.680 --> 02:57.680
+If you have any code you actually care about,
+
+02:57.680 --> 03:02.560
+I would watch them like a Hawk. I could not agree more. So this
+
+03:02.560 --> 03:08.639
+is similar to saying that this new sort of 2026 movement is perhaps ahead of its time.
+
+03:08.639 --> 03:14.479
+And when it comes to serious coding, you still want to be all over what's going on. Even if you're
+
+03:14.479 --> 03:19.919
+yoloing, you're still watching like a Hawk to quote Andre. And the third point now I'm on the
+
+03:19.919 --> 03:23.599
+top of the right hand column there is about tenacity.
+
+03:23.599 --> 03:24.599
+It's so interesting to watch.
+
+03:24.599 --> 03:27.800
+He says how agents just work relentlessly.
+
+03:27.800 --> 03:28.800
+They never get tired.
+
+03:28.800 --> 03:30.360
+They never get demoralized.
+
+03:30.360 --> 03:32.719
+They just keep going.
+
+03:32.719 --> 03:37.599
+And next up is speedups, which is where he's saying that he's not sure how to measure the
+
+03:37.599 --> 03:39.360
+productivity improvement.
+
+03:39.360 --> 03:46.000
+He feels net way faster, but the main effect is he does a lot more than he was going to do. So he's sort of
+
+03:46.000 --> 03:51.599
+saying it's like when people presumably people often ask him what is it? Is it 10x? Is it 2x? What
+
+03:51.599 --> 03:57.439
+is it? It's a hard one to answer. It feels like there's more output. It's not clear how to put that
+
+03:57.439 --> 04:03.199
+in terms of velocity. He says not not it's a speed up but possibly a lot more about an expansion.
+
+04:09.520 --> 04:15.360
+about an expansion. And then he talks about the leverage that they give you, the ability to meet bigger goals, putting it in a loop, the power of the loop. And then a one that's quite surprising,
+
+04:15.360 --> 04:21.920
+which as he acknowledges, is one that people have very different views on, is the fun element
+
+04:21.920 --> 04:29.720
+that he says for him, he didn't anticipate that agent programming feels more fun because basically they take
+
+04:29.720 --> 04:34.319
+care of the drudgery, they take care of the stuff like getting stuck on something and
+
+04:34.319 --> 04:36.579
+bashing your head against a wall.
+
+04:36.579 --> 04:40.759
+And he says that LLM coding splits up engineers.
+
+04:40.759 --> 04:43.439
+There are some that love it and some that hate it.
+
+04:43.439 --> 04:48.319
+And he thinks perhaps that maps to people who like coding and people who primarily liked
+
+04:48.319 --> 04:51.920
+building. And presumably he's, he's lining himself as a
+
+04:51.920 --> 04:57.040
+builder, someone who gets satisfaction from building stuff rather than just typing out code
+
+04:57.040 --> 05:01.600
+and running it. That might be the distinction. And some people get their pleasure from one versus
+
+05:01.600 --> 05:06.639
+the other. And that might affect whether you enjoy the experience of vibe coding. And then two
+
+05:06.639 --> 05:13.439
+final points on the bottom right there, which are both fascinating. One of them, Atrafi, is saying that he's seeing
+
+05:13.439 --> 05:20.720
+himself starting to lose his technical acumen, his ability to write code, he's falling out
+
+05:20.720 --> 05:26.139
+of practice because he's sort of allowing the AI to do the show.
+
+05:26.139 --> 05:30.220
+And that's certainly a risk we all want to think about. It's something I felt myself
+
+05:30.220 --> 05:36.019
+too. It's more for me that the just, the temptation just to constantly fire back
+
+05:36.019 --> 05:40.879
+at the agents and I have a sense of friction if I then have to go and read the code once
+
+05:40.879 --> 05:45.600
+I've got used to just running with Cloud Code. So it's a very interesting point indeed.
+
+05:45.600 --> 05:50.600
+And then the last one, I don't know how to pronounce this, slop apocalypse, slop apocalypse.
+
+05:50.600 --> 05:56.620
+Try saying that. So he's saying that he's bracing for the year that LLM
+
+05:56.620 --> 05:59.620
+Slop just goes everywhere.
+
+05:59.620 --> 06:03.459
+And it's something we've all got to prepare ourselves for.
+
+06:03.459 --> 06:05.779
+I think as we saw last time when we were looking
+
+06:05.779 --> 06:07.540
+at the jelly fin write up,
+
+06:07.540 --> 06:10.339
+I think we're going to see a backlash against people
+
+06:10.339 --> 06:13.860
+delivering Slop and a need for code that gets contributed
+
+06:13.860 --> 06:16.420
+to be concise and not to have emojis
+
+06:16.420 --> 06:18.199
+all over long readmes and so on.
+
+06:18.199 --> 06:24.399
+And so I think we're going to see that kind of, that backlash and a movement towards code that is clearly not slop.
+
+06:24.399 --> 06:27.600
+But this is going to be a big part of 2026.
+
+06:27.600 --> 06:30.399
+So I wanted to share this because I felt this was fascinating.
+
+06:30.399 --> 06:35.199
+It's really like off the cuff, train of thought, and it resonates with me a lot.
+
+06:35.199 --> 06:39.800
+I'm also like, Claude Code is definitely where I spent most of my time
+
+06:39.800 --> 06:41.600
+and it's where we'll be spending the next two weeks.
+
+06:41.879 --> 06:46.360
+And yeah, a lot of this rings true for me in a big way.
+
+06:46.800 --> 06:50.439
+Okay, with that, I'm going to do what I sometimes do, which is annoying of me.
+
+06:50.600 --> 06:54.160
+I want to do a quick recap of some of the material we already covered yesterday.
+
+06:54.279 --> 06:57.360
+And you might be thinking, but we already did that, but still, it's so important.
+
+06:57.399 --> 07:00.279
+I want to go through it a second time, but very quickly,
+
+07:00.480 --> 07:02.959
+just to really hammer home some of the key points
+
+07:02.959 --> 07:08.639
+about the right way to vibe code for success. So the headline that I told you last time was that
+
+07:08.639 --> 07:16.000
+you need to be the boss. That is the key to success and you need to invest in your agents.md or
+
+07:16.000 --> 07:21.519
+equivalent. Be concise but go through the spec what you want, the style how you want it built
+
+07:21.519 --> 07:25.600
+and what will success look like. You want to start simple and work
+
+07:25.600 --> 07:32.480
+incrementally, testing constantly, validating success criteria, and don't get lazy, challenge,
+
+07:32.480 --> 07:38.480
+demand evidence, or as Andre says, watch it like a hawk, and then always be on top of what's going
+
+07:38.480 --> 07:44.560
+on. And then handle frustration, which, which, as Audrey doesn't mention this, but when you do
+
+07:44.560 --> 07:47.040
+find yourself hitting the same problem again and again,
+
+07:47.040 --> 07:50.240
+figure out how to just take a step back, do things differently.
+
+07:50.240 --> 07:55.480
+This is the new way of working and dealing with LLMs that mess up.
+
+07:55.480 --> 07:57.439
+That's part of the journey.
+
+07:57.439 --> 08:04.439
+And I said last time that interestingly, these rules apply both to junior people coming into this relatively fresh
+
+08:04.439 --> 08:08.480
+and to senior engineers, just perhaps in a slightly different way.
+
+08:08.480 --> 08:13.199
+For junior engineers, it's about using this as an opportunity to learn and
+
+08:13.199 --> 08:17.279
+being skeptical. Even though you're sort of learning from something that knows
+
+08:17.279 --> 08:20.879
+more than you about this topic, you still want to treat it as something
+
+08:20.879 --> 08:25.040
+that's unproven as if you were a non-technical manager that's been put in
+
+08:25.040 --> 08:28.639
+charge of a bunch of people who are very enthusiastic, very
+
+08:28.639 --> 08:30.959
+eager, but not necessarily always right.
+
+08:30.959 --> 08:32.799
+They sometimes jump to conclusions.
+
+08:32.799 --> 08:35.799
+They, in their eagerness, they sometimes trip up over each other.
+
+08:35.799 --> 08:41.320
+And so your job is to be the probing manager who, even though you don't have the same level
+
+08:41.320 --> 08:44.720
+of technical depth, you can ask the challenging questions.
+
+08:44.720 --> 08:46.720
+You can say, give me the evidence for this.
+
+08:46.720 --> 08:48.159
+Have you thought about this?
+
+08:48.159 --> 08:49.000
+Show me this.
+
+08:49.000 --> 08:50.399
+Explain this to me.
+
+08:50.399 --> 08:52.159
+And you can say, you know, the like,
+
+08:52.159 --> 08:53.600
+managers sometimes do this,
+
+08:53.600 --> 08:55.960
+when they say, "This might be a silly question,
+
+08:55.960 --> 08:57.440
+but perhaps you could explain to me."
+
+08:57.440 --> 09:00.080
+And then they ask a really pointed insight for question.
+
+09:00.080 --> 09:01.240
+They're like, "Oh my goodness,
+
+09:01.240 --> 09:03.360
+that's what you have to do, that's your job."
+
+09:03.360 --> 09:05.360
+And if you're a senior manager,
+
+09:05.360 --> 09:10.200
+then it's about figuring out how you can work effectively
+
+09:10.200 --> 09:12.019
+in this new way of doing things,
+
+09:12.019 --> 09:15.399
+less coding more building to use Andre's expression.
+
+09:15.399 --> 09:22.000
+And so get into the sense of this is the new craft and then do the building and figure
+
+09:22.000 --> 09:25.440
+out how to make that work for you so that you're enjoying it.
+
+09:25.440 --> 09:28.840
+Maybe like Andre, you're going to enjoy it even more once you find your groove with
+
+09:28.840 --> 09:34.840
+this and realize that you can expand, you can deliver more capability in the same time
+
+09:34.840 --> 09:36.279
+through the use of these agents
+
+09:36.279 --> 09:38.399
+and they can take care of the stuff that was perhaps
+
+09:38.399 --> 09:41.480
+mundane before, so figuring out that balance.
+
+09:41.480 --> 09:45.120
+But then yes, always taking advantage of your expertise
+
+09:45.120 --> 09:49.440
+to be also challenging, making sure that everything
+
+09:49.440 --> 09:52.519
+is being thought through and never letting it be,
+
+09:52.519 --> 09:55.480
+never getting lazy and just letting it do its thing.
+
+09:55.480 --> 09:57.360
+Always watch it like a hawk.
+
+09:57.360 --> 09:59.080
+And that leads to the summary point,
+
+09:59.080 --> 10:02.080
+which is have a healthy balanced attitude
+
+10:02.080 --> 10:04.740
+towards this expect mixed results.
+
+10:04.740 --> 10:06.360
+Don't get caught up in the hype.
+
+10:06.360 --> 10:08.200
+Don't get caught up in the 10X,
+
+10:08.200 --> 10:10.279
+build whatever you want, sit back,
+
+10:10.279 --> 10:13.240
+you can yolo your way to building a complete product.
+
+10:13.240 --> 10:14.279
+It's not true.
+
+10:14.279 --> 10:15.159
+And if you think that,
+
+10:15.159 --> 10:16.759
+then you're just gonna get frustrated
+
+10:16.759 --> 10:17.960
+and you're gonna hit a wall.
+
+10:17.960 --> 10:22.399
+So instead recognize that there is an incredible upside
+
+10:22.399 --> 10:24.440
+of this, but there's also a downside.
+
+10:24.440 --> 10:28.080
+Expect that and then work incrementally and slowly,
+
+10:28.080 --> 10:31.519
+so that you build things in a realistic, reasonable way.
+
+10:31.519 --> 10:33.440
+And as long as that's where your head is at,
+
+10:33.440 --> 10:35.639
+then you're going to absolutely love this.
+

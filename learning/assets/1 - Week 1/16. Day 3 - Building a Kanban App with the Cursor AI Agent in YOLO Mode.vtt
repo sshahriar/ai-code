@@ -1,0 +1,497 @@
+WEBVTT
+
+00:00.000 --> 00:04.559
+All right, we are looking at the right hand side of the screen at the agent.
+
+00:04.559 --> 00:08.000
+And the first thing I'm going to ask you to do is to hover over this area here
+
+00:08.000 --> 00:14.480
+and drag it to the left because we want a nice big display here because we are going all in
+
+00:14.480 --> 00:21.120
+with our agent. Next up, if you look here, this is the model that we're going to be using.
+
+00:21.120 --> 00:27.239
+If you click here, I'm going to leave it in auto mode. Auto mode, if I turn off, you can see
+
+00:27.239 --> 00:28.440
+we can choose different models.
+
+00:28.440 --> 00:29.800
+I'm going to leave it in auto mode.
+
+00:29.800 --> 00:32.280
+It may be that that's all that you have access to
+
+00:32.280 --> 00:33.640
+from the plan that you're on.
+
+00:33.640 --> 00:37.119
+We're going to let Cursor decide what it wants to do.
+
+00:37.119 --> 00:38.679
+Go into the unknown.
+
+00:38.679 --> 00:43.079
+All right, and now over here, in the agent dropdown,
+
+00:43.079 --> 00:45.640
+I want you to select plan.
+
+00:45.640 --> 00:47.520
+That means that we're putting the agent
+
+00:47.520 --> 00:49.000
+into planning mode.
+
+00:49.679 --> 00:52.079
+And this is going to be, I think consistent
+
+00:52.079 --> 00:54.039
+with all of the tools we'll look at this idea,
+
+00:54.039 --> 00:56.000
+not all of them, almost all of them.
+
+00:56.000 --> 00:58.520
+We put it in plan mode that's gone in different color.
+
+00:58.520 --> 01:00.479
+It's now in planning mode.
+
+01:00.479 --> 01:03.119
+And I'm just going to type in here,
+
+01:03.119 --> 01:05.680
+go ahead and plan.
+
+01:05.680 --> 01:07.200
+I don't need to tell you what it's planning
+
+01:07.200 --> 01:10.900
+because it will load agents.md into context, always
+
+01:10.900 --> 01:17.379
+by default, and you can see stuff is happening, it's reading, it's thinking, things are all
+
+01:17.379 --> 01:18.379
+happening.
+
+01:18.379 --> 01:21.700
+While they're happening, move your mouse down over here and have a look.
+
+01:21.700 --> 01:26.579
+You can see that it's going to tell you in that circular thing how much of the context
+
+01:26.579 --> 01:27.680
+is used up.
+
+01:27.680 --> 01:32.400
+How much of the context window has been consumed by the thinking so far.
+
+01:32.400 --> 01:35.420
+And you can see that 6.4% has been used.
+
+01:35.420 --> 01:41.560
+It also mentions that the active rules, the things that it's loaded in includes agents.md,
+
+01:41.560 --> 01:43.120
+which is the file we've got.
+
+01:43.120 --> 01:44.120
+Excellent.
+
+01:44.120 --> 01:44.959
+Things are happening.
+
+01:44.959 --> 01:51.239
+But more than that, we can also see that it's created this document here, the Camban MVP
+
+01:51.239 --> 01:53.159
+implementation plan.
+
+01:53.159 --> 01:54.000
+And if you scroll down,
+
+01:54.000 --> 01:56.000
+you can see that there's a whole lot of stuff here.
+
+01:56.000 --> 01:57.560
+There's different phases,
+
+01:57.560 --> 01:58.760
+phase four, drag and drop,
+
+01:58.760 --> 02:00.159
+phase five, add cards,
+
+02:00.159 --> 02:01.000
+phase six,
+
+02:01.000 --> 02:01.840
+there's lots of phases,
+
+02:01.840 --> 02:02.920
+phase eight.
+
+02:02.920 --> 02:04.719
+And then there's an architecture overview
+
+02:04.719 --> 02:06.659
+with some diagramming here
+
+02:06.659 --> 02:08.560
+and some suggested layout,
+
+02:08.560 --> 02:11.479
+out of scope and execution order.
+
+02:11.479 --> 02:13.960
+So there's a whole lot of stuff in here,
+
+02:13.960 --> 02:15.979
+which is really interesting.
+
+02:15.979 --> 02:19.680
+And of course, the right thing to do now is to work through this document,
+
+02:19.680 --> 02:24.800
+read it carefully and be giving the agent feedback on things,
+
+02:24.800 --> 02:28.319
+on where you disagree and where you agree and so on.
+
+02:28.319 --> 02:32.479
+But that's for boring people. That's not what we're going to do. We're just going to trust it.
+
+02:32.479 --> 02:35.199
+I'm not even going to read it, but you probably should.
+
+02:35.199 --> 02:38.479
+But I'm not going to, I'm just going to go ahead and press the
+
+02:38.479 --> 02:45.360
+build button here, which is saying I'm just going to go right ahead and get started with this,
+
+02:45.360 --> 02:51.039
+and off it goes. Now, because I put it in Yolo mode, it's just going to go and do its thing.
+
+02:51.039 --> 02:55.520
+For you, you may need to be approving as you go, and we're popping things up that you might need
+
+02:55.520 --> 03:00.400
+to accept as they go. But things are all happening for me. Files are appearing.
+
+03:00.400 --> 03:01.639
+It's just created a doc,
+
+03:01.639 --> 03:04.719
+it ignores, it's created a front end, directory,
+
+03:04.719 --> 03:06.159
+stuff is happening.
+
+03:06.159 --> 03:09.879
+Also keep your eye on this context used over here.
+
+03:09.879 --> 03:11.800
+It's now at 10.7%.
+
+03:11.800 --> 03:13.759
+You will see as things happen
+
+03:13.759 --> 03:16.919
+that that context is being used up.
+
+03:16.919 --> 03:18.039
+And look at all this.
+
+03:18.039 --> 03:20.000
+I'm gonna make this a bit bigger again.
+
+03:20.000 --> 03:21.840
+So we have this front end center.
+
+03:21.840 --> 03:23.240
+Stuff is happening.
+
+03:23.240 --> 03:26.240
+Watch it happening and enjoy this process.
+
+03:26.240 --> 03:31.240
+Enjoy the sensation of having your AI agent at work for you.
+
+03:31.240 --> 03:34.280
+So for me, it's now been going for five minutes or so.
+
+03:34.280 --> 03:36.400
+And I have to say, I'm enthralled.
+
+03:36.400 --> 03:39.080
+I've seen it like finding a problem and fixing it.
+
+03:39.080 --> 03:42.080
+I've seen it almost debating with itself about things,
+
+03:42.080 --> 03:44.039
+watching this reasoning happen.
+
+03:44.039 --> 03:50.439
+If you remember that trick that I covered yesterday, it's so interesting to see everything
+
+03:50.439 --> 03:52.120
+happening.
+
+03:52.120 --> 03:53.120
+And I'm watching here.
+
+03:53.120 --> 03:56.039
+The context is now 28.8%.
+
+03:56.039 --> 03:57.719
+You're probably seeing that too.
+
+03:57.719 --> 03:58.719
+Keep an eye on that.
+
+03:58.719 --> 04:00.360
+Keep an eye on everything that's happening.
+
+04:00.360 --> 04:01.960
+Something just failed there.
+
+04:01.960 --> 04:02.960
+Delete test fails.
+
+04:02.960 --> 04:03.960
+So it's running tests.
+
+04:03.960 --> 04:04.960
+It's seeing them failing.
+
+04:04.960 --> 04:06.560
+It's coming back and fixing them.
+
+04:06.560 --> 04:13.840
+This, this is the closest, the best way that I can show you what an agent is. Remember,
+
+04:13.840 --> 04:20.959
+it's an LLM in a loop with tools to achieve a goal, and you can see all of those happening
+
+04:20.959 --> 04:31.480
+right here in front of you. Okay, okay, it just finished, it claims it's run the tests and when it finished this popped up like it actually launched it itself
+
+04:31.480 --> 04:32.000
+now
+
+04:32.000 --> 04:36.000
+I've run this a couple of times in the past and sometimes it doesn't launch it itself
+
+04:36.000 --> 04:37.399
+It just gives you instructions
+
+04:37.399 --> 04:41.259
+But in this case it has actually opened this up and run it itself
+
+04:41.259 --> 04:43.240
+And as it tells me at the end here
+
+04:43.240 --> 04:48.480
+It summarizes that all of the phases are complete and it tells me what I have to do now
+
+04:48.480 --> 04:53.560
+I just simply have to go to look at this server myself directly.
+
+04:53.560 --> 04:57.079
+It is running, it says, and that is what we're going to do right now.
+
+04:57.079 --> 05:01.500
+Okay, so you may have needed to go to bring up the terminal
+
+05:01.500 --> 05:07.500
+and do a CD into front end and then do npm run dev.
+
+05:07.500 --> 05:09.240
+And it should have told you exactly that command,
+
+05:09.240 --> 05:11.759
+but it already ran that for me, so I don't need to do that.
+
+05:11.759 --> 05:14.120
+I'm now going to go to visit this,
+
+05:14.120 --> 05:17.920
+and I know that it's running on local host port 3000.
+
+05:17.920 --> 05:20.480
+And, bam, here it comes.
+
+05:20.480 --> 05:23.199
+First of all, this is a cam band.
+
+05:23.199 --> 05:26.399
+It has appeared, and it has a backlog to do
+
+05:26.399 --> 05:29.120
+in progress review and done, and we can see it there.
+
+05:29.120 --> 05:31.240
+Look, it's got the nice highlighting.
+
+05:31.240 --> 05:35.160
+There is some node issue that it's complaining about but
+
+05:35.160 --> 05:42.920
+will ignore that. I can see this little drag handles right here and I'm
+
+05:42.920 --> 05:45.759
+going to try doing some drag and drop. So I'm going to click there, I'm going to
+
+05:45.759 --> 05:50.399
+drag that over here and let go and sure enough it moved over to that column.
+
+05:50.399 --> 06:03.360
+Fair enough. I'm going to try adding a card. This is a card and this is its description. Let's see, add.
+
+06:03.920 --> 06:12.639
+And there we go. It's the head. That's great. It's, let's, let's, let's try deleting a card.
+
+06:12.639 --> 06:20.720
+We'll delete this one up here, delete and it's gone. Wow, it is, it's working. And we'll check that we can rename a column.
+
+06:20.720 --> 06:22.439
+That's not bad.
+
+06:22.439 --> 06:24.339
+We'll say not bad to that column name.
+
+06:24.339 --> 06:25.360
+There we go.
+
+06:25.360 --> 06:28.800
+So it does appear to be meeting art requirements.
+
+06:28.800 --> 06:31.279
+And this is, this is like brought it up.
+
+06:31.279 --> 06:33.120
+I didn't give it any feedback.
+
+06:33.120 --> 06:35.600
+Now it may not have worked for you first time.
+
+06:35.600 --> 06:36.800
+It might be janky.
+
+06:36.800 --> 06:38.839
+One of these times that I tried it actually
+
+06:38.839 --> 06:39.839
+didn't come up at all.
+
+06:39.839 --> 06:41.040
+You simply have to give
+
+06:41.040 --> 06:48.000
+it the feedback. Go back and say the following isn't working. And you can see here that this is
+
+06:48.000 --> 06:55.040
+fine, but this is not, it's a little bit weird and that drag a drop. And I also, I don't think I can
+
+06:55.040 --> 07:02.240
+move this down. I can't reorganize here. And there's that issue over there so it's not perfect and so these are all
+
+07:02.240 --> 07:06.240
+things that we could give it feedback to see how it improves. So we can give it
+
+07:06.240 --> 07:12.439
+some feedback. We could try that right now. I can I can say it's mostly
+
+07:12.439 --> 07:25.000
+working nicely but next JS is showing that there's one error red symbol at the bottom of the screen.
+
+07:28.879 --> 07:33.879
+Also, the drag and drop is a bit janky
+
+07:34.379 --> 07:39.379
+and it's not possible to reorder within a column.
+
+07:42.759 --> 07:56.279
+Can this be made more slick? Also it would be nice to have more yellow and
+
+07:56.279 --> 08:04.800
+purple on the screen. Let's say that, let's give it a few things, a little bit
+
+08:04.800 --> 08:09.560
+of feedback. We'll let it go off and do its thought and I'll
+
+08:09.560 --> 08:15.000
+see you back in a second when it's had a stab at correcting for that. Okay, so it
+
+08:15.000 --> 08:20.139
+has finished, it has declared victory, I can see, but we'll be the judge of that.
+
+08:20.139 --> 08:26.800
+Let's have a look at it. Here it is. Okay, so first of all, first of all, let's agree
+
+08:26.800 --> 08:32.360
+that it's done a fine job with the colors. It's definitely added some purple and yellow.
+
+08:32.360 --> 08:34.240
+Congratulations to it.
+
+08:34.240 --> 08:37.519
+I can see that it has not succeeded in closing this issue.
+
+08:37.519 --> 08:40.759
+Interestingly, I think it did fix it while I was watching it.
+
+08:40.759 --> 08:42.840
+Then it somehow has re-introduced.
+
+08:42.840 --> 08:44.799
+I don't know how that happened,
+
+08:44.799 --> 08:48.799
+but the issue is still there and it's still the same one.
+
+08:48.799 --> 08:50.840
+But this looks really nice.
+
+08:50.840 --> 08:54.000
+I note that we can now and we can drag things over here
+
+08:54.000 --> 08:59.000
+and it will come into this box here and you can now reorder them.
+
+08:59.000 --> 09:01.000
+I can move that up which is really neat.
+
+09:01.000 --> 09:04.000
+So it's all working pretty well.
+
+09:04.000 --> 09:08.000
+Just still got this issue here, but the look and feel is great.
+
+09:08.000 --> 09:13.000
+You can now reorganize within it and if you're having a similar experience,
+
+09:13.000 --> 09:15.480
+you can keep hammering away with this it. And if you're having a similar experience, you can keep hammering away with
+
+09:15.480 --> 09:21.840
+this issue. But as far as I'm concerned, this is good enough for Kessa. It's done a fine job.
+
+09:21.840 --> 09:26.960
+We have, we've looked at writing good agents.md and some of the tricks. We've looked at putting
+
+09:26.960 --> 09:33.120
+it on YOLO mode, running it, giving it some feedback and iterating. And we've just got
+
+09:33.120 --> 09:37.519
+a really good sense of what it's like to work with the cursor agent on building
+
+09:37.519 --> 09:41.519
+out a piece of software like this Canban project manager.
+

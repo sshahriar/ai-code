@@ -1,0 +1,515 @@
+WEBVTT
+
+00:00.000 --> 00:06.160
+Okay, so now we're gonna do something kind of crazy and got to have to be courageous.
+
+00:06.799 --> 00:10.240
+I don't know if this is gonna go somewhere or if there's gonna be a disaster. We will soon find
+
+00:10.240 --> 00:14.240
+out but I'm not gonna be super courageous. The really courageous thing to do would be to start
+
+00:14.240 --> 00:20.640
+Claude again. I've just stopped Claude. I should start it again in Yolo mode with dash dash dangerously
+
+00:20.640 --> 00:27.839
+dash skip dash permissions. I'm not gonna do that that. I'm going to start Claude the normal way and be ready for doing a lot of
+
+00:27.839 --> 00:30.320
+accepting. And what I'm going to show you now is something
+
+00:30.320 --> 00:33.759
+called Ralph Loops that I mentioned you before, which we will
+
+00:33.759 --> 00:37.119
+give it a whirl. So tomorrow we're going to be covering
+
+00:37.119 --> 00:40.000
+plugins amongst other things in Claude Code. I haven't even
+
+00:40.000 --> 00:42.719
+told you what they are now yet, but I'm going to ask you to run a
+
+00:42.719 --> 00:46.719
+command in Claude Code that is this command slash plugin
+
+00:46.719 --> 00:50.700
+install and then this thing called Ralph loop at Claude
+
+00:50.700 --> 00:57.219
+plugins official. It's an official plugin from anthropic, and it's called the Ralph loop.
+
+00:57.219 --> 01:00.759
+And running that, I mean, you don't really need to understand our plugins work to know
+
+01:00.759 --> 01:04.920
+that that will install it. And it tells me it's already installed, of course, but for
+
+01:04.920 --> 01:12.840
+you, it may well install that plugins. So what is this about? So as I mentioned in week one, this idea of Ralph Loops was the brainchild
+
+01:12.840 --> 01:15.159
+of luminary engineer,
+
+01:15.159 --> 01:18.000
+Jeffrey Huntley, Australian engineer.
+
+01:18.000 --> 01:21.719
+And the idea that he had is named as homage
+
+01:21.719 --> 01:24.920
+to the Ralwergam from Simpsons.
+
+01:24.920 --> 01:28.079
+And it's the idea of putting Claude into this mode,
+
+01:28.079 --> 01:32.480
+or any agent coder into a mode where it is just sort
+
+01:32.480 --> 01:34.840
+of optimistically keeping on going,
+
+01:34.840 --> 01:36.439
+just keeping doing its job.
+
+01:36.439 --> 01:39.700
+And that is what we're about to do with Cloud Code.
+
+01:39.700 --> 01:43.560
+The way it's implemented is that whenever Cloud thinks,
+
+01:43.560 --> 01:46.480
+okay, I've done my job, I'm finished,
+
+01:46.480 --> 01:49.920
+it gets prompted in a way that will avoid the context
+
+01:49.920 --> 01:51.920
+getting too big and out of control,
+
+01:51.920 --> 01:56.640
+but will set it going all over again to repeat the task from wherever
+
+01:56.640 --> 02:02.000
+it is and do better and do more and you put it in a loop it's just like the the agent loop is
+
+02:02.000 --> 02:08.000
+already a loop we're just calling that entire loop in a loop like an outer loop around the inner
+
+02:08.000 --> 02:14.719
+loop that is what Ralph loops are all about and if you couple that with yolo mode then rather than
+
+02:14.719 --> 02:16.120
+something that you could kick off that
+
+02:16.120 --> 02:20.800
+could take seven minutes or eight minutes like the one did a moment ago, we could set
+
+02:20.800 --> 02:26.120
+something off and it could do that 10 times over one after another, building on top of
+
+02:26.120 --> 02:27.120
+itself.
+
+02:27.120 --> 02:33.500
+So it's a way to turn a kind of eight minute task into an 80 minute task and see what comes
+
+02:33.500 --> 02:34.500
+at the end of it.
+
+02:34.500 --> 02:35.500
+All right.
+
+02:35.500 --> 02:38.319
+And it would be okay to use this on YOLO mode if we're running a sandbox
+
+02:38.319 --> 02:42.719
+because then there'll be some controls around it, but I don't recommend running a rough loop
+
+02:42.719 --> 02:48.080
+just on YOLO mode without a sandbox. That's not a best practice unless you're really
+
+02:48.080 --> 02:52.080
+comfortable with that level of risk and you're going to be watching it all the time to stop,
+
+02:52.080 --> 02:56.879
+to jump in if something goes awry. But anyways, I'm going to be accepting things that I'm happy
+
+02:56.879 --> 03:00.159
+with it doing and it's time to show you how this works. So the way that we
+
+03:00.159 --> 03:05.840
+kick this off is that now since we've installed that plugin, there is a command we can run that's
+
+03:05.840 --> 03:11.039
+called Ralph Loop colon Ralph Loop. That's the name of the the plugin and then the command. So
+
+03:11.039 --> 03:24.520
+we're going to do Ralph Loop colon Ralph Loop. Ralph sorry dash loop. And then you put the prompt, and then you put max iterations and the number of iterations
+
+03:24.520 --> 03:25.520
+we want.
+
+03:25.520 --> 03:34.500
+And so my prompt is going to be please significantly improve this project.
+
+03:34.500 --> 03:54.879
+Add users, add user management, multiple, Kanban, boards in a user and other features to build out a comprehensive project management
+
+03:54.879 --> 04:14.080
+application testing thoroughly as you go and maintaining strong test code coverage and good integration tests. It seems like
+
+04:14.080 --> 04:23.600
+a pretty long thorough prompt and then dash-max-iterations. We will put 10, it can do this 10
+
+04:23.600 --> 04:31.680
+times, it would run this and then it will run it again on top of whatever it just came up with and all of that is going to happen
+
+04:31.680 --> 04:36.819
+And I press enter to kick this thing off off it goes
+
+04:37.480 --> 04:41.920
+And I can see it just made a file called rough loop - local.md
+
+04:41.920 --> 04:47.600
+And now we can watch and be entertained now like I say
+
+04:47.600 --> 04:54.000
+I can't tell you that what's going to come out of this is going to be any good, but it's certainly stuff is going to happen.
+
+04:54.000 --> 04:59.279
+And because I'm not running it in YOLO mode, I am going to have to be approving fairly regularly
+
+04:59.279 --> 05:00.279
+as we go.
+
+05:00.279 --> 05:03.399
+But I'm going to always press number two when it's something that I'm happy for it doing.
+
+05:03.399 --> 05:07.160
+And that way I can manage that it's not going to do like an R M minus RF or do something
+
+05:07.160 --> 05:13.339
+that feels very destructive, but that I can stay having some control of what it can do and what it can't do
+
+05:13.879 --> 05:19.579
+Okay, so with that you can see that rough loop file by the way. It's inside the dot clawed file
+
+05:19.639 --> 05:24.160
+That's where that that is sitting and the reason it's not asking me too many questions
+
+05:24.160 --> 05:29.079
+This is of course we've already got this setting so we've already approved it doing a few things anyway
+
+05:29.480 --> 05:31.680
+So I'm gonna leave it doing its thing
+
+05:31.680 --> 05:35.240
+I I don't know how long it's gonna take because I'm not on full yolo mode
+
+05:35.240 --> 05:39.000
+I'm happy going and getting a coffee and I will see you in a few minutes. Okay, well
+
+05:39.000 --> 05:43.120
+It's just completed and it was running for one minute less than an hour
+
+05:43.319 --> 05:46.079
+So it's been going for a while. It's changed
+
+05:46.920 --> 05:51.339
+1,300 lines of code 1,311 lines of code added 170 removed
+
+05:52.000 --> 05:56.639
+This is a summary what it claims to have done. I do notice it says at the top,
+
+05:56.639 --> 05:59.319
+Ralph Lupe iteration one complete.
+
+05:59.319 --> 06:01.160
+I don't know if that's something janky about the way
+
+06:01.160 --> 06:03.519
+this is set up, that it thinks it's only done
+
+06:03.519 --> 06:05.720
+while it's rationed when I think to have taken an hour
+
+06:05.720 --> 06:06.920
+like this, it must have done them all,
+
+06:06.920 --> 06:08.600
+and besides it's finished.
+
+06:09.480 --> 06:13.480
+And wow, it's done some compacting while it's been going,
+
+06:13.480 --> 06:15.639
+and it's been really chugging away.
+
+06:15.639 --> 06:17.720
+And it says it's built lots of stuff.
+
+06:17.720 --> 06:19.759
+So yeah, it remains for us to see it.
+
+06:19.759 --> 06:23.920
+Let's give it a try. Okay, and I just did give it a try and there was a couple of glitches on it
+
+06:23.920 --> 06:28.879
+and I gave it the feedback. It made a change and this is now my second try. Second try of starting
+
+06:28.879 --> 06:37.439
+the server. So we do scripts slash start start Mac and let it see if it comes up. It does seem
+
+06:37.439 --> 06:40.920
+to come up. All right. now it wants us to go there.
+
+06:40.920 --> 06:43.740
+I'm using an incognito tab so that it's different session
+
+06:43.740 --> 06:45.699
+to the previous time I tried this.
+
+06:45.699 --> 06:47.839
+And we can't log in,
+
+06:47.839 --> 06:49.959
+it's not gonna know the user and password
+
+06:49.959 --> 06:52.600
+because that doesn't exist anymore.
+
+06:52.600 --> 06:55.319
+But we've got an ability to create an account.
+
+06:55.319 --> 06:57.040
+It's got proper auth now.
+
+06:57.040 --> 06:58.279
+It's create an account.
+
+06:58.279 --> 06:59.120
+So what are we gonna do?
+
+06:59.120 --> 07:02.959
+We'll have a username that can be Ralph
+
+07:04.959 --> 07:07.800
+password loops I may or just say Ralph loops loops
+
+07:09.360 --> 07:11.360
+exclamation mark exclamation mark loops
+
+07:12.879 --> 07:19.500
+All right, that's what our account will be in we go and here we are. This is our cambans studio
+
+07:19.500 --> 07:24.720
+What do we see here? All right, we can see our username up here. There's a logout button. That's cool.
+
+07:24.720 --> 07:30.480
+My first board creating new board. That's nice. Okay, let's just check that basic stuff works.
+
+07:30.480 --> 07:40.240
+Let's add a new card. This is cool. Add. Sure, it's there. Alright, let's come here and do new board,
+
+07:40.240 --> 07:47.399
+new board name, second board. And then press add. And here we are on second board. Wow.
+
+07:47.480 --> 07:51.439
+Now look, I can flip back to my first board and there's this is cool right
+
+07:51.439 --> 07:55.160
+there. And I guess I can probably move this over there and over there and
+
+07:55.160 --> 07:59.439
+back here again. And I can flip over to second board and see it there.
+
+08:00.000 --> 08:04.480
+That's, that's pretty amazing. It all seems to be becoming together as a
+
+08:04.480 --> 08:10.360
+professional app. All right. And I'll put in here. I am officially
+
+08:12.920 --> 08:18.879
+impressed. There we go. Add that in. I am officially impressed. It's here on this
+
+08:18.879 --> 08:24.439
+card. We can move it anywhere we want. Flip between the boards. I know you get it.
+
+08:24.439 --> 08:31.220
+It works. But it's really nice. It's really nice. And it did it all very much with autonomy.
+
+08:31.220 --> 08:33.960
+A lot of this functionality has been built for us.
+
+08:33.960 --> 08:37.539
+It's starting to be a platform that you can imagine,
+
+08:37.539 --> 08:39.539
+you could build up, and it could be something
+
+08:39.539 --> 08:41.659
+which you could go live with and has proper persistence
+
+08:41.659 --> 08:43.740
+and user management and so on.
+
+08:43.740 --> 08:48.139
+And it is astonishing to think that we built this whole thing
+
+08:48.139 --> 08:50.360
+just in a couple of hours of doing this.
+
+08:50.360 --> 08:52.639
+And really, most of this was done by the
+
+08:52.639 --> 08:59.200
+the the Ralf loop. So so it's been done in one hour, basically, most of this functionality.
+
+08:59.200 --> 09:04.639
+And I guess I'm easily impressed for house. This is so cool. We should check that we can
+
+09:04.639 --> 09:16.000
+log out and love back in again. It's log out. We come back here, welcome, welcome back, and we'll come in as Ralph, and password loops, exclamation mark,
+
+09:16.000 --> 09:20.480
+exclamation mark, sign in, and there we go, we're in.
+
+09:20.480 --> 09:25.480
+That's great, and we're in as Ralph again, that's cool.
+
+09:25.720 --> 09:27.399
+It definitely seems to be holding together.
+
+09:27.399 --> 09:31.600
+Okay, so there we have it, we have a nice app,
+
+09:31.600 --> 09:33.960
+and the main thing is that you could use this
+
+09:33.960 --> 09:38.519
+just to keep going, just trigger off another Ralph Loop, set it going.
+
+09:38.519 --> 09:40.559
+If an hour, if you want to take more time than that,
+
+09:40.559 --> 09:42.320
+you can have it going all night, put a Ralph Loop
+
+09:42.320 --> 09:43.960
+with a bigger iteration count.
+
+09:43.960 --> 09:44.759
+Let it be at it.
+
+09:44.759 --> 09:46.879
+You don't want 1,300 lines changed.
+
+09:46.879 --> 09:48.919
+You want tens of thousands of lines changed.
+
+09:48.919 --> 09:51.360
+You're going to build up into a whole app.
+
+09:51.360 --> 09:54.159
+You could tell it to clone and then give it an existing app,
+
+09:54.159 --> 09:56.559
+I don't know, maybe an app by Atlassian.
+
+09:56.559 --> 09:59.279
+And tell it to build something like this.
+
+09:59.279 --> 10:04.960
+And you know, you can just let it keep working, building features, testing features.
+
+10:04.960 --> 10:09.519
+Now, we're going to find out over the period of the next a week and a half, how you do so in an
+
+10:09.519 --> 10:15.200
+increasingly robust way with different subagents, with different rules, with having things like
+
+10:15.200 --> 10:22.399
+testing, being something that's baked into the process more. But hopefully this has given you a real teaser, a really cool
+
+10:22.399 --> 10:27.600
+sense of what can be done as you use multiple agents and as you put things in loops and you do
+
+10:27.600 --> 10:32.799
+things like Ralph Loops that are just really great. And that's it. That's a nice wrap on today.
+
+10:32.799 --> 10:39.360
+We did plenty of commands in Cloud Code, a few shortcut keys, we did sessions and checkpoints,
+
+10:39.360 --> 10:44.559
+and then we really had fun with Ralph Loops and made something that was just great
+
+10:44.559 --> 10:48.879
+and Yula made something completely different. Hopefully yours looks different, feels different,
+
+10:48.879 --> 10:55.039
+has different functionality, and hopefully you've really enjoyed the experience. And we also did
+
+10:55.039 --> 10:59.120
+Yolo along the way as well, didn't we? We did the dangerously skipped permissions. Maybe you
+
+10:59.120 --> 11:06.559
+were braver than me and you did Yolo plus Ralph Loops, the the Ultima Bravery. And you may be thinking to yourself,
+
+11:06.559 --> 11:12.240
+why don't we always use Ralph Loops? Why didn't we do Ralph Loops in day five of week one in that
+
+11:12.240 --> 11:16.960
+in that project? And you know, it's something that needs to be experimented with. It's a good
+
+11:16.960 --> 11:23.440
+question. And you can imagine my my answer. If you need the predictable, reliable outcomes and you
+
+11:23.440 --> 11:26.559
+want to play a primary role in building this out, then you
+
+11:26.559 --> 11:31.539
+should stick with a process that is more regimented than just going for a Ralph Loop.
+
+11:31.539 --> 11:35.559
+But for building a kind of prototype like we've been doing there, for experimenting
+
+11:35.559 --> 11:41.419
+and for doing stuff that's kind of out there and for MVPs, Ralph Loops are terrific
+
+11:41.419 --> 11:43.340
+and it worked great for us today.
+
+11:43.340 --> 11:45.700
+And that is a wrap on today.
+
+11:45.700 --> 11:48.039
+47% of the way through.
+
+11:48.039 --> 11:50.700
+We are right coming up to the halfway point.
+
+11:50.700 --> 11:52.460
+And wow, is it a great halfway point
+
+11:52.460 --> 11:54.700
+because tomorrow isn't a purple day
+
+11:54.700 --> 11:56.279
+of getting into how this all works.
+
+11:56.279 --> 12:00.179
+And it's when we're doing MCP and skills and plugins
+
+12:00.179 --> 12:02.139
+and all that kind of stuff that Ruffloops
+
+12:02.139 --> 12:05.500
+was like a little teaser of what's possible.
+
+12:05.500 --> 12:07.940
+We're gonna have many more things like that.
+
+12:07.940 --> 12:12.490
+I can't wait to show you. I can't wait for week two, day three, coming right up.
+

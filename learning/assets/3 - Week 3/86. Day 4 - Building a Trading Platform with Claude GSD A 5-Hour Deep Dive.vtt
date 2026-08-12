@@ -1,0 +1,512 @@
+WEBVTT
+
+00:00.000 --> 00:04.080
+Okay, so I know the next command is going to be discuss phase, but it says,
+
+00:04.080 --> 00:08.160
+"What do you want to build?" And I'm just going to respond to that question,
+
+00:08.160 --> 00:13.439
+because it says back to where we were. So please build the entire project.
+
+00:15.359 --> 00:22.079
+Everything is described in planning/plan.md.
+
+00:24.160 --> 00:26.039
+Let's give it that command.
+
+00:26.039 --> 00:33.280
+That's what we want and we may have to do the various GSD discussing phases and so on,
+
+00:33.280 --> 00:34.280
+but got it.
+
+00:34.280 --> 00:38.439
+You want to build a full trading workstation.
+
+00:38.439 --> 00:39.960
+That's a solid foundation, it says.
+
+00:39.960 --> 00:41.280
+Okay, it's off.
+
+00:41.280 --> 00:44.439
+So we will let it do its thing.
+
+00:44.439 --> 00:49.219
+So this market back in what remains as data is fully rest API's LMLM chat and in tie front end a few things to clarify
+
+00:49.479 --> 00:54.719
+How polish does the front end needs to be for course demo I?
+
+00:56.399 --> 00:58.920
+What do we think I think we want something really production quality?
+
+00:58.920 --> 01:01.259
+I don't think we want this to be like a demo thing
+
+01:01.259 --> 01:05.400
+I mean it is a demo, but we want it to be really great production quality. That's what we're gonna say
+
+01:06.200 --> 01:13.239
+For having the LLM chat the plan says to rebrest is the LLM work out of the box without an API mock mode,
+
+01:13.239 --> 01:15.159
+keys required.
+
+01:15.159 --> 01:18.239
+Oh wait, works without using mock real.
+
+01:20.519 --> 01:23.340
+No, I'd say that it should need a key.
+
+01:24.280 --> 01:26.120
+Docker, how should I build the Docker file
+
+01:26.120 --> 01:28.319
+and stop start scripts or focus on the app code,
+
+01:28.319 --> 01:31.719
+include Docker for sure, submit answers.
+
+01:31.719 --> 01:32.560
+I love this.
+
+01:32.560 --> 01:35.519
+So it's really cool the way that it's interactive and it comes back,
+
+01:35.519 --> 01:39.319
+us distinct questions like that that we answer.
+
+01:39.319 --> 01:40.760
+I think I have a clear picture,
+
+01:40.760 --> 01:43.760
+build a complete finally platform end-to-end,
+
+01:43.760 --> 01:45.959
+ready to create project to MD.
+
+01:45.959 --> 01:47.519
+Let's do that.
+
+01:47.519 --> 01:49.000
+OK.
+
+01:49.000 --> 01:51.480
+So it is this guided process.
+
+01:51.480 --> 01:53.920
+It's more controlled on rails,
+
+01:53.920 --> 01:55.760
+but still with this idea that there's
+
+01:55.760 --> 02:00.439
+going to be a lot happening on in parallel. So I'm fine for it to do that. I'm going to
+
+02:00.439 --> 02:06.239
+press number two. There's going to be a few, a few I think, approves as we go. And
+
+02:06.239 --> 02:11.120
+I will probably like make sensible answers to questions if there's a really interesting
+
+02:11.120 --> 02:14.680
+one I'll stop. But otherwise I will see you when we make some more progress.
+
+02:14.680 --> 02:17.280
+Okay, it's been about 20 minutes or something
+
+02:17.280 --> 02:20.680
+that this has been chugging for and a lot has gone on.
+
+02:20.680 --> 02:24.000
+And it's now stopped and said V1 requirements
+
+02:24.000 --> 02:26.719
+covering database APIs, front end, MLM chat,
+
+02:26.719 --> 02:29.000
+Docker and end-to-end tests.
+
+02:29.000 --> 02:30.319
+Does it look right?
+
+02:30.319 --> 02:32.680
+And this is another, it's a good sign
+
+02:32.680 --> 02:35.840
+that this is somewhere in between the insanity
+
+02:35.840 --> 02:39.599
+of just using like teams that just go off into the wild
+
+02:39.599 --> 02:42.199
+and in process that's more on Rails.
+
+02:42.199 --> 02:44.479
+And it's encouraging us to look at a document
+
+02:44.479 --> 02:45.360
+called requirements.
+
+02:45.360 --> 02:47.240
+And these documents are all in a folder
+
+02:47.240 --> 02:49.099
+it's created called dot planning.
+
+02:49.099 --> 02:51.319
+A bit confusing since we called our own one planning
+
+02:51.319 --> 02:53.759
+already, let's go into dot planning.
+
+02:53.759 --> 02:57.560
+Here is requirements.md and open it up.
+
+02:57.560 --> 03:02.560
+And you'll see here are the full requirements that it's got and we can just
+
+03:02.560 --> 03:08.000
+scan through it. You can see it's got lots of bits and pieces that it wants to write and test.
+
+03:08.000 --> 03:12.879
+This is super impressive. You can see it's got all of these different IDs for each part.
+
+03:12.879 --> 03:18.960
+It's given itself a checklist, lots of stuff going on, things that are out of scope,
+
+03:18.960 --> 03:25.879
+the stuff here that's putting in a V2, deferred to future release, enhanced visualization, social and discovery.
+
+03:25.879 --> 03:30.319
+Okay, sure, and terraform, yeah, that's all for the future.
+
+03:30.319 --> 03:35.000
+Okay, excellent, I love it, I say approve.
+
+03:35.000 --> 03:40.840
+And it's a great opportunity for us to have come in and read it and reviewed it.
+
+03:40.840 --> 03:47.080
+Off it goes, it's now proceeding it's creating a road map as the
+
+03:47.080 --> 03:50.599
+next step so it's not like you need to run the commands that we looked at before
+
+03:50.599 --> 03:55.840
+one by one if you just interact with it this way then it will just drive and it's
+
+03:55.840 --> 04:00.520
+off so much is happening you can see that the main context window is starting to
+
+04:00.520 --> 04:04.120
+fill up this is showing how much is being used and I'll be interesting to see
+
+04:04.120 --> 04:07.360
+how it handles it when that starts to get tight.
+
+04:07.360 --> 04:12.639
+Anyways, again, I'm going to see you in a minute. I'm going to watch over it and I'll come back.
+
+04:12.639 --> 04:16.319
+If something interesting happens. Okay, another key moment I'm being asked,
+
+04:16.319 --> 04:22.079
+does this roadmap structure work for you? Here is the roadmap it suggested, a proposed roadmap
+
+04:22.079 --> 04:29.019
+in 10 phases. Database Foundation, portfolio trade execution, watchlist, app assembly, LLM chat integration,
+
+04:29.019 --> 04:32.100
+frontend foundation, watchlist, portfolio trading,
+
+04:32.100 --> 04:33.800
+chat interface packaging and testing.
+
+04:33.800 --> 04:35.000
+Seems very sensible to me.
+
+04:35.000 --> 04:38.740
+To me, it seems actually this is a better approach
+
+04:38.740 --> 04:40.420
+than the Claude Asians.
+
+04:40.420 --> 04:43.319
+I like the way that the UI is being deferred
+
+04:43.319 --> 04:44.160
+to a bit later.
+
+04:44.160 --> 04:45.220
+That makes sense to me.
+
+04:45.220 --> 04:49.300
+I thought it was odd that Claude teams began with the UI.
+
+04:49.300 --> 04:51.560
+And yeah, the chat interface coming to the end
+
+04:51.560 --> 04:53.079
+makes total sense to me,
+
+04:53.079 --> 04:55.160
+starting with some nuts and bolts like this.
+
+04:55.160 --> 04:57.279
+This all seems really good.
+
+04:57.279 --> 04:59.360
+Let's go with a one approve.
+
+04:59.360 --> 05:00.519
+Let's do this.
+
+05:00.519 --> 05:04.079
+Okay, so now it's paused to say that next up,
+
+05:04.079 --> 05:07.240
+it's now it's got the project set up.
+
+05:07.240 --> 05:08.399
+It's ready now.
+
+05:08.399 --> 05:09.240
+I will now have,
+
+05:09.240 --> 05:11.399
+I thought maybe just launch into phase one,
+
+05:11.399 --> 05:15.360
+but it's up to me to run the command to kick off either to
+
+05:15.560 --> 05:18.920
+discuss phase one or to go ahead and plan phase one.
+
+05:18.920 --> 05:25.279
+And you know, I think that it depends on the size and the magnitude of your project. If you wanted to discuss each of the phases,
+
+05:25.279 --> 05:31.040
+I think that we should just go right ahead and go straight into planning phase one. Plan,
+
+05:32.680 --> 05:39.439
+phase plan phase one. Let's just go straight into it and get this show on the road.
+
+05:39.439 --> 05:44.519
+And so you'll notice that phase one has now finished planning and it's ready for
+
+05:44.519 --> 05:49.800
+the executing. And before it does that I just want to do a slash usage and just
+
+05:49.800 --> 06:01.040
+see how much of we use now. You can see we're now at 18%, we've gone from 8% to 18%, so it's definitely, it's quite something that
+
+06:01.040 --> 06:09.279
+uses up a ton of space. It's already, it looks like about almost double the amount just to get
+
+06:09.279 --> 06:15.600
+to planning phase one that the entire claw team's used before. So it's definitely quite a hog on
+
+06:15.600 --> 06:20.120
+tokens and it's quite slow. This has been going for a total of an hour now.
+
+06:20.120 --> 06:22.519
+So it's a very different proposition
+
+06:22.519 --> 06:25.680
+to the team's structure that we had before.
+
+06:25.680 --> 06:28.199
+Possibly, I've overboiled it
+
+06:28.199 --> 06:31.000
+by making it into 10 phases like this.
+
+06:31.000 --> 06:32.680
+But anyway, I'm gonna press ahead,
+
+06:32.680 --> 06:34.220
+I'm gonna execute this phase,
+
+06:34.220 --> 06:36.920
+and then unless there's anything surprising that happens,
+
+06:36.920 --> 06:38.800
+I'm just gonna keep on going through
+
+06:38.800 --> 06:40.240
+and see where we get to.
+
+06:40.240 --> 06:44.759
+This is on yellow right now, so I'm gonna also watch with interest as it deals with
+
+06:44.759 --> 06:45.759
+the context.
+
+06:45.759 --> 06:48.519
+And I'll see you back when we made some significant progress.
+
+06:48.519 --> 06:50.160
+And that has now completed.
+
+06:50.160 --> 06:54.160
+It's now completed the execution of phase one.
+
+06:54.160 --> 06:56.720
+You can see this context looks really, really full.
+
+06:56.720 --> 07:00.839
+And we can now start planning phase two.
+
+07:00.839 --> 07:04.319
+We also, I can run the the verify work but that's for a
+
+07:04.319 --> 07:08.839
+manual step which I'm not going to do. So I'm going to go straight ahead and do
+
+07:08.839 --> 07:21.040
+it a GSD plan phase two and you can see that the the the context is really
+
+07:21.040 --> 07:25.439
+looking super full. I wonder I don't know if I'm allowed to say
+
+07:25.439 --> 07:27.920
+and three like that, if it can do them both together
+
+07:27.920 --> 07:29.740
+'cause it says that that's also available,
+
+07:29.740 --> 07:31.620
+can run in parallel with phase two.
+
+07:31.620 --> 07:32.600
+Let me try that.
+
+07:32.600 --> 07:34.600
+Meanwhile, the context here is very full.
+
+07:34.600 --> 07:36.560
+We'll see if this command works.
+
+07:36.560 --> 07:37.699
+We'll see what happened.
+
+07:38.839 --> 07:40.800
+It's thinking about that.
+
+07:40.800 --> 07:43.959
+And planning phases two and three in parallel.
+
+07:43.959 --> 07:45.040
+It certainly can.
+
+07:45.040 --> 07:47.500
+All right, so I will let that go go and I will see you in a sec.
+
+07:47.500 --> 07:51.000
+Well I have to confess I have some slightly unexpected news for you.
+
+07:51.000 --> 07:55.000
+The project has finished and as you'll see here it is 100% complete.
+
+07:55.000 --> 07:59.000
+The thing that maybe is the fact that I perhaps wasn't expecting, I don't know if you was,
+
+07:59.000 --> 08:05.000
+is that it's actually 5 hours later for me, that it is what I was just here with you a second ago.
+
+08:05.000 --> 08:11.199
+5 hours. This thing, ground and ground, it like thrashed over stuff. It
+
+08:11.199 --> 08:16.639
+was trying to do a couple of things in parallel, a bit like the using the agent teams, but
+
+08:16.639 --> 08:22.920
+basically it was very serial and everything got checked and double checked in an agonizing
+
+08:22.920 --> 08:27.779
+way. I have to say that my initial reaction is it felt over-storied. Perhaps I should
+
+08:27.779 --> 08:30.800
+have condensed some of the phases on the roadmap earlier.
+
+08:30.800 --> 08:35.460
+But for example, even completing it, it's taken about half an hour just to complete
+
+08:35.460 --> 08:39.879
+the project. It marked it as complete, then it had to update its status to say that it
+
+08:39.879 --> 08:44.519
+was complete. And as doing so, it had to rerun the tests. But when it rerun the tests, it
+
+08:44.519 --> 08:49.120
+hit an issue, even though the tests had already run successfully. And so it went back
+
+08:49.120 --> 08:53.039
+and it thrashed and it thrashed and discovered that in fact, there was some problem
+
+08:53.039 --> 08:54.879
+with the way it was running the tests.
+
+08:54.879 --> 08:57.720
+And in the end, it decided that it was finished.
+
+08:57.720 --> 08:59.000
+It says churned for one minute,
+
+08:59.000 --> 09:00.039
+but that's not true.
+
+09:00.039 --> 09:02.720
+It churned for a lot longer than one minute.
+
+09:02.720 --> 09:06.399
+So in total, if I now do slash usage,
+
+09:06.399 --> 09:07.879
+and we have a look at this,
+
+09:07.879 --> 09:11.039
+my current session usage at 24% doesn't look too bad,
+
+09:11.039 --> 09:13.720
+but that's 'cause we've gone past a day boundary
+
+09:13.720 --> 09:15.039
+and it reset and then
+
+09:15.039 --> 09:22.960
+used 24%. This which used to be about 9% has jumped up to 17% and then it gone from 8 to 9 in the last
+
+09:22.960 --> 09:30.159
+project. Basically, we've consumed about 10 times the number of tokens and taken about 10 times
+
+09:30.159 --> 09:41.639
+the length of time to do it using GSD than using the the clawed agent teams that we used before. And so it was it
+
+09:41.639 --> 09:47.120
+was quite a palava, but it was very thorough, very, very disciplined going through every
+
+09:47.120 --> 09:52.679
+single step and doing tons of documentation. There's a lot of documentation. A lot of code
+
+09:52.679 --> 10:00.320
+has been written an awful lot of tests, hundreds of tool calls. So a big, big thing went into this and I could
+
+10:00.320 --> 10:03.320
+have left this going overnight and started working up the next morning and it would have
+
+10:03.320 --> 10:06.919
+been working for me all through the night. So well, not all through the night, but for
+
+10:06.919 --> 10:12.320
+five hours of the night. Okay, so at the end of all of that, the big question is,
+
+10:12.320 --> 10:15.799
+is it going to work first time just like it worked for the other one and is it going
+
+10:15.799 --> 10:20.129
+to look different? So I guess we will find out after the break.
+

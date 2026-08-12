@@ -1,0 +1,668 @@
+WEBVTT
+
+00:00.000 --> 00:04.080
+So the result of all of these shenanigans is that we are now able to use
+
+00:04.080 --> 00:11.919
+Claude Code either here, locally, on my computer as always, or remotely have Claude Code work for
+
+00:11.919 --> 00:18.800
+us in the cloud. And there are five different ways that you can do it, and they all have, well,
+
+00:18.800 --> 00:23.280
+not all of them, some of them have some differences. And I'm going to quickly go through all five of
+
+00:23.280 --> 00:26.480
+them and experiment with some of them.
+
+00:26.480 --> 00:30.300
+And I say some of them because I'm probably exploring some production outages at the
+
+00:30.300 --> 00:33.799
+moment, which slightly limits what I can do, but it doesn't matter because the ones that
+
+00:33.799 --> 00:36.759
+I can do right now are still some of the coolest.
+
+00:36.759 --> 00:41.799
+So the simplest thing you can do is that if you have any command you've got, like,
+
+00:41.799 --> 00:47.439
+hey, what's two plus two, which no doubt, Club Code will not have much of a problem
+
+00:47.439 --> 00:49.520
+with. It's thinking about that
+
+00:49.520 --> 00:57.759
+four. You can put an ampersand before it and then that same thing will not run on your computer,
+
+00:57.759 --> 01:03.439
+but it will spawn, anthropic in the cloud and run it and get you back the answer.
+
+01:03.439 --> 01:08.000
+But that's the thing that has a production problem right now that means that it's not going to work
+
+01:08.000 --> 01:10.120
+for me and a subset of users and not clear quite which subset. It's not able to do it right now, that means that it's not going to work for me and a subset of users and not
+
+01:10.120 --> 01:14.319
+clear quite which subset. It's not able to do it right now, which is too bad and running
+
+01:14.319 --> 01:19.840
+slash login doesn't do anything. But it will work for you and more than that, you could
+
+01:19.840 --> 01:26.079
+put in any instruction you want, you can put in and redo my read me and write me a new
+
+01:26.079 --> 01:30.680
+document, whatever you want, you can put it in there and it will go off and do it and
+
+01:30.680 --> 01:32.200
+you should experiment. And once you've done that, you off and do it and you should experiment.
+
+01:32.200 --> 01:37.120
+And once you've done that, you can do slash tasks and you'll see a list of what else is
+
+01:37.120 --> 01:38.760
+running out there.
+
+01:38.760 --> 01:40.719
+And that's pretty cool.
+
+01:40.719 --> 01:45.359
+And yeah, these are all unfortunately I've got nothing there, but you will have things
+
+01:45.359 --> 01:49.000
+if you've just kicked something off and you can kick multiple things off and have them
+
+01:49.000 --> 01:53.159
+all off and running as different tasks at the same time.
+
+01:53.159 --> 01:54.480
+Just as you could, press plus
+
+01:54.480 --> 01:56.719
+and have lots of them running on your own box.
+
+01:56.719 --> 01:58.239
+But it doesn't need to be on your box,
+
+01:58.239 --> 02:00.280
+it can be out there on the cloud
+
+02:00.280 --> 02:02.799
+running in a little sandbox environment.
+
+02:02.799 --> 02:06.040
+And when it completes, you get back the results.
+
+02:06.040 --> 02:08.520
+And I should mention that the work that's happening
+
+02:08.520 --> 02:10.680
+on the cloud, when you kick it off,
+
+02:10.680 --> 02:13.360
+the full context of the conversation so far
+
+02:13.360 --> 02:14.879
+is sent off to the cloud.
+
+02:14.879 --> 02:17.840
+So it can continue at work. It's already been doing
+
+02:17.840 --> 02:23.039
+up to that point. And that's pretty cool. Okay, so that's the first way to do it. The second way
+
+02:23.039 --> 02:27.680
+is that you can also just call from the command line. I've got add a claw code. You could just say
+
+02:27.680 --> 02:33.759
+clawed dash dash remotes and then just put a command in here like again, what is two plus two
+
+02:33.759 --> 02:38.879
+but or something more meaningful. Now this is also not working at the moment for me, but it will work
+
+02:38.879 --> 02:43.520
+for you. You should try it. You'll see. It's great. And for me, I'm going to get an error message.
+
+02:43.520 --> 02:47.680
+There we go. Unable to create remote session. Thank you, anthropic, but it's been that way for
+
+02:47.680 --> 02:52.400
+a couple of days. But I'm sure it'll be fixed very soon. It'll certainly be fixed by the time
+
+02:52.400 --> 02:56.960
+you see this. And so you should try it and see it. But luckily for us, there are another three
+
+02:56.960 --> 03:01.479
+ways to do it. They'll all have some differences and are the ways that I would typically do it
+
+03:01.479 --> 03:03.280
+and that's what we're gonna do next.
+
+03:03.280 --> 03:05.280
+Let's go for number three.
+
+03:05.280 --> 03:09.280
+And number three is to go to claw.ai/code,
+
+03:09.280 --> 03:12.599
+which comes up with this kind of interface.
+
+03:12.599 --> 03:14.240
+And the first time you come into this,
+
+03:14.240 --> 03:16.479
+this should have happened in the previous flow
+
+03:16.479 --> 03:17.479
+when we first came into it
+
+03:17.479 --> 03:18.960
+that they call the onboarding.
+
+03:18.960 --> 03:21.840
+You may have needed to set up an environment
+
+03:21.840 --> 03:22.840
+and the first time it does
+
+03:22.840 --> 03:27.400
+it, so this comes up like this and it asks you whether you, the network access, it does
+
+03:27.400 --> 03:33.080
+it actually be like three big buttons on the screen. Do you want none trusted or full
+
+03:33.080 --> 03:37.800
+and trusted is the usual one to pick there. And this is known as your cloud environment
+
+03:37.800 --> 03:44.360
+and you can think of it as a setup of the thing out there on the cloud that is able to run things remotely.
+
+03:44.360 --> 03:46.560
+And what you can then do is pick a repo,
+
+03:46.560 --> 03:49.120
+which you can see I've been playing around with this,
+
+03:49.120 --> 03:51.639
+but finally is the name of our repo.
+
+03:51.639 --> 03:54.439
+And then finally you can give a command,
+
+03:54.439 --> 03:57.199
+and that command will then run on the cloud.
+
+03:57.199 --> 03:58.520
+This is a web browser.
+
+03:58.520 --> 04:00.319
+This is a little cloud code thing.
+
+04:00.319 --> 04:02.360
+If I say what is two plus two,
+
+04:04.080 --> 04:10.000
+which is again not the best use of Opus 4.6 and you could see it calls the session.
+
+04:10.000 --> 04:14.659
+Basic arithmetic expression, starting cloud code, all this thing is happening, somewhere
+
+04:14.659 --> 04:19.759
+this machinery is spinning up, trillions of floating point calculations are happening
+
+04:19.759 --> 04:24.439
+in order to calculate 2+2 and it does indeed get the right answer and we could continue the
+
+04:24.439 --> 04:29.100
+conversation there or we could put a fresh chat message right here.
+
+04:29.100 --> 04:31.300
+Okay, so let's put this to actual work.
+
+04:31.300 --> 04:33.500
+I'm saying please read all the documents
+
+04:33.500 --> 04:34.800
+in the planning directory,
+
+04:34.800 --> 04:38.199
+then design the market data backend in detail,
+
+04:38.199 --> 04:41.199
+write a new document called market data design
+
+04:41.199 --> 04:42.939
+that has code snippets and examples
+
+04:42.939 --> 04:46.079
+to implement all the market data functionality.
+
+04:46.079 --> 04:48.740
+That's a good task, let's assign it.
+
+04:48.740 --> 04:50.959
+So we're doing this in a web browser.
+
+04:50.959 --> 04:54.639
+So off on the cloud, it's launched a new session
+
+04:54.839 --> 04:56.339
+that's happening right now.
+
+04:56.339 --> 04:59.480
+Claude code is spinning up in an isolated environment.
+
+04:59.639 --> 05:01.439
+It's reading all the documents.
+
+05:01.439 --> 05:02.439
+And this is all happening.
+
+05:02.439 --> 05:03.519
+My machine is idle.
+
+05:03.519 --> 05:04.920
+Nothing's happening on my machine.
+
+05:04.920 --> 05:06.120
+I know you get it.
+
+05:06.319 --> 05:10.240
+So it's all running and I'm going to let it do its thing.
+
+05:10.439 --> 05:13.480
+And then I'm going to hope to see that in GitHub,
+
+05:13.480 --> 05:16.680
+there's going to be a new file created for the design
+
+05:16.680 --> 05:17.800
+of our market data.
+
+05:17.800 --> 05:18.839
+I'll see you in a sec.
+
+05:18.839 --> 05:20.639
+So one thing I'll say is that
+
+05:20.639 --> 05:24.540
+Cloud Code on the web is a bit slower, a tad slower
+
+05:24.540 --> 05:25.519
+than running it locally.
+
+05:25.519 --> 05:27.759
+This just took 10 minutes to write a document.
+
+05:27.759 --> 05:29.879
+And it's also a little bit flaky.
+
+05:29.879 --> 05:31.600
+It's called a research preview.
+
+05:31.600 --> 05:34.000
+You can see it says there may maybe by the time you see it,
+
+05:34.000 --> 05:37.480
+it's got a bit more stable, but I had to ask it twice because one of the times it just
+
+05:37.480 --> 05:42.519
+seemed to sort of stop and be like, "Alright, that's it. I'm out. Peace out."
+
+05:42.519 --> 05:48.000
+But ask again and then just being a bit insistent and waiting and being patient.
+
+05:48.000 --> 05:56.000
+And it has now done something and it's written 1490 lines. And if I flip over to the GitHub repo,
+
+05:56.000 --> 05:59.000
+you'll see at the top here that there is indeed
+
+05:59.000 --> 06:01.000
+something that's been pushed that's waiting for
+
+06:01.000 --> 06:02.000
+a pull request.
+
+06:02.000 --> 06:05.000
+So we can see what it's done and choose whether or not
+
+06:05.000 --> 06:07.000
+to accept it in GitHub.
+
+06:07.000 --> 06:08.000
+And so we'll do that.
+
+06:08.000 --> 06:10.000
+I'll press this compare and pull request button.
+
+06:10.000 --> 06:11.000
+Up it comes.
+
+06:11.000 --> 06:14.000
+It says comprehensive implementation update for the
+
+06:14.000 --> 06:16.000
+market data subsystem.
+
+06:16.000 --> 06:17.000
+And here it is.
+
+06:17.000 --> 06:20.600
+It's made a file called market data design.
+
+06:20.600 --> 06:22.360
+It's put it in the planning folder
+
+06:22.360 --> 06:23.879
+and it's a big old document
+
+06:23.879 --> 06:26.319
+with lots of stuff about how it should work
+
+06:26.319 --> 06:29.319
+and some code snippets and other things.
+
+06:29.319 --> 06:32.319
+This all looks like it's been very thoughtful.
+
+06:32.319 --> 06:34.319
+I'm going to take its word for it.
+
+06:34.319 --> 06:36.240
+I'm gonna think that that's a nice bit of planning
+
+06:36.240 --> 06:37.240
+that's been done.
+
+06:37.240 --> 06:38.439
+We will go ahead.
+
+06:38.439 --> 06:43.439
+We'll press the create pull request button. So that we do this,
+
+06:43.439 --> 06:50.079
+then we are going to merge in this request, confirm the merge, and that is now going to be part
+
+06:50.079 --> 06:55.600
+of the main branch. So that if it says merged up here, if I go back to the code, and if I go
+
+06:55.600 --> 07:03.839
+into planning, we will see that hopefully yes, market data design.md is a new document in here.
+
+07:03.839 --> 07:07.899
+This document was written in its entirety by Claude Code.
+
+07:07.899 --> 07:11.639
+Here it is with a table of contents with Claude Code running on the web.
+
+07:11.639 --> 07:15.339
+It's a recap. I've shown you three ways to run Claude Code remotely,
+
+07:15.339 --> 07:19.860
+using the ampersand in just in a Claude Code session running locally,
+
+07:19.860 --> 07:24.319
+using Claude-remote from computer, from a terminal.
+
+07:24.319 --> 07:28.639
+The third way is by going to Cloud.ai/code
+
+07:28.639 --> 07:31.800
+and then using Cloud Code on the web, just in a browser,
+
+07:31.800 --> 07:33.360
+which is kind of cool.
+
+07:33.360 --> 07:34.839
+And now for the fourth way,
+
+07:34.839 --> 07:39.240
+the fourth way is if you have the Cloud mobile app
+
+07:39.240 --> 07:41.800
+on your phone, you open it up,
+
+07:41.800 --> 07:45.680
+the main navigation has a, it says chats, projects,
+
+07:45.680 --> 07:46.639
+artifacts, and then it says chats, projects, artifacts,
+
+07:46.639 --> 07:48.399
+and then it says code.
+
+07:48.399 --> 07:51.560
+And if you tap there, then it will come up
+
+07:51.560 --> 07:53.360
+with a list of the sessions,
+
+07:53.360 --> 07:55.839
+the same sessions that you had listed out just there
+
+07:55.839 --> 07:57.240
+on the screen a moment ago.
+
+07:57.240 --> 07:59.800
+And there's a black button that says new session,
+
+07:59.800 --> 08:01.160
+and you can press that,
+
+08:01.160 --> 08:02.920
+and it's exactly the same interface
+
+08:02.920 --> 08:04.439
+that we were just looking at.
+
+08:04.439 --> 08:07.399
+And basically we can do exactly what we just did
+
+08:07.399 --> 08:09.000
+from your phone.
+
+08:09.000 --> 08:10.600
+You can give it an instruction.
+
+08:10.600 --> 08:11.800
+I want you to write this document.
+
+08:11.800 --> 08:13.000
+I want you to build this feature.
+
+08:13.000 --> 08:15.199
+I want you to do this and then submit it.
+
+08:15.199 --> 08:16.600
+And then when you come back,
+
+08:16.600 --> 08:20.000
+there will be something ready for you to build a pull request
+
+08:20.000 --> 08:22.899
+and merge in your GitHub repo.
+
+08:22.899 --> 08:27.100
+And you can drive it all from your phone and you can have many sessions running.
+
+08:27.100 --> 08:29.800
+You can kick off multiple of these from your phone.
+
+08:29.800 --> 08:30.319
+And I don't know why
+
+08:30.319 --> 08:34.399
+that feels so cool, why that's so much better than just being able to go to a web browser and do
+
+08:34.399 --> 08:38.799
+it. But somehow it does. And you should do it just so that you've had that experience of bringing
+
+08:38.799 --> 08:42.159
+it up. And you should pick some moment to do it, like when you're out at dinner somewhere or
+
+08:42.159 --> 08:45.919
+something. And you just sort of casually drop in, I'm just going to my team work on a few,
+
+08:45.919 --> 08:52.759
+a few bits of, few features that they're going to build for me just a second. And then I'll check it out over over dessert.
+
+08:52.759 --> 08:54.759
+So yeah, you should do that.
+
+08:54.759 --> 08:59.080
+That is the fourth way to drive GloD code remotely.
+
+08:59.080 --> 09:03.000
+And now a drum roll please for the finale,
+
+09:03.000 --> 09:07.440
+for the fifth way to run GloD code on the web.
+
+09:07.440 --> 09:09.679
+I bring you to GitHub right here.
+
+09:09.679 --> 09:10.960
+We are in GitHub.
+
+09:10.960 --> 09:13.759
+We are looking at the finally repo.
+
+09:13.759 --> 09:17.899
+Here it is, and I want you to flip over to issues.
+
+09:17.899 --> 09:19.539
+Now we're in a GitHub issue.
+
+09:19.539 --> 09:21.139
+No issues, it's a nice state to be,
+
+09:21.139 --> 09:22.080
+but we're gonna make one.
+
+09:22.080 --> 09:25.440
+Press new issue to come up with a new issue.
+
+09:25.440 --> 09:28.539
+And the name of the issue is going to be build,
+
+09:28.539 --> 09:33.539
+complete, market, data, backend.
+
+09:34.940 --> 09:38.360
+That's going to be what we're about to do. Okay, let me paste in all my
+
+09:38.360 --> 09:42.159
+instructions. I want you to read all the documents in the planning directory,
+
+09:42.159 --> 09:47.480
+then build the complete market data backend, including an interface to a
+
+09:47.480 --> 09:52.440
+provider of market data, a unified market data interface, and a market data
+
+09:52.440 --> 10:00.240
+simulator. All of that with full unit tests. That's what this issue is about and I'm going to add the
+
+10:00.240 --> 10:08.320
+immortal tagging at Claude. And with that simple instruction, I am saying that I want
+
+10:08.320 --> 10:13.399
+Claude to do this work for me. That's it. And now with that, I'm just going to press
+
+10:13.399 --> 10:20.720
+the create button. So that is something which I have, I have messaged, I have, I've tagged it as being at Claude.
+
+10:20.919 --> 10:22.559
+That's how I want this to happen.
+
+10:22.759 --> 10:26.840
+And what we are hoping is that this issue is going to be one which is going to be
+
+10:27.039 --> 10:33.039
+sent to anthropic to our Claude in the cloud to take care of this on our behalf.
+
+10:33.240 --> 10:37.200
+And just a few seconds later, this appears suddenly out of nowhere.
+
+10:37.399 --> 10:37.919
+I did nothing.
+
+10:38.120 --> 10:43.220
+I just pressed to enter suddenly Claude, Claude bought now. Claude code is working.
+
+10:43.220 --> 10:46.059
+I'll analyze this and get back to you.
+
+10:46.059 --> 10:48.200
+View job run.
+
+10:48.200 --> 10:52.440
+And so with that, just by virtue of tagging with Claude,
+
+10:52.440 --> 10:56.019
+we have launched a Claude instance that's running,
+
+10:56.019 --> 10:57.980
+doing stuff there as it's to do list.
+
+10:57.980 --> 11:00.620
+It appears, again, I didn't touch it, I promise.
+
+11:00.620 --> 11:04.220
+It appears there, all within this GitHub UI,
+
+11:04.220 --> 11:07.899
+it's often running just because we tagged it in an issue.
+
+11:07.899 --> 11:11.700
+This makes all of those shenanigans a few minutes ago worthwhile, right?
+
+11:11.700 --> 11:12.940
+This is really cool.
+
+11:12.940 --> 11:15.620
+So you can now just create issues in your repo,
+
+11:15.620 --> 11:18.940
+tag-clawed, and have something spin up in the Cloud,
+
+11:18.940 --> 11:21.139
+and have it run for you on this.
+
+11:21.139 --> 11:24.059
+Look at that. It's read all the planning documents that got ticked off.
+
+11:24.059 --> 11:25.899
+This time you saw my hands were up here.
+
+11:25.899 --> 11:26.960
+I was gesturing.
+
+11:26.960 --> 11:28.919
+You knew that I didn't do anything.
+
+11:28.919 --> 11:30.440
+So obviously this is going to take a while.
+
+11:30.440 --> 11:32.679
+The fact that it took 10 minutes to write the documents
+
+11:32.679 --> 11:35.840
+means that it could be off taking a long time over this.
+
+11:35.840 --> 11:37.960
+But just think about how you could set up
+
+11:37.960 --> 11:39.360
+a ton of different issues.
+
+11:39.360 --> 11:41.799
+A bit like we set up juridicates last week,
+
+11:41.799 --> 0:00.000
+and you could have lots of clawed code instances working on them in parallel, and that's cool.
+

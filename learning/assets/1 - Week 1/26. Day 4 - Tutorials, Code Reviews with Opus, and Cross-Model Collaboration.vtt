@@ -1,0 +1,461 @@
+WEBVTT
+
+00:00.000 --> 00:02.640
+Okay, so I gave that feedback to the model.
+
+00:02.640 --> 00:04.200
+I told it to work on the prompts.
+
+00:04.200 --> 00:08.679
+I told it to work on the chat user interface to make it tighter and to stop the scrolling
+
+00:08.679 --> 00:09.679
+thing.
+
+00:09.679 --> 00:10.679
+And it did all of that.
+
+00:10.679 --> 00:13.240
+It got a bit stuck with the chat user interface.
+
+00:13.240 --> 00:15.720
+It made some changes and the colors were all wrong.
+
+00:15.720 --> 00:18.719
+And I told it to fix it and it tried and it made no difference.
+
+00:18.719 --> 00:21.920
+And we went backwards and forwards about four or five times.
+
+00:21.920 --> 00:24.600
+And this is the kind of thing that can get very frustrating.
+
+00:24.600 --> 00:26.260
+And you can start finding yourself getting
+
+00:26.260 --> 00:27.480
+more and more annoyed.
+
+00:27.480 --> 00:29.640
+But instead what I did is I said,
+
+00:29.640 --> 00:32.420
+okay, I tell you what, don't do it that way.
+
+00:32.420 --> 00:35.479
+Build a completely different chat user interface.
+
+00:35.479 --> 00:38.000
+Just remove what you did, try again.
+
+00:38.000 --> 00:40.640
+It did it another time and it looks great.
+
+00:40.640 --> 00:42.640
+So that's a good technique to know about.
+
+00:42.640 --> 00:44.880
+It's, it's, there comes a point when you get sort of
+
+00:44.880 --> 00:46.280
+stuck in a rut.
+
+00:46.280 --> 00:47.840
+You're asking the model to make a change
+
+00:47.840 --> 00:48.320
+and it's making the
+
+00:48.320 --> 00:53.200
+same mistake or it's just stuck and there's a point when you can just say let's approach it
+
+00:53.200 --> 00:57.600
+differently. That might be easier than trying to figure out what's going wrong. So that's what
+
+00:57.600 --> 01:03.600
+we did. Anyways with that let's now bring it up. So I'm going to come here and do mpm run dev
+
+01:03.600 --> 01:08.480
+to bring it up. Let me show you what it's come up with. This is what it looks like now.
+
+01:08.480 --> 01:11.439
+Okay so I'm going to go to a local host 3000.
+
+01:11.439 --> 01:14.560
+Here is our website and doesn't it look beautiful?
+
+01:14.560 --> 01:17.319
+Scroll down, let's find our way to the digital twin.
+
+01:17.319 --> 01:20.079
+Here it is and I'm going to say hi there.
+
+01:20.079 --> 01:22.159
+And you could see first of all that it's nice,
+
+01:22.159 --> 01:25.079
+the formatting is good, it looks polished,
+
+01:25.079 --> 01:27.760
+it has this thing where it sort of does a dot for a while
+
+01:27.760 --> 01:29.540
+and then it's thinking it's just running
+
+01:29.540 --> 01:31.760
+on my local computer which is doing a lot
+
+01:31.760 --> 01:36.000
+so it's not particularly fast but here it comes and it streams back very nicely
+
+01:36.000 --> 01:43.439
+like that. Hello I'm Ed Donner. What are you most proud of and let it have a
+
+01:43.439 --> 01:47.120
+think about that it's going to have more to say so it may take a bit longer but
+
+01:47.120 --> 01:50.560
+but I do think I think that the formatting is really excellent now which
+
+01:50.560 --> 01:55.920
+is which is very nice it's got the same it's it fixed the problem with the scrolling as I
+
+01:55.920 --> 02:01.280
+said and it also has the whole of the prompt in there the whole of my LinkedIn profile in its
+
+02:01.280 --> 02:06.879
+prompt so it's giving better more rigorous answers so I think this is a terrific website
+
+02:06.879 --> 02:11.280
+I think that this chat interface now looks great everything is really good there's plenty of room
+
+02:11.280 --> 02:17.520
+for improvement but for just just a few minutes of vibe, I think this is a great start.
+
+02:17.520 --> 02:20.400
+And now for my master stroke.
+
+02:20.400 --> 02:24.360
+Everything that we've done so far has been breaking a lot of the rules that I said at
+
+02:24.360 --> 02:26.520
+the beginning until this point.
+
+02:26.520 --> 02:29.719
+I am now going to stop the server with ctrl C.
+
+02:29.719 --> 02:34.039
+I'm going to come here to my agent and this is the prompt I'm writing.
+
+02:34.039 --> 02:39.360
+Please now write me a comprehensive tutorial in Markdown that's suitable for a complete
+
+02:39.360 --> 02:43.319
+beginner in front-end coding to walk me through what you've done here.
+
+02:43.319 --> 02:47.960
+Include a summary of the technology, a high-level walk-through, a detailed code review with
+
+02:47.960 --> 02:53.960
+code samples, and end with five suggestions for the ways the code could be improved based
+
+02:53.960 --> 02:56.159
+on a self-review.
+
+02:56.159 --> 02:57.680
+I've kicked that off.
+
+02:57.680 --> 03:03.360
+I am basically having it appraise itself and give me this detail.
+
+03:03.360 --> 03:09.439
+And it's doing that now. It's building a tutorial and in a moment, we'll take a look at what it's made.
+
+03:09.439 --> 03:14.400
+Well, that's complete. Let's have a look. It's here. It's tutorial.md.
+
+03:14.400 --> 03:19.280
+I'm going to open a preview by right clicking to have a look at the tutorial that's been written for us.
+
+03:19.280 --> 03:22.120
+Professional, website and digital twin chat,
+
+03:22.120 --> 03:23.360
+beginner tutorial.
+
+03:23.360 --> 03:24.840
+You can see here, there's a summary,
+
+03:24.840 --> 03:27.120
+there's a walkthrough, there's a code structure,
+
+03:27.120 --> 03:29.199
+there's samples of the code written here,
+
+03:29.199 --> 03:32.599
+the styling, the front end, and the backend,
+
+03:32.599 --> 03:34.840
+and how that works, how to run it locally.
+
+03:34.840 --> 03:37.319
+It's pretty minimal, but it's a start,
+
+03:37.319 --> 03:39.719
+and what we can now do is iterate on it again,
+
+03:39.719 --> 03:41.840
+and say, build this out, give me more,
+
+03:41.840 --> 03:43.719
+and you can do that and make sure that it's pitched
+
+03:43.719 --> 03:44.319
+at the right level of detail for you. And that, and you can do that and make sure that it's pitched at the right level
+
+03:44.319 --> 03:45.379
+of detail for you.
+
+03:45.379 --> 03:47.000
+And that's what you should do now.
+
+03:47.000 --> 03:49.120
+And do that with this so that you get to the point
+
+03:49.120 --> 03:50.960
+when you really understand.
+
+03:50.960 --> 03:52.919
+Take this if you're already familiar with the front end
+
+03:52.919 --> 03:54.520
+and you're like, oh yeah, I get it.
+
+03:54.520 --> 03:56.719
+But if you're not familiar, use this as your way
+
+03:56.719 --> 03:57.800
+to learn about it.
+
+03:57.800 --> 03:59.639
+It's both a way to learn about it
+
+03:59.639 --> 04:03.439
+and it's a way to challenge and test your agent
+
+04:03.439 --> 04:05.020
+to make sure you're satisfied
+
+04:05.020 --> 04:06.719
+with the way that it's done the work.
+
+04:06.719 --> 04:08.159
+And as a final point to mention,
+
+04:08.159 --> 04:10.560
+one of the cool things about cursor
+
+04:10.560 --> 04:12.719
+is that because we can just switch
+
+04:12.719 --> 04:13.840
+between the different models,
+
+04:13.840 --> 04:16.079
+and I guess this is true for the others as well,
+
+04:16.079 --> 04:18.879
+we can now have a different model
+
+04:18.879 --> 04:21.959
+do a code review of what just happened.
+
+04:21.959 --> 04:26.959
+So I can say please do a comprehensive code review
+
+04:27.920 --> 04:36.959
+of this project and write the results to review.md including
+
+04:38.399 --> 04:52.199
+remediate any remedial actions needed. Don't actually change any code. And we can send this not to codecs,
+
+04:52.199 --> 04:55.199
+but instead to opus 4.5,
+
+04:55.199 --> 04:58.839
+the strongest model for an anthropic and press enter.
+
+04:58.839 --> 05:03.639
+And this whole context, conversation, assignment and work
+
+05:03.639 --> 05:07.079
+goes to opus now to do a comprehensive code review.
+
+05:07.079 --> 05:09.959
+And what we're seeing here in the thread is not conversation
+
+05:09.959 --> 05:13.600
+from codecs anymore, it's now from Opus. And that means
+
+05:13.600 --> 05:18.879
+we're getting like a different trained model with a different perspective to give us its
+
+05:18.879 --> 05:23.920
+view on what's happened. And so I will come back when that code review has been written.
+
+05:23.920 --> 05:30.160
+Okay, and that completed and we'll find it here in review.md and we open that up. And we will find,
+
+05:30.160 --> 05:36.199
+I mean, I just love Opus and we will find this super comprehensive code review.
+
+05:36.199 --> 05:37.680
+We should have had Opus write the tutorial.
+
+05:37.680 --> 05:39.560
+It would have been this comprehensive.
+
+05:39.560 --> 05:40.560
+Lots of stuff in here.
+
+05:40.560 --> 05:45.279
+This there's one that's perhaps a bit of a mess about the.env file.
+
+05:45.279 --> 05:49.480
+But other than that, these are things that are lots of good points it makes.
+
+05:49.480 --> 05:54.959
+I took a look through it a moment ago and with sort of action plans around it, it does
+
+05:54.959 --> 05:58.699
+a good dependency analysis.
+
+05:58.699 --> 06:03.000
+It does lots of useful things here and it has some remedial actions.
+
+06:03.000 --> 06:07.800
+The critical ones that it's concerned about, the.env that's there.
+
+06:07.800 --> 06:10.899
+This is probably a real problem.
+
+06:10.899 --> 06:16.300
+And then that's not a massively serious one, but probably a good piece of advice.
+
+06:16.300 --> 06:18.759
+So lots of stuff here that's great.
+
+06:18.759 --> 06:23.720
+And of course, what you could now do is go back to codex and say, take a read through
+
+06:23.720 --> 06:28.560
+this document and implement the remedial actions or say if you disagree. And that's
+
+06:28.560 --> 06:33.879
+a way that you can just call these different LLMs to have them each work on a piece of
+
+06:33.879 --> 06:38.519
+the puzzle together. And in later weeks, when we work with subagents, with multiple
+
+06:38.519 --> 06:42.480
+agents, we will of course be able to do that sort of in real time collaborating.
+
+06:42.480 --> 06:45.920
+But this is foreshadowing that functionality to come.
+
+06:45.920 --> 06:49.879
+So this is a really great exercise using our models
+
+06:49.879 --> 06:52.720
+to write a tutorial and you should keep drilling down
+
+06:52.720 --> 06:55.300
+until you've got the detail you need to understand this
+
+06:55.300 --> 06:58.759
+and doing a code review and then remediating the code review.
+
+06:58.759 --> 07:01.779
+That is a great way to get good quality
+
+07:01.779 --> 07:05.199
+out of vibing on YOLO. And with that, hopefully you
+
+07:05.199 --> 07:12.079
+have your own website and digital twin built and working. If it's not, remember be patient,
+
+07:12.079 --> 07:16.959
+simplify, simplify, simplify. Take it back to a simple website, make sure the website works,
+
+07:16.959 --> 07:22.399
+and then add bits in. Particularly if you're working with smaller models, that is often required,
+
+07:22.399 --> 07:24.779
+but you should get there, you should have it working.
+
+07:24.779 --> 07:27.360
+And if you absolutely love it and you're thinking,
+
+07:27.360 --> 07:29.879
+I wish this were my website, well,
+
+07:29.879 --> 07:32.199
+you could take my AI engineer MLOps course
+
+07:32.199 --> 07:34.420
+to find out about deploying things into production.
+
+07:34.420 --> 07:38.399
+Or for this simple one, you could just ask your model
+
+07:38.399 --> 07:41.199
+to build you a tutorial for how to deploy it
+
+07:41.199 --> 07:43.480
+to something like Vercel yourself
+
+07:43.480 --> 07:44.759
+and it will tell you how to do it.
+
+07:44.759 --> 07:46.120
+It would actually deploy it for you too,
+
+07:46.120 --> 07:49.199
+but I recommend just get it to write you the to-do list
+
+07:49.199 --> 07:50.399
+and then go and do that.
+
+07:50.399 --> 07:53.240
+Should you wish this to become your website?
+
+07:53.240 --> 07:56.399
+Because hopefully you'll have something really beautiful.
+
+07:56.399 --> 07:58.560
+And I do hope you enjoyed it.
+
+07:58.560 --> 08:01.439
+Our first real YOLO, we broke all of the rules,
+
+08:01.439 --> 08:03.319
+but we didn't break them totally
+
+08:03.319 --> 08:05.000
+because at the end we came back
+
+08:05.000 --> 08:12.160
+and looked in at the code and checked it. Okay, with that you are 27% of the way through.
+
+08:12.160 --> 08:14.560
+And that was a great blue day.
+
+08:14.560 --> 08:15.920
+The first blue day.
+
+08:15.920 --> 08:19.759
+Tomorrow is another blue day as we build more projects.
+
+08:19.759 --> 08:20.560
+I'll see you then.
+

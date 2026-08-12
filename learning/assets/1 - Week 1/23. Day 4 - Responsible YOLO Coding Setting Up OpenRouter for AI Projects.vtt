@@ -1,0 +1,686 @@
+WEBVTT
+
+00:00.000 --> 00:03.000
+Now, we're about to get to YOLO mode, which is great fun.
+
+00:03.000 --> 00:07.240
+And we're a lot of the pizzazzes right now, but I do want to keep things balanced by
+
+00:07.240 --> 00:10.000
+giving you some of the other counterpoints as well.
+
+00:10.000 --> 00:12.679
+And one of them is this great blog post by Anthropic.
+
+00:12.679 --> 00:14.199
+They always have great blog posts.
+
+00:14.199 --> 00:18.920
+This one is about how AI assistance impacts coding skills formation.
+
+00:18.920 --> 00:22.320
+And really this speaks to that point I just made about junior engineers and how important
+
+00:22.320 --> 00:24.519
+it is that you keep learning.
+
+00:24.519 --> 00:28.000
+I thought this was a very thoughtful post by anthropic
+
+00:28.000 --> 00:29.320
+because it's clearly kind of,
+
+00:29.320 --> 00:31.440
+it's anti-anthropic in a way,
+
+00:31.440 --> 00:33.240
+it's been very balanced.
+
+00:33.240 --> 00:34.840
+And what they do this,
+
+00:34.840 --> 00:37.640
+they study a room full of junior coders
+
+00:37.640 --> 00:42.159
+and that are using AI assistants to help with a task
+
+00:42.159 --> 00:44.520
+and those that are not using AI assistants.
+
+00:44.520 --> 00:46.000
+And at the end of it,
+
+00:46.000 --> 00:55.000
+they find that there is a significant difference in how the population understood the underlying technology, a library that they got to use.
+
+00:55.000 --> 01:11.439
+They gave a quiz to both parties and the people that used AI averaged 50 a small actual productivity improvement in this case,
+
+01:11.439 --> 01:12.959
+because of the type of challenge,
+
+01:12.959 --> 01:16.480
+but it had a significant detrimental effect
+
+01:16.480 --> 01:19.439
+on the learning ability of the junior developers
+
+01:19.439 --> 01:20.560
+that were working on this.
+
+01:20.560 --> 01:22.599
+And so that's a sobering point that we should
+
+01:22.599 --> 01:23.519
+all keep in mind.
+
+01:23.519 --> 01:25.239
+And another sobering point,
+
+01:25.239 --> 01:28.079
+which is particularly relevant for yoloing,
+
+01:28.079 --> 01:31.120
+comes here in the form of this article.
+
+01:31.120 --> 01:36.000
+Jellyfin is a popular open source media streaming platform
+
+01:36.000 --> 01:39.000
+that lots of people contribute to.
+
+01:39.000 --> 01:45.000
+And they put out this policy for people who contribute code to Jellyfin
+
+01:45.000 --> 01:48.000
+that are using AI to generate the code.
+
+01:48.000 --> 01:49.000
+AI assisted development.
+
+01:49.000 --> 01:51.000
+They have a policy on it.
+
+01:51.000 --> 01:53.000
+Let me show you a few things about it.
+
+01:53.000 --> 01:54.239
+Okay, in the first paragraph, it says the rise
+
+01:54.239 --> 02:00.239
+of LLMs has been significant, the power and flexibility of Cloud Code, given a lot of functionality to
+
+02:00.239 --> 02:06.480
+experienced and new developers, but there are trade-offs, it says, there we have it, it says,
+
+02:06.480 --> 02:18.120
+"We are seeing a precipitous rise in contributors using AI within the Jellyian ecosystem, as well as criticism and concern about LLMs generally.
+
+02:18.120 --> 02:25.479
+And it says these are going to lay out the policy to address what we expect and desire.
+
+02:25.479 --> 02:27.580
+Okay, what is this policy?
+
+02:27.580 --> 02:33.860
+First of all, LLM output is prohibited for them in direct communication, like writing
+
+02:33.860 --> 02:40.240
+issues or comments, feature requests, pull requests, forum posts with the exception of
+
+02:40.240 --> 02:44.099
+translations. It's great that they said that. They have an interesting catch there that you
+
+02:44.099 --> 02:48.120
+can read. But it's great that they said that. So of course it's good to translate and you
+
+02:48.120 --> 02:52.800
+should say that you're translating. It's good to do that with an LLM. It's when people
+
+02:52.800 --> 02:57.879
+generate content with LLM's. It's like the PR, why they're doing it or what they're doing.
+
+02:57.879 --> 03:01.319
+That is something which just generates extra work and noise
+
+03:01.319 --> 03:02.819
+for everyone around them.
+
+03:02.819 --> 03:04.460
+OK, so that's about communication.
+
+03:04.460 --> 03:05.960
+What about the actual code?
+
+03:05.960 --> 03:07.639
+So I'm going to read this out verbatim,
+
+03:07.639 --> 03:10.020
+because I think it's important that we all hear this
+
+03:10.020 --> 03:12.479
+and keep this-- take this to heart.
+
+03:12.479 --> 03:15.039
+The use of LLMs for code is controversial
+
+03:15.039 --> 03:17.000
+and open to much interpretation.
+
+03:17.000 --> 03:18.639
+These guidelines are our best effort
+
+03:18.639 --> 03:21.139
+attempts to ensure that knowledgeable developers who
+
+03:21.139 --> 03:27.180
+seek to use these tools as legitimate aid are not overly hindered while also preventing a
+
+03:27.180 --> 03:34.360
+flood of slop contributions that violate our core ethos. Wow okay what what
+
+03:34.360 --> 03:37.800
+are these these are rules then. So first of all, contribution should be
+
+03:37.800 --> 03:46.840
+concise and focused. If it claims to target X is touching unrelated Y and Z, it will be rejected.
+
+03:46.840 --> 03:50.080
+Okay, a PR must be broken to small manageable commits.
+
+03:50.080 --> 03:52.759
+A PR is the name of like a change request.
+
+03:52.759 --> 03:55.360
+Formatting and quality standards must be upheld.
+
+03:55.360 --> 03:58.900
+Do not commit LLM meta files like.Cloud
+
+03:58.900 --> 04:01.680
+or of course, agents.md.
+
+04:01.680 --> 04:05.919
+You must review the output and be able to explain it yourself
+
+04:05.919 --> 04:08.360
+without LLM output. You need to be able to explain it yourself without LLM output. You need to
+
+04:08.360 --> 04:14.240
+be able to explain it. What is being changed and why? If you can't explain what the LLM
+
+04:14.240 --> 04:19.360
+did, we are not interested in the change. How about that? And now the other ones are
+
+04:19.360 --> 04:23.600
+actually all common sense stuff. You must test it. You must be able to take feedback.
+
+04:23.600 --> 04:28.220
+You must have an in depth level of understanding and the final discretion is with the reviewers.
+
+04:28.220 --> 04:30.959
+And it ends with, the golden rule is this.
+
+04:30.959 --> 04:33.740
+Do not just let an LLM loose on the code base
+
+04:33.740 --> 04:36.839
+with a vague vibe prompt and then commit the results as is.
+
+04:36.839 --> 04:40.360
+This is lazy development and will always result
+
+04:40.360 --> 04:43.720
+in a poor quality contribution from our perspective.
+
+04:43.720 --> 04:48.120
+And we are not at all interested in such slop.
+
+04:48.120 --> 04:51.000
+Make an effort or please do not bother.
+
+04:51.759 --> 04:54.439
+And again, you are free to use LLM's to assist you
+
+04:54.439 --> 04:57.439
+but not as a sole source of code changes.
+
+04:57.439 --> 04:58.480
+And there's lots of interesting stuff
+
+04:58.480 --> 05:00.720
+about how they would go about enforcing this,
+
+05:00.720 --> 05:03.800
+particularly saying it's not their place to try
+
+05:03.800 --> 05:06.680
+and evaluate whether something is LLM generator or not,
+
+05:06.680 --> 05:08.000
+and it doesn't matter if it is.
+
+05:08.000 --> 05:10.399
+What matters is the quality of what it produces.
+
+05:10.399 --> 05:11.720
+The reason I take you through this,
+
+05:11.720 --> 05:13.240
+I think this is actually really well written,
+
+05:13.240 --> 05:16.720
+I think it is brave of them to be so upfront about it
+
+05:16.720 --> 05:19.639
+and put in writing what a lot of us feel,
+
+05:19.639 --> 05:24.079
+which is this sense of the asymmetry
+
+05:24.079 --> 05:28.639
+that it is so easy to generate tons of LLM code
+
+05:28.639 --> 05:30.759
+and then just submit it out somewhere.
+
+05:30.759 --> 05:33.639
+And the owners falls on the senior people then
+
+05:33.639 --> 05:35.920
+to go through it and try and digest
+
+05:35.920 --> 05:40.319
+it and understand what's real, what's the signal and what's the noise and see through
+
+05:40.319 --> 05:46.480
+these endless read-mees with lots of emojis. That's how the wait has shifted and that's
+
+05:46.480 --> 05:51.000
+not fair. It needs to shift back. The people that are generating the code, which is going
+
+05:51.000 --> 05:59.199
+to be you and me for the next two and a half weeks, it's up to us to generate concise good code that we understand back to front.
+
+05:59.199 --> 06:04.720
+And so whilst today is all about YOLO and it's great fun and I encourage it, it needs to be done
+
+06:04.720 --> 06:10.319
+very much in this spirit. The code needs to come from us, we need to own the code. And with these
+
+06:10.319 --> 06:20.560
+trade-offs firmly in mind and with a mantra that we own the code, I am still a massive fan of course of using coding agents to build a code. We'll
+
+06:20.560 --> 06:25.560
+be doing so to great effect over the next few weeks and at all points we will be owning
+
+06:25.560 --> 06:31.360
+the code. And so now we're going to do some real yoloing after all of this nay saying,
+
+06:31.360 --> 06:38.000
+we're going to go and let a model at it a few things to keep in mind. First of all,
+
+06:38.000 --> 06:41.360
+everything that I do is optional. You can do different things if you want.
+
+06:41.360 --> 06:46.560
+This is a choose your own adventure moment. Take it in what direction you want. Your results
+
+06:46.560 --> 06:52.319
+might be completely different and that's okay. That's what this is about. And if you've hit problems,
+
+06:52.319 --> 06:57.439
+the trick is to simplify. Just pair things back. Delete everything. Start again with a
+
+06:57.439 --> 07:03.519
+simpler mandate. Keep it as simple as possible. Always keep that in mind. With that, we are going to go
+
+07:03.519 --> 07:08.160
+and build our project. Let me tell you about it and then we'll go and do it. So for this
+
+07:08.160 --> 07:16.720
+incredibly simple project, we are going to build a personal portfolio website complete with a
+
+07:16.720 --> 07:27.360
+digital twin, something I cover in many of my other courses, a chat bot that can answer questions about you and your career, like a complete, robust portfolio,
+
+07:27.360 --> 07:34.319
+personal site, digital twin, all in one go. We're going to do it, vibe coding with YOLO,
+
+07:34.319 --> 07:40.879
+so that we do nothing, we just set it off and let it go. That's the plan. And to start with,
+
+07:40.879 --> 07:44.319
+we need to actually, so this is going to be a coding agent that's building something,
+
+07:44.319 --> 07:47.040
+which is going to have AI in it as well.
+
+07:47.040 --> 07:48.040
+It's a bit confusing.
+
+07:48.040 --> 07:49.800
+It's an AI building AI.
+
+07:49.800 --> 07:54.920
+So we are going to need to set up an ability for you to make AI calls in the cloud, which
+
+07:54.920 --> 07:57.920
+you might have done before a lot of times, or it might be the very first time you're
+
+07:57.920 --> 07:58.920
+doing it.
+
+07:58.920 --> 08:03.120
+And I'm going to suggest that we use a platform called OpenRooter because it allows you to
+
+08:03.120 --> 08:07.279
+access free models and paid models and it's super easy to use.
+
+08:07.279 --> 08:09.879
+So that's what we're going to go and set up right now.
+
+08:09.879 --> 08:12.360
+But if you're already an open AI user
+
+08:12.360 --> 08:14.279
+and that's what you use and you've got an account
+
+08:14.279 --> 08:16.399
+and you've got credits and an API key,
+
+08:16.399 --> 08:17.879
+we can just use that too.
+
+08:17.879 --> 08:20.079
+If you do that, then you know exactly how it works
+
+08:20.079 --> 08:22.920
+and just simply replace OpenRooter with OpenAI.
+
+08:22.920 --> 08:25.319
+But for the people that are doing this for the first time,
+
+08:25.319 --> 08:27.439
+let's go to OpenRooter right now.
+
+08:27.439 --> 08:28.879
+I'm going to take you to their website,
+
+08:28.879 --> 08:31.040
+which is openrutor.ai.
+
+08:31.040 --> 08:32.039
+Let's go there now.
+
+08:32.039 --> 08:37.700
+So open rutor is this great service, a provider, which lets you call different frontier models
+
+08:37.700 --> 08:38.960
+in the cloud.
+
+08:38.960 --> 08:43.960
+Back in the day, if you wanted to call models like open AI and cloth and anthropics, Claude
+
+08:43.960 --> 08:48.679
+and Google's Gemini, you needed to set up accounts with each of those companies.
+
+08:48.679 --> 08:52.000
+You'd need to put some money on there, like a pay as you go,
+
+08:52.000 --> 08:54.080
+moneyed a top up amount that you put there,
+
+08:54.080 --> 08:55.879
+and you need to have like an API key,
+
+08:55.879 --> 08:57.279
+which is like your password,
+
+08:57.279 --> 09:00.360
+and connect to each one and write some code to do that.
+
+09:00.360 --> 09:01.759
+An open router came along and said,
+
+09:01.759 --> 09:03.960
+"Hey, we can be the person in the middle.
+
+09:03.960 --> 09:05.720
+"Just have an account with us,
+
+09:05.720 --> 09:07.960
+"and tell us which model you want to call,
+
+09:07.960 --> 09:09.639
+"and we will route to that model."
+
+09:09.639 --> 09:11.120
+And that's so convenient,
+
+09:11.120 --> 09:13.639
+and it allows you to use free models in the cloud,
+
+09:13.639 --> 09:15.360
+or paid models, all with one account. Of course, if you to use free models in the cloud or paid models all with one
+
+09:15.360 --> 09:20.000
+account. Of course, if you are using paid models, they do charge a small fee for that when you as
+
+09:20.000 --> 09:25.279
+you do your top up as you will see, but it's worth it because it's so convenient. And that's what
+
+09:25.279 --> 09:29.279
+we're going to use right now and it's going to also allow you to use free models if that's what
+
+09:29.279 --> 09:36.659
+you'd like to do. Okay, so I have gone to openruiter.ai and you should as well and you should see this.
+
+09:36.659 --> 09:39.279
+And if you don't already have an openrooter account,
+
+09:39.279 --> 09:41.759
+then the first thing to do is of course to press sign up
+
+09:41.759 --> 09:45.179
+and then you come in and sign up and you use your Google
+
+09:45.179 --> 09:47.100
+credentials if you have them or whatever you want
+
+09:47.100 --> 09:49.799
+to have an account with openrooter
+
+09:49.799 --> 09:52.460
+and then I answer any questions it gives you
+
+09:52.460 --> 09:54.220
+as part of the sign up process
+
+09:54.220 --> 09:56.360
+and then you should get to the next screen.
+
+09:56.360 --> 09:59.039
+Here I am after logging in to OpenRooter,
+
+09:59.039 --> 10:02.840
+and on the top right is a usual kind of avatar menu,
+
+10:02.840 --> 10:05.840
+and here is a section called Keys.
+
+10:05.840 --> 10:08.879
+And if I select this, I go to this place
+
+10:08.879 --> 10:12.519
+that has my API keys, and you won't have any yet,
+
+10:12.519 --> 10:15.639
+and you can press this Create API Key button.
+
+10:15.639 --> 10:17.759
+You can give it a name that can be anything you want,
+
+10:17.759 --> 10:20.799
+just something to remember like my nice key, but it can be anything you want, just something to remember like my nice key, but
+
+10:20.799 --> 10:24.720
+it can be whatever you want. If you're going to be using, if you're going to be putting
+
+10:24.720 --> 10:29.559
+on some money because you want to use paid models, then if you wish, you can put a limit
+
+10:29.559 --> 10:35.360
+here as to like, I don't want to spend more than $5 a month, then you could have it set
+
+10:35.360 --> 10:40.440
+like this. So this is, yeah, yeah, this is the dollar limit each month right here. And
+
+10:40.440 --> 10:42.960
+you can also put an expiration on the key should you want to do
+
+10:42.960 --> 10:49.039
+that and then you can create the key like this and it then gives you a key right here and you're
+
+10:49.039 --> 10:53.919
+going to copy it into your clipboard and you might want to also save it just just on my temporarily
+
+10:53.919 --> 10:58.720
+safer if you have a password manager put it there but copy it into your clipboard we're going to
+
+10:58.720 --> 11:06.919
+need it in a minute and here's the thing you don't want to mess this up. Your key needs to be exactly this.
+
+11:06.919 --> 11:08.679
+It needs to be this piece of text here,
+
+11:08.679 --> 11:12.080
+including this first SK-OR,
+
+11:12.080 --> 11:15.399
+which stands for secret key and open router-v1.
+
+11:15.399 --> 11:16.600
+This whole thing has to be there.
+
+11:16.600 --> 11:19.200
+And if you get this wrong by a single digit,
+
+11:19.200 --> 11:20.600
+then it won't work.
+
+11:20.600 --> 11:24.440
+And I say this every time, and somehow there's always
+
+11:24.440 --> 11:28.379
+a steady flow of people that have problems with their
+
+11:28.379 --> 11:34.399
+keys because somewhere they've messed up getting the key like this into their code.
+
+11:34.399 --> 11:37.100
+And if it goes wrong, then it won't work.
+
+11:37.100 --> 11:39.279
+If it doesn't work, you can just come back and create another key.
+
+11:39.279 --> 11:43.159
+You can have as many as you want, but you'll have to create another one, copy it and then
+
+11:43.159 --> 11:45.919
+use it because the key has to match.
+
+11:45.919 --> 11:47.720
+It has to be exactly right.
+
+11:47.720 --> 11:49.120
+And you could keep this screen up like this
+
+11:49.120 --> 11:50.720
+until we've pasted it in,
+
+11:50.720 --> 11:53.440
+where it needs to go in the next part.
+
+11:53.440 --> 11:54.279
+Okay.
+
+11:54.279 --> 11:56.600
+And I'm now gonna, I've copied that.
+
+11:56.600 --> 11:58.399
+I'm now going to close this down.
+
+11:58.399 --> 12:00.120
+I'm also going to delete this so that,
+
+12:00.120 --> 12:02.200
+because you've all seen my key.
+
+12:02.200 --> 12:03.399
+So I've now deleted it.
+
+12:03.399 --> 12:05.320
+And there's one more thing that I want to set up
+
+12:05.320 --> 12:06.399
+in OpenRooter.
+
+12:06.399 --> 12:08.759
+If you're gonna be looking to use free models
+
+12:08.759 --> 12:10.000
+through OpenRooter, then you need
+
+12:10.000 --> 12:15.679
+to come to your avatar menu here, go to settings, and then down here go to privacy and guard
+
+12:15.679 --> 12:20.000
+rails and make sure these two things here are turned on.
+
+12:20.000 --> 12:25.159
+Enable free endpoints that might train on inputs because if you use models for free,
+
+12:25.159 --> 12:29.279
+you're saying, "Okay, but you may use this to train on otherwise they won't."
+
+12:29.279 --> 12:32.799
+And then enable free endpoints that may publish your prompts because it's
+
+12:32.799 --> 12:37.120
+a lot if you're going to use free models again, then you're giving up the privacy angle.
+
+12:37.120 --> 12:42.960
+So those two things should be turned on. Should you wish to use the free models in OpenRooter?
+
+12:42.960 --> 12:47.519
+So that's one thing to be aware of. And for those that would like to use a strong model
+
+12:47.519 --> 12:55.759
+for your digital twin, you can come to the avatar menu and go to credits. And this is where you can add some credits in here that you could
+
+12:55.759 --> 13:01.279
+spend against. And whilst some of these providers have a $5 minimum, OpenRooter is much more friendly.
+
+13:01.279 --> 13:06.559
+Last time I tried it at least, I don't have anything in here, last time it was a $2 minimum.
+
+13:06.559 --> 13:12.639
+So for just $2 minimum, you can then put that down and then draw down against it super convenient.
+
+13:13.279 --> 13:16.200
+So it should you wish it's completely optional. You can put some
+
+13:16.200 --> 13:20.639
+money on this. This is going to be used by your digital twin to answer career
+
+13:20.639 --> 13:25.799
+questions about you to people that go to your website. Okay with that open
+
+13:25.799 --> 13:30.600
+router is set up. You have copied the open router key into your clipboard. Maybe
+
+13:30.600 --> 0:00.000
+you still have that open. You can always create more API keys if you wish. It's time for us to start coding.
+

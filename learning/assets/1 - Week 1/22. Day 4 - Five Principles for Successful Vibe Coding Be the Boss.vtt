@@ -1,0 +1,560 @@
+WEBVTT
+
+00:00.000 --> 00:05.280
+So there's going to be many times on this course that I take you through good principles for effective AI,
+
+00:05.280 --> 00:11.759
+agentic engineering. And we're going to start now with the sort of basic five big ideas for successful
+
+00:11.759 --> 00:17.039
+vibe coding. And it all comes under the heading, be the boss. The first one is one we've already
+
+00:17.039 --> 00:23.359
+talked about, which is about spending time on your agents at MD. You want it to be concise,
+
+00:23.359 --> 00:26.399
+and you want to cover importantly three different areas.
+
+00:26.399 --> 00:29.440
+You want to spec what needs to be done very clearly.
+
+00:29.440 --> 00:32.799
+You want to describe the style that it needs to be done in
+
+00:32.799 --> 00:35.960
+and you need to be explaining what it means
+
+00:35.960 --> 00:39.039
+to be successful so that it's absolutely clear
+
+00:39.039 --> 00:41.159
+how to gauge success at the end of it.
+
+00:41.159 --> 00:45.560
+That would be a good, concise, clear agent.md.
+
+00:45.560 --> 00:50.759
+You need to start your project simple, straightforward, easy. And I'm not
+
+00:50.759 --> 00:55.000
+just saying that in your agents.md, you begin the first section with something that's
+
+00:55.000 --> 01:01.659
+easy. I'm saying your entire project, your first agents.md, should itself just be the
+
+01:01.659 --> 01:08.019
+very basic MVP, but begin by building something basic in your whole agents.md. Go through
+
+01:08.019 --> 01:11.480
+that entire iteration, including testing at each
+
+01:11.480 --> 01:16.519
+point including sub steps make sure that it works and then decide to take it a
+
+01:16.519 --> 01:21.000
+step more complex. If you try and start by boiling the ocean with a super
+
+01:21.000 --> 01:25.400
+complicated application spelled out in your agents.md then you might go off
+
+01:25.400 --> 01:30.719
+track off the rails it might not work and you'll just get stuck. So start simple.
+
+01:30.719 --> 01:34.560
+And obviously that goes along with that is to then work incrementally,
+
+01:34.560 --> 01:40.959
+constantly testing, constantly validating the success criteria at each step. If you're working in
+
+01:40.959 --> 01:46.719
+this very regimented way, this disciplined way, then you can guarantee at each point that you've
+
+01:46.719 --> 01:57.040
+reached that milestone successfully, and you can always go back if you haven't. And then, you know, these all sort of belong together, but don't get lazy,
+
+01:57.040 --> 02:02.239
+avoid the trap, especially when you've had some early success with vibe coding. It's gone off
+
+02:02.239 --> 02:06.000
+and built you a first person shooter. It's gone off and built you a camban and you're thinking,
+
+02:06.000 --> 02:10.800
+oh, wow, this just works. I'll just yolo. I'll just set it off. I'll come back later.
+
+02:10.800 --> 02:18.240
+And then I'll just keep pushing ahead. And it's so tempting. It is so easy to get lazy to start to take it for granted and
+
+02:18.240 --> 02:22.639
+start to just sort of trust it. It's like, ah, that's going to be working. It's, it looks great.
+
+02:22.639 --> 02:27.680
+If you do that, your, your defenses come down, you let your guard down and you go several steps
+
+02:27.680 --> 02:33.439
+forwards. And only then you realize that, that several steps ago, it made some terrible assumption
+
+02:33.439 --> 02:38.560
+that is complete nonsense. And as a result, you've just wasted lots of time.
+
+02:38.560 --> 02:43.800
+So, you know, the onus is on you to be challenging at each step.
+
+02:43.800 --> 02:47.080
+If there's, if you're debugging something and it declares it's found the problem and
+
+02:47.080 --> 02:52.719
+fixed it and here's why with lots of confident bold text, still challenge.
+
+02:52.719 --> 02:54.360
+Come in, demand the evidence.
+
+02:54.360 --> 02:56.080
+Have you found the root cause?
+
+02:56.080 --> 02:57.240
+Have you fixed it?
+
+02:57.240 --> 02:58.680
+Are you sure?
+
+02:58.680 --> 03:00.520
+Give me the evidence, demonstrate it,
+
+03:00.520 --> 03:03.479
+show me the test results, and then move on.
+
+03:03.479 --> 03:05.840
+But don't allow your guard to come down.
+
+03:05.840 --> 03:08.960
+Don't just go with it, even when you have some successes.
+
+03:08.960 --> 03:11.039
+One thing's for sure, you're gonna have moments
+
+03:11.039 --> 03:14.240
+when you will be blown away by how well it goes,
+
+03:14.240 --> 03:15.900
+how much code is built,
+
+03:15.900 --> 03:17.199
+how something like the camper
+
+03:17.199 --> 03:18.960
+and disappears that is really cool.
+
+03:18.960 --> 03:21.400
+It's gonna be amazing.
+
+03:21.400 --> 03:25.360
+But there will also be times when it's a fiasco.
+
+03:25.360 --> 03:29.680
+There will be chaos. There will be times when it makes a mistake and then it makes
+
+03:29.680 --> 03:35.159
+the same mistake again and you put it in agents.md and you say never, ever make this
+
+03:35.159 --> 03:40.560
+mistake and it makes it again. And you say write a performance report that says I will
+
+03:40.560 --> 03:44.680
+never make this mistake again and read that performance report every single time.
+
+03:44.680 --> 03:46.280
+And it still moves on the stage.
+
+03:46.280 --> 03:50.080
+When these things happen, it can be so frustrating.
+
+03:50.080 --> 03:54.759
+I've had moments when I have been just so angry.
+
+03:54.759 --> 03:57.080
+And what you have to keep telling yourself
+
+03:57.080 --> 03:58.680
+and what you gradually learn is that
+
+03:58.680 --> 04:00.800
+that is part of the process.
+
+04:00.800 --> 04:02.919
+You're hitting up against limitations
+
+04:02.919 --> 04:04.639
+of the model that you're working with.
+
+04:04.639 --> 04:06.479
+And you need to find how to work around that,
+
+04:06.479 --> 04:12.879
+you need to detect it, manage it, handle it and do so with style. This is the frustration,
+
+04:12.879 --> 04:18.720
+the walls that you can hit against, that is part of the process. These models give you an enormous
+
+04:18.720 --> 04:24.240
+leg up in some ways, but they also have their downsides and managing the downsides is the key
+
+04:24.240 --> 04:30.720
+path to success. Now, you might be thinking to yourself, these five principles to set me up for success,
+
+04:30.720 --> 04:32.800
+they seem to fly in the face of Yolo.
+
+04:32.800 --> 04:34.600
+It's very much about not just,
+
+04:34.600 --> 04:35.839
+"Hey, I'm gonna kick it off.
+
+04:35.839 --> 04:37.319
+"I'm gonna let it have permission.
+
+04:37.319 --> 04:38.199
+"Do whatever you want.
+
+04:38.199 --> 04:40.959
+"I'm coming back in an hour or in a day."
+
+04:40.959 --> 04:42.439
+That seems a bit different.
+
+04:42.439 --> 04:43.879
+And you're right.
+
+04:43.879 --> 04:45.120
+And you know, you could probably tell,
+
+04:45.120 --> 04:47.079
+"I'm not a huge fan of Yolo.
+
+04:47.079 --> 04:48.959
+"There are situations as we'll discuss
+
+04:48.959 --> 04:50.959
+"when it makes sense to do it,
+
+04:50.959 --> 04:53.959
+but always with a skeptical eye,
+
+04:53.959 --> 04:56.120
+always be the boss as much as you can.
+
+04:56.120 --> 04:59.879
+Even if you YOLO, come back and check everything carefully.
+
+04:59.879 --> 05:02.079
+People talk about the trust but verify mindset
+
+05:02.079 --> 05:03.879
+that I think I mentioned before.
+
+05:03.879 --> 05:05.639
+You need to trust it to a certain extent
+
+05:05.639 --> 05:07.639
+and then verify very carefully indeed.
+
+05:07.639 --> 05:10.199
+That is certainly my recipe for success.
+
+05:10.199 --> 05:12.360
+Even with the really strong models,
+
+05:12.360 --> 05:14.199
+you need to be the boss.
+
+05:14.199 --> 05:15.800
+That's the path to success.
+
+05:15.800 --> 05:19.040
+And on that note, I got some words of wisdom
+
+05:19.040 --> 05:21.800
+for whether you're from a junior background
+
+05:21.800 --> 05:24.480
+or from a senior engineer background.
+
+05:24.480 --> 05:25.959
+I just have some things to say.
+
+05:25.959 --> 05:29.459
+If you're from coming into this as like new to programming
+
+05:29.459 --> 05:33.720
+or a junior engineer on that end of the continuum,
+
+05:33.720 --> 05:37.199
+then first up, you need to use this as an opportunity
+
+05:37.199 --> 05:38.399
+to be learning.
+
+05:38.399 --> 05:39.959
+You want to take that journey yourself
+
+05:39.959 --> 05:43.079
+so that you can become a senior engineer in the future.
+
+05:43.079 --> 05:46.800
+And so, don't allow yourself to lose sight
+
+05:46.800 --> 05:48.800
+of the learning opportunity here.
+
+05:48.800 --> 05:51.959
+Take this as a way to challenge and ask questions
+
+05:51.959 --> 05:54.240
+of the LLM in order that you can understand
+
+05:54.240 --> 05:56.139
+what's happening so that you're learning it too.
+
+05:56.139 --> 05:58.860
+So you're making that journey towards being a senior engineer.
+
+05:58.860 --> 06:01.399
+Otherwise it would be so easy just to sort of
+
+06:01.399 --> 06:05.180
+not ever acquire that skillset and just let the model do,
+
+06:05.180 --> 06:07.980
+do the work, which will only lead to frustration later.
+
+06:07.980 --> 06:11.439
+And similarly, you need to be skeptical.
+
+06:11.439 --> 06:13.639
+The mental model to have is that you've got this,
+
+06:13.639 --> 06:16.699
+this assistant that's super eager
+
+06:16.699 --> 06:19.920
+and that will go and hunt on the internet and research things and do
+
+06:19.920 --> 06:24.560
+stuff. But sometimes it's misguided and sometimes it's overconfident and makes a
+
+06:24.560 --> 06:30.319
+mistake or it uses band aids instead of doing a proper solution. It guesses a lot all those
+
+06:30.319 --> 06:36.160
+kinds of problems that we've talked about in the past and you have to be wise to that.
+
+06:36.160 --> 06:40.120
+So come at it with a healthy skepticism, ask the right questions,
+
+06:40.120 --> 06:42.720
+always double check, even if it seems confident,
+
+06:42.720 --> 06:45.600
+always have that healthy skepticism in mind
+
+06:45.600 --> 06:47.639
+and things will go much better.
+
+06:47.639 --> 06:50.959
+And for senior engineers, to be honest,
+
+06:50.959 --> 06:54.600
+this tooling is best suited for you.
+
+06:54.600 --> 06:56.920
+It's harder for the junior engineers.
+
+06:56.920 --> 06:58.639
+Sorry, junior engineers.
+
+06:58.639 --> 07:02.560
+It's harder because you just sort of can feel bamboozled by this thing sometimes.
+
+07:02.560 --> 07:04.680
+And you can't tell if it's making it up or not.
+
+07:04.680 --> 07:06.839
+But as a senior engineer, you can tell.
+
+07:06.839 --> 07:10.480
+And so you're actually in a really good position to use it.
+
+07:10.480 --> 07:17.040
+The point I want to make to you is you need to keep in mind that this is a tool that allows
+
+07:17.040 --> 07:20.079
+you to build more when used correctly.
+
+07:20.079 --> 07:22.360
+I don't like to get caught up in the hype.
+
+07:22.360 --> 07:26.240
+I don't know that it's a 10x, but it's certainly something that allows you to do more
+
+07:26.240 --> 07:27.360
+and build more.
+
+07:27.360 --> 07:33.319
+And so my, my, my ask, my appeal is that you keep enjoying what you do.
+
+07:33.319 --> 07:37.160
+What excites most of us engineers is the fact of building.
+
+07:37.160 --> 07:40.959
+And sure, a lot of what gives me satisfaction is hammering out code and seeing it run.
+
+07:40.959 --> 07:42.360
+And so there's a sense when I work with L.A.
+
+07:42.360 --> 07:45.600
+Lens that some of that joy is being taken away from me.
+
+07:45.600 --> 07:47.040
+But really it's a trade.
+
+07:47.040 --> 07:50.639
+It's true that joy is being taken away of writing a line of code.
+
+07:50.639 --> 07:53.240
+But instead of that, I have this other joy that I
+
+07:53.240 --> 07:56.519
+am able to build entire systems like frontend
+
+07:56.519 --> 07:57.920
+that I'm so terrible at.
+
+07:57.920 --> 08:01.000
+Now I can just have a frontend built just like that.
+
+08:01.000 --> 08:03.920
+I can have terraformed scripts written and things deployed,
+
+08:03.920 --> 08:06.240
+DevOps stuff that I'm on.
+
+08:06.240 --> 08:09.160
+And that can be done really, really fast with LLMs.
+
+08:09.160 --> 08:11.720
+And so it's given me all these extra powers
+
+08:11.720 --> 08:15.600
+I didn't have before, and that allows me to build faster,
+
+08:15.600 --> 08:18.120
+and building faster is fun.
+
+08:18.120 --> 08:22.759
+So I guess my ask is to try and keep in mind
+
+08:22.759 --> 08:24.680
+that whilst it's taken something's away,
+
+08:24.680 --> 08:26.639
+it's given a lot more back.
+
+08:26.639 --> 08:29.399
+And in summary, I have a balanced view
+
+08:29.399 --> 08:32.240
+when it comes to the productivity improvement that
+
+08:32.240 --> 08:33.879
+coding agents bring us.
+
+08:33.879 --> 08:38.740
+I do see that there are situations when it's literally a 10x change in productivity,
+
+08:38.740 --> 08:42.360
+like the Building a Camban view in the next AS app.
+
+08:42.360 --> 08:47.240
+That would take me days, maybe even a week, whereas it was just a matter of minutes.
+
+08:47.240 --> 08:50.860
+So there are clearly situations where it is a game changer.
+
+08:50.860 --> 08:55.559
+But there are situations where that's definitely not the case. There are times when it's just an incremental
+
+08:55.559 --> 08:59.519
+productivity improvement, particularly with larger projects, legacy projects,
+
+08:59.519 --> 09:04.320
+with complex back-end changes. And there are situations where it actually
+
+09:04.320 --> 09:09.159
+subtracts value. I have had real-world situations where I've been trying to build
+
+09:09.159 --> 09:17.200
+like a streamable HTTP/MCP server, something that's relatively new and wasn't part of its training data and
+
+09:17.200 --> 09:22.639
+Claude was messing it up for me again and again and it took me longer than it would have taken if
+
+09:22.639 --> 09:30.320
+I just wrote it myself. So it's a mixed bag and recognizing that it's a mixed bag is a big part of
+
+09:30.320 --> 09:35.120
+the challenge. You could come into this, you could have a lot of success, you could think to
+
+09:35.120 --> 09:36.080
+yourself, wow, I can change
+
+09:36.080 --> 09:39.679
+my estimates to attend to what they were. And then you hit a stumbling block and the
+
+09:39.679 --> 09:46.159
+next thing you know, everything has been pushed out. So keep a healthy understanding
+
+09:46.159 --> 09:50.720
+of both the positives and the downsides of working with coding agents.
+
+09:50.720 --> 09:56.039
+And in aggregate, the main thing to take away is that I would say it's always a positive,
+
+09:56.039 --> 10:01.080
+it's always value add now. Using the top coding agents, always speeds things up.
+
+10:01.080 --> 10:04.039
+How much it speeds things up depends hugely
+
+10:04.039 --> 10:06.440
+on the kind of task, on the kinds of skills
+
+10:06.440 --> 10:08.759
+that you have, on the size of the project,
+
+10:08.759 --> 10:10.279
+and many other factors.
+
+10:10.279 --> 10:12.159
+But you quickly get to understand
+
+10:12.159 --> 10:13.440
+what kind of boost you're going to get
+
+10:13.440 --> 10:15.320
+once you're a little bit into that project.
+
+10:15.320 --> 10:18.840
+Generally speaking, if you're dealing with a small MVP
+
+10:18.840 --> 10:21.159
+of a green field project, you're going to get
+
+10:21.159 --> 10:25.399
+a very significant multiplier of your productivity.
+
+10:25.399 --> 10:29.279
+In most other cases, you're talking about a speed improvement, you're talking about
+
+10:29.279 --> 10:35.240
+assistance, but not the kind of 10X numbers that you sometimes see in all of the hype.
+

@@ -19,7 +19,9 @@ ai-code/
 │       └── deploy.yml         # GitHub Actions automated deployment
 ├── nda-generator/             # Sub-Project 1: Mutual NDA Creator (React 18 + Vite)
 ├── kanban-gemini/             # Sub-Project 2: Kanban Project Management (Next.js 15)
-└── portfolio/                 # Sub-Project 3: Software Engineering Portfolio (Next.js 15)
+├── portfolio/                 # Sub-Project 3: Software Engineering Portfolio (Next.js 15)
+├── finally/                   # Sub-Project 4: AI Trading Workstation (FastAPI + Next.js)
+└── learning/                  # Sub-Project 5: AI Coder Learn (React + Vite)
 ```
 
 ---

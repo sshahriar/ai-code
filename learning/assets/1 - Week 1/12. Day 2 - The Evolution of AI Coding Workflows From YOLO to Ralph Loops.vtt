@@ -1,0 +1,557 @@
+WEBVTT
+
+00:00.000 --> 00:03.839
+With all that talk of let it go, I don't have that frozen song playing in my head.
+
+00:03.839 --> 00:06.780
+I hope I haven't done that to you two now.
+
+00:06.780 --> 00:13.900
+Anyways, so building on that, I want to show you what I would describe as the evolution
+
+00:13.900 --> 00:15.179
+of workflows.
+
+00:15.179 --> 00:17.940
+Workflow is a very common word in this field.
+
+00:17.940 --> 00:24.480
+The workflow is about how do you go about organizing your activities around this mysterious,
+
+00:24.480 --> 00:26.920
+magical thing that is a coding agent.
+
+00:26.920 --> 00:31.320
+Workflow is really what Andrei Karpathy was getting at with that tweet.
+
+00:31.320 --> 00:40.600
+The optimal workflow with coding agents has changed consistently with what I just described
+
+00:40.600 --> 00:43.679
+with the different school of thought between the two years.
+
+00:43.679 --> 00:49.399
+Let me take you through what I think of as the six different workflows which is some
+
+00:49.399 --> 00:54.799
+one analogous to the eight stages that we covered yesterday. So in the 2025
+
+00:54.799 --> 01:00.560
+mindset there were perhaps three different levels of trusting and LLM.
+
+01:00.560 --> 01:05.599
+At the lowest level of trust where we began is micromanagement and this is
+
+01:05.599 --> 01:10.920
+where you would use an agent but you, when I see you, I mean me,
+
+01:10.920 --> 01:14.200
+this is definitely was my mode for most of last year.
+
+01:14.200 --> 01:18.400
+I would very much write very specific instructions
+
+01:18.400 --> 01:21.560
+in agents.md, approve all of the changes,
+
+01:21.560 --> 01:24.040
+frequently stop it running,
+
+01:24.040 --> 01:27.560
+go back rewrite agents.md and then run it again
+
+01:27.560 --> 01:31.680
+and then check what it's doing with these frequent resets.
+
+01:31.680 --> 01:35.799
+And that was where I began and where many people began
+
+01:35.799 --> 01:39.040
+using some of these agent coders.
+
+01:39.040 --> 01:43.079
+And then the next step was taking a bit of a step back,
+
+01:43.079 --> 01:44.480
+a bit more trust.
+
+01:44.480 --> 01:46.120
+Now, a lot of these programs,
+
+01:46.120 --> 01:49.640
+a lot of these coding agents have a planning mode.
+
+01:49.640 --> 01:51.640
+You can put them on plan mode.
+
+01:51.640 --> 01:53.040
+And when they're on plan mode,
+
+01:53.040 --> 01:54.840
+they produce documentation
+
+01:54.840 --> 01:57.799
+like sort of to-do lists of what's going to happen.
+
+01:57.799 --> 02:00.359
+And you're working together on figuring out
+
+02:00.359 --> 02:02.319
+the plan for what's to be done.
+
+02:02.319 --> 02:05.000
+And then when plan mode is done, you say, okay,
+
+02:05.000 --> 02:08.479
+let's do this, and you put it onto execution mode.
+
+02:08.479 --> 02:11.680
+And so that idea of planning first, and then executing,
+
+02:11.680 --> 02:13.840
+and typically you execute in phases.
+
+02:13.840 --> 02:17.360
+And for each phase, I would have it go off and build something, then I would
+
+02:17.360 --> 02:22.319
+do a code review and make sure it's not making a mountain out of a molehill as they often like to do
+
+02:22.319 --> 02:27.039
+and then after that I would have it test and I would come back and review the test results, do some
+
+02:27.039 --> 02:32.879
+testing myself and then mark it complete and move on to the next phase. So that is this kind of plan
+
+02:32.879 --> 02:39.680
+execute review test giving it a little bit more wiggle room, a little bit more rope, but generally
+
+02:39.680 --> 02:45.680
+still very much on top of things. And then the next phase is about spec-driven
+
+02:45.680 --> 02:51.080
+development, SDD, where you are really specifying what needs to be done and
+
+02:51.080 --> 02:56.039
+then letting it go and do it and it's been specified there are even some some
+
+02:56.039 --> 03:01.520
+sort of spec languages when you can describe the spec in this very precise way.
+
+03:01.520 --> 03:07.000
+And really the other term for this is people talk about trust but verify.
+
+03:07.000 --> 03:11.719
+Trust the system, you come back to verify everything's doing what you wanted it to do.
+
+03:11.719 --> 03:17.039
+But you're not doing the same kind of code review or detail testing until the end.
+
+03:17.039 --> 03:25.159
+So it's very much more of a step backwards and that the trust but verify mindset is something that has become
+
+03:25.159 --> 03:26.439
+increasingly common.
+
+03:26.439 --> 03:29.960
+So these are all sort of consistent with the 2025 approaches.
+
+03:29.960 --> 03:34.919
+Okay, now onto the 2026 mindset starting with YOLO.
+
+03:34.919 --> 03:38.120
+YOLO, of course, has been around for a while.
+
+03:38.120 --> 03:42.840
+Most of 2025, it's not a new thing, but I would argue that it's only recently that people
+
+03:42.840 --> 03:44.979
+are actually using this beyond
+
+03:44.979 --> 03:46.919
+just for hobby projects.
+
+03:46.919 --> 03:48.479
+People are now using this for real.
+
+03:48.479 --> 03:52.080
+That's why I'm putting it in the 2026 mindset category.
+
+03:52.080 --> 03:55.180
+YOLO, of course, is when you say, "You know what?
+
+03:55.180 --> 03:58.039
+I don't need to approve anything."
+
+03:58.039 --> 04:01.240
+The coding agent can do whatever it wants.
+
+04:01.240 --> 04:02.680
+No permissions needed.
+
+04:02.680 --> 04:04.719
+So it's like, "Trust but verify.
+
+04:04.719 --> 04:06.919
+Take it to a whole new level. You could just set
+
+04:06.919 --> 04:11.919
+this thing going and go off and have dinner and come back later and see what it did. It's
+
+04:11.919 --> 04:16.959
+never going to stop and ask, do you want to do this or not? That is the idea behind Yolo,
+
+04:16.959 --> 04:19.360
+a whole different level of trust.
+
+04:19.360 --> 04:25.399
+And next up are things called Ralph Loops. Ralph Loops were invented by the Australian
+
+04:25.399 --> 04:28.399
+developer, Luminary, Jeffrey Huntley, and it's named after the Australian developer, Luminary, Geoffrey Huntley,
+
+04:28.399 --> 04:32.100
+and it's named after the Simpsons character, Ralph Wigam.
+
+04:32.100 --> 04:34.740
+And then so the full name is Ralph Wigam-loops.
+
+04:34.740 --> 04:37.279
+And he's recorded in Simpsons,
+
+04:37.279 --> 04:40.759
+this is like a sort of naive, optimistic character,
+
+04:40.759 --> 04:43.879
+and that is true to this design pattern.
+
+04:43.879 --> 04:44.920
+And here's the idea.
+
+04:44.920 --> 04:49.300
+So you know that already an agent is something that calls
+
+04:49.300 --> 04:52.240
+LLM in a loop to achieve a goal and it calls
+
+04:52.240 --> 04:55.839
+it multiple times until it thinks it's used its tools enough and it gives some sort of
+
+04:55.839 --> 05:01.279
+an output. Well the idea of Ralph Loops is saying, well hang on a minute, can we put
+
+05:01.279 --> 05:06.199
+this entire process with this little loop to achieve an output? Wrap that in another
+
+05:06.199 --> 05:12.879
+bigger loop. We will call this agent, we'll have it do its thing, use its tools, make some output.
+
+05:12.879 --> 05:16.300
+And then we'll do a test to say, has this done enough?
+
+05:16.300 --> 05:19.040
+Is this gone as far as it can go?
+
+05:19.040 --> 05:21.120
+Is this as good as it can be?
+
+05:21.120 --> 05:28.199
+And if not, make some feedback, think about what the gaps are, add all of that to the objectives,
+
+05:28.199 --> 05:32.360
+and then just call the whole thing again, and have it go off again and do its loop and
+
+05:32.360 --> 05:34.220
+come back, and then get some feedback and just simply go off again and do its loop and come back and then get some
+
+05:34.220 --> 05:40.379
+feedback and just simply call it again and just keep going. Keep going up to
+
+05:40.379 --> 05:46.560
+some large number of times like 10 full times of doing this inner loop.
+
+05:46.560 --> 05:53.879
+10 big loops of lots of little loops. That is a Ralph Wigam loop and that idea
+
+05:53.879 --> 05:57.680
+so I said with YOLO that you could leave something running over dinner
+
+05:57.680 --> 06:01.920
+with Ralph Loops, you could leave something running overnight and come back the next day
+
+06:01.920 --> 06:10.240
+and it's just done tons. That's the idea of Ralph Loops and that is another whole new level of trust.
+
+06:10.240 --> 06:20.519
+And to make this real for you, this of course is what I did with the second example yesterday with the much more impressive first person shooter game.
+
+06:20.519 --> 06:23.720
+It was just the same, the same prompt as before,
+
+06:23.720 --> 06:26.379
+but I put it in one of these Ralph Loops,
+
+06:26.379 --> 06:29.560
+and I just left it going, and I just chugged away,
+
+06:29.560 --> 06:32.879
+and I came back a lot later, and that's what I had,
+
+06:32.879 --> 06:35.040
+and it was what we call one shot,
+
+06:35.040 --> 06:39.240
+and I didn't keep coming back and giving it more feedback
+
+06:39.240 --> 06:41.139
+and saying I'd like better graphics. I'd like this
+
+06:41.139 --> 06:41.699
+I'd like this
+
+06:41.699 --> 06:48.240
+I just left it doing its own thing and it was an L M that decided to come up with the feedback and to run it again
+
+06:48.240 --> 06:54.079
+And it kept going ten times and that was the output and so you know that that's what it does
+
+06:54.079 --> 06:55.680
+And when I say Ralph Loops here
+
+06:55.680 --> 07:07.600
+It's a bit of a point in time. There's a lot of hype about these right now, and I really mean this as an overall category. It's Ralph Loops and things like that. Ways to have a much longer running task. Not
+
+07:07.600 --> 07:12.120
+something, a YOLO is perhaps something that runs for an hour. A Ralph Loops is
+
+07:12.120 --> 07:17.199
+about bigger ways to run this kind of agentic coding in a way that's not
+
+07:17.199 --> 07:21.879
+measured in minutes but it's measured in multiple hours. It's perhaps something
+
+07:21.879 --> 07:26.459
+that runs overnight. It's a long running process to run something
+
+07:26.459 --> 07:31.620
+completely trusted in a way that you will come back later and see what it's made with
+
+07:31.620 --> 07:34.160
+its own internal feedback mechanism.
+
+07:34.160 --> 07:36.019
+That's the bigger concept here.
+
+07:36.019 --> 07:42.639
+And that leads to the sixth approach, which is then about multi-agents.
+
+07:42.639 --> 07:45.519
+This is about, it's sort of an extension of Ralph Loops.
+
+07:45.519 --> 07:47.040
+In Ralph Loops, there is another
+
+07:47.040 --> 07:52.800
+LLM that's doing some of the feedback potentially. But this is about where you have many different
+
+07:52.800 --> 07:58.240
+agents that are working with different roles, perhaps there are testing agents, feedback agents.
+
+07:58.240 --> 08:02.160
+There are agents organized into different categories and there are manager agents as we discussed
+
+08:02.160 --> 08:09.759
+yesterday. It's in some kind of hierarchy. And these are sometimes kind of swarm if you're spawning lots and lots of agents
+
+08:09.759 --> 08:15.360
+and you talk about orchestration if you are doing the kinds of setups that again that we
+
+08:15.360 --> 08:22.240
+discussed yesterday with the eighth stage. But that kind of workflow, that is really the ultimate,
+
+08:22.959 --> 08:33.039
+that is what people at the forefront of this are doing now in 2026. So this is how I've seen the workflows evolve and of course this is pretty
+
+08:33.039 --> 08:39.279
+similar to Steve Yaggy's different stages of these coding agents that we talked about yesterday.
+
+08:40.080 --> 08:47.759
+And I would say that the question that I'm sure is on your mind is which approach is right and
+
+08:47.759 --> 08:57.000
+you know the classic answer to these things is that it's not like there's one approach that's right, it's that different approaches are right for different tasks.
+
+08:57.000 --> 09:00.039
+And I would divide it into two categories.
+
+09:00.039 --> 09:05.720
+If you have things that are mission critical, where you're working on enterprise software
+
+09:05.720 --> 09:10.799
+on or on like a commercial SAS platform, or you're working with a large code base, or
+
+09:10.799 --> 09:15.240
+you're working with highly innovative code, like you're trying to generate something
+
+09:15.240 --> 09:18.039
+that is going to maybe use MCP servers
+
+09:18.039 --> 09:18.879
+or something like that.
+
+09:18.879 --> 09:21.879
+You're at the forefront of what you're trying to build.
+
+09:21.879 --> 09:24.240
+Then to me, that lends itself
+
+09:24.240 --> 09:27.000
+to those first three approaches.
+
+09:27.000 --> 09:29.200
+You're somewhere on that curve.
+
+09:29.200 --> 09:32.879
+And so that would be one category.
+
+09:32.879 --> 09:38.720
+But by contrast, if you were building an MVP, like a prototype, a pilot, or you're
+
+09:38.720 --> 09:44.240
+building something completely new for the first time from scratch with an empty directory,
+
+09:44.240 --> 09:48.419
+and you have some risk appetite, you're willing to take some risk, and you're trying
+
+09:48.419 --> 09:52.720
+to generate a lot of stuff that's fairly boilerplate, like lots of HTML or a React
+
+09:52.720 --> 10:01.519
+app or something like that that's going to involve a lot of fairly cookie-cutter stuff or crud back-end. Any of those kinds of examples,
+
+10:01.519 --> 10:08.879
+it's going to lend itself nicely to the more 2026 mindset to these kinds of approaches.
+
+10:10.879 --> 10:17.200
+That's how I would think about it. It depends on the kind of project that you're working on,
+
+10:17.200 --> 10:20.259
+and it depends on your risk appetite and on
+
+10:20.259 --> 10:24.440
+whether it's it's sort of mission critical or not and I am you can probably
+
+10:24.440 --> 10:29.480
+imagine I'm going to say this but for me for most of what I work on I am more
+
+10:29.480 --> 10:34.639
+in that that top stretch I work on mission critical software typically I
+
+10:34.639 --> 10:38.159
+sometimes work on on small co-bases sometimes on large co-bases but it's
+
+10:38.159 --> 10:42.440
+often highly innovative stuff it's things like connecting with MCP servers,
+
+10:42.440 --> 10:45.519
+which typically these current LLMs are really bad at doing
+
+10:45.519 --> 10:48.639
+'cause it's too new and they don't have enough training data
+
+10:48.639 --> 10:49.899
+with those examples in it.
+
+10:49.899 --> 10:53.679
+So they tend to not use idiomatic code,
+
+10:53.679 --> 10:56.399
+which is obviously a big problem.
+
+10:56.399 --> 10:59.399
+And so I tend to be in that top category
+
+10:59.399 --> 11:03.519
+with most of what I do, but sometimes I am in the lower
+
+11:03.519 --> 11:04.000
+category and so sometimes, but sometimes I am in the lower category
+
+11:04.000 --> 11:06.720
+and so sometimes, particularly if I'm building
+
+11:06.720 --> 11:08.919
+a pilot or something, I'm building like a website
+
+11:08.919 --> 11:11.919
+to do something that could easily be cranked out,
+
+11:11.919 --> 11:14.240
+then I will use that second category.
+
+11:14.240 --> 11:17.279
+And in particular, when we built our game yesterday,
+
+11:17.279 --> 11:20.759
+we used, I guess, it was pretty much YOLO to start with.
+
+11:20.759 --> 11:22.960
+And then I did use Ralph Loops
+
+11:22.960 --> 11:24.279
+for the second version of it.
+
+11:24.279 --> 11:26.960
+So I will sometimes be in that second
+
+11:26.960 --> 11:32.960
+second strip, but most of my time is spent in the top strip. We will of course cover all of this
+
+11:32.960 --> 11:37.840
+over the course of the next few weeks, but yeah, there's certainly going to be a leaning towards
+
+11:37.840 --> 11:52.299
+the more mission critical, large code base, real enterprise development patterns, how to use this in anger with a good nod towards the more 2026 mindset kinds of techniques.
+
+11:52.299 --> 11:58.080
+But the one thing I want to stress beyond all that else is, and this is particular,
+
+11:58.080 --> 12:03.620
+I know that there are people here from all of the spectrum, from a senior engineer to
+
+12:03.620 --> 12:06.580
+a junior engineer or someone just starting out.
+
+12:06.580 --> 12:11.840
+And this is particularly for people who are more towards the beginning of their technology
+
+12:11.840 --> 12:19.799
+career, is that your job in working in this field is to deliver code that's proven to
+
+12:19.799 --> 12:24.559
+work and it's no good to blame the LLM.
+
+12:24.559 --> 12:28.480
+By all means you should use LLM's to help you for sure.
+
+12:28.480 --> 12:33.299
+It allows us to do a lot more, but it's still ultimately of course your
+
+12:33.299 --> 12:38.480
+responsibility to deliver quality code that works and saying well the LLM wrote
+
+12:38.480 --> 12:44.000
+that. That is no excuse. The LLM wrote it, but it's your job to check its work,
+
+12:44.000 --> 12:50.080
+to validate it and to pick the right stage, the right approach which meets
+
+12:50.080 --> 12:55.039
+the task at hand and which is appropriate for what job that you are doing.
+
+12:55.039 --> 13:00.679
+So ultimately it is super important that we all take accountability for the work that
+
+13:00.679 --> 13:04.679
+we deliver, whether or not we use LLMs to help us get there.
+

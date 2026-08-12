@@ -1,0 +1,521 @@
+WEBVTT
+
+00:00.000 --> 00:05.759
+And welcome back to Atlassian Jira, where I am pleased to see that issue PL2 has been
+
+00:05.759 --> 00:12.160
+moved to the Done column and has been ruled out as done. Amazing. And obviously I didn't do that.
+
+00:12.720 --> 00:17.519
+Okay, let's also, let's get rid of this card because we don't need this one anymore. That
+
+00:17.519 --> 00:25.120
+was only our delete to get rid of that simple website one. Off it goes. Let's create a new
+
+00:26.859 --> 00:31.859
+website one off it goes, let's create a new card here. And this is going to be prototype of NDA creator,
+
+00:35.880 --> 00:37.979
+of mutual NDA creator.
+
+00:39.539 --> 00:41.219
+And that's what it's gonna be called.
+
+00:41.219 --> 00:43.259
+Let's create that, let's come into it,
+
+00:43.259 --> 00:46.539
+look at the details, we are going to now approach this
+
+00:46.539 --> 00:49.600
+as if it's a real business requirement, something we want to do,
+
+00:49.759 --> 00:54.600
+maybe this has been entered in by a product team or by a business sponsor, not by a tech person.
+
+00:54.600 --> 00:59.759
+And that's something that we're just going to unleash on Cloud Code using proper feature development.
+
+01:00.479 --> 01:02.600
+Okay, so here is the description of the task.
+
+01:02.600 --> 01:07.000
+It is a web application to create a mutual NDA document for a user.
+
+01:07.000 --> 01:09.599
+The user enters some key information in a form.
+
+01:09.599 --> 01:10.640
+The website then displays the mutual NDA enters some key information and a form. The website then
+
+01:10.640 --> 01:15.920
+displays the mutual NDA with the key information filled in. The user can download the completed
+
+01:15.920 --> 01:21.920
+document locally. I'm intentionally being a bit loose about it. As you might hear from
+
+01:21.920 --> 01:25.599
+a customer, I'm not saying what format it gets downloaded. I'm going to leave all this
+
+01:25.599 --> 01:33.599
+kind of detail up to cloud code. This is the Jira issued called prototype of mutual NDA creator.
+
+01:33.599 --> 01:38.879
+I'm going to save that. It's presumably going to be PL3. It certainly is.
+
+01:38.879 --> 01:45.760
+Back we go. Here is PL3. It is time for us to unleash the might of Claude Code.
+
+01:45.760 --> 01:50.799
+Now, I started Claude again. I stopped it and started it, so it's nice and clean and fresh.
+
+01:50.799 --> 01:55.760
+Reduce/context. We'll see that it's nice and clean. I am just going to go
+
+01:55.760 --> 02:01.280
+and re-authenticate one more time with that lesson. You end up having to just do this
+
+02:01.280 --> 02:08.080
+a lot with every new big task like this. Just come in and approve and come down and accept.
+
+02:08.080 --> 02:17.000
+And then we know we're in great shape from that point of view. Okay. And now I'm going to go back into Cloud Code.
+
+02:18.319 --> 02:21.919
+If you remember, we have this plugin feature dev,
+
+02:21.919 --> 02:24.400
+colon feature dev, and we're not going to need to say
+
+02:24.400 --> 02:26.280
+use feature dev or something,
+
+02:26.280 --> 02:30.039
+with this we can actually evoke the plugin directly
+
+02:30.039 --> 02:32.199
+using this syntax right here,
+
+02:32.199 --> 02:33.840
+and that's what we're going to do right now.
+
+02:33.840 --> 02:34.919
+And so check this out,
+
+02:34.919 --> 02:37.840
+I'm going to say feature dev, colon feature dev,
+
+02:37.840 --> 02:40.780
+please implement JRA issue PL3
+
+02:40.780 --> 02:43.919
+with a next JS application in a directory called frontend
+
+02:43.919 --> 02:46.539
+then raise a PR when done.
+
+02:46.539 --> 02:47.360
+That's it.
+
+02:47.360 --> 02:49.199
+That's bringing everything together.
+
+02:49.199 --> 02:52.300
+We are using an MCP server for the JIRA issue.
+
+02:52.300 --> 02:56.439
+We're using a plug-in to guide the entire process
+
+02:56.439 --> 02:58.560
+using the seven step process.
+
+02:58.560 --> 03:01.400
+And we're using an Mcp server, then to raise a
+
+03:01.400 --> 03:03.560
+PR at the end of it.
+
+03:03.560 --> 03:09.639
+Jira to the dev process to GitHub, and let's see what Cloud makes of it.
+
+03:09.639 --> 03:10.599
+We'll let it go.
+
+03:10.599 --> 03:17.240
+We are unleashing unleashing the fury of Cloud Code on this big challenge.
+
+03:17.240 --> 03:20.120
+So it's off, it's doing its thing.
+
+03:20.120 --> 03:24.080
+I'm going to let it work on this. I will see you in a few minutes
+
+03:24.080 --> 03:30.560
+when hopefully we are running. Absolutely amazing. So, Claude is following its command.
+
+03:30.560 --> 03:35.360
+It looked at the jira description, it understood what it had to do, it looked through the repo,
+
+03:35.360 --> 03:40.479
+and now it's stopped to come back to me with clarifying questions, which is how this particular
+
+03:40.479 --> 03:44.780
+workflow works. Here they are. First question, what download format
+
+03:44.780 --> 03:47.060
+should the completed NDA be available in?
+
+03:47.060 --> 03:49.219
+Remember, this was something I was kind of fuzzy on
+
+03:49.219 --> 03:50.939
+intentionally in the geo issue.
+
+03:50.939 --> 03:52.819
+It recommends PDF.
+
+03:52.819 --> 03:53.979
+That sounds great to me.
+
+03:53.979 --> 03:56.500
+And to select, you can see it in the view there
+
+03:56.500 --> 03:57.860
+that it's got this question for me.
+
+03:57.860 --> 03:59.020
+I'm pressing this.
+
+03:59.020 --> 04:00.740
+Should the app have a single step wizard
+
+04:00.740 --> 04:03.819
+or a single page form, a single page recommended?
+
+04:03.819 --> 04:05.060
+Let's go with that.
+
+04:05.060 --> 04:06.860
+How should the NDA be preview be
+
+04:06.860 --> 04:12.500
+displayed below the form side by side? I think I prefer side by side. I'm going
+
+04:12.500 --> 04:17.500
+with side by side. Should this be a simple prototype or include styling
+
+04:17.500 --> 04:21.779
+polish? I'm going to say styling polish. It would normally be functional
+
+04:21.779 --> 04:25.660
+prototype but I wanted to do better than that. Polish design, let's go with that.
+
+04:25.660 --> 04:30.639
+Okay, review your answers. That all sounds good. We're going to do
+
+04:30.639 --> 04:37.839
+submit answers. Off it goes. That was part of the clarifying step in this seven stage process.
+
+04:37.839 --> 04:44.000
+And it's on. And now we will let it do its thing. I'm going to, it's going to try and create
+
+04:44.000 --> 04:51.600
+next app. And I'm going to go ahead with that. Just checking yes, it is indeed doing it in front end. So it gets my approval and I will
+
+04:51.600 --> 04:57.519
+see you back here in another minute of me being very excited. Well it's pretty amazing. It did
+
+04:57.519 --> 05:02.560
+everything. It went through, created everything, set it up. It's made tons and tons of files in
+
+05:02.560 --> 05:12.920
+front end. I saw it doing everything and then created a PR. It used the GitHub tools then push it. Everything happened end to end.
+
+05:12.920 --> 05:16.120
+If I'm going to criticize, ah,
+
+05:16.120 --> 05:18.959
+it might be that I don't see that it did any testing,
+
+05:18.959 --> 05:20.399
+which does seem like,
+
+05:20.399 --> 05:21.720
+it's not particularly a thorough process.
+
+05:21.720 --> 05:23.680
+Maybe I should have mentioned that in my request.
+
+05:23.680 --> 05:24.519
+I'm not sure.
+
+05:24.519 --> 05:26.000
+I haven't seen any testing,
+
+05:26.000 --> 05:28.160
+but we should just give it a try as it is
+
+05:28.160 --> 05:29.199
+and see what happens.
+
+05:29.199 --> 05:30.600
+And then we might need to tell it to go
+
+05:30.600 --> 05:32.000
+and test and fix things.
+
+05:32.000 --> 05:32.839
+Let's see.
+
+05:32.839 --> 05:33.680
+Okay, here we go.
+
+05:33.680 --> 05:34.939
+We'll get a new terminal.
+
+05:34.939 --> 05:37.459
+We will come in and do a CD front end
+
+05:37.459 --> 05:40.500
+and we'll do an MPM run dev.
+
+05:40.500 --> 05:41.579
+And it comes up.
+
+05:41.579 --> 05:42.420
+Okay.
+
+05:42.420 --> 05:45.939
+And now we will launch this and see, okay.
+
+05:45.939 --> 05:46.839
+Okay.
+
+05:46.839 --> 05:50.279
+We have ourselves a mutual NDA creator
+
+05:50.279 --> 05:54.259
+with two screens and we download PDF with lots of stuff.
+
+05:54.259 --> 05:57.759
+There's plenty of things here for me to fill in which makes total sense.
+
+05:57.759 --> 06:02.399
+Let me go through and do that right now. Okay, and I just filled all of that in and it's kind of
+
+06:02.399 --> 06:06.879
+cool that as I type it out, like if I look at this governing law in New York, you see it says
+
+06:06.879 --> 06:11.600
+governing law in New York down there. If I delete that, you'll see that it's changing dynamically
+
+06:11.600 --> 06:15.759
+as I do it, which is, you know, perfectly standard for these kinds of apps, but it's really nice
+
+06:15.759 --> 06:18.240
+that it's just done it well like that first time.
+
+06:18.240 --> 06:22.800
+Okay, so I have now filled this in over here on the right. You can see the preview. It's not like
+
+06:22.800 --> 06:28.399
+I have to press to generate button or anything. It's just live updated and it looks like it is
+
+06:28.399 --> 06:33.600
+a good and look that's put this put this on here too. That's really nice. It looks like it is a
+
+06:33.600 --> 06:41.759
+really good version of it and now we want to press the download PDF button and see if it works. Here we go, press download PDF.
+
+06:41.759 --> 06:43.879
+It says, "Generating PDF."
+
+06:43.879 --> 06:45.600
+This company is called Banana's Inc,
+
+06:45.600 --> 06:47.800
+is what I call the company.
+
+06:47.800 --> 06:50.639
+With Bango's Inc, is the people that are signing.
+
+06:50.639 --> 06:53.600
+My company is Banana's Inc, that company is Bango's.
+
+06:53.600 --> 06:56.199
+Let's take a look to see how the PDF looks.
+
+06:56.199 --> 06:58.639
+Here we go, click there, up it comes.
+
+06:59.480 --> 07:00.680
+Close that.
+
+07:00.680 --> 07:04.879
+And it looks, look at that, it looks look at that it looks absolutely perfect that's a nice
+
+07:04.879 --> 07:11.279
+cover sheet and this is the the right kind of structure and let's just check that it's
+
+07:11.279 --> 07:14.680
+filled things in let's find something here.
+
+07:14.680 --> 07:26.639
+This is everything that's changed just on the cover sheet the cover sheet of course that's absolutely perfect. And yeah, I it looks to me like it's
+
+07:26.639 --> 07:35.199
+got everything perfectly right. And it's got the common CC by 4.0 thing at the end of it. It seems
+
+07:35.199 --> 07:40.240
+to be absolutely excellent. This is a PDF that's been downloaded based on the markdown templates,
+
+07:40.240 --> 07:48.560
+based on our next JS app. I don't think it tested it. Maybe it did and I didn't see that because I do think one of the steps was a quality review.
+
+07:48.560 --> 07:51.439
+So at the very least it did a quality review
+
+07:51.439 --> 07:53.519
+and maybe it tested it too,
+
+07:53.519 --> 07:56.279
+but it certainly seems to have worked great first time.
+
+07:56.279 --> 07:59.439
+And I can't tell you how remarkable it is
+
+07:59.439 --> 08:02.720
+that we could have something like this appear zero sharp
+
+08:02.720 --> 08:05.199
+just with an instruction, with a jira ticket,
+
+08:05.199 --> 08:07.120
+a jira ticket for building this,
+
+08:07.120 --> 08:08.819
+a jira ticket to populate the data,
+
+08:08.819 --> 08:10.000
+which was impressive enough.
+
+08:10.000 --> 08:12.680
+And now a juriticket to build all of this,
+
+08:12.680 --> 08:16.079
+we used anthropics seven step process
+
+08:16.079 --> 08:18.339
+that means that it asked us the questions
+
+08:18.339 --> 08:21.199
+and it clarified and it went through a rigorous process.
+
+08:21.199 --> 08:25.300
+And this is the result and it is super impressive.
+
+08:25.300 --> 08:27.560
+And we can of course, we can ask Claude itself.
+
+08:27.560 --> 08:29.860
+Let's first, we'll just take a look at the context,
+
+08:29.860 --> 08:31.180
+always worth looking at the context
+
+08:31.180 --> 08:32.779
+to see what state we're in.
+
+08:32.779 --> 08:34.620
+Scroll up and have a look.
+
+08:34.620 --> 08:37.259
+Okay, it's filled up about a third,
+
+08:37.259 --> 08:38.899
+almost a half of the context.
+
+08:38.899 --> 08:41.820
+We can say it's working great.
+
+08:42.980 --> 08:46.919
+Based on the process, you followed.
+
+08:48.179 --> 08:58.159
+What kind of quality review or testing have you already taken care of?
+
+08:59.840 --> 09:03.279
+Let's see if it can be introspective and tell us about its process.
+
+09:03.360 --> 09:06.879
+When it farms things off to sub-agents, which we'll do more of next week,
+
+09:07.600 --> 09:11.440
+one of the things that the good part is that it keeps it out of context.
+
+09:11.600 --> 09:13.320
+Out of the context window, all of that happens.
+
+09:13.440 --> 09:16.240
+A bad part is of the context window, all of that happens. A bad part is the overall agent,
+
+09:16.240 --> 09:17.320
+the thing that we talked to,
+
+09:17.320 --> 09:20.440
+has less of an understanding of everything that happened.
+
+09:20.440 --> 09:21.799
+Good question, who was actually happening?
+
+09:21.799 --> 09:24.240
+Build verification, so it confirmed that.
+
+09:24.240 --> 09:27.019
+No automated testing, no manual testing,
+
+09:27.019 --> 09:29.159
+no code reviewer agents,
+
+09:29.159 --> 09:32.179
+phase six from the feature dev workflow was skipped,
+
+09:32.179 --> 09:34.120
+so it is able to at least recognize.
+
+09:34.120 --> 09:36.720
+I thought I didn't see it doing anything like that.
+
+09:36.720 --> 09:41.919
+No PDF download testing. The bill passing gives some, but it doesn't validate. Would you like me
+
+09:41.919 --> 09:46.639
+too? So, you know, we know that it works because we've done that, but we might as well say,
+
+09:49.200 --> 09:57.919
+let's say yes to all three. Please add extensive tests,
+
+09:58.820 --> 09:59.600
+Please add extensive tests,
+
+10:05.860 --> 10:13.700
+automated tests, and manual tests, and have the code reviewer agents do the review.
+
+10:13.700 --> 10:16.799
+It's interesting that only because we asked that question,
+
+10:16.799 --> 10:19.120
+did we find that it skipped step six,
+
+10:19.120 --> 10:20.799
+and it just shows you that it's not always
+
+10:20.799 --> 10:25.759
+super reliable with this stuff we will oh I've already got mpm run dev running I wonder if that's
+
+10:25.759 --> 10:30.799
+going to cause a problem maybe I should just stop this like that I could have completely confused
+
+10:30.799 --> 0:00.000
+it now we'll we'll find out what happens so I mean I let it do its thing let it do its code review and everything and I will see you in a minute!
+

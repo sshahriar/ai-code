@@ -1,0 +1,539 @@
+WEBVTT
+
+00:00.000 --> 00:08.480
+Okay, so here we are in a new chat. I'm going to start by saying please read agents.md then read
+
+00:09.759 --> 00:26.820
+the plan and let me know any questions before we start part eight. Okay, it's thinking about that. Okay.
+
+00:28.320 --> 00:31.160
+Right, so first of all, for the two plus two integration
+
+00:31.160 --> 00:32.679
+test, do you want it fully mocked?
+
+00:32.679 --> 00:34.320
+Or should it at the backend endpoint?
+
+00:34.320 --> 00:39.320
+Well, mocking, actually, actually, I want it to go all
+
+00:40.520 --> 00:44.399
+the way to open router.
+
+00:45.320 --> 00:48.039
+No mocking, let's check.
+
+00:48.039 --> 00:54.039
+We can get an answer from the model.
+
+00:54.039 --> 00:55.000
+That's important.
+
+00:55.000 --> 00:57.000
+I saw that before when we look at the plan.
+
+00:57.000 --> 00:59.000
+I remember thinking, I don't like the fact
+
+00:59.000 --> 01:00.000
+that it's mocking it there.
+
+01:00.000 --> 01:02.000
+So I'm super happy that it asked,
+
+01:02.000 --> 01:05.000
+should it be under API AI or API chat?
+
+01:05.000 --> 01:15.000
+API chat sounds great. Do you want the open routes of base URL configurable or hard coded?
+
+01:15.000 --> 01:20.000
+Hard coded is good for now.
+
+01:20.000 --> 01:32.560
+Please note these answers in plan.md and proceed with part 8.
+
+01:32.560 --> 01:34.200
+Exciting!
+
+01:34.200 --> 01:37.920
+And there's something comforting about knowing that we've got a completely fresh chat, so
+
+01:37.920 --> 01:41.879
+the context window is empty, but it's not completely empty because it's got the agents
+
+01:41.879 --> 01:45.239
+that empty and the plan that it's loading in there.
+
+01:45.239 --> 01:47.760
+And that means we're making really efficient use of the space.
+
+01:47.760 --> 01:52.719
+It's not cluttered with all of that stuff about worrying about drag and drop, which would
+
+01:52.719 --> 01:54.640
+have really filled up lots and lots of room and
+
+01:54.640 --> 01:58.359
+sure it would have been compressed and it would have been summarized but it would still have been
+
+01:58.359 --> 02:03.120
+hogging space. Now it feels like it's nice and efficient. We've got good good use of space.
+
+02:03.120 --> 02:09.080
+We're positioning our agent for success, Kodak's for success. And I will see you in a minute when
+
+02:09.080 --> 02:13.280
+it's done with part eight. Okay, and I just experienced the good and the bad of restarting the
+
+02:13.280 --> 02:21.680
+conversation. You may have had this experience too if you're following along with me exactly. It seemed faster and more accurate somehow. It feels almost like it sort of
+
+02:21.680 --> 02:27.840
+decluttered its brain to reset the conversation, but then it also got stuck trying to run tests
+
+02:27.840 --> 02:32.479
+because it forgot the right way to start the server and it took a while took five minutes of
+
+02:32.479 --> 02:39.759
+thrashing around to figure that out. So I've asked it to update its own plan.md to make sure that's clear for the future. And
+
+02:39.759 --> 02:45.599
+I've asked it to confirm the testers will run. OpenRooter is working. Part eight is done. So
+
+02:45.599 --> 03:07.719
+we'll keep our edits. We'll do a git status. And we will do time to go on to part 9. Please proceed with part 9. And off
+
+03:07.719 --> 03:13.520
+it goes. Let's come back in a second when that's done. Okay, and more progress. Apparently
+
+03:13.520 --> 03:19.639
+bar 9 is done too. And it had done some mocked tests and I had to prompt it to ask it to
+
+03:19.639 --> 03:23.280
+actually test against open rutor that it claims it is now done.
+
+03:23.280 --> 03:27.360
+And we won't know for sure until we've added part 10, which is the user interface for us to do
+
+03:27.360 --> 03:32.159
+that. And that's what's coming up next. It's a big moment for us. So I'm just going to again,
+
+03:32.159 --> 03:37.680
+do get, we're doing, we're being very careful about checkpointing at each point to get status.
+
+03:37.680 --> 03:43.840
+I'm just going to press the keep button here. I'm going to do get add dot. I'm going to do get,
+
+03:54.439 --> 04:01.280
+get add dot, I'm going to do get commit minus m plan a part nine is complete and then and then it's time for us to go ahead with with the part 10. Okay, please proceed with part
+
+04:01.280 --> 04:07.319
+10. Very exciting. I will see you in a second. Okay. All right, so we should be done
+
+04:07.319 --> 04:12.439
+Let's have a look. Do you think it's gonna work? Do you think it's gonna work? Let's find out. Let us go and
+
+04:13.159 --> 04:15.159
+run scripts
+
+04:15.560 --> 04:19.079
+Slash start - Mac for me and
+
+04:19.680 --> 04:24.319
+Something is starting. There's no errors that I can see so far. Let's go over here
+
+04:24.680 --> 04:31.000
+Let me go to localhost 8, Here we have our usual login screen. We'll come
+
+04:31.000 --> 04:38.040
+in like this. We're going to get the usual password error. Okay. We see a cambam board,
+
+04:38.040 --> 04:42.819
+but something is different. There's an AI assistant chat on the right. Let's just say
+
+04:42.819 --> 04:48.120
+hi there. Enter. See what happens. Hello. How can I help you with your board today? There's
+
+04:48.120 --> 04:51.040
+an AI at the other end of this. We have an AI
+
+04:51.040 --> 04:56.399
+assistant app. People pay big money for this stuff. All right, let's see what we're going to ask it.
+
+04:56.399 --> 05:05.839
+Oh, please, please summarize my project for me. Okay, so we're asking you to do that. Well,
+
+05:05.839 --> 05:12.560
+it's pretty fast, isn't it? Your project spans five columns, backlog, in progress, review and done.
+
+05:12.560 --> 05:15.439
+It seems to have that about right, doesn't it?
+
+05:15.439 --> 05:17.720
+Okay, I like it so far.
+
+05:17.720 --> 05:22.079
+All right, now I'm going to say, please move
+
+05:22.079 --> 05:27.079
+this thing here, the gather customer signals card
+
+05:30.399 --> 05:35.000
+from backlog to, let's go all the way over to done. We're gonna move this guy here all the way over to done.
+
+05:35.120 --> 05:38.120
+We're going to move this guy here all the way over to done.
+
+05:38.120 --> 05:39.319
+Let's see what happens.
+
+05:39.319 --> 05:40.639
+Bam, do you see that?
+
+05:40.639 --> 05:42.379
+It moved, it moved.
+
+05:42.379 --> 05:45.100
+Are the magic of AI.
+
+05:45.100 --> 05:46.180
+There we have it.
+
+05:46.180 --> 05:48.879
+We have a cam and board.
+
+05:48.879 --> 05:51.439
+This data is persisted to disk.
+
+05:51.439 --> 05:53.720
+It's got a database behind it.
+
+05:53.720 --> 05:55.279
+It's running in a Docker container
+
+05:55.279 --> 05:57.399
+with a front end and a backend. And it's got a database behind it. It's running in a Docker container with a front end and a back end.
+
+05:57.399 --> 06:00.699
+And it's got an AI assistant we can chat with
+
+06:00.699 --> 06:03.720
+to rearrange and organize our project.
+
+06:03.720 --> 06:05.040
+It is an app.
+
+06:05.040 --> 06:06.079
+And if you don't believe me,
+
+06:06.079 --> 06:07.079
+that of course you shouldn't,
+
+06:07.079 --> 06:10.319
+we should bring up a new tab altogether,
+
+06:10.319 --> 06:11.879
+go to a local host,
+
+06:11.879 --> 06:15.139
+come in, not as add as user and password,
+
+06:16.079 --> 06:18.000
+erd, Sign in.
+
+06:18.000 --> 06:19.000
+Here we go.
+
+06:19.000 --> 06:26.639
+And we're happy to see that Gather Customer Signals is still over here in the Dun column,
+
+06:26.639 --> 06:29.759
+proving that it has been persisted to disk.
+
+06:29.759 --> 06:30.759
+Beautiful.
+
+06:30.759 --> 06:33.360
+Now, the thing is, this is not the end.
+
+06:33.360 --> 06:35.160
+This is the beginning.
+
+06:35.160 --> 06:36.759
+You will have something different to this.
+
+06:36.759 --> 06:38.399
+Of course, it will look different.
+
+06:38.399 --> 06:43.959
+It will probably won't look different because you started with the same cam band studios B. But now this is a
+
+06:43.959 --> 06:48.480
+canvas on which you can build and you can keep working. It looks like we should try
+
+06:48.480 --> 06:53.040
+and do some work to resize these columns. We might want the chat to show when it's thinking,
+
+06:53.040 --> 06:57.560
+maybe stream back results. We might want to, we can add in different users. You can
+
+06:57.560 --> 07:04.120
+log in as different users. That it's all ready for that. You could have different camban boards adding on boards.
+
+07:04.120 --> 07:06.399
+You can see how just doing the same thing,
+
+07:06.399 --> 07:08.480
+cranking the handle and the way we've been doing.
+
+07:08.480 --> 07:11.680
+We've done a full pass with the minimal starting point.
+
+07:11.680 --> 07:14.480
+And now you can add and add and add.
+
+07:14.480 --> 07:16.920
+And I hope you see, I hope you get this sense,
+
+07:16.920 --> 07:18.560
+that this is the beginning of something
+
+07:18.560 --> 07:21.279
+that could be a complete full app.
+
+07:21.279 --> 07:24.560
+It has users, it has functionality, it has a database.
+
+07:24.560 --> 07:30.040
+This is something that could easily be turning into a product that people would pay for.
+
+07:30.040 --> 07:36.319
+It's a real useful commercial app we have here, some project management software with a
+
+07:36.319 --> 07:41.120
+cam and board with an AI assistant chat to work on your project with you.
+
+07:41.120 --> 07:48.339
+And this has been all to set you in motion for vibe coding, for building these kinds of apps. What
+
+07:48.339 --> 07:51.779
+we're going to be learning about in the upcoming weeks is taking this to the
+
+07:51.779 --> 07:56.180
+next level. If we look at the main results in here, the main piece of
+
+07:56.180 --> 08:01.500
+Python code is one module called main.py and I have to be honest with you, it's a
+
+08:01.500 --> 08:05.540
+bit of a mess and that's why it's good to take things step at a time because if I
+
+08:05.540 --> 08:08.800
+were going to keep going now I would stop and tell it this
+
+08:08.800 --> 08:14.560
+needs to be refactored. This definitely is something of a disaster here. It's an enormous
+
+08:14.560 --> 08:20.560
+great look at look at here. You can see the summary. It's really shoved everything in this one Python
+
+08:20.560 --> 08:25.120
+module which has many different concerns. It seems to me, I don't know why it's gone down
+
+08:25.120 --> 08:32.820
+this path, but it seems like it's a major gaff that needs to be fixed. What we would do typically is we would have another agent
+
+08:32.820 --> 08:34.879
+that's responsible for doing a code review,
+
+08:34.879 --> 08:36.919
+and it would definitely point this out.
+
+08:36.919 --> 08:38.759
+But otherwise, if I were taking this forward,
+
+08:38.759 --> 08:41.440
+the first thing I would do is get this restructured
+
+08:41.440 --> 08:44.639
+so that it's organized in a better way,
+
+08:44.639 --> 08:46.559
+along with fixing up some of these interface,
+
+08:46.559 --> 08:49.120
+adding in users, and then perhaps having
+
+08:49.120 --> 08:52.240
+a remote database like in super base.
+
+08:54.480 --> 08:54.679
+So all of those things can be done.
+
+08:56.759 --> 08:56.960
+And these are all things that you should do.
+
+08:59.759 --> 08:59.960
+That is the assignment for the end of week one.
+
+09:04.240 --> 09:04.440
+Take this now, take it further, add on, take it in the direction that you want.
+
+09:06.240 --> 09:06.440
+You don't need to add in users if you don't need to.
+
+09:11.320 --> 09:11.519
+You could ask it to add instructions for deploying this, deploy it to Versailles.
+
+09:16.039 --> 09:18.860
+Once you've got something in a container, it's so easy to deploy anywhere to AWS App Runner, to GCP Cloud Run, to wherever you want.
+
+09:18.860 --> 09:21.840
+It can give you instructions, step-by-step instructions,
+
+09:21.840 --> 09:24.279
+and it can even do the deployment itself if you want.
+
+09:24.279 --> 09:25.500
+So all of these things,
+
+09:25.500 --> 09:27.360
+you should take it in some direction,
+
+09:27.360 --> 09:30.000
+and then message me and tell me what you've done.
+
+09:30.000 --> 09:32.500
+I can't wait to hear how you've taken this
+
+09:32.500 --> 09:35.720
+and made it into a proper product
+
+09:35.720 --> 09:37.779
+that could even perhaps be monetized.
+
+09:37.779 --> 09:40.080
+And as you roll up your sleeves to do this assignment,
+
+09:40.080 --> 09:43.919
+let me leave you with an inspiring final tweet from Andre.
+
+09:43.919 --> 09:45.639
+This is actually, this was at the bottom
+
+09:45.639 --> 09:47.059
+of what I showed you before.
+
+09:47.059 --> 09:48.200
+I held this back.
+
+09:48.200 --> 09:51.159
+He ends by saying, where does this leave us?
+
+09:51.159 --> 09:55.600
+LLM agent capabilities like Claude and Codex especially.
+
+09:55.600 --> 09:57.159
+And he's referring to Codex the model,
+
+09:57.159 --> 09:59.919
+the one that we use today, not Codex the platform.
+
+09:59.919 --> 10:06.240
+So we were doing that today. They have crossed some kind of threshold of coherence around
+
+10:06.240 --> 10:11.840
+December of last year. We're causing a phase shift in software engineering. The intelligence
+
+10:11.840 --> 10:17.759
+part suddenly feels quite a bit ahead of all the rest of it. And so then he lists out the other
+
+10:17.759 --> 10:22.080
+stuff that we're going to be coming on to. So this is going to be a high energy year
+
+10:22.080 --> 10:25.200
+as the industry figures out how to bring together
+
+10:25.200 --> 10:28.320
+this new capability and factor it into
+
+10:28.320 --> 10:32.279
+all the sorts of integrations and workflows and processes.
+
+10:32.279 --> 10:34.919
+So very exciting times indeed,
+
+10:34.919 --> 10:38.279
+and I hope you are super inspired by seeing
+
+10:38.279 --> 10:41.720
+what Codex was able to do in GitHub Copilot.
+
+10:41.720 --> 10:43.679
+And now you are taking that yourself
+
+10:43.679 --> 10:44.840
+and taking it forwards.
+
+10:44.840 --> 10:47.120
+And with that, that is a wrap on week one.
+
+10:47.120 --> 10:48.480
+That completes day five.
+
+10:48.480 --> 10:51.039
+You have now vied coded for fun
+
+10:51.039 --> 10:52.840
+in that you built a first-person shooter.
+
+10:52.840 --> 10:55.879
+You built a personal website with a digital twin,
+
+10:55.879 --> 10:58.120
+and then you've just built the beginnings
+
+10:58.120 --> 11:01.080
+and MVP of what could be a real commercial product.
+
+11:01.080 --> 11:03.360
+Project management software with an AI assistant,
+
+11:03.360 --> 11:05.279
+a camben board, drag and drop.
+
+11:05.279 --> 11:09.440
+It's the whole works and you're taking it even further right now.
+
+11:09.440 --> 11:11.360
+So that is fantastic.
+
+11:11.360 --> 11:14.980
+Congratulations on making it to the end of week one.
+
+11:14.980 --> 11:15.980
+Week two is huge.
+
+11:15.980 --> 11:19.759
+We make the transition from vibe coding to vibe engineering.
+
+11:19.759 --> 11:23.720
+We're going to be using Claude code in anger and I love Claude code and I can't wait
+
+11:23.720 --> 11:24.720
+to show it to you.
+
+11:24.720 --> 11:27.039
+We're going to be coding in a CLI as it gets
+
+11:27.039 --> 11:31.440
+super professional and for people that already used it before I've got a treat in store for
+
+11:31.440 --> 11:37.679
+you as we're going to really roll up sleeves and get into it and I can't wait and with that
+
+11:37.679 --> 0:00.000
+that concludes week one you are 33% of the way through this course you are on the way to being an agentic engineer I will see you for week two.
+

@@ -1,0 +1,713 @@
+WEBVTT
+
+00:00.000 --> 00:04.759
+Okay, I have gone back to the instant project in cursor.
+
+00:04.759 --> 00:08.679
+So you can go to file, new window, find your way to instant.
+
+00:08.679 --> 00:11.640
+I'm back over here in instant and I've closed down
+
+00:11.640 --> 00:13.119
+camban. That's gone.
+
+00:13.119 --> 00:15.640
+I've exited from the camban project.
+
+00:15.640 --> 00:17.359
+For me, I press the red button.
+
+00:17.359 --> 00:19.160
+You can press the x on Windows.
+
+00:19.440 --> 00:20.559
+And here I am in instant.
+
+00:20.559 --> 00:22.879
+I'm currently in the instant directory.
+
+00:22.879 --> 00:28.640
+If I PWD, you can see that I'm in userz projects instant. I'm going to go up one
+
+00:28.640 --> 00:35.439
+cd dot dot, cd space dot dot, and now in just my projects directory, users add projects.
+
+00:36.079 --> 00:41.759
+And now I'm going to do something a bit sad. I'm going to change, I'm going to rename our
+
+00:41.759 --> 00:50.240
+camban directory. The way you rename is you type mv, which is short for move. I'm going to change canban, you do the name
+
+00:50.240 --> 00:59.439
+the the previous name canban, and I'm going to call that instead cursor underscore canban,
+
+00:59.439 --> 01:03.799
+which means that that whole directory has been renamed to something else canban no
+
+01:03.799 --> 01:10.560
+longer exists. If I try and do CD canban, I'll get an error. Look, no such file directory, camban.
+
+01:10.560 --> 01:11.700
+Okay, it's gone.
+
+01:11.700 --> 01:13.480
+And now, and now of course,
+
+01:13.480 --> 01:16.400
+I'm going to, to within the projects directory,
+
+01:16.400 --> 01:21.560
+I'm gonna do a git clone and paste in the same old URL again.
+
+01:21.560 --> 01:24.560
+And I've just brought in a new camban directory
+
+01:24.560 --> 01:27.040
+with that single file, agents.md.
+
+01:27.040 --> 01:28.799
+So now we have a cursor camban,
+
+01:28.799 --> 01:30.560
+which has that whole thing we just built.
+
+01:30.560 --> 01:33.680
+And now we have a fresh cambam directory
+
+01:33.680 --> 01:41.280
+which is just got the one file in it. It's time now for us to look at GitHub co-pilot.
+
+01:41.280 --> 01:48.640
+So we are now going to use GitHub co-pilot which is a fiendishly popular AI agent for coding
+
+01:48.640 --> 01:54.480
+and I'm looking here at GitHub's main landing page and GitHub co-pilot is right up there on the platform.
+
+01:54.480 --> 01:59.519
+And you can see if you go to plans and pricing that there is a free tier,
+
+01:59.519 --> 02:04.280
+which gets you a certain number of requests a month before you have to start paying.
+
+02:04.280 --> 02:08.439
+And so for sure you can do this without paying a cent.
+
+02:08.439 --> 02:13.479
+And so there are various different ways that you can use co-pilot.
+
+02:13.479 --> 02:16.800
+You can use it in a command line interface, which we're not doing this
+
+02:16.800 --> 02:22.639
+week. You can use it through through a sort of web front end as well. But the most popular way
+
+02:22.639 --> 02:30.960
+and the way that we will be doing it is using VS code, the open source code editor IDE that is
+
+02:30.960 --> 02:40.879
+so very popular. And it's going to look very familiar because as it happens, cursor is itself a fork of this same editor, the same ID,
+
+02:40.879 --> 02:44.120
+it's also a VS Code clone.
+
+02:44.120 --> 02:46.759
+And so it's gonna look very, very similar.
+
+02:46.759 --> 02:48.159
+And that's what we're gonna do.
+
+02:48.159 --> 02:49.960
+And that means that the first thing we need to do
+
+02:49.960 --> 02:51.759
+is install VS Code.
+
+02:51.759 --> 02:53.439
+So you may already have VS Code,
+
+02:53.439 --> 02:55.800
+but if not, there's the right here conveniently.
+
+02:55.800 --> 02:57.879
+There is a link, get it now.
+
+02:57.879 --> 03:01.759
+Over here, this is where you can download it. This of course is defaulting to
+
+03:01.759 --> 03:05.840
+Mac OS because it knows I'm on that. There's also a download button where you can download it for
+
+03:05.840 --> 03:11.360
+your platform of choice, whatever you are on. And you would then download VS Code. If you already
+
+03:11.360 --> 03:16.240
+have VS Code, you could do the check for updates to make sure you got the latest version of it.
+
+03:16.240 --> 03:22.539
+And once you've installed it and opened it and probably answered a few questions, but they should be very standard stuff.
+
+03:22.539 --> 03:25.439
+I will see you over in VS Code.
+
+03:25.439 --> 03:28.460
+Okay, and when you finally got VS Code running,
+
+03:28.460 --> 03:30.259
+you may see a welcome screen like this.
+
+03:30.259 --> 03:32.740
+You may see a different screen, it doesn't really matter,
+
+03:32.740 --> 03:34.419
+but it looks a bit different to cursor,
+
+03:34.419 --> 03:36.780
+but there's some familiarity over here.
+
+03:36.780 --> 03:37.939
+And the first thing we're going to do
+
+03:37.939 --> 03:40.060
+is install an extension.
+
+03:40.060 --> 03:42.460
+And you do that by going to the View menu
+
+03:42.460 --> 03:44.500
+and selecting extensions.
+
+03:44.500 --> 03:49.300
+It's also command shift X on a Mac or control shift X
+
+03:49.300 --> 03:50.379
+on a PC.
+
+03:50.379 --> 03:51.780
+I'll press that now.
+
+03:51.780 --> 03:55.360
+Up comes the extensions marketplace here.
+
+03:55.360 --> 03:59.020
+And you're going to type out GitHub co-pilots in there.
+
+03:59.020 --> 04:00.419
+You shouldn't need to type it all out.
+
+04:00.419 --> 04:02.439
+Up will come something and there should be a blue
+
+04:02.439 --> 04:03.500
+install button.
+
+04:03.500 --> 04:04.900
+I don't have a blue install button.
+
+04:04.900 --> 04:05.740
+Why is that?
+
+04:05.740 --> 04:06.319
+Because of course I've already
+
+04:06.319 --> 04:10.479
+installed it. If I click on it to make sure I've got the right one, you can check that it's from
+
+04:10.479 --> 04:18.079
+the verified github.com and I have 69 million downloads and you probably have more and and here
+
+04:18.079 --> 04:23.120
+we have it. This is what it looks like. You should press the blue install button in either place and
+
+04:23.120 --> 04:31.040
+that will then put github co-pilot into your vs code. Okay, next up you go to file new window.
+
+04:31.040 --> 04:32.839
+Up comes this screen.
+
+04:32.839 --> 04:34.740
+It looks a little bit different.
+
+04:34.740 --> 04:39.180
+You go to open.dot.dot, go and find your projects folder,
+
+04:39.180 --> 04:41.079
+find Kanban again.
+
+04:41.079 --> 04:44.600
+There it is, go into Kanban, press open,
+
+04:44.600 --> 04:47.480
+and now I'm going to make this a bit bigger with Kanban Plus.
+
+04:47.480 --> 04:50.040
+And I'm going to resize this to fit the whole screen.
+
+04:50.240 --> 04:54.399
+So we are looking here at our can ban.
+
+04:54.600 --> 04:56.879
+You can see the word can ban is in block capitals here.
+
+04:57.079 --> 04:58.120
+It's at the title here.
+
+04:58.319 --> 05:02.079
+We know we're looking at the can ban project in VS code.
+
+05:02.279 --> 05:03.439
+So far, so good.
+
+05:03.639 --> 05:08.040
+OK, next up, it's important to sign in to GitHub if you're not already.
+
+05:08.240 --> 05:14.639
+And the way that you do that is down here on the bottom left, click on the avatar and you can see that I'm signed into my GitHub account.
+
+05:14.920 --> 05:17.279
+And there should be like a sign in right here.
+
+05:17.480 --> 05:20.240
+And if there's not, then please check out the course resources.
+
+05:20.240 --> 05:30.759
+If you have any problems with this, as people figure this out, I will add in instructions to make sure that everyone is clear on how you connect to your GitHub account to use GitHub co-pilot.
+
+05:35.439 --> 05:42.639
+co-pilot. And when you are ready and you've done that, you need to press on a Mac, it's command shift I, and on a PC it's control shift I, I'm going to press that now, and bam,
+
+05:42.639 --> 05:46.800
+a build with agent appears over there on the right. And you can also bring this up by going
+
+05:46.800 --> 05:52.959
+to the view menu and selecting chat, that's the same as control shift I or command shift I.
+
+05:52.959 --> 05:56.480
+Okay, and so it's brought up this sidebar that looks very familiar because it's
+
+05:56.480 --> 06:00.839
+quite similar to Kasser. And down here, you can see this is where we can put an instruction
+
+06:00.839 --> 06:06.439
+to the agent. There's a drop down here where we can choose to put the agent in plan mode.
+
+06:06.439 --> 06:11.160
+Sounds familiar. There is also this here where we can choose what model we are connecting
+
+06:11.160 --> 06:16.240
+to. I have it on auto where we'll pick one for us. But you can see that there are also
+
+06:16.240 --> 06:19.279
+a bunch of models that are provided for free
+
+06:19.279 --> 06:24.360
+in the lowest tier plan, depending on the details of what plan you have. You may have
+
+06:24.360 --> 06:30.920
+access to different models. And on that topic, if you hover down here, you'll see it pops
+
+06:30.920 --> 06:36.079
+up something about how much you have been using co-pilot, which shows you a sort of
+
+06:36.079 --> 06:42.079
+bar of what's been going on and shows you what kinds of how your usage is against your
+
+06:42.079 --> 06:48.079
+allowance and you can see more details of that on the GitHub Copilot website with the different
+
+06:48.079 --> 06:54.399
+plans, the free and paid plans and how much you get. Okay, so with that, that's just the quick
+
+06:54.399 --> 06:58.959
+tour of these interface. It's time that we put our agent to work. Okay, here we go. So I'm putting
+
+06:58.959 --> 07:02.839
+the agent onto plan mode and I'm going to say, I don't know,
+
+07:02.839 --> 07:04.879
+please plan the task at hand.
+
+07:07.279 --> 07:10.519
+It's got the agents.md and I'm expecting it will pick
+
+07:10.519 --> 07:13.600
+that up and it has picked that up and it's off
+
+07:13.600 --> 07:14.680
+and it's off.
+
+07:14.680 --> 07:17.839
+It's gathered the context with a Kanban project plan.
+
+07:17.839 --> 07:19.800
+So I will let it do some planning,
+
+07:19.800 --> 07:23.399
+hopefully yours is as well and I will see you in a second.
+
+07:23.399 --> 07:25.680
+All right, the plan completed. As before, there's
+
+07:25.680 --> 07:29.920
+some stuff here. It seems like it might be interesting but I'm not going to read it. I'm going to go
+
+07:29.920 --> 07:36.160
+ahead and press the start implementation button. You can see here that we could continue it in
+
+07:36.160 --> 07:40.720
+the background but we're just going to have it run right here. I think we'll talk more about the
+
+07:40.720 --> 07:47.360
+cloud services another time. And off it goes. so I select that and then start implementation appears in the chat
+
+07:47.360 --> 07:55.279
+and then press enter and off it goes. So I will let it do its thing and I will see you back here
+
+07:55.279 --> 08:03.519
+shortly once it's made some progress. But it is now going to be prompting me to see if I want to
+
+08:03.519 --> 08:11.000
+allow and you can see that we can say always allow, We can just say for now, I'm going to allow this one.
+
+08:11.000 --> 08:12.680
+So I'm just going to press allow right here.
+
+08:12.680 --> 08:14.639
+I'm going to let it go on and do the next thing.
+
+08:14.639 --> 08:17.519
+And almost immediately it's asking me if I can have permission
+
+08:17.519 --> 08:21.639
+to send no followed by enter to the terminal.
+
+08:21.639 --> 08:23.959
+So we'll let it do what it wants to do.
+
+08:23.959 --> 08:27.000
+And I'm going to keep approving what it wishes
+
+08:27.000 --> 08:28.759
+while it does its thing.
+
+08:28.759 --> 08:33.559
+Now what I might do is I might, yeah, I'm just going to allow it as it goes.
+
+08:33.559 --> 08:36.440
+And then at the right time I will give it more permissions.
+
+08:36.440 --> 08:38.480
+All right, let's have a look at this.
+
+08:38.480 --> 08:40.080
+It wants to run a command.
+
+08:40.080 --> 08:43.720
+Now what we can say is we can say always allow.
+
+08:43.720 --> 08:47.159
+And I'm going to say allow all commands in this session.
+
+08:47.159 --> 08:51.360
+So this is like a YOLO mode that we're going on to.
+
+08:51.360 --> 08:53.279
+Let it do its thing. I'm going to be watching carefully.
+
+08:53.279 --> 08:55.840
+You should choose the level of risk you're comfortable with.
+
+08:55.840 --> 09:00.320
+You can have it be approving step by step as you want so that you can watch what happens.
+
+09:00.320 --> 09:02.639
+But I will let it do its thing and I will see you back in a second.
+
+09:02.639 --> 09:06.240
+Okay, well, in the spirit of not only showing you when things go well,
+
+09:06.240 --> 09:09.919
+this time it seems to be struggling a bit, in a way.
+
+09:09.919 --> 09:11.440
+It just tried to bring up it.
+
+09:11.440 --> 09:12.480
+It did a lot of coding.
+
+09:12.480 --> 09:15.779
+I needed to approve another thing that it still needed me to approve.
+
+09:16.059 --> 09:18.340
+Um, and then it had a few bugs that it fixed.
+
+09:18.580 --> 09:21.139
+Uh, and then, and then it tried to start the server.
+
+09:21.299 --> 09:25.659
+And first of all, it started in the wrong directory and got a bunch of errors.
+
+09:25.899 --> 09:29.620
+And then it figured that out and it changed to the right directory, started the
+
+09:29.620 --> 09:30.740
+server again.
+
+09:31.100 --> 09:34.820
+And then it, it ran a command to bring the server up and it's just been sitting
+
+09:34.820 --> 09:36.120
+there, waiting, not realizing that the server has, and it's just been sitting there waiting,
+
+09:36.120 --> 09:38.279
+not realizing that the server has come up.
+
+09:38.279 --> 09:40.639
+It's kind of jammed, and I guess it wants me
+
+09:40.639 --> 09:45.360
+to interrupt it by canceling right here
+
+09:45.360 --> 09:47.480
+and stop it from thinking.
+
+09:47.480 --> 09:49.279
+But there is something of a surprise here,
+
+09:49.279 --> 09:51.639
+which I will reveal after stopping it.
+
+09:51.639 --> 09:52.799
+Okay, so here we go.
+
+09:52.799 --> 09:54.879
+I will indeed stop it.
+
+09:54.879 --> 09:57.080
+Done, it has stopped.
+
+09:57.080 --> 10:00.000
+And now to show you the surprise.
+
+10:00.000 --> 10:06.080
+So here's the surprise. I'm going, I'm here in the terminal, I'm in the front end directory,
+
+10:06.080 --> 10:12.460
+and I can do mpm run dev, which is the command to start the server. And if I do that, it brings
+
+10:12.460 --> 10:18.679
+up a server, and if I now go to that web address, you can see that it's actually done a really
+
+10:18.679 --> 10:20.480
+good job, It's finished.
+
+10:20.480 --> 10:21.320
+Even though it's sort of,
+
+10:21.320 --> 10:22.919
+it floundered at the very last minute.
+
+10:22.919 --> 10:24.360
+It seemed to get stuck.
+
+10:24.360 --> 10:26.679
+But what we have here of course is a camban.
+
+10:26.679 --> 10:28.720
+It's got quite a nice layout
+
+10:28.720 --> 10:30.759
+and the way that you can move things around.
+
+10:30.759 --> 10:32.840
+I actually rather prefer this
+
+10:32.840 --> 10:34.480
+to the one that we got from Kursa.
+
+10:34.480 --> 10:36.759
+I believe that we've been using
+
+10:36.759 --> 10:39.059
+through the GitHub Copilot.
+
+10:39.059 --> 10:44.639
+We've been using a Claude Haikou, a very small model, but I think it's done a fabulous job.
+
+10:44.639 --> 10:46.120
+You can see we can move things around,
+
+10:46.120 --> 10:48.120
+the drag and drop seems to work great,
+
+10:48.120 --> 10:50.879
+and I think this is a pretty good implementation.
+
+10:50.879 --> 10:52.200
+Unlike the one that we got from Kerse,
+
+10:52.200 --> 10:54.440
+we don't have any errors showing here.
+
+10:54.440 --> 10:56.759
+Let's try deleting to see if it will delete.
+
+10:56.759 --> 10:58.519
+Oh no, look at that, delete is not working.
+
+10:58.519 --> 11:00.200
+That's one bug.
+
+11:00.200 --> 11:05.000
+Can we rename this to, okay, yes we can rename the columns.
+
+11:05.000 --> 11:08.000
+All right, so, you know, it's most of the way there.
+
+11:08.000 --> 11:11.500
+Not bad at all, not bad for its first pass,
+
+11:11.500 --> 11:13.000
+even with the hanging at the end.
+
+11:13.000 --> 11:16.000
+And we'll give it a chance to try and fix that problem that it's made,
+
+11:16.000 --> 11:19.000
+let's come back over here, just here where it says,
+
+11:19.000 --> 11:21.000
+files change, we press keep to make sure that we keep
+
+11:21.000 --> 11:24.000
+anything that has been affected.
+
+11:24.000 --> 11:26.139
+And let's stop the server.
+
+11:26.139 --> 11:28.120
+And let me just say in here,
+
+11:29.559 --> 11:33.240
+everything seems to be working well.
+
+11:34.240 --> 11:35.779
+To be working well,
+
+11:37.759 --> 11:42.759
+except the delete card feature isn't working.
+
+11:46.659 --> 11:49.279
+Let's give it that feedback. Let's see how it does with this
+
+11:49.279 --> 11:54.620
+and we will give it a chance and I will come back in just a second. Okay, well it
+
+11:54.620 --> 11:59.059
+believes that it's fixed it. The delete card features should now work. Now this
+
+11:59.059 --> 12:01.740
+shows me it's an interesting sign particularly with some of the smaller
+
+12:01.740 --> 12:07.639
+models. What I dislike about this is that it has done a classic move by coding
+
+12:07.639 --> 12:12.379
+agents which is to guess what it thinks the problem is, put in a fix and
+
+12:12.379 --> 12:17.340
+then claim victory. And that's just riddled with problems. First of all, it shouldn't
+
+12:17.340 --> 12:21.659
+guess. It should prove the problem. If it thinks it has a theory, we would always want
+
+12:21.659 --> 12:26.379
+it to prove it. And secondly, it shouldn't just fix something and say it's fixed without
+
+12:26.379 --> 12:33.159
+testing and demonstrating. It needs to reproduce an issue, prove the root cause, fix it, demonstrate it's fixed,
+
+12:33.159 --> 12:34.720
+and it should always do that.
+
+12:34.720 --> 12:40.000
+And when you're watching this, particularly if you're somewhat new to development, then
+
+12:40.000 --> 12:42.279
+you need to be the boss of that process.
+
+12:42.279 --> 12:45.279
+You need to push back and challenge, even if it has it right.
+
+12:45.279 --> 12:46.320
+And I don't know if it has it right.
+
+12:46.320 --> 12:48.799
+We will give it a try now and see if it actually got it right.
+
+12:48.799 --> 12:53.600
+Okay, so I do MPM run dev to bring up the server.
+
+12:53.600 --> 12:57.200
+There it is. Here is my screen and there we go. Let's try
+
+12:57.200 --> 13:04.080
+deleting. Just as I thought. No change at all. If it hasn't proven the problem, then it probably
+
+13:04.080 --> 13:08.240
+doesn't work. So that didn't work. Let me just check if I keep here that that doesn't
+
+13:08.240 --> 13:12.159
+change anything. But I don't think so that that that won't change anything at all.
+
+13:20.440 --> 13:23.960
+at all. And in fact, we now do see an issue appearing here. Okay, all right. So I will keep hammering away at it. We'll tell it. I'll give it strictly the feedback that that
+
+13:23.960 --> 13:50.600
+didn't fix it. And I'm going to tell it. So I said that didn've reproduced it. Find the root cause. Fix it. And prove you fixed it.
+
+13:50.600 --> 13:56.559
+That's how to give it instructions to do this in a disciplined way and you have to
+
+13:56.559 --> 14:01.340
+take it through that process. Okay, and I will allow it to do its thing
+
+14:01.340 --> 14:03.960
+and as it looks in the webpage
+
+14:03.960 --> 14:05.500
+and I will see you again in a second.
+
+14:05.500 --> 14:08.220
+Okay, it now claims that has reproduced the problem,
+
+14:08.220 --> 14:10.820
+fixed it and implemented a fix and tested it.
+
+14:10.820 --> 14:12.460
+We will be the judge of that.
+
+14:12.460 --> 14:14.539
+Here we go, it's running, the server is running,
+
+14:14.539 --> 14:17.259
+I bring this up, I come in here, I press delete
+
+14:17.259 --> 14:20.539
+and indeed it has fixed it, excellent.
+
+14:20.539 --> 14:23.320
+And I think that this was fortuitous, very, very convenient,
+
+14:23.320 --> 14:28.120
+because I think it's a really important learning point about, first of all, not believing
+
+14:28.120 --> 14:32.279
+it when it tells you it's found the problem and fixed it, and secondly giving it those
+
+14:32.279 --> 14:38.320
+specific instructions. Reproduce the problem, prove the root cause, fix it, demonstrate that
+
+14:38.320 --> 14:40.419
+you've fixed it. That's the right recipe for success with debugging. Okay, onwards.
+
