@@ -1,0 +1,33 @@
+[project]
+name = "geonews-backend"
+version = "0.1.0"
+description = "GeoNews FastAPI backend (DB + API + ingest + LLM)"
+requires-python = ">=3.10"
+dependencies = [
+  "fastapi>=0.115",
+  "uvicorn[standard]>=0.32",
+  "httpx>=0.27",
+  "python-dotenv>=1.0",
+  "litellm>=1.50.0",
+  "pydantic>=2.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["main", "config", "deps", "errors"]
+
+[tool.setuptools.packages.find]
+include = ["db*", "routes*", "ingest*", "geocode*", "classify*", "llm*"]
+
+[tool.setuptools.package-data]
+db = ["schema.sql", "seed/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["db/tests", "tests", "llm/tests"]
+pythonpath = ["."]

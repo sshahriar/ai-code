@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0b1220;
+  --panel: #121a2b;
+  --panel-2: #182338;
+  --border: #243049;
+  --text: #e8eefc;
+  --text-muted: #93a0b8;
+  --accent: #22d3ee;
+  --alert: #f43f5e;
+  --warning: #f59e0b;
+  --safe: #34d399;
+  --map-veil: radial-gradient(
+    ellipse 80% 60% at 50% 40%,
+    rgba(34, 211, 238, 0.06),
+    transparent 70%
+  );
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  color: var(--text);
+  background:
+    var(--map-veil),
+    linear-gradient(165deg, #0b1220 0%, #0e1628 45%, #101a2e 100%);
+  font-family: var(--font-body), "IBM Plex Sans", ui-sans-serif, sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-display), Sora, ui-sans-serif, sans-serif;
+}
+
+/* Leaflet chrome */
+.leaflet-container {
+  background: #0b1220;
+  font: inherit;
+}
+
+.leaflet-control-attribution {
+  background: rgba(11, 18, 32, 0.75) !important;
+  color: var(--text-muted) !important;
+  font-size: 10px !important;
+}
+
+.leaflet-control-attribution a {
+  color: var(--accent) !important;
+}
+
+.geonews-pin {
+  background: transparent !important;
+  border: none !important;
+}
+
+.marker-cluster-small,
+.marker-cluster-medium,
+.marker-cluster-large {
+  background-color: rgba(34, 211, 238, 0.2) !important;
+}
+
+.marker-cluster-small div,
+.marker-cluster-medium div,
+.marker-cluster-large div {
+  background-color: rgba(18, 26, 43, 0.92) !important;
+  color: var(--text) !important;
+  font-weight: 600;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 8px;
+}

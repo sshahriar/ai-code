@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "geonews": {
+      "command": "node",
+      "args": ["mcp/geonews/server.mjs"],
+      "env": {
+        "NOMINATIM_USER_AGENT": "GeoNews/0.1 (student-project; contact: local)"
+      }
+    },
+    "context7": {
+      "url": "https://mcp.context7.com/mcp"
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp@latest"]
+    }
+  }
+}
