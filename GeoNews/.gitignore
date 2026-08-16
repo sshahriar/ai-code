@@ -1,0 +1,40 @@
+# Secrets & local env
+.env
+.env.local
+.env.*.local
+
+# SQLite data (named volume / local db/)
+db/*.db
+db/*.db-*
+db/*.db-journal
+db/*.db-wal
+db/*.db-shm
+
+# Python
+.venv/
+backend/.venv/
+**/__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Node / Next
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+node_modules/
+
+# OS / editor
+.DS_Store
+*.log
+.idea/
+.vscode/
+
+# Hook runtime / generated review artifacts
+.cursor/hooks/state/
+prompts/*
+!prompts/.gitkeep
+reviews/*
+!reviews/.gitkeep

@@ -1,0 +1,39 @@
+# GeoNews local stack — API + static UI on http://localhost:8000
+# SQLite persists in named volume geonews-data (stop does NOT remove it).
+#
+# Free demo (no API quota): LLM_MOCK=true INGEST_MOCK=true in .env
+# Playwright E2E compose lives under test/ (Integration Tester) — not here.
+
+services:
+  geonews:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: geonews:local
+    container_name: geonews
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      HOST: "0.0.0.0"
+      PORT: "8000"
+    volumes:
+      - geonews-data:/app/db
+    restart: unless-stopped
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/health', timeout=5)",
+        ]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+
+volumes:
+  geonews-data:
+    name: geonews-data

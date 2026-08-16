@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "hooks": {
+    "beforeShellExecution": [
+      {
+        "command": "node .cursor/hooks/sandbox-shell.mjs",
+        "failClosed": true,
+        "timeout": 10
+      }
+    ],
+    "beforeMCPExecution": [
+      {
+        "command": "node .cursor/hooks/sandbox-mcp.mjs",
+        "failClosed": true,
+        "timeout": 10
+      }
+    ],
+    "sessionStart": [
+      {
+        "command": "node .cursor/hooks/session-start.mjs",
+        "timeout": 10
+      }
+    ],
+    "beforeSubmitPrompt": [
+      {
+        "command": "node .cursor/hooks/no-secrets.mjs $ARGUMENTS",
+        "failClosed": true,
+        "timeout": 10
+      },
+      {
+        "command": "node .cursor/hooks/capture-prompt.mjs $ARGUMENTS",
+        "timeout": 10
+      }
+    ],
+    "afterFileEdit": [
+      {
+        "command": "node .cursor/hooks/format-hint.mjs",
+        "timeout": 10
+      },
+      {
+        "command": "node .cursor/hooks/track-edits.mjs",
+        "timeout": 10
+      }
+    ],
+    "stop": [
+      {
+        "command": "node .cursor/hooks/save-prompt-review.mjs",
+        "timeout": 20
+      }
+    ]
+  }
+}
