@@ -25,6 +25,7 @@ Explore the live projects directory on GitHub Pages:
 | 👤 **[portfolio](./portfolio/)** | Web App | Personal software engineering portfolio with glassmorphism UI & interactive timeline | 🟢 Active | [Launch App](https://sshahriar.github.io/ai-code/portfolio/) |
 | 📈 **[finally](./finally/)** | FinTech | AI-powered trading workstation with real-time SSE market streaming & LLM copilot | 🟢 Active | - |
 | 📚 **[learning](./learning/)** | Education | Docs-style AI Coder course notes with Content/Summary tabs and OpenRouter Ask chat | 🟢 Active | [Launch App](https://sshahriar.github.io/ai-code/learning/) |
+| 🛰️ **[agentic-workflow](./agentic-workflow/)** | Education | Mission-control dashboard: Jira ticket to deploy via an orchestrated agent team | 🟢 Active | [Launch App](https://sshahriar.github.io/ai-code/agentic-workflow/) |
 
 ---
 
@@ -43,7 +44,8 @@ ai-code/
 ├── kanban-gemini/             # Sub-Project 2: Kanban Project Management (Next.js 15)
 ├── portfolio/                 # Sub-Project 3: Software Engineering Portfolio (Next.js 15)
 ├── finally/                   # Sub-Project 4: AI Trading Workstation (FastAPI + Next.js)
-└── learning/                  # Sub-Project 5: AI Coder Learn (React + Vite)
+├── learning/                  # Sub-Project 5: AI Coder Learn (React + Vite)
+└── agentic-workflow/          # Sub-Project 6: Agentic Ops dashboard (static HTML)
 ```
 
 ---

@@ -21,7 +21,8 @@ ai-code/
 ├── kanban-gemini/             # Sub-Project 2: Kanban Project Management (Next.js 15)
 ├── portfolio/                 # Sub-Project 3: Software Engineering Portfolio (Next.js 15)
 ├── finally/                   # Sub-Project 4: AI Trading Workstation (FastAPI + Next.js)
-└── learning/                  # Sub-Project 5: AI Coder Learn (React + Vite)
+├── learning/                  # Sub-Project 5: AI Coder Learn (React + Vite)
+└── agentic-workflow/          # Sub-Project 6: Agentic Ops dashboard (static HTML)
 ```
 
 ---

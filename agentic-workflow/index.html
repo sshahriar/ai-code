@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agentic Ops — Ticket to Deploy</title>
+  <meta name="description" content="Mission-control dashboard for an agentic software workflow: Jira ticket to production via an orchestrated agent team." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #07090f;
+      --bg-elev: #0c111b;
+      --panel: rgba(14, 20, 32, 0.72);
+      --panel-solid: #101826;
+      --line: rgba(148, 175, 220, 0.14);
+      --line-strong: rgba(148, 175, 220, 0.28);
+      --text: #e9eef8;
+      --muted: #8b9bb4;
+      --faint: #5d6d86;
+      --cyan: #2ee6d6;
+      --violet: #8b7dff;
+      --amber: #ffb020;
+      --rose: #ff5d7a;
+      --lime: #7dffb3;
+      --blue: #5aa8ff;
+      --magenta: #e879f9;
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+      --radius: 18px;
+      --lead: var(--violet);
+      --frontend: var(--cyan);
+      --backend: var(--blue);
+      --db: var(--amber);
+      --llm: var(--magenta);
+      --tester: var(--rose);
+      --devops: var(--lime);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body { min-height: 100%; }
+
+    body {
+      font-family: Figtree, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        radial-gradient(900px 500px at 8% -10%, rgba(139, 125, 255, 0.18), transparent 55%),
+        radial-gradient(800px 480px at 92% 0%, rgba(46, 230, 214, 0.12), transparent 50%),
+        radial-gradient(700px 500px at 50% 110%, rgba(255, 176, 32, 0.08), transparent 50%);
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0.035;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    .shell {
+      position: relative;
+      z-index: 2;
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 1.25rem 1.25rem 3rem;
+    }
+
+    header.top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.25rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .mark {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--violet), var(--cyan));
+      box-shadow: 0 0 28px rgba(46, 230, 214, 0.28);
+      font-family: Syne, sans-serif;
+      font-weight: 800;
+      font-size: 1.05rem;
+    }
+
+    .brand h1 {
+      font-family: Syne, sans-serif;
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+    }
+
+    .brand p {
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    .controls {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .live-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.4rem 0.75rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(125, 255, 179, 0.08);
+      color: var(--lime);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .live-pill .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--lime);
+      box-shadow: 0 0 10px var(--lime);
+      animation: pulse 1.6s ease-in-out infinite;
+    }
+
+    .live-pill.idle {
+      color: var(--muted);
+      background: rgba(255,255,255,0.03);
+    }
+
+    .live-pill.idle .dot {
+      background: var(--faint);
+      box-shadow: none;
+      animation: none;
+    }
+
+    button.ctrl, a.ctrl {
+      appearance: none;
+      border: 1px solid var(--line-strong);
+      background: linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.02));
+      color: var(--text);
+      font-family: inherit;
+      font-weight: 700;
+      font-size: 0.86rem;
+      padding: 0.55rem 0.95rem;
+      border-radius: 11px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+    }
+
+    button.ctrl:hover, a.ctrl:hover { transform: translateY(-1px); border-color: var(--cyan); }
+    button.ctrl.primary {
+      background: linear-gradient(135deg, rgba(46,230,214,0.22), rgba(139,125,255,0.22));
+      border-color: rgba(46,230,214,0.45);
+    }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      backdrop-filter: blur(16px);
+      box-shadow: var(--shadow);
+    }
+
+    .ticket-strip {
+      display: grid;
+      grid-template-columns: 1.4fr 0.9fr;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .ticket {
+      padding: 1.15rem 1.25rem;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .jira-key {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--cyan);
+      background: rgba(46,230,214,0.1);
+      border: 1px solid rgba(46,230,214,0.25);
+      padding: 0.45rem 0.65rem;
+      border-radius: 9px;
+      white-space: nowrap;
+    }
+
+    .ticket h2 {
+      font-family: Syne, sans-serif;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+    }
+
+    .ticket .meta {
+      color: var(--muted);
+      font-size: 0.82rem;
+      margin-top: 0.15rem;
+    }
+
+    .prio {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--amber);
+      border: 1px solid rgba(255,176,32,0.3);
+      background: rgba(255,176,32,0.08);
+      padding: 0.35rem 0.6rem;
+      border-radius: 999px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.55rem;
+      padding: 0.7rem;
+    }
+
+    .stat {
+      padding: 0.7rem 0.75rem;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--line);
+    }
+
+    .stat b {
+      display: block;
+      font-family: Syne, sans-serif;
+      font-size: 1.25rem;
+      letter-spacing: -0.03em;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 600;
+    }
+
+    .pipeline {
+      padding: 1rem 1rem 1.1rem;
+      margin-bottom: 1rem;
+      overflow-x: auto;
+    }
+
+    .pipeline-label {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.85rem;
+      gap: 1rem;
+    }
+
+    .pipeline-label h3 {
+      font-family: Syne, sans-serif;
+      font-size: 0.95rem;
+    }
+
+    .phase-copy {
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    .steps {
+      display: flex;
+      align-items: center;
+      min-width: 980px;
+      gap: 0;
+    }
+
+    .step {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.45rem;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .step::after {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: 50%;
+      width: 100%;
+      height: 2px;
+      background: var(--line-strong);
+      z-index: 0;
+    }
+
+    .step:last-child::after { display: none; }
+
+    .node {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 2px solid var(--line-strong);
+      background: var(--panel-solid);
+      z-index: 1;
+      display: grid;
+      place-items: center;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.65rem;
+      color: var(--muted);
+      transition: 0.3s ease;
+    }
+
+    .step.active .node {
+      border-color: var(--cyan);
+      color: #041312;
+      background: var(--cyan);
+      box-shadow: 0 0 22px rgba(46,230,214,0.45);
+    }
+
+    .step.done .node {
+      border-color: var(--lime);
+      background: rgba(125,255,179,0.18);
+      color: var(--lime);
+    }
+
+    .step span {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--faint);
+      letter-spacing: 0.02em;
+      text-align: center;
+    }
+
+    .step.active span, .step.done span { color: var(--text); }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: 1.15fr 1.05fr 0.9fr;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.95rem 1.05rem 0.4rem;
+    }
+
+    .section-head h3 {
+      font-family: Syne, sans-serif;
+      font-size: 1rem;
+    }
+
+    .hint { color: var(--muted); font-size: 0.75rem; }
+
+    .agents {
+      display: grid;
+      gap: 0.55rem;
+      padding: 0.55rem 0.7rem 0.85rem;
+    }
+
+    .agent {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 0.7rem;
+      align-items: center;
+      padding: 0.7rem 0.75rem;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.025);
+      transition: 0.25s ease;
+    }
+
+    .agent.running {
+      border-color: color-mix(in srgb, var(--role, var(--cyan)) 55%, transparent);
+      background: color-mix(in srgb, var(--role, var(--cyan)) 10%, transparent);
+      box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--role, var(--cyan)) 18%, transparent);
+    }
+
+    .agent.done { opacity: 0.88; }
+    .agent.blocked { opacity: 0.55; }
+
+    .avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 11px;
+      display: grid;
+      place-items: center;
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: #061018;
+      background: var(--role);
+    }
+
+    .agent h4 { font-size: 0.86rem; font-weight: 700; }
+    .agent .owns { color: var(--muted); font-size: 0.72rem; font-family: "JetBrains Mono", monospace; }
+    .agent .task { color: var(--text); font-size: 0.74rem; margin-top: 0.12rem; }
+
+    .status {
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.28rem 0.5rem;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .status.wait { color: var(--amber); border-color: rgba(255,176,32,0.3); }
+    .status.run { color: var(--cyan); border-color: rgba(46,230,214,0.35); }
+    .status.done { color: var(--lime); border-color: rgba(125,255,179,0.3); }
+    .status.block { color: var(--rose); border-color: rgba(255,93,122,0.35); }
+
+    .orch {
+      padding: 0.4rem 0.7rem 0.9rem;
+    }
+
+    svg.graph {
+      width: 100%;
+      height: 360px;
+      display: block;
+    }
+
+    .log {
+      padding: 0 0.7rem 0.85rem;
+      max-height: 430px;
+      overflow: auto;
+    }
+
+    .log-line {
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: 0.55rem;
+      padding: 0.42rem 0.2rem;
+      border-bottom: 1px solid rgba(148,175,220,0.08);
+      font-size: 0.76rem;
+    }
+
+    .log-line time {
+      font-family: "JetBrains Mono", monospace;
+      color: var(--faint);
+      font-size: 0.68rem;
+    }
+
+    .log-line b { color: var(--cyan); font-family: "JetBrains Mono", monospace; font-weight: 600; }
+    .log-line.bug b { color: var(--rose); }
+    .log-line.ok b { color: var(--lime); }
+
+    .kanban-wrap { padding: 0 0.7rem 0.9rem; }
+
+    .kanban {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.5rem;
+    }
+
+    .col {
+      background: rgba(255,255,255,0.025);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 0.55rem;
+      min-height: 210px;
+    }
+
+    .col h4 {
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .card {
+      background: var(--panel-solid);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 0.5rem 0.55rem;
+      margin-bottom: 0.4rem;
+      font-size: 0.74rem;
+    }
+
+    .card .key {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.64rem;
+      color: var(--cyan);
+    }
+
+    .card.moving { outline: 1px solid var(--cyan); }
+
+    .toolkit {
+      padding: 1rem 1.05rem 1.15rem;
+      margin-bottom: 1rem;
+    }
+
+    .toolkit h3 {
+      font-family: Syne, sans-serif;
+      margin-bottom: 0.35rem;
+    }
+
+    .toolkit > p {
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .topics {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.65rem;
+    }
+
+    .topic {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 0.85rem 0.9rem;
+      background: rgba(255,255,255,0.025);
+      min-height: 132px;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .topic:hover, .topic.active {
+      border-color: rgba(46,230,214,0.45);
+      transform: translateY(-2px);
+      background: rgba(46,230,214,0.06);
+    }
+
+    .topic .tag {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.64rem;
+      color: var(--violet);
+      letter-spacing: 0.04em;
+    }
+
+    .topic h4 { font-size: 0.92rem; margin: 0.2rem 0 0.3rem; }
+    .topic p { color: var(--muted); font-size: 0.76rem; }
+
+    .loop {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 1rem;
+    }
+
+    .fix-loop, .ship {
+      padding: 1rem 1.1rem 1.2rem;
+    }
+
+    .fix-loop h3, .ship h3 {
+      font-family: Syne, sans-serif;
+      margin-bottom: 0.4rem;
+    }
+
+    .bugs { display: grid; gap: 0.5rem; margin-top: 0.7rem; }
+
+    .bug {
+      border: 1px solid rgba(255,93,122,0.25);
+      background: rgba(255,93,122,0.06);
+      border-radius: 12px;
+      padding: 0.7rem 0.8rem;
+      font-size: 0.8rem;
+    }
+
+    .bug.fixed {
+      border-color: rgba(125,255,179,0.28);
+      background: rgba(125,255,179,0.06);
+    }
+
+    .bug .who { font-family: "JetBrains Mono", monospace; font-size: 0.68rem; color: var(--muted); }
+
+    .deploy-box {
+      margin-top: 0.7rem;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.78rem;
+      background: #071018;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 0.85rem;
+      color: var(--lime);
+    }
+
+    footer.note {
+      color: var(--faint);
+      font-size: 0.78rem;
+      text-align: center;
+      margin-top: 1.4rem;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.45; transform: scale(0.85); }
+    }
+
+    @media (max-width: 1100px) {
+      .ticket-strip, .grid-3, .loop, .topics { grid-template-columns: 1fr; }
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      .kanban { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="top">
+      <div class="brand">
+        <div class="mark">A</div>
+        <div>
+          <h1>Agentic Ops</h1>
+          <p>Jira ticket → orchestrated agent team → production</p>
+        </div>
+      </div>
+      <div class="controls">
+        <a class="ctrl" href="/ai-code/">Hub</a>
+        <div class="live-pill idle" id="livePill"><span class="dot"></span><span id="liveText">Standby</span></div>
+        <button class="ctrl" id="pauseBtn" type="button">Pause</button>
+        <button class="ctrl primary" id="replayBtn" type="button">Replay workflow</button>
+      </div>
+    </header>
+
+    <section class="ticket-strip">
+      <article class="panel ticket">
+        <div class="jira-key">GEO-142</div>
+        <div>
+          <h2>Map-first news intelligence workstation</h2>
+          <p class="meta">Epic · pulled via Jira MCP · spec locked in <code>plan.md</code> · lead orchestrates, never writes app code</p>
+        </div>
+        <div class="prio">High</div>
+      </article>
+      <div class="panel stats">
+        <div class="stat"><b id="statAgents">7</b><span>Team members</span></div>
+        <div class="stat"><b id="statTickets">0/8</b><span>Jira children</span></div>
+        <div class="stat"><b id="statTests">0/8</b><span>Playwright</span></div>
+        <div class="stat"><b id="statPhase">Ticket</b><span>Current phase</span></div>
+      </div>
+    </section>
+
+    <section class="panel pipeline">
+      <div class="pipeline-label">
+        <h3>Pipeline</h3>
+        <p class="phase-copy" id="phaseCopy">Ingest the ticket, then spawn a specialist team around the spec.</p>
+      </div>
+      <div class="steps" id="steps"></div>
+    </section>
+
+    <section class="grid-3">
+      <article class="panel">
+        <div class="section-head">
+          <h3>Agent team</h3>
+          <span class="hint">Multi-agents · lead sequences work</span>
+        </div>
+        <div class="agents" id="agents"></div>
+      </article>
+
+      <article class="panel">
+        <div class="section-head">
+          <h3>Swarm &amp; orchestration</h3>
+          <span class="hint">DB first, then parallel, then E2E loop</span>
+        </div>
+        <div class="orch">
+          <svg class="graph" viewBox="0 0 520 360" role="img" aria-label="Agent dependency graph">
+            <defs>
+              <linearGradient id="g1" x1="0" x2="1">
+                <stop offset="0%" stop-color="#8b7dff" />
+                <stop offset="100%" stop-color="#2ee6d6" />
+              </linearGradient>
+            </defs>
+            <g fill="none" stroke="#243049" stroke-width="1.6">
+              <path d="M260 52 L90 130" />
+              <path d="M260 52 L200 130" />
+              <path d="M260 52 L320 130" />
+              <path d="M260 52 L430 130" />
+              <path d="M90 168 L90 210" />
+              <path d="M200 168 L200 210" />
+              <path d="M320 168 L320 210" />
+              <path id="e2eIn" d="M90 248 L260 292" />
+              <path d="M200 248 L260 292" />
+              <path d="M320 248 L260 292" />
+              <path d="M430 168 L430 292" />
+              <path d="M260 328 L430 328" />
+              <path id="fixLoop" d="M260 308 C 160 308, 120 250, 200 230" stroke-dasharray="5 5" />
+            </g>
+            <g font-family="Figtree, sans-serif" font-size="11" text-anchor="middle">
+              <g id="n-lead"><circle cx="260" cy="40" r="22" fill="#8b7dff" /><text x="260" y="44" fill="#081018" font-weight="800">LEAD</text></g>
+              <g id="n-db"><circle cx="90" cy="148" r="20" fill="#1b2230" stroke="#ffb020" /><text x="90" y="152" fill="#ffb020" font-weight="700">DB</text></g>
+              <g id="n-be"><circle cx="200" cy="148" r="20" fill="#1b2230" stroke="#5aa8ff" /><text x="200" y="152" fill="#5aa8ff" font-weight="700">API</text></g>
+              <g id="n-llm"><circle cx="320" cy="148" r="20" fill="#1b2230" stroke="#e879f9" /><text x="320" y="152" fill="#e879f9" font-weight="700">LLM</text></g>
+              <g id="n-fe"><circle cx="430" cy="148" r="20" fill="#1b2230" stroke="#2ee6d6" /><text x="430" y="152" fill="#2ee6d6" font-weight="700">UI</text></g>
+              <g id="n-qa"><circle cx="260" cy="308" r="20" fill="#1b2230" stroke="#ff5d7a" /><text x="260" y="312" fill="#ff5d7a" font-weight="700">E2E</text></g>
+              <g id="n-ops"><circle cx="430" cy="308" r="20" fill="#1b2230" stroke="#7dffb3" /><text x="430" y="312" fill="#7dffb3" font-weight="700">OPS</text></g>
+            </g>
+            <text x="260" y="78" fill="#8b9bb4" font-size="10" text-anchor="middle" font-family="JetBrains Mono">orchestrates only</text>
+            <text x="260" y="352" fill="#5d6d86" font-size="10" text-anchor="middle" font-family="JetBrains Mono">sub-agents spawn under each specialist for focused tasks</text>
+          </svg>
+        </div>
+      </article>
+
+      <article class="panel">
+        <div class="section-head">
+          <h3>Event stream</h3>
+          <span class="hint">Hooks · messages · bugs</span>
+        </div>
+        <div class="log" id="log"></div>
+      </article>
+    </section>
+
+    <section class="panel" style="margin-bottom:1rem">
+      <div class="section-head">
+        <h3>Jira board</h3>
+        <span class="hint">Child tickets move as agents complete work</span>
+      </div>
+      <div class="kanban-wrap">
+        <div class="kanban" id="kanban"></div>
+      </div>
+    </section>
+
+    <section class="panel toolkit">
+      <h3>Practice stack</h3>
+      <p>The same toolkit used to build the project — highlighted as the pipeline reaches that layer.</p>
+      <div class="topics" id="topics"></div>
+    </section>
+
+    <section class="loop">
+      <article class="panel fix-loop">
+        <h3>Integration Tester loop</h3>
+        <p class="hint">Playwright e2e runs when the stack is ready. Failures go back to the owning engineer — not the lead.</p>
+        <div class="bugs" id="bugs"></div>
+      </article>
+      <article class="panel ship">
+        <h3>DevOps ship path</h3>
+        <p class="hint">Sandbox in Docker. One start script. No paid APIs. Agents never leave the gated shell.</p>
+        <div class="deploy-box" id="deployBox">waiting for green e2e…</div>
+      </article>
+    </section>
+
+    <footer class="note">Dashboard of an agentic build: Team Lead sequences Database → API / LLM / Frontend / DevOps → Playwright → fix loop → deploy.</footer>
+  </div>
+
+  <script>
+    const STEPS = [
+      { id: "ticket", label: "Ticket", copy: "Jira MCP pulls GEO-142. Human confirms scope. Lead treats plan.md as the contract." },
+      { id: "spec", label: "Spec", copy: "Skills and CLAUDE.md point at the plan. Context is progressive — paths, not dumps." },
+      { id: "toolkit", label: "Toolkit", copy: "Plugins, MCP, hooks, and sandboxing are installed before any teammate writes code." },
+      { id: "spawn", label: "Team", copy: "Lead creates the agent team. Specialists own modules so they can work without colliding." },
+      { id: "build", label: "Build", copy: "Database unblocks the rest. API, LLM, Frontend, and DevOps run in parallel. Sub-agents take focused tasks." },
+      { id: "e2e", label: "E2E", copy: "Integration Tester builds and runs Playwright when handoffs land." },
+      { id: "fix", label: "Fix loop", copy: "Bugs route back to Frontend and Backend. Retest until 8/8 green." },
+      { id: "ship", label: "Deploy", copy: "DevOps ships Docker + start scripts. Production is a sandboxed one-command start." }
+    ];
+
+    const AGENTS = [
+      { id: "lead", name: "Team Lead", owns: "orchestration only", initials: "TL", color: "var(--lead)", task: "Create team, sequence phases, never write app code" },
+      { id: "db", name: "Database Engineer", owns: "backend/db/*", initials: "DB", color: "var(--db)", task: "SQLite schema, migrations, queries" },
+      { id: "backend", name: "Backend API Engineer", owns: "backend/api/*", initials: "BE", color: "var(--backend)", task: "FastAPI, ingest, SSE, health" },
+      { id: "llm", name: "LLM Engineer", owns: "backend/llm/*", initials: "LM", color: "var(--llm)", task: "Classify, geocode-from-text, briefing" },
+      { id: "frontend", name: "Frontend Engineer", owns: "frontend/*", initials: "FE", color: "var(--frontend)", task: "Leaflet map, intel drawer, filters" },
+      { id: "tester", name: "Integration Tester", owns: "test/*", initials: "QA", color: "var(--tester)", task: "Playwright e2e, report bugs to owners" },
+      { id: "devops", name: "DevOps Engineer", owns: "docker / scripts", initials: "OPS", color: "var(--devops)", task: "Compose file, start scripts, sandbox" }
+    ];
+
+    const TICKETS = [
+      { id: "GEO-142-1", title: "SQLite schema + db layer", owner: "db" },
+      { id: "GEO-142-2", title: "FastAPI ingest + SSE", owner: "backend" },
+      { id: "GEO-142-3", title: "LLM classify & brief", owner: "llm" },
+      { id: "GEO-142-4", title: "Leaflet map UI", owner: "frontend" },
+      { id: "GEO-142-5", title: "Docker + start scripts", owner: "devops" },
+      { id: "GEO-142-6", title: "Playwright e2e suite", owner: "tester" },
+      { id: "GEO-142-7", title: "Fix bbox + hotspot bugs", owner: "fix" },
+      { id: "GEO-142-8", title: "Ship container", owner: "devops" }
+    ];
+
+    const TOPICS = [
+      { id: "mcp", title: "MCP server", body: "Jira, Context7, and a project MCP wrap news, geocode, and crime tools so agents call tools instead of inventing APIs." },
+      { id: "skills", title: "Skills", body: "SKILL.md files teach GDELT, Nominatim, LiteLLM, Leaflet. Loaded only when the task needs them." },
+      { id: "hooks", title: "Hooks", body: "Pre/post hooks format code, block secret leaks, and gate outbound HTTP before a teammate can run a command." },
+      { id: "sub", title: "Sub-agents", body: "Short-lived workers under a specialist: geocode one article, write one unit test, classify one event." },
+      { id: "multi", title: "Multi-agents", body: "Persistent teammates — Frontend, Backend, DB, LLM, Tester, DevOps — each a full agent with its own history." },
+      { id: "swarm", title: "Swarm & orchestration", body: "Chaos of parallel work, reeled in by the lead: DB first, then a swarm, then a sequenced E2E gate." },
+      { id: "plugins", title: "Plugins", body: "frontend-design, Context7, Playwright. Avoid plugins that spawn extra sub-agents and steal control." },
+      { id: "sandbox", title: "Sandboxing", body: "Docker + hook-gated shell. Agents stay inside the container. No paid APIs, no raw host access." }
+    ];
+
+    const BUGS = [
+      { id: "BUG-E2E-001", to: "Frontend", text: "bbox + hotspot display guard missing", owner: "frontend" },
+      { id: "BUG-E2E-002", to: "Backend", text: "hotspot names wrong on API payload", owner: "backend" }
+    ];
+
+    const COLS = ["todo", "doing", "review", "done"];
+    const COL_LABEL = { todo: "To do", doing: "In progress", review: "In review", done: "Done" };
+
+    const state = {
+      step: -1,
+      playing: false,
+      timer: null,
+      delays: [],
+      statuses: Object.fromEntries(AGENTS.map(a => [a.id, "wait"])),
+      columns: Object.fromEntries(TICKETS.map(t => [t.id, "todo"])),
+      tests: 0,
+      bugsFixed: false,
+      clock: 0
+    };
+
+    const el = (id) => document.getElementById(id);
+
+    function renderSteps() {
+      el("steps").innerHTML = STEPS.map((s, i) => `
+        <div class="step ${i < state.step ? "done" : i === state.step ? "active" : ""}" data-i="${i}">
+          <div class="node">${String(i + 1).padStart(2, "0")}</div>
+          <span>${s.label}</span>
+        </div>`).join("");
+      document.querySelectorAll(".step").forEach((n) => {
+        n.onclick = () => jumpTo(Number(n.dataset.i));
+      });
+    }
+
+    function renderAgents() {
+      el("agents").innerHTML = AGENTS.map((a) => {
+        const st = state.statuses[a.id];
+        const label = { wait: "waiting", run: "running", done: "done", block: "blocked" }[st];
+        const cls = { wait: "", run: "running", done: "done", block: "blocked" }[st];
+        return `
+          <div class="agent ${cls}" style="--role:${a.color}">
+            <div class="avatar">${a.initials}</div>
+            <div>
+              <h4>${a.name}</h4>
+              <div class="owns">${a.owns}</div>
+              <div class="task">${a.task}</div>
+            </div>
+            <div class="status ${st}">${label}</div>
+          </div>`;
+      }).join("");
+    }
+
+    function renderKanban() {
+      const buckets = { todo: [], doing: [], review: [], done: [] };
+      TICKETS.forEach((t) => buckets[state.columns[t.id]].push(t));
+      el("kanban").innerHTML = COLS.map((c) => `
+        <div class="col">
+          <h4>${COL_LABEL[c]} · ${buckets[c].length}</h4>
+          ${buckets[c].map((t) => `<div class="card"><div class="key">${t.id}</div>${t.title}</div>`).join("")}
+        </div>`).join("");
+    }
+
+    function renderTopics(active) {
+      el("topics").innerHTML = TOPICS.map((t) => `
+        <div class="topic ${active === t.id ? "active" : ""}" data-id="${t.id}">
+          <div class="tag">PRACTICE</div>
+          <h4>${t.title}</h4>
+          <p>${t.body}</p>
+        </div>`).join("");
+    }
+
+    function renderBugs() {
+      el("bugs").innerHTML = BUGS.map((b) => `
+        <div class="bug ${state.bugsFixed ? "fixed" : ""}">
+          <strong>${b.id}</strong> → ${b.to}<br />${b.text}
+          <div class="who">${state.bugsFixed ? "verified-fixed after rebuild" : "open · waiting for owner"}</div>
+        </div>`).join("");
+    }
+
+    function later(fn, ms) {
+      if (!state.playing) {
+        fn();
+        return;
+      }
+      const id = setTimeout(fn, ms);
+      state.delays.push(id);
+      return id;
+    }
+
+    function log(kind, who, msg) {
+      const m = String(Math.floor(state.clock / 60)).padStart(2, "0");
+      const s = String(state.clock % 60).padStart(2, "0");
+      const line = document.createElement("div");
+      line.className = "log-line " + (kind || "");
+      line.innerHTML = `<time>T+${m}:${s}</time><div><b>${who}</b> ${msg}</div>`;
+      el("log").prepend(line);
+      state.clock += 7;
+    }
+
+    function setAgents(map) {
+      AGENTS.forEach((a) => {
+        if (map[a.id]) state.statuses[a.id] = map[a.id];
+      });
+      renderAgents();
+      paintGraph();
+    }
+
+    function paintGraph() {
+      const glow = (id, on, color) => {
+        const g = document.getElementById(id);
+        const c = g.querySelector("circle");
+        c.setAttribute("filter", on ? "url(#glow)" : "");
+        c.style.filter = on ? `drop-shadow(0 0 8px ${color})` : "none";
+      };
+      const running = (id) => state.statuses[id] === "run";
+      glow("n-lead", running("lead") || state.statuses.lead === "done", "#8b7dff");
+      glow("n-db", running("db") || state.statuses.db === "done", "#ffb020");
+      glow("n-be", running("backend") || state.statuses.backend === "done", "#5aa8ff");
+      glow("n-llm", running("llm") || state.statuses.llm === "done", "#e879f9");
+      glow("n-fe", running("frontend") || state.statuses.frontend === "done", "#2ee6d6");
+      glow("n-qa", running("tester") || state.statuses.tester === "done", "#ff5d7a");
+      glow("n-ops", running("devops") || state.statuses.devops === "done", "#7dffb3");
+    }
+
+    function applyStep(i) {
+      state.step = i;
+      const s = STEPS[i];
+      el("phaseCopy").textContent = s.copy;
+      el("statPhase").textContent = s.label;
+      renderSteps();
+
+      const idle = Object.fromEntries(AGENTS.map(a => [a.id, state.statuses[a.id] === "done" ? "done" : "wait"]));
+
+      if (i === 0) {
+        setAgents({ ...idle, lead: "run" });
+        renderTopics("mcp");
+        log("", "JIRA MCP", "fetched GEO-142 · Map-first news intelligence workstation");
+        log("", "LEAD", "ticket accepted. plan.md is the contract.");
+      }
+      if (i === 1) {
+        setAgents({ lead: "run" });
+        renderTopics("skills");
+        log("", "SKILL", "loaded geonews-ingest, leaflet-map, cerebras-inference");
+        log("", "LEAD", "CLAUDE.md points at plan.md by path — progressive context");
+      }
+      if (i === 2) {
+        setAgents({ lead: "run" });
+        renderTopics("plugins");
+        log("", "PLUGIN", "installed frontend-design, Context7, Playwright (project scope)");
+        log("", "HOOK", "secret-leak + format-on-edit + outbound HTTP gate armed");
+        log("", "SANDBOX", "Docker network only. paid APIs blocked.");
+      }
+      if (i === 3) {
+        setAgents({ lead: "run", db: "wait", backend: "block", llm: "block", frontend: "wait", tester: "block", devops: "wait" });
+        renderTopics("multi");
+        log("", "LEAD", "Create an Agent Team. Roster: Frontend, Backend API, Database, LLM, Integration Tester, DevOps.");
+        log("", "LEAD", "All write unit tests. Tester owns Playwright e2e. Lead writes no app code.");
+      }
+      if (i === 4) {
+        state.columns["GEO-142-1"] = "doing";
+        state.columns["GEO-142-4"] = "doing";
+        state.columns["GEO-142-5"] = "doing";
+        setAgents({ lead: "done", db: "run", frontend: "run", devops: "run", backend: "block", llm: "block", tester: "block" });
+        renderTopics("swarm");
+        log("", "DB", "building SQLite layer · sub-agent writing migration 001");
+        log("", "FE", "map shell in parallel — mocks until API handoff");
+        log("", "OPS", "compose draft + start_windows.ps1");
+        later(() => {
+          if (state.step !== 4) return;
+          state.columns["GEO-142-1"] = "review";
+          state.columns["GEO-142-2"] = "doing";
+          state.columns["GEO-142-3"] = "doing";
+          setAgents({ db: "done", backend: "run", llm: "run", frontend: "run", devops: "run", tester: "block", lead: "done" });
+          log("", "DB", "handoff written · unblocking API + LLM");
+          log("", "API", "ingest + SSE · sub-agent on /health");
+          log("", "LLM", "classify / brief with LLM_MOCK=true fallback");
+          renderKanban();
+          updateStats();
+        }, 1400);
+      }
+      if (i === 5) {
+        ["GEO-142-1","GEO-142-2","GEO-142-3","GEO-142-4","GEO-142-5"].forEach((id) => state.columns[id] = "done");
+        state.columns["GEO-142-6"] = "doing";
+        state.tests = 6;
+        setAgents({ lead: "done", db: "done", backend: "done", llm: "done", frontend: "done", devops: "done", tester: "run" });
+        renderTopics("sub");
+        log("", "QA", "Playwright mock suite up · 6 passed, 2 failed");
+        log("bug", "QA → FE", "BUG-E2E-001 bbox + hotspot display guard");
+        log("bug", "QA → API", "BUG-E2E-002 hotspot names");
+        el("deployBox").textContent = "blocked on e2e · 6/8";
+      }
+      if (i === 6) {
+        state.columns["GEO-142-7"] = "doing";
+        state.bugsFixed = false;
+        setAgents({ tester: "wait", frontend: "run", backend: "run", lead: "done", db: "done", llm: "done", devops: "done" });
+        renderTopics("hooks");
+        log("", "FE", "display guard + bbox filter");
+        log("", "API", "hotspot name field aligned to contract");
+        later(() => {
+          if (state.step !== 6) return;
+          state.bugsFixed = true;
+          state.tests = 8;
+          state.columns["GEO-142-6"] = "done";
+          state.columns["GEO-142-7"] = "review";
+          setAgents({ frontend: "done", backend: "done", tester: "run" });
+          log("ok", "QA", "retest after rebuild · 8 passed / 0 failed");
+          renderBugs();
+          renderKanban();
+          updateStats();
+        }, 1500);
+      }
+      if (i === 7) {
+        state.bugsFixed = true;
+        state.tests = 8;
+        Object.keys(state.columns).forEach((id) => state.columns[id] = "done");
+        setAgents({ lead: "done", db: "done", backend: "done", llm: "done", frontend: "done", tester: "done", devops: "run" });
+        renderTopics("sandbox");
+        log("ok", "OPS", "docker compose up · http://localhost:8000");
+        log("ok", "LEAD", "GEO-142 done. stack healthy. team dismissed.");
+        el("deployBox").textContent = "$ ./scripts/start_windows.ps1\n→ compose up\n→ http://localhost:8000\n→ Playwright 8/8 green\n→ GEO-142 deployed";
+        later(() => setAgents({ devops: "done", lead: "done", db: "done", backend: "done", llm: "done", frontend: "done", tester: "done" }), 900);
+      }
+
+      renderKanban();
+      renderBugs();
+      updateStats();
+    }
+
+    function updateStats() {
+      const done = Object.values(state.columns).filter((c) => c === "done").length;
+      el("statTickets").textContent = done + "/8";
+      el("statTests").textContent = state.tests + "/8";
+    }
+
+    function setLive(on) {
+      const pill = el("livePill");
+      pill.classList.toggle("idle", !on);
+      el("liveText").textContent = on ? "Live" : "Standby";
+    }
+
+    function next() {
+      if (state.step >= STEPS.length - 1) {
+        stop();
+        return;
+      }
+      applyStep(state.step + 1);
+    }
+
+    function play() {
+      if (state.step >= STEPS.length - 1) reset(false);
+      state.playing = true;
+      setLive(true);
+      el("pauseBtn").textContent = "Pause";
+      if (state.step < 0) applyStep(0);
+      clearInterval(state.timer);
+      state.timer = setInterval(next, 2800);
+    }
+
+    function stop() {
+      state.playing = false;
+      setLive(false);
+      clearInterval(state.timer);
+      state.delays.forEach(clearTimeout);
+      state.delays = [];
+      el("pauseBtn").textContent = "Play";
+    }
+
+    function reset(autoplay) {
+      stop();
+      state.step = -1;
+      state.clock = 0;
+      state.tests = 0;
+      state.bugsFixed = false;
+      AGENTS.forEach((a) => state.statuses[a.id] = "wait");
+      TICKETS.forEach((t) => state.columns[t.id] = "todo");
+      el("log").innerHTML = "";
+      el("deployBox").textContent = "waiting for green e2e…";
+      renderAgents();
+      renderKanban();
+      renderBugs();
+      renderTopics(null);
+      renderSteps();
+      el("phaseCopy").textContent = "Press Replay to watch a ticket become a running product.";
+      el("statPhase").textContent = "Idle";
+      updateStats();
+      if (autoplay !== false) play();
+    }
+
+    function jumpTo(i) {
+      stop();
+      reset(false);
+      for (let k = 0; k <= i; k++) applyStep(k);
+    }
+
+    el("replayBtn").onclick = () => reset(true);
+    el("pauseBtn").onclick = () => (state.playing ? stop() : play());
+
+    renderSteps();
+    renderAgents();
+    renderKanban();
+    renderTopics(null);
+    renderBugs();
+    updateStats();
+    setTimeout(() => play(), 600);
+  </script>
+</body>
+</html>
