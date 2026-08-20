@@ -58,7 +58,7 @@ export function PlaceSearch({ onSelect }: PlaceSearchProps) {
         onChange={(e) => setQuery(e.target.value)}
         onFocus={() => results.length > 0 && setOpen(true)}
         onBlur={() => window.setTimeout(() => setOpen(false), 150)}
-        className="w-full rounded-lg border border-[var(--border)] bg-[var(--panel)]/90 px-3 py-2 text-sm text-[var(--text)] outline-none backdrop-blur placeholder:text-[var(--text-muted)] focus:border-[var(--accent)]/60"
+        className="w-full rounded-lg border border-[var(--border)] bg-[var(--panel-2)] px-3 py-2 text-sm font-medium text-[var(--text)] outline-none placeholder:text-[var(--placeholder)] focus:border-[var(--accent)]/70 focus:ring-1 focus:ring-[var(--accent)]/40"
       />
       {busy ? (
         <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-[10px] uppercase tracking-wider text-[var(--text-muted)]">

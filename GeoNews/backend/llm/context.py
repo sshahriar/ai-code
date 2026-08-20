@@ -121,6 +121,59 @@ def load_recent_chat(
 
 DEFAULT_PLACE = {"name": "Dhaka", "lat": 23.8103, "lon": 90.4125}
 
+LIMITED_CONTEXT_CAVEAT = (
+    "No news found for this place in the selected window; context is limited."
+)
+
+
+def context_is_empty(ctx: dict[str, Any]) -> bool:
+    return not ctx.get("events") and not ctx.get("incidents")
+
+
+def apply_limited_context_caveat(
+    payload: dict[str, Any],
+    *,
+    empty: bool,
+    place_name: str,
+    window: str,
+) -> dict[str, Any]:
+    """Guarantee a user-visible caveat when ingest produced no local rows."""
+    if not empty:
+        return payload
+
+    is_chat = "message" in payload
+    brief = payload.get("brief") if is_chat else payload
+    if not isinstance(brief, dict):
+        brief = {
+            "place_name": place_name,
+            "window": window,
+            "headline": f"Limited context for {place_name}",
+            "risk_level": "unknown",
+            "bullets": [
+                "No recent events or incidents were available for this place."
+            ],
+            "caveats": [LIMITED_CONTEXT_CAVEAT],
+        }
+        if is_chat:
+            payload["brief"] = brief
+        else:
+            payload.update(brief)
+    else:
+        caveats = [str(c) for c in (brief.get("caveats") or [])]
+        blob = " ".join(caveats).lower()
+        if "no news" not in blob and "limited context" not in blob:
+            caveats.append(LIMITED_CONTEXT_CAVEAT)
+            brief["caveats"] = caveats
+        if is_chat:
+            payload["brief"] = brief
+
+    message = payload.get("message")
+    if isinstance(message, str):
+        lowered = message.lower()
+        if "no news" not in lowered and "limited context" not in lowered:
+            payload["message"] = f"{message.rstrip()} {LIMITED_CONTEXT_CAVEAT}"
+    return payload
+
 
 def resolve_place(
     *,

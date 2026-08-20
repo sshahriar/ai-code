@@ -48,12 +48,13 @@ jobs:
 
       - name: Assemble Static Site Portfolio
         run: |
-          mkdir -p public_site/nda-generator public_site/kanban-gemini public_site/portfolio public_site/learning
+          mkdir -p public_site/nda-generator public_site/kanban-gemini public_site/portfolio public_site/learning public_site/agentic-workflow
           cp index.html public_site/
           cp -r nda-generator/frontend/dist/* public_site/nda-generator/
           cp -r kanban-gemini/frontend/out/* public_site/kanban-gemini/
           cp -r portfolio/out/* public_site/portfolio/
           cp -r learning/dist/* public_site/learning/
+          cp agentic-workflow/index.html public_site/agentic-workflow/
 
       - name: Deploy to GitHub Pages Branch
         uses: peaceiris/actions-gh-pages@v4

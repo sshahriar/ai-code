@@ -30,10 +30,12 @@ Frontend must expose these `data-testid` values:
 | `layer-heatmap` | Heatmap toggle |
 | `watchlist` | Watchlist chip row |
 | `watchlist-add` | Add-current-place control |
-| `ai-panel` | Chat / brief panel |
+| `ai-panel` | Chat / brief overlay (open via `ai-fab`) |
+| `ai-fab` | Floating analyst launcher |
 | `ai-input` | Chat textarea |
 | `ai-brief` | Structured brief card |
 | `status-dot` | Ingest/LLM status |
+| `theme-toggle` | Header light/dark control |
 
 Prefer `getByTestId`. Do not rely on pin pixel clicks unless a test helper exposes `data-event-id`.
 

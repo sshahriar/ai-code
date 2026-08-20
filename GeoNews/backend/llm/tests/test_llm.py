@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import os
+from pathlib import Path
 
 import pytest
 from pydantic import ValidationError
@@ -187,6 +188,86 @@ def test_classify_text_mock_unmatched() -> None:
         "rationale": "rules-unmatched",
     }
     ClassifyResult.model_validate(result)
+
+
+def test_handle_chat_empty_context_caveat() -> None:
+    chat = handle_chat(
+        message="Brief this place",
+        lat=22.3569,
+        lon=91.7832,
+        place_name="Chattogram",
+        window="24h",
+    )
+    blob = json.dumps(chat).lower()
+    assert "no news" in blob or "limited context" in blob
+    assert chat["brief"] is not None
+    caveats = " ".join(chat["brief"]["caveats"]).lower()
+    assert "no news" in caveats or "limited context" in caveats
+
+
+def test_handle_chat_live_includes_place_events(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    monkeypatch.setenv("LLM_MOCK", "false")
+    monkeypatch.setenv("OPENROUTER_API_KEY", "sk-test")
+
+    from datetime import datetime, timezone
+
+    from db import init_db, upsert_event
+    from llm.models import ChatResponse, GeoNewsBrief
+
+    db_file = tmp_path / "chat_ctx.db"
+    conn = init_db(db_file, seed=False)
+    now = datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+    upsert_event(
+        conn,
+        {
+            "source": "rss",
+            "external_id": "https://news.example.com/ctg-llm-1",
+            "title": "Chattogram port congestion eases",
+            "category": "economy",
+            "severity": 2,
+            "lat": 22.3569,
+            "lon": 91.7832,
+            "place_name": "Chattogram",
+            "occurred_at": now,
+        },
+    )
+    captured: dict[str, str] = {}
+
+    def _fake_completion(messages, _model, **_kwargs):
+        captured["prompt"] = messages[1]["content"]
+        return ChatResponse(
+            message="Port delays are easing around Chattogram.",
+            brief=GeoNewsBrief(
+                place_name="Chattogram",
+                window="72h",
+                headline="Port congestion easing",
+                risk_level="low",
+                bullets=["RSS headline mentions Chattogram port congestion."],
+                caveats=["News proxies only; not official statistics."],
+            ),
+            watchlist_changes=[],
+            highlight_event_ids=[],
+        )
+
+    monkeypatch.setattr("llm.chat.structured_completion", _fake_completion)
+    try:
+        out = handle_chat(
+            message="Brief this place",
+            lat=22.3569,
+            lon=91.7832,
+            place_name="Chattogram",
+            conn=conn,
+            window="7d",
+        )
+    finally:
+        conn.close()
+
+    assert out["mock"] is False
+    assert "Chattogram port congestion eases" in captured["prompt"]
+    assert "Chattogram" in captured["prompt"]
+    assert "sk-or" not in json.dumps(out)
 
 
 def test_no_crash_without_api_key(monkeypatch: pytest.MonkeyPatch) -> None:

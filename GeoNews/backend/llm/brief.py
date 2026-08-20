@@ -12,7 +12,12 @@ from llm.client import (
     should_use_mock,
     structured_completion,
 )
-from llm.context import load_place_context, resolve_place
+from llm.context import (
+    apply_limited_context_caveat,
+    context_is_empty,
+    load_place_context,
+    resolve_place,
+)
 from llm.fixtures import brief_for_place
 from llm.models import GeoNewsBrief
 
@@ -33,6 +38,7 @@ def generate_brief(
     or no API key. Returns a plain dict matching ``GeoNewsBrief`` (+ ``mock``).
     """
     place = resolve_place(lat=lat, lon=lon, place_name=place_name, conn=conn)
+    display_name = place_name or place["name"]
     ctx = load_place_context(
         conn,
         lat=place["lat"],
@@ -40,24 +46,27 @@ def generate_brief(
         radius_km=radius_km,
         window=window,
     )
+    empty = context_is_empty(ctx)
 
     if should_use_mock():
         brief = brief_for_place(
             lat=place["lat"],
             lon=place["lon"],
-            place_name=place_name or place["name"],
+            place_name=display_name,
             window=window,
         )
         data = brief.model_dump()
         data["mock"] = True
-        return data
+        return apply_limited_context_caveat(
+            data, empty=empty, place_name=display_name, window=window
+        )
 
     events = ctx["events"]
     incidents = ctx["incidents"]
     sources = {e.get("source") for e in events} | {i.get("source") for i in incidents}
     user_content = "\n".join(
         [
-            f"Place: {place_name or place['name']} ({place['lat']:.4f}, {place['lon']:.4f})",
+            f"Place: {display_name} ({place['lat']:.4f}, {place['lon']:.4f})",
             f"Radius_km: {radius_km}",
             f"Window: {window}",
             f"Sources seen: {sorted(s for s in sources if s)}",
@@ -65,7 +74,13 @@ def generate_brief(
             *(event_summary_lines(events) or ["- (none)"]),
             "Incidents:",
             *(incident_summary_lines(incidents) or ["- (none)"]),
-            "Produce a GeoNewsBrief. Do not invent official crime statistics.",
+            (
+                "No relevant events or incidents were found. "
+                "risk_level must be unknown. Include a no-news / limited-context caveat. "
+                "Do not invent headlines or official crime statistics."
+                if empty
+                else "Produce a GeoNewsBrief. Do not invent official crime statistics."
+            ),
         ]
     )
     messages = [
@@ -75,4 +90,6 @@ def generate_brief(
     result = structured_completion(messages, GeoNewsBrief)
     data = result.model_dump()
     data["mock"] = False
-    return data
+    return apply_limited_context_caveat(
+        data, empty=empty, place_name=display_name, window=window
+    )

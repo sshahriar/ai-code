@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   MapContainer,
   TileLayer,
@@ -16,6 +16,12 @@ import "leaflet.heat";
 import { categoryColor } from "@/lib/categories";
 import { DHAKA } from "@/lib/fixtures";
 import { boundsFromPlaceBBox } from "@/lib/geo";
+import {
+  cartoTileUrl,
+  readDomTheme,
+  subscribeTheme,
+  type Theme,
+} from "@/lib/theme";
 import type { GeoEvent, HeatPoint, MapBBox, MapFlyTarget } from "@/lib/types";
 
 export interface MapViewProps {
@@ -26,6 +32,8 @@ export interface MapViewProps {
   flyTarget: MapFlyTarget | null;
   onBoundsChange: (bbox: MapBBox) => void;
   onSelectEvent: (event: GeoEvent) => void;
+  /** Optional override; defaults to `document.documentElement` theme. */
+  theme?: Theme;
 }
 
 function pinIcon(category: string, severity: number, selected: boolean): L.DivIcon {
@@ -37,10 +45,29 @@ function pinIcon(category: string, severity: number, selected: boolean): L.DivIc
       : `box-shadow:0 0 8px ${color}88;`;
   return L.divIcon({
     className: "geonews-pin",
-    html: `<span style="display:block;width:${size}px;height:${size}px;border-radius:999px;background:${color};border:2px solid #0b1220;${halo}"></span>`,
+    html: `<span style="display:block;width:${size}px;height:${size}px;border-radius:999px;background:${color};border:2px solid var(--pin-border);${halo}"></span>`,
     iconSize: [size, size],
     iconAnchor: [size / 2, size / 2],
   });
+}
+
+function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+function popupHtml(event: GeoEvent): string {
+  const title = escapeHtml(event.title);
+  const meta = escapeHtml(
+    [event.source_name || event.source, event.place_name].filter(Boolean).join(" · "),
+  );
+  const link = event.url
+    ? `<a class="geonews-popup-link" data-testid="popup-link" href="${escapeHtml(event.url)}" target="_blank" rel="noreferrer">Read full article ↗</a>`
+    : `<span class="geonews-popup-meta">No source link</span>`;
+  return `<div class="geonews-popup"><p class="geonews-popup-title">${title}</p><p class="geonews-popup-meta">${meta}</p>${link}</div>`;
 }
 
 function BoundsWatcher({ onBoundsChange }: { onBoundsChange: (bbox: MapBBox) => void }) {
@@ -114,6 +141,12 @@ function ClusterLayer({
         icon: pinIcon(event.category, event.severity, selectedId === event.id),
         title: event.title,
       });
+      marker.bindPopup(popupHtml(event), {
+        className: "geonews-popup-wrap",
+        closeButton: true,
+        minWidth: 200,
+        maxWidth: 280,
+      });
       marker.on("click", () => onSelectEvent(event));
       // Playwright helper hook
       (marker as L.Marker & { options: { eventId?: string } }).options.eventId = event.id;
@@ -170,7 +203,19 @@ export default function MapView({
   flyTarget,
   onBoundsChange,
   onSelectEvent,
+  theme: themeProp,
 }: MapViewProps) {
+  const [theme, setTheme] = useState<Theme>(themeProp ?? "dark");
+
+  useEffect(() => {
+    if (themeProp) {
+      setTheme(themeProp);
+      return;
+    }
+    setTheme(readDomTheme());
+    return subscribeTheme(setTheme);
+  }, [themeProp]);
+
   return (
     <div
       data-testid="geonews-map"
@@ -184,8 +229,9 @@ export default function MapView({
         attributionControl
       >
         <TileLayer
+          key={theme}
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
-          url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+          url={cartoTileUrl(theme)}
         />
         <BoundsWatcher onBoundsChange={onBoundsChange} />
         <FlyController target={flyTarget} />

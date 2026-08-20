@@ -1,107 +1,85 @@
+<!-- ai-generated:true -->
+<!-- model:x-ai/grok-4.5 -->
 # Building a First-Person Shooter Game with Cursor AI Agent
-
-> Week 1 · Day 1
+> Week 1 | Day 1
 
 ## Overview
-
-Okay, so it finished and you can see it ended up creating three files. Now every time you run this, it does something a bit different.
-
-That's one of the bizarre things about this. For you, it might have only created one file, indexed.html.
-
-For me, it created three. And I can click on them to look at them.
+This lesson is a hands-on “instant gratification” intro to building with an AI coding agent in Cursor. You prompt the agent to create a browser-based neon arena FPS, open the generated files locally, play the game, then iterate with short follow-up prompts (richer enemy, HUD, harder difficulty). The same idea is contrasted with a more advanced zero-shot “Ralph Loop” + Claude Code run that produces a fuller game—previewing techniques you’ll use later—before the course shifts to more structured, commercial work.
 
 ## You will learn
+- How an agent can turn a simple prompt into a multi-file web FPS (HTML/JS/CSS)
+- Why outputs vary run-to-run and how to recover when something breaks
+- How to iterate in natural language: visuals, HUD, difficulty
+- How to test by opening `index.html` from the project folder
+- When to reset the folder or switch models/prompts vs. debugging in place
+- What a zero-shot Ralph Loop-style run can produce compared to chat iteration
 
-- Understand the main ideas covered in **Building a First-Person Shooter Game with Cursor AI Agent**
-- Follow the practical walkthrough from Week 1, Day 1
-- Apply the techniques discussed in your own projects
+## Topics
+### Agent output: files, variance, and the workdir
+After the initial build, the agent writes files into a project directory (in the walkthrough, a folder named `instant`). You might get three files—e.g. main HTML, a longer script file, and a stylesheet—or a single `index.html`. That variance is normal: the same kind of request does not always yield the same file split or implementation.
 
-## Key concepts
+Use the editor to open each file and skim structure, and use the agent panel to review what it planned and changed. On disk, confirm the same files exist in `instant` (or your folder name). Mental model: the agent is a collaborator that materializes a small static web app; your job is to verify artifacts and behavior, not to require a fixed file layout on the first try.
 
-### Foundations
+### Running the game locally
+Launch by double-clicking `index.html` (or opening it in the browser from the file system). You should see a start surface (e.g. neon arena FPS, controls like arrow keys to move/turn, space to shoot, and a control to start the match).
 
-This is one file. This is one file. This is presumably quite a long file.
+Play briefly to validate the loop: move, turn, shoot, hit targets, win or lose. This closes the loop from prompt → files → running product with no hand-written code. If controls, shooting, or rendering fail, treat that as expected occasional variance and continue in the agent thread rather than abandoning the idea.
 
-There it is. And then this is another one, the style sheet. So three files have been created.
+### Recovering from broken or partial runs
+Failures (no shooting, keys dead, blank page, etc.) are common across retries. Prefer telling the agent what broke and asking for a fix over manual deep debugging on day one.
 
-They're sitting here in the directory and you can see what it thought about and what it did all the way over here. Okay, it's time to give it a try. So I can look in my file system at this directory called instant and we'll see that it has created those three files.
+If you are stuck in a bad state: delete the whole `instant` directory, recreate it, and run again with a fresh prompt. Try another model option or rephrase the request. This project is experimental—optimize for learning the workflow, not for protecting a perfect codebase.
 
-And I can double click on index dot HTML to launch this website. I double click on it and up comes this. Arrow Keys to Move and Turn, space to shoot, neon arena first person shooter, let's give it a whirl, start match.
+### Iterating with short, creative prompts
+Once a baseline runs, improve it in small chat turns. Example: praise the result, then ask to add detail so the opponent reads as an enemy—and explicitly allow creativity. The agent edits in place; when it reports done, hard-refresh or reopen `index.html` and confirm the foe is more than a plain sphere.
 
-Whoa, oh, so I am now controlling, oh and I can hit this thing, and oops, that is clearly an I was kill. I'm not much good at this, but wow, we just have a first person shooter game that was created out of nothing doing no work whatsoever. Now look, it's entirely possible that when you ran your one, it didn't work and something went wrong and I'll show you, but then you can just go back and tell your agent that something went wrong and it will fix it for you.
+Keep prompts outcome-focused (“more like an enemy,” “be creative”) rather than prescribing meshes or engines unless you intend to. Re-test after each turn so visual and control regressions surface immediately.
 
-But before we do that, I do think that I should redeem myself by at least trying to win this. And so that I can, victory, there we go. So that I can show that I have some dexterity.
+### Gameplay systems via language: HUD and difficulty
+Next iteration example: add a heads-up display (HUD) and make the game harder. The agent plans, then edits; you verify by starting a match and checking both information on screen and feel (e.g. tougher timing or opponent behavior).
 
-So success, we have been victorious in this game. And it's pretty cool that it just worked like that. It created these files, it coded this game from just that simple prompt.
+This is the core loop for the course’s early agent work: describe product intent → let the agent plan/apply → you playtest → adjust. You still write no application code; you steer scope and quality in plain language.
 
-But let's see if we can make it a little bit better. So maybe something didn't work, maybe the shooting didn't work, sometimes for me that didn't happen once the keys didn't work at all. I've tried this a bunch of times and it's a bit different every time.
+### Human–agent collaboration without typing code
+End-to-end, the conversation in Cursor yields the file set under `instant`, and follow-ups thicken the design. Success means a playable FPS from a simple initial prompt plus a few refinements—not a particular architecture.
 
-But let's suppose we want the opponent to look a bit more awesome than just a sphere like that. So let's prompt here. I'll say that's great.
+If your run diverges, iterate or reset. The point is reps with agent-driven UI and game logic so later weeks can go deeper on planning, execution, and heavier projects.
 
-Please add some detail to the opponent so that it looks more like an enemy. Let it be creative. That is the instruction that we will give and we will see what comes of this.
+### Preview: Ralph Loops, Claude Code, and zero-shot ambition
+As a teaser for the next weeks’ techniques, the same kind of FPS was built with a Ralph Loop-style setup in Claude Code, zero-shot: one prompt, no mid-run feedback. The result can be markedly richer—polished entry screen, detailed weapon view, health and kills, minimap-style corner display, pickups to recover health, and stronger presentation overall.
 
-It's now going to add some details and you'll see it editing and changing and I'll come back in a second when it's ready for us to test it out again. Okay, well it tells us that it's done that. So now let's go back, let's double click on index again, here we have it.
+You are not expected to reproduce that stack on day one. It frames the trajectory: from chat-and-files in Cursor to more disciplined agent loops capable of larger apps from a single launch. Full Ralph Loop practice comes later.
 
-### Deep dive
+### Closing the “instant” segment and what comes next
+This exercise is deliberately unbusinesslike: fast fun, low stakes, maximum feel for LLM-as-coder. After it, the course goes “all business”—commercial direction, clearer framing of what the program is about, and progressive techniques for sophisticated agent pair-building over roughly three weeks.
 
-Oh, there indeed is a slightly more interesting enemy. And I, I, I won again. I'm good at this game.
-
-It's an easy game. Okay, Well, let's go and do some more edits to the game. All right.
-
-So back we go. We'll say, please add a heads up display, H-U-D, and also make the difficulty harder. Let's see what it makes of this.
-
-I'll let it do its planning next moves and it's thinking. We will go through in more detail at some point about the planning and then executing on these kinds of ideas and I will see you in a second when it's finished its work. Okay, it claims again that it has done our bidding.
-
-Let's see, let's bring up this. Here we have it, start match. Okay, it's...
-
-[laughs it's 30 seems more difficult. All right, it achieved that goal. Very nice.
-
-So there you have it. There you see a very unbusiness like example of how quick and easy it is to have an LLM, a language model, be our agent writing code with us. It incursor, we had this conversation with the agent.
-
-It created these three files that are now in instant and by iterating. By adding some more comments, we were able to sort of work hand in hand at building this out without writing a single line of code and it worked great. And if this didn't work out for you, if it didn't work, then please do come back and iterate.
-
-And if you get stuck and you're not able to get through some point, then just delete the whole instant directory and start again, create a new instant and give it a second shot. Try different model options and try different ways to prompt it. This is great experimenting.
-
-This is not an important project. This is just for you to get a first feel for it. We will be doing so much of this in the next few weeks until you are great at it.
-
-But now let me show you one more thing. Over the next three weeks, we're going to be using a number of different techniques to get more and more sophisticated at working hand in hand with AI agents to build complicated projects. And I decided to put some of those techniques to the test.
-
-### Putting it together
-
-I used a technique called Ralph Loops with Claude Code to do this same project. And I did what people sometimes call zero-shot, which is I just set it off. I didn't give it any feedback.
-
-It was one iteration, one prompt only in this thing called a Ralph Loop that we will cover. And this is the result of it. Let me show you what it came up with now.
-
-Okay, I'm going to double click on index HTML. All right, well, that looks cool. This is the entry entry screen I'll make this nice and big so you can see it fully let's start again.
-
-"Fights" it says check this out look at that gun look at that oh my goodness oh haha try not to get too distracted by this look at his energy there we go I won and you can see my health and my kills up at the top. And you can see the map on the bottom right. Do you see that, that little display there?
-
-It's absolutely amazing. And there's a health over here. I can go and get a health to recover quickly.
-
-There we go. So this, I will stop playing. That's not the point of this.
-
-This is just to give you that teaser, that example of what it's like to go pro with this toolset. This is using Ralph Loops, something that we will cover and it's using Cloud Code to build out a whole application like this. But again, the thing to bear in mind is that this is something where I just typed in a prompt and let it go.
-
-I didn't give it any feedback. And it came up with this, which I think is really cool. This is something that you'll be able to do too in just a matter of days.
-
-All right, so that concludes the instant gratification.
+Keep the mindset: experiment, reset freely, vary models and prompts, and treat playable demos as the feedback signal.
 
 ## Walkthrough
-
-This session walks through the material step by step. Use the notes below as a study guide while you rewatch or practice alongside the original lesson.
-
-This is one file. This is one file. This is presumably quite a long file.
+1. Let the agent finish the initial FPS prompt; note how many files it created and open them in the editor.
+2. Confirm the same files on disk under the project folder (e.g. `instant`).
+3. Open `index.html` in the browser; start a match; verify move, turn, shoot, and basic win/loss.
+4. If nothing playable appears, describe the failure to the agent and retry—or delete the folder and start clean.
+5. Prompt to enrich the opponent (creative enemy detail); wait for edits; reopen/refresh and playtest.
+6. Prompt for a HUD and higher difficulty; playtest information display and challenge level.
+7. Optionally view a zero-shot Ralph Loop / Claude Code-style build of a similar game to see a higher ceiling (entry UI, gun view, health/kills, map, pickups).
+8. Treat this as a sandbox; next sessions move into course goals and more serious builds.
 
 ## Practical tips
-
-- This is not an important project. This is just for you to get a first feel for it. We will be doing so much of this in the next few weeks until you are great at it.
+- Always re-open or refresh `index.html` after the agent claims it finished—stale browser tabs hide good fixes.
+- Write prompts as product outcomes (enemy readability, HUD, difficulty), and allow creativity when you care about look-and-feel.
+- Skim the agent’s plan/diff side panel so you learn how it decomposes tasks, even when you are not editing code.
+- If behavior is flaky across runs, change one variable at a time: prompt wording, model choice, or clean directory reset.
+- Keep sessions short: baseline → one visual pass → one systems pass (HUD/difficulty) beats a single huge prompt on day one.
+- Use playtest notes (“space does nothing,” “enemy is still a sphere”) as the next message—specific observations fix faster than “it doesn’t work.”
 
 ## Common pitfalls
-
-- Skipping setup steps called out early in the lesson
-- Copying outcomes without understanding the workflow behind them
-- Running ahead without verifying intermediate results
+- Assuming everyone gets the same file layout or that three files means success and one file means failure—judge by gameplay.
+- Hand-editing generated code too early instead of asking the agent to fix or regenerate.
+- Skipping a full reset when the project is tangled; deleting `instant` and re-prompting is a valid first-day strategy.
+- Stacking many feature requests before any playtest, which makes regressions hard to attribute.
+- Treating a failed control scheme as a dead end rather than normal non-determinism to iterate on.
+- Comparing your first Cursor chat demo unfairly to a polished zero-shot Ralph Loop result and concluding you “did it wrong.”
 
 ## Summary
-
-I hope that you feel gratified. That was a lot of fun. From this point on, it's all business. We'll be building commercial stuff and we're going to start by actually discussing what this course is all about.
+A Cursor agent can scaffold a playable browser FPS from a simple prompt, drop files into a local folder, and improve enemy design, HUD, and difficulty through short follow-up chats—without you writing the game code. Outputs vary; fix via conversation or a clean retry. A zero-shot Ralph Loop + Claude Code teaser shows how far unattended agent runs can go, setting up deeper techniques in the weeks ahead as the course moves from instant demos to serious product work.

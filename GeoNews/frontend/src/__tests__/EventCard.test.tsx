@@ -21,6 +21,32 @@ describe("EventCard", () => {
     );
   });
 
+  it("links the headline to the source article without selecting the card", async () => {
+    const user = userEvent.setup();
+    const onSelect = vi.fn();
+    const event = { ...FIXTURE_EVENTS[0], url: "https://example.org/story" };
+    render(<EventCard event={event} onSelect={onSelect} />);
+
+    const link = screen.getByTestId("event-link");
+    expect(link).toHaveAttribute("href", event.url);
+    expect(link).toHaveAttribute("target", "_blank");
+    expect(screen.getByText(/read full article/i)).toHaveAttribute(
+      "href",
+      event.url,
+    );
+
+    await user.click(link);
+    expect(onSelect).not.toHaveBeenCalled();
+  });
+
+  it("renders a plain headline when the event has no url", () => {
+    const event = { ...FIXTURE_EVENTS[0], url: null };
+    render(<EventCard event={event} />);
+
+    expect(screen.queryByTestId("event-link")).toBeNull();
+    expect(screen.getByText(event.title)).toBeInTheDocument();
+  });
+
   it("invokes onSelect when clicked", async () => {
     const user = userEvent.setup();
     const onSelect = vi.fn();

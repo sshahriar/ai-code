@@ -12,7 +12,13 @@ from llm.client import (
     should_use_mock,
     structured_completion,
 )
-from llm.context import load_place_context, load_recent_chat, resolve_place
+from llm.context import (
+    apply_limited_context_caveat,
+    context_is_empty,
+    load_place_context,
+    load_recent_chat,
+    resolve_place,
+)
 from llm.fixtures import chat_fixture
 from llm.models import ChatResponse
 
@@ -35,19 +41,7 @@ def handle_chat(
     Does **not** mutate the DB (Backend owns watchlist + message persistence).
     """
     place = resolve_place(lat=lat, lon=lon, place_name=place_name, conn=conn)
-
-    if should_use_mock():
-        resp = chat_fixture(
-            message,
-            lat=place["lat"],
-            lon=place["lon"],
-            place_name=place_name or place["name"],
-            window=window,
-        )
-        data = resp.model_dump()
-        data["mock"] = True
-        return data
-
+    display_name = place_name or place["name"]
     ctx = load_place_context(
         conn,
         lat=place["lat"],
@@ -55,6 +49,22 @@ def handle_chat(
         radius_km=radius_km,
         window=window,
     )
+    empty = context_is_empty(ctx)
+
+    if should_use_mock():
+        resp = chat_fixture(
+            message,
+            lat=place["lat"],
+            lon=place["lon"],
+            place_name=display_name,
+            window=window,
+        )
+        data = resp.model_dump()
+        data["mock"] = True
+        return apply_limited_context_caveat(
+            data, empty=empty, place_name=display_name, window=window
+        )
+
     history = load_recent_chat(conn, user_id=user_id)
     history_lines = [
         f"{row.get('role')}: {row.get('content')}" for row in history[-8:]
@@ -63,7 +73,7 @@ def handle_chat(
     user_content = "\n".join(
         [
             f"User message: {message}",
-            f"Place: {place_name or place['name']} ({place['lat']:.4f}, {place['lon']:.4f})",
+            f"Place: {display_name} ({place['lat']:.4f}, {place['lon']:.4f})",
             f"Window: {window}",
             "Recent chat:",
             *(history_lines or ["- (none)"]),
@@ -71,6 +81,13 @@ def handle_chat(
             *(event_summary_lines(ctx["events"]) or ["- (none)"]),
             "Nearby incidents:",
             *(incident_summary_lines(ctx["incidents"]) or ["- (none)"]),
+            (
+                "No relevant events or incidents were found for this place. "
+                "Say so clearly and include a no-news / limited-context caveat. "
+                "Do not invent headlines, coordinates, or official crime statistics."
+                if empty
+                else "Use only the listed events/incidents. Do not invent extra news."
+            ),
             "Respond as ChatResponse including an optional brief for this place. "
             "watchlist_changes may only add/remove places. "
             "highlight_event_ids must be real ids from the event list when possible. "
@@ -84,4 +101,6 @@ def handle_chat(
     result = structured_completion(messages, ChatResponse)
     data = result.model_dump()
     data["mock"] = False
-    return data
+    return apply_limited_context_caveat(
+        data, empty=empty, place_name=display_name, window=window
+    )

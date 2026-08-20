@@ -7,7 +7,7 @@ Owner: Frontend Engineer. Stack: Next.js 15 (App Router) + TypeScript + Tailwind
 ```bash
 cd frontend
 npm install
-npm run dev      # http://localhost:3000 (API still expected at /api/* — proxy via Docker/FastAPI in prod)
+npm run dev      # http://localhost:3000; /api/* is proxied to NEXT_DEV_API_ORIGIN (default http://127.0.0.1:8000)
 npm test         # Vitest + jsdom
 npm run build    # static export → frontend/out/
 ```
@@ -40,7 +40,14 @@ Key endpoints used: events, watchlist CRUD, places/search, incidents/heatmap, ho
 
 ## Design tokens
 
-CSS variables in `src/app/globals.css` (plan §3 dark intel theme). Fonts: **Sora** (display) + **IBM Plex Sans** (body). Map: Carto Dark tiles, category colors from leaflet skill.
+CSS variables in `src/app/globals.css` (plan §3). **Dark is default** (`html[data-theme="dark"]`); light overrides live under `html[data-theme="light"]`. Fonts: **Sora** (display) + **IBM Plex Sans** (body).
+
+Theme is browser-only (`localStorage` key `geonews.theme`). An inline `beforeInteractive` script in `layout.tsx` applies the saved theme before paint (no FOUC on static export). Header control: `data-testid="theme-toggle"`.
+
+Map tiles (free Carto, no key):
+
+- Dark: `https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png`
+- Light: `https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png`
 
 ## Unit tests (2026-08-16)
 
@@ -80,10 +87,12 @@ If Windows intermittently errors with `ENOENT` under `.next/`, delete `.next` an
 | `watchlist-add` | Add current place |
 | `watchlist-chip-{id}` | Individual chip |
 | `hotspot-list` | Top hotspots |
-| `ai-panel` | Chat / brief panel |
+| `ai-panel` | Floating analyst overlay (closed by default) |
+| `ai-fab` | Map-corner launcher for the AI overlay |
 | `ai-input` | Chat textarea |
 | `ai-brief` | Structured brief card |
 | `status-dot` | Header health/ingest status |
+| `theme-toggle` | Header light/dark control |
 
 Aliases mentioned in the FE brief (`map-canvas`, `search-input`, `chat-input`, `heatmap-toggle`, `event-drawer`) map to the Playwright skill names above (`geonews-map`, `place-search`, `ai-input`, `layer-heatmap`, `intel-drawer`).
 
@@ -92,6 +101,6 @@ Aliases mentioned in the FE brief (`map-canvas`, `search-input`, `chat-input`, `
 - `src/components/GeoNewsApp.tsx` — page orchestration
 - `src/components/MapView.tsx` — Leaflet clusters + heat (client-only)
 - `src/components/MapCanvas.tsx` — `dynamic(..., { ssr: false })`
-- Drawer / watchlist / AI / filters / header as siblings
+- Drawer / watchlist / filters / header as siblings; AI analyst is a floating overlay on the map column (`ai-fab` + `ai-panel`)
 
 Do not add Playwright under `test/` from this role; Integration Tester owns E2E.

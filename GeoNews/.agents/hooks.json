@@ -1,0 +1,42 @@
+{
+  "safety-guard": {
+    "enabled": true,
+    "PreToolUse": [
+      {
+        "matcher": "run_command",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node ./scripts/safety_guard.js",
+            "timeout": 15
+          }
+        ]
+      }
+    ]
+  },
+  "geonews-context": {
+    "enabled": true,
+    "PreInvocation": [
+      {
+        "type": "command",
+        "command": "node ./scripts/pre_invocation_reminder.js",
+        "timeout": 10
+      }
+    ]
+  },
+  "post-action": {
+    "enabled": true,
+    "PostToolUse": [
+      {
+        "matcher": "write_to_file|replace_file_content|multi_replace_file_content",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node ./scripts/post_tool_linter.js",
+            "timeout": 15
+          }
+        ]
+      }
+    ]
+  }
+}
