@@ -1,0 +1,9 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" fill="none">
+  <rect width="800" height="450" fill="#0B1424"/>
+  <rect x="280" y="90" width="160" height="280" rx="28" fill="#121C2A" stroke="#2997FF66"/>
+  <circle cx="360" cy="320" r="12" fill="#0071E3"/>
+  <rect x="310" y="130" width="100" height="140" rx="8" fill="#0F1A2B"/>
+  <path d="M120 200 C180 140, 240 260, 280 210" stroke="#64B5FF" stroke-width="2" fill="none"/>
+  <circle cx="120" cy="200" r="10" fill="#2997FF"/>
+  <text x="80" y="400" fill="#9AA6BD" font-family="Arial,sans-serif" font-size="18">Remote Device Management</text>
+</svg>

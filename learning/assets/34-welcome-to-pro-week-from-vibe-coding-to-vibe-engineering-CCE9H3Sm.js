@@ -1,0 +1,103 @@
+var e=`# Welcome to Pro Week From Vibe Coding to Vibe Engineering
+
+> Week 2 · Day 1
+
+## Overview
+
+Maybe you've been thinking, this journey has been interesting. It's been useful.
+
+I'm picking up new skills, but I wish it could go deeper, get more pro, get more hardcore. Well, good news.
+
+That's what we're doing. Welcome to week two.
+
+## You will learn
+
+- Understand the main ideas covered in **Welcome to Pro Week From Vibe Coding to Vibe Engineering**
+- Follow the practical walkthrough from Week 2, Day 1
+- Apply the techniques discussed in your own projects
+
+## Key concepts
+
+### Foundations
+
+Welcome to pro week. And today is a yellow day, which means it's a platform day, a product day. And of all the product days, this is the one, this is the one that's near and dear to my heart, this is Claude Code Day.
+
+I'm introducing Claude Code, which is going to be the main points of focus for the whole rest of the next two weeks, but we'll also look at Open Code and maybe some others as well. So much to do today. At the beginning of the course last week, I taken you through Steve Yaggy's eight stages in the evolution of AI coding, starting with just using chat GPT and ending up all the way with orchestration platforms like his own gas town.
+
+And we talked about that sort of evolution as the first four being what we were doing week one, stage five is what we would really hammer in week two now and then six, seven and eight, the super fancy stuff, perhaps mostly in week three. And we also went through the kinds of the three stages, the three types of coding that were prevalent last year, which was mostly what we did at the end of last week about planning, executing, reviewing, and tests, writing out your spec, driving the process, and the trust but verify mindset, which I think you'll agree is very much what we had in our project on day five of last week. And these are the techniques that are typically used for mission critical software for big code bases and for highly innovative code, which you're using sort of latest greatest libraries, where you have to work more carefully.
+
+But for MVPs for new build, where you have risk appetite, where you're just creating a lot of boilerplate front end codes, say, which is, which is right for automation. Then you can be more bold. You can go with YOLO.
+
+You can have what's called Ralph Loops, which we'll explore this week. And you can even go to this kind of multi agent, swarms, orchestration stuff that we'll focus on next week. So this just gives you again the kind of lay of the land.
+
+And I need to press home on the points that was emphasized in the Jelly Fenn post. If you remember that, that it is your job and my job to deliver code that we are accountable for, that we have proven to ourselves that it works and that it's good. We can use LLM's to help us.
+
+We can use them to expand our capabilities to use Andre's word. But the key is that we are responsible for the quality of the code we deliver and for making sure that it works. Now, if last week was about vibe coding, vibe coding for fun and profit, this week is changing the conversation to be about something called vibe engineering.
+
+And that's not necessarily a proper phrase. It was a term that was coined by Simon Willison, amazing AI engineer and writer, who I will often show you his stuff. But he made this, this blog post, which I will show you.
+
+And he says, "I feel like vibe coding pretty well established as covering a fast, loose, irresponsible way of building with AI, prompt-driven, no attention to how the code actually works." And so this leaves us with what he calls a terminology gapper, missing word. What do we call the other end of the spectrum where seasoned professionals accelerate their work with LLMs whilst proudly and confidently staying accountable for the software they produce. And he proposes we call it vibe engineering.
+
+### Deep dive
+
+And your tongue slightly in cheek, but not really. He really really wants this term. And and I see why and it is taking off somewhat.
+
+And certainly it's in the spirit of this exact right up here that we're going to go through our material this week. It's somewhat consistent with day five of last week, but just taking it further, it's about being highly productive, highly effective and impactful, but whilst keeping accountability for the code you build, doing it in a bullet proof way, that is vibe engineering. And so in fact, we will take a second to go through his post, just so I could show you some of the points you make 'cause it's so well done.
+
+This is his blog and it's an amazing blog. We've already gone through the first section. Let me keep going.
+
+One of the lesser spoken truths of working with our LAMs is that it's difficult. There's a lot of depth to understanding the tools, there are traps and the pace at which they can chan out code. It's can be crazy.
+
+The rise of coding agents like Claude Code, first release in February, Codex CLI, the CLI version and Gemini CLI, the CLI version, we've been using the IDE versions of these. Can iterate on code, test and modify until it achieves a goal, it's dramatically increased the usefulness of LLMs as we will see when we use the CLI tools this week. And then he says, "I'm increasingly hearing from experienced, credible engineers who are running multiple agents at once, tackling several projects in problems in parallel and expanding the scope of what they can do.
+
+He was skeptical to start with, but now he's doing it himself and it's effective if mentally exhausting." And that's what we'll be doing next week. It feels different from classic vibe coding. He built lots of tools that way and his tools are amazing.
+
+But iterating with coding agents to produce production quality code feels like a different process entirely. And it's also clear that they reward top processes, automated testing, building a testing process in, planning in advance. We've done a fair amount of that with like the plan that we did on day five and then executing it step by step.
+
+Comprehensive documentation, we've been doing that. We've been seeing how that works. Good version control habits.
+
+We've been taking Git checkpoints, but we're doing more this week with check pointing, built into cloud code and highly effective automation. So we'll certainly be doing plenty of that this week. And now someone makes some real pro points.
+
+### Putting it together
+
+I just love to show with you a culture of code review, making sure that your LLM reviews its own work. We've done that already a couple of times. So powerful, a very weird form of management, getting good results feels uncomfortably close to getting good results out of a human collaborator, but with some differences that he points out.
+
+Really good manual QA, being able to do that as well as the automated sort. Strong research skills, understanding there's many different ways that you can ask for a problem, and sometimes you hit a blocker, it's good just to step back and just try again with a different way of doing it, and having that mindset, which is hard, 'cause you wanna solve the problem you've got, and knowing when to just try something different. It's a real skill.
+
+The ability to ship a preview is a very interesting point. An instinct for what you can outsource to an AI and what you cannot. This, I just couldn't agree more with Simon, it's such a key point.
+
+I've developed over time this good sense of the fact that, for example, front end is something that I can absolutely just delegate to the LLM, it will build a front end, I can give it some feedback, it's going to be great. When it comes to backend and particularly say working actually with LLMs, it's often struggling. And for example, in week one, day five, we came back and looked at that main Python module.
+
+And whilst it was working, it was a mess and it had a bunch of things in it which were needed to be refactored. And that's why you need to have a really good instinct for what are the LLMs reliable they're doing and what are they not and being able to jump in and help them. And an interesting point is that the way we estimate projects has changed.
+
+It's always been hard for a software engineer and now in some ways it's easier, in some ways it's harder. Often these tools like Cloud Code will be able to rattle out code really really quickly and you get this false sense that you can accomplish incredible things in minutes. But then you hit a wall and then you could be stuck for several hours bashing your head against a wall and something that feels like it should be really easy.
+
+And so you need to factor that into your estimates. As I say, you know, don't get caught up in the hype of the 10X. There's a huge efficiency improvement here.
+
+And to Andre's point, you can expand your capabilities, but there are definitely drawbacks and you need to factor them in. And all of this is kind of summarized here by Simon. He says, if you're going to really exploit these capabilities, you need to be at the top of your game.
+
+Designing success criteria. Remember that.
+
+## Walkthrough
+
+This session walks through the material step by step. Use the notes below as a study guide while you rewatch or practice alongside the original lesson.
+
+Welcome to pro week. And today is a yellow day, which means it's a platform day, a product day. And of all the product days, this is the one, this is the one that's near and dear to my heart, this is Claude Code Day.
+
+## Practical tips
+
+- And I need to press home on the points that was emphasized in the Jelly Fenn post. If you remember that, that it is your job and my job to deliver code that we are accountable for, that we have proven to ourselves that it works and that it's good. We can use LLM's to help us.
+- It's always been hard for a software engineer and now in some ways it's easier, in some ways it's harder. Often these tools like Cloud Code will be able to rattle out code really really quickly and you get this false sense that you can accomplish incredible things in minutes. But then you hit a wall and then you could be stuck for several hours bashing your head against a wall and something that feels like it should be really easy.
+- And so you need to factor that into your estimates. As I say, you know, don't get caught up in the hype of the 10X. There's a huge efficiency improvement here.
+- Designing success criteria. Remember that.
+
+## Common pitfalls
+
+- Skipping setup steps called out early in the lesson
+- Copying outcomes without understanding the workflow behind them
+- Running ahead without verifying intermediate results
+
+## Summary
+
+We've done that many times. Designing agentic loops, planning QA, managing a growing army of weird digital interns who will absolutely cheat if you give them a chance and spending so much time on code review. Very wise words, read this whole blog post, link in the resources. This is gold.
+`;export{e as default};

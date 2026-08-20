@@ -1,0 +1,123 @@
+var e=`# Karpathy on Vibe Coding & Rules for Building a Commercial MVP
+
+> Week 1 · Day 5
+
+## Overview
+
+Oh my goodness, I am super excited about today. It's another blue day.
+
+It's the conclusion of week one. It's a project day.
+
+It's just going to be so great. Yeah, this week is meant to be about vibe coding for fun and profit.
+
+## You will learn
+
+- Understand the main ideas covered in **Karpathy on Vibe Coding & Rules for Building a Commercial MVP**
+- Follow the practical walkthrough from Week 1, Day 5
+- Apply the techniques discussed in your own projects
+
+## Key concepts
+
+### Foundations
+
+I feel like we've done plenty of fun. It's time to look at the profit side of things. We're going to build a commercial MVP of a product that perhaps you could monetize.
+
+And we're going to do it with vibe coding. And I feel like yesterday I talked you through the rules of the road, how to be successful with vibe coding. And then I broke all the rules by just yoloing and not watching what was happening.
+
+Well, today we are going to follow the rules and you're going to see how that leads to successful outcomes. But first I want to take you through a series of tweets from Andrei Karpathy, the amazing Andre Karpathy, some of which we've already seen, but I want to take you through them in order of when they came out in chronological order. This tweet was the one I showed you before, which was when Andre coined the term "vibe coding." There's a new kind of coding.
+
+"Were you given fully to the vibes, embraced the exponentials, forget that the code even exists?" It's possible because the LLMs are getting too good. So there you have it. And Andra mentions Cursor Composer and Sonnet.
+
+And now we will take his next tweet in this series. Yeah, that was from February of last year. Then this came at the end of the year.
+
+And this was how I opened up the course. If you remember, this was Andra's kind of explosion of what's going on. I've never felt this much behind as a programmer.
+
+I feel like I could be 10x more powerful if I could just string together what's going on, involving agents, sub-agents, prompts, contacts, memory modes, permissions, tools, plug-in skills hooks, mcp lsp slash workflows, IDE integrations and a need for an all-encompassing mental model. That was Carpathi's tweet that inspired this entire course, and we've only touched a few of them, and by the end of our three weeks, we will have covered them all. So that was the tweet in December.
+
+And then there's another tweet. And this tweet is a long one from the end of January, and I'm not gonna go through all of this, but just, he sort of plocks out, it's sort of a train of thought about some of the things that are really on his mind about how agentic coding is really shaping up. He says in terms of the workflow, he's gone from being 80% in the manual auto complete world with 20% in agents.
+
+Now to 80% agents, 20% edits and touching up. That is the shift that he's been through. That's the first section, coding workflow.
+
+And the next section is on the sort of agent swarms movement. And he says the no need for IDE anymore, hype and the agent swarm hype is too much for me right now. The models definitely make mistakes.
+
+If you have any code you actually care about, I would watch them like a Hawk. I could not agree more. So this is similar to saying that this new sort of 2026 movement is perhaps ahead of its time.
+
+And when it comes to serious coding, you still want to be all over what's going on. Even if you're yoloing, you're still watching like a Hawk to quote Andre. And the third point now I'm on the top of the right hand column there is about tenacity.
+
+It's so interesting to watch. He says how agents just work relentlessly. They never get tired.
+
+### Deep dive
+
+They never get demoralized. They just keep going. And next up is speedups, which is where he's saying that he's not sure how to measure the productivity improvement.
+
+He feels net way faster, but the main effect is he does a lot more than he was going to do. So he's sort of saying it's like when people presumably people often ask him what is it? Is it 10x?
+
+Is it 2x? What is it? It's a hard one to answer.
+
+It feels like there's more output. It's not clear how to put that in terms of velocity. He says not not it's a speed up but possibly a lot more about an expansion.
+
+about an expansion. And then he talks about the leverage that they give you, the ability to meet bigger goals, putting it in a loop, the power of the loop. And then a one that's quite surprising, which as he acknowledges, is one that people have very different views on, is the fun element that he says for him, he didn't anticipate that agent programming feels more fun because basically they take care of the drudgery, they take care of the stuff like getting stuck on something and bashing your head against a wall.
+
+And he says that LLM coding splits up engineers. There are some that love it and some that hate it. And he thinks perhaps that maps to people who like coding and people who primarily liked building.
+
+And presumably he's, he's lining himself as a builder, someone who gets satisfaction from building stuff rather than just typing out code and running it. That might be the distinction. And some people get their pleasure from one versus the other.
+
+And that might affect whether you enjoy the experience of vibe coding. And then two final points on the bottom right there, which are both fascinating. One of them, Atrafi, is saying that he's seeing himself starting to lose his technical acumen, his ability to write code, he's falling out of practice because he's sort of allowing the AI to do the show.
+
+And that's certainly a risk we all want to think about. It's something I felt myself too. It's more for me that the just, the temptation just to constantly fire back at the agents and I have a sense of friction if I then have to go and read the code once I've got used to just running with Cloud Code.
+
+So it's a very interesting point indeed. And then the last one, I don't know how to pronounce this, slop apocalypse, slop apocalypse. Try saying that.
+
+So he's saying that he's bracing for the year that LLM Slop just goes everywhere. And it's something we've all got to prepare ourselves for. I think as we saw last time when we were looking at the jelly fin write up, I think we're going to see a backlash against people delivering Slop and a need for code that gets contributed to be concise and not to have emojis all over long readmes and so on.
+
+And so I think we're going to see that kind of, that backlash and a movement towards code that is clearly not slop. But this is going to be a big part of 2026. So I wanted to share this because I felt this was fascinating.
+
+It's really like off the cuff, train of thought, and it resonates with me a lot. I'm also like, Claude Code is definitely where I spent most of my time and it's where we'll be spending the next two weeks. And yeah, a lot of this rings true for me in a big way.
+
+### Putting it together
+
+Okay, with that, I'm going to do what I sometimes do, which is annoying of me. I want to do a quick recap of some of the material we already covered yesterday. And you might be thinking, but we already did that, but still, it's so important.
+
+I want to go through it a second time, but very quickly, just to really hammer home some of the key points about the right way to vibe code for success. So the headline that I told you last time was that you need to be the boss. That is the key to success and you need to invest in your agents.md or equivalent.
+
+Be concise but go through the spec what you want, the style how you want it built and what will success look like. You want to start simple and work incrementally, testing constantly, validating success criteria, and don't get lazy, challenge, demand evidence, or as Andre says, watch it like a hawk, and then always be on top of what's going on. And then handle frustration, which, which, as Audrey doesn't mention this, but when you do find yourself hitting the same problem again and again, figure out how to just take a step back, do things differently.
+
+This is the new way of working and dealing with LLMs that mess up. That's part of the journey. And I said last time that interestingly, these rules apply both to junior people coming into this relatively fresh and to senior engineers, just perhaps in a slightly different way.
+
+For junior engineers, it's about using this as an opportunity to learn and being skeptical. Even though you're sort of learning from something that knows more than you about this topic, you still want to treat it as something that's unproven as if you were a non-technical manager that's been put in charge of a bunch of people who are very enthusiastic, very eager, but not necessarily always right. They sometimes jump to conclusions.
+
+They, in their eagerness, they sometimes trip up over each other. And so your job is to be the probing manager who, even though you don't have the same level of technical depth, you can ask the challenging questions. You can say, give me the evidence for this.
+
+Have you thought about this? Show me this. Explain this to me.
+
+And you can say, you know, the like, managers sometimes do this, when they say, "This might be a silly question, but perhaps you could explain to me." And then they ask a really pointed insight for question. They're like, "Oh my goodness, that's what you have to do, that's your job." And if you're a senior manager, then it's about figuring out how you can work effectively in this new way of doing things, less coding more building to use Andre's expression. And so get into the sense of this is the new craft and then do the building and figure out how to make that work for you so that you're enjoying it.
+
+Maybe like Andre, you're going to enjoy it even more once you find your groove with this and realize that you can expand, you can deliver more capability in the same time through the use of these agents and they can take care of the stuff that was perhaps mundane before, so figuring out that balance. But then yes, always taking advantage of your expertise to be also challenging, making sure that everything is being thought through and never letting it be, never getting lazy and just letting it do its thing. Always watch it like a hawk.
+
+And that leads to the summary point, which is have a healthy balanced attitude towards this expect mixed results. Don't get caught up in the hype. Don't get caught up in the 10X, build whatever you want, sit back, you can yolo your way to building a complete product.
+
+It's not true.
+
+## Walkthrough
+
+This session walks through the material step by step. Use the notes below as a study guide while you rewatch or practice alongside the original lesson.
+
+I feel like we've done plenty of fun. It's time to look at the profit side of things. We're going to build a commercial MVP of a product that perhaps you could monetize.
+
+## Practical tips
+
+- And this was how I opened up the course. If you remember, this was Andra's kind of explosion of what's going on. I've never felt this much behind as a programmer.
+- It's so interesting to watch. He says how agents just work relentlessly. They never get tired.
+- They never get demoralized. They just keep going. And next up is speedups, which is where he's saying that he's not sure how to measure the productivity improvement.
+- So it's a very interesting point indeed. And then the last one, I don't know how to pronounce this, slop apocalypse, slop apocalypse. Try saying that.
+
+## Common pitfalls
+
+- Skipping setup steps called out early in the lesson
+- Copying outcomes without understanding the workflow behind them
+- Running ahead without verifying intermediate results
+
+## Summary
+
+And if you think that, then you're just gonna get frustrated and you're gonna hit a wall. So instead recognize that there is an incredible upside of this, but there's also a downside. Expect that and then work incrementally and slowly, so that you build things in a realistic, reasonable way. And as long as that's where your head is at, then you're going to absolutely love this.
+`;export{e as default};
