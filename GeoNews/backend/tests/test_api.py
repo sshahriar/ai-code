@@ -168,9 +168,224 @@ def test_brief_and_chat_mock(client: TestClient) -> None:
     assert body.get("risk_level") in ("low", "moderate", "high", "unknown")
     assert isinstance(body.get("caveats"), list)
 
-    chat = client.post("/api/chat", json={"message": "What is happening in Dhaka?"})
+    chat = client.post(
+        "/api/chat",
+        json={
+            "message": "What is happening in Dhaka?",
+            "lat": 23.81,
+            "lon": 90.41,
+            "place_name": "Dhaka",
+        },
+    )
     assert chat.status_code == 200
     chat_body = chat.json()
     assert chat_body.get("mock") is True
     assert "message" in chat_body
     assert chat_body.get("brief", {}).get("place_name") == "Dhaka"
+
+
+def test_ingest_place_endpoint_shape(client: TestClient, monkeypatch) -> None:
+    from ingest.base import AdapterBatch
+
+    place = {"name": "Chattogram", "lat": 22.3569, "lon": 91.7832, "country_code": "bd"}
+    event = {
+        "source": "rss",
+        "external_id": "https://news.example.com/ctg-api-1",
+        "title": "Chattogram rains disrupt traffic",
+        "summary": "Local flooding reported",
+        "url": "https://news.example.com/ctg-api-1",
+        "source_name": "Example",
+        "category": "disaster",
+        "severity": 3,
+        "lat": place["lat"],
+        "lon": place["lon"],
+        "place_name": place["name"],
+        "occurred_at": "2026-08-17T11:00:00Z",
+        "ingested_at": "2026-08-17T11:00:00Z",
+    }
+
+    class _Ok:
+        source = "rss"
+
+        def fetch(self):
+            return AdapterBatch(events=[event])
+
+    class _EmptyGdelt:
+        source = "gdelt"
+
+        def fetch(self):
+            return AdapterBatch()
+
+    monkeypatch.setenv("INGEST_MOCK", "false")
+    import config as config_mod
+
+    config_mod.get_settings.cache_clear()
+    monkeypatch.setattr(
+        "ingest.runner.build_adapters",
+        lambda conn, *, mock=None, places=None: [_EmptyGdelt(), _Ok()],
+    )
+    # Bypass cooldown/busy from prior tests in-process.
+    monkeypatch.setattr("ingest.runner._running", False)
+    monkeypatch.setattr("ingest.runner._last_manual_run_at", 0.0)
+
+    listed_before = client.get("/api/watchlist").json()["places"]
+    resp = client.post("/api/ingest/place", json=place)
+    assert resp.status_code == 200
+    body = resp.json()
+    assert body["ok"] is True
+    assert body["place"]["name"] == "Chattogram"
+    assert body["place"]["lat"] == place["lat"]
+    assert body["place"]["lon"] == place["lon"]
+    assert isinstance(body["rows_upserted"], int) and body["rows_upserted"] >= 1
+    assert isinstance(body["sources"], list) and body["sources"]
+    assert isinstance(body["events"], list)
+    assert any(e.get("place_name") == "Chattogram" for e in body["events"])
+
+    listed_after = client.get("/api/watchlist").json()["places"]
+    assert listed_after == listed_before
+    assert not any(p["name"] == "Chattogram" for p in listed_after)
+
+    chat = client.post(
+        "/api/chat",
+        json={
+            "message": "Brief this place",
+            "lat": place["lat"],
+            "lon": place["lon"],
+            "place_name": "Chattogram",
+            "window": "7d",
+        },
+    )
+    assert chat.status_code == 200
+    chat_body = chat.json()
+    assert "message" in chat_body
+    assert "chattogram" in str(chat_body).lower()
+
+
+def test_ingest_place_all_fail_502(client: TestClient, monkeypatch) -> None:
+    class _Fail:
+        source = "rss"
+
+        def fetch(self):
+            raise RuntimeError("down")
+
+    monkeypatch.setenv("INGEST_MOCK", "false")
+    import config as config_mod
+
+    config_mod.get_settings.cache_clear()
+    monkeypatch.setattr(
+        "ingest.runner.build_adapters",
+        lambda conn, *, mock=None, places=None: [_Fail()],
+    )
+    monkeypatch.setattr("ingest.runner._running", False)
+    monkeypatch.setattr("ingest.runner._last_manual_run_at", 0.0)
+
+    resp = client.post(
+        "/api/ingest/place",
+        json={"name": "Chattogram", "lat": 22.35, "lon": 91.78},
+    )
+    assert resp.status_code == 502
+    body = resp.json()
+    assert body["ok"] is False
+    assert body["error"]["code"] == "ingest_failed"
+    assert body["sources"]
+
+
+def test_chat_empty_place_returns_limited_context_caveat(client: TestClient) -> None:
+    resp = client.post(
+        "/api/chat",
+        json={
+            "message": "Brief this place",
+            "lat": -12.0,
+            "lon": -77.0,
+            "place_name": "Nowhereville",
+            "window": "24h",
+        },
+    )
+    assert resp.status_code == 200
+    body = resp.json()
+    blob = str(body).lower()
+    assert "no news" in blob or "limited context" in blob
+    caveats = (body.get("brief") or {}).get("caveats") or []
+    assert any("no news" in c.lower() or "limited context" in c.lower() for c in caveats)
+
+
+def test_chat_persists_messages_for_selected_place(client: TestClient, db_path) -> None:
+    from datetime import datetime, timezone
+
+    from db import connect, upsert_event
+
+    now = datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+    conn = connect(db_path)
+    try:
+        upsert_event(
+            conn,
+            {
+                "source": "rss",
+                "external_id": "https://news.example.com/ctg-chat-1",
+                "title": "Chattogram port delay",
+                "summary": "Ships waiting offshore",
+                "url": "https://news.example.com/ctg-chat-1",
+                "source_name": "Example",
+                "category": "economy",
+                "severity": 2,
+                "lat": 22.3569,
+                "lon": 91.7832,
+                "place_name": "Chattogram",
+                "occurred_at": now,
+            },
+        )
+        conn.commit()
+    finally:
+        conn.close()
+
+    resp = client.post(
+        "/api/chat",
+        json={
+            "message": "Brief this place",
+            "lat": 22.3569,
+            "lon": 91.7832,
+            "place_name": "Chattogram",
+            "window": "7d",
+        },
+    )
+    assert resp.status_code == 200
+    body = resp.json()
+    assert "chattogram" in str(body).lower()
+
+    conn = connect(db_path)
+    try:
+        rows = conn.execute(
+            "SELECT role, content FROM chat_messages ORDER BY created_at"
+        ).fetchall()
+        roles = [r["role"] for r in rows]
+        assert roles.count("user") >= 1
+        assert roles.count("assistant") >= 1
+        assert any("Brief this place" in (r["content"] or "") for r in rows)
+    finally:
+        conn.close()
+
+
+def test_chat_live_failure_does_not_leak_secrets(client: TestClient, monkeypatch) -> None:
+    monkeypatch.setenv("LLM_MOCK", "false")
+    monkeypatch.setenv("OPENROUTER_API_KEY", "sk-test")
+
+    def _boom(*_args, **_kwargs):
+        raise RuntimeError("OPENROUTER_API_KEY=sk-or-secret traceback")
+
+    monkeypatch.setattr("llm.chat.structured_completion", _boom)
+    resp = client.post(
+        "/api/chat",
+        json={
+            "message": "Brief this place",
+            "lat": 22.35,
+            "lon": 91.78,
+            "place_name": "Chattogram",
+        },
+    )
+    assert resp.status_code == 502
+    body = resp.json()
+    assert body["error"]["code"] == "llm_failed"
+    dumped = str(body).lower()
+    assert "sk-or" not in dumped
+    assert "traceback" not in dumped
+    assert "secret" not in dumped

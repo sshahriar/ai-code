@@ -30,13 +30,21 @@ const MapView = dynamic(() => import("@/components/MapView"), { ssr: false });
 
 ## Basemap (free)
 
-Carto Dark (no key):
+Carto (no key). Attribution: `© OpenStreetMap © CARTO`. Default center: Dhaka `23.8103, 90.4125`, zoom 11.
+
+Dark (default):
 
 ```
 https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png
 ```
 
-Attribution: `© OpenStreetMap © CARTO`. Default center: Dhaka `23.8103, 90.4125`, zoom 11.
+Light (`html[data-theme="light"]`):
+
+```
+https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png
+```
+
+Give `TileLayer` `key={theme}` when swapping URLs so Leaflet remounts the layer.
 
 ## Category colors (from plan.md)
 

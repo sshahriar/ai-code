@@ -179,10 +179,12 @@ test.describe("GeoNews E2E (plan §17)", () => {
   test('6. AI mock: "Brief this place" → brief + caveats', async ({ page }) => {
     await gotoApp(page);
 
+    await page.getByTestId("ai-fab").click();
     const panel = page.getByTestId("ai-panel");
     await expect(panel).toBeVisible();
 
     const input = page.getByTestId("ai-input");
+    await expect(input).toBeVisible();
     await input.fill("Brief this place");
     await panel.getByRole("button", { name: /^Send$/i }).click();
 
@@ -212,5 +214,40 @@ test.describe("GeoNews E2E (plan §17)", () => {
     await expect(page.getByTestId("geonews-map")).toBeVisible();
     await expect(page.locator(".leaflet-container")).toBeVisible();
     await expect(page.getByTestId("intel-drawer")).toBeVisible();
+  });
+
+  test("9. Theme toggle switches chrome and map tiles", async ({ page }) => {
+    await gotoApp(page);
+    const html = page.locator("html");
+    await expect(html).toHaveAttribute("data-theme", "dark");
+
+    const toggle = page.getByTestId("theme-toggle");
+    await expect(toggle).toBeVisible();
+    await toggle.click();
+    await expect(html).toHaveAttribute("data-theme", "light");
+
+    await expect
+      .poll(async () => {
+        const srcs = await page.locator(".leaflet-tile").evaluateAll((nodes) =>
+          nodes.map((n) => (n as HTMLImageElement).src),
+        );
+        return srcs.some((src) => src.includes("light_all"));
+      }, { timeout: 20_000 })
+      .toBeTruthy();
+
+    await page.reload();
+    await expect(page.getByTestId("geonews-map")).toBeVisible({ timeout: 30_000 });
+    await expect(html).toHaveAttribute("data-theme", "light");
+
+    await page.getByTestId("theme-toggle").click();
+    await expect(html).toHaveAttribute("data-theme", "dark");
+    await expect
+      .poll(async () => {
+        const srcs = await page.locator(".leaflet-tile").evaluateAll((nodes) =>
+          nodes.map((n) => (n as HTMLImageElement).src),
+        );
+        return srcs.some((src) => src.includes("dark_all"));
+      }, { timeout: 20_000 })
+      .toBeTruthy();
   });
 });

@@ -76,9 +76,11 @@ They immediately see:
 
 ### Visual design
 
-- Dark theme: background `#0b1220`, panels `#121a2b`, borders `#243049`
-- Accent cyan `#22d3ee`, alert red `#f43f5e`, warning amber `#f59e0b`, safe green `#34d399`
-- Map: dark Carto / OSM tiles (free). Pins colored by category. Clusters for density.
+- **Dark is the default** (situation-room aesthetic). Users can switch to **light** from the header; the choice is stored in `localStorage` (`geonews.theme`) and applied before first paint.
+- Dark tokens: background `#0b1220`, panels `#121a2b`, borders `#243049`, accent cyan `#22d3ee`
+- Light tokens: cool slate surfaces (`#f4f6fb` / white panels), ink text `#0f172a`, darker cyan accent `#0891b2` for contrast on white
+- Alert red `#f43f5e`, warning amber `#f59e0b`, safe green `#34d399` (slightly darker on light)
+- Map: free Carto tiles — `dark_all` in dark mode, `light_all` in light mode. Pins colored by category. Clusters for density.
 - Connection / ingest status dot in the header (green = live, yellow = ingesting, red = source down)
 - Desktop-first, functional on tablet
 
@@ -449,17 +451,18 @@ adapters → normalize → upsert events/incidents → emit SSE
 
 **Adapters (v1):**
 
-1. `GdeltAdapter` — last 15 min GEO/DOC export, keep rows with lat/lon, map CAMEO/tone → category + severity
-2. `RssAdapter` — Google News RSS for each watchlist place; geocode place centroid if article has no coords
-3. `GuardianAdapter` — if key present
+1. `GdeltAdapter` — DOC 2.0 `artlist` per watchlist place (real publisher URLs), pinned to the place centroid; keep only headlines that name the place, max 1 request / 6 s
+2. `RssAdapter` — Google News RSS for each watchlist place; geocode place centroid if article has no coords, `occurred_at` from `pubDate`
+3. `GuardianAdapter` — if `GUARDIAN_API_KEY` present: one search per watchlist place, pinned to the place centroid, keeping only articles whose headline or standfirst names the place
 4. `PoliceUkAdapter` — only if a watchlist point is inside the UK bbox
-5. `SampleAdapter` — always available; only writer when `INGEST_MOCK=true` or DB empty
+5. `SampleAdapter` — seed/demo only: runs when `INGEST_MOCK=true` or the DB is empty, and its rows are purged on the first successful live run
 
 **Rules:**
 
-- Dedup on `(source, external_id)`
+- Dedup on `(source, external_id)`; `external_id` is the article URL for news adapters
+- Every event must carry a real, absolute article `url` — the map popup and card headline link to it
 - Nominatim: in-memory + SQLite cache, **max 1 req/sec**, custom User-Agent
-- GDELT: do not download unbounded files; cap to latest window
+- GDELT: do not download unbounded files; cap to latest window, respect the 1 req / 5 s limit (we use 6 s + backoff)
 - Never block the API event loop on a full ingest — use a background task / thread
 - Record every run in `ingest_runs`
 
@@ -519,7 +522,7 @@ Single page. Frontend Engineer chooses component split, but the UI must include:
 - **Search bar** — Nominatim via `/api/places/search`
 - **Filter chips** — category + time window + layer toggles
 - **Intel drawer** — event list, selected event, crime summary counts
-- **AI panel** — collapsible chat, loading state, brief card, caveats
+- **AI panel** — floating analyst bubble over the map; overlay chat with bubbles, brief card, and composer (default closed)
 - **Watchlist** — chips that fly the map
 - **Header** — title, ingest/LLM status, last ingest time
 - **Hotspot list** — top 5 from `/api/hotspots`

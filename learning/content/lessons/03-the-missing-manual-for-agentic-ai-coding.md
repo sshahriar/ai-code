@@ -1,88 +1,64 @@
+<!-- ai-generated:true -->
+<!-- model:x-ai/grok-4.5 -->
 # The Missing Manual for Agentic AI Coding
-
-> Week 1 · Day 1
+> Week 1 | Day 1
 
 ## Overview
-
-A big part of my motivation for making this course came from a tweet, a post on X, that the incredible Andrei Karpathy made a few months ago. And I put the tweet up here, Andrei Karpathy, of course, he's one of the founding members of OpenAI.
-
-He's been across his work at Tassa and OpenAI, and at Stanford. He is just such a luminary in the industry.
-
-And he's also the person that coined the term "vibe coding," as we'll find out later. And this was a tweet that he came up with late last year.
+Agentic AI is refactoring what it means to be a programmer. The bits you type are sparser; a new abstraction layer—agents, context, tools, permissions, integrations—sits on top of ordinary engineering. That layer is powerful, stochastic, and poorly documented. This course is the missing manual: a practical mental model for what these pieces are, how they fit, where they shine, and where they fail, so you can claim the leverage without drowning in hype.
 
 ## You will learn
+- Why the profession feels “refactored” and what the new abstraction layer actually contains
+- Who this material is for (aspiring builders through staff engineers) and how to pace it
+- What “done” looks like after three weeks: build, debug, and evolve software at any scale with agents
+- How to separate real capability from hype and manage strengths vs. weaknesses
+- How agentic skills map to modern job expectations (MCP, skills, hooks, workflows, and related ideas)
 
-- Understand the main ideas covered in **The Missing Manual for Agentic AI Coding**
-- Follow the practical walkthrough from Week 1, Day 1
-- Apply the techniques discussed in your own projects
+## Topics
+### Karpathy’s “no manual” moment
+A widely shared observation from Andrei Karpathy captures the mood: experienced programmers feel behind not because fundamentals vanished, but because a new stack appeared in roughly a year—agents and sub-agents, prompts, context, memory, modes, permissions, tools, plugins, skills, hooks, MCP, LSP, slash commands, workflows, IDE integrations—and it must be held in one mental model. These entities are stochastic, fallible, often opaque, and still changing, yet they are now interleaved with classical engineering. The failure to “string it together” for a large productivity jump feels like a skill gap. This course exists to turn that unnamed earthquake into named, operable practice.
 
-## Key concepts
+### The course as the missing manual
+The goal is not tool tourism. By the end, you should reread that inventory of concepts and honestly mark each one: what it is, how it composes with the others, when it helps, when it hurts, and what is marketing. “Agentic AI coding” here means navigating that full layer deliberately—so you can hold the alien tool while the ground is still moving, instead of collecting disconnected tips.
 
-### Foundations
+### Two primary audiences, one spectrum
+The material is aimed at dual archetypes. First: aspiring engineers—juniors or people new to code—who should leave able to ship complete, even large-scale products with confident use of AI agents. Second: senior and staff engineers who already ship complex systems but feel the surface area of agentic tooling is too wide, or who are new to it and want a coherent way to combine pieces for maximum acceleration without losing craft. In practice, something lands for everyone in between: newer learners take the gist of advanced bits and move on; experts skim setup-level material and slow down for integration, failure modes, and workflow design.
 
-And I'm going to do the slightly unusual thing of reading this tweet to you, but adding some expression to it, 'cause I think it's so incredible. Andres says, "I've never felt this much behind "as a programmer. "The profession is being dramatically refactored "as the bits contributed by the programmer are increasingly sparse and between.
+### Enjoyment and the changing shape of the job
+A common fear is that AI removes the joy of engineering. The framing here is different: the equation changes. Some activities you used to love recede; new ones appear—orchestration, specification, review, system-level problem solving, and building things that were previously out of reach. Passion stays rooted in solving problems and shipping great work; the course treats agentic practice as a way to protect that, not replace it with button-mashing.
 
-I have the sense that we could be 10x more powerful. If I could just properly string together what's become available over about the last year and a failure to claim that boost feels like a skill issue. There's this new layer of abstraction in addition to the usual layers that involves agents, sub-agents, their prompts, context, memory, modes, permissions, tools, plugins, skills, hooks, mcp, lsp, slash commands, workflows, id integrations, and the need to build an all-encompassing mental model for strengths and pitfalls of fundamentally stochastic, fallible, unintelligible and changing entities" suddenly intermingled with what used to be good old-fashioned engineering.
+### Outcomes after three weeks
+You should be able to build, debug, troubleshoot, and enhance real software with agent assistance at multiple scales—from small greenfield projects (for example a game) to large collaborative codebases and multi-repo environments. You should be positioned to take advantage of the current landscape rather than chase every headline, and to demonstrate fluency that job descriptions increasingly assume: efficient agent-assisted delivery, familiarity with concepts such as MCP, skills, hooks, and tighter loops that tie them together for speed without abandoning quality.
 
-Wow, what a tweet. And then Andre ends the tweet with "clearly, some powerful alien tool was handed around except it comes with no manual and everyone has to figure out how to hold it and operate it while the resulting magnitude 9 earthquake is rocking the profession. Roll up your sleeves to not fall behind.
+### Hype discipline: strengths and drawbacks
+Enthusiasm is not the same as hype capture. The tools in the coming weeks are genuinely powerful and enabling; they also have serious downsides. Success is defined as knowing both sides—maximizing strengths while actively managing weaknesses—rather than assuming autonomy equals reliability. That balanced stance is a first-class theme, not a disclaimer.
 
-An inner nutshell, that, that tweet is what this course is all about. This course, as I said at the beginning, it is the missing manual. The idea is that at the end of this course you'll be able to bring back up this tweet and read that through and you'll be able to say, "Yes, yes, yes.
+### Connecting dots across experience levels
+The curriculum deliberately mixes “obvious” operational detail with deeper composition and judgment. That is intentional: the missing manual is the map of how pieces interact, not a single seniority band. Skim what you know; dwell on what rewires how you sequence agents, context, and classical engineering discipline.
 
-I know what all these things mean. I know how they fit together. I know where they work well, where they don't work.
-
-I can separate the hype from the facts." And I know how to navigate this crazy new world of agentic AI coding. That is what I have in store for you over three weeks. So who exactly is this intended for?
-
-Is it meant for people who are junior or for people who are senior coders, never coded before? You're an expert. Well, here's the answer.
-
-### Deep dive
-
-It's for two different types of people. First of all, aspiring engineers, people who maybe are junior or not technical at all today. Maybe this is one of your first times ever writing code.
-
-Or maybe you've written a bit bit but you consider yourself not yet an expert. You will be able to build complete products, large-scale products with confidence with the assistance of AI agents. And the other archetype, the other person that I'm targeting this course for is actually people who are senior staff engineers, people who are experienced coders, but either relatively new to the Agentica AI coding, or you feel a bit like Andre's tweets, you feel like there's just too much going on.
-
-How do you navigate all these different things? How do you work them together to accelerate the most? And that's what this is about.
-
-I'm going to allow you to accelerate what you can do to maximize the potential and importantly to keep enjoying what you do. Because a lot of what drives the passion for being an engineer for me and for you is about solving problems and building great stuff. And there's this sense out there that some of these AI tools are taking away the enjoyment.
-
-And I don't think that needs to be the case. I think it changes the picture. It means some things that I used to enjoy.
-
-I don't do anymore, but there are new things that I things that I used to enjoy. I don't do anymore. But there are new things that I enjoy that I can now do.
-
-And so it's a change in the equation. It's a change in what we can do. And there's stuff to enjoy out of that as well.
-
-### Putting it together
-
-And I know you know I'm going to say this, but of course I'm going to say that it's not actually for those two archetypes of person. You have to be either an aspiring engineer or a senior staff engineer, of course. The idea is that there will be something in this for everyone.
-
-I'm going to talk to people that are relatively new to coding or completely new, and to the experts too. This is something that connects the dots. And as a result, there'll be some things that might be too advanced for you, and that's okay.
-
-Just get a gist of it and keep moving. And for the experts, there's gonna be some stuff, like how to set up cursor, what's what's the project directory. There's going to be super obvious to you and don't worry just put me on two x zoom through that.
-
-There's going to be tons of juicy stuff here. There's going to be something for everyone across the spectrum of your technical experience. And so what will I leave you with at the end of our three weeks together, you will be able to build and debug and troubleshoot and enhance existing software products at any scale, whether it's a small, whether it's a first-person shooter game, or whether it's a large team collaboration with a massive repo or multiple repos, whatever scale, whatever kind of problem you're working on, you will be able to do it assisted by AI agents.
-
-You will be able to take the greatest advantage of the current landscape. In other words, you'll be able to tweet back at Carpathi and Andre and say, I get all this, I know how to navigate it, I have the missing manual. And thirdly and importantly, of course, increasingly, if you look at job descriptions, people expect that you have these kinds of skill sets.
-
-So you're able to use a GenTic AI to help you write code more efficiently. And you'll be able to apply to those jobs and show that you have the full skill set.
+### Vocabulary you will grow into
+Terms called out as part of the new layer—agents and sub-agents, prompts, context, memory, modes, permissions, tools, plugins, skills, hooks, MCP, LSP, slash commands, workflows, IDE integrations, and tighter delivery loops—will be turned from a intimidating list into a working lexicon. Early sessions establish why the list exists; later sessions show how to operate it as a system.
 
 ## Walkthrough
-
-This session walks through the material step by step. Use the notes below as a study guide while you rewatch or practice alongside the original lesson.
-
-And I'm going to do the slightly unusual thing of reading this tweet to you, but adding some expression to it, 'cause I think it's so incredible. Andres says, "I've never felt this much behind "as a programmer. "The profession is being dramatically refactored "as the bits contributed by the programmer are increasingly sparse and between.
+1. Anchor on the problem: the profession gained a new abstraction layer without a manual.
+2. Internalize the course promise: name every major piece, compose them, and judge fit vs. hype.
+3. Locate yourself on the aspiring ↔ staff spectrum and set pacing (gist vs. depth vs. 2x skim).
+4. Fix the success criteria: any-scale build/debug/enhance with agents; job-relevant fluency; sustained enjoyment.
+5. Adopt the operating stance early: catalog strengths and failure modes as you learn each tool—not after something breaks in production.
 
 ## Practical tips
-
-- And I'm going to do the slightly unusual thing of reading this tweet to you, but adding some expression to it, 'cause I think it's so incredible. Andres says, "I've never felt this much behind "as a programmer. "The profession is being dramatically refactored "as the bits contributed by the programmer are increasingly sparse and between.
-- I know what all these things mean. I know how they fit together. I know where they work well, where they don't work.
-- Is it meant for people who are junior or for people who are senior coders, never coded before? You're an expert. Well, here's the answer.
-- And I don't think that needs to be the case. I think it changes the picture. It means some things that I used to enjoy.
+- Keep a running personal glossary of the “new layer” terms and one line on when you would actually use each.
+- When a section feels basic, accelerate; when it feels advanced, capture the gist and return after you have hands-on reps.
+- Tie every new capability to a concrete task (build, debug, enhance) so the manual stays operational.
+- Preserve classical engineering habits—review, testing, boundaries—as the stable frame agents plug into.
+- Treat “10x” as contingent on composition skill, not on enabling a single feature flag in an IDE.
 
 ## Common pitfalls
-
-- Skipping setup steps called out early in the lesson
-- Copying outcomes without understanding the workflow behind them
-- Running ahead without verifying intermediate results
+- Collecting tools and acronyms without a mental model of how they interact.
+- Assuming senior experience transfers automatically to agent orchestration (it does not).
+- Assuming agents remove the need to learn fundamentals if you are new (they do not).
+- Binary narratives: either “AI ruins craft” or “AI never fails.”
+- Optimizing only for speed while ignoring stochastic failure, permission boundaries, and context limits.
+- Skipping “boring” setup and project structure, then blaming the model for chaotic outcomes.
 
 ## Summary
-
-You know about MCP and skills and hooks and so on and even Ralph Loops and how to bring it all together to deliver high quality software fast. And by the way, I just wanna clarify something that you'll hear me say a lot, which is that, whilst I am an upbeat type, I'm generally an enthusiast, I am not caught up in the Agentic AI hype. The tools that we're going to be using in the next few weeks are incredibly powerful and allow us to do amazing things, but they are not without their downsides. There are significant benefits and there are also drawbacks, and I'm going to make you very aware of those drawbacks and being successful using agentic AI to write software is about knowing about both the strengths and the weaknesses and being able to maximize the strengths and being able to manage the weaknesses and that is what we will be doing.
+This opening lesson frames agentic AI coding as a real shift in abstraction—not a fad—and positions the course as the manual that shift never shipped with. Whether you are learning to build or recalibrating a staff-level practice, the aim is the same: compose agents, context, tools, and workflows into reliable leverage, stay clear-eyed about drawbacks, and keep the core joy of shipping excellent software.

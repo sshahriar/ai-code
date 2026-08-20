@@ -271,3 +271,36 @@ def delete_watchlist_place(
     )
     conn.commit()
     return cur.rowcount > 0
+
+
+def insert_chat_message(
+    conn: sqlite3.Connection,
+    *,
+    role: str,
+    content: str,
+    user_id: str = "default",
+    actions: Any = None,
+    message_id: str | None = None,
+) -> dict[str, Any]:
+    """Persist a chat turn. ``actions`` is stored as JSON when provided."""
+    mid = message_id or str(uuid.uuid4())
+    created = _utc_now()
+    raw_actions = None
+    if actions is not None:
+        raw_actions = json.dumps(actions) if not isinstance(actions, str) else actions
+    conn.execute(
+        """
+        INSERT INTO chat_messages (id, user_id, role, content, actions, created_at)
+        VALUES (?, ?, ?, ?, ?, ?)
+        """,
+        (mid, user_id, role, content, raw_actions, created),
+    )
+    conn.commit()
+    return {
+        "id": mid,
+        "user_id": user_id,
+        "role": role,
+        "content": content,
+        "actions": raw_actions,
+        "created_at": created,
+    }

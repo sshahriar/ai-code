@@ -1,8 +1,9 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   addWatchlist,
+  describeApiError,
   getBrief,
   getEvents,
   getHealth,
@@ -14,6 +15,7 @@ import {
   subscribeEventStream,
   type ApiMode,
 } from "@/lib/api";
+import { usePlaceIngest } from "@/lib/usePlaceIngest";
 import { DHAKA } from "@/lib/fixtures";
 import type {
   BriefPayload,
@@ -34,8 +36,11 @@ import { FilterChips } from "./FilterChips";
 import { Header } from "./Header";
 import { HotspotList } from "./HotspotList";
 import { MapCanvas } from "./MapCanvas";
+import { PlaceIngestStatus } from "./PlaceIngestStatus";
 import { PlaceSearch } from "./PlaceSearch";
 import { Watchlist } from "./Watchlist";
+
+type ChatAction = { type: "chat"; message: string } | { type: "brief" };
 
 export function GeoNewsApp() {
   const [category, setCategory] = useState<EventCategory | null>(null);
@@ -64,9 +69,18 @@ export function GeoNewsApp() {
     Array<{ role: "user" | "assistant"; text: string }>
   >([]);
   const [chatLoading, setChatLoading] = useState(false);
+  const [chatError, setChatError] = useState<string | null>(null);
+  const [llmMockResponse, setLlmMockResponse] = useState<boolean | null>(null);
   const [streamTick, setStreamTick] = useState(0);
+  const lastChatAction = useRef<ChatAction | null>(null);
 
   const usingFixtures = apiMode === "fixture";
+
+  /** A live `mock: true` answer wins over health, which may itself be a fixture. */
+  const llmMock =
+    llmMockResponse ?? (!usingFixtures && health?.sources?.llm === "mock");
+
+  const bumpReload = useCallback(() => setStreamTick((n) => n + 1), []);
 
   const mergeMode = useCallback((mode: ApiMode) => {
     setApiMode((prev) => (mode === "fixture" || prev === "fixture" ? mode : "live"));
@@ -150,20 +164,40 @@ export function GeoNewsApp() {
     });
   }, []);
 
-  const onPlaceSelect = (place: PlaceResult) => {
-    setFocus({ lat: place.lat, lon: place.lon, name: place.name.split(",")[0] ?? place.name });
-    setFlyTarget({
-      lat: place.lat,
-      lon: place.lon,
-      zoom: 12,
-      bbox: place.bbox,
-    });
-  };
+  const placeIngest = usePlaceIngest({
+    onEvents: setEvents,
+    onReload: bumpReload,
+  });
+  const startPlaceIngest = placeIngest.start;
 
-  const onWatchFly = (place: WatchPlace) => {
-    setFocus({ lat: place.lat, lon: place.lon, name: place.name });
-    setFlyTarget({ lat: place.lat, lon: place.lon, zoom: 12 });
-  };
+  const onPlaceSelect = useCallback(
+    (place: PlaceResult) => {
+      const name = place.name.split(",")[0]?.trim() || place.name;
+      setFocus({ lat: place.lat, lon: place.lon, name });
+      setFlyTarget({
+        lat: place.lat,
+        lon: place.lon,
+        zoom: 12,
+        bbox: place.bbox,
+      });
+      void startPlaceIngest({
+        name,
+        lat: place.lat,
+        lon: place.lon,
+        country_code: place.country_code,
+      });
+    },
+    [startPlaceIngest],
+  );
+
+  const onWatchFly = useCallback(
+    (place: WatchPlace) => {
+      setFocus({ lat: place.lat, lon: place.lon, name: place.name });
+      setFlyTarget({ lat: place.lat, lon: place.lon, zoom: 12 });
+      void startPlaceIngest({ name: place.name, lat: place.lat, lon: place.lon });
+    },
+    [startPlaceIngest],
+  );
 
   const onAddCurrent = async () => {
     const { mode } = await addWatchlist({
@@ -183,40 +217,59 @@ export function GeoNewsApp() {
   };
 
   const onLoadBrief = async () => {
+    lastChatAction.current = { type: "brief" };
     setChatLoading(true);
+    setChatError(null);
     try {
-      const { data, mode } = await getBrief({
+      const data = await getBrief({
         lat: focus.lat,
         lon: focus.lon,
         window: timeWindow,
+        place_name: focus.name,
       });
-      mergeMode(mode);
+      setLlmMockResponse(data.mock === true);
       setBrief(data);
+    } catch (err) {
+      setChatError(describeApiError(err, "Could not load the AI brief."));
     } finally {
       setChatLoading(false);
     }
   };
 
-  const onSend = async (message: string) => {
-    setMessages((m) => [...m, { role: "user", text: message }]);
+  const runChat = async (message: string, echoUser: boolean) => {
+    lastChatAction.current = { type: "chat", message };
+    if (echoUser) setMessages((m) => [...m, { role: "user", text: message }]);
     setChatLoading(true);
+    setChatError(null);
     try {
-      const { data, mode } = await postChat({
+      const data = await postChat({
         message,
         lat: focus.lat,
         lon: focus.lon,
         place_name: focus.name,
+        window: timeWindow,
       });
-      mergeMode(mode);
+      setLlmMockResponse(data.mock === true);
       setMessages((m) => [...m, { role: "assistant", text: data.message }]);
       if (data.brief) setBrief(data.brief);
       if (data.watchlist_changes?.length) {
         await refreshWatchlist();
       }
       return data;
+    } catch (err) {
+      setChatError(describeApiError(err, "The AI analyst request failed."));
     } finally {
       setChatLoading(false);
     }
+  };
+
+  const onSend = (message: string) => runChat(message, true);
+
+  const onChatRetry = () => {
+    const action = lastChatAction.current;
+    if (!action) return;
+    if (action.type === "brief") void onLoadBrief();
+    else void runChat(action.message, false);
   };
 
   const emptyHint = useMemo(() => {
@@ -242,6 +295,7 @@ export function GeoNewsApp() {
             onHeatmap={setHeatmap}
           />
         </div>
+        <PlaceIngestStatus state={placeIngest.state} onRetry={placeIngest.retry} />
         <Watchlist
           places={watchlist}
           onFly={onWatchFly}
@@ -268,26 +322,27 @@ export function GeoNewsApp() {
             onBoundsChange={setBbox}
             onSelectEvent={setSelected}
           />
-        </div>
-
-        <div className="flex h-[42vh] w-full shrink-0 flex-col lg:h-auto lg:w-[360px] xl:w-[400px]">
-          <div className="min-h-0 flex-1">
-            <EventDrawer
-              events={events}
-              selected={selected}
-              onSelect={setSelected}
-              onClose={() => setSelected(null)}
-              emptyHint={emptyHint}
-              usingFixtures={usingFixtures}
-            />
-          </div>
           <AiPanel
             brief={brief}
             messages={messages}
             loading={chatLoading}
-            usingFixtures={usingFixtures}
+            mockMode={llmMock}
+            error={chatError}
+            placeName={focus.name}
             onSend={onSend}
             onLoadBrief={onLoadBrief}
+            onRetry={onChatRetry}
+          />
+        </div>
+
+        <div className="flex h-[42vh] w-full shrink-0 flex-col lg:h-auto lg:w-[360px] xl:w-[400px]">
+          <EventDrawer
+            events={events}
+            selected={selected}
+            onSelect={setSelected}
+            onClose={() => setSelected(null)}
+            emptyHint={emptyHint}
+            usingFixtures={usingFixtures}
           />
         </div>
       </div>

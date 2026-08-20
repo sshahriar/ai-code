@@ -64,7 +64,21 @@ export function EventCard({
             <span className="text-[10px] text-[var(--text-muted)]">sev {event.severity}</span>
           </div>
           <h3 className="font-display text-[15px] font-semibold leading-snug text-[var(--text)]">
-            {event.title}
+            {event.url ? (
+              <a
+                data-testid="event-link"
+                href={event.url}
+                target="_blank"
+                rel="noreferrer"
+                title="Open the original article"
+                className="decoration-[var(--accent)]/50 underline-offset-2 hover:text-[var(--accent)] hover:underline"
+                onClick={(e) => e.stopPropagation()}
+              >
+                {event.title}
+              </a>
+            ) : (
+              event.title
+            )}
           </h3>
           {!compact ? (
             <p className="mt-1 line-clamp-3 text-[13px] leading-relaxed text-[var(--text-muted)]">
@@ -79,10 +93,10 @@ export function EventCard({
                 href={event.url}
                 target="_blank"
                 rel="noreferrer"
-                className="text-[var(--accent)] hover:underline"
+                className="font-medium text-[var(--accent)] hover:underline"
                 onClick={(e) => e.stopPropagation()}
               >
-                Open source
+                Read full article ↗
               </a>
             ) : null}
           </div>

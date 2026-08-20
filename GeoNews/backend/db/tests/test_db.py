@@ -10,6 +10,7 @@ import pytest
 from db.init import init_db, seed_if_empty
 from db.queries import (
     add_watchlist_place,
+    insert_chat_message,
     list_watchlist,
     query_events_bbox,
     query_incidents_bbox,
@@ -222,3 +223,18 @@ def test_bbox_query_returns_only_in_bounds_rows(db_path: Path) -> None:
         assert [i["external_id"] for i in incidents] == ["inc-inside"]
     finally:
         conn.close()
+
+
+def test_insert_chat_message(conn: sqlite3.Connection) -> None:
+    row = insert_chat_message(
+        conn,
+        role="user",
+        content="Brief this place",
+        actions={"watchlist_changes": []},
+    )
+    assert row["role"] == "user"
+    stored = conn.execute(
+        "SELECT role, content FROM chat_messages WHERE id = ?",
+        (row["id"],),
+    ).fetchone()
+    assert stored["content"] == "Brief this place"

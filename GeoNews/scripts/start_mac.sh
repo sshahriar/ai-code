@@ -13,7 +13,7 @@ ensure_env() {
       exit 1
     fi
     cp "$ROOT/.env.example" "$ROOT/.env"
-    echo "Created .env from .env.example (LLM_MOCK/INGEST_MOCK default true for free demo)."
+    echo "Created .env from .env.example (live news ingest; LLM stays mocked until you add a key)."
   fi
 }
 

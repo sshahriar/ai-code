@@ -104,6 +104,38 @@ Same bbox filters as events; query `source=police_uk|sample|all`.
 }
 ```
 
+## `POST /api/ingest/run`
+
+Rate-limited background global ingest (watchlist places). Returns `{ "ok": true, "status": "started" }` or 429/409.
+
+## `POST /api/ingest/place`
+
+Body: `{ "name": string, "lat": number, "lon": number, "country_code"?: string }`
+
+Runs a **place-scoped** live ingest for that exact geocoded point **without** adding it to the watchlist. Sync (blocking) response after adapters finish.
+
+Success:
+
+```json
+{
+  "ok": true,
+  "place": { "name": "Chattogram", "lat": 22.3569, "lon": 91.7832, "country_code": "bd" },
+  "rows_upserted": 12,
+  "sources": [
+    { "source": "gdelt", "status": "ok", "rows": 3 },
+    { "source": "rss", "status": "ok", "rows": 9 },
+    { "source": "guardian", "status": "ok", "rows": 0 },
+    { "source": "police_uk", "status": "ok", "rows": 0 }
+  ],
+  "events": [ { "id": "…", "source": "rss", "title": "…", "lat": 22.3569, "lon": 91.7832, "place_name": "Chattogram", "…": "…" } ]
+}
+```
+
+- Sources that succeed with no relevant articles return `status: "ok"` and `rows: 0`.
+- If every attempted source errors: HTTP **502** with `{ "ok": false, "error": { "code": "ingest_failed", "message": "…" }, "place", "sources", "events": [] }`.
+- Busy / cooldown: **409** / **429** with standard error shape.
+- Shares manual-ingest concurrency lock + cooldown; GDELT uses the shared throttle.
+
 ## Chat / brief (LLM owns internals)
 
 - `GET /api/brief?lat=&lon=&radius_km=&window=` → structured brief JSON

@@ -35,6 +35,7 @@ On startup the app calls `init_db()` (schema + seed if empty) and starts a backg
 | GET | `/api/incidents` | bbox + `source=police_uk\|sample\|all` |
 | GET | `/api/incidents/heatmap` | `{ points: [{ lat, lon, weight }] }` |
 | POST | `/api/ingest/run` | rate-limited background run (cooldown default 30s) |
+| POST | `/api/ingest/place` | sync place-scoped live ingest (no watchlist write); see `planning/PLACE_INGEST_HANDOFF.md` |
 | GET | `/api/brief` | thin wrapper → `llm.generate_brief` |
 | POST | `/api/chat` | thin wrapper → `llm.handle_chat` |
 
@@ -112,11 +113,11 @@ from db import (
 
 | Adapter | When |
 |---|---|
-| `SampleAdapter` | Always; **only** writer if `INGEST_MOCK=true` |
-| `GdeltAdapter` | Live GEO geojson (capped) |
-| `RssAdapter` | Google News RSS per watchlist place (place centroid) |
-| `GuardianAdapter` | Key present; geotagless → no map upserts in v1 |
-| `PoliceUkAdapter` | Watchlist point in UK bbox → **incidents** |
+| `GdeltAdapter` | Live DOC artlist per watchlist **or** explicit places list |
+| `RssAdapter` | Google News RSS per place; pin to supplied centroid |
+| `GuardianAdapter` | Key present; mention-filtered; pin to centroid |
+| `PoliceUkAdapter` | Point in UK bbox → **incidents** |
+| Place ingest | `POST /api/ingest/place` — same adapters, no watchlist write |
 
 Runs off the API event loop (daemon thread). Records each source in `ingest_runs`.
 
@@ -124,7 +125,7 @@ Runs off the API event loop (daemon thread). Records each source in `ingest_runs
 
 ```powershell
 cd backend
-.\.venv\Scripts\python.exe -m pytest db/tests tests -v
+.\.venv\Scripts\python.exe -m pytest db/tests tests llm/tests -v
 ```
 
-**Result (Phase 2):** **14 passed** (4 DB + 7 API + 3 ingest/classify).
+**Result:** **42 passed** (includes place-scoped ingest + LLM mock suite). See `planning/PLACE_INGEST_HANDOFF.md`.

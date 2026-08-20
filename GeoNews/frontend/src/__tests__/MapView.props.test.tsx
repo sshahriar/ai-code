@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import type { MapViewProps } from "@/components/MapView";
 import { FIXTURE_EVENTS, FIXTURE_HEAT } from "@/lib/fixtures";
+import { cartoTileUrl } from "@/lib/theme";
 
 /** Prop contract for MapView — unit-tested without mounting Leaflet / tiles. */
 function assertMapProps(props: MapViewProps): string[] {
@@ -46,5 +47,22 @@ describe("MapView props contract", () => {
       onSelectEvent: () => undefined,
     };
     expect(assertMapProps(props)).toEqual([]);
+  });
+
+  it("accepts a light theme for Carto light_all tiles", () => {
+    const props: MapViewProps = {
+      events: [],
+      heatPoints: [],
+      heatmap: false,
+      selectedId: null,
+      flyTarget: null,
+      onBoundsChange: () => undefined,
+      onSelectEvent: () => undefined,
+      theme: "light",
+    };
+    expect(assertMapProps(props)).toEqual([]);
+    expect(props.theme).toBe("light");
+    expect(cartoTileUrl(props.theme)).toContain("light_all");
+    expect(cartoTileUrl("dark")).toContain("dark_all");
   });
 });

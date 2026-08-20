@@ -22,7 +22,7 @@ export interface GeoEvent {
   source: EventSource | string;
   title: string;
   summary: string;
-  url: string;
+  url: string | null;
   source_name: string;
   category: EventCategory | string;
   severity: number;
@@ -51,8 +51,43 @@ export interface PlaceResult {
   name: string;
   lat: number;
   lon: number;
+  country_code?: string;
   /** Nominatim/API order: [west, south, east, north]. */
   bbox?: [number, number, number, number];
+}
+
+/** Body for `POST /api/ingest/place` (scoped live ingest for one place). */
+export interface IngestPlaceBody {
+  name: string;
+  lat: number;
+  lon: number;
+  country_code?: string;
+}
+
+export interface IngestPlaceInfo {
+  name: string;
+  lat: number;
+  lon: number;
+  country_code?: string | null;
+}
+
+export interface IngestSourceReport {
+  source: string;
+  status?: string;
+  rows_upserted?: number;
+  error?: string | null;
+}
+
+/** Backend may report sources as bare names or per-source objects. */
+export type IngestSourceEntry = string | IngestSourceReport;
+
+export interface IngestPlaceResult {
+  ok: boolean;
+  place: IngestPlaceInfo;
+  rows_upserted: number;
+  sources: IngestSourceEntry[];
+  /** `null` when the response omitted events, so callers can reload instead. */
+  events: GeoEvent[] | null;
 }
 
 export interface Hotspot {
@@ -84,11 +119,15 @@ export interface BriefPayload {
   risk_level: "low" | "moderate" | "high" | "unknown" | string;
   bullets: string[];
   caveats: string[];
+  /** Backend sets this when LLM_MOCK is on or no OpenRouter key is configured. */
+  mock?: boolean;
 }
 
 export interface ChatResponse {
   message: string;
   brief?: BriefPayload | null;
+  /** Backend sets this when LLM_MOCK is on or no OpenRouter key is configured. */
+  mock?: boolean;
   watchlist_changes?: Array<{
     name: string;
     lat: number;

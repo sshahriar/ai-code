@@ -1,12 +1,12 @@
 # Task board (lead)
 
-## Phases 1–3
+## Phases 1–4 (baseline)
 
-- [x] Database, Backend, LLM, Frontend, DevOps — see handoffs in `planning/`
+- [x] Database, Backend, LLM, Frontend, DevOps, E2E 8/8 + bbox/hotspot fix loop
 
-## Phase 4 — E2E + fix loop
+## User issues — place ingest + chat (2026-08-17)
 
-- [x] Integration Tester: 8/8 Playwright mock suite — `planning/E2E_REPORT.md`
-- [x] Fix loop: BUG-E2E-002 Backend hotspot names
-- [x] Fix loop: BUG-E2E-001 Frontend bbox + hotspot display guard
-- [x] Retest after rebuild — **8 passed / 0 failed**; bugs verified-fixed
+- [x] Backend: `POST /api/ingest/place` — `planning/PLACE_INGEST_HANDOFF.md`
+- [x] Frontend: place select → ingest + chat mock/error UX — `planning/FRONTEND_PLACE_CHAT_HANDOFF.md`
+- [ ] Rebuild stack + smoke verify Chattogram flow
+- [ ] Optional: Integration Tester retest after rebuild

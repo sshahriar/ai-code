@@ -8,7 +8,6 @@ from typing import Any
 import httpx
 
 from classify import classify_police_uk
-from db import list_watchlist
 from ingest.base import AdapterBatch, BaseAdapter, ensure_incident_defaults, utc_now
 
 POLICE_URL = "https://data.police.uk/api/crimes-street/all-crime"
@@ -23,29 +22,47 @@ def in_uk(lat: float, lon: float) -> bool:
 class PoliceUkAdapter(BaseAdapter):
     source = "police_uk"
 
-    def __init__(self, conn: sqlite3.Connection | None = None) -> None:
+    def __init__(
+        self,
+        conn: sqlite3.Connection | None = None,
+        *,
+        places: list[dict[str, Any]] | None = None,
+        max_places: int = 3,
+    ) -> None:
         self.conn = conn
+        self.places = places
+        self.max_places = max_places
 
     def fetch(self) -> AdapterBatch:
-        if self.conn is None:
-            return AdapterBatch()
-        places = [p for p in list_watchlist(self.conn) if in_uk(float(p["lat"]), float(p["lon"]))]
+        places = [
+            p
+            for p in self.resolve_places(self.conn, self.places)
+            if p.get("lat") is not None
+            and p.get("lon") is not None
+            and in_uk(float(p["lat"]), float(p["lon"]))
+        ][: self.max_places]
         if not places:
             return AdapterBatch()
 
         incidents: list[dict[str, Any]] = []
         now = utc_now()
-        for place in places[:3]:
+        queried = 0
+        failed = 0
+
+        for place in places:
             lat = float(place["lat"])
             lon = float(place["lon"])
             url = f"{POLICE_URL}?lat={lat}&lng={lon}"
+            queried += 1
             try:
                 with httpx.Client(timeout=30.0) as client:
                     resp = client.get(url, headers={"User-Agent": "GeoNews/0.1"})
                 if resp.status_code >= 400:
+                    failed += 1
                     continue
                 rows = resp.json()
             except Exception:
+                failed += 1
                 continue
             if not isinstance(rows, list):
                 continue
@@ -79,4 +96,9 @@ class PoliceUkAdapter(BaseAdapter):
                         }
                     )
                 )
+
+        if queried and failed == queried:
+            raise RuntimeError(
+                f"Police.uk unreachable for all {queried} place queries"
+            )
         return AdapterBatch(incidents=incidents)

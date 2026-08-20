@@ -1,6 +1,4 @@
 import {
-  FIXTURE_BRIEF,
-  FIXTURE_CHAT,
   FIXTURE_EVENTS,
   FIXTURE_HEALTH,
   FIXTURE_HEAT,
@@ -15,6 +13,9 @@ import type {
   HealthStatus,
   HeatPoint,
   Hotspot,
+  IngestPlaceBody,
+  IngestPlaceResult,
+  IngestSourceEntry,
   MapBBox,
   PlaceResult,
   TimeWindow,
@@ -24,31 +25,89 @@ import { sinceIso } from "./categories";
 
 export type ApiMode = "live" | "fixture";
 
+/**
+ * Backend failure the UI must surface. `status === null` means the request
+ * never reached the API (offline / wrong origin) rather than a rejected call.
+ */
+export class ApiError extends Error {
+  readonly code: string;
+  readonly status: number | null;
+
+  constructor(message: string, code: string, status: number | null = null) {
+    super(message);
+    this.name = "ApiError";
+    this.code = code;
+    this.status = status;
+  }
+
+  get unreachable(): boolean {
+    return this.status === null;
+  }
+}
+
+/** Human-readable text for the chat / ingest error banners. */
+export function describeApiError(err: unknown, fallback: string): string {
+  if (err instanceof ApiError) {
+    if (err.unreachable) {
+      return "Backend unreachable — the GeoNews API did not respond on this origin.";
+    }
+    return err.message;
+  }
+  if (err instanceof Error && err.message) return err.message;
+  return fallback;
+}
+
 let fixtureWatchlist: WatchPlace[] = [...FIXTURE_WATCHLIST];
 
 export function resetFixtureState(): void {
   fixtureWatchlist = [...FIXTURE_WATCHLIST];
 }
 
+async function readErrorBody(res: Response): Promise<{ code: string; message: string }> {
+  const fallback = {
+    code: `http_${res.status}`,
+    message: `Request failed with HTTP ${res.status}.`,
+  };
+  try {
+    const body = (await res.json()) as { error?: { code?: string; message?: string } };
+    const code = body?.error?.code;
+    const message = body?.error?.message;
+    return {
+      code: typeof code === "string" && code ? code : fallback.code,
+      message: typeof message === "string" && message ? message : fallback.message,
+    };
+  } catch {
+    return fallback;
+  }
+}
+
 async function fetchJson<T>(
   path: string,
   init?: RequestInit,
 ): Promise<{ data: T; mode: ApiMode }> {
+  let res: Response;
   try {
-    const res = await fetch(path, {
+    res = await fetch(path, {
       ...init,
       headers: {
         Accept: "application/json",
         ...(init?.headers ?? {}),
       },
     });
-    if (!res.ok) {
-      throw new Error(`HTTP ${res.status}`);
-    }
+  } catch {
+    throw new ApiError("Could not reach the GeoNews API.", "network", null);
+  }
+
+  if (!res.ok) {
+    const { code, message } = await readErrorBody(res);
+    throw new ApiError(message, code, res.status);
+  }
+
+  try {
     const data = (await res.json()) as T;
     return { data, mode: "live" };
   } catch {
-    throw new Error("offline");
+    throw new ApiError("The API returned a malformed response.", "bad_json", res.status);
   }
 }
 
@@ -226,42 +285,77 @@ export async function getHotspots(params: {
   }
 }
 
+/**
+ * Scoped live ingest for one place. Throws {@link ApiError} on failure — an
+ * ingest that did not run must never be disguised as fixture success.
+ */
+export async function postIngestPlace(
+  body: IngestPlaceBody,
+): Promise<IngestPlaceResult> {
+  const { data } = await fetchJson<{
+    ok?: boolean;
+    place?: IngestPlaceResult["place"];
+    rows_upserted?: number;
+    sources?: IngestSourceEntry[];
+    events?: GeoEvent[];
+  }>("/api/ingest/place", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      name: body.name,
+      lat: body.lat,
+      lon: body.lon,
+      ...(body.country_code ? { country_code: body.country_code } : {}),
+    }),
+  });
+
+  if (data?.ok === false) {
+    throw new ApiError("Scoped ingest did not complete.", "ingest_failed", 200);
+  }
+
+  return {
+    ok: true,
+    place: data?.place ?? { name: body.name, lat: body.lat, lon: body.lon },
+    rows_upserted: Number.isFinite(data?.rows_upserted) ? Number(data?.rows_upserted) : 0,
+    sources: Array.isArray(data?.sources) ? data.sources : [],
+    events: Array.isArray(data?.events) ? data.events : null,
+  };
+}
+
+/** Throws {@link ApiError}; the AI panel renders the failure instead of a fixture. */
 export async function getBrief(params: {
   lat: number;
   lon: number;
   radius_km?: number;
   window: TimeWindow;
-}): Promise<{ data: BriefPayload; mode: ApiMode }> {
+  place_name?: string;
+}): Promise<BriefPayload> {
   const q = new URLSearchParams({
     lat: String(params.lat),
     lon: String(params.lon),
     radius_km: String(params.radius_km ?? 25),
     window: params.window,
   });
-  try {
-    const { data, mode } = await fetchJson<BriefPayload>(`/api/brief?${q}`);
-    return { data, mode };
-  } catch {
-    return { data: FIXTURE_BRIEF, mode: "fixture" };
-  }
+  if (params.place_name) q.set("place_name", params.place_name);
+  const { data } = await fetchJson<BriefPayload>(`/api/brief?${q}`);
+  return data;
 }
 
+/** Throws {@link ApiError}; the AI panel renders the failure instead of a fixture. */
 export async function postChat(body: {
   message: string;
   lat?: number;
   lon?: number;
   place_name?: string;
-}): Promise<{ data: ChatResponse; mode: ApiMode }> {
-  try {
-    const { data, mode } = await fetchJson<ChatResponse>("/api/chat", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(body),
-    });
-    return { data, mode };
-  } catch {
-    return { data: { ...FIXTURE_CHAT, message: FIXTURE_CHAT.message }, mode: "fixture" };
-  }
+  window?: TimeWindow;
+  radius_km?: number;
+}): Promise<ChatResponse> {
+  const { data } = await fetchJson<ChatResponse>("/api/chat", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(body),
+  });
+  return data;
 }
 
 /** Subscribe to SSE; no-ops cleanly when backend is down. */

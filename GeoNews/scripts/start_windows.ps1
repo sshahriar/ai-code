@@ -13,7 +13,7 @@ function Ensure-EnvFile {
             throw ".env.example missing; cannot create .env"
         }
         Copy-Item $example $envPath
-        Write-Host "Created .env from .env.example (LLM_MOCK/INGEST_MOCK default true for free demo)."
+        Write-Host "Created .env from .env.example (live news ingest; LLM stays mocked until you add a key)."
     }
 }
 

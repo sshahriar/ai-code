@@ -10,7 +10,28 @@ from dotenv import load_dotenv
 
 # backend/ → project root
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-load_dotenv(PROJECT_ROOT / ".env")
+_ENV_PATH = PROJECT_ROOT / ".env"
+load_dotenv(_ENV_PATH)
+
+
+def _fill_empty_from_dotenv() -> None:
+    """Apply .env values when the process has a missing or blank var.
+
+    Pytest owns its env (see ``llm.client.load_project_env``) and must not
+    inherit a developer OpenRouter key from ``.env``.
+    """
+    if os.environ.get("PYTEST_CURRENT_TEST"):
+        return
+    from dotenv import dotenv_values
+
+    for key, value in (dotenv_values(_ENV_PATH) or {}).items():
+        if value is None:
+            continue
+        if not (os.environ.get(key) or "").strip():
+            os.environ[key] = str(value)
+
+
+_fill_empty_from_dotenv()
 
 
 def _env_bool(name: str, default: bool = False) -> bool:
